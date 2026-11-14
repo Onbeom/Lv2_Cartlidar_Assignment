@@ -169,11 +169,13 @@ for s in $SLOTS; do
     [ "$TRANSIT" = 1 ] && run transit
     if [ "$MODE" = sim ] || [ "$BENCH" = 1 ]; then set -- place ${XY[$dx,$dy]}; else set -- place_cell "$L" "$(idx $dx)" "$(idx $dy)"; fi
     if run "$@"; then OK=$((OK+1)); else FAIL=$((FAIL+1)); say "놓기 실패 (칸 $dx,$dy)"; [ "$KEEP" = 0 ] && break; fi
+    i=$((i+1))   # 놓기를 시도한 뒤에만 다음 칸으로
   else
-    FAIL=$((FAIL+1)); say "꺼내기 실패 (팔레트 $s)"; [ "$KEEP" = 0 ] && break
+    # 2026-11-15: 꺼내기 실패면 이 칸 (dx, dy) 은 비워 두지 않고 다음 퍽이 그대로 씀 (예전: 칸을 건너뛰어 눈 모양에 구멍 · 차례가 흐트러짐)
+    FAIL=$((FAIL+1)); say "꺼내기 실패 (팔레트 $s) -> 칸 $dx,$dy 는 다음 퍽으로"; [ "$KEEP" = 0 ] && break
   fi
-  i=$((i+1))
 done
+[ $i -lt $N ] && say "칸 $((N - i)) 개를 못 채움 (꺼낼 퍽이 모자람 — --slots 에 칸을 더 주거나 팔레트를 채울 것)"
 [ -n "$BAG" ] && { kill $BAGPID 2>/dev/null; say "기록 끝 -> $BAG"; }
 say "끝: 성공 $OK / 시도 $((OK+FAIL)) (목표 $N). 자세한 로그 $LOG"
 [ "$FAIL" = 0 ] && exit 0 || exit 1

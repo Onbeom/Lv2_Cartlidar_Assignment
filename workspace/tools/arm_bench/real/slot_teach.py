@@ -6,6 +6,8 @@
     python3 ~/slot_teach.py 1_3 2_2         고른 칸만
     python3 ~/slot_teach.py --make          기록 (~/실측/slot_teach.json) -> ~/pallet_place_traj_taught.json (노드용)
     python3 ~/slot_teach.py --show          기록된 칸별 차이 (mm · 도) 만 출력
+    python3 ~/slot_teach.py --box [셀 …]    상자 위 놓는 자리 맞추기 (책상: 상자 = 앞면에서 12 cm 가운데, 셀 '1,1' = 먼 줄 왼쪽 … 기본 9 칸)
+    python3 ~/slot_teach.py --fit_box       상자 기록 -> 관절 영점 (ik.joint_offsets) 제안 · 셀별 잔차 (노드 놓기 IK 용)
     python3 ~/slot_teach.py --set 3_1 왼 5 [node|offset]   맞춰 보지 않고 말로: 쥐는 자리에서 5 mm 왼쪽 (offset = 영점 보정 더한 자리 기준)
 
 준비: 브링업 (skill_enabled:=true) + kbd_joy.py 에서 r -> 팔이 DRIVE 까지 펴진 뒤. **맞출 칸에만 퍽 하나**를 넣어 둠 (다른 칸은 비움).
@@ -27,6 +29,10 @@ TRAJ = os.path.join(REPO, "ros2_ws/src/control/config/pallet_place_traj.json")
 YAML = os.path.join(REPO, "ros2_ws/src/control/config/manipulator.yaml")
 OUT_DIR = os.environ.get("TEACH_OUT", os.path.expanduser("~/실측"))
 REC = os.path.join(OUT_DIR, "slot_teach.json")
+BOX_REC = os.path.join(OUT_DIR, "box_teach.json")
+BOX_CELL0 = (0.3625, 0.0, 0.0633)   # 책상 시험 가운데 칸 (dice.sh --bench 와 같음): 놓을 윗면 높이 = base_link z
+BOX_PITCH = 0.06
+BOX_ORDER = ["-1,1", "1,1", "-1,0", "0,0", "1,0", "-1,-1", "0,-1", "1,-1", "0,1"]
 ORIG = os.path.expanduser("~/pallet_place_traj_orig.json")   # 노드 궤적을 바꾸기 전 원본 (--make 는 늘 이걸 기준으로)
 TAUGHT = os.environ.get("TEACH_TAUGHT", os.path.expanduser("~/pallet_place_traj_taught.json"))
 ORDER = ["1_3", "1_0", "1_2", "1_1", "2_2", "2_0", "2_3", "2_1", "3_1", "3_0"]   # 계획기 꺼내기 차례 (앞 열부터)
@@ -56,6 +62,26 @@ def grip_for_mm(mm):
 
 
 TEACH_OPEN_MM = 50.0   # 맞출 때 벌림 (퍽 30 mm + 양쪽 10 mm)
+
+
+def straight_weights(place, d, margin=0.02):
+    """place 점 (위 -> 아래) 마다 보정 비율 w: 아래에서부터 q + d 가 관절 한계 (margin 안쪽) 안인 동안 1, 그 위는 0 -> 1 직선.
+    각 점에서 한계를 넘으면 넘지 않는 만큼으로 줄임."""
+    lo, hi = limits()
+    n = len(place)
+    ok = [all(lo[j] + margin <= place[i][j] + d[j] <= hi[j] - margin for j in range(5)) for i in range(n)]
+    k = n                                   # k = 전부 보정 구간 시작 (위 -> 아래 번호)
+    while k > 0 and ok[k - 1]:
+        k -= 1
+    w = [1.0] * n
+    for i in range(k):
+        w[i] = (i + 1) / (k + 1)
+        for j in range(5):                  # 한계 넘지 않게
+            if d[j] > 0 and place[i][j] + w[i] * d[j] > hi[j] - margin:
+                w[i] = max(0.0, min(w[i], (hi[j] - margin - place[i][j]) / d[j]))
+            if d[j] < 0 and place[i][j] + w[i] * d[j] < lo[j] + margin:
+                w[i] = max(0.0, min(w[i], (lo[j] + margin - place[i][j]) / d[j]))
+    return w
 
 
 def limits():
@@ -121,19 +147,19 @@ def make():
         else:
             used[k] = "그대로"; continue
         used[k] = how
+        place_w = straight_weights(seg(s, "place"), d)   # place 위 -> 아래 점마다 보정 비율
         for g in s["segments"]:
-            n = len(g["q"])
             for i, q in enumerate(g["q"]):
-                # 칸 근처만 고침 (#273: 이동 자세에 보정을 더하면 팔꿈치가 내려가 퍽 스토리지를 누름).
-                #   측정은 쥐는 자리 하나라 거기서 멀어질수록 덜 믿음 -> 쥐는 자리에서만 전부, 높이 쪽으로 서서히 0.
-                #   rotate · carry · return · rotate_back (높이 이동) 그대로, place (위 -> 칸) 0 -> 1, release 1, retract (칸 -> 위) 1 -> 0.
-                #   (11-14 처음 판은 carry 전부 · place 전부라 높은 구간에서 관절 4 가 한계 2.0 을 0.3 rad 넘음 -> 노드가 거부)
+                # 2026-11-15: 칸 위에서 곧게 내려가게. 아래 (쥐는 자리) 에서부터 관절 한계가 허락하는 높이까지는 측정 차이를 '전부'
+                #   (= 실물에서 칸 축을 따라 곧게), 그 위는 0 -> 1 로 서서히 (높이 이동 구간은 그대로, 관절 4 한계 2.0).
+                #   (11-14 판은 place 전체를 0 -> 1 로 서서히 넣어 내려가는 길이 휘어, 실물 1_3 · 2_0 · 2_1 에서 집게가 퍽 윗면에 먼저 닿음
+                #    -> 관절 2 가 0.15 ~ 0.24 rad 위에서 멈춤, 2_0 빈손)
                 if g["name"] == "place":
-                    f = (i + 1) / n
+                    f = place_w[i]
                 elif g["name"] == "release":
                     f = 1.0
-                elif g["name"] == "retract":
-                    f = 1 - (i + 1) / n
+                elif g["name"] == "retract":   # place 를 거꾸로 (맨 아래 점 빼고)
+                    f = place_w[::-1][1:][i] if i < len(place_w) - 1 else 0.0
                 else:
                     f = 0.0
                 for j in range(5):
@@ -237,8 +263,99 @@ def set_nudge(slot, d, mm, base):
     show(m)
 
 
+def _pt():
+    """팀 팔레트 궤적 생성기의 팀 URDF 팔 (IK · FK)."""
+    sys.path.insert(0, os.path.join(REPO, "urdf_and_usd/policy/manipulator"))
+    import pallet_traj as PT
+    return PT, PT.Arm(PT.URDF)
+
+
+def box_target(cell):
+    """셀 'dx,dy' (눈 그림: dy+ = 먼 쪽, dx+ = 로봇 오른쪽) -> 놓는 퍽 바닥 (base_link, 노드 place_at 과 같게: 옆 1.8 mm 왼쪽 · 틈 2 mm)."""
+    dx, dy = (int(v) for v in cell.split(","))
+    return [BOX_CELL0[0] + dy * BOX_PITCH, BOX_CELL0[1] - dx * BOX_PITCH + 0.0018, BOX_CELL0[2] + 0.002]
+
+
+def box_q(PT, arm, p_bottom, offs):
+    """노드처럼: 45° 집게로 퍽 바닥 = p 가 되는 모델 관절 + ik.joint_offsets (명령)."""
+    import numpy as np
+    yaw = math.atan2(p_bottom[1] - arm.j1[1], p_bottom[0] - arm.j1[0])
+    q, e, t = arm.ik_down(np.array(p_bottom), yaw, None, off=PT.BOTTOM, tilt=math.radians(45.0))
+    return [v + o for v, o in zip(q, offs)], e
+
+
+def teach_box(cells):
+    sys.path.insert(0, os.path.join(REPO, "tools/arm_bench/real"))
+    import meas_session as m
+    PT, arm = _pt()
+    offs = offsets(force=True)            # 노드 놓기 IK 는 ik.joint_offsets 를 씀 (팔레트와 달리)
+    m.P(f"\n===== 상자 놓는 자리 맞추기 {datetime.datetime.now():%Y-%m-%d %H:%M} 셀 {' '.join(cells)} | ik.joint_offsets {offs} =====")
+    m.P("  상자 (205 x 205 x 70) = 로봇 앞면에서 12 cm, 가운데 맞춤. 셀 '1,1' = 먼 줄 왼쪽 (로봇 기준), '0,0' = 가운데, '1,-1' = 가까운 줄 오른쪽")
+    m.P("  맞춤 기준: 쥔 퍽 바닥이 상자 윗면에 막 닿고, 퍽 중심이 그 칸 가운데 (칸 표시 · 자). 집게 45° 그대로")
+    a = m.Arm()
+    rec = json.load(open(BOX_REC, encoding="utf-8")) if os.path.exists(BOX_REC) else {}
+    try:
+        a.hold_puck()
+        for c in cells:
+            p = box_target(c)
+            q, e = box_q(PT, arm, p, offs)
+            qa, _ = box_q(PT, arm, [p[0], p[1], p[2] + 0.04], offs)
+            if e > 0.002:
+                m.P(f"  [{c}] IK 안 됨 (오차 {e * 1000:.1f} mm) -> 건너뜀"); continue
+            m.P(f"\n[{c}] 목표 퍽 바닥 (base_link mm) {[round(v * 1000, 1) for v in p]}")
+            if m.ask("시작? (y / s)") != "y":
+                continue
+            a.move(qa[:5], label=f"{c} 4 cm 위 (노드 값)")
+            a.move(q[:5], label=f"{c} 놓는 자리 (노드 값)")
+            qm = m.jog(a, q[:5], f"{c} 놓는 자리")
+            if qm is not None:
+                rec[c] = {"q_meas": qm, "q_node": q[:5], "target": p, "t": f"{datetime.datetime.now():%m-%d %H:%M}"}
+                os.makedirs(OUT_DIR, exist_ok=True)
+                json.dump(rec, open(BOX_REC, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+                m.P(f"[기록] {c}")
+            a.move(qa[:5], label="4 cm 위로")
+    except m.Back:
+        m.P("  (끝냄)")
+    m.P(f"기록: {BOX_REC} (셀 {len(rec)} 개). 다음: python3 ~/slot_teach.py --fit_box")
+
+
+def fit_box():
+    import numpy as np
+    from scipy.optimize import least_squares
+    PT, arm = _pt()
+    rec = json.load(open(BOX_REC, encoding="utf-8")) if os.path.exists(BOX_REC) else {}
+    if len(rec) < 3:
+        sys.exit(f"상자 기록이 {len(rec)} 개 — 3 개 이상 필요 ({BOX_REC})")
+    rows = []
+    for c, v in rec.items():
+        t = np.array(v["target"]) + np.array([0.0, 0.0, PT.GRASP_DZ + PT.PUCK_H / 2])   # 퍽 바닥 -> TCP
+        yaw = math.atan2(t[1] - arm.j1[1], t[0] - arm.j1[0])
+        a_dir = np.array([math.sin(math.radians(45)) * math.cos(yaw), math.sin(math.radians(45)) * math.sin(yaw), -math.cos(math.radians(45))])
+        rows.append((c, np.array(v["q_meas"][:5], dtype=float), t, a_dir))
+
+    def res(x):
+        out = []
+        for _, q, t, a_dir in rows:
+            qq = q.copy(); qq[:4] -= x
+            p, R = arm.tcp(qq)
+            out += list((p - t) * 1000.0) + list((R[:, 0] - a_dir) * 20.0)
+        return np.array(out)
+    old = np.array(offsets(force=True)[:4])
+    for name, x in (("지금 ik.joint_offsets", old), ("맞춘 값", least_squares(res, old).x)):
+        rr = res(x).reshape(-1, 6)
+        print(f"{name} (rad) {[round(float(v), 4) for v in x] + [0.0]} | 셀별 놓는 자리 오차 mm: "
+              + ", ".join(f"{c} {np.linalg.norm(e[:3]):.1f}" for (c, *_), e in zip(rows, rr)))
+    print("-> 맞춘 값을 manipulator.yaml ik.joint_offsets 에 넣으면 노드 IK (상자 놓기 · 내려다보기 · 집기 접근) 가 이 값을 씀 (팔레트 궤적은 따로)")
+
+
 def main():
     args = sys.argv[1:]
+    if "--box" in args:
+        teach_box([x for x in args if not x.startswith("-")] or BOX_ORDER)
+        return
+    if "--fit_box" in args:
+        fit_box()
+        return
     if args and args[0] == "--set":   # --set 3_1 왼 5 [offset]
         set_nudge(args[1], args[2], float(args[3]), args[4] if len(args) > 4 else "node")
         return
