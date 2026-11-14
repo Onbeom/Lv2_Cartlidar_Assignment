@@ -42,3 +42,6 @@
 | `arm_free.py` | 칸 안에 멈춘 팔 빼내기 (벌림 -> 4 cm 위 -> 높은 자세 -> 정면) | `python3 ~/arm_free.py [--keep]` |
 - 켜는 순서: 모터 전원 먼저 -> 팔 OpenCR 리셋 (켜진 채 모터만 재시작되면 토크가 안 걸림, 전류 0) -> `arm_only.sh --check` 팔 보드 `0x2`.
 - 관절 1 큰 회전 중 USB 허브가 끊기면 ttyACM 번호가 바뀜 (예: 2 · 3) -> 브링업 `ports:=` 로 지정 (`arm_only.sh` 는 자동).
+- 팔 속도 (2026-11-14): `manipulator.yaml` 의 `arm.max_joint_velocity` (0.8 rad/s) 하나가 기준. 노드 (이름 자세 · 팔레트 · 팔레트 진입 · 켜질 때 정리) 와
+  시험 도구 (`meas_session` · `slot_teach` · `arm_free` 의 이동, `arm_stow`) 가 모두 이 값을 읽음. 정밀 구간 (3 열 쥔 채 넣기 `pallet.row3_hold_speed`,
+  `meas_session` 손 맞춤 jog 한 걸음 1.5 s, 놓기 직선, 강화학습 정책 한계) 은 따로.

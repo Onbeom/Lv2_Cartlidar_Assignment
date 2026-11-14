@@ -58,6 +58,13 @@ def grip_for_mm(mm):
 TEACH_OPEN_MM = 50.0   # 맞출 때 벌림 (퍽 30 mm + 양쪽 10 mm)
 
 
+def limits():
+    """manipulator.yaml arm.lower_limits · upper_limits (관절 1 ~ 5, 노드가 경유점을 거부하는 기준)."""
+    import yaml
+    node = next(iter(yaml.safe_load(open(YAML, encoding="utf-8")).values()))["ros__parameters"]
+    return node["arm"]["lower_limits"][:5], node["arm"]["upper_limits"][:5]
+
+
 def load_traj(base=False):
     """base=True: 보정 계산 기준 = 원본 (ORIG 가 있으면, 없으면 지금 노드 파일). False: 지금 노드가 쓰는 파일."""
     t = json.load(open(ORIG if base and os.path.exists(ORIG) else TRAJ, encoding="utf-8"))
@@ -117,20 +124,27 @@ def make():
         for g in s["segments"]:
             n = len(g["q"])
             for i, q in enumerate(g["q"]):
-                # 칸 근처만 고침 (#273: 이동 자세에 보정을 더하면 팔꿈치가 내려가 퍽 스토리지를 누름):
-                #   rotate · rotate_back (관절 1 회전) 그대로, carry 는 칸 쪽으로 0 -> 1, return 은 1 -> 0, place · release · retract 전부
-                if g["name"] in ("rotate", "rotate_back"):
-                    f = 0.0
-                elif g["name"] == "carry":
+                # 칸 근처만 고침 (#273: 이동 자세에 보정을 더하면 팔꿈치가 내려가 퍽 스토리지를 누름).
+                #   측정은 쥐는 자리 하나라 거기서 멀어질수록 덜 믿음 -> 쥐는 자리에서만 전부, 높이 쪽으로 서서히 0.
+                #   rotate · carry · return · rotate_back (높이 이동) 그대로, place (위 -> 칸) 0 -> 1, release 1, retract (칸 -> 위) 1 -> 0.
+                #   (11-14 처음 판은 carry 전부 · place 전부라 높은 구간에서 관절 4 가 한계 2.0 을 0.3 rad 넘음 -> 노드가 거부)
+                if g["name"] == "place":
                     f = (i + 1) / n
-                elif g["name"] == "return":
+                elif g["name"] == "release":
+                    f = 1.0
+                elif g["name"] == "retract":
                     f = 1 - (i + 1) / n
                 else:
-                    f = 1.0
+                    f = 0.0
                 for j in range(5):
                     q[j] = round(q[j] + f * d[j], 5)
         if "q_front" in s:
             pass                               # 꺼내기 끝 앞 자세는 그대로 (칸에서 먼 곳)
+    lo, hi = limits()
+    bad = [f"{s['row']}_{s['index']} {g['name']} 관절 {j + 1} {q[j]:+.3f}" for s in t["slots"] for g in s["segments"]
+           for q in g["q"] for j in range(5) if not lo[j] <= q[j] <= hi[j]]
+    if bad:
+        sys.exit(f"관절 한계 (manipulator.yaml arm.lower/upper_limits) 밖 경유점 {len(bad)} 개 -> 만들지 않음: " + ", ".join(bad[:6]))
     t["note"] = (f"{datetime.datetime.now():%Y-%m-%d %H:%M} slot_teach.py 실물 칸 맞춤 반영 ("
                  + ", ".join(f"{k} {v}" for k, v in sorted(used.items())) + "). 원본: " + (ORIG if os.path.exists(ORIG) else TRAJ) + "  ") + t["note"]
     json.dump(t, open(TAUGHT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

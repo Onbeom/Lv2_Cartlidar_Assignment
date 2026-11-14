@@ -33,7 +33,32 @@ except ImportError:
 
 NAMES = ["joint1", "joint2", "joint3", "joint4", "joint5", "gripper_roll"]
 OPEN, CLOSE = -0.764, 0.923
-VEL = 0.2          # rad/s
+def yaml_speed(key="arm.max_joint_velocity"):
+    """manipulator.yaml (노드와 같은 파일) 의 팔 속도 [rad/s] (2026-11-14: 속도 기준 하나). startup 등 0 이면 arm.max_joint_velocity."""
+    import re
+    for p in (os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "..", "ros2_ws", "src", "control", "config", "manipulator.yaml"),
+              os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/control/config/manipulator.yaml")):
+        if not os.path.exists(p):
+            continue
+        txt = open(p, encoding="utf-8").read()
+        try:
+            import yaml
+            node = next(iter(yaml.safe_load(txt).values()))["ros__parameters"]
+            sec, name = key.split(".")
+            v = float(node.get(sec, {}).get(name, 0.0))
+        except Exception:
+            sec, name = key.split(".")
+            m = re.search(r"^    " + sec + r":\n(?:      .*\n|\s*#.*\n)*?      " + name + r":\s*([0-9.]+)", txt, re.M)
+            v = float(m.group(1)) if m else 0.0
+        if v <= 0.0 and key != "arm.max_joint_velocity":
+            return yaml_speed("arm.max_joint_velocity")
+        if v > 0.0:
+            return v
+    sys.exit("manipulator.yaml 에서 arm.max_joint_velocity 를 못 읽음 (저장소 경로 확인)")
+
+
+VEL = yaml_speed()                              # rad/s, manipulator.yaml arm.max_joint_velocity (이동 · 자세)
+FOLD_VEL = yaml_speed("startup.max_joint_velocity")   # rad/s, STOW <-> DRIVE (0 = arm.max_joint_velocity)
 J1_TURN = 0.3      # rad, 이보다 크게 돌리면 높은 자세 경유
 HIGH = [-0.6875, -0.1959, 1.9306, 0.0]   # 관절 2 ~ 5, 앞 높은 자세 (관절 1 회전용)
 POSES = {          # 관절 1 ~ 5 (rad), 설계 높이 · 수평 거리 (mm, 관절 1 축 기준)
@@ -248,7 +273,7 @@ class DirectArm(Arm):
     def __init__(self, port):
         sys.path.insert(0, os.path.join(BENCH, "slider"))
         from arm_control import ArmController
-        self.c = ArmController(port, speed=0.5, max_track=0.25, on_state=self._on_state)
+        self.c = ArmController(port, speed=VEL, max_track=0.25, on_state=self._on_state)
         P(f"팔 보드 {port} 직접 연결 (브링업 없음)")
         time.sleep(1.0)
         st = self.c.snapshot()["last"]
@@ -326,7 +351,7 @@ class DirectArm(Arm):
 
 
 def fold(a, to_drive):
-    """STOW <-> DRIVE, 팀 시작 정리와 같은 순서 (J3 -> J2 -> J4 -> J1 -> J5 · 집게, manipulator.yaml startup.stages), 0.1 rad/s."""
+    """STOW <-> DRIVE, 팀 시작 정리와 같은 순서 (J3 -> J2 -> J4 -> J1 -> J5 · 집게, manipulator.yaml startup.stages), FOLD_VEL (manipulator.yaml)."""
     tgt = DRIVE if to_drive else STOW
     order = [[2], [1], [3], [0], [4, 5]]
     if not to_drive:
@@ -341,7 +366,7 @@ def fold(a, to_drive):
         dq = max([abs(q[j] - a.cmd[j]) for j in range(5)] + [abs(g - a.grip) / 4])
         if dq < 0.02:
             continue
-        a.move(q, g, T=max(3.0, dq / 0.1), route=False, label=f"{'펴기' if to_drive else '접기'} 관절 {'·'.join(str(j + 1) for j in grp)}")
+        a.move(q, g, T=max(3.0, dq / FOLD_VEL), route=False, label=f"{'펴기' if to_drive else '접기'} 관절 {'·'.join(str(j + 1) for j in grp)}")
 
 
 def m1_zero(a):
@@ -791,7 +816,7 @@ def main():
         if not direct:
             P("  !! STOW 자세로 보임. bringup 시작 정리 (DRIVE) 가 끝난 뒤 다시 실행")
             return
-        P("  STOW 자세: 팀 순서 (관절 3 -> 2 -> 4 -> 1 -> 5) 로 DRIVE 까지 폄 (0.1 rad/s)")
+        P(f"  STOW 자세: 팀 순서 (관절 3 -> 2 -> 4 -> 1 -> 5) 로 DRIVE 까지 폄 ({FOLD_VEL:g} rad/s)")
         try:
             fold(a, True)
         except Back:

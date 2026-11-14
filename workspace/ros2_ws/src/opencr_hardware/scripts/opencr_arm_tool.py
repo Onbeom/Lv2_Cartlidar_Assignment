@@ -419,8 +419,9 @@ def main():
     v.add_argument('--dry-run', action='store_true')
     v.add_argument('--yes', action='store_true', help='실제로 토크를 켜고 움직임')
     args = ap.parse_args()
-    if args.cmd == 'move' and not 0 < args.speed <= 0.5:
-        sys.exit('--speed 는 0 초과 0.5 rad/s 이하')
+    # 상한 1.0 (2026-11-14): tools/arm_bench/real/arm_stow.py 가 manipulator.yaml 팔 속도 기준 (0.8) 을 넘김. 기본 0.1 은 그대로 (게인 시험)
+    if args.cmd == 'move' and not 0 < args.speed <= 1.0:
+        sys.exit('--speed 는 0 초과 1.0 rad/s 이하')
     if args.cmd == 'move' and args.stages:
         try:
             parse_stages(args.stages)

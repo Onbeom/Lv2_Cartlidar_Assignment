@@ -5,7 +5,8 @@
     python3 ~/arm_stow.py --check   확인만 (쓰기 없음)
 
 - 팔 보드 포트를 찾음 (/dev/ttyACM0 · 1 중 role 2). 범위 = 팀 opencr.ros2_control.xacro arm_standby_min/max_tick (브링업 검사와 같음).
-- 움직임은 팀 opencr_arm_tool.py move --stages (토크 ON -> REARM -> 한 관절씩 0.1 rad/s, 오류 · 추종 오차 · Ctrl-C 면 멈춤).
+- 움직임은 팀 opencr_arm_tool.py move --stages (토크 ON -> REARM -> 한 관절씩, 오류 · 추종 오차 · Ctrl-C 면 멈춤).
+  속도 = manipulator.yaml startup.max_joint_velocity (0 이면 arm.max_joint_velocity, 2026-11-14 속도 기준 하나) — 노드 켜질 때 정리와 같음.
 - 차례 = 시작 정리 (STOW -> DRIVE: 관절 3 -> 2 -> 4 -> 1 -> 5) 의 거꾸로: 5 -> 1 -> 4 -> 2 -> 3.
   범위에서 15° 넘게 벗어난 관절이 있으면 (예: DRIVE 자세) 전부 접는 것이라 한 번 더 묻는다.
 - 끝나면 팔은 토크를 켠 채 HOLD (펌웨어). 그대로 브링업을 띄우면 됨 (HOLD 면 대기 자세 검사를 건너뜀).
@@ -27,6 +28,19 @@ FAR_DEG = 15.0
 WS = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace")
 OLD_J1_MAX = 3300                # 관절 1 대기 범위 위 끝이 이보다 작으면 #277 전 (예전 STOW 89°)
 MIN_CLEAR_MM = 5.0
+
+
+def fold_speed():
+    """manipulator.yaml 의 켜질 때 정리 속도 (startup.max_joint_velocity, 0 = arm.max_joint_velocity) [rad/s]."""
+    import yaml
+    node = next(iter(yaml.safe_load(open(os.path.join(WS, "ros2_ws/src/control/config/manipulator.yaml"), encoding="utf-8")).values()))["ros__parameters"]
+    v = float(node.get("startup", {}).get("max_joint_velocity", 0.0) or 0.0)
+    if v <= 0.0:
+        v = float(node["arm"]["max_joint_velocity"])
+    cap = 0.5 if "args.speed <= 0.5" in open(TOOL, encoding="utf-8").read() else 1.0   # opencr_arm_tool 상한 (예전 판 0.5)
+    if v > cap:
+        print(f"  (opencr_arm_tool 상한 {cap} rad/s 라 {v} -> {cap})")
+    return min(v, cap)
 
 
 def measured_shift():
@@ -121,7 +135,8 @@ def main():
     if not stages:
         print("대기 자세 범위 안 — 그대로 브링업 띄우면 됨")
         return
-    print("옮길 관절 (차례대로, 0.1 rad/s): " + " -> ".join(stages))
+    speed = fold_speed()
+    print(f"옮길 관절 (차례대로, {speed:g} rad/s = manipulator.yaml): " + " -> ".join(stages))
     q0 = list(oat.arm_pos(st))
     q1 = list(q0)
     for sg in stages:
@@ -143,7 +158,7 @@ def main():
     if input("Enter = 움직임, 다른 키 = 그만: ").strip():
         print("그만둠")
         return
-    r = subprocess.run([sys.executable, TOOL, "move", "--port", port, "--stages", ",".join(stages), "--yes"])
+    r = subprocess.run([sys.executable, TOOL, "move", "--port", port, "--stages", ",".join(stages), "--speed", f"{speed:g}", "--yes"])
     if r.returncode != 0:
         sys.exit("이동 중 멈춤 (위 메시지 확인). 팔은 그 자리에서 HOLD")
     time.sleep(0.5)
