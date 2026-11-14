@@ -105,9 +105,9 @@
   </material>
   <link name="${prefix}base_link">
     <inertial>
-      <origin xyz="-0.0235591481 0.00157478298 0.112753793" rpy="0 0 0"/>
-      <mass value="3.45166562"/>
-      <inertia ixx="0.10962404" ixy="-0.000249905429" ixz="0.0275494955" iyy="0.107874692" iyz="0.000673706071" izz="0.0552757329"/>
+      <origin xyz="-0.0230894812 0.00156762909 0.11279453" rpy="0 0 0"/>
+      <mass value="3.46741731"/>
+      <inertia ixx="0.109634124" ixy="-0.000247352496" ixz="0.0275344163" iyy="0.108053864" iyz="0.000673927504" izz="0.0554596368"/>
     </inertial>
     <visual name="body_keep">
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -179,6 +179,13 @@
       </geometry>
       <material name="a_pla_gold"/>
     </visual>
+    <visual name="joint1_bracket">
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://waffle_4wd_description/meshes/b/joint1_bracket.stl" scale="1 1 1"/>
+      </geometry>
+      <material name="a_bracket"/>
+    </visual>
     <visual name="deck_tray">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -217,18 +224,6 @@
       <origin xyz="0 0 0.106499999999995" rpy="0 -0 0"/>
       <geometry>
         <box size="0.26554700538380005 0.26554700538378001 0.0090000000000100052"/>
-      </geometry>
-    </collision>
-    <collision name="static_431">
-      <origin xyz="0.0839999981 0.024 0.127799998" rpy="0 -0 0"/>
-      <geometry>
-        <box size="0.042499999999999621 0.018000001907348608 0.03359999656677249"/>
-      </geometry>
-    </collision>
-    <collision name="static_432">
-      <origin xyz="0.0839999905 -0.0240000005 0.127800002" rpy="0 -0 0"/>
-      <geometry>
-        <box size="0.042500000000000204 0.018000001907348712 0.033599998950958221"/>
       </geometry>
     </collision>
     <collision name="static_433">
@@ -3538,6 +3533,12 @@
           <mesh filename="package://waffle_4wd_description/meshes/b/collision/pallet_cup2_hull30.stl"/>
         </geometry>
       </collision>
+      <collision name="joint1_bracket_hull00">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://waffle_4wd_description/meshes/b/collision/joint1_bracket_hull00.stl"/>
+        </geometry>
+      </collision>
     </xacro:if>
     <xacro:if value="${collision == 'light'}">
       <collision name="light_part157">
@@ -3640,6 +3641,36 @@
         <origin xyz="-0.090826 -0.0397111 0.136505001" rpy="0 -0 -2.93215314"/>
         <geometry>
           <box size="0.045147 0.045147 0.05101"/>
+        </geometry>
+      </collision>
+      <collision name="light_j1br_side_L">
+        <origin xyz="0.084 0.01675 0.128" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0555 0.0045 0.034"/>
+        </geometry>
+      </collision>
+      <collision name="light_j1br_side_R">
+        <origin xyz="0.084 -0.01675 0.128" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.0555 0.0045 0.034"/>
+        </geometry>
+      </collision>
+      <collision name="light_j1br_end_rear">
+        <origin xyz="0.058375 0 0.127" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.00425 0.029 0.032"/>
+        </geometry>
+      </collision>
+      <collision name="light_j1br_end_front">
+        <origin xyz="0.109625 0 0.127" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.00425 0.029 0.032"/>
+        </geometry>
+      </collision>
+      <collision name="light_j1br_flange">
+        <origin xyz="0.081875 0 0.114" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.05975 0.072 0.006"/>
         </geometry>
       </collision>
     </xacro:if>
