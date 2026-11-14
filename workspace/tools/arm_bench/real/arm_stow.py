@@ -9,6 +9,10 @@
 - 차례 = 시작 정리 (STOW -> DRIVE: 관절 3 -> 2 -> 4 -> 1 -> 5) 의 거꾸로: 5 -> 1 -> 4 -> 2 -> 3.
   범위에서 15° 넘게 벗어난 관절이 있으면 (예: DRIVE 자세) 전부 접는 것이라 한 번 더 묻는다.
 - 끝나면 팔은 토크를 켠 채 HOLD (펌웨어). 그대로 브링업을 띄우면 됨 (HOLD 면 대기 자세 검사를 건너뜀).
+- [11-14 고침] 예전 STOW (관절 1 1.554 rad = 89°, #277 전 xacro 범위 3004 ~ 3118) 는 접을 때 link3 이 1 열 끝 칸 (1_3) 벽에 닿음
+  (팀 계산 −3.5 mm, 실물 11-13 · 11-14 1_3 위에 걸림). 젯슨 저장소가 #277 전이면 움직이지 않고 업데이트를 안내.
+  움직이기 전에 접는 경로 틈을 계산 (tools/arm_bench/fold_clearance.py, 팀 URDF 팔레트 v5 · 퍽 10 개):
+  모델 그대로 + 실측 칸 맞춤 (pallet_slot_teach.json 의 1_3, 관절 2 · 3 · 4) 으로 옮긴 실물 추정, 둘 중 작은 값이 MIN_CLEAR_MM 미만이면 거부.
 """
 import glob
 import importlib.util
@@ -20,6 +24,56 @@ import time
 TOOL = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/opencr_hardware/scripts/opencr_arm_tool.py")
 ORDER = [5, 1, 4, 2, 3]          # 접는 차례 (관절 번호)
 FAR_DEG = 15.0
+WS = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace")
+OLD_J1_MAX = 3300                # 관절 1 대기 범위 위 끝이 이보다 작으면 #277 전 (예전 STOW 89°)
+MIN_CLEAR_MM = 5.0
+
+
+def measured_shift():
+    """실측 칸 맞춤 1_3: 맞춘 관절 - 모델 쥐는 자리 (관절 2 · 3 · 4, rad). 실물 ≈ 모델 (명령 − 이 값). 없으면 None."""
+    import json
+    rec = None
+    for p in (os.path.join(WS, "ros2_ws/src/control/config/pallet_slot_teach.json"), os.path.expanduser("~/실측/slot_teach.json")):
+        if os.path.exists(p):
+            d = json.load(open(p, encoding="utf-8"))
+            d = d.get("slots", d)
+            if "1_3" in d:
+                rec = d["1_3"]["q_meas"]
+                break
+    model = os.path.join(WS, "urdf_and_usd/policy/manipulator/pallet_place_traj.json")   # 모델 판 (실측 보정 안 된 사본)
+    if rec is None or not os.path.exists(model):
+        return None
+    s = next(x for x in json.load(open(model, encoding="utf-8"))["slots"] if (x["row"], x["index"]) == (1, 3))
+    g = next(x for x in s["segments"] if x["name"] == "place")["q"][-1]
+    return [0.0] + [rec[j] - g[j] for j in (1, 2, 3)] + [0.0]
+
+
+def path_clearance(q0, q1, order):
+    """접는 경로 최소 틈 (mm): (모델, 실측 추정, 가장 가까운 것 설명). fold_clearance.py 가 없으면 None."""
+    fc = os.path.join(WS, "tools/arm_bench/fold_clearance.py")
+    if not os.path.exists(fc):
+        return None
+    sp = importlib.util.spec_from_file_location("fold_clearance", fc)
+    F = importlib.util.module_from_spec(sp)
+    sp.loader.exec_module(F)
+    import io
+    import contextlib
+    import numpy as np
+    m = F.Model(os.path.join(F.DESC, "urdf/waffle_4wd_loaded.urdf"))
+    obs, tags = m.obstacle_points("base_link")
+    boxes = m.arm_boxes()
+    wp = F.path(q0, q1, [[j - 1] for j in order])
+    out = []
+    shift = measured_shift()
+    for name, w in (("모델", wp), ("실측 추정", None if shift is None else
+                                    [(st, np.r_[q[:5] - np.array(shift), q[5]]) for st, q in wp])):
+        if w is None:
+            continue
+        with contextlib.redirect_stdout(io.StringIO()):
+            _, per = F.evaluate(m, obs, tags, boxes, w, name)
+        st, (d, ln, tg, _) = min(per.items(), key=lambda kv: kv[1][0])
+        out.append((name, d * 1000, f"{st} 단계 {ln} <-> {tg}"))
+    return out
 
 spec = importlib.util.spec_from_file_location("oat", TOOL)
 oat = importlib.util.module_from_spec(spec)
@@ -45,6 +99,9 @@ def main():
     if st["error"] & oat.ERR_ABORT:
         sys.exit(f"팔 보드 오류 {oat.err_text(st['error'])} -> 모터 전원 켠 채 팔 OpenCR 리셋 뒤 다시")
     smin, smax = oat.load_standby()
+    if smax[0] < OLD_J1_MAX:
+        sys.exit("!! 젯슨 저장소의 대기 자세가 예전 STOW (관절 1 89°, 범위 %d ~ %d) — 이 자세로 접으면 1_3 칸 벽에 닿음 (#277).\n"
+                 "   저장소를 #277 (STOW 관절 1 2.200 rad = 126°) 이후로 업데이트 · 빌드한 뒤 다시 (README 참고). 움직이지 않음." % (smin[0], smax[0]))
     ticks = [oat.tick_of(q) for q in oat.arm_pos(st)]
     print(f"팔 보드 {port} (오류 {oat.err_text(st['error'])})")
     stages, far = [], False
@@ -65,8 +122,22 @@ def main():
         print("대기 자세 범위 안 — 그대로 브링업 띄우면 됨")
         return
     print("옮길 관절 (차례대로, 0.1 rad/s): " + " -> ".join(stages))
+    q0 = list(oat.arm_pos(st))
+    q1 = list(q0)
+    for sg in stages:
+        j, t = (int(v) for v in sg.split(":"))
+        q1[j - 1] = oat.rad_of(t)
+    print("접는 경로 틈 계산 중 (팀 URDF 팔레트 v5 · 퍽 10 개, 약 20 초) ...")
+    cl = path_clearance(q0, q1, [int(sg.split(":")[0]) for sg in stages])
+    if cl is None:
+        print("  !! fold_clearance.py 없음 (저장소가 #277 전) -> 틈 계산 못 함")
+    else:
+        for name, mm, where in cl:
+            print(f"  {name}: 최소 {mm:+.1f} mm ({where})")
     if check:
         return
+    if cl is None or min(mm for _, mm, _ in cl) < MIN_CLEAR_MM:
+        sys.exit(f"!! 경로 틈이 {MIN_CLEAR_MM:.0f} mm 미만이거나 계산을 못 함 -> 움직이지 않음 (팔레트 · 몸체에 닿을 수 있음). 손으로 옮기거나 저장소 업데이트")
     if far:
         print(f"!! {FAR_DEG:.0f}° 넘게 벗어난 관절이 있음 = 팔을 크게 접는 동작. 팔 주변 (팔레트 퍽 · 상자 · 사람) 을 비우고 지켜볼 것")
     if input("Enter = 움직임, 다른 키 = 그만: ").strip():
