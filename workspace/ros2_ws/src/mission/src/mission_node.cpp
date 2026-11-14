@@ -137,6 +137,7 @@
 #include "nav2_msgs/action/navigate_to_pose.hpp"
 #include "ament_index_cpp/get_package_share_path.hpp"
 #include "rclcpp/rclcpp.hpp"
+#include "controller_manager_msgs/srv/list_controllers.hpp"
 #include "rclcpp_action/rclcpp_action.hpp"
 #include "rclcpp_components/register_node_macro.hpp"
 #include "robot_interfaces/action/align_base.hpp"
@@ -159,6 +160,8 @@
 #include "yaml-cpp/yaml.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
 #include "mission/episode_log.hpp"
+#include "mission/give_up.hpp"
+#include "mission/readiness.hpp"
 #include "tf2_ros/buffer.hpp"
 #include "tf2_ros/transform_listener.hpp"
 
@@ -189,6 +192,7 @@ public:
   using Barcode = robot_interfaces::msg::Barcode;
   using TaskMarker = robot_interfaces::msg::TaskMarker;
   using CheckDice = robot_interfaces::srv::CheckDice;
+  using ListControllers = controller_manager_msgs::srv::ListControllers;
   using Report = std::function<void (bool ok, const std::string & message)>;
 
   explicit MissionNode(const rclcpp::NodeOptions & options)
@@ -311,6 +315,20 @@ public:
     // 이동 전후 사진 요청 (perception 이 팔 카메라 영상을 <접두어>_k.jpg 로 씀)
     snapshot_pub_ = create_publisher<std_msgs::msg::String>("/perception/snapshot", rclcpp::QoS(10).reliable());
 
+    // 시작 전 준비 확인 (R3): 컨트롤러 · Nav2 lifecycle 관리자 상태를 1 s 마다 물어 표로 찍음 (미션 진행 중에는 쉼)
+    if (!ready_controllers_.empty()) {
+      ctrl_client_ = create_client<ListControllers>(
+        "/controller_manager/list_controllers", rclcpp::ServicesQoS(), mission_cb_group_);
+    }
+    for (const auto & m : ready_managers_) {
+      mgr_clients_[m] = create_client<Trigger>("/" + m + "/is_active", rclcpp::ServicesQoS(), mission_cb_group_);
+      mgr_state_[m] = -1;
+    }
+    ready_pub_ = create_publisher<std_msgs::msg::String>("/mission/ready", rclcpp::QoS(1).reliable().transient_local());
+    ready_timer_ = rclcpp::create_timer(
+      this, get_clock(), rclcpp::Duration::from_seconds(1.0), [this]() {pollReady();},
+      mission_cb_group_);
+
     start_requested_ = get_parameter("auto_start").as_bool();
     tick_timer_ = rclcpp::create_timer(
       this, get_clock(), rclcpp::Duration::from_seconds(0.1), [this]() {onTick();},
@@ -423,6 +441,14 @@ private:
     skill_default_timeout_ = declare_parameter<double>("skill.default_timeout", 30.0);
     skill_timeout_margin_ = declare_parameter<double>("skill.timeout_margin", 5.0);
     max_retries_ = declare_parameter<int>("max_retries", 2);
+    // 재시도를 다 쓴 단계 (R1, plan 모드 계획 단계만): 집기 실패 퍽만 건너뜀 · 그 밖은 HOME 복귀 뒤 FAILED
+    skip_puck_ = declare_parameter<bool>("on_fail.skip_puck", true);
+    return_home_ = declare_parameter<bool>("on_fail.return_home", true);
+    // 시작 전 준비 확인 (R3). 비우면 그 항목을 보지 않음 (mock · 단독 실행). 실물 · 시뮬레이션은 bringup 이 채움
+    ready_controllers_ = declare_parameter<std::vector<std::string>>("ready.controllers", std::vector<std::string>{});
+    ready_managers_ = declare_parameter<std::vector<std::string>>("ready.lifecycle_managers", std::vector<std::string>{});
+    ready_loc_ = declare_parameter<bool>("ready.localization", false);
+    ready_reply_timeout_ = declare_parameter<double>("ready.reply_timeout", 3.0);
     retry_delay_ = declare_parameter<double>("retry_delay", 1.0);
 
     // 300ms 규칙 (계약): header.stamp 기준 이보다 오래된 인식 결과는 버린다
@@ -1071,6 +1097,16 @@ private:
       res->message = "cannot start: " + why + " — reset E-stop / fix the error first";
       return;
     }
+    if (run_ != Run::PAUSED) {   // 새 시작만 (PAUSED 재개는 위치를 잃어 멈춘 경우도 있어 막지 않음)
+      const auto items = readyItems();
+      RCLCPP_INFO(get_logger(), "%s", format_ready(items).c_str());
+      if (!all_ready(items)) {
+        res->success = false;
+        res->message = "not ready: " + ready_missing(items);
+        RCLCPP_ERROR(get_logger(), "시작 거절 — %s", res->message.c_str());
+        return;
+      }
+    }
     start_requested_ = true;
     res->success = true;
     res->message = run_ == Run::PAUSED ? "resume requested" : "start requested";
@@ -1236,6 +1272,125 @@ private:
            (!plan_mode_ || (plan_client_->service_is_ready() && dice_client_->service_is_ready()));
   }
 
+  // ------------------------------------------------------------------ 시작 전 준비 확인 (R3)
+  // 시작 단계 순서대로 항목을 모음: 1 안전 → 2 컨트롤러 → 3 노드 서버 → 4 위치 추정 → 5 Nav2
+  std::vector<ReadyItem> readyItems()
+  {
+    std::vector<ReadyItem> v;
+    auto add = [&v](const std::string & st, const std::string & n, ReadyState s, const std::string & d) {
+        v.push_back(ReadyItem{st, n, s, d});
+      };
+    const std::string S1 = "1 안전 (E-stop · OpenCR 진단)", S2 = "2 컨트롤러 (ros2_control)",
+      S3 = "3 노드 서버", S4 = "4 위치 추정", S5 = "5 Nav2";
+    const std::string why = safetyReason();
+    add(S1, "E-stop · 진단", why.empty() ? ReadyState::OK : ReadyState::FAIL,
+      why.empty() ? "정상" : why + (estop_active_ ? " -> 조이스틱 리셋" : ""));
+    for (const auto & c : ready_controllers_) {
+      if (!ctrl_rx_) {
+        add(S2, c, ReadyState::WAIT,
+          ctrl_client_->service_is_ready() ? "controller_manager 응답 기다림" : "controller_manager 없음");
+        continue;
+      }
+      const auto it = ctrl_state_.find(c);
+      if (it == ctrl_state_.end()) {
+        add(S2, c, ReadyState::FAIL, "없음 (spawner 실패?)");
+      } else {
+        add(S2, c, it->second == "active" ? ReadyState::OK : ReadyState::FAIL, it->second);
+      }
+    }
+    auto srv = [&](const std::string & n, bool ok) {
+        add(S3, n, ok ? ReadyState::OK : ReadyState::WAIT, ok ? "있음" : "서버 없음");
+      };
+    srv("/drive/navigate", nav_client_->action_server_is_ready());
+    srv("/drive/align", align_client_->action_server_is_ready());
+    srv("/manipulator/pose", pose_client_->action_server_is_ready());
+    srv("/manipulator/pick", pick_client_->action_server_is_ready());
+    srv("/perception/set_mode", mode_client_->service_is_ready());
+    if (plan_mode_) {
+      srv(plan_service_ + " (계획기)", plan_client_->service_is_ready());
+      srv("/perception/check_dice", dice_client_->service_is_ready());
+    }
+    if (ready_loc_) {
+      std::string st;
+      {
+        std::lock_guard<std::mutex> lock(sensor_mutex_);
+        st = loc_status_;
+      }
+      if (st.empty()) {
+        add(S4, loc_status_topic_, ReadyState::WAIT, "상태 못 받음 (loc_monitor?)");
+      } else {
+        add(S4, loc_status_topic_, st == "OK" ? ReadyState::OK : ReadyState::FAIL, st);
+      }
+    }
+    for (const auto & m : ready_managers_) {
+      const int a = mgr_state_[m];
+      if (a < 0) {
+        add(S5, m, ReadyState::WAIT, mgr_clients_[m]->service_is_ready() ? "응답 기다림" : "is_active 서비스 없음");
+      } else {
+        add(S5, m, a == 1 ? ReadyState::OK : ReadyState::FAIL, a == 1 ? "모든 노드 active" : "활성 아님 (lifecycle 미완, #276)");
+      }
+    }
+    return v;
+  }
+
+  // 1 s 마다: 상태 요청 (응답 없으면 ready_reply_timeout 뒤 버리고 다시) → 표가 바뀌면 터미널 · /mission/ready
+  void pollReady()
+  {
+    if (run_ == Run::RUNNING) {return;}   // 진행 중에는 묻지 않음 (Jetson 부하)
+    const rclcpp::Time t = now();
+    if (ctrl_client_) {
+      if (ctrl_pending_ && (t - ctrl_sent_).seconds() > ready_reply_timeout_) {
+        ctrl_client_->prune_pending_requests();
+        ctrl_pending_ = false;
+        ctrl_rx_ = false;
+      }
+      if (!ctrl_client_->service_is_ready()) {
+        ctrl_rx_ = false;
+      } else if (!ctrl_pending_) {
+        ctrl_pending_ = true;
+        ctrl_sent_ = t;
+        ctrl_client_->async_send_request(std::make_shared<ListControllers::Request>(),
+          [this](rclcpp::Client<ListControllers>::SharedFuture f) {
+            ctrl_pending_ = false;
+            ctrl_rx_ = true;
+            ctrl_state_.clear();
+            for (const auto & c : f.get()->controller) {ctrl_state_[c.name] = c.state;}
+          });
+      }
+    }
+    for (auto it = mgr_clients_.begin(); it != mgr_clients_.end(); ++it) {
+      const std::string m = it->first;
+      auto & cl = it->second;
+      bool & pend = mgr_pending_[m];
+      if (pend && (t - mgr_sent_[m]).seconds() > ready_reply_timeout_) {
+        cl->prune_pending_requests();
+        pend = false;
+        mgr_state_[m] = -1;
+      }
+      if (!cl->service_is_ready()) {
+        mgr_state_[m] = -1;
+        continue;
+      }
+      if (!pend) {
+        pend = true;
+        mgr_sent_[m] = t;
+        cl->async_send_request(std::make_shared<Trigger::Request>(),
+          [this, m](rclcpp::Client<Trigger>::SharedFuture f) {
+            mgr_pending_[m] = false;
+            mgr_state_[m] = f.get()->success ? 1 : 0;
+          });
+      }
+    }
+    const auto items = readyItems();
+    const std::string text = format_ready(items);
+    if (text == ready_text_) {return;}
+    ready_text_ = text;
+    RCLCPP_INFO(get_logger(), "%s", text.c_str());   // 바뀔 때만: 시작 단계가 하나씩 OK 가 되는 것이 보임
+    std_msgs::msg::String msg;
+    msg.data = all_ready(items) ? "READY" : "NOT_READY: " + ready_missing(items);
+    ready_pub_->publish(msg);
+  }
+
   // ------------------------------------------------------------------ 미션 · 단계 전이
   // 공통 시작 단계: 팔을 태그 쪽으로 → 태그 읽기. 읽은 뒤 미션표 단계가 뒤에 붙는다
   void beginMission()
@@ -1271,6 +1426,9 @@ private:
     mismatch_logged_cycles_ = -1;
     retry_count_.clear();
     fallback_used_.clear();
+    skipped_slots_.clear();
+    skipped_.clear();
+    abort_reason_.clear();
     run_ = Run::RUNNING;
     reason_.clear();
     RCLCPP_INFO(get_logger(), "mission start (%s)", plan_mode_ ? "plan" : "tag");
@@ -1302,6 +1460,27 @@ private:
     ob_stage_ = ObStage::NONE;
     stopVerifyRecord();
     const Step & s = steps_[idx];
+    // R1: 집기를 건너뛴 칸의 (바로 다음) 꺼내기 · 놓기는 하지 않음. 계획기는 같은 칸을 여러 번 쓰므로 (싣기 → 꺼내기 → 다시 싣기)
+    //   표시는 그 칸의 다음 꺼내기에서 한 번 쓰고 지우며, 그 칸에 다시 실을 때도 지운다
+    if (!skipped_slots_.empty() && isArmSkill(s, "pallet_load_")) {
+      skipped_slots_.erase(pallet_slot(s.text, "load"));
+    }
+    if (!skipped_slots_.empty() && isArmSkill(s, "pallet_unload_")) {
+      const std::string slot = pallet_slot(s.text, "unload");
+      if (skipped_slots_.erase(slot)) {
+        std::vector<std::string> texts;
+        for (const auto & st : steps_) {texts.push_back(st.text);}
+        const size_t next = after_unload(texts, idx);
+        RCLCPP_WARN(get_logger(), "-> [%zu] %s 건너뜀 (칸 %s 빈 칸)", idx, s.text.c_str(), slot.c_str());
+        if (next < steps_.size()) {
+          enterStep(next);
+        } else {
+          step_idx_ = steps_.size() - 1;
+          stepSucceeded();
+        }
+        return;
+      }
+    }
     RCLCPP_INFO(get_logger(), "-> [%zu] %s", idx, s.text.c_str());
     publishStatus();
 
@@ -1530,7 +1709,11 @@ private:
       enterStep(step_idx_ + 1);
       return;
     }
-    finish(Run::DONE, "");
+    if (!abort_reason_.empty()) {   // R1: 재시도 소진 뒤 HOME 복귀까지 마침
+      finish(Run::FAILED, abort_reason_ + " (HOME 복귀함" + skippedText(true) + ")");
+      return;
+    }
+    finish(Run::DONE, skippedText(false));
   }
 
   // ------------------------------------------------------------------ 보기 · 제자리 회전 (read_tag · search)
@@ -2855,7 +3038,7 @@ private:
     }
     int & count = retry_count_[failed];
     if (count >= max_retries_) {
-      finish(Run::FAILED, s.text + " failed after " + std::to_string(count) + " retries: " + reason);
+      giveUp(failed, s.text + " failed after " + std::to_string(count) + " retries: " + reason);
       return;
     }
     ++count;
@@ -2882,6 +3065,64 @@ private:
   static bool isArmSkill(const Step & s, const std::string & prefix)
   {
     return s.type == "skill" && s.args.size() >= 2 && s.args[0] == "manipulator" && s.args[1].rfind(prefix, 0) == 0;
+  }
+
+  // 재시도를 다 쓴 단계 (R1). plan 모드 계획 단계에서만:
+  //   집기 묶음 (turn · target_look · toppick_tilt) -> 그 퍽만 건너뜀 (칸은 빈 칸, 그 칸 unload · place 도 건너뜀)
+  //   pallet_unload -> 바로 뒤 place 를 건너뜀 (퍽은 팔레트에 남음)
+  //   그 밖 (주행 · 정렬 · pallet_load · place, 퍽을 쥐었을 수 있음) -> HOME 복귀 줄로 가서 복귀 뒤 FAILED
+  //   계획 전 (observe · survey · plan) · 복귀 줄 자체 실패 -> 바로 FAILED
+  void giveUp(size_t failed, const std::string & why)
+  {
+    std::vector<std::string> texts;
+    texts.reserve(steps_.size());
+    for (const auto & st : steps_) {texts.push_back(st.text);}
+    const auto home = plan_mode_ ? home_index(texts) : std::nullopt;
+    if (home && failed < *home) {
+      if (skip_puck_) {
+        if (const auto sk = pick_skip(texts, failed)) {
+          skipped_slots_.insert(sk->slot);
+          skipped_.push_back("pick " + sk->slot);
+          RCLCPP_ERROR(get_logger(), "[%zu] %s -> 퍽 건너뜀 (칸 %s 빈 칸, 그 칸 꺼내기 · 놓기도 건너뜀)",
+            failed, why.c_str(), sk->slot.c_str());
+          logEvent("skip", "\"what\": \"pick\", \"slot\": \"" + sk->slot + "\", \"reason\": \"" + escape(why) + "\"");
+          retry_count_.clear();
+          enterStep(sk->resume);   // resume <= home (pallet_load 는 복귀 줄 앞)
+          return;
+        }
+        const std::string slot = pallet_slot(texts[failed], "unload");
+        if (!slot.empty()) {
+          skipped_.push_back("place " + slot);
+          RCLCPP_ERROR(get_logger(), "[%zu] %s -> 이 퍽 놓기 건너뜀 (칸 %s 에 남음)", failed, why.c_str(), slot.c_str());
+          logEvent("skip", "\"what\": \"place\", \"slot\": \"" + slot + "\", \"reason\": \"" + escape(why) + "\"");
+          retry_count_.clear();
+          enterStep(after_unload(texts, failed));
+          return;
+        }
+      }
+      if (return_home_) {
+        abort_reason_ = why;
+        RCLCPP_ERROR(get_logger(), "[%zu] %s -> HOME 복귀 뒤 FAILED", failed, why.c_str());
+        logEvent("abort", "\"reason\": \"" + escape(why) + "\", \"home_step\": " + std::to_string(*home));
+        retry_count_.clear();
+        enterStep(*home);
+        return;
+      }
+    }
+    if (!abort_reason_.empty()) {   // 복귀 중 실패: 처음 원인도 남김
+      finish(Run::FAILED, abort_reason_ + " / 복귀 실패: " + why);
+      return;
+    }
+    finish(Run::FAILED, why);
+  }
+
+  // 건너뛴 것 "skipped: pick 1_2, place 3_0" (없으면 빈 문자열)
+  std::string skippedText(bool sep) const
+  {
+    if (skipped_.empty()) {return "";}
+    std::string out = sep ? ", skipped: " : "skipped: ";
+    for (size_t i = 0; i < skipped_.size(); ++i) {out += (i ? ", " : "") + skipped_[i];}
+    return out;
   }
 
   void scheduleRetry(size_t idx)
@@ -2917,7 +3158,7 @@ private:
     } else if (r == Run::IDLE) {
       RCLCPP_WARN(get_logger(), "-> IDLE: %s", why.c_str());
     } else {
-      RCLCPP_INFO(get_logger(), "mission DONE");
+      RCLCPP_INFO(get_logger(), "mission DONE%s", why.empty() ? "" : (" (" + why + ")").c_str());
     }
     cancelAll();
     retry_pending_ = false;
@@ -3303,6 +3544,26 @@ private:
   ReturnZone return_zone_;                                  // 출발 구역 · 차체 외곽 (return_check.*)
   std::optional<std::array<double, 3>> wait_pose0_;          // wait 처음 자세 (map)
   bool dice_pending_{false};
+  // 재시도 소진 처리 (R1)
+  bool skip_puck_{true}, return_home_{true};
+  std::set<std::string> skipped_slots_;     // 집기를 건너뛴 팔레트 칸 "열_칸"
+  std::vector<std::string> skipped_;        // 건너뛴 것 (끝 reason)
+  std::string abort_reason_;                // HOME 복귀 중이면 처음 실패 원인
+  // 시작 전 준비 확인 (R3, mission_cb_group_ 전용)
+  std::vector<std::string> ready_controllers_, ready_managers_;
+  bool ready_loc_{false};
+  double ready_reply_timeout_{3.0};
+  rclcpp::Client<ListControllers>::SharedPtr ctrl_client_;
+  bool ctrl_pending_{false}, ctrl_rx_{false};
+  rclcpp::Time ctrl_sent_{0, 0, RCL_ROS_TIME};
+  std::map<std::string, std::string> ctrl_state_;
+  std::map<std::string, rclcpp::Client<Trigger>::SharedPtr> mgr_clients_;
+  std::map<std::string, int> mgr_state_;   // -1 모름 · 0 활성 아님 · 1 active
+  std::map<std::string, bool> mgr_pending_;
+  std::map<std::string, rclcpp::Time> mgr_sent_;
+  std::string ready_text_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr ready_pub_;
+  rclcpp::TimerBase::SharedPtr ready_timer_;
 };
 
 }  // namespace mission
