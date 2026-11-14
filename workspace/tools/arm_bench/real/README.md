@@ -26,8 +26,19 @@
 | `arm_cmd.sh <sim\|real> load 3 1` / `unload 3 1` | `pallet_load_3_1_tilt` / `pallet_unload_3_1_tilt` |
 | `arm_cmd.sh <sim\|real> place <x> <y> <z>` | `place_at:base_link:x:y:z` (z = 놓을 윗면 높이) |
 | `arm_cmd.sh real look <x> <y> <z>` · `real place_cell L1 m1 p1` | `target_look:…` · `place_L1_m1_p1_tilt` |
+| `arm_cmd.sh real pose DRIVE` | `/manipulator/pose` 이름 자세 (스킬 실패로 팔이 멈췄을 때 되돌리기) |
 | `arm_cmd.sh sim transit\|reset\|cells\|status\|clear\|fill 3_0 2_1` | 시뮬 전용 |
 | `dice.sh real L1 5 --slots "3_0 3_1 2_0 2_1 2_2" [--record]` · `dice.sh sim - 5` | 팔레트 칸에서 꺼내 장소 3×3 에 주사위 눈 (1~6) 배치 (mission DICE 와 같은 칸, 먼 칸부터). `--dry` 로 보낼 스킬만 확인, `--record` 면 ros2 bag → `~/실측/dice_*` |
 
-- 끝 코드: 0 성공 · 1 실패 · 2 서버 없음 · 3 시간 초과 (`ARM_TIMEOUT`, 기본 120 s). 실물은 `ROS_WS` 를 주면 그 `install/setup.bash` 를 불러옴.
+- 끝 코드: 0 성공 · 1 실패 (실물은 결과 `success: true` 로 판정) · 2 서버 없음 · 3 시간 초과 (`ARM_TIMEOUT`, 기본 120 s). 실물은 `ROS_WS` 를 주면 그 `install/setup.bash` 를 불러옴.
 - `sim` 은 PC 에서 `sim_cmd.py` (같은 폴더) 가 `~/ros2_lyrical` 로 보냄. 서버는 `workspace/urdf_and_usd/policy/manipulator/tools/README.md` 참고.
+
+## 팔레트 칸 맞추기 · 실물 준비 도구 (2026-11-14)
+| 파일 | 하는 일 | 실행 (젯슨) |
+|---|---|---|
+| `slot_teach.py` | 칸마다 칸에 넣은 퍽에 집게를 손으로 맞춰 기록 (`~/실측/slot_teach.json`) -> `--make` 로 노드 궤적 칸 근처 보정판 (`~/pallet_place_traj_taught.json`, 원본 `~/pallet_place_traj_orig.json` 기준). `--show` 칸별 차이, `--set 칸 방향 mm` 말로 보정 | 브링업 + `r` 뒤 `python3 ~/slot_teach.py [칸 …]` |
+| `arm_only.sh` | 보드 확인 (읽기만: 팔 HOLD = 재부팅 안 됨 · 모터 못 읽음 구분) + 최소 브링업 (센서 없이, 포트 자동) | `~/arm_only.sh --check` · `~/arm_only.sh` |
+| `arm_stow.py` | 브링업 끈 상태에서 대기 자세 (STOW) 범위 밖 관절만 범위 가운데로 (opencr_arm_tool 저속, 접는 차례 5 -> 1 -> 4 -> 2 -> 3) | `python3 ~/arm_stow.py [--check]` |
+| `arm_free.py` | 칸 안에 멈춘 팔 빼내기 (벌림 -> 4 cm 위 -> 높은 자세 -> 정면) | `python3 ~/arm_free.py [--keep]` |
+- 켜는 순서: 모터 전원 먼저 -> 팔 OpenCR 리셋 (켜진 채 모터만 재시작되면 토크가 안 걸림, 전류 0) -> `arm_only.sh --check` 팔 보드 `0x2`.
+- 관절 1 큰 회전 중 USB 허브가 끊기면 ttyACM 번호가 바뀜 (예: 2 · 3) -> 브링업 `ports:=` 로 지정 (`arm_only.sh` 는 자동).
