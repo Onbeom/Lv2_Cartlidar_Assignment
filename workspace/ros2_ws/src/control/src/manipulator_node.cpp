@@ -89,6 +89,7 @@
 #include "control/arm_ik.hpp"
 #include "control/grasp_detector.hpp"
 #include "control/min_jerk.hpp"
+#include "control/puck_height.hpp"
 #include "control/sag_comp.hpp"
 #include "control/startup_stow.hpp"
 #include "control/toppick_obs.hpp"
@@ -428,6 +429,12 @@ private:
     target_look_arm_wait_ = declare_parameter<double>("target_look.arm_wait", 1.0);
     target_look_timeout_ = declare_parameter<double>("target_look.timeout", 3.0);
     target_look_match_ = declare_parameter<double>("target_look.match_distance", 0.04);
+    // 상자 위 퍽 높이 (#279, puck_height.hpp): 잰 z 대신 바닥 (floor_frame) + 상자 윗면 + 퍽 반 높이. x · y 는 잰 값
+    target_look_box_z_ = declare_parameter<bool>("target_look.box_z", true);
+    target_look_box_top_ = declare_parameter<double>("target_look.box_top", 0.07);
+    target_look_standing_dz_ = declare_parameter<double>("target_look.standing_center_dz", 0.030);
+    target_look_lying_dz_ = declare_parameter<double>("target_look.lying_center_dz", 0.015);
+    target_look_box_z_tol_ = declare_parameter<double>("target_look.box_z_tolerance", 0.04);
     // 집게 끝(tool_link) = 퍽 중심 + 위로 grasp_z_offset (팔레트 궤적 grasp_dz 0.015 와 같게)
     grasp_z_offset_ = declare_parameter<double>("pick.grasp_z_offset", 0.015);
     // 팔레트 칸 궤적 (빈 문자열 = <control share>/config/pallet_place_traj.json, pallet_traj.py 가 만든 파일 사본)
@@ -881,6 +888,10 @@ private:
     requireNonNegative("target_look.arm_wait", target_look_arm_wait_);
     requirePositive("target_look.timeout", target_look_timeout_);
     requirePositive("target_look.match_distance", target_look_match_);
+    requirePositive("target_look.box_top", target_look_box_top_);
+    requirePositive("target_look.standing_center_dz", target_look_standing_dz_);
+    requirePositive("target_look.lying_center_dz", target_look_lying_dz_);
+    requirePositive("target_look.box_z_tolerance", target_look_box_z_tol_);
     for (const auto & [name, lp] : look_params_) {
       if (lp.view_angles.empty() || lp.distances.empty()) {
         throw std::invalid_argument(name + ".view_angles_deg and " + name + ".distances must not be empty");
@@ -3863,12 +3874,27 @@ private:
           tf2::doTransform(best->pose, latch.pose, to_fixed);
           latch.pose.orientation = geometry_msgs::msg::Quaternion();
           latch.pose.orientation.w = 0.0;   // 방향 없음 (resolveTarget 이 yaw 를 쓰지 않음)
+          const double measured_z = latch.pose.position.z;
+          const char * z_note = "camera z";
+          if (target_look_box_z_) {
+            // 바닥 (floor_frame 원점) 의 fixed_frame 높이 — 상자 위 퍽이면 z 를 상자 기준으로 (카메라 높이 오차를 뺌, #279)
+            try {
+              const auto floor = tf_buffer_->lookupTransform(fixed_frame_, floor_frame_, tf2::TimePointZero);
+              const bool lying = best->orientation_valid && !best->standing;
+              const auto pz = boxPuckZ(measured_z, floor.transform.translation.z, target_look_box_top_,
+                lying ? target_look_lying_dz_ : target_look_standing_dz_, target_look_box_z_tol_);
+              latch.pose.position.z = pz.z;
+              z_note = pz.snapped ? (lying ? "box top + lying" : "box top + standing") : "camera z (far from box top)";
+            } catch (const tf2::TransformException & e) {
+              RCLCPP_WARN(get_logger(), "target_look: no TF %s -> %s, camera z: %s", floor_frame_.c_str(), fixed_frame_.c_str(), e.what());
+            }
+          }
           target_look_latch_ = latch;
           target_look_latch_time_ = t;
-          char buf[200];
-          std::snprintf(buf, sizeof(buf), "puck seen by %s (tag %d) at (%.3f, %.3f, %.3f) %s, %.3f m from expected",
+          char buf[260];
+          std::snprintf(buf, sizeof(buf), "puck seen by %s (tag %d) at (%.3f, %.3f, %.3f) %s [z: %s, camera %.3f], %.3f m from expected",
             best->camera == Puck::CAMERA_ARM ? "arm camera" : "D435", best->tag_id, latch.pose.position.x,
-            latch.pose.position.y, latch.pose.position.z, fixed_frame_.c_str(), best_d);
+            latch.pose.position.y, latch.pose.position.z, fixed_frame_.c_str(), z_note, measured_z, best_d);
           RCLCPP_INFO(get_logger(), "target_look: %s", buf);
           finishSkill(true, buf);
           return;
@@ -3933,6 +3959,8 @@ private:
   TargetLookParams target_look_;
   std::map<std::string, TargetLookParams> look_params_;   // box_look · barcode_look (#65)
   double target_look_settle_{0.3}, target_look_arm_wait_{1.0}, target_look_timeout_{3.0}, target_look_match_{0.04};
+  bool target_look_box_z_{true};
+  double target_look_box_top_{0.07}, target_look_standing_dz_{0.030}, target_look_lying_dz_{0.015}, target_look_box_z_tol_{0.04};
   std::string pallet_file_;
   double pallet_speed_{0.8}, pallet_row3_hold_speed_{0.4};
   bool pallet_apply_offsets_{false};

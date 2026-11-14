@@ -248,6 +248,14 @@ manipulator_node:
       arm_wait: 1.0              # s, 이 동안은 팔 카메라 (태그) 퍽만, 지나면 D435 퍽도
       timeout: 3.0               # s, 예상 자리 퍽이 없으면 실패 (mission 재시도)
       match_distance: 0.04       # m, 예상 중심과 수평 거리. 이웃 퍽 (회전 뒤 0.08 m) 의 절반
+      # 상자 위 퍽 높이 (#279, include/control/puck_height.hpp): 잰 z 대신 바닥 (floor_frame) + box_top + 퍽 반 높이. x · y 는 잰 값.
+      #   팔 카메라 높이 (정기구학) 가 실물 사진과 자세마다 8 ~ 22 mm 다르고 (#279), 11-12 실물 집기는 높이 +2.5 cm 치우침 (#190).
+      #   집기 정책은 높이 오차 ±5 mm 로 학습. 잰 z 가 box_z_tolerance 넘게 떨어지면 (상자 위가 아님) 잰 값 그대로. false = 예전처럼 잰 z
+      box_z: true
+      box_top: 0.07              # m, 바닥 → 상자 윗면 (발제 205 × 205 × 70)
+      standing_center_dz: 0.030  # 세운 퍽 (높이 60 mm) 중심
+      lying_center_dz: 0.015     # 누운 직육면체 (높이 30 mm) 중심 — /perception/pucks standing false · orientation_valid 일 때
+      box_z_tolerance: 0.04      # m
     # box_look:<frame>:<x>:<y>:<z> (#65, mission verify): 장소 칸 중심 · 상자 윗면을 위에서 내려다봄. 카메라 장착 = target_look.*
     #   FINE 정렬 (범퍼 → 면 0.127 m) 뒤 장소 중심은 J1 0.267 m → 90° · 0.20 m 자세가 한계 안 (BOX_VIEW 고정 자세는 J1 0.149 m 를 봄)
     box_look:
