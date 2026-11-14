@@ -5,8 +5,8 @@
 #
 #   ./dice.sh sim  -    <눈 1~6> [옵션]      Isaac 시뮬 (L 자리는 - 로 둠, place_at:base_link 좌표 사용)
 #   ./dice.sh real <L>  <눈 1~6> [옵션]      실물 (젯슨에서, bringup 뜬 상태. place_<L>_<dx>_<dy>_tilt — 위치 인식 · 지도 필요)
-#   ./dice.sh real -    <눈 1~6> --bench     실물 책상 시험 (지도 없이 place_at:base_link). 상자 = 로봇 앞면에서 12 cm, 가운데 맞춤
-#                                           -> 가운데 칸 0.3625 0 0.0633. 눈 그림의 위 (dy+) = 로봇 앞 (먼 쪽), 오른쪽 (dx+) = 로봇 오른쪽
+#   ./dice.sh real -    <눈 1~6> --bench     실물 책상 시험 (지도 없이 place_at:base_link). 상자 = 로봇 앞 끝에서 5 cm (5 ~ 6 cm, 다르면 --cell0), 가운데 맞춤
+#                                           -> 가운데 칸 0.2853 0 0.0633. 눈 그림의 위 (dy+) = 로봇 앞 (먼 쪽), 오른쪽 (dx+) = 로봇 오른쪽
 #
 # 옵션:
 #   --slots "1_0 1_1 ..."  꺼낼 팔레트 칸 (열_칸). 기본 = 계획기 차례로 앞에서 눈 개수만큼.
@@ -20,7 +20,7 @@
 #   --cell0 "x y z"        시뮬: 가운데 칸 (0,0) 좌표 (base_link). 기본 = 서버 cells 명령으로 받음.
 #   --removed "2_3 ..."    쓰지 않을 팔레트 칸 (기본 = PALLET_REMOVED 환경 변수, 없으면 없음). 팔레트 v5 (11-13) = 10 칸: 1 · 2 열 0 ~ 3, 3 열 0 · 1
 #                          이 칸은 --slots 에 적으면 거부, 기본 칸 고르기에서도 뺌. 모든 칸 다 쓰려면 --removed ""
-#   --bench                실물: 지도 없이 base_link 좌표로 놓기 (--cell0 기본 "0.3625 0.0 0.0633", 다르게 두면 --cell0 로)
+#   --bench                실물: 지도 없이 base_link 좌표로 놓기 (--cell0 기본 "0.2853 0.0 0.0633" = 앞 끝 0.1328 + 5 cm + 반 변 0.1025, 6 cm 면 "0.2953 0.0 0.0633")
 #   --pitch 0.06           시뮬: 칸 간격 [m] (--cell0 를 쓸 때만).
 #   --transit              스킬 사이에 transit (이동 자세) 삽입 (시뮬 전용).
 #   --record               실물: ros2 bag 기록 (joint_states · 팔 카메라 · /perception/pucks · tf) -> ~/실측/dice_<시각>/
@@ -107,7 +107,7 @@ NS=$(echo $SLOTS | wc -w)
 # 시뮬: 칸 좌표 (base_link) 확보
 declare -A XY
 if [ "$MODE" = real ] && [ "$BENCH" = 1 ]; then  # 책상: 눈 그림 위 (dy+) = 로봇 앞 (+x), 오른쪽 (dx+) = 로봇 오른쪽 (−y)
-  [ -z "$CELL0" ] && CELL0="0.3625 0.0 0.0633"
+  [ -z "$CELL0" ] && CELL0="0.2853 0.0 0.0633"
   read -r X0 Y0 Z0 <<< "$CELL0"
   while read -r dx dy; do XY["$dx,$dy"]=$(python3 -c "print(f'{$X0+$dy*$PITCH:.4f} {$Y0-$dx*$PITCH:.4f} {$Z0:.4f}')"); done <<< "$CELLS"
 elif [ "$MODE" = sim ]; then
