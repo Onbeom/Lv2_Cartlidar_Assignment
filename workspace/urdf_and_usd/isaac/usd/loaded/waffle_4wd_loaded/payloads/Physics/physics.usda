@@ -19,12 +19,12 @@ over "waffle_4wd"
             prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsArticulationRootAPI", "NewtonArticulationRootAPI", "PhysicsMassAPI", "NewtonMassAPI"]
         )
         {
-            double[] newton:inertia = [0.1125567587, 0.1131153897, 0.05920424296, -0.0002076950832, 0.02729959989, 0.0006911432564]
+            double[] newton:inertia = [0.1125686093, 0.1132967556, 0.05938856504, -0.0002052878533, 0.0272764857, 0.0006914666391]
             bool newton:selfCollisionEnabled = 1
-            point3f physics:centerOfMass = (-0.023657192, 0.0014825758, 0.10781922)
-            float3 physics:diagonalInertia = (0.04770339, 0.113122724, 0.12405028)
-            float physics:mass = 3.9994762
-            quatf physics:principalAxes = (-0.5531443, -0.0065117483, 0.83306, 0.00010865953)
+            point3f physics:centerOfMass = (-0.023251219, 0.0014767597, 0.10787376)
+            float3 physics:diagonalInertia = (0.047878265, 0.11330403, 0.12407164)
+            float physics:mass = 4.015228
+            quatf physics:principalAxes = (-0.55289435, -0.0066070035, 0.83322513, -0.00004721633)
 
             over "wheel_left_front_link" (
                 prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI", "NewtonMassAPI"]
@@ -1424,18 +1424,6 @@ over "waffle_4wd"
             {
             }
 
-            over "static_431" (
-                prepend apiSchemas = ["NewtonCollisionAPI"]
-            )
-            {
-            }
-
-            over "static_432" (
-                prepend apiSchemas = ["NewtonCollisionAPI"]
-            )
-            {
-            }
-
             over "static_433" (
                 prepend apiSchemas = ["NewtonCollisionAPI"]
             )
@@ -1635,6 +1623,36 @@ over "waffle_4wd"
             }
 
             over "light_cup_B_2" (
+                prepend apiSchemas = ["NewtonCollisionAPI"]
+            )
+            {
+            }
+
+            over "light_j1br_side_L" (
+                prepend apiSchemas = ["NewtonCollisionAPI"]
+            )
+            {
+            }
+
+            over "light_j1br_side_R" (
+                prepend apiSchemas = ["NewtonCollisionAPI"]
+            )
+            {
+            }
+
+            over "light_j1br_end_rear" (
+                prepend apiSchemas = ["NewtonCollisionAPI"]
+            )
+            {
+            }
+
+            over "light_j1br_end_front" (
+                prepend apiSchemas = ["NewtonCollisionAPI"]
+            )
+            {
+            }
+
+            over "light_j1br_flange" (
                 prepend apiSchemas = ["NewtonCollisionAPI"]
             )
             {

@@ -169,6 +169,17 @@ def Xform "waffle_4wd" (
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
             }
 
+            def Xform "joint1_bracket" (
+                instanceable = true
+                prepend references = @./instances.usda@</Instances/joint1_bracket>
+            )
+            {
+                quatd xformOp:orient = (1, 0, 0, 0)
+                double3 xformOp:scale = (1, 1, 1)
+                double3 xformOp:translate = (0, 0, 0)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
             def Xform "deck_tray" (
                 instanceable = true
                 prepend references = @./instances.usda@</Instances/deck_tray>
@@ -3839,32 +3850,6 @@ def Xform "waffle_4wd" (
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
             }
 
-            def Cube "static_431" (
-                prepend apiSchemas = ["PhysicsCollisionAPI"]
-            )
-            {
-                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
-                uniform token purpose = "guide"
-                double size = 1
-                quatf xformOp:orient = (1, 0, 0, 0)
-                float3 xformOp:scale = (0.0425, 0.018000001, 0.033599995)
-                double3 xformOp:translate = (0.0839999981, 0.024, 0.127799998)
-                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-            }
-
-            def Cube "static_432" (
-                prepend apiSchemas = ["PhysicsCollisionAPI"]
-            )
-            {
-                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
-                uniform token purpose = "guide"
-                double size = 1
-                quatf xformOp:orient = (1, 0, 0, 0)
-                float3 xformOp:scale = (0.0425, 0.018000001, 0.0336)
-                double3 xformOp:translate = (0.0839999905, -0.0240000005, 0.127800002)
-                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-            }
-
             def Cube "static_433" (
                 prepend apiSchemas = ["PhysicsCollisionAPI"]
             )
@@ -4306,6 +4291,71 @@ def Xform "waffle_4wd" (
                 quatf xformOp:orient = (-0.104528464, 0, 0, 0.9945219)
                 float3 xformOp:scale = (0.045147, 0.045147, 0.05101)
                 double3 xformOp:translate = (-0.090826, -0.0397111, 0.136505001)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "light_j1br_side_L" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                uniform token purpose = "guide"
+                double size = 1
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.0555, 0.0045, 0.034)
+                double3 xformOp:translate = (0.084, 0.01675, 0.128)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "light_j1br_side_R" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                uniform token purpose = "guide"
+                double size = 1
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.0555, 0.0045, 0.034)
+                double3 xformOp:translate = (0.084, -0.01675, 0.128)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "light_j1br_end_rear" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                uniform token purpose = "guide"
+                double size = 1
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.00425, 0.029, 0.032)
+                double3 xformOp:translate = (0.058375, 0, 0.127)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "light_j1br_end_front" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                uniform token purpose = "guide"
+                double size = 1
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.00425, 0.029, 0.032)
+                double3 xformOp:translate = (0.109625, 0, 0.127)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+            }
+
+            def Cube "light_j1br_flange" (
+                prepend apiSchemas = ["PhysicsCollisionAPI"]
+            )
+            {
+                float3[] extent = [(-0.5, -0.5, -0.5), (0.5, 0.5, 0.5)]
+                uniform token purpose = "guide"
+                double size = 1
+                quatf xformOp:orient = (1, 0, 0, 0)
+                float3 xformOp:scale = (0.05975, 0.072, 0.006)
+                double3 xformOp:translate = (0.081875, 0, 0.114)
                 uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
             }
 
