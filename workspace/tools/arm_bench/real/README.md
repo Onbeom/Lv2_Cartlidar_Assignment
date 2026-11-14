@@ -37,6 +37,7 @@
 | 파일 | 하는 일 | 실행 (젯슨) |
 |---|---|---|
 | `slot_teach.py` | 칸마다 칸에 넣은 퍽에 집게를 손으로 맞춰 기록 (`~/실측/slot_teach.json`) -> `--make` 로 노드 궤적 칸 근처 보정판 (`~/pallet_place_traj_taught.json`, 원본 `~/pallet_place_traj_orig.json` 기준). `--show` 칸별 차이, `--set 칸 방향 mm` 말로 보정 | 브링업 + `r` 뒤 `python3 ~/slot_teach.py [칸 …]` |
+| `slot_teach.py --box` · `--fit_box` | 상자 위 놓는 자리 맞추기 (쥔 퍽 바닥이 윗면에 닿고 칸 가운데, 기본 9 칸 `~/실측/box_teach.json`) -> 노드 놓기 IK 영점 (`ik.joint_offsets`) 제안 · 셀별 오차 | 브링업 + `r` 뒤 `python3 ~/slot_teach.py --box` |
 | `arm_only.sh` | 보드 확인 (읽기만: 팔 HOLD = 재부팅 안 됨 · 모터 못 읽음 구분) + 최소 브링업 (센서 없이, 포트 자동) | `~/arm_only.sh --check` · `~/arm_only.sh` |
 | `arm_stow.py` | 브링업 끈 상태에서 대기 자세 (STOW) 범위 밖 관절만 범위 가운데로 (opencr_arm_tool 저속, 접는 차례 5 -> 1 -> 4 -> 2 -> 3) | `python3 ~/arm_stow.py [--check]` |
 | `arm_free.py` | 칸 안에 멈춘 팔 빼내기 (벌림 -> 4 cm 위 -> 높은 자세 -> 정면) | `python3 ~/arm_free.py [--keep]` |
