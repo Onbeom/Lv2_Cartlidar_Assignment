@@ -60,6 +60,23 @@ perception_node:
       lock_reacquire_size_ratio: 2.0   # ★ 놓친 뒤 다시 잡을 때 직전 폭 대비 배율
       lock_bias_margin: 0.02    # ★ 다시 잡을 때 D435 투영점 근처 후보가 모호하면, 마지막으로 본 (박스 − 투영점) 치우침을 더한 점에서 이만큼 더 가까운 후보를 고름
       lock_log: false           # 진단: true 면 팔 영상마다 ARM_LOCK 줄(고른 박스 · 빠진 이유 · 박스 목록)
+      cam_correction:           # 팔 카메라 자세별 실측 보정 (#278, arm_cam_correction.hpp). 팔 링크 길이 · 영점(#292 · #295)이 정해지기 전 임시
+        enabled: false            # ★ 실물 확인(보정 줄이 뜨는지 · 맞춤에 안 쓴 보드 사진의 보정 뒤 높이 차) 뒤 켬
+        #   URDF 는 그대로, 사진을 찍은 자세 근처(link5 위치 tol_m · 각 tol_rad 안)에서만 link5 → 카메라 장착을 실측 값으로 바꿈. 밖이면 설계 FK 그대로
+        #   link5 자세 기준 = 펌웨어 관절각(/joint_states, joint_offsets 안 더함) + 이 URDF FK (robot_state_publisher 와 같음, 차 0.05 mm 이하 확인)
+        camera_frame: arm_camera_optical_frame
+        link5_frame: link5
+        base_frame: base_link
+        tol_m: 0.03               # ★ [m] link5 위치 차 상한 (사진 자세 밖으로 보정을 넓히지 않게)
+        tol_rad: 0.10             # ★ [rad] link5 방향 차 상한
+        names: [BOXLOOK_PLACE, BOXLOOK_TAG]
+        # 항목마다 10 개: link5 (base_link, 찍은 관절각의 설계 FK) x y z 롤 피치 요 · 장착 보정 (link5 기준) 피치 롤 [rad] x z [m]
+        #   근거: 보드 사진 PLACE 3 · TAG 6 장 (11-14, 보드 x 손 측정), PnP 맞춤(인지 담당 도구 cal_pose_table.py). 잔차 높이 ≤ 1.2 mm, 방향 PLACE 0.22° · TAG 0.54°(기준 0.5° 넘음),
+        #   보정 전 실제 카메라 높이 − FK: PLACE −9.9 · TAG −22.7 mm. 요 · y 보정은 보드 자리와 섞여 0 (한계)
+        #   한계: 장착 보정 x +50 mm · z +12~22 mm 는 실제 장착 치수가 아니라 링크 · 영점 · 보드 x 오차를 함께 흡수한 값 →
+        #   tol 경계를 넘나들 때 카메라 자리가 수 cm 뛸 수 있음. 맞춤에 쓴 같은 사진의 잔차뿐(맞춤에 안 쓴 사진으로는 아직 확인 안 함)
+        table: [0.1098, -0.0004, 0.3689, 0.0010, 0.4264, -0.0292,  0.07970, -0.02706, 0.0507, 0.0222,
+                0.1532, -0.0017, 0.3960, 0.0005, 0.4924, -0.0291,  0.08223, -0.02927, 0.0503, 0.0120]
       # ★ 팔 끝(tool_link) → 퍽 거리 토픽이 둘이다. 이름이 비슷하니 헷갈리지 말 것 (하나로 합칠지 팀 결정 필요)
       #   /arm_range            (아래 range)  : 퍽 **표면**까지. 태그 · D435 보유 점 · (둘 다 없으면) 평면 교차. manipulator 가 쓰는 것은 이것
       #   /perception/arm_range (아래 plane)  : 퍽 **중심**까지. 팔 카메라 평면 교차만. 검증용 비교, 받는 노드 없음
