@@ -19,6 +19,8 @@
   <depend>std_msgs</depend>
   <depend>std_srvs</depend>
   <depend>diagnostic_msgs</depend>
+  <depend>controller_manager_msgs</depend>   <!-- 시작 전 준비 확인: 컨트롤러 상태 (R3) -->
+  <depend>lifecycle_msgs</depend>            <!-- 시작 전 준비 확인: Nav2 lifecycle (R3) -->
   <depend>tf2</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>

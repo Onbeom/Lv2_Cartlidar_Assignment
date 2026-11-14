@@ -37,8 +37,10 @@ colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 ```bash
 source workspace/ros2_ws/install/setup.bash
-ros2 launch bringup bringup.launch.py use_localization:=true use_nav2:=true
+ros2 launch bringup bringup.launch.py        # 경기: 위치 추정 · Nav2 · 계획기 · 미션 (use_localization · use_nav2 기본 true, 2026-11-14)
 ```
+
+벤치 시험 (주행 없이) 은 `use_localization:=false use_nav2:=false`, 측량 없이 미리 만든 등록표로 계획하려면 `use_survey:=false pucks_file:=<등록표.yaml>` (형식 `mission_planner/config/problem_q1_example.yaml`).
 
 미션은 기본이 plan 모드 (`mission_source:=plan`: `mission_plan.yaml` 덧씌움 + 계획기 `mission_planner_node`). 옛 태그 미션표는 `mission_source:=tag` 일 때만 불러온다.
 주요 인자: `use_hardware` · `use_teleop` · `use_perception` · `use_ekf` · `use_tfmini` (기본 true — TFmini 박스 거리 · obstacle_stop · twist_mux obstacle lock, 시뮬레이션은 false), `ports` (기본 `/dev/ttyACM0,/dev/ttyACM1`, 역할은 프로토콜 응답으로 판별), `skill_enabled` (기본 false, ONNX 빌드에서만 true),
@@ -47,12 +49,22 @@ nav2 · slam_toolbox 는 기존 launch 를 쓰고, nav2 체인의 마지막 출�
 퍽 박스(205 × 205 × 70 mm)는 LiDAR 평면(바닥 위 약 80 mm)보다 낮아 `/scan` 에 잡히지 않는다 → 주행 지도 `mission_planner/maps/map_nav` 에 박스(70 mm)가 들어 있다 (AMCL 용 `map_amcl` 은 스캔면 위만). 마지막 접근은 drive 정렬(COARSE → FINE, TFmini 박스 거리)이 맡는다
 Gazebo 모의에서 TFmini 를 쓰려면 `ros2 run perception scan_to_range` (`/tfmini/scan` LaserScan → `/tfmini/range`).
 
-운용 순서:
-0. 켜기 전에 팔을 접은 대기 자세에 둔다 — 범위 밖이면 opencr_hardware 가 시작을 거부한다 (관절별 메시지, 범위 = `opencr_hardware/urdf/opencr.ros2_control.xacro` `arm_standby_*`, #166).
-1. 조이스틱을 켠다 (0.5 s 끊기면 E-stop 잠김).
-2. 리셋 버튼 — 켤 때는 잠긴 상태로 시작한다.
-3. 시작 버튼 (`/mission/start`) — 신호 · 바코드 읽기 (observe) → 퍽 조사 (survey) → 계획 (`/mission_planner/plan`) → 계획 단계 실행 (`mission_planner/README.md`).
-4. 진행 상황: `ros2 topic echo /mission/status`.
+운용 순서 (경기 직전 체크리스트):
+0. **빌드 확인** — 실물 벨트와 `opencr_hardware/urdf/robot.urdf.xacro` `wheel_gear` 가 같은지 (v7 1:2.0 을 달기 전이면 1.5 로 빌드. 다르면 오도메트리가 33 % 어긋남).
+1. 켜기 전에 팔을 접은 대기 자세 (STOW) 에 둔다 — 범위 밖이면 opencr_hardware 가 시작을 거부한다 (관절별 메시지, 범위 = `opencr_hardware/urdf/opencr.ros2_control.xacro` `arm_standby_*`, #166).
+2. 로봇을 출발 자세 (0.694, 0.950, yaw π) 에 놓는다 — AMCL 초기 자세 = `localization.launch.py` start_x · start_y · start_yaw.
+3. `ros2 launch bringup bringup.launch.py`
+4. **준비 확인** — mission_node 가 바뀔 때마다 터미널에 표를 찍는다 (`[ OK ]` · `[실패]` 답이 나쁨 · `[대기]` 아직 답 없음):
+   `1 안전 (E-stop · 진단)` → `2 컨트롤러` (joint_state · diff_drive · arm · imu 가 active) → `3 노드 서버` (drive · manipulator · perception · 계획기)
+   → `4 위치 추정` (/localization/status OK) → `5 Nav2` (lifecycle_manager_navigation 모든 노드 active).
+   한 번에 보기: `ros2 topic echo /mission/ready --once` = `READY` (아니면 `NOT_READY: <빠진 것>`).
+   E-stop 은 켤 때 잠긴 상태라 5 단계에서 리셋 전까지 1 안전만 `[실패]` 로 남는다.
+5. 조이스틱을 켠다 (0.5 s 끊기면 E-stop 잠김) → 리셋 버튼 → 팔이 STOW → DRIVE 로 펴지는지 본다. 표가 `READY` 가 되는지 확인.
+6. 시작 버튼 (`/mission/start`) — 준비가 안 됐으면 거절하고 빠진 항목을 알려 준다 (`not ready: …`).
+   신호 · 바코드 읽기 (observe) → 퍽 조사 (survey) → 계획 (`/mission_planner/plan`) → 계획 단계 실행 (`mission_planner/README.md`).
+7. 진행 상황: `ros2 topic echo /mission/status`. 집기를 재시도까지 실패한 퍽은 건너뛰고 (`skipped: pick <칸>`),
+   주행 · 놓기 등 그 밖의 재시도 소진은 HOME 으로 돌아온 뒤 FAILED (`mission.yaml` `on_fail`).
+8. 끝: 정지 버튼 (`/mission/stop`). 팔을 STOW 로 접을 때 팔레트 첫 줄 왼쪽 칸에 닿는 문제 주의 (#277).
 
 E-stop · 진단 오류가 나면 미션이 PAUSED 가 된다. 원인 해결 → 리셋 → 시작 버튼이면 현재 단계부터 다시 한다. 끝내려면 정지 버튼 (`/mission/stop`).
 

@@ -27,6 +27,21 @@ mission_node:
       timeout_margin: 5.0        # mission 쪽 타임아웃 = skill timeout + margin
     max_retries: 2               # 단계별 재시도 횟수 (총 시도 = 1 + max_retries), 넘으면 FAILED
     retry_delay: 1.0             # cancel 후 재시도까지 대기 (s)
+    # 재시도를 다 쓴 단계 (R1, plan 모드 계획 단계만. 계획 전 observe · survey · plan 실패는 바로 FAILED)
+    on_fail:
+      skip_puck: true            # 집기 (turn · target_look · toppick_tilt) 실패 -> 그 퍽만 건너뜀, 칸은 빈 칸 (그 칸 꺼내기 · 놓기도 안 함).
+                                 #   pallet_unload 실패 -> 바로 뒤 place 만 건너뜀. 끝나면 DONE (reason = skipped: …), verify 는 실패로 기록
+      return_home: true          # 그 밖 (주행 · 정렬 · pallet_load · place) -> 계획기 복귀 줄 (goto HOME · wait) 로 가서 복귀 뒤 FAILED
+
+    # 시작 전 준비 확인 (R3): 1 s 마다 시작 단계별 (1 안전 · 2 컨트롤러 · 3 노드 서버 · 4 위치 추정 · 5 Nav2) 상태를 모아
+    #   바뀔 때 터미널에 표 ([ OK ] · [실패] · [대기]) 를 찍고 /mission/ready (String, latched) = READY | NOT_READY: … 로 냄.
+    #   새 시작 (/mission/start) 은 모두 OK 일 때만 받음 (PAUSED 재개는 확인 안 함). 미션 진행 중에는 묻지 않음
+    #   아래 목록은 비워 둠 (mock · 단독 실행) — bringup.launch.py 가 use_hardware · use_nav2 · use_localization 에 맞춰 채움
+    ready:
+      localization: false        # /localization/status == OK
+      reply_timeout: 3.0         # controller_manager · lifecycle 관리자 응답을 이만큼 기다린 뒤 버리고 다시 물음 (s)
+      # controllers: [joint_state_broadcaster, diff_drive_controller, arm_controller]   # 모두 active
+      # lifecycle_managers: [lifecycle_manager_navigation]                             # <이름>/is_active == true
 
     stale_timeout: 0.3           # 300ms 규칙 (계약)
 

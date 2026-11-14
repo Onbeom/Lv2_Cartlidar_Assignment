@@ -1,0 +1,115 @@
+// 재시도 소진 처리 (give_up.hpp, R1) · 시작 전 준비 확인 표 (readiness.hpp, R3)
+#include <gtest/gtest.h>
+
+#include <string>
+#include <vector>
+
+#include "mission/give_up.hpp"
+#include "mission/readiness.hpp"
+
+using namespace mission;
+
+namespace
+{
+// mission_lines.py 모양: 박스 하나 (퍽 둘, 하나는 회전) · 장소 하나 (놓기 둘) · verify · 복귀
+std::vector<std::string> plan()
+{
+  return {
+    "goto 0.5 1.2 0",                                                          // 0
+    "approach 0.13",                                                           // 1
+    "skill drive turn_p17 40 mode=OFF",                                        // 2
+    "skill manipulator target_look:base_footprint:0.2:0.03:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",  // 3
+    "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",  // 4
+    "skill manipulator pallet_load_1_2_tilt 40 mode=OFF",                      // 5
+    "skill drive turn_0 40 mode=OFF",                                          // 6
+    "skill manipulator target_look:base_footprint:0.2:-0.03:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",  // 7
+    "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",  // 8
+    "skill manipulator pallet_load_3_0_tilt 40 mode=OFF",                      // 9
+    "goto 1.5 0.5 1.57",                                                       // 10
+    "approach_box 0.13",                                                       // 11
+    "skill manipulator pallet_unload_1_2_tilt 40 mode=OFF",                    // 12
+    "skill manipulator place_L1_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",    // 13
+    "skill manipulator pallet_unload_3_0_tilt 40 mode=OFF",                    // 14
+    "skill manipulator place_L1_0_0_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",      // 15
+    "verify L1 1.5 0.7 0.07 100010001 0",                                      // 16
+    "goto 0.69365 0.95 3.1416",                                                // 17
+    "wait 3",                                                                  // 18
+  };
+}
+}  // namespace
+
+TEST(GiveUp, PalletSlot)
+{
+  EXPECT_EQ(pallet_slot("skill manipulator pallet_load_1_2_tilt 40 mode=OFF", "load"), "1_2");
+  EXPECT_EQ(pallet_slot("skill manipulator pallet_unload_3_0_tilt 40", "unload"), "3_0");
+  EXPECT_EQ(pallet_slot("skill manipulator pallet_unload_3_0_tilt 40", "load"), "");
+  EXPECT_EQ(pallet_slot("skill manipulator toppick_tilt 40", "load"), "");
+}
+
+TEST(GiveUp, PickGroupSkipsToAfterLoad)
+{
+  const auto t = plan();
+  for (size_t f : {2u, 3u, 4u}) {   // 회전 · 보기 · 집기 실패 -> pallet_load_1_2 다음 (turn_0)
+    const auto sk = pick_skip(t, f);
+    ASSERT_TRUE(sk.has_value()) << f;
+    EXPECT_EQ(sk->slot, "1_2");
+    EXPECT_EQ(sk->resume, 6u);
+  }
+  const auto sk2 = pick_skip(t, 8);   // 회전 없는 퍽 -> 다음 goto
+  ASSERT_TRUE(sk2.has_value());
+  EXPECT_EQ(sk2->slot, "3_0");
+  EXPECT_EQ(sk2->resume, 10u);
+}
+
+TEST(GiveUp, NotPickGroup)
+{
+  const auto t = plan();
+  for (size_t f : {0u, 1u, 5u, 6u, 10u, 12u, 13u, 16u, 17u}) {   // 주행 · 정렬 · pallet_load · turn_0 · 놓기 · verify · 복귀
+    EXPECT_FALSE(pick_skip(t, f).has_value()) << f;
+  }
+}
+
+TEST(GiveUp, PickWithoutLoadIsNotSkipped)
+{
+  // pallet_load 앞에 다른 단계가 끼면 (형식이 바뀜) 건너뛰지 않음 -> HOME 복귀로
+  const std::vector<std::string> t = {
+    "skill manipulator toppick_tilt 40", "goto 1 1 0", "skill manipulator pallet_load_1_2_tilt 40", "goto 0 0 0", "wait 3"};
+  EXPECT_FALSE(pick_skip(t, 0).has_value());
+}
+
+TEST(GiveUp, AfterUnloadSkipsPlace)
+{
+  const auto t = plan();
+  EXPECT_EQ(after_unload(t, 12), 14u);
+  EXPECT_EQ(after_unload(t, 14), 16u);
+  EXPECT_EQ(after_unload(t, 15), 16u);   // 뒤가 place 가 아니면 하나만
+}
+
+TEST(GiveUp, HomeIndex)
+{
+  EXPECT_EQ(home_index(plan()), std::optional<size_t>(17));
+  EXPECT_FALSE(home_index({"observe", "plan"}).has_value());   // 계획 전
+  EXPECT_FALSE(home_index({"goto 0 0 0", "verify L1 1 1 0.07 100010001 0"}).has_value());
+  EXPECT_FALSE(home_index({"wait 3"}).has_value());
+}
+
+TEST(Readiness, FormatAndMissing)
+{
+  const std::vector<ReadyItem> items = {
+    {"1 안전", "E-stop · 진단", ReadyState::OK, "정상"},
+    {"2 컨트롤러", "diff_drive_controller", ReadyState::OK, "active"},
+    {"2 컨트롤러", "arm_controller", ReadyState::FAIL, "inactive"},
+    {"5 Nav2", "lifecycle_manager_navigation", ReadyState::WAIT, "응답 기다림"},
+  };
+  EXPECT_FALSE(all_ready(items));
+  EXPECT_EQ(ready_missing(items), "arm_controller (inactive), lifecycle_manager_navigation (응답 기다림)");
+  const std::string s = format_ready(items);
+  EXPECT_NE(s.find("NOT READY 2/4"), std::string::npos);
+  EXPECT_NE(s.find("[실패] arm_controller: inactive"), std::string::npos);
+  EXPECT_NE(s.find("[대기] lifecycle_manager_navigation"), std::string::npos);
+  EXPECT_EQ(s.find("\n  2 컨트롤러"), s.rfind("\n  2 컨트롤러"));   // 같은 단계 이름은 한 번
+
+  const std::vector<ReadyItem> ok = {{"1 안전", "E-stop · 진단", ReadyState::OK, "정상"}};
+  EXPECT_TRUE(all_ready(ok));
+  EXPECT_NE(format_ready(ok).find("READY 1/1"), std::string::npos);
+}

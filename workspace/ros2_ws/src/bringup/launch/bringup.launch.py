@@ -1,6 +1,8 @@
 # 퍽 운반 로봇 전체 실행 (Jetson 프로세스 ① ② ⑥ ⑦ ⑧)
 #
-#   ros2 launch bringup bringup.launch.py                        # 실물: 하드웨어 + 인식 + 판단 · 제어
+#   ros2 launch bringup bringup.launch.py                        # 경기 (실물): 하드웨어 + 인식 + 위치 추정 + Nav2 + 계획기 + 미션
+#   ros2 launch bringup bringup.launch.py use_localization:=false use_nav2:=false   # 벤치 시험 (주행 없이 팔 · 인식)
+#   ros2 launch bringup bringup.launch.py use_survey:=false pucks_file:=<등록표.yaml>  # 측량 없이 미리 만든 등록표로 계획 (실물 단계 시험)
 #   ros2 launch bringup bringup.launch.py use_hardware:=false    # OpenCR 없이 (판단 · 제어 · 인식만)
 #   ros2 launch bringup bringup.launch.py use_perception:=false  # 카메라 없이
 #   ros2 launch bringup bringup.launch.py skill_enabled:=true    # ONNX Runtime 빌드에서만 (정책 실행)
@@ -10,8 +12,10 @@
 #   use_sensors:=false — 카메라 · 라이다 드라이버를 띄우지 않는다 (sim:=true 면 기본 false: Isaac 브리지가 같은 토픽을 냄)
 #   use_tfmini:=false — TFmini(박스 거리) · obstacle_stop 을 띄우지 않고 twist_mux obstacle lock 도 뺀다 (TFmini 가 없는데 lock 이 있으면 늘 잠김)
 #
-#   미션 전체 (주사위 기억 로봇, plan 모드 = 기본):
-#   ros2 launch bringup bringup.launch.py use_localization:=true use_nav2:=true
+#   미션 전체 (주사위 기억 로봇, plan 모드 = 기본). 2026-11-14 부터 use_localization · use_nav2 기본 true (경기 명령 = 인자 없이):
+#   ros2 launch bringup bringup.launch.py
+#     시작 전 준비 확인 (R3): mission_node 가 1 안전 · 2 컨트롤러 · 3 노드 서버 · 4 위치 추정 · 5 Nav2 를 표로 찍고
+#                            /mission/ready = READY 일 때만 시작을 받음. 아래 control_container 가 ready.* 를 넘김
 #     mission_source:=plan (기본) — mission_node 에 mission_plan.yaml 을 덧씌우고 mission_planner_node(계획기)도 띄운다 (use_planner 기본 = plan 일 때)
 #     mission_source:=tag — 옛 태그 미션표 (mission_table.yaml) 만 불러오고 계획기는 띄우지 않는다
 #                            측량 결과 = 계획기 등록표가 같은 파일이 되게 pucks_file 하나로 둘 다 준다 (mission survey.pucks_out = planner pucks_file)
@@ -91,10 +95,24 @@ def generate_launch_description():
         mission_params = [geometry, PathJoinSubstitution([mis, 'config', 'mission.yaml'])]
         if source == 'plan':   # mission_bringup.launch.py source:=plan 과 같은 덧씌우기 + 측량 결과 경로 = 계획기 pucks_file
             log_dir, pucks = log_paths(context)
+            survey = LaunchConfiguration('use_survey').perform(context).lower() == 'true'
+            if not survey and not LaunchConfiguration('pucks_file').perform(context):
+                # 측량을 끄면 계획기가 등록표를 그대로 씀 → 기본 <log_dir>/pucks_survey.yaml (지난 미션 결과) 를 모르고 쓰지 않게
+                raise RuntimeError('use_survey:=false 면 pucks_file:=<미리 만든 등록표.yaml> 을 꼭 줄 것 '
+                                   '(형식 mission_planner/config/problem_q1_example.yaml)')
             mission_params += [PathJoinSubstitution([mis, 'config', 'mission_plan.yaml']),
-                               {'survey.pucks_out': pucks, 'log_dir': log_dir}]
+                               {'survey.pucks_out': pucks, 'log_dir': log_dir, 'survey.enabled': survey}]
         else:                  # 옛 태그 미션표 (태그 → 단계 · 위치표). plan 모드는 쓰지 않음
             mission_params.append(PathJoinSubstitution([mis, 'config', 'mission_table.yaml']))
+        # 시작 전 준비 확인 (R3): 띄운 것만 확인 목록에 넣음 (빈 목록은 넘기지 않음 — 빈 배열은 타입을 몰라 파라미터 오류)
+        on = lambda name: LaunchConfiguration(name).perform(context).lower() == 'true'
+        ready = {'ready.localization': on('use_localization')}
+        if on('use_hardware'):   # base_bringup.launch.py spawner 와 같은 목록 (IMU 는 실물만, gripper_controller 는 bringup 에서 안 씀)
+            ready['ready.controllers'] = ['joint_state_broadcaster', 'diff_drive_controller', 'arm_controller'] + \
+                ([] if on('sim') else ['imu_sensor_broadcaster'])
+        if on('use_nav2'):
+            ready['ready.lifecycle_managers'] = ['lifecycle_manager_navigation']
+        mission_params.append(ready)
         return [ComposableNodeContainer(
         name='control_container', namespace='', package='rclcpp_components',
         executable='component_container_mt', output='screen',
@@ -199,11 +217,16 @@ def generate_launch_description():
         DeclareLaunchArgument('planner_mode', default_value='hybrid', description='계획기 mode: hybrid (기본) | per_location | single_load'),
         DeclareLaunchArgument('planner_stop_after', default_value='none',
                               description='부분 실물 시험: none | observe (관측만) | first_pick (박스 1 곳 집기) | first_place (장소 1 곳 놓기 + verify). 그 뒤 복귀'),
-        DeclareLaunchArgument('use_localization', default_value='false',
-                              description='localization.launch.py (지도 · scan 합치기 · loc_monitor). Nav2 는 따로 (#114)'),
+        DeclareLaunchArgument('use_localization', default_value='true',
+                              description='localization.launch.py (지도 · scan 합치기 · loc_monitor). Nav2 는 따로 (#114). '
+                                          '기본 true = 경기 (2026-11-14, 이전 false), 벤치 시험은 false'),
         DeclareLaunchArgument('localization', default_value='amcl', description='위치 추정 방식: amcl | carto (localization.launch.py)'),
-        DeclareLaunchArgument('use_nav2', default_value='false',
-                              description='navigation.launch.py (Nav2, use_localization:=false 로). 위치 추정은 use_localization 하나'),
+        DeclareLaunchArgument('use_nav2', default_value='true',
+                              description='navigation.launch.py (Nav2, use_localization:=false 로). 위치 추정은 use_localization 하나. '
+                                          '기본 true = 경기 (2026-11-14, 이전 false)'),
+        DeclareLaunchArgument('use_survey', default_value='true',
+                              description='plan 모드 퍽 측량 (mission survey.enabled). false = pucks_file 의 미리 만든 등록표로 계획 '
+                                          '(측량 자세 #154 를 정하기 전 실물 단계 시험). false 면 pucks_file 필수'),
         DeclareLaunchArgument('map', default_value=PathJoinSubstitution([mpl, 'maps', 'map_amcl.yaml']),
                               description='/map (AMCL · costmap 벽): 발제 도면 SDF 지도. localization 기본 SLAM 지도는 SDF 와 7 ~ 15 cm 다름 (#116)'),
         DeclareLaunchArgument('objects_map', default_value=PathJoinSubstitution([mpl, 'maps', 'map_nav.yaml']),

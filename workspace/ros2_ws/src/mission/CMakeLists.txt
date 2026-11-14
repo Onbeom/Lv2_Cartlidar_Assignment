@@ -18,6 +18,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(std_srvs REQUIRED)
 find_package(diagnostic_msgs REQUIRED)
+find_package(controller_manager_msgs REQUIRED)   # 시작 전 준비 확인 (R3)
+find_package(lifecycle_msgs REQUIRED)
 find_package(tf2 REQUIRED)
 find_package(tf2_ros REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
@@ -39,6 +41,8 @@ target_link_libraries(mission_component PUBLIC
   ${std_msgs_TARGETS}
   ${std_srvs_TARGETS}
   ${diagnostic_msgs_TARGETS}
+  ${controller_manager_msgs_TARGETS}
+  ${lifecycle_msgs_TARGETS}
   tf2::tf2
   tf2_ros::tf2_ros
   tf2_geometry_msgs::tf2_geometry_msgs
@@ -79,6 +83,9 @@ if(BUILD_TESTING)
   # 시작 박스 집기: 회전각 고르기 · 면 · 범위 자름 · 퍽 자리 되살리기 (start_box.hpp, 헤더만, #226)
   ament_add_gtest(test_start_box test/test_start_box.cpp)
   target_include_directories(test_start_box PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+  # 재시도 소진 처리: 퍽 건너뛰기 범위 · HOME 복귀 줄 · 준비 확인 표 (give_up.hpp · readiness.hpp, 헤더만, R1 · R3)
+  ament_add_gtest(test_give_up test/test_give_up.cpp)
+  target_include_directories(test_give_up PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 endif()
 
 ament_package()
