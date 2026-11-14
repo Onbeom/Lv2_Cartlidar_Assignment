@@ -56,7 +56,7 @@ for _p in TRAJ_CANDIDATES:
         break
 BASE_H = 0.00725   # [m] base_link 지면 위 (2026-11-13 바퀴 반지름 0.0335, 이전 0.00675)
 Q_FRONT = [0, -0.2923, -0.1141, 1.9772, 0]   # 팀 운반 시작 자세
-STOW = [1.554, -2.088, 1.549, -1.868, 0.043, 0.923]      # 팀 manipulator.yaml (전원 끄기 전 / 켤 때 자세)
+STOW = [2.200, -2.088, 1.549, -1.868, 0.043, 0.923]      # 팀 manipulator.yaml (전원 끄기 전 / 켤 때 자세). 11-14 J1 1.554 -> 2.200 (팔레트 v5 칸 벽, #277)
 DRIVE = [0.0, -1.37, -0.01, 1.85, 0.0, 0.923]  # control manipulator.yaml poses.DRIVE (2026-11-13 #219, 이전 [-0.0245, -1.6122, 1.2901, 1.1888] 은 v5 퍽과 겹침)
 BENCH = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/tools/arm_bench")
 
