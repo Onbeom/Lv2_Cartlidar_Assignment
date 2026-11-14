@@ -46,3 +46,4 @@
 - 팔 속도 (2026-11-14): `manipulator.yaml` 의 `arm.max_joint_velocity` (0.8 rad/s) 하나가 기준. 노드 (이름 자세 · 팔레트 · 팔레트 진입 · 켜질 때 정리) 와
   시험 도구 (`meas_session` · `slot_teach` · `arm_free` 의 이동, `arm_stow`) 가 모두 이 값을 읽음. 정밀 구간 (3 열 쥔 채 넣기 `pallet.row3_hold_speed`,
   `meas_session` 손 맞춤 jog 한 걸음 1.5 s, 놓기 직선, 강화학습 정책 한계) 은 따로.
+- 책상 시험 상자 자리 (2026-11-15): 로봇 앞 끝에서 **5 cm** (예전 12.72 cm). `dice.sh --bench` 가운데 칸 0.2853, `slot_teach.py --box` 같음. 6 cm 면 `--cell0 "0.2953 0.0 0.0633"` · `--cx 0.2953`.

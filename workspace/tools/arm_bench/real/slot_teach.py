@@ -6,7 +6,7 @@
     python3 ~/slot_teach.py 1_3 2_2         고른 칸만
     python3 ~/slot_teach.py --make          기록 (~/실측/slot_teach.json) -> ~/pallet_place_traj_taught.json (노드용)
     python3 ~/slot_teach.py --show          기록된 칸별 차이 (mm · 도) 만 출력
-    python3 ~/slot_teach.py --box [셀 …]    상자 위 놓는 자리 맞추기 (책상: 상자 = 앞면에서 12 cm 가운데, 셀 '1,1' = 먼 줄 왼쪽 … 기본 9 칸)
+    python3 ~/slot_teach.py --box [셀 …] [--cx 0.2853]   상자 위 놓는 자리 맞추기 (책상: 상자 = 앞 끝에서 5 cm 가운데, 셀 '1,1' = 먼 줄 왼쪽 … 기본 9 칸)
     python3 ~/slot_teach.py --fit_box       상자 기록 -> 관절 영점 (ik.joint_offsets) 제안 · 셀별 잔차 (노드 놓기 IK 용)
     python3 ~/slot_teach.py --set 3_1 왼 5 [node|offset]   맞춰 보지 않고 말로: 쥐는 자리에서 5 mm 왼쪽 (offset = 영점 보정 더한 자리 기준)
 
@@ -30,7 +30,7 @@ YAML = os.path.join(REPO, "ros2_ws/src/control/config/manipulator.yaml")
 OUT_DIR = os.environ.get("TEACH_OUT", os.path.expanduser("~/실측"))
 REC = os.path.join(OUT_DIR, "slot_teach.json")
 BOX_REC = os.path.join(OUT_DIR, "box_teach.json")
-BOX_CELL0 = (0.3625, 0.0, 0.0633)   # 책상 시험 가운데 칸 (dice.sh --bench 와 같음): 놓을 윗면 높이 = base_link z
+BOX_CELL0 = (0.2853, 0.0, 0.0633)   # 2026-11-15 상자 = 로봇 앞 끝 0.1328 + 5 cm + 반 변 0.1025 (예전 12.72 cm 는 0.3625), --cx 로 바꿈. 책상 시험 가운데 칸 (dice.sh --bench 와 같음): 놓을 윗면 높이 = base_link z
 BOX_PITCH = 0.06
 BOX_ORDER = ["-1,1", "1,1", "-1,0", "0,0", "1,0", "-1,-1", "0,-1", "1,-1", "0,1"]
 ORIG = os.path.expanduser("~/pallet_place_traj_orig.json")   # 노드 궤적을 바꾸기 전 원본 (--make 는 늘 이걸 기준으로)
@@ -290,7 +290,7 @@ def teach_box(cells):
     PT, arm = _pt()
     offs = offsets(force=True)            # 노드 놓기 IK 는 ik.joint_offsets 를 씀 (팔레트와 달리)
     m.P(f"\n===== 상자 놓는 자리 맞추기 {datetime.datetime.now():%Y-%m-%d %H:%M} 셀 {' '.join(cells)} | ik.joint_offsets {offs} =====")
-    m.P("  상자 (205 x 205 x 70) = 로봇 앞면에서 12 cm, 가운데 맞춤. 셀 '1,1' = 먼 줄 왼쪽 (로봇 기준), '0,0' = 가운데, '1,-1' = 가까운 줄 오른쪽")
+    m.P("  상자 (205 x 205 x 70) = 로봇 앞 끝에서 5 cm (5 ~ 6 cm, 다르면 --cx 상자 가운데 x), 가운데 맞춤. 셀 '1,1' = 먼 줄 왼쪽 (로봇 기준), '0,0' = 가운데, '1,-1' = 가까운 줄 오른쪽")
     m.P("  맞춤 기준: 쥔 퍽 바닥이 상자 윗면에 막 닿고, 퍽 중심이 그 칸 가운데 (칸 표시 · 자). 집게 45° 그대로")
     a = m.Arm()
     rec = json.load(open(BOX_REC, encoding="utf-8")) if os.path.exists(BOX_REC) else {}
@@ -349,7 +349,12 @@ def fit_box():
 
 
 def main():
+    global BOX_CELL0
     args = sys.argv[1:]
+    if "--cx" in args:   # 상자 가운데 x (base_link, m). 6 cm 면 0.2953
+        i = args.index("--cx")
+        BOX_CELL0 = (float(args[i + 1]), BOX_CELL0[1], BOX_CELL0[2])
+        del args[i:i + 2]
     if "--box" in args:
         teach_box([x for x in args if not x.startswith("-")] or BOX_ORDER)
         return
