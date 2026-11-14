@@ -307,7 +307,9 @@ private:
       {-3.14159, -2.14, -1.6, -1.92, -2.8, -0.7946});
     upper_ = declare_parameter<std::vector<double>>("arm.upper_limits",
       {3.14159, 1.6, 1.6, 2.0, 2.8, 0.9541});
-    max_joint_vel_ = declare_parameter<double>("arm.max_joint_velocity", 0.5);
+    // 팔 관절 속도 기준 [rad/s] (2026-11-14): 이름 자세 · IK 이동 · 놓기 접근 · 팔레트 칸 궤적 · 팔레트 진입 · 켜질 때 정리가 모두 이 값.
+    //   시험 도구 (tools/arm_bench/real: meas_session · slot_teach · arm_free · arm_stow) 도 manipulator.yaml 의 이 값을 읽음
+    max_joint_vel_ = declare_parameter<double>("arm.max_joint_velocity", 0.8);
     min_duration_ = declare_parameter<double>("arm.min_duration", 1.0);
     // 관절 목표 하나 이동 (sendArm: 자세 · 켜질 때 정리 · 집기 접근) 을 최소 저크 곡선 점으로 나누는 간격 [s]. 0 = 끝점 하나 (예전, 3 차)
     min_jerk_dt_ = declare_parameter<double>("arm.min_jerk_dt", 0.05);
@@ -439,7 +441,11 @@ private:
     grasp_z_offset_ = declare_parameter<double>("pick.grasp_z_offset", 0.015);
     // 팔레트 칸 궤적 (빈 문자열 = <control share>/config/pallet_place_traj.json, pallet_traj.py 가 만든 파일 사본)
     pallet_file_ = declare_parameter<std::string>("pallet.traj_file", "");
-    pallet_speed_ = declare_parameter<double>("pallet.speed", 0.8);              // rad/s (#75)
+    // 2026-11-14 팔 속도 기준 하나 (arm.max_joint_velocity): pallet.speed · pallet.prep_velocity · startup.max_joint_velocity 가
+    //   0 (기본) 이면 기준값을 따름. 양수로 주면 그 값 (따로 느리게 할 때만). 정밀 구간 (3 열 쥔 채 넣기 row3_hold_speed ·
+    //   놓기 직선 · 강화학습 정책 한계) 은 각자 값 그대로
+    pallet_speed_ = declare_parameter<double>("pallet.speed", 0.0);              // rad/s (#75), 0 = arm.max_joint_velocity
+    if (pallet_speed_ <= 0.0) {pallet_speed_ = max_joint_vel_;}
     pallet_row3_hold_speed_ = declare_parameter<double>("pallet.row3_hold_speed", 0.4);   // 3 열 쥔 구간 (#75)
     pallet_require_held_ = declare_parameter<bool>("pallet.require_held", true);
     // 궤적 파일 관절값에 ik.joint_offsets 를 더할지. 2026-11-14 false: 11-12 오프셋 (J2 −27°, 팔레트 v3 칸 자세로 맞춘 실효값) 을
@@ -452,7 +458,8 @@ private:
     pallet_start_tol_ = declare_parameter<double>("pallet.start_tolerance", 0.05);
     pallet_start_poses_ = declare_parameter<std::vector<std::string>>("pallet.start_poses", {"DRIVE", "ALIGN", "TRANSIT_TILT"});
     pallet_start_pose_tol_ = declare_parameter<double>("pallet.start_pose_tolerance", 0.15);
-    pallet_prep_vel_ = declare_parameter<double>("pallet.prep_velocity", 0.3);
+    pallet_prep_vel_ = declare_parameter<double>("pallet.prep_velocity", 0.0);   // 0 = arm.max_joint_velocity
+    if (pallet_prep_vel_ <= 0.0) {pallet_prep_vel_ = max_joint_vel_;}
     // 꺼내기에서 빈손이면 칸 안에 멈추지 말고 이동 자세까지 빠져나온 뒤 실패 (true). false = 예전처럼 그 자리에서 멈춤
     pallet_retreat_on_fail_ = declare_parameter<bool>("pallet.retreat_on_fail", true);
     // 이름 자세 (/manipulator/pose) · 켜질 때 정리는 관절 공간 직선 이동이라 주변 (팔레트 · 프로파일) 을 모른다.
@@ -816,7 +823,8 @@ private:
     // 켜질 때 정리 자세 (startup_stow.hpp). 팔 HOLD 가 풀린 뒤 (/diagnostics opencr/motors arm_hold 0) 한 번, 묶음 순서로 천천히
     startup_pose_ = declare_parameter<std::string>("startup.pose", "DRIVE");
     const auto stages = declare_parameter<std::vector<std::string>>("startup.stages", {"3", "2", "4", "1", "5,6"});
-    startup_vel_ = declare_parameter<double>("startup.max_joint_velocity", 0.1);
+    startup_vel_ = declare_parameter<double>("startup.max_joint_velocity", 0.0);   // 0 = arm.max_joint_velocity
+    if (startup_vel_ <= 0.0) {startup_vel_ = max_joint_vel_;}
     // true: 켜질 때 정리 (startup.pose) 를 마치기 전 pose · pick · execute_skill goal 을 거절 (모든 명령이 정리 자세에서 시작).
     //   false: 예전처럼 goal 을 받으면 정리를 건너뜀. 2026-11-14 실물: 죽은 브링업에 걸어 둔 명령이 노드가 뜨자마자 들어와
     //   (곧바로 실패했는데도) 정리가 취소됨 → 팔이 HOLD 자리에서 팔레트 궤적을 시작
@@ -3935,7 +3943,7 @@ private:
   std::vector<std::string> joint_names_;
   std::vector<double> lower_, upper_;
   double min_jerk_dt_{0.05};
-  double max_joint_vel_{0.5}, min_duration_{1.0}, joint_state_timeout_{1.0};
+  double max_joint_vel_{0.8}, min_duration_{1.0}, joint_state_timeout_{1.0};
   std::unique_ptr<ArmIK> ik_;
   std::vector<double> approach_pitches_;
   bool allow_elbow_down_{false}, use_object_yaw_{false};

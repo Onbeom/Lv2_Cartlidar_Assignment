@@ -8,7 +8,9 @@ manipulator_node:
       #   펌웨어는 범위 밖 CMD 를 통째로 거부한다. 6 번째 gripper_roll = 그리퍼 개폐 (열림 -0.764 · 닫힘 0.923)
       lower_limits: [-3.14159, -2.14, -1.6, -1.92, -2.8, -0.7946]
       upper_limits: [3.14159, 1.6, 1.6, 2.0, 2.8, 0.9541]
-      max_joint_velocity: 0.5    # rad/s, 궤적 시간 계산용
+      max_joint_velocity: 0.8    # rad/s, 팔 관절 속도 기준 (2026-11-14 하나로): 이름 자세 · IK 이동 · 놓기 접근 · 팔레트 궤적 (pallet.speed) ·
+                                 #   팔레트 진입 (pallet.prep_velocity) · 켜질 때 정리 (startup.max_joint_velocity) 와 시험 도구 (meas_session ·
+                                 #   slot_teach · arm_free · arm_stow) 가 모두 이 값. 정밀 구간 (pallet.row3_hold_speed · 놓기 직선 · 강화학습 정책) 은 따로
       min_duration: 1.0          # s
       # 관절 목표 하나 이동 (자세 · 켜질 때 정리 · 집기 접근) 을 최소 저크 곡선 (include/control/min_jerk.hpp) 점으로 나누는 간격 [s].
       #   출발 · 도착 가속도가 튀지 않아 J2 늦음 · 넘침, 손목 끝 떨림이 줄어듦 (2026-11-13 실물 STOW → DRIVE). 0 = 끝점 하나 (예전 3 차)
@@ -79,7 +81,7 @@ manipulator_node:
       pose: DRIVE                # poses.names 중 하나. 빈 문자열 = 끔
       stages: ["3", "2", "4", "1", "5,6"]   # 관절 번호 묶음 순서 (6 = 그리퍼). 대기 → 주행 = J3 → J2 → J4 → J1 (2026-11-13 새 DRIVE, 계산 퍽 15 · 차체 23 mm ★ 실물 0.1 rad/s 로 첫 확인).
                                           #   이전 J3 → J2 → J1 → J4 (#165 실물 확인) 는 새 DRIVE 에서 J4 단계 집게가 위 카메라 기둥 상자와 −20 mm (계산)
-      max_joint_velocity: 0.3    # rad/s, 평균 (#165 0.1 → 2026-11-13 opencr_arm_tool 0.2 추종 오차 0.028 rad · 전류 0.44 A 이하 → 0.3 ★ 실물 확인)
+      max_joint_velocity: 0.0    # rad/s, 0 = arm.max_joint_velocity (2026-11-14). 예전 0.1 (#165) → 0.3 (11-13). 따로 느리게 하려면 양수
       # 정리를 마치기 전 (REARM 전 · 이동 중) pose · pick · execute_skill goal 을 거절 → 모든 명령이 정리 자세 (DRIVE) 에서 시작.
       #   2026-11-14 실물: 죽은 브링업에 걸어 둔 명령이 노드가 뜨자마자 들어와 정리가 취소됨 → 엉뚱한 자세에서 팔레트 궤적 시작
       block_goals: true
@@ -270,7 +272,7 @@ manipulator_node:
       min_clearance: -1.0        # 높이 제한 없음 (라벨은 벽에 붙어 있어 집게 끝이 라벨보다 낮아도 됨)
     pallet:
       traj_file: ""              # 빈 문자열 = <control share>/config/pallet_place_traj.json (urdf_and_usd/policy/manipulator 사본)
-      speed: 0.8                 # rad/s, 경유점 사이 관절 속도 (#75). 2026-11-11 Isaac 노드 방식 넣기 (궤적 place 구간 + 처짐 보정) 2048 대: 0.8 원기둥 97.8 % · 직육면체 97.2 %, 0.4 도 같음 -> 0.8 유지
+      speed: 0.0                 # rad/s, 경유점 사이 관절 속도, 0 = arm.max_joint_velocity (2026-11-14, 예전 0.8 과 같음) (#75). 2026-11-11 Isaac 노드 방식 넣기 (궤적 place 구간 + 처짐 보정) 2048 대: 0.8 원기둥 97.8 % · 직육면체 97.2 %, 0.4 도 같음 -> 0.8 유지
       row3_hold_speed: 0.4       # rad/s, 3 열에 놓을 때 쥔 구간 (#75)
       require_held: true         # pallet_load 전에 그리퍼가 퍽을 쥐고 있는지 확인
       release_position: 0.0798   # rad = 2100 tick, 실측 36.4 mm (Isaac FINGER_RELEASED 37.6). 칸 안에서 놓을 때 · 꺼내러 들어갈 때 이만큼만 벌림 (끝까지 열면 칸 벽에 닿음, #75)
@@ -284,7 +286,7 @@ manipulator_node:
       start_tolerance: 0.05
       start_poses: [DRIVE, ALIGN, TRANSIT_TILT]
       start_pose_tolerance: 0.15
-      prep_velocity: 0.3
+      prep_velocity: 0.0         # rad/s, 0 = arm.max_joint_velocity (2026-11-14, 예전 0.3)
       # 꺼내기 빈손이면 칸 안에 멈추지 않고 이동 자세까지 빠져나온 뒤 실패 (2026-11-14 실물: 칸 안에 머문 채 끝남)
       retreat_on_fail: true
     # 팔 처짐 보정 (include/control/sag_comp.hpp): 팔레트 칸 궤적을 50 Hz 로 계획 + bias 스트리밍 (/arm_controller/joint_trajectory),
