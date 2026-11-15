@@ -36,6 +36,8 @@
 #    TFminiNode · ObstacleStopNode(perception, use_tfmini) — 1층 TFmini 박스 거리 → drive FINE 정렬 · 비상 정지(twist_mux lock).
 #    카메라 인식(⑦)을 끄더라도 안전 정지가 남도록 TFmini 와 같은 프로세스에 둔다
 #    같은 프로세스 · intra-process 통신 · 노드마다 MutuallyExclusive 콜백 그룹 → 바퀴 · 팔 · 판단 콜백이 병렬
+#    split_control:=true (측정용, #265): mission · drive · manipulator · tfmini+obstacle_stop 을 프로세스 넷으로 나눠 노드별 CPU 를 잼
+#    (control_mission · control_drive · control_manipulator · control_tfmini). 같은 노드 · 파라미터, intra-process 이득만 없음
 # ⑥ ekf (use_ekf) — 바퀴 vx + 회전 중심 옆 이동 vy (odom_icr, #92) + IMU yaw rate
 # 센서 드라이버 (use_sensors) : bringup/sensors.launch.py — D435 두 대 · 팔 Arducam · LDS-03 두 대 (TFmini 는 위 ⑧)
 # 위치 추정 (use_localization) : localization/localization.launch.py · 계획기 (use_planner) : mission_planner/planner.launch.py
@@ -113,24 +115,30 @@ def generate_launch_description():
         if on('use_nav2'):
             ready['ready.lifecycle_managers'] = ['lifecycle_manager_navigation']
         mission_params.append(ready)
-        return [ComposableNodeContainer(
-        name='control_container', namespace='', package='rclcpp_components',
-        executable='component_container_mt', output='screen',
-        composable_node_descriptions=[
-            ComposableNode(package='mission', plugin='mission::MissionNode', name='mission_node',
-                           parameters=mission_params + [diag, sim], extra_arguments=ipc),
-            ComposableNode(package='control', plugin='control::DriveNode', name='drive_node',
-                           parameters=[geometry, PathJoinSubstitution([ctl, 'config', 'drive.yaml']), skill, rear_camera, loc_gate, sim],
-                           extra_arguments=ipc),
-            ComposableNode(package='control', plugin='control::ManipulatorNode', name='manipulator_node',
-                           parameters=[PathJoinSubstitution([ctl, 'config', 'manipulator.yaml']), skill, sim], extra_arguments=ipc),
-            ComposableNode(package='perception', plugin='perception::TFminiNode', name='tfmini_node',
-                           parameters=[PathJoinSubstitution([per, 'config', 'tfmini.yaml']), sim], extra_arguments=ipc,
-                           condition=IfCondition(LaunchConfiguration('use_tfmini'))),
-            ComposableNode(package='perception', plugin='perception::ObstacleStopNode', name='obstacle_stop',
-                           parameters=[PathJoinSubstitution([per, 'config', 'lidar.yaml']), sim], extra_arguments=ipc,
-                           condition=IfCondition(LaunchConfiguration('use_tfmini'))),
-        ])]
+        groups = [
+            ('mission', [ComposableNode(package='mission', plugin='mission::MissionNode', name='mission_node',
+                                        parameters=mission_params + [diag, sim], extra_arguments=ipc)]),
+            ('drive', [ComposableNode(package='control', plugin='control::DriveNode', name='drive_node',
+                                      parameters=[geometry, PathJoinSubstitution([ctl, 'config', 'drive.yaml']), skill, rear_camera,
+                                                  loc_gate, sim],
+                                      extra_arguments=ipc)]),
+            ('manipulator', [ComposableNode(package='control', plugin='control::ManipulatorNode', name='manipulator_node',
+                                            parameters=[PathJoinSubstitution([ctl, 'config', 'manipulator.yaml']), skill, sim],
+                                            extra_arguments=ipc)]),
+            # TFmini 와 비상 정지는 나눌 때도 한 프로세스 (안전 정지가 TFmini 와 같이 살아 있게)
+            ('tfmini', [ComposableNode(package='perception', plugin='perception::TFminiNode', name='tfmini_node',
+                                       parameters=[PathJoinSubstitution([per, 'config', 'tfmini.yaml']), sim], extra_arguments=ipc,
+                                       condition=IfCondition(LaunchConfiguration('use_tfmini'))),
+                        ComposableNode(package='perception', plugin='perception::ObstacleStopNode', name='obstacle_stop',
+                                       parameters=[PathJoinSubstitution([per, 'config', 'lidar.yaml']), sim], extra_arguments=ipc,
+                                       condition=IfCondition(LaunchConfiguration('use_tfmini')))]),
+        ]
+        container = lambda name, nodes: ComposableNodeContainer(
+            name=name, namespace='', package='rclcpp_components', executable='component_container_mt', output='screen',
+            composable_node_descriptions=nodes)
+        if on('split_control'):   # 측정용 (#265): 노드 묶음마다 프로세스 하나 → top · tegrastats 로 노드별 CPU
+            return [container(f'control_{g}', nodes) for g, nodes in groups]
+        return [container('control_container', [n for _, nodes in groups for n in nodes])]
 
     def planner(context):   # 계획기: mission 과 같은 등록표, 기록은 <log_dir>/planner (mission 이 plan 성공 뒤 에피소드 폴더로 복사)
         if LaunchConfiguration('use_planner').perform(context).lower() != 'true':
@@ -200,6 +208,9 @@ def generate_launch_description():
                               description='mission_node diagnostics.timeout [s]: opencr/* 진단이 이만큼 끊기면 안전 정지. 기본 실물 3.0 · sim · 하드웨어 없음 0 (끔)'),
         DeclareLaunchArgument('use_teleop', default_value='true', description='조이스틱 (끄면 E-stop heartbeat 검사도 끔)'),
         DeclareLaunchArgument('use_perception', default_value='true', description='⑦ 카메라 3대 · 검출'),
+        DeclareLaunchArgument('split_control', default_value='false',
+                              description='측정용 (#265): control_container 를 mission · drive · manipulator · tfmini 프로세스 넷으로 나눔 '
+                                          '(노드별 CPU). 경기는 false (한 프로세스 · intra-process)'),
         DeclareLaunchArgument('use_tfmini', default_value='true',
                               description='1층 TFmini(박스 거리) · obstacle_stop · twist_mux obstacle lock. 시뮬레이션 · TFmini 없음은 false'),
         DeclareLaunchArgument('mission_source', default_value='plan',
