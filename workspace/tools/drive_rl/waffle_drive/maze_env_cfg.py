@@ -8,9 +8,11 @@
 - 벽 (경기장 · 신호등 · 바코드) 이나 물체 (퍽 상자 · 놓는 자리) 에 차체가 닿거나, 넘어지면 실패로 끝.
   한 웨이포인트에 wp_timeout_s 넘게 못 가면 시간 초과로 끝.
 행동 2 개 = 단계 A 와 같음 (vx, wz) × drive_node skill 한계 → base_cmd 가 diff_drive · 펌웨어 한계를 흉내 냄.
-관측 17 + 라이다 (몸체 좌표, 실물에서 얻을 수 있거나 경로에서 정해지는 값):
+관측 17 + 라이다 + 2 (몸체 좌표, 실물에서 얻을 수 있거나 경로에서 정해지는 값):
   vx, wz, 중력 방향 (3), 다음 점 (x, y), 거리, 정지점인지, 바라볼 방향 오차 (sin, cos, 정지점일 때만), 그다음 점 (x, y),
-  멈춤 유지 비율, 한계 적용 뒤 vx 명령, 이전 행동 (2), 라이다 lidar_beams 개 (/ lidar_max_range).
+  멈춤 유지 비율, 한계 적용 뒤 vx 명령, 이전 행동 (2), 라이다 lidar_beams 개 (/ lidar_max_range),
+  남은 제자리 회전 비율 · 남은 후진 비율 (규칙 v2, base_cmd.limits_obs — 실물에서는 cmd_vel 필터가 아는 값. 맨 뒤라 예전 체크포인트를
+  widen_obs.py 로 늘려 이어 학습).
 팔 · 손가락은 drive 자세로 고정. 미로는 보기용 (충돌 없음), 부딪힘은 지도로 판단 (maze_geom.py).
 """
 
@@ -41,7 +43,7 @@ class WaffleDriveMazeEnvCfg(DirectRLEnvCfg):
     episode_length_s = 300.0  # 경로 전체 (35 m) 도 들어가게. 실제로는 웨이포인트마다 wp_timeout_s 로 끊김
     action_space = 2
     lidar_beams = 36  # 10° 마다
-    observation_space = 17 + lidar_beams
+    observation_space = 17 + lidar_beams + 2
     state_space = 0
 
     # simulation (PhysX GPU, 바닥 재질 = 팀 값 μ 1.0). 창: 환경 0 의 미로를 비스듬히 위에서 봄, 보이는 환경 = 앞에서부터
@@ -58,7 +60,19 @@ class WaffleDriveMazeEnvCfg(DirectRLEnvCfg):
     scene: InteractiveSceneCfg = InteractiveSceneCfg(num_envs=64, env_spacing=7.5, replicate_physics=True, clone_in_fabric=True)
 
     # 행동
-    action_mode = "twist"  # "twist" | "wheels" (단계 A 와 같음)
+    # 2026-11-13 팀 결정 "제자리 회전 금지" (뒤 바퀴 벨트 빠짐): curvature = (vx, 곡률) → |wz| ≤ |vx| / min_turn_r (base_cmd.py)
+    action_mode = "curvature"  # "curvature" | "twist" (이전, 제자리 회전 가능) | "wheels"
+    min_turn_r = 0.20  # [m] 최소 회전 반경 (Nav2 회전 금지 시험과 같은 값, 실물 실측으로 정해지면 바꿈). ≥ 좌우 간격 / 2 = 0.1585
+    vx_rev = 0.15  # [m/s] 후진 최대 (Nav2 회전 금지판 vx_min 과 같게)
+    # 규칙 v2 (2026-11-14 사용자 승인: 180° · 360° 금지 + 회전 범위 제한, 후진 줄이기, 주로 정면). 넘는 명령은 base_cmd 가 자름
+    spin_max = math.radians(90.0)  # [rad] 한 번 제자리 회전 (멈춘 채 돈 각도 합) 최대
+    spin_wz = 0.5  # [rad/s] 제자리 회전 속도 (모터 1.58)
+    spin_v = 0.03  # [m/s] 이보다 느리면 '멈춘 채'
+    limit_reset_dist = 0.15  # [m] 이만큼 움직이면 제자리 회전 · (전진이면) 후진 다시 셈
+    rev_max = 0.40  # [m] 한 번 (이어진) 후진 최대
+    turn_motor_max = 3.0  # [rad/s] 꺾는 중 가장 빠른 모터 상한 (11-11 바닥: 3.0 회전에서 뒤 바퀴 출렁 · 7.0 에서 벨트 빠짐) ★ 잠정
+    turn_k0, turn_k1 = 0.5, 1.0  # [1/m] 상한이 줄기 시작 (반경 2 m) · 다 줄어든 (반경 1 m) 곡률
+    spawn_spin_used = 0.3  # 재설정 때 이미 쓴 제자리 회전 = U(0, 이 값) × spin_max (정지점 정렬에 조금 쓴 상태도 겪게)
 
     # 경로 · 도착 조건
     course_file = os.path.join(DRIVE_RL_DIR, "course.yaml")
@@ -102,3 +116,6 @@ class WaffleDriveMazeEnvCfg(DirectRLEnvCfg):
     rew_hit_wall = -10.0  # 벽에 닿음 → 끝
     rew_hit_object = -10.0  # 퍽 상자 · 놓는 자리에 닿음 → 끝
     rew_tipped = -10.0  # 넘어짐 → 끝
+    rew_reverse = -3.0  # 뒤로 간 거리 [/m] (11-13 −1.0 → 11-14 −3.0: 학습 경로가 74 % 후진이었음)
+    rew_progress_rev = 0.0  # 후진하며 다가간 거리에 줄 진행 보상 배수 (0 = 앞으로 가야만 진행 보상, 멀어지면 그대로 벌점) — 주로 정면
+    rew_spin = -0.3  # 멈춘 채 돈 각도 [/rad] (가벼운 벌점: 꺾으며 가는 쪽을 먼저)

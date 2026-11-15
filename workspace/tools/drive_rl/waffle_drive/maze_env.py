@@ -36,7 +36,7 @@ from .robot import (
 if TYPE_CHECKING:
     from .maze_env_cfg import WaffleDriveMazeEnvCfg
 
-REWARD_TERMS = ("progress", "heading", "reached", "time", "action_rate", "near_wall", "hit_wall", "hit_object", "tipped")
+REWARD_TERMS = ("progress", "heading", "reached", "time", "action_rate", "near_wall", "hit_wall", "hit_object", "tipped", "reverse", "spin")
 END_KEYS = ("success", "hit_wall", "hit_object", "tipped", "timeout")
 """에피소드가 끝난 이유 (로그 Episode_End/<이유> = 끝난 에피소드 중 비율)"""
 
@@ -58,7 +58,10 @@ class WaffleDriveMazeEnv(DirectRLEnv):
         self._right_ids, _ = self.robot.find_joints(WHEEL_JOINTS_RIGHT, preserve_order=True)
         self._hold_ids, _ = self.robot.find_joints(ARM_JOINTS + FINGER_JOINTS, preserve_order=True)
         self._wheel_ids = list(self._left_ids) + list(self._right_ids)
-        self.base_cmd = BaseCmd(n, dev, WHEEL_RADIUS, WHEEL_SEPARATION, WHEEL_SPEED_MAX, cfg.sim.dt, cfg.action_mode)
+        v2 = dict(spin_max=cfg.spin_max, spin_wz=cfg.spin_wz, spin_v=cfg.spin_v, reset_dist=cfg.limit_reset_dist, rev_max=cfg.rev_max,
+                  turn_motor_max=cfg.turn_motor_max, turn_k0=cfg.turn_k0, turn_k1=cfg.turn_k1) if cfg.action_mode == "curvature" else {}
+        self.base_cmd = BaseCmd(n, dev, WHEEL_RADIUS, WHEEL_SEPARATION, WHEEL_SPEED_MAX, cfg.sim.dt, cfg.action_mode,
+                                min_turn_r=cfg.min_turn_r, vx_rev=cfg.vx_rev, **v2)
         self.geom = MazeGeom(dev)
         # 경로 (M 점)
         c = self._course
@@ -85,6 +88,9 @@ class WaffleDriveMazeEnv(DirectRLEnv):
         self.clear = torch.ones(n, device=dev)
         self._terms = {k: torch.zeros(n, device=dev) for k in REWARD_TERMS}
         self._ep_sums = {k: torch.zeros(n, device=dev) for k in REWARD_TERMS}
+        self.ep_fwd = torch.zeros(n, device=dev)  # 이 에피소드 전진 · 후진 거리 [m], 멈춘 채 돈 각도 [rad] (로그 Metrics/*)
+        self.ep_rev = torch.zeros(n, device=dev)
+        self.ep_spin = torch.zeros(n, device=dev)
         self._hold_steps = max(1, round(cfg.stop_hold_s / self.step_dt))
         self._timeout_steps = round(cfg.wp_timeout_s / self.step_dt)
         # 커리큘럼
@@ -172,7 +178,9 @@ class WaffleDriveMazeEnv(DirectRLEnv):
 
         # 보상 항 (점을 바꾸기 전 기준)
         t = self._terms
-        t["progress"] = cfg.rew_progress * (self.prev_dist - dist)
+        closer = self.prev_dist - dist
+        backing = vx < -0.02
+        t["progress"] = cfg.rew_progress * closer * torch.where(backing & (closer > 0), cfg.rew_progress_rev, 1.0)
         zone = (is_stop & (dist < cfg.heading_zone)).float()
         t["heading"] = cfg.rew_heading * (self.prev_yaw_err - yaw_err.abs()) * zone
         t["reached"] = cfg.rew_reached * reached.float()
@@ -182,6 +190,12 @@ class WaffleDriveMazeEnv(DirectRLEnv):
         t["hit_wall"] = cfg.rew_hit_wall * hit_wall.float()
         t["hit_object"] = cfg.rew_hit_object * hit_obj.float()
         t["tipped"] = cfg.rew_tipped * tipped.float()
+        t["reverse"] = cfg.rew_reverse * (-vx).clamp(min=0.0) * self.step_dt   # 뒤로 간 거리 [m] 만큼 (되도록 전진, 2026-11-13)
+        slow = vx.abs() < cfg.spin_v
+        t["spin"] = cfg.rew_spin * wz.abs() * self.step_dt * slow.float()   # 멈춘 채 돈 각도 [rad] (규칙 v2)
+        self.ep_fwd += vx.clamp(min=0.0) * self.step_dt
+        self.ep_rev += (-vx).clamp(min=0.0) * self.step_dt
+        self.ep_spin += wz.abs() * self.step_dt * slow.float()
 
         # 다음 점으로
         success = reached & (self.wp_idx >= self.end_idx)
@@ -233,6 +247,7 @@ class WaffleDriveMazeEnv(DirectRLEnv):
                 self.base_cmd.vx.unsqueeze(1),
                 self.actions,
                 lidar,
+                self.base_cmd.limits_obs(),
             ),
             dim=-1,
         )
@@ -288,7 +303,12 @@ class WaffleDriveMazeEnv(DirectRLEnv):
         self.prev_actions[ids] = 0.0
         for v in self._ep_sums.values():
             v[ids] = 0.0
+        self.ep_fwd[ids] = 0.0
+        self.ep_rev[ids] = 0.0
+        self.ep_spin[ids] = 0.0
         self.base_cmd.reset(ids)
+        if self.base_cmd.spin_max > 0:   # 정지점 정렬에 조금 쓴 상태로도 시작
+            self.base_cmd.spin_used[ids] = torch.rand(n, device=dev) * cfg.spawn_spin_used * self.base_cmd.spin_max
 
     def _log_finished(self, ids: torch.Tensor) -> None:
         """끝난 에피소드 통계 → extras["log"] (텐서보드), 커리큘럼 k 올리기"""
@@ -302,6 +322,9 @@ class WaffleDriveMazeEnv(DirectRLEnv):
             log[f"Episode_Reward/{k}"] = v[ids].mean().item()
         log["Metrics/waypoints_reached"] = self.n_reached[ids].float().mean().item()
         log["Metrics/episode_time"] = (self.ep_steps[ids].float() * self.step_dt).mean().item()
+        moved = (self.ep_fwd[ids] + self.ep_rev[ids]).sum().item()
+        log["Metrics/reverse_ratio"] = self.ep_rev[ids].sum().item() / moved if moved > 0 else 0.0   # 끝난 에피소드 전체 거리 중 후진 비율
+        log["Metrics/spin_deg"] = math.degrees(self.ep_spin[ids].mean().item())   # 에피소드당 멈춘 채 돈 각도
         s0 = ids[self.start_idx[ids] == 0]
         if len(s0):  # 출발점에서 시작한 에피소드: 2 점 (A0 · B0) 넘게 지났으면 첫 모서리 통과
             log["Metrics/start0_passed_b0"] = (self.n_reached[s0] >= 2).float().mean().item()
