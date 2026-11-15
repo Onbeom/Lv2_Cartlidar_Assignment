@@ -309,7 +309,7 @@ manipulator_node:
       pitch: -0.7854             # 놓기 집게 기울기 (45°)
       surface_height: 0.070      # 장소 상자 윗면 (바닥 기준, 발제 Z 70 mm). place_at 은 받은 z 를 씀
       puck_half_height: 0.030
-      clearance: 0.002           # 놓을 때 퍽 바닥과 윗면 틈 (m)
+      clearance: 0.001           # 놓을 때 퍽 바닥과 윗면 틈 (m). 2026-11-15 5 cm 정지 Isaac 512 대 2 -> 1 mm (차이 작음, 시뮬 판과 같게)
       approach_distance: 0.04    # 놓기 전 집게 축 반대로 (m)
       retreat_distance: 0.04     # 놓은 뒤 빠지기 (m)
       # 2026-11-11 Isaac 주사위 연속 놓기 2048 대 (IsaacLab .../manipulator/dice_place_check.py): 판 전체 33.6 % -> 90.0 %
@@ -317,8 +317,14 @@ manipulator_node:
       # 2026-11-11 꺼내기 -> 놓기 연결 (dice_place_check.py --unload): 놓기도 처짐 보정 스트리밍 (sag) 하면 판 전체 2.8 % -> 93.1 % (216 대) · 95.8 % (2048 대).
       #   이전 바깥 보정 7.7 · −2.7 mm 는 처짐 보정 없는 놓기용 (꺼내기 없이 맞춘 값, 연결에서는 틀림) -> sag 켜면 0
       sag: true                  # 놓기 (place_*) 도 처짐 보정 스트리밍 (sag.enabled 일 때), 꺼내기 끝 bias 이어 씀
-      radial_offset_mm: 0.0      # ★ J1 바깥 보정 (가운데 칸 J1 0.2665 m 기준, 실측 뒤 고침)
-      radial_offset_slope_mm: 0.0   # ★ 칸 (60 mm) 멀어질 때마다
-      lateral_offset_mm: 1.8     # ★ 2026-11-12 놓는 점을 로봇 왼쪽으로 (Isaac 칸별 평균 오차 −1.8 mm). 실측 (place_measure.py) 뒤 고침
+      # 2026-11-15 정지 거리 5 ~ 6 cm (상자 가운데 J1 0.189 m) Isaac 꺼내기 -> 주사위 놓기 512 대, 판정 = 칸 중심 10 mm + 퍽 사이 간격 설계 ±4 mm (균일):
+      #   12.7 cm 때 값 (바깥 0 · 0, 옆 1.8) 87.5 % -> 바깥 −0.2 · −0.89, 옆 0 -> 95.7 % -> 꺼낸 칸별 보정 (source_offset_mm) 97.5 % (넘어짐 0, 간격 95 % 2.9 mm)
+      radial_offset_mm: -0.2     # ★ J1 바깥 보정 (가운데 칸 J1 0.2665 m 기준, 실측 뒤 고침)
+      radial_offset_slope_mm: -0.89   # ★ 칸 (60 mm) 멀어질 때마다 (5 cm 정지에서 가까운 줄이 J1 쪽으로 2.5 ~ 3.6 mm 덜 감)
+      lateral_offset_mm: 0.0     # ★ 놓는 점을 로봇 왼쪽으로. 2026-11-12 1.8 (12.7 cm 정지) -> 5 cm 정지는 0 (1.8 이면 모든 칸 왼 +1.8 mm)
+      # ★ 꺼낸 팔레트 칸마다 놓는 점 보정 "열_칸:앞:왼" [mm] (Isaac 칸별 평균 오차의 반대, 손 안 퍽 자리 차이). 실물은 영점 보정 뒤 다시 잴 것
+      #   2 차 (1024 대, 칸별 평균 오차 ±0.5 mm 안으로 모임): 96.1 % (넘어짐 5, 간격 탓 32 = 칸과 상관없는 흩어짐, 95 % 3.0 mm)
+      source_offset_mm: ["3_0:-0.4:0.0", "3_1:1.1:0.1", "2_1:-0.3:0.3", "2_2:0.3:0.0", "2_0:0.6:0.4",
+                         "2_3:-0.1:0.5", "1_1:0.5:0.2", "1_2:-1.1:-0.3", "1_0:-0.7:0.2", "1_3:-1.3:-0.1"]
     floor_frame: base_footprint  # 바닥 frame. arm_base_link 높이 = 이 frame → arm_base_link TF
     arm_base_height: 0.120       # TF 가 없을 때 arm_base_link 바닥 높이 (B안 base_link 0.00675 + 0.1135) ★

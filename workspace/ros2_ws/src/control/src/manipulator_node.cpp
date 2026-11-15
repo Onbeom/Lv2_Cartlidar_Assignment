@@ -495,6 +495,19 @@ private:
     place_radial_a_ = declare_parameter<double>("place.radial_offset_mm", 0.0);              // J1 거리 0.2665 m 칸에서 바깥으로 [mm]
     place_radial_b_ = declare_parameter<double>("place.radial_offset_slope_mm", 0.0);        // 칸 (0.06 m) 멀어질 때마다 더할 값 [mm]
     place_lateral_ = declare_parameter<double>("place.lateral_offset_mm", 0.0);   // 2026-11-12 놓는 점을 로봇 왼쪽 (+y) 으로 [mm]
+    // 2026-11-15 꺼낸 팔레트 칸마다 놓는 점 보정 [mm, arm 앞 · 왼]: "1_0:-0.7:0.2" (칸마다 손 안 퍽 자리가 달라 놓인 퍽이 칸마다 ±1 mm 치우침,
+    //   Isaac dice_place_check.py --src_comp, 5 cm 정지 512 대 간격 ±4 mm 판정 96.1 -> 97.5 %). 직전 pallet_unload 칸에만, 다른 집기 뒤면 안 씀
+    for (const auto & e : declare_parameter<std::vector<std::string>>("place.source_offset_mm", std::vector<std::string>{})) {
+      std::istringstream in(e);
+      std::string key, fx, fy;
+      if (std::getline(in, key, ':') && std::getline(in, fx, ':') && std::getline(in, fy, ':')) {
+        try {
+          place_src_off_[key] = {std::stod(fx), std::stod(fy)};
+          continue;
+        } catch (const std::exception &) {}
+      }
+      RCLCPP_WARN(get_logger(), "place.source_offset_mm: ignored '%s' (format row_index:fwd:left)", e.c_str());
+    }
     place_sag_ = declare_parameter<bool>("place.sag", true);   // 2026-11-11 놓기도 처짐 보정 스트리밍 (sag.enabled 일 때)
     // 바닥 frame (z = 바닥). arm_base_link 높이 = 이 frame → arm_base_link TF, 없으면 arm_base_height
     floor_frame_ = declare_parameter<std::string>("floor_frame", "base_footprint");
@@ -3160,11 +3173,13 @@ private:
             RCLCPP_WARN(get_logger(), "target_look value older than toppick.latch_max_age -> perception target");
           }
           target_look_latch_.reset();   // 한 번만 씀 (실패 후 재시도는 새 추적 위치)
+          held_src_slot_.clear();       // 상자에서 집은 퍽 = 팔레트 칸 보정 없음
           beginPick(target, {toppick_pitch_}, toppick_approach_);
           return;
         }
       case Task::PALLET_LOAD:
       case Task::PALLET_UNLOAD:
+        held_src_slot_ = t.kind == Task::PALLET_UNLOAD ? std::to_string(t.row) + "_" + std::to_string(t.index) : "";
         runPalletSlot(t.row, t.index, t.kind == Task::PALLET_LOAD);
         return;
       case Task::PLACE: {
@@ -3596,6 +3611,11 @@ private:
         arm.point.y += arm.point.y / r * comp;
       }
     }
+    if (const auto so = place_src_off_.find(held_src_slot_); so != place_src_off_.end()) {   // 2026-11-15 꺼낸 칸별 보정
+      arm.point.x += so->second.first / 1000.0;
+      arm.point.y += so->second.second / 1000.0;
+      RCLCPP_INFO(get_logger(), "place: source slot %s offset (%.1f, %.1f) mm", held_src_slot_.c_str(), so->second.first, so->second.second);
+    }
     arm.point.y += place_lateral_ / 1000.0;   // 2026-11-12 옆 보정 (Isaac 꺼내기 → 놓기 칸별 평균 오차 왼 −1.8 mm -> 1.8 mm, 216 대 93.1 -> 99.1 %)
     const Eigen::Vector3d tip(arm.point.x, arm.point.y, surface + puck_half_height_ + grasp_z_offset_ + place_clearance_);
     const auto current = currentJoints();
@@ -4000,6 +4020,8 @@ private:
   double place_pitch_{-M_PI_4}, place_surface_height_{0.070}, puck_half_height_{0.030}, place_clearance_{0.002};
   double place_approach_{0.04}, place_retreat_{0.04}, arm_base_height_{0.120};
   double place_release_{0.0}, place_radial_a_{0.0}, place_radial_b_{0.0};
+  std::map<std::string, std::pair<double, double>> place_src_off_;   // place.source_offset_mm: 칸 "열_칸" -> (앞, 왼) mm
+  std::string held_src_slot_;   // 직전 pallet_unload 칸 ("2_1"), 상자 집기 · pallet_load 뒤 비움
   double place_lateral_{0.0};   // 2026-11-11 놓기 벌림 폭 · J1 바깥 보정
   std::string base_frame_, fixed_frame_, range_frame_;
   double approach_distance_{0.15}, range_offset_{0.015}, max_final_approach_{0.25};
