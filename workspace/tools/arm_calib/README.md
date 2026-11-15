@@ -26,7 +26,10 @@ cd ~/git/Lv2_Cartlidar_Assignment/workspace/tools/arm_calib
 python3 arm_calib_fit.py ~/실측/6_보정자세.csv                 # 관절 1 ~ 4 영점
 python3 arm_calib_fit.py ~/실측/6_보정자세.csv --sag 2,3       # + 관절 2 · 3 처짐 (자세 10 개 이상)
 python3 arm_calib_fit.py ~/실측/6_보정자세.csv --z0            # + 바닥 높이 오차
+python3 arm_calib_fit.py ~/실측/6_보정자세.csv --links 23,34   # + 링크 길이 오차 (판단 자료, #295)
 ```
+- `--links 23,34,45,tool`: 관절 2 → 3 · 3 → 4 · 4 → 5 · 관절 5 → 점 길이 오차도 맞춤 (방향은 URDF 그대로). 영점과 섞이기 쉬워 **자세가 여러 방향일 때만** 믿을 것 —
+  영점만 맞춘 RMS · 하나씩 빼고 맞춘 오차와 견줘서, 링크 길이를 넣으면 둘 다 크게 줄어드는지 본다. 결과는 yaml 에 들어가지 않는다 (쓰려면 `ik` 길이 · URDF 를 고치고 영점을 다시 맞춤).
 나오는 것:
 1. 자세별 끝 오차 — 보정 없음 · **지금 yaml 값** · 새 값, 새 값의 dx dy dz.
 2. RMS (맞춘 자세 · 확인 자세) 와 **하나씩 빼고 맞춘 오차** (이것이 맞춘 자세 RMS 보다 많이 크면 자세를 더 잴 것).
