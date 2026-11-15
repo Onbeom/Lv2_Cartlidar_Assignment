@@ -6,7 +6,7 @@
 #   tools/build_firmware.sh setup                 모터 사전 설정 도구 (tools/dxl_setup, 토크 ON 명령 없음)
 #   tools/build_firmware.sh arm --upload PORT     빌드 후 업로드 (보드 역할을 한 번 더 확인함)
 #
-# 결과: $OPENCR_BUILD_DIR (기본 ~/opencr_builds) / opencr_wheel_v5.bin · opencr_arm_v5.bin · dxl_setup.bin
+# 결과: $OPENCR_BUILD_DIR (기본 ~/opencr_builds) / opencr_wheel_v5.bin · opencr_arm_v6.bin (관절 1 π 보정) · dxl_setup.bin
 # arduino-cli: $ARDUINO_CLI → PATH → ~/.local/opt/arduino-cli-1.5.1/arduino-cli 순서로 찾는다.
 # 업로드가 멈추면 (부트로더로 안 넘어감) OpenCR 을 Recovery Mode 로 넣고 다시 실행: PUSH SW2 를 누른 채 Reset → SW2 놓기.
 set -euo pipefail
@@ -24,9 +24,10 @@ done
 
 fw_dir=$(cd "$(dirname "$0")/.." && pwd)
 version=$(sed -n 's/^static const uint8_t PROTOCOL_VERSION = \([0-9]*\);.*/\1/p' "$fw_dir/opencr_protocol.h")
+arm_version=$(sed -n 's/^static const uint8_t ARM_FW_VERSION = \([0-9]*\);.*/\1/p' "$fw_dir/opencr_protocol.h")   # 팔 보드 fw 값 (v6 = 관절 1 π 보정)
 case $target in
   wheel) sketch=$fw_dir; role=1; name=opencr_wheel_v$version; desc="주행 보드 (역할 1 · 바퀴 ID 1~4 · Velocity)" ;;
-  arm)   sketch=$fw_dir; role=2; name=opencr_arm_v$version;   desc="팔 보드 (역할 2 · 팔 ID 11~16 · Position)" ;;
+  arm)   sketch=$fw_dir; role=2; name=opencr_arm_v$arm_version; desc="팔 보드 (역할 2 · 팔 ID 11~16 · Position, 관절 1 확장 위치 · π 보정)" ;;
   setup) sketch=$fw_dir/tools/dxl_setup; role=""; name=dxl_setup; desc="모터 사전 설정 도구 (dxl_setup)" ;;
   *) usage ;;
 esac

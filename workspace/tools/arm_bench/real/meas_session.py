@@ -81,9 +81,12 @@ for _p in TRAJ_CANDIDATES:
         break
 BASE_H = 0.00725   # [m] base_link 지면 위 (2026-11-13 바퀴 반지름 0.0335, 이전 0.00675)
 Q_FRONT = [0, -0.2923, -0.1141, 1.9772, 0]   # 팀 운반 시작 자세
-STOW = [-0.9633, -2.088, 1.549, -1.868, 0.0, 0.923]   # 팀 manipulator.yaml (전원 끄기 전 / 켤 때 자세). 11-14 J1 1.554 -> 2.200 (#277), 11-15 하루 1.8715, 11-16 오전 2.200, 11-16 오후 실물 대기 자리 −0.9633 · J5 0
+STOW = [2.200, -2.088, 1.549, -1.868, 0.0, 0.923]   # 팀 manipulator.yaml (전원 끄기 전 / 켤 때 자세). 11-14 J1 1.554 -> 2.200 (#277), 11-15 하루 1.8715, 11-16 하루 −0.9633 (관절 1 π 보정 전 펌웨어로 읽은 값), 11-16 저녁 2.200 · J5 0
 DRIVE = [0.0, -1.37, -0.01, 1.85, 0.0, 0.923]  # control manipulator.yaml poses.DRIVE (2026-11-13 #219, 이전 [-0.0245, -1.6122, 1.2901, 1.1888] 은 v5 퍽과 겹침)
-BENCH = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/tools/arm_bench")
+# 팀 arm_bench: 저장소 안에서 실행하면 그 자리 (노트북 · 젯슨 모두), ~/meas_session.py 로 복사해 쓰면 젯슨 저장소
+BENCH = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+if not os.path.isdir(os.path.join(BENCH, "slider")):
+    BENCH = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/tools/arm_bench")
 
 OUT = os.path.expanduser("~/실측")
 os.makedirs(OUT, exist_ok=True)

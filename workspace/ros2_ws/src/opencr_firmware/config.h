@@ -104,6 +104,17 @@ static const float   ARM_MIN_RAD[ARM_COUNT] = {-3.14159f, -2.14f, -1.6f, -1.92f,
 static const float   ARM_MAX_RAD[ARM_COUNT] = { 3.14159f,  1.6f,  1.60f,  2.0f,  2.8f,  0.9541f};
 //   모터 EEPROM Min/Max Position Limit 도 이 범위와 같게 (부팅 점검이 확인, tools/dxl_setup 의 m 명령)
 static const int8_t  ARM_DIR[ARM_COUNT]     = {+1, +1, +1, +1, +1, +1};   // 2026-10-26 J1~J5 손으로 확인 (URDF + 방향과 같음)
+//   2026-11-15 관절 1 반 바퀴: 새 관절 1 브라켓은 모터가 모델과 180° 돌아간 채 달림 (회전 방향은 같음).
+//   1 = 펌웨어가 관절 1 을 π 돌려 모델 각도로 보고 · 명령. 위치 모드 (한 바퀴 0 ~ 4095) 로는 tick 경계가 모델 정면 (q = 0) 에 와서
+//   앞 동작이 경계를 넘음 → 관절 1 만 확장 위치 모드 (4). 모델 각도 = (tick − 바퀴 보정 − ARM_TICK_CENTER) × RAD_PER_TICK,
+//   바퀴 보정은 토크가 꺼져 있을 때 tick 을 창 [ARM_TICK_CENTER − 2048, ARM_TICK_CENTER + 2048) 로 펼쳐 정함 (opencr_firmware.ino).
+//   확장 위치 모드는 EEPROM Min/Max Position Limit 을 쓰지 않음 → 범위 보호는 safety_core (rad) 와 목표 자르기 (창 안) 뿐.
+//   0 = 예전과 같음 (모두 위치 모드, 가운데 2048). 팔 보드는 1 일 때 fw_version = ARM_FW_VERSION (6) 을 보내고 호스트가 확인
+//   (주행 보드는 PROTOCOL_VERSION 5 그대로). 2026-11-16 실물: 평소 대기 자리에서 위치 모드 J1 이 −55° 로 읽힘 (모델 +126°),
+//   DRIVE (J1 0) 에서 집게가 퍽 스토리지 쪽 → 180° 돌아 달림 확정, 조립은 그대로 두고 이 보정으로 씀 ★ 업로드 뒤 정면 tick 확인
+#define ARM_J1_FLIP 1
+static const uint8_t ARM_OP_MODE[ARM_COUNT]     = {ARM_J1_FLIP ? 4 : 3, 3, 3, 3, 3, 3};   // 3 = 위치 · 4 = 확장 위치 (그리퍼 칸은 3 이어야 함, GripGuard)
+static const int32_t ARM_TICK_CENTER[ARM_COUNT] = {ARM_J1_FLIP ? 4096 : 2048, 2048, 2048, 2048, 2048, 2048};   // 모델 0 rad 의 tick (바퀴 보정 전)
 static const uint16_t ARM_MODEL = 1020;    // XM430-W350 (2026-10-26 실물 확인: 팔 모터 6대 모두 W350). W210 이면 1030
 // 위치 제어 게인 (모터 RAM — 모터 전원이 켜질 때마다 공장값으로 돌아가므로 부팅 때마다 쓰고 다시 읽어 확인. 0~16383).
 //   e-Manual: KPP = P/128, KPI = I/65536, KPD = D/16. 공장값 P 800 · I 0 · D 0 에서는 중력만큼 처진 채 버티고 (J2 0.026 rad / 0.33 A),

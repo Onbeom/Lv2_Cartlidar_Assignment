@@ -63,8 +63,8 @@ class ArmMonitor(Node):
             self.n_rx += 1
             if st["role"] != tool.ROLE_ARM:
                 self.warn_once("role", f"이 보드는 팔 보드가 아님 (role={st['role']}, 팔 = {tool.ROLE_ARM})")
-            if st["fw"] != tool.PROTOCOL_VERSION:
-                self.warn_once("fw", f"펌웨어 프로토콜 v{st['fw']} (이 도구는 v{tool.PROTOCOL_VERSION})")
+            if st["fw"] != tool.ARM_FW_VERSION:
+                self.warn_once("fw", f"팔 펌웨어 v{st['fw']} (이 도구는 v{tool.ARM_FW_VERSION}, v5 = 관절 1 π 보정 전)")
             q = tool.arm_pos(st)
             v = st["vel"][tool.ARM0:tool.ARM0 + 6]
             e = st["effort"][tool.ARM0:tool.ARM0 + 6]

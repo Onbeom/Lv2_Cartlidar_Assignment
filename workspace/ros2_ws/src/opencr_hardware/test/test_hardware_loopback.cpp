@@ -28,8 +28,9 @@ using namespace opencr_proto;
 class FakeOpenCR
 {
 public:
-  explicit FakeOpenCR(uint8_t role, uint8_t version = PROTOCOL_VERSION)
-  : role_(role), version_(version)
+  // version 0 = 그 역할의 펌웨어 버전 (주행 PROTOCOL_VERSION · 팔 ARM_FW_VERSION)
+  explicit FakeOpenCR(uint8_t role, uint8_t version = 0)
+  : role_(role), version_(version ? version : expected_fw_version(role))
   {
     master_ = posix_openpt(O_RDWR | O_NOCTTY);
     grantpt(master_);

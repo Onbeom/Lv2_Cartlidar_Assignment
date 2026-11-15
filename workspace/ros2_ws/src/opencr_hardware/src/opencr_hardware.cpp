@@ -435,7 +435,7 @@ bool OpenCRHardware::roles_ready() const
   int wheels = 0, arms = 0;
   for (const auto & link : links_) {
     if (!link->have_state) {continue;}
-    if (link->state.fw_version != opencr_proto::PROTOCOL_VERSION) {return false;}
+    if (link->state.fw_version != opencr_proto::expected_fw_version(link->state.role)) {return false;}
     if (link->state.role == opencr_proto::ROLE_WHEEL) {++wheels;}
     else if (link->state.role == opencr_proto::ROLE_ARM) {++arms;}
   }
@@ -478,7 +478,7 @@ void OpenCRHardware::refresh_aggregate_state()
       arm_battery_raw_ = s.battery_v;
     }
     merged.error |= s.error;
-    if (s.fw_version != opencr_proto::PROTOCOL_VERSION) {
+    if (s.fw_version != opencr_proto::expected_fw_version(s.role)) {   // 주행 v5 · 팔 v6 (관절 1 π 보정)
       merged.fw_version = s.fw_version;
       version_mismatch = true;
     }
@@ -561,8 +561,8 @@ hi::CallbackReturn OpenCRHardware::on_activate(const rclcpp_lifecycle::State &)
   }
   // 펌웨어 버전 확인 — 다르면 패킷 해석이 어긋나므로 명령을 보내지 않음
   if (latest_.fw_version != opencr_proto::PROTOCOL_VERSION) {
-    RCLCPP_ERROR(get_logger(), "두 보드 모두 프로토콜 v%u이어야 합니다 — 역할별 펌웨어를 다시 올리세요",
-      opencr_proto::PROTOCOL_VERSION);
+    RCLCPP_ERROR(get_logger(), "펌웨어 버전이 다름 (받은 v%u): 주행 보드 v%u · 팔 보드 v%u (관절 1 π 보정) 이어야 합니다 — "
+      "역할별 펌웨어를 다시 올리세요", latest_.fw_version, opencr_proto::PROTOCOL_VERSION, opencr_proto::ARM_FW_VERSION);
     return CallbackReturn::ERROR;
   }
   if (latest_.error & opencr_proto::ERR_MOTOR_CONFIG) {
@@ -672,7 +672,7 @@ return_type OpenCRHardware::read(const rclcpp::Time &, const rclcpp::Duration &)
   bool wheel_fresh = false, arm_fresh = false;
   for (const auto & link : links_) {
     if (!link->have_state || (now - link->last_state_time).seconds() > comm_timeout_s_) {continue;}
-    if (link->state.fw_version != opencr_proto::PROTOCOL_VERSION) {continue;}   // 운용 중 버전이 바뀐 보드 = 링크 오류
+    if (link->state.fw_version != opencr_proto::expected_fw_version(link->state.role)) {continue;}   // 운용 중 버전이 바뀐 보드 = 링크 오류
     if (link->state.role == opencr_proto::ROLE_WHEEL) {wheel_fresh = true;}
     else if (link->state.role == opencr_proto::ROLE_ARM) {arm_fresh = true;}
   }

@@ -80,7 +80,7 @@ def main():
     if os.path.lexists(args.link):
         os.remove(args.link)
     os.symlink(os.ttyname(slave), args.link)
-    print(f"[fake_opencr] 가상 포트 {args.link} -> {os.ttyname(slave)} (팔 보드 role 2, v{tool.PROTOCOL_VERSION})", flush=True)
+    print(f"[fake_opencr] 가상 포트 {args.link} -> {os.ttyname(slave)} (팔 보드 role 2, v{tool.ARM_FW_VERSION})", flush=True)
     lo, hi = tool.load_limits()
     tick = lambda r: 2048 + r / gripper_map.RAD_PER_TICK                    # noqa: E731
     rad = lambda t: (t - 2048) * gripper_map.RAD_PER_TICK                   # noqa: E731
@@ -158,7 +158,7 @@ def main():
             if torque:
                 cur[tool.ARM0:tool.ARM0 + 6] = [0.05 + 2.0 * abs(target[i] - pos[i]) for i in range(6)]
             payload = struct.pack(tool.STATE_FMT, tool.ROLE_ARM, *full, *([0.0] * 12), *cur, 1.0, 0.0, 0.0, 0.0,
-                                  0.0, 0.0, 0.0, 0.0, 0.0, 9.81, 12.0, err, tool.PROTOCOL_VERSION, seq & 0xFF)
+                                  0.0, 0.0, 0.0, 0.0, 0.0, 9.81, 12.0, err, tool.ARM_FW_VERSION, seq & 0xFF)
             try:
                 os.write(master, tool.frame(tool.TYPE_STATE, payload))
             except (BlockingIOError, OSError):

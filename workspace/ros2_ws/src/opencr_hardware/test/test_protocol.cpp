@@ -108,6 +108,9 @@ TEST(Protocol, RejectsV3AndOtherLengths)
 TEST(Protocol, V5BitsAndVersion)
 {
   EXPECT_EQ(PROTOCOL_VERSION, 5);
+  EXPECT_EQ(ARM_FW_VERSION, 6);
+  EXPECT_EQ(expected_fw_version(ROLE_WHEEL), PROTOCOL_VERSION) << "주행 보드는 바뀐 것 없음";
+  EXPECT_EQ(expected_fw_version(ROLE_ARM), ARM_FW_VERSION) << "팔 보드만 관절 1 π 보정 버전";
   EXPECT_EQ(FLAG_REARM, 0x08);
   EXPECT_EQ(ERR_HOLD, 0x40);
   EXPECT_EQ(ERR_FAULT, 0x80);
