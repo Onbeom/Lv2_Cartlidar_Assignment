@@ -178,11 +178,15 @@ manipulator_node:
       use_alignment: false
       latch_max_age: 30.0        # s, target_look 이 잰 위치를 toppick_tilt 가 쓸 수 있는 시간
       # 접근 경로 (2026-11-09 Isaac chain_pallet_eval 고정 동작 집기로 검증, urdf_and_usd/policy/manipulator/정책_학습기록.md 4.15 절):
-      #   top  = 잡는 점에서 위로 approach_height · J1 쪽으로 approach_inward 인 자리 (벌림) -> 잡는 점까지 직선 (집게 45° 유지)
+      #   top  = 잡는 점에서 위로 approach_heights · J1 쪽으로 approach_inward 인 자리 (벌림) -> 잡는 점까지 직선 (집게 45° 유지)
       #          실제 배치 A·B·C 이어서 84/88 (측정 오차 0) · 69/88 (σ 2 mm)
       #   axis = 집게 축 반대로 approach_distance (이전, pick 과 같음). 같은 시험에서 48/88 (운반 중 미끄럼 많음)
       approach_mode: top
-      approach_height: 0.05      # m
+      # 접근 높이 후보 (2026-11-15 #221): 앞에서부터 접근 · 잡기 · 들기가 풀리는 첫 값. Isaac chain_pallet_eval 고정 동작 집기 (σ 2 mm, 400 대):
+      #   세운 직육면체 (누운 퍽 세운 자리 D, --spot): 0.05 → 이어서 68.0 % (집기 73.8, 상자 접촉 5.5 %) · 0.08 80.0 · 0.10 81.8 · 0.12 84.0 % (90.2, 3.8 %)
+      #   일반 배치 (mix):                          0.05 → 87.5 % (집기 90.5, 접촉 5 %)   · 0.08 88.8 · 0.10 90.0 · 0.12 90.5 % (93.2, 3 %)
+      #   낮은 접근은 접근 자세로 가는 길에 집게가 퍽 윗면 · 상자에 걸려 퍽이 넘어짐. 노드 IK: 0.12 는 J1 반경 0.35 m 까지, 0.10 이하는 0.36 m 까지 풀림
+      approach_heights: [0.12, 0.08, 0.05]   # m
       approach_inward: 0.03      # m
       radial_offset: 0.002       # m, 잡는 점을 J1 에서 먼 쪽으로 -> 퍽이 손 안 반경 −2 mm 에 (칸 넣기 −4 ~ 0 mm 만 받음)
       # 쥔 뒤 들기 (2026-11-14, pick.lift_height 대신 top 경로만). 예전 0.05 m 는 옆 퍽 (60 mm) 보다 낮아 다음 pallet_load 의
