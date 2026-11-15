@@ -15,8 +15,10 @@ bt_navigator:
     odom_topic: /odometry/filtered
     bt_loop_duration: 10
     default_server_timeout: 20
-    wait_for_service_timeout: 15000  # ms. BT 를 만들 때 서버 (follow_path · spin · compute_path_to_pose …) 를 기다리는 시간. 1000 이면 is_path_valid 를 못 찾아 활성화 실패 (Gazebo 11-10),
-                                     #   5000 도 Gazebo 띄우기 10 번 중 2 번 실패 (11-12, 노드가 한꺼번에 뜰 때 늦게 찾음) → 15000. 시작 때만 기다리고 주행 중에는 영향 없음
+    wait_for_service_timeout: 60000  # ms. BT 를 만들 때 서버 (follow_path · spin · compute_path_to_pose …) 를 기다리는 시간. 1000 이면 is_path_valid 를 못 찾아 활성화 실패 (Gazebo 11-10),
+                                     #   5000 도 Gazebo 띄우기 10 번 중 2 번 실패 (11-12, 노드가 한꺼번에 뜰 때 늦게 찾음) → 15000.
+                                     #   Jetson 은 15000 으로도 실패 (#276, 11-15) → 60000. lifecycle_manager 는 활성화를 끝없이 기다리므로 늦어질 뿐 실패하지 않음.
+                                     #   시작 때만 기다리고 주행 중에는 영향 없음 (주행 중 서버 응답은 default_server_timeout)
     navigators: ["navigate_to_pose", "navigate_through_poses"]
     navigate_to_pose:
       plugin: "nav2_bt_navigator::NavigateToPoseNavigator"
