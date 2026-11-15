@@ -1,0 +1,4 @@
+# 실행 기록 · 실행 중 만들어지는 파일 (저장소에 안 올림)
+runs/
+lidar_raw.yaml
+__pycache__/

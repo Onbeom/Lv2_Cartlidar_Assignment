@@ -1,0 +1,81 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Tool Properties
+    Name: Tool Properties
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.734
+      Plane Cell Count: 12
+      Offset: {X: 2.2, Y: 3.15, Z: 0}
+      Color: 160; 160; 164
+    - Class: rviz_default_plugins/Map
+      Name: Map (라이다 높이 벽)
+      Enabled: true
+      Topic:
+        Value: /map
+        Durability Policy: Transient Local
+        Reliability Policy: Reliable
+      Alpha: 0.8
+      Color Scheme: map
+    - Class: rviz_default_plugins/LaserScan
+      Name: scan_merged (빨강)
+      Enabled: true
+      Topic:
+        Value: /view/scan_merged
+        Reliability Policy: Reliable
+      Size (m): 0.03
+      Style: Flat Squares
+      Color Transformer: FlatColor
+      Color: 239; 41; 41
+    - Class: rviz_default_plugins/LaserScan
+      Name: scan_front (초록)
+      Enabled: false
+      Topic:
+        Value: /view/scan_front
+        Reliability Policy: Reliable
+      Size (m): 0.03
+      Style: Flat Squares
+      Color Transformer: FlatColor
+      Color: 78; 154; 6
+    - Class: rviz_default_plugins/LaserScan
+      Name: scan_rear (파랑)
+      Enabled: false
+      Topic:
+        Value: /view/scan_rear
+        Reliability Policy: Reliable
+      Size (m): 0.03
+      Style: Flat Squares
+      Color Transformer: FlatColor
+      Color: 52; 101; 164
+    - Class: rviz_default_plugins/Polygon
+      Name: 차체 외곽
+      Enabled: true
+      Topic:
+        Value: /view/footprint
+      Color: 0; 200; 0
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Show Names: false
+      Marker Scale: 0.3
+  Global Options:
+    Fixed Frame: map
+    Background Color: 48; 48; 48
+  Tools:
+    - Class: rviz_default_plugins/Interact
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic:
+        Value: /initialpose
+  Views:
+    Current:
+      Class: rviz_default_plugins/TopDownOrtho
+      Scale: 120
+      X: 1.0
+      Y: 1.2
+      Name: Current View
