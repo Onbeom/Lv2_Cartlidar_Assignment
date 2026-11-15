@@ -113,6 +113,8 @@ if(BUILD_TESTING)
   target_link_libraries(test_place_box perception_detector)
   ament_add_gtest(test_face_yaw test/test_face_yaw.cpp)
   target_link_libraries(test_face_yaw perception_detector)   # include 경로
+  ament_add_gtest(test_arm_cam_correction test/test_arm_cam_correction.cpp)
+  target_link_libraries(test_arm_cam_correction perception_detector tf2::tf2)   # include 경로 · tf2
   ament_add_gtest(test_perception_logic TIMEOUT 300 test/test_tfmini.cpp test/test_vision.cpp test/test_tracker_tag.cpp
     test/test_inputs.cpp test/test_lidar.cpp test/test_puck.cpp test/test_signal.cpp test/test_dice.cpp
     test/test_signal_light.cpp test/test_depth_split.cpp

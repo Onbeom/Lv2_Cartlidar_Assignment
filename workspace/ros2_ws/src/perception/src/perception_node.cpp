@@ -117,6 +117,7 @@
 #include "perception/signal_light.hpp"
 #include "perception/signal_sequence.hpp"
 #include "perception/snapshot.hpp"
+#include "perception/arm_cam_correction.hpp"
 #include "perception/tag_depth.hpp"
 #include "perception/tag_detector.hpp"
 #include "perception/tag_upright.hpp"
@@ -454,6 +455,21 @@ public:
     base_frame_ = declare_parameter("frames.base", std::string("base_link"));
     odom_frame_ = declare_parameter("frames.odom", std::string("odom"));
     tf_fallback_max_s_ = declare_parameter("tf_fallback_max_s", tf_fallback_max_s_);
+    // 팔 카메라 자세별 실측 보정 (#278, arm_cam_correction.hpp). 표가 비거나 개수가 안 맞으면 보정하지 않음
+    cam_corr_.enabled = declare_parameter("arm.cam_correction.enabled", false);
+    cam_corr_.camera_frame = declare_parameter("arm.cam_correction.camera_frame", std::string("arm_camera_optical_frame"));
+    cam_corr_.link5_frame = declare_parameter("arm.cam_correction.link5_frame", std::string("link5"));
+    cam_corr_.base_frame = declare_parameter("arm.cam_correction.base_frame", std::string("base_link"));
+    cam_corr_.tol_m = declare_parameter("arm.cam_correction.tol_m", 0.03);
+    cam_corr_.tol_rad = declare_parameter("arm.cam_correction.tol_rad", 0.10);
+    cam_corr_.entries = arm_cam_entries(
+      declare_parameter("arm.cam_correction.names", std::vector<std::string>{}),
+      declare_parameter("arm.cam_correction.table", std::vector<double>{}));
+    if (cam_corr_.enabled) {
+      RCLCPP_INFO(get_logger(), "팔 카메라 자세별 보정: %zu 개 (위치 %.3f m · 각 %.2f rad 안에서만)", cam_corr_.entries.size(),
+        cam_corr_.tol_m, cam_corr_.tol_rad);
+      if (cam_corr_.entries.empty()) {RCLCPP_WARN(get_logger(), "arm.cam_correction: 표가 비었거나 names × 10 개가 아님 → 보정 안 함");}
+    }
     tf_wait_s_ = declare_parameter("tf_wait_s", tf_wait_s_);
     arm_tf_wait_s_ = declare_parameter("arm_tf_wait_s", arm_tf_wait_s_);
 
@@ -1066,11 +1082,38 @@ private:
       }
       tf2::Transform t;
       tf2::fromMsg(m->transform, t);
-      return t;
+      return cam_correct(t, target, source, stamp, allow_latest);
     } catch (const tf2::TransformException & e) {
       RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 5000, "TF %s→%s 없음: %s", source.c_str(), target.c_str(), e.what());
       return std::nullopt;
     }
+  }
+
+  // 팔 카메라가 낀 변환이면 그 시각 link5 자세에 맞는 실측 보정을 곱한다 (없으면 그대로)
+  tf2::Transform cam_correct(const tf2::Transform & t, const std::string & target, const std::string & source,
+    const rclcpp::Time & stamp, bool allow_latest)
+  {
+    if (!cam_corr_.enabled || cam_corr_.entries.empty()) {return t;}
+    const bool src = source == cam_corr_.camera_frame, tgt = target == cam_corr_.camera_frame;
+    if (src == tgt) {return t;}
+    const auto l5c = tf_->fixed(cam_corr_.link5_frame, cam_corr_.camera_frame);
+    std::optional<geometry_msgs::msg::TransformStamped> bl5;
+    try {
+      bl5 = lookup_near(tf_->buffer(), cam_corr_.base_frame, cam_corr_.link5_frame, tf2_ros::fromRclcpp(stamp),
+        allow_latest ? tf_fallback_max_s_ : -1.0);
+    } catch (const tf2::TransformException &) {}
+    if (!l5c || !bl5) {return t;}
+    tf2::Transform base_link5;
+    tf2::fromMsg(bl5->transform, base_link5);
+    const auto i = arm_cam_select(cam_corr_.entries, base_link5, cam_corr_.tol_m, cam_corr_.tol_rad);
+    const std::string now = i ? cam_corr_.entries[*i].name : std::string("없음");
+    if (now != cam_corr_.last) {
+      RCLCPP_INFO(get_logger(), "팔 카메라 보정: %s → %s", cam_corr_.last.c_str(), now.c_str());
+      cam_corr_.last = now;
+    }
+    if (!i) {return t;}
+    const auto C = arm_cam_right_correction(cam_corr_.entries[*i], *l5c);
+    return src ? t * C : C.inverse() * t;
   }
 
   static tf2::Matrix3x3 to_tf(const cv::Matx33d & R)
@@ -2187,6 +2230,13 @@ private:
   double merge_dist_ = 0.04, min_confidence_ = 0.5;
   double upright_gap_px_ = 1.0;
   double face_hint_tol_ = 0.012;   // [m] 서 있는 윗면 높이 허용 (누운 윗면과 30 mm 차이의 절반 안쪽)
+  struct
+  {
+    bool enabled = false;
+    std::string camera_frame, link5_frame, base_frame, last = "없음";
+    double tol_m = 0.03, tol_rad = 0.10;
+    std::vector<ArmCamEntry> entries;
+  } cam_corr_;   // 팔 카메라 자세별 실측 보정 (#278)
   double tf_fallback_max_s_ = 0.1;   // [s] 촬영 시각 TF 가 없을 때 최근 TF 를 써도 되는 시각 차 (lookup_near)
   double tf_wait_s_ = 0.05;          // [s] D435 영상: 촬영 시각 TF 를 기다리는 한도 (pick_tf_frame, 0 이면 끔)
   double arm_tf_wait_s_ = 0.025;     // [s] 팔 영상: 촬영 시각 TF 를 처리 주기 안에서 기다리는 한도 (wait_transform, 0 이면 기다리지 않음)
