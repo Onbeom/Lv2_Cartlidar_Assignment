@@ -169,7 +169,7 @@ class WaffleTopPickEnvCfg(DirectRLEnvCfg):
     rot_hold_weight = 0.3
     ik_damping = 1e-4
     target_lead_max = 0.25
-    gripper_open = 0.010  # 61.6 mm (퍽 양옆 15.8 mm 씩). 옆 퍽 (중심 8 cm) 과는 안 닿음
+    gripper_open = 0.0042  # 실물 벌림 50 mm (TP9 부터 명령으로 덮어씀 → 2026-11-14 기본값으로, TP13 · TP14 · TP15 가 빠뜨려 61.6 mm 로 학습). TP2 ~ TP8 은 0.010 = 61.6 mm
     gripper_closed = -0.0075  # 팀 FINGER_CLOSE −0.011 이면 한쪽 손가락만 힘 한계 (13 N) 라 퍽이 닫는 축으로 3 ~ 5 mm 치우침 -> 30 mm 퍽에서 2 mm 더 (약 12 N, 두 손가락 같음). 팔레트 놓기 확인과 같음 (2026-11-02)
 
     # 배치 무작위
@@ -244,7 +244,14 @@ class WaffleTopPickEnvCfg(DirectRLEnvCfg):
     rew_puck_tilt = -2.0
     rew_center = 0.0  # TP4 4.0. 쥔 동안 (1 − tanh(쥔 자리 오차 / center_tol)) (TP4)
     rew_hand_tilt = 0.0  # TP4 -4.0. 쥔 동안 퍽 축 기울기 [rad] (5° = −0.35, TP4)
-    rew_radial = 5.0  # TP8. 쥔 동안 (1 − tanh(max(|r − radial_goal| − band, 0) / scale))
+    rew_radial = 0.0  # TP8 ~ TP13 5.0. 쥔 동안 (1 − tanh(max(|r − radial_goal| − band, 0) / scale)). TP14 부터 rew_hand_pos 로 바꿈 (코드는 남김)
+    rew_hand_pos = 6.0  # TP14 (2026-11-13). 쥔 동안 스텝마다 (1 − tanh(max(|(appr, side) − 목표| − band, 0) / scale)), appr = 집게 축 · side = 집게 z (chain_pallet_eval in_hand 와 같은 양).
+    #   이어평가 8 회 (집은 967 대): appr · side 모두 ±5 mm 안 -> 칸 놓기 96 ~ 100 %, 밖 0 ~ 65 % (실패 364 중 운반 미끄럼 311).
+    #   rew_radial 은 (appr + side)/√2 하나라 appr +5 · side −5 (16 %) 도 최대 보상. 어긋남 평균 0 · σ 5.7 mm, 쥐는 순간 정해짐
+    hand_appr_goal = -0.0015  # [m] appr −5 ~ +2 mm 가 좋음 (가운데)
+    hand_side_goal = 0.0
+    hand_pos_band = 0.003  # [m] 목표에서 이 안 = 보상 최대
+    hand_pos_scale = 0.003  # [m] 띠 밖 tanh 폭
     rew_arm_box = -2.0
     rew_body_box = -20.0
     rew_base_move = -10.0

@@ -298,6 +298,9 @@ class WaffleTopPickEnv(DirectRLEnv):
         gz = quat_apply(self.robot.data.body_link_quat_w.torch[:, self._ee], self._ez)
         radial = ((e * appr).sum(1) + (e * gz).sum(1)) / math.sqrt(2.0)  # 운반 자세 반경 (+ = J1 에서 먼 쪽, TP8)
         rad_err = torch.clamp((radial - c.radial_goal).abs() - c.radial_band, min=0.0)
+        h_appr, h_side = (e * appr).sum(1), (e * gz).sum(1)  # 손 안 어긋남 집게 축 · 집게 z (chain_pallet_eval in_hand appr · side, TP14)
+        h_err = torch.hypot(h_appr - c.hand_appr_goal, h_side - c.hand_side_goal)
+        h_pen = torch.clamp(h_err - c.hand_pos_band, min=0.0)
         hand_tilt = torch.acos(up.clamp(-1.0, 1.0))
         grasped = (dist < c.grasp_dist) & (fing > c.grasp_finger_range[0]) & (fing < c.grasp_finger_range[1]) & (tilt < c.grasp_tilt_max) & (up > 0.9)
         held_near = dist < c.hold_dist  # 손 안 15 mm 안 (TP6)
@@ -331,6 +334,7 @@ class WaffleTopPickEnv(DirectRLEnv):
             "center": c.rew_center * holding.float() * (1 - torch.tanh(dist / c.center_tol)),
             "hand_tilt": c.rew_hand_tilt * holding.float() * hand_tilt,
             "radial": c.rew_radial * holding.float() * (1 - torch.tanh(rad_err / c.radial_scale)),
+            "hand_pos": c.rew_hand_pos * holding.float() * (1 - torch.tanh(h_pen / c.hand_pos_scale)),
             "arm_box": c.rew_arm_box * arm_box.float(),
             "body_box": c.rew_body_box * body_box.float(),
             "base_move": c.rew_base_move * (base_move > c.base_move_max).float(),
@@ -367,6 +371,9 @@ class WaffleTopPickEnv(DirectRLEnv):
             log["Metrics/hand_tilt_deg"] = math.degrees(hand_tilt[holding].mean().item())
             log["Metrics/hand_radial_mm"] = radial[holding].mean().item() * 1000
             log["Metrics/hand_radial_ok"] = ((radial[holding] - c.radial_goal).abs() < 0.004).float().mean().item()  # −7 ~ +1 mm
+            log["Metrics/hand_appr_mm"] = h_appr[holding].mean().item() * 1000  # TP14
+            log["Metrics/hand_side_mm"] = h_side[holding].mean().item() * 1000
+            log["Metrics/hand_pos_ok"] = ((h_appr[holding].abs() < 0.005) & (h_side[holding].abs() < 0.005)).float().mean().item()  # 둘 다 ±5 mm (칸 놓기 96 ~ 100 % 구간)
         log["Metrics/toppled_ratio"] = toppled.float().mean().item()
         log["Metrics/neighbor_toppled_ratio"] = nb_toppled.float().mean().item()
         log["Metrics/arm_box_contact_ratio"] = arm_box.float().mean().item()
