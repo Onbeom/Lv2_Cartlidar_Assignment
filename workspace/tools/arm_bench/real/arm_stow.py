@@ -11,7 +11,8 @@
   범위에서 15° 넘게 벗어난 관절이 있으면 (예: DRIVE 자세) 전부 접는 것이라 한 번 더 묻는다.
 - 끝나면 팔은 토크를 켠 채 HOLD (펌웨어). 그대로 브링업을 띄우면 됨 (HOLD 면 대기 자세 검사를 건너뜀).
 - [11-14 고침] 예전 STOW (관절 1 1.554 rad = 89°, #277 전 xacro 범위 3004 ~ 3118) 는 접을 때 link3 이 1 열 끝 칸 (1_3) 벽에 닿음
-  (팀 계산 −3.5 mm, 실물 11-13 · 11-14 1_3 위에 걸림). 젯슨 저장소가 #277 전이면 움직이지 않고 업데이트를 안내.
+  (팀 계산 −3.5 mm, 실물 11-13 · 11-14 1_3 위에 걸림). 젯슨 저장소가 예전 STOW 범위면 움직이지 않고 업데이트를 안내.
+- [11-15] STOW 관절 1 2.200 (126°, #277) -> 1.8715 rad (107°, 범위 3211 ~ 3325) · 관절 5 -> -0.1304 (실물 대기 자리). #277 범위도 예전 STOW 로 봄.
   움직이기 전에 접는 경로 틈을 계산 (tools/arm_bench/fold_clearance.py, 팀 URDF 팔레트 v5 · 퍽 10 개):
   모델 그대로 + 실측 칸 맞춤 (pallet_slot_teach.json 의 1_3, 관절 2 · 3 · 4) 으로 옮긴 실물 추정, 둘 중 작은 값이 MIN_CLEAR_MM 미만이면 거부.
 """
@@ -26,7 +27,7 @@ TOOL = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/open
 ORDER = [5, 1, 4, 2, 3]          # 접는 차례 (관절 번호)
 FAR_DEG = 15.0
 WS = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace")
-OLD_J1_MAX = 3300                # 관절 1 대기 범위 위 끝이 이보다 작으면 #277 전 (예전 STOW 89°)
+OLD_J1_MAX = {3118: "89° (#277 전)", 3539: "126° (#277)", 1266: "−74° (11-15 잘못 조립 때)"}   # 관절 1 대기 범위 위 끝 -> 예전 STOW (11-15 부터 107°)
 MIN_CLEAR_MM = 5.0
 
 
@@ -113,9 +114,10 @@ def main():
     if st["error"] & oat.ERR_ABORT:
         sys.exit(f"팔 보드 오류 {oat.err_text(st['error'])} -> 모터 전원 켠 채 팔 OpenCR 리셋 뒤 다시")
     smin, smax = oat.load_standby()
-    if smax[0] < OLD_J1_MAX:
-        sys.exit("!! 젯슨 저장소의 대기 자세가 예전 STOW (관절 1 89°, 범위 %d ~ %d) — 이 자세로 접으면 1_3 칸 벽에 닿음 (#277).\n"
-                 "   저장소를 #277 (STOW 관절 1 2.200 rad = 126°) 이후로 업데이트 · 빌드한 뒤 다시 (README 참고). 움직이지 않음." % (smin[0], smax[0]))
+    if smax[0] in OLD_J1_MAX:
+        sys.exit("!! 젯슨 저장소의 대기 자세가 예전 STOW (관절 1 %s, 범위 %d ~ %d).\n"
+                 "   저장소를 11-15 STOW (관절 1 1.8715 rad = 107°, 범위 3211 ~ 3325) 이후로 업데이트 · 빌드한 뒤 다시 (README 참고). 움직이지 않음."
+                 % (OLD_J1_MAX[smax[0]], smin[0], smax[0]))
     ticks = [oat.tick_of(q) for q in oat.arm_pos(st)]
     print(f"팔 보드 {port} (오류 {oat.err_text(st['error'])})")
     stages, far = [], False
