@@ -7,7 +7,8 @@
 |---|---|---|
 | `kbd_joy.py` | 조이스틱 없이 키보드로 /joy: `r` 리셋 (REARM) · `x` 비상정지 · w/s/a/d 주행 · `q` 끝 (끝나면 브링업 잠김 = 안전) | `python3 ~/kbd_joy.py` |
 | `meas_session.py` | 실측 메뉴 (처짐 · 집게 폭 · 칸 좌표 · 무게 · 영점 보정 자세 · 상자 위 퍽 맞추기 · STOW↔DRIVE · 떨림 측정 13 번). 이동 중 E-stop 이면 goal 취소, 리셋하면 남은 이동을 이어서 | 브링업: `python3 ~/meas_session.py` · 직접 (브링업 끔): `python3 ~/meas_session.py --direct /dev/ttyACM0` (팔 보드 아니면 거부) |
-| `pick_test.py` | 인식 (READ_TAG) → J1 에 가장 가까운 퍽 target_look → toppick_tilt 한 번 + 팔 카메라 영상 · 관절 · 로그. `--load 열 칸` 이면 이어서 pallet_load, `--recheck` 면 처음 자리로 다시 가서 옆 퍽이 밀렸는지 잼 (2026-11-14) | `python3 ~/pick_test.py [--load 1 1] [--recheck] [메모]` |
+| `pick_test.py` | 인식 (READ_TAG) → J1 에 가장 가까운 퍽 target_look → toppick_tilt 한 번 + 팔 카메라 영상 · 관절 · 로그. `--load 열 칸` 이면 이어서 pallet_load, `--recheck` 면 처음 자리로 다시 가서 옆 퍽이 밀렸는지 잼 (2026-11-14). `--load auto` = 퍽 모양 · 계획기 규칙으로 칸 자동, `--occupied` 차 있는 칸, 노드가 시작 정리 중 거부면 10 s 뒤 다시, 설치된 노드 궤적이 실측 칸 맞춤과 다르면 경고 (2026-11-15) | `python3 ~/pick_test.py [--load 1 1] [--recheck] [메모]` |
+| `load.sh` | 집기 → 팔레트 넣기 여러 번 (pick_test.py `--load auto` 를 이어 부름). 칸 = 계획기 `can_load` (뒤 열부터) · 퍽 모양 맞는 칸 · 막는 쌍 안 생기게, 성공한 칸을 다음 번 `--occupied` 로 넘김. `--slots` 고정 차례 · `--pause` · `--recheck` · `--keep_going` · `--dry` (2026-11-15) | `~/load.sh 2 --dry` · `~/load.sh 2 --pause` |
 | `lie_test.py` | 누운 퍽: target_look → lie_upright 한 번 + 기록 | `python3 ~/lie_test.py <상자 x> <상자 y> <요 deg> [메모]` |
 | `estop_rec.py` | E-stop 시험 기록: 관절 실제 · arm_controller 원하는 위치 · /e_stop (600 s) | `python3 ~/estop_rec.py` |
 
