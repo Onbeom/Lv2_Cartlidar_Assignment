@@ -1,7 +1,7 @@
 # 라이다 설정: scan_merger(앞·뒤 LDS-03 합치기) · obstacle_stop(TFmini 박스 · 앞쪽 거리 비상 정지 — bringup 에서는 control_container). ★ = 실물에서 다시 확인할 값
 scan_merger:
   ros__parameters:
-    inputs: [/scan_front, /scan_rear]   # 첫 항목이 발행 기준(trigger). 라이다는 3층 판 아래 거꾸로 달림 → URDF scan 프레임에 roll π
+    inputs: [/scan_front, /scan_rear]   # 첫 항목이 발행 기준(trigger). 라이다는 3층 판 아래 거꾸로 달림 → URDF scan 프레임에 roll π (실물은 yaw 도 +π, 2026-11-15)
     output_topic: /scan
     output_frame: base_link
     bins: 360                   # 1° 간격
