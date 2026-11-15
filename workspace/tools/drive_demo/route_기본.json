@@ -1,0 +1,17 @@
+{
+ "plan": "기본경로_들르기",
+ "mode": "route",
+ "lib": "legs.json",
+ "route": [
+  "box1",
+  "box2",
+  "box6",
+  "box3",
+  "box5",
+  "box4",
+  "HOME"
+ ],
+ "course": "기본경로_들르기.yaml",
+ "dwell_s": 0.5,
+ "note": "11-15 기본 경로 (어제 순서에서 L 뺌) + 들르기 요청 (/drive_demo/detour 또는 step 입력)"
+}

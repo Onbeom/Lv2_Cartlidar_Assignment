@@ -1,0 +1,26 @@
+{
+ "plan": "기본경로_자동들르기시험",
+ "mode": "route",
+ "lib": "legs.json",
+ "route": [
+  "box1",
+  "box2",
+  "box6",
+  "box3",
+  "box5",
+  "box4",
+  "HOME"
+ ],
+ "course": "기본경로_자동들르기시험.yaml",
+ "dwell_s": 0.5,
+ "auto_detour": {
+  "box6": [
+   "L2"
+  ],
+  "box4": [
+   "L3",
+   "L1"
+  ]
+ },
+ "note": "시뮬 시험: box6 뒤 L2, box4 뒤 L3 · L1"
+}
