@@ -5,8 +5,10 @@
 //   skill manipulator pallet_load_<열>_<칸>_tilt · [skill drive turn_0]
 // 놓기 묶음: skill manipulator pallet_unload_<열>_<칸>_tilt · skill manipulator place_<L>_<dx>_<dy>_tilt
 // 복귀: goto <HOME x y yaw> · wait <s> (맨 끝)
+// 빈손 pallet_load (운반 중 떨어뜨림, 실패 문구에 kEmptyHand) 는 집기 묶음 실패처럼: target_look 부터 다시, 다 쓰면 그 퍽만 건너뜀
 #pragma once
 
+#include <algorithm>
 #include <optional>
 #include <sstream>
 #include <string>
@@ -70,6 +72,33 @@ inline std::optional<PickSkip> pick_skip(const std::vector<std::string> & texts,
     if (!is_pick_group_step(texts[i])) {return std::nullopt;}
   }
   return std::nullopt;
+}
+
+// manipulator 실패 문구 속 빈손 표시 (manipulator_node.cpp toppick 들기 뒤 · pallet_load 시작 검사, 2026-11-16)
+inline constexpr const char * kEmptyHand = "empty hand";
+
+// pallet_load 가 빈손으로 실패 = 집은 퍽을 운반 중 떨어뜨림 -> 집기 묶음 실패처럼 다룸 (다시 집기 · 건너뛰기)
+inline bool is_empty_hand_load(const std::string & text, const std::string & reason)
+{
+  return !pallet_slot(text, "load").empty() && reason.find(kEmptyHand) != std::string::npos;
+}
+
+// 다시 잴 단계: failed 바로 앞으로 이어진 manipulator · drive skill 안의 가장 가까운 target_look (사이에 주행 · 정렬이 끼면 없음)
+inline std::optional<size_t> retry_look(const std::vector<std::string> & texts, size_t failed)
+{
+  for (size_t i = std::min(failed, texts.size()); i-- > 0;) {
+    const auto t = step_tokens(texts[i]);
+    if (t.empty() || t[0] != "skill") {return std::nullopt;}
+    if (!skill_name(texts[i], "manipulator", "target_look:").empty()) {return i;}
+  }
+  return std::nullopt;
+}
+
+// 빈손 pallet_load 의 재시도를 다 쓰면: 그 칸만 빈 칸, 바로 다음 단계 (turn_0 이 있으면 그것) 부터
+inline std::optional<PickSkip> load_skip(const std::vector<std::string> & texts, size_t failed, const std::string & reason)
+{
+  if (failed >= texts.size() || !is_empty_hand_load(texts[failed], reason)) {return std::nullopt;}
+  return PickSkip{pallet_slot(texts[failed], "load"), failed + 1};
 }
 
 // 놓기 묶음 건너뛰기: unload 단계 idx 다음이 place_ 면 그 뒤, 아니면 idx + 1

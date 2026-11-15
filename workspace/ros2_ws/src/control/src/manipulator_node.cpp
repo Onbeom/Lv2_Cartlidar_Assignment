@@ -2148,7 +2148,20 @@ private:
     step_ = PickStep::LIFT;
     publishStage(STAGE_LIFT);
     moveTool(tool_pos_ + lift_offset_,
-      [this]() {finishPick(true, "");});
+      [this]() {
+        // 들기 뒤 쥠 다시 확인 (2026-11-16): 들다가 놓친 퍽은 대개 상자 위에 떨어져 있음 → 실패로 끝내
+        //   mission 이 target_look 부터 다시 재고 집게 한다. 예전에는 성공으로 끝나 다음 pallet_load 에서야 드러남.
+        //   측정이 없으면 (joint_states 끊김) 여기서는 판단하지 않음 (pallet_load 시작 검사가 봄)
+        if (gripper_mode_ == GripperMode::ARM_JOINT && gripper_fail_on_empty_ && grasped_) {
+          const auto holding = gripperHolding();
+          if (holding && !*holding) {
+            grasped_ = false;
+            finishPick(false, "empty hand: puck dropped while lifting (gripper closed fully)");
+            return;
+          }
+        }
+        finishPick(true, "");
+      });
   }
 
   // 같은 pitch로 끝단을 target까지 "직선"으로 이동 (최종 접근 · 들어올리기).
@@ -3230,9 +3243,14 @@ private:
       return;
     }
     if (load && pallet_require_held_ && gripper_mode_ == GripperMode::ARM_JOINT) {
+      // "empty hand" = mission 이 집기 실패로 보고 target_look 부터 다시 집는 표시 (mission give_up.hpp kEmptyHand)
       const auto holding = gripperHolding();
-      if (!holding || !*holding) {
-        finishSkill(false, "pallet_load: not holding a puck (gripper closed fully or no /joint_states)");
+      if (!holding) {
+        finishSkill(false, "pallet_load: no recent /joint_states for gripper");
+        return;
+      }
+      if (!*holding) {
+        finishSkill(false, "pallet_load: empty hand: not holding a puck (dropped after pick, gripper closed fully)");
         return;
       }
     }

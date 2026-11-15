@@ -1,7 +1,8 @@
 """mission_node plan 모드 연동 시험용 가짜 서버 (drive · manipulator · perception). 실물 · 시뮬레이터 대신.
 
   - /drive/navigate · /drive/align · /drive/execute_skill · /manipulator/pose · /manipulator/pick · /manipulator/execute_skill: 잠깐 뒤 성공
-    (execute_skill 은 이름을 기록, --reject <접두어> 면 그 이름은 거절)
+    (execute_skill 은 이름을 기록, --reject <접두어> 면 그 이름은 거절,
+     --fail <접두어>:<횟수>:<문구> 면 그 이름의 처음 <횟수> 번은 실패 + 문구 — 예: pallet_load_1_2:1:pallet_load: empty hand)
   - /perception/set_mode: READ_SIGNAL 이면 /perception/signal CONFIRMED (--signal), READ_BARCODE 면 /perception/barcode READ (--barcode)
   - /perception/check_dice: observed · passed true (요청 칸 · 기대값 기록)
   - /perception/place_box/measure (#73): 마지막 navigate 목표에서 가까운 장소 L 의 지도 칸 중심을 --box_shift 만큼 밀고 --box_rot 만큼 돌린
@@ -63,15 +64,16 @@ class Mock(Node):
                 time.sleep(a.delay)
                 before = self.pose
                 r = result_fn(gh.request)
-                if r is not None:
+                if r is not None and not isinstance(r, str):
                     self.move(kind, gh.request)
                 if kind in ("skill", "drive_skill"):
-                    self.log["events"].append(dict(kind=kind, name=gh.request.policy, ok=r is not None,
+                    self.log["events"].append(dict(kind=kind, name=gh.request.policy, ok=r is not None and not isinstance(r, str),
                                                    before=[round(v, 6) for v in before] if before else None,
                                                    after=[round(v, 6) for v in self.pose] if self.pose else None))
-                if r is None:
+                if r is None or isinstance(r, str):   # str = --fail 문구
                     gh.abort()
-                    return typ.Result(success=False, message="mock reject") if hasattr(typ.Result(), "message") else typ.Result()
+                    msg = r if isinstance(r, str) else "mock reject"
+                    return typ.Result(success=False, message=msg) if hasattr(typ.Result(), "message") else typ.Result()
                 gh.succeed()
                 return r
             ActionServer(self, typ, name, cb, callback_group=cg)
@@ -83,8 +85,23 @@ class Mock(Node):
                lambda g: None if (a.reject and g.policy.startswith(a.reject)) else ExecuteSkill.Result(success=True))
         server("pose", ArmPose, "/manipulator/pose", lambda g: ArmPose.Result(success=True))
         server("pick", Pick, "/manipulator/pick", lambda g: Pick.Result(success=True, grasped=True))
-        server("skill", ExecuteSkill, "/manipulator/execute_skill",
-               lambda g: None if (a.reject and g.policy.startswith(a.reject)) else ExecuteSkill.Result(success=True))
+        # --fail <접두어>:<횟수>:<문구> (여러 번): 그 이름의 처음 <횟수> 번은 실패 (문구 = 결과 message)
+        self.fail_rules = []
+        for f in a.fail:
+            pre, n, msg = f.split(":", 2)
+            self.fail_rules.append([pre, int(n), msg])
+        self.fail_lock = threading.Lock()
+
+        def arm_skill(g):
+            if a.reject and g.policy.startswith(a.reject):
+                return None
+            with self.fail_lock:
+                for rule in self.fail_rules:
+                    if g.policy.startswith(rule[0]) and rule[1] > 0:
+                        rule[1] -= 1
+                        return rule[2]
+            return ExecuteSkill.Result(success=True)
+        server("skill", ExecuteSkill, "/manipulator/execute_skill", arm_skill)
         self.create_service(SetPerceptionMode, "/perception/set_mode", self.on_mode, callback_group=cg)
         self.create_service(CheckDice, "/perception/check_dice", self.on_dice, callback_group=cg)
         # 장소 상자 측정 (#73)
@@ -316,6 +333,8 @@ def main():
     ap.add_argument("--signal_after", type=float, default=2.0)
     ap.add_argument("--delay", type=float, default=0.02)
     ap.add_argument("--reject", default="")
+    ap.add_argument("--fail", action="append", default=[],
+                    help="<스킬 접두어>:<횟수>:<문구> — manipulator skill 의 처음 <횟수> 번 실패 (여러 번 줄 수 있음)")
     ap.add_argument("--timeout", type=float, default=300.0)
     ap.add_argument("--out", required=True)
     ap.add_argument("--approach", default="", help="approach_poses.yaml (기본 ../config)")

@@ -30,6 +30,7 @@ mission_node:
     # 재시도를 다 쓴 단계 (R1, plan 모드 계획 단계만. 계획 전 observe · survey · plan 실패는 바로 FAILED)
     on_fail:
       skip_puck: true            # 집기 (turn · target_look · toppick_tilt) 실패 -> 그 퍽만 건너뜀, 칸은 빈 칸 (그 칸 꺼내기 · 놓기도 안 함).
+                                 #   빈손 pallet_load (운반 중 떨어뜨림, 2026-11-16) 도 집기 실패로: 재시도는 target_look 부터, 다 쓰면 그 퍽만 건너뜀
                                  #   pallet_unload 실패 -> 바로 뒤 place 만 건너뜀. 끝나면 DONE (reason = skipped: …), verify 는 실패로 기록
       return_home: true          # 그 밖 (주행 · 정렬 · pallet_load · place) -> 계획기 복귀 줄 (goto HOME · wait) 로 가서 복귀 뒤 FAILED
 

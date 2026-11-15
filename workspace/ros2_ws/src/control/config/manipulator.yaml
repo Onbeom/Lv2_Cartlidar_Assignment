@@ -117,7 +117,7 @@ manipulator_node:
       grasp_on_time: 0.26        # s (30 Hz 에서 8 스텝 = 0.267 s 째 켜짐)
       grasp_off_time: 0.10       # s (30 Hz 에서 3 스텝째 꺼짐)
       grasp_rate: 30.0           # Hz
-      fail_on_empty: true        # 끝까지 닫힘 = 빈손 → pick · pallet_unload 실패
+      fail_on_empty: true        # 끝까지 닫힘 = 빈손 → pick (닫은 뒤 · 들기 뒤) · pallet_unload 실패
       joint_name: gripper_joint  # action 모드
       max_effort: 0.0            # action 모드, 0 = 지정 안 함
 
