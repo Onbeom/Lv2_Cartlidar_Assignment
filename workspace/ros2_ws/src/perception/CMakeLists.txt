@@ -73,17 +73,31 @@ target_link_libraries(perception_node PUBLIC perception_detector perception_barc
 rclcpp_components_register_node(perception_node PLUGIN "perception::PerceptionNode" EXECUTABLE perception)
 
 # 라이다 노드들 (ROS 의존 없는 계산부는 include/perception/*.hpp, 단위 시험 대상)
+find_package(yaml_cpp_vendor REQUIRED)
+find_package(yaml-cpp REQUIRED)
 add_library(perception_lidar SHARED src/scan_merger_node.cpp src/obstacle_stop_node.cpp src/tfmini_node.cpp
+  src/scan_body_mask_node.cpp src/loc_scan_merge_node.cpp
   src/scan_to_range_node.cpp)
 target_include_directories(perception_lidar PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
 target_link_libraries(perception_lidar PUBLIC rclcpp::rclcpp rclcpp_components::component
-  ${sensor_msgs_TARGETS} ${std_msgs_TARGETS} tf2::tf2 tf2_ros::tf2_ros tf2_geometry_msgs::tf2_geometry_msgs)
+  ${sensor_msgs_TARGETS} ${std_msgs_TARGETS} tf2::tf2 tf2_ros::tf2_ros tf2_geometry_msgs::tf2_geometry_msgs yaml-cpp::yaml-cpp)
 rclcpp_components_register_node(perception_lidar PLUGIN "perception::ScanMergerNode" EXECUTABLE scan_merger)
+# 위치 추정 쪽 (localization 패키지 Python 판을 옮김, 11-14 Jetson CPU): 차체 가림 지우기 · AMCL 용 스캔 합치기
+rclcpp_components_register_node(perception_lidar PLUGIN "perception::ScanBodyMaskNode" EXECUTABLE scan_body_mask)
+rclcpp_components_register_node(perception_lidar PLUGIN "perception::LocScanMergeNode" EXECUTABLE loc_scan_merge)
 rclcpp_components_register_node(perception_lidar PLUGIN "perception::ObstacleStopNode" EXECUTABLE obstacle_stop)
 rclcpp_components_register_node(perception_lidar PLUGIN "perception::TFminiNode" EXECUTABLE tfmini)
 # Gazebo 모의: TFmini 광선(LaserScan /tfmini/scan) → Range /tfmini/range (실물 tfmini_node 와 같은 토픽)
 rclcpp_components_register_node(perception_lidar PLUGIN "perception::ScanToRangeNode" EXECUTABLE scan_to_range)
+
+# 위치 잃음 감지 · 다시 찾기 (localization loc_monitor.py 를 옮김, backend amcl 만). 계산부 loc_core 는 단위 시험 대상
+add_library(perception_loc SHARED src/loc_core.cpp src/loc_monitor_node.cpp)
+target_include_directories(perception_loc PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> $<INSTALL_INTERFACE:include/${PROJECT_NAME}>)
+target_link_libraries(perception_loc PUBLIC rclcpp::rclcpp rclcpp_components::component ${sensor_msgs_TARGETS}
+  ${std_msgs_TARGETS} ${geometry_msgs_TARGETS} ${OpenCV_LIBS} tf2::tf2 tf2_ros::tf2_ros yaml-cpp::yaml-cpp)
+rclcpp_components_register_node(perception_loc PLUGIN "perception::LocMonitorNode" EXECUTABLE loc_monitor)
 
 # 후방 장애물: 뒤 D435 깊이 → /perception/rear_obstacle (계산부 include/perception/rear_obstacle.hpp, 단위 시험 대상)
 add_library(perception_rear SHARED src/rear_obstacle_node.cpp)
@@ -93,7 +107,7 @@ target_link_libraries(perception_rear PUBLIC rclcpp::rclcpp rclcpp_components::c
   ${std_msgs_TARGETS} cv_bridge::cv_bridge ${OpenCV_LIBS} tf2::tf2 tf2_ros::tf2_ros tf2_geometry_msgs::tf2_geometry_msgs)
 rclcpp_components_register_node(perception_rear PLUGIN "perception::RearObstacleNode" EXECUTABLE rear_obstacle)
 
-install(TARGETS perception_detector perception_barcode perception_node perception_lidar perception_rear
+install(TARGETS perception_detector perception_barcode perception_node perception_lidar perception_loc perception_rear
   ARCHIVE DESTINATION lib LIBRARY DESTINATION lib RUNTIME DESTINATION bin)
 install(TARGETS barcode_compare place_box_check RUNTIME DESTINATION lib/${PROJECT_NAME})
 install(PROGRAMS scripts/arm_camera_node.py DESTINATION lib/${PROJECT_NAME})
@@ -129,6 +143,9 @@ if(BUILD_TESTING)
   # 팔 카메라 사진 저장 일정 · 파일 이름 · 쓰기 스레드 (snapshot.hpp, 헤더만)
   ament_add_gtest(test_snapshot test/test_snapshot.cpp)
   target_include_directories(test_snapshot PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+  # 위치 잃음 감지 계산 (loc_core, localization test_loc_core.py 를 옮김)
+  ament_add_gtest(test_loc_core test/test_loc_core.cpp)
+  target_link_libraries(test_loc_core perception_loc)
   # camera_info 형식 검사 (camera_info_check.hpp, 헤더만)
   ament_add_gtest(test_camera_info test/test_camera_info.cpp)
   target_include_directories(test_camera_info PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
