@@ -69,3 +69,34 @@ def test_sag_fit_separates(tmp_path):
 
 def test_tip_from_urdf():
     assert 0.155 < A.Arm().tip_x < 0.165   # 손가락 앞 끝 (gripper_roll_link 앞 약 0.160 m)
+
+
+def test_link_length_fit(tmp_path):
+    """관절 2 → 3 이 30 mm 짧은 팔 (#295): --links 23 이면 길이 · 영점을 되찾고, 영점만 맞추면 남는 오차가 큼"""
+    e_true = np.array([0.0, -0.10, 0.05, 0.03, 0.0])
+    dl_true = {"joint3": -0.030}
+    arm = A.Arm()
+    m = A.Model(arm, [1, 2, 3, 4], [], False, 7.25)
+    rng = np.random.default_rng(1)
+    p = tmp_path / "c.csv"
+    with open(p, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["이름", "j1", "j2", "j3", "j4", "j5", "x", "y", "z"])
+        for name, qd in POSES:
+            q_read = np.radians(qd + [0])
+            px = A.TCP_X if name.startswith(("칸", "상자")) else arm.tip_x
+            pt = A.to_mm(arm.point(m.real_q(q_read, e_true, np.zeros(5)), px, dl_true), 7.25) + rng.normal(0, 0.3, 3)
+            w.writerow([name] + [f"{v:.3f}" for v in qd + [0]] + [f"{v:.2f}" for v in pt])
+    rows = A.read_csv(str(p), arm, type("a", (), {"tip": None})())
+    ml = A.Model(arm, [1, 2, 3, 4], [], False, 7.25, ["23"])
+    xl = ml.fit(rows)
+    e, _, _ = ml.unpack(xl)
+    assert abs(ml.unpack_links(xl)["joint3"] - (-0.030)) < 0.002
+    assert np.allclose(e[:4], e_true[:4], atol=math.radians(0.5))
+    m0 = A.Model(arm, [1, 2, 3, 4], [], False, 7.25)
+    x0 = m0.fit(rows)
+    r0 = np.sqrt(np.mean(m0.resid(x0, rows) ** 2))
+    rl = np.sqrt(np.mean(ml.resid(xl, rows) ** 2))
+    assert rl < 0.6 and r0 > 3 * rl, (r0, rl)
+    # 명령줄도 받음
+    A.main([str(p), "--links", "23"])

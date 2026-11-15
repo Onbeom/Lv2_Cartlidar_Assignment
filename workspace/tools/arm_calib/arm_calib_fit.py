@@ -11,11 +11,14 @@
   e_j = 관절 영점 오차 → 노드 명령 = 모델 각 + e_j 이므로 **ik.joint_offsets = e** (관절 5 는 위치에 영향 없음 → 0).
   `--sag 2,3`: 관절 2 · 3 의 처짐 (토크 ∝ 잡는 점까지 수평 거리 L) 도 맞춤 — 자세마다 다른 처짐을 따로 떼어 냄.
   `--z0`: 바닥 높이 (base_link 지면 위, `--base_h`) 오차를 상수로 같이 맞춤.
+  `--links 23,34,45,tool`: 링크 길이 오차 (m) 도 맞춤 (#295) — 23 = 관절 2 → 3, 34 = 관절 3 → 4, 45 = 관절 4 → 5, tool = 관절 5 → 잡는 점 · 손끝.
+    방향은 URDF 그대로 두고 길이만 바꿈. 영점과 섞이기 쉬우므로 자세가 여러 방향 (앞 · 칸 · 위아래) 으로 넉넉할 때만.
+    yaml 에는 영점만 들어가므로, 링크 길이를 쓰려면 ik 길이 · URDF 를 따로 고쳐야 함 (이 도구는 판단 자료만).
 
 출력: 자세별 오차 (보정 전 · 지금 manipulator.yaml 값 · 새 값), 하나씩 빼고 맞춘 확인 오차, yaml 한 줄,
       놓기 궤적 (pallet_place_traj.json) 칸 놓는 자세 · 상자 위 집기 자세에서 지금 값 ↔ 새 값 끝 위치 차이.
 
-  python3 arm_calib_fit.py 6_보정자세.csv [--joints 1,2,3,4] [--sag 2,3] [--z0] [--base_h 7.25]
+  python3 arm_calib_fit.py 6_보정자세.csv [--joints 1,2,3,4] [--sag 2,3] [--z0] [--links 23,34] [--base_h 7.25]
 """
 from __future__ import annotations
 
@@ -37,6 +40,7 @@ URDF = os.path.join(WS, "urdf_and_usd", "waffle_4wd_description", "urdf", "waffl
 YAML = os.path.join(WS, "ros2_ws", "src", "control", "config", "manipulator.yaml")
 TRAJ = os.path.join(WS, "urdf_and_usd", "policy", "manipulator", "pallet_place_traj.json")
 ARM = ["joint1", "joint2", "joint3", "joint4", "joint5"]
+LINKS = {"23": "joint3", "34": "joint4", "45": "joint5", "tool": None}   # --links 이름 → 길이를 바꿀 관절 origin (tool = 점 x)
 TCP_X = 0.140   # 잡는 점 (pallet_traj.py TCP, meas_session.fk 와 같음)
 
 
@@ -84,19 +88,22 @@ class Arm:
         self.tip_x = round(tip, 4)
         self.j2 = None
 
-    def frames(self, q):
-        """관절 1 ~ 5 각 (rad) → [(관절 이름, 원점, 회전)] (관절 축이 돌기 전 자리) 와 gripper_roll_link (p, R)."""
+    def frames(self, q, dl=None):
+        """관절 1 ~ 5 각 (rad) → [(관절 이름, 원점, 회전)] (관절 축이 돌기 전 자리) 와 gripper_roll_link (p, R).
+        dl: {관절 이름: 길이 오차 m} — 그 관절 origin 을 방향은 그대로 길이만 바꿈 (--links)"""
         p, R, out = np.zeros(3), np.eye(3), {}
         for name, xyz, R0, ax in self.chain:
+            if dl and name in dl:
+                xyz = xyz * (1.0 + dl[name] / np.linalg.norm(xyz))
             p = p + R @ xyz; R = R @ R0
             out[name] = (p.copy(), R.copy())
             if name in ARM:
                 R = R @ _axang(ax, q[ARM.index(name)])
         return out, p, R
 
-    def point(self, q, x):
-        _, p, R = self.frames(q)
-        return p + R @ np.array([x, 0.0, 0.0])
+    def point(self, q, x, dl=None):
+        _, p, R = self.frames(q, dl)
+        return p + R @ np.array([x + (dl or {}).get("tool", 0.0), 0.0, 0.0])
 
 
 # ---------------------------------------------------------------- 자료
@@ -131,9 +138,10 @@ def to_mm(p_base, base_h_mm):
 
 # ---------------------------------------------------------------- 맞추기
 class Model:
-    def __init__(self, arm, joints, sag, z0, base_h):
+    def __init__(self, arm, joints, sag, z0, base_h, links=()):
         self.arm, self.joints, self.sag, self.z0, self.base_h = arm, joints, sag, z0, base_h
-        self.n = len(joints) + len(sag) + (1 if z0 else 0)
+        self.links = list(links)
+        self.n = len(joints) + len(sag) + (1 if z0 else 0) + len(self.links)
 
     def unpack(self, x):
         e = np.zeros(5); k = np.zeros(5)
@@ -141,8 +149,13 @@ class Model:
             e[j - 1] = x[i]
         for i, j in enumerate(self.sag):
             k[j - 1] = x[len(self.joints) + i]
-        dz = x[-1] if self.z0 else 0.0
+        dz = x[len(self.joints) + len(self.sag)] if self.z0 else 0.0
         return e, k, dz
+
+    def unpack_links(self, x):
+        """--links 길이 오차: {관절 이름 또는 'tool': m}"""
+        base = len(self.joints) + len(self.sag) + (1 if self.z0 else 0)
+        return {(LINKS[n] or "tool"): float(x[base + i]) for i, n in enumerate(self.links)}
 
     def lever(self, q, j):
         """관절 j 축에서 잡는 점까지 수평 거리 (m) — 처짐 토크 비례"""
@@ -159,7 +172,8 @@ class Model:
 
     def predict(self, row, x):
         e, k, dz = self.unpack(x)
-        return to_mm(self.arm.point(self.real_q(row["q"], e, k), row["px"]), self.base_h + dz)
+        dl = self.unpack_links(x) if self.links else None
+        return to_mm(self.arm.point(self.real_q(row["q"], e, k), row["px"], dl), self.base_h + dz)
 
     def resid(self, x, rows):
         out = []
@@ -193,6 +207,7 @@ def main(argv=None):
     ap.add_argument("--joints", default="1,2,3,4", help="맞출 관절 영점 (기본 1,2,3,4. 관절 5 는 끝 위치에 영향 없음)")
     ap.add_argument("--sag", default="", help="처짐도 맞출 관절 (예 2,3). 자세 10 개 이상일 때")
     ap.add_argument("--z0", action="store_true", help="바닥 높이 오차를 상수로 같이 맞춤")
+    ap.add_argument("--links", default="", help="링크 길이 오차도 맞춤: 23 · 34 · 45 · tool 중 쉼표로 (#295, 판단 자료)")
     ap.add_argument("--base_h", type=float, default=7.25, help="base_link 지면 위 [mm] (바퀴 반지름 0.0335 모델 7.25, 실측값이 있으면 그것)")
     ap.add_argument("--tip", type=float, default=None, help="손끝 x [m, gripper_roll_link] (기본 URDF 손가락 앞 끝)")
     ap.add_argument("--urdf", default=URDF)
@@ -202,9 +217,13 @@ def main(argv=None):
     arm = Arm(a.urdf)
     joints = [int(v) for v in a.joints.split(",") if v]
     sag = [int(v) for v in a.sag.split(",") if v]
+    links = [v for v in a.links.split(",") if v]
+    bad = [v for v in links if v not in LINKS]
+    if bad:
+        raise SystemExit(f"--links 는 {', '.join(LINKS)} 중에서: {bad}")
     rows = read_csv(a.csv, arm, a)
     fit_rows = [r for r in rows if r["use"]]
-    model = Model(arm, joints, sag, a.z0, a.base_h)
+    model = Model(arm, joints, sag, a.z0, a.base_h, links)
     nobs = sum(sum(m is not None for m in r["meas"]) for r in fit_rows)
     print(f"자세 {len(rows)} 개 (맞춤 {len(fit_rows)} · 확인 {len(rows) - len(fit_rows)}), 잰 값 {nobs} 개, 맞출 값 {model.n} 개"
           f" | 잡는 점 x {TCP_X} · 손끝 x {a.tip or arm.tip_x} m, 바닥 높이 {a.base_h} mm")
@@ -249,6 +268,16 @@ def main(argv=None):
         print("처짐 k (도 / 100 mm 팔 길이): " + " ".join(f"j{j} {math.degrees(k[j - 1]) * 0.1:+.2f}" for j in sag))
     if a.z0:
         print(f"바닥 높이 보정 {dz:+.1f} mm (base_h {a.base_h} → {a.base_h + dz:.1f})")
+    dl = model.unpack_links(x) if links else {}
+    if links:
+        nominal = {"joint3": None, "joint4": None, "joint5": None}
+        for name, xyz, _, _ in arm.chain:
+            if name in nominal:
+                nominal[name] = float(np.linalg.norm(xyz))
+        print("링크 길이 (URDF → 맞춘 값, mm): " + " · ".join(
+            f"{n} {(nominal[LINKS[n]] if LINKS[n] else TCP_X) * 1000:.1f} → {((nominal[LINKS[n]] if LINKS[n] else TCP_X) + dl[LINKS[n] or 'tool']) * 1000:.1f}"
+            for n in links) + "  (tool 은 잡는 점 기준)")
+        print("  ★ 링크 길이는 yaml 에 들어가지 않음 — 쓰려면 ik 길이 · URDF 를 고치고 영점을 다시 맞춤. 아래 '지금 yaml ↔ 새 값' 표는 링크 길이를 뺀 영점만으로 계산")
 
     # 놓기 궤적 · 상자 위 자세에서 지금 값 ↔ 새 값 (처짐 포함) 끝 차이 → 처짐을 넣었으면 그 자세들의 평균 실효 영점을 권함
     poses = []
@@ -284,7 +313,7 @@ def main(argv=None):
     line = "joint_offsets: [" + ", ".join(f"{v:.4f}" for v in e_out) + "]"
     print(f"\n→ {os.path.relpath(YAML, WS)} `ik.{line}`")
     if a.json:
-        json.dump(dict(e_rad=e.tolist(), k=k.tolist(), dz_mm=dz, joint_offsets=e_out.tolist(), rms=dict(none=rms(stats["none"]), cur=rms(stats["cur"]),
+        json.dump(dict(e_rad=e.tolist(), k=k.tolist(), dz_mm=dz, links_m=dl, joint_offsets=e_out.tolist(), rms=dict(none=rms(stats["none"]), cur=rms(stats["cur"]),
                        new=rms(stats["new"]), check=rms(stats["new_check"]), loo=rms(loo)), n_rows=len(rows)), open(a.json, "w"), indent=1)
     return e_out
 
