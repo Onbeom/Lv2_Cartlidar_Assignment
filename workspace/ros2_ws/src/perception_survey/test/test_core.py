@@ -146,3 +146,28 @@ def test_revisit_refused_after_finish(tmp_path):
     with pytest.raises(ValueError):s.revisit()
     for value in [-1,1.5,True]:
         with pytest.raises(ValueError):Survey(max_revisits=value)
+
+def test_free_layout_random_positions():
+    """free_layout (사용자 규칙 11-16): 퍽이 박스 중심에서 3 ~ 6 cm 아무 자리 -> 박스로 묶어 12 칸 완료, 잰 자리 그대로, 박스 요 안 잼"""
+    s=Survey(free_layout=True);rng=__import__('random').Random(1);truth={}
+    for box,(x,y) in enumerate(BOX_CENTERS):
+        a,b=rng.uniform(-math.pi,math.pi),rng.uniform(.03,.06)
+        p=(x+b*math.cos(a),y+b*math.sin(a));q=(x-.05*math.cos(a+.4),y-.05*math.sin(a+.4))   # 두 퍽 중심 거리 >= 35 mm
+        truth[2*box]=p;truth[2*box+1]=q
+    for frame in range(2):
+        for tid,(x,y) in truth.items():
+            n=.003*(1 if frame else -1)
+            assert s.observe({'x':x+n,'y':y-n,'id':tid,'color':'red','shape':'cylinder','pose':'standing','camera':'arm','confidence':.95},10.+frame)
+    r=s.snapshot()
+    assert r['complete'],r['errors']
+    for t in r['slots']:
+        x,y=truth[t['id']];assert math.hypot(t['x_mm']/1000-x,t['y_mm']/1000-y)<1e-6
+    assert not any(b['yaw_measured'] for b in r['boxes'])
+
+def test_free_layout_rejects():
+    s=Survey(free_layout=True);x,y=BOX_CENTERS[0]
+    o=lambda dx,dy,i:{'x':x+dx,'y':y+dy,'id':i,'color':'red','shape':'cylinder','pose':'standing','camera':'arm','confidence':.95}
+    assert not s.observe(o(.2,0,0),1.) and s.rejected=={'outside_box':1}
+    assert s.observe(o(.05,0,0),1.) and s.observe(o(-.03,.02,1),1.)
+    assert not s.observe(o(0,-.05,2),2.) and s.rejected['outside_slot']==1   # 박스에 퍽 2 개가 이미 있음
+    assert s.observe(o(.06,.005,0),2.)                                          # 같은 퍽 (20 mm 안)

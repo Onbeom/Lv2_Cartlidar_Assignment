@@ -169,7 +169,7 @@ class WaffleTopPickEnvCfg(DirectRLEnvCfg):
     rot_hold_weight = 0.3
     ik_damping = 1e-4
     target_lead_max = 0.25
-    gripper_open = 0.0042  # 실물 벌림 50 mm (TP9 부터 명령으로 덮어씀 → 2026-11-14 기본값으로, TP13 · TP14 · TP15 가 빠뜨려 61.6 mm 로 학습). TP2 ~ TP8 은 0.010 = 61.6 mm
+    gripper_open = 0.010  # 61.6 mm = ROS RL 집기 open_m 0.010 과 같게 (2026-11-16 되돌림). 2026-11-14 ~ 11-15 는 0.0042 ("50 mm" 비례 환산, 실측 아님) · 실물 고정 동작 집기 = 0.0125 (66.7 mm)
     gripper_closed = -0.0075  # 팀 FINGER_CLOSE −0.011 이면 한쪽 손가락만 힘 한계 (13 N) 라 퍽이 닫는 축으로 3 ~ 5 mm 치우침 -> 30 mm 퍽에서 2 mm 더 (약 12 N, 두 손가락 같음). 팔레트 놓기 확인과 같음 (2026-11-02)
 
     # 배치 무작위

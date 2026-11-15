@@ -18,7 +18,7 @@ def test_maps(world):
 def test_approaches(world):
     A = world.approaches
     for b in range(1, 7):
-        opts = [a for a in A.values() if a.kind == "box" and a.extra["box"] == b and a.ok]
+        opts = [a for a in A.values() if a.kind == "box" and a.extra["box"] == b and a.ok and not a.extra.get("alt")]
         assert opts, f"박스 {b} 접근 자세 없음"
         sides = {a.extra["side"] for a in opts}
         if sides & {"W", "E"}:          # ±X 는 ±Y 가 모두 막힌 박스만

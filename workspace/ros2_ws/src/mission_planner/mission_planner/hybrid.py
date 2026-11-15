@@ -34,9 +34,10 @@ INF = math.inf
 class Nodes:
     """비용표 (HOME · L · 박스 접근 자세) 를 한 번 만들어 둠 (World 마다 하나)."""
 
-    def __init__(self, world, places):
+    def __init__(self, world, places, extra=None):
+        """extra: {박스: [키]} 비용표에만 더 넣을 접근 (박스 후보 box_ix 는 world.box_opts 그대로, measured.py 가 바꿔 씀)"""
         self.world = world
-        self.keys = ["HOME", *places] + sorted({k for ks in world.box_opts.values() for k in ks})
+        self.keys = ["HOME", *places] + sorted({k for ks in [*world.box_opts.values(), *(extra or {}).values()] for k in ks})
         self.ix = {k: i for i, k in enumerate(self.keys)}
         n = len(self.keys)
         self.D = np.array([[world.cost(a, b) for b in self.keys] for a in self.keys])

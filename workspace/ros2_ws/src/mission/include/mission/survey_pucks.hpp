@@ -1,4 +1,6 @@
-// perception_survey 완료 파일 -> 계획기 퍽 등록표 (pucks: [{id, color, shape, box, side, pose}]). ROS 의존 없음 (시험용으로 분리)
+// perception_survey 완료 파일 -> 계획기 퍽 등록표 (pucks: [{id, color, shape, box, side, pose, xy}]). ROS 의존 없음 (시험용으로 분리)
+//   xy: 잰 퍽 중심 [m, 지도] = x_mm · y_mm / 1000. measured 가 true 인 칸만 (아니면 칸 기본 자리라 안 씀).
+//   계획기는 12 개 모두 xy 가 있을 때만 잰 자리 집기 규칙 (mission_planner measured.py) 을 씀
 //   shape: cuboid -> box (계획기 이름). pose (standing | lying, #193) 는 있으면 옮기고, 없거나 null 이면 쓰지 않음
 //   (계획기는 pose 가 없으면 standing 으로 읽음). 그 밖의 pose 값은 오류
 #pragma once
@@ -29,6 +31,9 @@ inline bool surveyToPucksYaml(const YAML::Node & doc, const std::string & path, 
       const std::string pose = t["pose"].as<std::string>();
       if (pose != "standing" && pose != "lying") {err = "slot pose must be standing or lying (" + pose + ") in " + path; return false;}
       o << ", pose: " << pose;
+    }
+    if (t["measured"] && t["measured"].as<bool>() && t["x_mm"] && t["y_mm"]) {
+      o << ", xy: [" << t["x_mm"].as<double>() / 1000.0 << ", " << t["y_mm"].as<double>() / 1000.0 << "]";
     }
     o << "}\n";
   }
