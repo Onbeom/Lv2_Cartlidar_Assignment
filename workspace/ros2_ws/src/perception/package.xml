@@ -24,6 +24,7 @@
   <depend>libzbar-dev</depend>
   <depend>liblapack-dev</depend>
   <depend>ament_index_cpp</depend>
+  <depend>yaml_cpp_vendor</depend>
   <exec_depend>perception_survey</exec_depend>   <!-- perception.launch.py 가 B0 등록부를 띄움 -->
   <exec_depend>rclpy</exec_depend>            <!-- 팔 카메라 드라이버 scripts/arm_camera_node.py -->
   <exec_depend>python3-opencv</exec_depend>

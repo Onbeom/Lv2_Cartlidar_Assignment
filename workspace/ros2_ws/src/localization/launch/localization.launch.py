@@ -16,8 +16,8 @@ lifecycle_delay(기본 3.0 s): 지도 서버 · AMCL 을 켜 주는 lifecycle_ma
   navigation.launch.py 와 같은 인자 이름이라 명령 줄에서 한 번 주면 둘 다 같은 값."""
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, OpaqueFunction, TimerAction
-from launch.conditions import IfCondition
-from launch.substitutions import AndSubstitution, EqualsSubstitution, LaunchConfiguration as LC, PathJoinSubstitution
+from launch.conditions import IfCondition, UnlessCondition
+from launch.substitutions import AndSubstitution, EqualsSubstitution, LaunchConfiguration as LC, NotSubstitution, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 from launch_ros.substitutions import FindPackageShare
@@ -58,6 +58,7 @@ def generate_launch_description():
         DeclareLaunchArgument('start_y', default_value='0.950'),
         DeclareLaunchArgument('start_yaw', default_value='3.14159265'),
         DeclareLaunchArgument('future_dt', default_value='0.1', description='map_odom_relay 가 map → odom 을 앞당겨 낼 시간[s]'),
+        DeclareLaunchArgument('loc_cpp', default_value='true', description='차체 가림 · 스캔 합치기 · loc_monitor(amcl) 를 C++ 판(perception)으로 (false = 예전 Python 판)'),
         DeclareLaunchArgument('mask_file', default_value='none', description='차체 가림 칸 yaml(none = 출발 전 0.5~1.9 s 정지 스캔에서 배움)'),
         DeclareLaunchArgument('amcl_params', default_value=PathJoinSubstitution([cfg, 'amcl.yaml'])),
         DeclareLaunchArgument('loc_res_mode', default_value='interp_p75'),
@@ -74,8 +75,17 @@ def generate_launch_description():
     delay = lambda node: OpaqueFunction(function=lambda context: [
         TimerAction(period=float(LC('lifecycle_delay').perform(context)), actions=[node])])
     map_servers = ['map_server', 'map_objects_server']
+    loc_params = {'backend': LC('localization'), 'map': LC('loc_map'), 'mission_frame': 'map',
+                  'carto_config_dir': LC('carto_config_dir'), 'carto_config': LC('carto_config'),
+                  'res_mode': LC('loc_res_mode'), 'res_thr': ParameterValue(LC('loc_res_thr'), value_type=float),
+                  'check_mode': LC('loc_check_mode'), 'event_log': LC('loc_event_log'),
+                  'gate_in': LC('gate_in'), 'gate_out': LC('gate_out')}
     return LaunchDescription(args + [
-        Node(package='localization', executable='scan_body_mask', name='scan_body_mask', output='screen',
+        # 차체 가림 지우기 · AMCL 용 스캔 합치기는 C++ 판(perception 패키지)이 기본. loc_cpp:=false 면 예전 Python 판
+        #   (Jetson 실물 11-13: Python 판 CPU 코어 하나의 약 18 % · 22 %, 11-16 PC 재생(11-14 bag)에서 상태 · lock · 다시 찾기 · 차체 가림 스캔 같음)
+        Node(package='perception', executable='scan_body_mask', name='scan_body_mask', output='screen', condition=IfCondition(LC('loc_cpp')),
+             parameters=[sim, {'mask_file': LC('mask_file')}]),
+        Node(package='localization', executable='scan_body_mask', name='scan_body_mask', output='screen', condition=UnlessCondition(LC('loc_cpp')),
              parameters=[sim, {'mask_file': LC('mask_file')}]),
         # 주행용 지도
         Node(package='nav2_map_server', executable='map_server', name='map_server', output='screen', condition=IfCondition(LC('use_map_server')),
@@ -96,7 +106,10 @@ def generate_launch_description():
         Node(package='tf2_ros', executable='static_transform_publisher', name='carto_map_tf', output='screen', parameters=[sim], condition=carto,
              arguments=['--x', LC('align_x'), '--y', LC('align_y'), '--yaw', LC('align_yaw'), '--frame-id', 'map', '--child-frame-id', 'carto_map']),
         # AMCL
-        Node(package='localization', executable='scan_merge', name='scan_merge', output='screen', condition=amcl, parameters=[sim]),
+        Node(package='perception', executable='loc_scan_merge', name='scan_merge', output='screen', parameters=[sim],
+             condition=IfCondition(AndSubstitution(EqualsSubstitution(LC('localization'), 'amcl'), LC('loc_cpp')))),
+        Node(package='localization', executable='scan_merge', name='scan_merge', output='screen', parameters=[sim],
+             condition=IfCondition(AndSubstitution(EqualsSubstitution(LC('localization'), 'amcl'), NotSubstitution(LC('loc_cpp'))))),
         Node(package='nav2_amcl', executable='amcl', name='amcl', output='screen', condition=amcl_node,
              parameters=[LC('amcl_params'), sim, {'initial_pose.x': ParameterValue(LC('start_x'), value_type=float),
                                                   'initial_pose.y': ParameterValue(LC('start_y'), value_type=float),
@@ -104,10 +117,13 @@ def generate_launch_description():
         delay(Node(package='nav2_lifecycle_manager', executable='lifecycle_manager', name='lifecycle_manager_amcl', output='screen',
                    condition=amcl_node, parameters=[sim, {'autostart': True, 'node_names': ['amcl']}])),
         # 위치 잃음 감지 · 다시 찾기
-        Node(package='localization', executable='loc_monitor', name='loc_monitor', output='screen', condition=IfCondition(LC('use_loc_monitor')),
-             parameters=[sim, align, {'backend': LC('localization'), 'map': LC('loc_map'), 'mission_frame': 'map',
-                                      'carto_config_dir': LC('carto_config_dir'), 'carto_config': LC('carto_config'),
-                                      'res_mode': LC('loc_res_mode'), 'res_thr': ParameterValue(LC('loc_res_thr'), value_type=float),
-                                      'check_mode': LC('loc_check_mode'), 'event_log': LC('loc_event_log'),
-                                      'gate_in': LC('gate_in'), 'gate_out': LC('gate_out')}]),
+        #   amcl 이고 loc_cpp 면 C++ 판(perception loc_monitor, 같은 인자 · 같은 동작, Jetson 실물 11-14 Python 판 CPU 코어 하나의 20~25 %).
+        #   carto 는 Python 판만 있음(Jetson 에 cartographer_ros_msgs 없음)
+        Node(package='perception', executable='loc_monitor', name='loc_monitor', output='screen',
+             condition=IfCondition(AndSubstitution(LC('use_loc_monitor'), AndSubstitution(EqualsSubstitution(LC('localization'), 'amcl'), LC('loc_cpp')))),
+             parameters=[sim, align, loc_params]),
+        Node(package='localization', executable='loc_monitor', name='loc_monitor', output='screen',
+             condition=IfCondition(AndSubstitution(LC('use_loc_monitor'),
+                                                   NotSubstitution(AndSubstitution(EqualsSubstitution(LC('localization'), 'amcl'), LC('loc_cpp'))))),
+             parameters=[sim, align, loc_params]),
     ])
