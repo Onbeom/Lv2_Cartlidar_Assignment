@@ -3,7 +3,7 @@
 
 - 범위 모서리 (J1 ~ J5 각 끝값 조합 32 곳) 에서 켜질 때 정리 (J3 → J2 → J4 → J1 → J5 · 그리퍼) 로 DRIVE E2 까지 가는 경로를
   fold_clearance.py 와 같은 모델 (설계 URDF · 팔 상자 ↔ 차체 · 팔레트 v5 · 퍽 겉면 점) 로 잼.
-- 지금 범위와 넓힌 범위를 나란히 출력. 상판 (static_427) 은 접은 팔이 얹히는 곳이라 --no-plate 로 빼고 볼 수 있음.
+- 11-15 범위 (#305) 와 11-16 범위 (관절 1 #277 로 되돌림) 를 나란히 출력. 상판 (static_427) 은 접은 팔이 얹히는 곳이라 --no-plate 로 빼고 볼 수 있음.
 
 실행: python3 standby_range_check.py [--j2 653,721] [--no-plate]   (numpy · scipy, 약 1 분)
 """
@@ -18,8 +18,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import fold_clearance as F  # noqa: E402
 
-OLD = dict(j1=(3211, 3325), j5=(1849, 2077))   # 11-15 fd6bcbf
-NEW = dict(j1=(3174, 3325), j5=(1849, 2246))   # 11-15 #305
+OLD = dict(j1=(3174, 3325), j5=(1849, 2246))   # 11-15 #305 (관절 1 모터 돌아 설치)
+NEW = dict(j1=(3425, 3539), j5=(1849, 2246))   # 11-16 관절 1 모터 정상 설치, J1 #277 로 되돌림
 J3, J4 = (3025, 3091), (797, 864)
 E2 = [0.0, -1.37, -0.01, 1.85, 0.0, 0.923]
 ORDER = [[2], [1], [3], [0], [4, 5]]
@@ -41,7 +41,7 @@ def main():
         keep = tags != 'static_427'
         obs, tags = obs[keep], tags[keep]
     boxes = m.arm_boxes()
-    for name, r in (('지금 범위', OLD), ('넓힌 범위', NEW)):
+    for name, r in (('11-15 범위 (#305)', OLD), ('11-16 범위', NEW)):
         res = []
         for c in itertools.product(r['j1'], j2, J3, J4, r['j5']):
             q = [t2r(v) for v in c] + [0.923]
