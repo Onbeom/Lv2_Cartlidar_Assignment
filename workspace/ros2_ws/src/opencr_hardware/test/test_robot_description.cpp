@@ -230,6 +230,9 @@ TEST(RobotDescription, RobotUrdfProvidesFramesUsedByOtherNodes)
     ASSERT_EQ(joints.count(laser), 1u) << laser;
     EXPECT_NEAR(std::abs(joints.at(laser).rpy[0]), M_PI, 1e-5) << laser;
   }
+  // 실물 LDS-03 의 0° 는 기준 모델 +x 와 반대 (2026-11-15 실물 상자 가림 시험) → 앞 yaw π · 뒤 yaw 0 (Isaac 은 반대로 앞 0 · 뒤 π)
+  EXPECT_NEAR(std::abs(joints.at("laser_front_joint").rpy[2]), M_PI, 1e-5);
+  EXPECT_NEAR(joints.at("laser_rear_joint").rpy[2], 0.0, 1e-5);
   // TFmini 는 차체 1층 플레이트 앞 (박스 앞면 거리, drive FINE · obstacle_stop) — 팔이 움직여도 거리 기준이 바뀌지 않아야 한다
   ASSERT_EQ(joints.count("tfmini_link_joint"), 1u);
   EXPECT_EQ(joints.at("tfmini_link_joint").parent, "base_link");
