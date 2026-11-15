@@ -57,6 +57,7 @@
 
 #include <algorithm>
 #include <cmath>
+#include <chrono>
 #include <cstdio>
 #include <functional>
 #include <iomanip>
@@ -150,7 +151,7 @@ public:
     sensor_cb_group_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(get_clock(), tf2::durationFromSec(get_parameter("tf_cache_time").as_double()));
-    tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+    if (tf_idle_off_ <= 0.0) {tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);}   // 0 = 늘 받음 (예전과 같음)
 
     // --- 구독 ---
     rclcpp::SubscriptionOptions sub_opt;
@@ -521,6 +522,10 @@ private:
     // /arm_range 기준 프레임 (perception arm.range.frame 과 같게). x = 팔 접근 방향
     range_frame_ = declare_parameter<std::string>("range_frame", "tool_link");
     declare_parameter<double>("tf_cache_time", 120.0);
+    // TF 는 작업 (pose · pick · skill) 중에만 받음 (#265): 쉬는 동안 /tf (100 Hz) 를 받는 CPU 를 줄임.
+    //   마지막 작업이 끝나고 tf_idle_off 초 뒤 끔 (0 = 늘 받음), 다시 켤 때 base_frame ↔ fixed_frame 이 보일 때까지 tf_warmup 초까지 기다림
+    tf_idle_off_ = declare_parameter<double>("tf_idle_off", 30.0);
+    tf_warmup_ = declare_parameter<double>("tf_warmup", 1.0);
 
     // 접근 위치 = 파지점(물체 중심) 앞 approach_distance
     approach_distance_ = declare_parameter<double>("pick.approach_distance", 0.15);
@@ -942,6 +947,8 @@ private:
     requirePositive("arm_base_height", arm_base_height_);
     requireNonNegative("gripper.max_effort", gripper_effort_);
     requirePositive("tf_cache_time", get_parameter("tf_cache_time").as_double());
+    requireNonNegative("tf_idle_off", tf_idle_off_);
+    requireNonNegative("tf_warmup", tf_warmup_);
     requirePositive("pick.approach_distance", approach_distance_);
     requireNonNegative("pick.range_offset", range_offset_);
     requirePositive("pick.range_mismatch_tolerance", range_mismatch_tol_);
@@ -1510,6 +1517,41 @@ private:
       next();
     }
     startupTick();
+    tfIdleTick();
+  }
+
+  // ------------------------------------------------------------------ TF 는 작업 중에만 (#265, tf_idle_off)
+  // 작업 시작 때 부름: 꺼져 있으면 리스너를 다시 만들고 (/tf_static 은 transient_local 이라 바로 다시 옴), 동적 TF
+  //   (fixed_frame → base_frame) 가 들어올 때까지 tf_warmup 초까지 기다린다. 못 받으면 경고만 하고 진행 (조회가 실패하면 그 자리에서 실패)
+  void tfUse()
+  {
+    tf_used_ = now();
+    if (tf_listener_) {return;}
+    tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
+    std::string err;
+    const auto t0 = std::chrono::steady_clock::now();
+    const bool ok = tf_warmup_ <= 0.0 ||
+      tf_buffer_->canTransform(base_frame_, fixed_frame_, tf2::TimePointZero, tf2::durationFromSec(tf_warmup_), &err);
+    const double waited = std::chrono::duration<double>(std::chrono::steady_clock::now() - t0).count();
+    if (ok) {
+      RCLCPP_INFO(get_logger(), "TF on (%.2f s)", waited);
+    } else {
+      RCLCPP_WARN(get_logger(), "TF on: %s -> %s not available after %.2f s: %s", fixed_frame_.c_str(), base_frame_.c_str(),
+        waited, err.c_str());
+    }
+  }
+
+  // 쉬는 동안 tf_idle_off 초가 지나면 리스너를 지우고 버퍼를 비움 — 남겨 두면 다시 켤 때 TimePointZero 조회가 옛 TF 를 돌려줌
+  void tfIdleTick()
+  {
+    if (job_ != Job::NONE) {
+      tf_used_ = now();
+      return;
+    }
+    if (!tf_listener_ || tf_idle_off_ <= 0.0 || (now() - tf_used_).seconds() < tf_idle_off_) {return;}
+    tf_listener_.reset();
+    tf_buffer_->clear();
+    RCLCPP_INFO(get_logger(), "TF off (idle %.0f s)", tf_idle_off_);
   }
 
   // ------------------------------------------------------------------ 켜질 때 정리 자세 (startup.*, startup_stow.hpp)
@@ -1665,6 +1707,7 @@ private:
   void startPose(std::shared_ptr<PoseGoalHandle> gh)
   {
     preemptCurrent();
+    tfUse();
     job_ = Job::POSE;
     pose_gh_ = gh;
     pose_name_ = gh->get_goal()->name;
@@ -1734,6 +1777,7 @@ private:
   void startPick(std::shared_ptr<PickGoalHandle> gh)
   {
     preemptCurrent();
+    tfUse();
     job_ = Job::PICK;
     pick_gh_ = gh;
     beginPick(gh->get_goal()->target, approach_pitches_, approach_distance_);
@@ -2263,6 +2307,7 @@ private:
   void startSkill(std::shared_ptr<SkillGoalHandle> gh)
   {
     preemptCurrent();
+    tfUse();
     job_ = Job::SKILL;
     skill_gh_ = gh;
     skill_start_ = now();
@@ -4111,7 +4156,9 @@ private:
   // ROS 인터페이스
   rclcpp::CallbackGroup::SharedPtr job_cb_group_, sensor_cb_group_;
   std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
-  std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+  std::shared_ptr<tf2_ros::TransformListener> tf_listener_;   // 작업 중에만 (tfUse · tfIdleTick)
+  double tf_idle_off_{30.0}, tf_warmup_{1.0};
+  rclcpp::Time tf_used_{0, 0, RCL_ROS_TIME};
   rclcpp::Subscription<PerceptionResult>::SharedPtr result_sub_;
   rclcpp::Subscription<sensor_msgs::msg::Range>::SharedPtr range_sub_;
   rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr joint_sub_;
