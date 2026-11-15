@@ -18,6 +18,9 @@
 
     ./run_rl.sh pallet_check            # -> pallet_place_check.json
     ./run_rl.sh pallet_unload           # -> pallet_unload_check.json
+    ./run_rl.sh pallet_unload --neighbors pairs   # 이웃 칸 퍽: 같은 열 바로 옆 칸에 퍽을 앉혀 두고 빼기 -> 결과 nb_max_speed (이웃이 밀린 최대 속도) · nb_slot
+                                        #   slot = 같은 열 · 뒤 열 모두, behind = 뒤 열만, opposite = 같은 곳 모양 반대, none = 비움 (기본)
+                                        #   막는 쌍 (2026-11-13): 1 열 1_0 ↔ 1_1 · 1_2 ← 1_3 -> mission_planner slots.BLOCKERS. 디버그 NB_DEBUG=1 · NB_TRACE=1
     ./run_rl.sh pallet_check_play       # 창으로 (대 수를 줄여 보기: --num_envs 4)
 """
 
@@ -59,6 +62,8 @@ parser.add_argument("--out", default=None, help="결과 JSON (기본 pallet_plac
 parser.add_argument("--hand_offset", default="", help="[mm] 쥔 퍽을 기대 자리에서 일부러 옮겨 쥐어 줌 '집게축:옆,...' (집게 x · z, 예 0:0,3:0,-3:0,0:3). "
                     "묶음마다 칸 12 x 원기둥 · 상자 = 24 대 (--num_envs 무시). 손 안 어긋남 허용치 측정 (2026-11-05, 이어 평가 넘겨받을 때 중앙값 5 ~ 6 mm)")
 AppLauncher.add_app_launcher_args(parser)
+parser.add_argument("--neighbors", default="none", choices=["none", "slot", "opposite", "pairs", "behind"],
+                    help="이웃 칸 퍽 (막는 쌍 시험, 2026-11-13 · 계획기 slots.BLOCKERS 근거): slot = 같은 열 · 뒤 열 모두 (칸 모양대로), opposite = 같은 곳 (모양 반대), pairs = 같은 열 바로 옆 칸 하나씩 (칸 모양대로), behind = 뒤 열만, none = 비움")
 args_cli = parser.parse_args()
 args_cli.headless = not args_cli.gui
 app_launcher = AppLauncher(args_cli)
@@ -133,6 +138,12 @@ class SceneCfg(InteractiveSceneCfg):
     finger_body = _touch("{ENV_REGEX_NS}/Robot/" + FINGER_LINKS_REGEX)
     puckC_body = _touch("{ENV_REGEX_NS}/PuckC")
     puckB_body = _touch("{ENV_REGEX_NS}/PuckB")
+    # 이웃 칸 퍽 (--neighbors): 칸 k 마다 하나 (모양 = --neighbors), 쓰지 않는 대는 멀리 둠
+    for _k, _s in enumerate(TRAJ["slots"]):
+        _sh = "cyl" if _s["shape"] == "cylinder" else "box"
+        if args_cli.neighbors == "opposite": _sh = "box" if _sh == "cyl" else "cyl"   # pairs · behind 는 칸 모양대로
+        locals()[f"nb{_k}"] = _puck(f"N{_k}", _sh, (0.6, 0.6, 0.6), (-0.6 + 0.12 * _k, 0.95))
+    del _k, _s, _sh
     light = AssetBaseCfg(prim_path="/World/Light", spawn=sim_utils.DomeLightCfg(intensity=2000.0, color=(0.85, 0.85, 0.85)))
 
 
@@ -250,6 +261,32 @@ def timeline_unload(slot, dt):
     return out
 
 
+NB_OF = None
+
+
+def place_neighbors(u, case, ids):
+    """--neighbors: 대마다 목표 칸과 같은 열 · 뒤 열 칸에 이웃 퍽을 앉힘 (칸 축 · 칸 방향, 바닥 + 0.5 mm)."""
+    if args_cli.neighbors == "none":
+        return
+    dev, n = u.device, u.num_envs
+    rp, rq = u.robot.data.root_link_pos_w.torch, u.robot.data.root_link_quat_w.torch
+    for k, s in enumerate(TRAJ["slots"]):
+        o = u.scene[f"nb{k}"]
+        if args_cli.neighbors == "pairs":
+            use = torch.tensor([s is NB_OF[e] for e in range(n)], device=dev)
+        elif args_cli.neighbors == "behind":
+            use = torch.tensor([s["row"] > c[0]["row"] for c in case], device=dev)
+        else:
+            use = torch.tensor([c[0] is not s and s["row"] >= c[0]["row"] for c in case], device=dev)   # 열 규칙: 목표 칸과 같은 열 · 뒤 열만 (앞 열은 비어 있어야 함)
+        loc = torch.tensor([[s["x"], s["y"], s["floor_z"] + 0.0005 + PUCK_H / 2]], device=dev).expand(n, 3)
+        th = math.radians(s["theta_deg"])
+        q = torch.tensor([[0, 0, math.sin(th / 2), math.cos(th / 2)]], device=dev).expand(n, 4)
+        pose = torch.cat((rp + quat_apply(rq, loc), q), dim=1)
+        cur = torch.cat((o.data.root_pos_w.torch, o.data.root_quat_w.torch), dim=1)
+        o.write_root_pose_to_sim_index(root_pose=torch.where(use[:, None], pose, cur), env_ids=ids)
+        o.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=ids)
+
+
 def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_center, puck_up):
     """빼기 확인: 칸에 퍽을 앉힘 (칸 축 · 칸 방향, 바닥 + 0.5 mm) -> 앞 운반 자세에서 자리 잡기 -> timeline_unload.
     성공 = 끝에 쥔 퍽 중심 - 손가락 가운데 < 5 mm, 퍽 축 - 기대 축 < 5°, 퍽 바닥 가운데가 칸 축에서 수평 40 mm 넘게 벗어남 (칸 밖)."""
@@ -264,6 +301,7 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
         cur = torch.cat((o.data.root_pos_w.torch, o.data.root_quat_w.torch), dim=1)
         o.write_root_pose_to_sim_index(root_pose=torch.where(m[:, None], pose, cur), env_ids=ids)
         o.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=ids)
+    place_neighbors(u, case, ids)
     u.grip[:] = FINGER_RELEASED
     bias = torch.zeros(n, 5, device=dev)
     for _ in range(int(1.5 / dt)):  # 앞 운반 자세 자리 잡기 (처짐 보정) + 퍽이 칸에 앉음
@@ -271,6 +309,12 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
             bias = torch.clamp(bias + args_cli.ki * dt * (q_start - u.robot.data.joint_pos.torch[:, u._arm]), -args_cli.bias_max, args_cli.bias_max)
             u.arm_target[:] = q_start + bias
         step()
+    if os.environ.get("NB_DEBUG"):
+        for k, s in enumerate(TRAJ["slots"]):
+            pk = quat_apply_inverse(rq, u.scene[f"nb{k}"].data.root_pos_w.torch - rp)
+            print(f"[NbDbg] 칸 {s['row']}:{s['index']} 기대 ({s['x']:.4f},{s['y']:.4f},{s['floor_z'] + PUCK_H / 2:.4f}) 대0 {[round(v, 4) for v in pk[0].tolist()]} 대1 {[round(v, 4) for v in pk[1].tolist()]}", flush=True)
+        pt = quat_apply_inverse(rq, torch.where(is_box[:, None], u.scene["puckB"].data.root_pos_w.torch, u.scene["puckC"].data.root_pos_w.torch) - rp)
+        print(f"[NbDbg] 목표 퍽 대0 {[round(v, 4) for v in pt[0].tolist()]} 칸 {case[0][0]['row']}:{case[0][0]['index']}", flush=True)
     tl = [timeline_unload(c[0], dt) for c in case]
     T = max(len(x) for x in tl)
     tgt = torch.tensor([[x[min(t, len(x) - 1)][0] for t in range(T)] for x in tl], device=dev)
@@ -279,6 +323,7 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
     fmax = {k: torch.zeros(n, len(UNLOAD_PHASES), device=dev) for k in ("arm", "finger", "puck")}
     slip = torch.zeros(n, device=dev)
     print(f"[PalletUnload] {n} 대, 궤적 {T} 스텝 ({T * dt:.1f} s)", flush=True)
+    NBV = torch.zeros(n, device=dev)
     for t in range(T):
         if args_cli.ki > 0:
             bias = torch.clamp(bias + args_cli.ki * dt * (tgt[:, t] - u.robot.data.joint_pos.torch[:, u._arm]), -args_cli.bias_max, args_cli.bias_max)
@@ -294,6 +339,15 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
             pe, ex, _, _ = ee_frame()
             pc, _ = puck_pose()
             slip = torch.where(held, torch.maximum(slip, torch.linalg.norm(pc - exp_center(pe, ex), dim=1)), slip)
+        if args_cli.neighbors != "none":
+            nbv = torch.stack([torch.linalg.norm(u.scene[f"nb{k}"].data.root_lin_vel_w.torch, dim=1) for k in range(len(TRAJ["slots"]))], 1).amax(1)
+            NBV[:] = torch.maximum(NBV, nbv)
+        if os.environ.get("NB_TRACE") and t % 30 == 0:
+            pc_, _ = puck_pose(); pe_, ex_, _, _ = ee_frame(); ec_ = exp_center(pe_, ex_)
+            for e in (2, 4):
+                lp = quat_apply_inverse(rq[e:e+1], pc_[e:e+1] - rp[e:e+1])[0]
+                nbf = max(float(torch.linalg.norm(u.scene[f"nb{k}"].data.root_lin_vel_w.torch[e])) for k in range(len(TRAJ["slots"])))
+                print(f"[NbTr] t={t * dt:5.2f} 대{e} 단계 {UNLOAD_PHASES[int(ph[e])]} 퍽 {[round(v, 4) for v in lp.tolist()]} 손 어긋남 {float(torch.linalg.norm(pc_[e] - ec_[e])) * 1000:6.1f} mm 이웃 최대 속도 {nbf:.3f}", flush=True)
         if t % 240 == 0:
             print(f"[PalletUnload] t={t * dt:5.1f} s 단계 {[UNLOAD_PHASES[int(v)] for v in ph[:min(n, 12)].tolist()]}", flush=True)
     pe, ex, _, _ = ee_frame()
@@ -307,7 +361,7 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
         away = math.hypot(float(bot[i, 0]) - s["x"], float(bot[i, 1]) - s["y"])
         ok = float(off[i]) < 0.005 and float(ang[i]) < 5.0 and away > 0.040
         r = dict(slot=f"{s['row']}열 {s['index']}", puck_shape=shape, held=ok, off_mm=round(float(off[i]) * 1000, 1), puck_tilt_vs_grip_deg=round(float(ang[i]), 1),
-                 away_from_slot_mm=round(away * 1000, 1), max_slip_mm=round(float(slip[i]) * 1000, 1), duration_s=round(len(tl[i]) * dt, 1),
+                 away_from_slot_mm=round(away * 1000, 1), max_slip_mm=round(float(slip[i]) * 1000, 1), duration_s=round(len(tl[i]) * dt, 1), nb_max_speed=round(float(NBV[i]), 4), nb_slot=(f"{NB_OF[i]['row']}:{NB_OF[i]['index']}" if NB_OF else None),
                  max_force_N={k: {UNLOAD_PHASES[j]: round(float(fmax[k][i, j]), 1) for j in range(1, len(UNLOAD_PHASES))} for k in fmax})
         res.append(r)
         f = r["max_force_N"]
@@ -375,6 +429,13 @@ def main():
         print(f"[PalletCheck] 손목 롤 180° 칸 {sorted(ROLL_PI)} (joint5 한계 ±3.3 rad 로 늘림)", flush=True)
     slots = TRAJ["slots"]
     case = [(slots[i % len(slots)], "box" if (i // len(slots)) % 2 else "cyl") for i in range(n)]
+    global NB_OF
+    if args_cli.neighbors == "pairs":   # (목표 칸, 같은 열 바로 옆 칸 = 번호 ±1) 순서쌍 x 목표 퍽 모양 2
+        adj = [(s, o) for s in slots for o in slots if o["row"] == s["row"] and abs(o["index"] - s["index"]) == 1]
+        base = [(s, sh, o) for s, o in adj for sh in ("cyl", "box")]
+        case = [(base[i % len(base)][0], base[i % len(base)][1]) for i in range(n)]
+        NB_OF = [base[i % len(base)][2] for i in range(n)]
+        print(f"[NbPairs] 쌍 {len(adj)} x 모양 2 = {len(base)}, 대 {n}", flush=True)
     is_box = torch.tensor([c[1] == "box" for c in case], device=dev)
     blk = 2 * len(slots)  # --hand_offset 묶음 = 칸 x 모양
     hoff = torch.tensor([HAND_OFFSETS[i // blk] if HAND_OFFSETS else (0.0, 0.0) for i in range(n)], device=dev) / 1000.0  # (n, 2) 집게 x · z [m]
@@ -429,6 +490,7 @@ def main():
         env.close()
         return
 
+    place_neighbors(u, case, ids)
     # 1. 앞 운반 자세에서 자리 잡기 (집게 벌림, 처짐 보정이 자리 잡을 때까지) -> 퍽을 손가락 사이에 -> 쥠
     bias = torch.zeros(n, 5, device=dev)
     for _ in range(int((1.5 if args_cli.settle_ki else 0.5) / dt)):

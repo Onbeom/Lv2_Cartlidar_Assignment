@@ -78,10 +78,10 @@ case "${1:-}" in
   chain_eval_play) env -u HEADLESS "${PY[@]}" "$HERE/chain_pallet_eval.py" --gui --num_envs "${2:-12}" --out "$HERE/chain_pallet_eval_play.json" "${@:3}" ;;
   register) "${PY[@]}" "$HERE/register_policy.py" "${@:2}" ;;
   record) record "${@:2}" ;;
-  pallet_check) "${PY[@]}" "$HERE/pallet_place_check.py" ;;
+  pallet_check) "${PY[@]}" "$HERE/pallet_place_check.py" "${@:2}" ;;
   pallet_check_play) env -u HEADLESS "${PY[@]}" "$HERE/pallet_place_check.py" --gui --num_envs "${2:-4}" ;;
   pallet_drop) "${PY[@]}" "$HERE/pallet_place_check.py" --drop ;;
-  pallet_unload) "${PY[@]}" "$HERE/pallet_place_check.py" --unload --row_speed "" ;;   # 빼기는 3열도 0.8 에서 24/24 (2026-11-03)
+  pallet_unload) "${PY[@]}" "$HERE/pallet_place_check.py" --unload --row_speed "" "${@:2}" ;;   # 빼기는 3열도 0.8 에서 24/24 (2026-11-03)
   sidepick) "${PY[@]}" "$HERE/train.py" --task Waffle-SidePick-Direct --num_envs "${2:-256}" --max_iterations "${3:-300}" --viz none ;;
   sidepick_play) env -u HEADLESS "${PY[@]}" "$HERE/play.py" --task Waffle-SidePick-Direct --num_envs "${2:-16}" --checkpoint latest --viz kit ;;
   sidepick_diag) "${PY[@]}" "$HERE/sidepick_diag.py" --num_envs "${2:-64}" --policy "$HERE/policies/sidepick_latest.pt" ;;
