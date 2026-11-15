@@ -35,7 +35,8 @@ class SurveyNode(Node):
         self.age=self.declare_parameter('max_age_s',.5).value
         self.output=self.declare_parameter('output_path','').value
         self.enabled=False
-        self.buffer=Buffer();self.listener=TransformListener(self.buffer,self)
+        # TF 는 조사 중에만 받음: /tf 를 늘 받으면 조사하지 않을 때도 Jetson CPU 코어 하나의 약 28 % (11-13 실물 #265)
+        self.buffer=Buffer();self.listener=None
         qos=QoSProfile(depth=1,reliability=ReliabilityPolicy.RELIABLE,durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.pub=self.create_publisher(String,'/perception/puck_survey',qos)
         self.sub=self.create_subscription(PuckArray,'/perception/pucks',self.receive,10)
@@ -54,17 +55,22 @@ class SurveyNode(Node):
         report=self.core.snapshot();report['enabled']=self.enabled
         self.pub.publish(String(data=json.dumps(report,ensure_ascii=False,allow_nan=False)))
 
+    def listen(self,on):
+        if on and self.listener is None:
+            self.buffer=Buffer();self.listener=TransformListener(self.buffer,self)
+        elif not on and self.listener is not None:
+            self.listener.unregister();self.listener=None
     def start(self,req,res):
-        self.core.reset();self.enabled=True;self.publish();res.success=True;res.message='새 퍽 조사 시작';return res
+        self.listen(True);self.core.reset();self.enabled=True;self.publish();res.success=True;res.message='새 퍽 조사 시작';return res
 
     def reset(self,req,res):
-        self.core.reset();self.enabled=False;self.publish();res.success=True;res.message='퍽 등록부 초기화';return res
+        self.core.reset();self.enabled=False;self.listen(False);self.publish();res.success=True;res.message='퍽 등록부 초기화';return res
 
     def finish(self,req,res):
         try:
             if self.core.rejected.get('audit_io_error'):raise ValueError('관측 이력 저장 실패, 조사 다시 시작 필요')
             if not self.output:raise ValueError('output_path를 지정해야 완료 파일을 저장할 수 있음')
-            self.core.finish(self.output);self.enabled=False;self.publish();res.success=True;res.message=self.output
+            self.core.finish(self.output);self.enabled=False;self.listen(False);self.publish();res.success=True;res.message=self.output
         except (ValueError,OSError) as e:res.success=False;res.message=str(e)
         return res
 
