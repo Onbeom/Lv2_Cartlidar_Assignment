@@ -9,7 +9,10 @@ toppick_eval.py (집기만) 와 pallet_place_check.py (퍽을 손에 넣어 주�
      성공 기준이 다른 회차 (TP3 느슨 · TP4 손 안 4 mm) 를 같은 잣대로 비교. --gate env = 환경 성공 + 끝에 쥠 (2026-11-05 첫 판).
      넘기지 못한 대는 여기서 끝 (집기 실패로 셈).
   1'. 고정 동작 집기 (--scripted_pick σ, 2026-11-09): 정책 대신 ROS toppick_tilt (approach_mode top) 와 같은 경로. 잡는 점 = 잰 퍽
-     (참값 + σ) + 잡는 높이, J1 에서 먼 쪽 −--regrasp_r. 그 위 5 cm · J1 쪽 3 cm 로 벌린 채 -> 직선으로 내려옴 -> 쥠 -> 5 cm 들기 (약 4.6 s).
+     (참값 + σ) + 잡는 높이, J1 에서 먼 쪽 −--regrasp_r. 그 위 --approach_h (12 cm, 11-15 전 5 cm) · J1 쪽 --approach_in 3 cm 로 벌린 채
+     -> 직선으로 내려옴 -> 쥠 -> 들기.
+     --spot (#221): 집을 퍽 = 누운 직육면체를 세워 둔 자리 D (ROS lieStandSpot, 실제 배치 B 위). 집기 단계별 팔 · 손가락 - 상자 접촉
+     (pick_box_N · pick_box_link) 과 끝 상태 (pick_end) 를 대마다 남김.
      벌림 50 mm 시드 2: 171/192 (σ 0) · 144 (σ 2 mm), TP8 정책 57. --grip_open 0.0042 = 실물 벌림 50 mm (61.6 mm = 0.010 비례).
      2026-11-14: 들기 = ROS toppick.lift_height (--lift_h 0.085) · lift_max_radius (--lift_rmax 0.32, 그보다 먼 퍽은 들며 J1 쪽으로).
      예전 5 cm 는 옆 퍽 (60 mm) 보다 낮아 넘겨받기 관절 직선 중 쥔 퍽이 옆 퍽을 침. --lift_h 0.05 --lift_rmax 9 = 예전 노드.
@@ -81,6 +84,13 @@ ap.add_argument("--occ_all", action="store_true", help="팔레트 칸에 퍽 (�
 ap.add_argument("--occ_rows", default="planner", choices=["planner", "all"],
                 help="planner = 목표 열과 뒤 열 (번호 같거나 큰 열) 의 다른 칸만 (mission_planner 열 규칙: 앞 열에 퍽이 있으면 뒤 열에 안 실음), "
                      "all = 목표 칸 빼고 전부 (규칙상 없는 상태, 2 · 3 열 칸 바닥에서 집게가 1 열 퍽에 1 ~ 4 N 닿음)")
+ap.add_argument("--spot", action="store_true",
+                help="#221: 집을 퍽을 누운 직육면체 세우기 (lie_upright) 가 세워 둔 자리 D 로 옮김 — 직육면체 · 세움 · 요 무작위. "
+                     "D = ROS lieStandSpot (상자 가장자리 30 mm 안 · J1 거리 0.27 ~ 0.32 m (0.285 가 가장 좋음) · 옆 퍽 70 mm 밖)")
+ap.add_argument("--spot_yaw", type=float, default=10.0, help="[°] --spot 세운 직육면체 면 ↔ J1 접선 어긋남 범위 (±)")
+ap.add_argument("--spot_nb_away", action="store_true", help="--spot 비교용: 옆 퍽을 상자에서 치움 (옆 퍽 영향 가르기)")
+ap.add_argument("--approach_h", type=float, default=0.12, help="[m] 고정 동작 집기 접근 높이 (ROS toppick.approach_heights 첫 값, 2026-11-15 0.05 → 0.12, #221)")
+ap.add_argument("--approach_in", type=float, default=0.03, help="[m] 고정 동작 집기 접근 J1 쪽 (ROS toppick.approach_inward)")
 ap.add_argument("--traj", default=None, help="칸 궤적 파일 (기본 pallet_place_traj.json, 비교용)")
 ap.add_argument("--slots", default="all", help="대 i 의 목표 칸 '열:칸,...' 을 돌아가며 (all = 궤적 파일 칸 전부)")
 ap.add_argument("--gui", action="store_true")
@@ -97,7 +107,7 @@ import torch  # noqa: E402
 
 import isaaclab.sim as sim_utils  # noqa: E402
 from isaaclab.sensors import ContactSensorCfg  # noqa: E402
-from isaaclab.utils.math import quat_apply, quat_apply_inverse  # noqa: E402
+from isaaclab.utils.math import quat_apply, quat_apply_inverse, quat_from_euler_xyz  # noqa: E402
 
 import waffle_isaac  # noqa: E402,F401
 from pallet_timeline import PHASES as TL_PHASES, Speeds, joint_line, parse_row_speed, timeline  # noqa: E402
@@ -122,6 +132,11 @@ if a.grip_open is not None:
     cfg.gripper_open = a.grip_open
 cfg.seed = a.seed
 cfg.near_start_prob = 0.0
+if a.spot:   # 세운 직육면체 다시 집기 (#221): 직육면체, 실제 배치 B (FINE 0.1272 · ±17° 회전, 누운 퍽 세우기 학습 조건) 위에서 D 로 옮김.
+    #   무작위 배치 (gap 0.03 ~ 0.15) 는 상자가 가까워 D 가 상자 먼 끝 (퍽 면 → 끝 15 mm) 에 몰려 미션과 다름
+    cfg.box_shape_prob = 1.0
+    cfg.layout_prob = 1.0
+    cfg.layout_weights = tuple(1.0 if k == "B" else 0.0 for k in LAYOUTS[1:])
 cfg.tilt_prob = 1.0 if all(s.get("tilt_deg") for s in SLOTS) else cfg.tilt_prob
 assert all(s.get("tilt_deg") for s in SLOTS), "칸 궤적에 수직 칸이 있음: 대마다 집기 모드를 칸에 맞추는 코드가 필요 (지금은 12칸 모두 45°)"
 set_dr(cfg, a.dr)
@@ -216,7 +231,53 @@ def main():
     t0 = time.time()
     obs, _ = env.reset()
     tilted, box, lay, latched = u.tilted.clone(), u.is_box.clone(), u.layout.clone(), u.latched.clone()
+    spot_r = torch.zeros(n, device=dev)
+    if a.spot:  # 집을 퍽을 세운 자리 D 로 (ROS lieupright.cpp lieStandSpot 와 같은 격자 · 점수)
+        box_o = u._obj("boxA").data
+        bq = box_o.root_link_quat_w.torch
+        bx = quat_apply(bq, ex_)
+        byaw = torch.atan2(bx[:, 1], bx[:, 0])
+        bc_w, j1 = box_o.root_link_pos_w.torch, u.j1_w()
+        nb_w = u._obj("puckN").data.root_pos_w.torch
+        lim = 0.205 / 2 - 0.030
+        g = torch.arange(-lim, lim + 1e-6, 0.0145, device=dev)
+        vv, uu = torch.meshgrid(g, g, indexing="ij")   # V 바깥 · U 안쪽 (학습 meshgrid xy 펼친 순서)
+        uu, vv = uu.reshape(-1), vv.reshape(-1)
+        cy, sy = torch.cos(byaw)[:, None], torch.sin(byaw)[:, None]
+        cx_ = bc_w[:, :1] + cy * uu - sy * vv
+        cy_ = bc_w[:, 1:2] + sy * uu + cy * vv
+        r_ = torch.hypot(cx_ - j1[:, :1], cy_ - j1[:, 1:2])
+        dn = torch.hypot(cx_ - nb_w[:, :1], cy_ - nb_w[:, 1:2])
+        okk = (r_ >= 0.27) & (r_ <= 0.32) & (dn >= 0.07)
+        sc = (r_ - 0.285).abs() - 0.2 * dn.clamp(max=0.12) + (~okk).float() * 10.0
+        k_ = sc.argmin(dim=1)
+        d_xy = torch.stack((cx_.gather(1, k_[:, None])[:, 0], cy_.gather(1, k_[:, None])[:, 0]), dim=1)
+        spot_r = r_.gather(1, k_[:, None])[:, 0]
+        pz = bc_w[:, 2] + 0.070 / 2 + PUCK_H / 2 + 0.001
+        # 면 방향: 세우기 정책이 쥔 채 세워 놓으므로 면 = 놓을 때 닫는 축 (D 의 J1 접선) ± --spot_yaw (기본 10°, 90° 주기라 반경과 같음)
+        yaw_ = torch.atan2(d_xy[:, 1] - j1[:, 1], d_xy[:, 0] - j1[:, 0]) + (torch.rand(n, device=dev) * 2 - 1) * math.radians(a.spot_yaw)
+        qd = quat_from_euler_xyz(torch.zeros_like(yaw_), torch.zeros_like(yaw_), yaw_)   # Isaac Lab 3.0 사원수 순서 그대로 (환경 _place 와 같음)
+        pb = u._obj("puckT_box")
+        allid_ = torch.arange(n, device=dev)
+        pb.write_root_pose_to_sim_index(root_pose=torch.cat((torch.cat((d_xy, pz[:, None]), dim=1), qd), dim=1), env_ids=allid_)
+        pb.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=allid_)
+        if a.spot_nb_away:
+            nbo = u._obj("puckN")
+            far = u.scene.env_origins + torch.tensor([0.2, 0.7, 0.031], device=dev)
+            nbo.write_root_pose_to_sim_index(root_pose=torch.cat((far, nbo.data.default_root_pose.torch[:, 3:7]), dim=1), env_ids=allid_)
+            nbo.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=allid_)
+            u.nb_xy0[:] = far[:, :2]
+        for _ in range(20):  # 가라앉힘
+            u.scene.write_data_to_sim()
+            u.sim.step(render=False)
+            u.scene.update(u.physics_dt)
     p_start = u.puck_pos_w().clone()  # 상자 위 처음 퍽 자리 (다시 쥘 때 여기 위로 돌아와 내려놓음)
+    box_now = u._obj("boxA").data
+    _bx = quat_apply(box_now.root_link_quat_w.torch, ex_)
+    _rel = p_start - box_now.root_link_pos_w.torch
+    _c, _s = _bx[:, 0], _bx[:, 1]
+    edge_mm = (0.205 / 2 - torch.maximum((_rel[:, 0] * _c + _rel[:, 1] * _s).abs(), (-_rel[:, 0] * _s + _rel[:, 1] * _c).abs())) * 1000  # 퍽 중심 ↔ 가까운 상자 변
+    puck_r_mm = torch.hypot(*(p_start - u.j1_w())[:, :2].T) * 1000
     allid = torch.arange(n, device=dev)
     occ_pos0 = torch.zeros(n, N_OCC, 3, device=dev)
     occ_on = torch.zeros(n, N_OCC, dtype=torch.bool, device=dev)
@@ -252,6 +313,11 @@ def main():
     cmd = u.robot.actuators.target_command
     wheels0 = torch.zeros(n, len(u._wheels), device=dev)
 
+    PICK_STAGES = ["approach", "descend", "close", "lift"]
+    pick_box = torch.zeros(n, len(PICK_STAGES), device=dev)   # 고정 동작 집기 단계별 팔 · 손가락 - 상자 최대 N (#221)
+    pick_body = {}   # 단계별 가장 크게 닿은 링크 (대마다, 이름)
+    stage_i = [0]
+
     def ik_move(goal, grip, sec, mask, grip_other):  # 잡는 점 -> goal (30 Hz, 환경 IK · cart_scale · 앞섬 제한 그대로), mask 대만. 나머지 손가락 = grip_other
         for _ in range(int(sec * a.regrasp_time / u.step_dt)):
             dp = (goal - u.grasp_w()) * a.regrasp_gain
@@ -270,6 +336,15 @@ def main():
                 u.scene.write_data_to_sim()
                 u.sim.step(render=a.gui)
                 u.scene.update(dt)
+                fm = torch.linalg.norm(u.scene["arm_box_contact"].data.normal_force_matrix_w.torch, dim=-1)   # (n, 링크, 1)
+                fb = fm.amax(dim=(1, 2))
+                worse = fb > pick_box[:, stage_i[0]]
+                if worse.any():
+                    names = u.scene["arm_box_contact"].body_names
+                    arg = fm.amax(dim=2).argmax(dim=1)
+                    for i_ in torch.nonzero(worse & (fb > 1.0)).flatten().tolist():
+                        pick_body[(i_, stage_i[0])] = names[int(arg[i_])]
+                pick_box[:, stage_i[0]] = torch.maximum(pick_box[:, stage_i[0]], fb)
             watch(torch.zeros(n, dtype=torch.long, device=dev))
 
     if a.scripted_pick is None:
@@ -287,9 +362,13 @@ def main():
         u_r = (quat_apply(qe, ex_) + quat_apply(qe, ez_)) / math.sqrt(2.0)  # J1 에서 먼 쪽 (45° 에서 수평)
         meas = u.puck_pos_w() + torch.randn(n, 3, device=dev) * (a.scripted_pick / 1000) * torch.tensor([1.0, 1.0, 0.0], device=dev)
         gl = meas + up_w * cfg.grasp_dz - u_r * (a.regrasp_r / 1000)  # 잡는 점 (ROS radial_offset 0.002 = 반경 −2 mm)
-        ik_move(gl + up_w * 0.05 - u_r * 0.03, cfg.gripper_open, 1.5, allm, None)  # 접근 위치 (approach_height · approach_inward)
+        stage_i[0] = 0
+        ik_move(gl + up_w * a.approach_h - u_r * a.approach_in, cfg.gripper_open, 1.5, allm, None)  # 접근 위치 (approach_height · approach_inward)
+        stage_i[0] = 1
         ik_move(gl, cfg.gripper_open, 1.5, allm, None)                            # 직선으로 내려옴
+        stage_i[0] = 2
         ik_move(gl, grip_close, 0.6, allm, None)                                  # 쥠
+        stage_i[0] = 3
         rad_h = gl - u.j1_w()
         rad_h = rad_h - up_w * (rad_h * up_w).sum(1, keepdim=True)
         r_h = torch.linalg.norm(rad_h, dim=1, keepdim=True)
@@ -298,6 +377,7 @@ def main():
         u.actions[:, -1] = -1.0
     off_h, tilt_h, face_h, e_h = in_hand()
     holding = (~done) & (torch.linalg.norm(e_h, dim=1) < 0.015) & (u.lift() > cfg.lift_min) & (u.puck_up() > cfg.upright_min) & u.nb_ok()
+    why = torch.stack((torch.linalg.norm(e_h, dim=1) * 1000, u.lift() * 1000, u.puck_up(), u.nb_ok().float()), dim=1)   # 집기 끝: 손 안 [mm] · 들림 [mm] · 세움 · 옆 퍽 그대로
     picked = (ok & holding) if a.gate == "env" else holding
     print(f"[Chain] 집기 {int(picked.sum())}/{n} (넘김 {a.gate} | 환경 성공 {int(ok.sum())}, 끝에 쥐고 듦 {int(holding.sum())}, "
           f"성공했다 놓침 {int((ok & ~holding).sum())}) {time.time() - t0:.0f} s", flush=True)
@@ -422,7 +502,11 @@ def main():
     for i in range(n):
         s = slot_of[i]
         r = dict(env=i, slot=f"{s['row']}:{s['index']}", shape="box" if bool(box[i]) else "cyl", layout=LAYOUTS[int(lay[i])],
-                 latched=bool(latched[i]), picked=bool(picked[i]), pick_env_success=bool(ok[i]), regrasp=bool(regr[i]), drift_mm=round(float(drift[i]), 1))
+                 latched=bool(latched[i]), picked=bool(picked[i]), pick_env_success=bool(ok[i]), regrasp=bool(regr[i]), drift_mm=round(float(drift[i]), 1),
+                 puck_r_mm=round(float(puck_r_mm[i]), 1), puck_edge_mm=round(float(edge_mm[i]), 1),
+                 pick_end=dict(zip(("in_hand_mm", "lift_mm", "upright", "nb_ok"), (round(float(v), 3) for v in why[i]))),
+                 pick_box_N={PICK_STAGES[j]: round(float(pick_box[i, j]), 1) for j in range(len(PICK_STAGES))},
+                 pick_box_link={PICK_STAGES[j]: pick_body[(i, j)] for j in range(len(PICK_STAGES)) if (i, j) in pick_body})
         if bool(regr[i]):
             r["regrasp_diag"] = dict(zip(("puck_tilt_deg", "puck_moved_mm", "goal_radial_mm", "goal_height_mm", "lift_mm"), (round(float(v), 2) for v in rg_diag[i])))
         if not r["picked"]:
@@ -492,6 +576,11 @@ def main():
                    seated_by_handover_offset=by_hand, in_hand=hand,
                    arm_body_max_N=round(float(fmax["arm"][picked].max()) if picked.any() else 0.0, 1),
                    arm_box_transit_max_N=round(float(fmax["arm_box"][picked, 1].max()) if picked.any() else 0.0, 1),
+                   pick_box_contact=dict(any=sum(1 for x in res if max(x["pick_box_N"].values()) > 1.0), n=n,
+                                         by_stage={k_: sum(1 for x in res if x["pick_box_N"][k_] > 1.0) for k_ in PICK_STAGES},
+                                         by_link={l_: sum(1 for x in res if l_ in x["pick_box_link"].values())
+                                                  for l_ in sorted({v_ for x in res for v_ in x["pick_box_link"].values()})}),
+                   spot=a.spot, spot_yaw=a.spot_yaw, approach_h=a.approach_h, approach_in=a.approach_in,
                    wall_s=round(time.time() - t0, 1), date=time.strftime("%Y-%m-%d %H:%M"))
     c = summary["chain"]
     print(f"[Chain] 정책 {summary['policy']} | 시드 {a.seed} | 배치 {a.layout} | 무작위화 {a.dr}", flush=True)
@@ -499,6 +588,9 @@ def main():
     st = summary["strict"]
     print(f"[Chain] **엄격 성공 {st['ok']}/{st['n']} ({st['pct']} %)** (넣기 성공 + 옆 퍽 · 칸 퍽 안 닿고 안 밀림) | 넣었는데 엄격 실패 {summary['strict_fail']}"
           f" | 들기 {a.lift_h} m (J1 축 {a.lift_rmax} m 밖은 당김), 칸 다 참 {a.occ_all}", flush=True)
+    pbc = summary["pick_box_contact"]
+    print(f"[Chain] 집기 중 팔 · 손가락 - 상자 1 N 넘음 {pbc['any']}/{n} | 단계별 {pbc['by_stage']} | 링크별 {pbc['by_link']}"
+          f" | 접근 높이 {a.approach_h} · J1 쪽 {a.approach_in} m, 세운 자리 D {a.spot}", flush=True)
     print("[Chain] 칸별 (열:칸 이어서 / 집기 / 집은 것 중 넣기 | 원기둥 · 상자 | 엄격)", flush=True)
     for k, v in per_slot.items():
         f = lambda r: f"{r['ok']}/{r['n']}"

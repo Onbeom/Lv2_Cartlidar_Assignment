@@ -402,7 +402,8 @@ private:
       }
       toppick_top_ = (mode == "top");
     }
-    toppick_approach_height_ = declare_parameter<double>("toppick.approach_height", 0.05);
+    // 접근 높이 후보 (#221): 앞에서부터 접근 · 잡기 · 들기가 모두 풀리는 첫 값. 높을수록 세운 퍽 · 상자에 덜 닿음 (Isaac), 먼 퍽은 낮은 값으로
+    toppick_approach_heights_ = declare_parameter<std::vector<double>>("toppick.approach_heights", {0.12, 0.08, 0.05});
     toppick_approach_inward_ = declare_parameter<double>("toppick.approach_inward", 0.03);
     toppick_radial_offset_ = declare_parameter<double>("toppick.radial_offset", 0.002);
     // 쥔 뒤 들기 (top 경로만, 2026-11-14): 옆 퍽 (60 mm) 보다 높이 들어야 팔레트 궤적 첫 점까지 관절 직선 이동이 옆 퍽 위로 지나감.
@@ -895,7 +896,8 @@ private:
     requireNonNegative("gripper.grasp_cmd_margin", grasp_cmd_margin_);
     requirePositive("toppick.approach_distance", toppick_approach_);
     requirePositive("toppick.latch_max_age", toppick_latch_max_age_);
-    requirePositive("toppick.approach_height", toppick_approach_height_);
+    if (toppick_approach_heights_.empty()) {throw std::invalid_argument("toppick.approach_heights must not be empty");}
+    for (double h : toppick_approach_heights_) {requirePositive("toppick.approach_heights", h);}
     requireNonNegative("toppick.approach_inward", toppick_approach_inward_);
     if (!rl_start_pose_.empty() && rl_start_pose_.size() != 5) {
       throw std::invalid_argument("toppick_rl.start_pose must be [joint1..joint5] (model values) or empty");
@@ -1765,7 +1767,7 @@ private:
     }
 
     // toppick_tilt 의 top 접근 (pick 은 그대로 axis): 잡는 점을 J1 에서 먼 쪽으로 radial_offset,
-    // 접근 위치 = 잡는 점 위 approach_height · J1 쪽 approach_inward (Isaac 고정 동작 집기와 같은 경로)
+    // 접근 위치 = 잡는 점 위 approach_heights (풀리는 첫 값) · J1 쪽 approach_inward (Isaac 고정 동작 집기와 같은 경로)
     const bool top = (job_ == Job::SKILL && toppick_top_);
     pick_top_ = top;
     const double yaw = std::atan2(grasp.y(), grasp.x());
@@ -1779,22 +1781,29 @@ private:
       Eigen::Vector3d(Eigen::Vector3d::UnitZ() * toppick_lift_height_ - radial * std::max(0.0, r_grasp - toppick_lift_max_radius_)) :
       Eigen::Vector3d(Eigen::Vector3d::UnitZ() * lift_height_);
 
-    // pitch 후보를 순서대로: 접근 위치 · 파지 위치 · 들어올린 위치가 모두 풀리는 첫 pitch
+    // pitch 후보를 순서대로 (top 은 접근 높이 후보도 순서대로): 접근 위치 · 파지 위치 · 들어올린 위치가 모두 풀리는 첫 조합
     std::optional<std::vector<double>> q_pre;
+    const std::vector<double> heights = top ? toppick_approach_heights_ : std::vector<double>{0.0};
     for (double pitch : pitches) {
-      const Eigen::Vector3d pre = top ?
-        Eigen::Vector3d(grasp + Eigen::Vector3d::UnitZ() * toppick_approach_height_ - radial * toppick_approach_inward_) :
-        Eigen::Vector3d(grasp - ArmIK::approachDirection(yaw, pitch) * approach);
-      auto q = solveArm(pre, pitch, *current);
-      if (q && solveArm(grasp, pitch, *q) &&
-        solveArm(grasp + lift_offset_, pitch, *q))
-      {
-        q_pre = q;
-        pitch_ = pitch;
-        tool_pos_ = pre;
-        grasp_pos_ = grasp;
-        break;
+      for (double h : heights) {
+        const Eigen::Vector3d pre = top ?
+          Eigen::Vector3d(grasp + Eigen::Vector3d::UnitZ() * h - radial * toppick_approach_inward_) :
+          Eigen::Vector3d(grasp - ArmIK::approachDirection(yaw, pitch) * approach);
+        auto q = solveArm(pre, pitch, *current);
+        if (q && solveArm(grasp, pitch, *q) &&
+          solveArm(grasp + lift_offset_, pitch, *q))
+        {
+          q_pre = q;
+          pitch_ = pitch;
+          tool_pos_ = pre;
+          grasp_pos_ = grasp;
+          if (top && h != heights.front()) {
+            RCLCPP_INFO(get_logger(), "toppick: approach height %.3f m (%.3f m not reachable)", h, heights.front());
+          }
+          break;
+        }
       }
+      if (q_pre) {break;}
     }
     if (!q_pre) {
       finishPick(false, "IK: no solution within joint limits");
@@ -3981,7 +3990,8 @@ private:
   bool toppick_use_alignment_{false};
   double toppick_latch_max_age_{30.0};
   bool toppick_top_{true}, pick_top_{false};   // toppick.approach_mode top · 지금 집기가 top 경로인지
-  double toppick_approach_height_{0.05}, toppick_approach_inward_{0.03}, toppick_radial_offset_{0.002};
+  std::vector<double> toppick_approach_heights_{0.12, 0.08, 0.05};
+  double toppick_approach_inward_{0.03}, toppick_radial_offset_{0.002};
   double toppick_lift_height_{0.085}, toppick_lift_max_radius_{0.32};
   Eigen::Vector3d lift_offset_{0.0, 0.0, 0.05};   // 이번 집기의 들기 변위 (beginPick 에서 정함)
   TargetLookParams target_look_;
