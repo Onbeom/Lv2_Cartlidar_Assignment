@@ -146,7 +146,7 @@ public:
       int32_t v;
       memcpy(&v, x.p_data, 4);
       if (p->addr == 116) {   // Goal Position
-        if (v < m->min_position_limit || v > m->max_position_limit) {continue;}
+        if (m->mode != OP_EXTENDED_POSITION && (v < m->min_position_limit || v > m->max_position_limit)) {continue;}   // 확장 위치 모드는 위치 한계를 안 씀
         m->goal_position = v;
         if (m->torque && g_board.motors_follow_goals) {
           int32_t p = v;

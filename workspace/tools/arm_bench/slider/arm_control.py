@@ -114,8 +114,8 @@ class ArmController:
     def _start_check(self, s):
         if s is None or time.monotonic() - self.t_state > 0.3:
             return "STATE 없음 - 보드 연결 · 전원 확인"
-        if s["role"] != tool.ROLE_ARM or s["fw"] != tool.PROTOCOL_VERSION:
-            return f"팔 보드 v{tool.PROTOCOL_VERSION} 가 아님 (role={s['role']} fw={s['fw']})"
+        if s["role"] != tool.ROLE_ARM or s["fw"] != tool.ARM_FW_VERSION:
+            return f"팔 보드 v{tool.ARM_FW_VERSION} 가 아님 (role={s['role']} fw={s['fw']}, v5 = 관절 1 π 보정 전 펌웨어)"
         if s["error"] & tool.ERR_ABORT:
             return f"오류 비트 {tool.err_text(s['error'])} - 움직이지 않음"
         if not s["error"] & tool.ERR_TIMEOUT:

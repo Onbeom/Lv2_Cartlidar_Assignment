@@ -140,7 +140,11 @@ static std::string make_urdf(const std::string & ports, const std::string & extr
          "</ros2_control></robot>";
 }
 
-static int32_t arm_tick(float rad) {return TICK_CENTER + static_cast<int32_t>(lroundf(rad / RAD_PER_TICK));}
+// 관절 1 (ID 11) 모터 tick: ARM_J1_FLIP 이면 확장 위치 모드, 모델 0 rad = 켤 때 tick 0 (아래 보드 설정) → 바퀴 보정 −4096
+static int32_t j1_tick(float rad)
+{
+  return (ARM_J1_FLIP ? 0 : TICK_CENTER) + static_cast<int32_t>(lroundf(rad / RAD_PER_TICK));
+}
 
 struct Host
 {
@@ -176,6 +180,10 @@ TEST(HostFirmwareSil, PhasesOnOneBoot)
   SilBoard & ab = sil_arm_board();
   for (uint8_t id : WHEEL_IDS) {wb.motors[id] = SilMotor{}; wb.motors[id].model = WHEEL_MODEL;}
   for (uint8_t id : ARM_IDS) {ab.motors[id] = SilMotor{}; ab.motors[id].model = ARM_MODEL;}
+  if (ARM_J1_FLIP) {   // 관절 1: 확장 위치 모드로 설정된 모터, 모델 0 rad (정면) = 켤 때 tick 0 (실물 11-15 조립)
+    ab.motors[ARM_IDS[0]].mode = ARM_OP_MODE[0];
+    ab.motors[ARM_IDS[0]].position = ab.motors[ARM_IDS[0]].goal_position = 0;
+  }
   ab.motors[ARM_IDS[GRIP_SLOT]].pwm_limit = GRIP_PWM_LIMIT_MAX;   // 실물 설정 (dxl_setup w 15 400)
   SilLink wheel(wb), arm(ab);
   const std::string ports = wheel.path() + "," + arm.path();
@@ -199,13 +207,13 @@ TEST(HostFirmwareSil, PhasesOnOneBoot)
     ASSERT_EQ(h.state(), "active");
     h.cycle(50);
     EXPECT_TRUE(torque_on(arm, 11));
-    EXPECT_EQ(goal(arm, 11), TICK_CENTER) << "토크 ON 목표 = 현재 위치";
+    EXPECT_EQ(goal(arm, 11), j1_tick(0.f)) << "토크 ON 목표 = 현재 위치";
     {
       auto j1 = h.rm.claim_command_interface("joint1/position");
       ASSERT_TRUE(j1.set_value(0.5));
       h.cycle(100);
     }
-    EXPECT_EQ(goal(arm, 11), TICK_CENTER) << "운용자 REARM 없이는 팔이 새 목표로 가지 않음";
+    EXPECT_EQ(goal(arm, 11), j1_tick(0.f)) << "운용자 REARM 없이는 팔이 새 목표로 가지 않음";
     EXPECT_FALSE(arm.seen_flags() & FLAG_REARM) << "joy_required=false · auto_rearm=false 이면 REARM 을 보내지 않음";
   }
 
@@ -231,7 +239,7 @@ TEST(HostFirmwareSil, PhasesOnOneBoot)
       auto j1 = h.rm.claim_command_interface("joint1/position");
       ASSERT_TRUE(j1.set_value(0.5));
       h.cycle(50);
-      EXPECT_EQ(goal(arm, 11), arm_tick(0.5f)) << "REARM 뒤 명령을 따름";
+      EXPECT_EQ(goal(arm, 11), j1_tick(0.5f)) << "REARM 뒤 명령을 따름";
 
       // D. 팔 링크만 끊김: 호스트는 read ERROR + 살아 있는 바퀴 보드에 ESTOP, 팔 펌웨어는 마지막 목표로 HOLD
       arm.set_connected(false);
@@ -240,7 +248,7 @@ TEST(HostFirmwareSil, PhasesOnOneBoot)
       ASSERT_GE(err_at, 0) << "팔 STATE 가 끊기면 read ERROR";
       EXPECT_GE(err_at, 30) << "comm_timeout 0.5 s 전에는 ERROR 아님 (주기 수, 10 ms + 처리 시간)";
       EXPECT_TRUE(wheel.last_flags() & FLAG_ESTOP) << "끊기지 않은 보드에 ESTOP";
-      EXPECT_EQ(goal(arm, 11), arm_tick(0.5f)) << "끊긴 팔은 마지막 승인 목표 유지";
+      EXPECT_EQ(goal(arm, 11), j1_tick(0.5f)) << "끊긴 팔은 마지막 승인 목표 유지";
       for (uint8_t id : WHEEL_IDS) {
         EXPECT_EQ(wheel.with_board([id](SilBoard & b) {return b.motors[id].goal_velocity;}), 0) << int(id);
       }
@@ -249,7 +257,7 @@ TEST(HostFirmwareSil, PhasesOnOneBoot)
       arm.set_connected(true);
       h.cycle(50);
       std::printf("[관찰] 링크 복구 뒤 컴포넌트 상태 = %s, 팔 목표 tick = %d (0.5 rad = %d, -0.5 rad = %d)\n",
-        h.state().c_str(), goal(arm, 11), arm_tick(0.5f), arm_tick(-0.5f));
+        h.state().c_str(), goal(arm, 11), j1_tick(0.5f), j1_tick(-0.5f));
     }
   }
 }

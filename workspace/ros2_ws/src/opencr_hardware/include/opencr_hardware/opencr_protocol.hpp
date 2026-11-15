@@ -8,7 +8,8 @@
 // CMD   0x01  Jetson → OpenCR 100 Hz  : role · wheel_vel[6] · arm_pos[6] · gripper_pos · flags · seq   (55 B)
 // STATE 0x81  OpenCR → Jetson 100 Hz  : role · pos[12] · vel[12] · effort[12] · quat[4] · gyro[3] · accel[3]
 //                                       · battery_v · error · fw_version · seq                         (192 B)
-//   fw_version = PROTOCOL_VERSION — 호스트는 다르면 활성화를 거부 (Xmen 의 펌웨어 버전 확인과 같은 목적)
+//   fw_version = expected_fw_version(role) — 호스트는 다르면 활성화를 거부 (Xmen 의 펌웨어 버전 확인과 같은 목적)
+//     주행 보드 = PROTOCOL_VERSION (5), 팔 보드 = ARM_FW_VERSION (6 = v5 패킷 + 관절 1 π 보정, config.h ARM_J1_FLIP)
 //   role = ROLE_WHEEL(1) 또는 ROLE_ARM(2). 각 OpenCR은 자기 역할의 배열 칸만 채우거나 적용한다.
 //   관절 순서(12): 바퀴 슬롯 0~5 → 0~5, 팔 슬롯 0~5 → 6~11. 쓰지 않는 칸은 0.
 //   v5 = v4 와 길이 · 오프셋이 같고 FLAG_REARM · ERR_HOLD · ERR_FAULT 비트만 추가. 버전 값으로만 구분된다.
@@ -31,6 +32,13 @@ static const uint8_t PROTOCOL_VERSION = 5;   // v4: 역할 필드 추가 (v3 와
 // 보드 역할은 물리 USB 포트 번호와 무관하게 프레임 안에서 확인한다.
 static const uint8_t ROLE_WHEEL = 1;
 static const uint8_t ROLE_ARM = 2;
+
+// 팔 보드 펌웨어 버전 (2026-11-16). 패킷 길이 · 오프셋은 PROTOCOL_VERSION 과 같고, 팔 보드만 이 값을 보낸다:
+//   6 = 관절 1 모터가 모델과 180° 돌아 달린 조립 (11-15 브라켓) 을 펌웨어가 π 돌려 모델 각도로 보고 · 명령 (config.h ARM_J1_FLIP 1).
+//   호스트 설정 (STOW · 대기 범위 · 자세) 은 모델 각도라, 보정 없는 팔 펌웨어 (5) 와 섞이면 관절 1 이 반 바퀴 틀어짐 → 활성화 거부.
+//   주행 보드는 바뀐 것이 없어 PROTOCOL_VERSION 그대로 (다시 올릴 필요 없음).
+static const uint8_t ARM_FW_VERSION = 6;
+static inline uint8_t expected_fw_version(uint8_t role) {return role == ROLE_ARM ? ARM_FW_VERSION : PROTOCOL_VERSION;}
 
 static const int MAX_WHEELS = 6;
 static const int ARM_JOINTS = 6;          // joint1~5 + gripper_roll

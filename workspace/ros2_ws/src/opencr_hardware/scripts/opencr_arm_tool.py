@@ -29,7 +29,8 @@ import serial
 
 TYPE_CMD = 0x01
 TYPE_STATE = 0x81
-PROTOCOL_VERSION = 5
+PROTOCOL_VERSION = 5      # 패킷 형식 (주행 보드 fw 값)
+ARM_FW_VERSION = 6        # 팔 보드 fw 값: v5 패킷 + 관절 1 π 보정 (opencr_protocol.h, 2026-11-16) — 보정 없는 팔 펌웨어 (5) 는 거부
 ROLE_ARM = 2
 FLAG_TORQUE_ON = 0x01
 FLAG_ESTOP = 0x02
@@ -200,8 +201,9 @@ def arm_pos(st):
 def check_identity(st):
     if st is None:
         sys.exit('STATE 없음 — 포트 · 전원 확인')
-    if st['role'] != ROLE_ARM or st['fw'] != PROTOCOL_VERSION:
-        sys.exit(f"팔 보드 v{PROTOCOL_VERSION} 가 아님: role={st['role']} fw={st['fw']}")
+    if st['role'] != ROLE_ARM or st['fw'] != ARM_FW_VERSION:
+        hint = " — 관절 1 π 보정 전 팔 펌웨어: build_firmware.sh arm --upload 로 다시 올릴 것" if st['role'] == ROLE_ARM and st['fw'] == PROTOCOL_VERSION else ""
+        sys.exit(f"팔 보드 v{ARM_FW_VERSION} 가 아님: role={st['role']} fw={st['fw']}{hint}")
 
 
 def monitor(args):

@@ -42,7 +42,13 @@ void isolated(F body)
   EXPECT_EQ(WEXITSTATUS(status), 0) << "자식 프로세스의 실패 메시지 참고";
 }
 
-int32_t arm_tick(float rad) {return TICK_CENTER + static_cast<int32_t>(lroundf(rad / RAD_PER_TICK));}
+// 팔 슬롯 k 의 모터 tick. 관절 1 (k 0) 은 ARM_J1_FLIP 이면 확장 위치 모드 — 모델 0 rad 에서 모터 tick 0 으로 켜진 보드
+//   (Bench 가 그렇게 둠: 실물 11-15 조립은 모델 정면이 모터 한 바퀴의 0 / 4095 경계) → 바퀴 보정 −4096, 모델 rad = tick × RAD_PER_TICK
+int32_t arm_tick(float rad, int k = 1)
+{
+  if (k == 0 && ARM_J1_FLIP) {return static_cast<int32_t>(lroundf(rad / RAD_PER_TICK));}
+  return TICK_CENTER + static_cast<int32_t>(lroundf(rad / RAD_PER_TICK));
+}
 int32_t wheel_raw(int slot, float wheel_rads)
 {
   return static_cast<int32_t>(lroundf(WHEEL_DIR[slot] * (wheel_rads / WHEEL_GEAR) / RADS_PER_VEL_RAW));
@@ -107,6 +113,11 @@ struct Bench
   {
     for (uint8_t id : WHEEL_IDS) {w.motors[id] = SilMotor{}; w.motors[id].model = WHEEL_MODEL;}
     for (uint8_t id : ARM_IDS) {a.motors[id] = SilMotor{}; a.motors[id].model = ARM_MODEL;}
+    if (ARM_J1_FLIP) {   // 관절 1: 이미 확장 위치 모드로 설정된 모터, 모델 0 rad (정면) = 켤 때 tick 0
+      SilMotor & j1 = a.motors[ARM_IDS[0]];
+      j1.mode = ARM_OP_MODE[0];
+      j1.position = j1.goal_position = 0;
+    }
     a.motors[ARM_IDS[GRIP_SLOT]].pwm_limit = GRIP_PWM_LIMIT_MAX;   // 실물 설정 (dxl_setup w 15 400)
   }
   void boot() {w.setup(); a.setup();}
@@ -170,7 +181,7 @@ TEST(FirmwareSil, NormalCmdState)
     EXPECT_EQ(sw.role, ROLE_WHEEL);
     EXPECT_EQ(sa.role, ROLE_ARM);
     EXPECT_EQ(sw.fw_version, 5);
-    EXPECT_EQ(sa.fw_version, 5);
+    EXPECT_EQ(sa.fw_version, 6) << "팔 보드 = ARM_FW_VERSION (관절 1 π 보정)";
     EXPECT_FLOAT_EQ(sw.quat[0], 1.f) << "IMU 는 바퀴 보드만";
     EXPECT_FLOAT_EQ(sa.quat[0], 0.f);
     EXPECT_TRUE(sa.error & ERR_CMD_TIMEOUT) << "CMD 전에는 타임아웃 상태";
@@ -198,7 +209,7 @@ TEST(FirmwareSil, NormalCmdState)
     b.ha.arm[0] = 0.5f;
     b.ha.arm[5] = -0.4f;
     b.drive(50, FLAG_TORQUE_ON, FLAG_TORQUE_ON);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f));
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f, 0));
     EXPECT_EQ(b.arm_goal(5), arm_tick(-0.4f));
     sa = b.ha.last();
     EXPECT_NEAR(sa.pos[MAX_WHEELS + 0], 0.5, 0.002) << "팔은 슬롯 6~11";
@@ -387,8 +398,8 @@ TEST(FirmwareSil, ArmPositionLimitNarrowerThanConfigFaults)
   isolated([] {
     Bench b;
     for (int k = 0; k < ARM_COUNT; ++k) {
-      b.arm_motor(k).min_position_limit = arm_tick(ARM_MIN_RAD[k]);
-      b.arm_motor(k).max_position_limit = arm_tick(ARM_MAX_RAD[k]);
+      b.arm_motor(k).min_position_limit = arm_tick(ARM_MIN_RAD[k], k);
+      b.arm_motor(k).max_position_limit = arm_tick(ARM_MAX_RAD[k], k);
     }
     b.boot();
     b.arm_activate();
@@ -475,11 +486,11 @@ TEST(FirmwareSil, RearmRisingEdgeActivates)
     EXPECT_TRUE(b.ha.last().error & ERR_HOLD) << "토크 ON 직후는 HOLD";
     b.ha.arm[0] = 0.4f;
     b.drive(100, NO_CMD, FLAG_TORQUE_ON);
-    EXPECT_EQ(b.arm_goal(0), TICK_CENTER) << "REARM 전에는 현재 위치 유지";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.f, 0)) << "REARM 전에는 현재 위치 유지";
     b.drive(10, NO_CMD, FLAG_TORQUE_ON | FLAG_REARM);
     b.drive(20, NO_CMD, FLAG_TORQUE_ON);
     EXPECT_FALSE(b.ha.last().error & ERR_HOLD);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.4f));
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.4f, 0));
   });
 }
 
@@ -577,7 +588,7 @@ TEST(FirmwareSil, V4StyleHostCannotMoveArm)
     b.ha.arm[0] = 0.8f;
     b.drive(2000, NO_CMD, FLAG_TORQUE_ON);   // v4 호스트가 버전 검사를 건너뛰었다고 가정해도
     EXPECT_TRUE(b.a.motors[11].torque);
-    EXPECT_EQ(b.arm_goal(0), TICK_CENTER) << "REARM 없이는 현재 위치만 유지";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.f, 0)) << "REARM 없이는 현재 위치만 유지";
     EXPECT_TRUE(b.ha.last().error & ERR_HOLD);
   });
 }
@@ -611,18 +622,18 @@ TEST(FirmwareSil, StaleAndOutOfOrderCommands)
     const Cmd later = b.ha.make(FLAG_TORQUE_ON);
     b.ha.send(later);
     b.run(10);
-    ASSERT_EQ(b.arm_goal(0), arm_tick(0.9f));
+    ASSERT_EQ(b.arm_goal(0), arm_tick(0.9f, 0));
     b.ha.send(a);   // 뒤 seq (오래된 명령)
     b.run(10);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.9f));
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.9f, 0));
     Cmd dup = later;   // 같은 seq 재전송 (내용만 다름)
     dup.arm_pos[0] = -0.9f;
     b.ha.send(dup);
     b.run(10);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.9f));
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.9f, 0));
     b.ha.arm[0] = 0.5f;
     b.drive(20, NO_CMD, FLAG_TORQUE_ON);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f)) << "앞선 seq 는 받음";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f, 0)) << "앞선 seq 는 받음";
 
     // 끊긴 사이 쌓였던 오래된 명령이 한꺼번에 도착 (REARM 없음)
     b.run(300);
@@ -632,7 +643,7 @@ TEST(FirmwareSil, StaleAndOutOfOrderCommands)
       b.ha.send(FLAG_TORQUE_ON);
     }
     b.run(50);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f)) << "HOLD 중 쌓인 명령은 적용하지 않음";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.5f, 0)) << "HOLD 중 쌓인 명령은 적용하지 않음";
   });
 }
 
@@ -666,15 +677,15 @@ TEST(FirmwareSil, SyncReadLossKeepsLastGoodAndBlocksTorqueOn)
       b.ha.arm[5] = 0.6f;
       b.drive(50, NO_CMD, FLAG_TORQUE_ON);
       b.a.motors_follow_goals = false;
-      b.arm_motor(0).position = arm_tick(0.1f);   // 아직 목표로 가는 중
+      b.arm_motor(0).position = arm_tick(0.1f, 0);   // 아직 목표로 가는 중
       if (lost) {b.arm_motor(5).present = false;}
       b.drive(50, NO_CMD, FLAG_TORQUE_ON | FLAG_ESTOP);
       EXPECT_TRUE(b.ha.last().error & ERR_HOLD);
       if (lost) {
-        EXPECT_EQ(b.arm_goal(0), arm_tick(0.3f)) << "위치를 모르는 관절이 있으면 현재 위치를 믿지 않고 마지막 목표 유지";
+        EXPECT_EQ(b.arm_goal(0), arm_tick(0.3f, 0)) << "위치를 모르는 관절이 있으면 현재 위치를 믿지 않고 마지막 목표 유지";
         EXPECT_EQ(b.arm_goal(5), arm_tick(0.6f));
       } else {
-        EXPECT_EQ(b.arm_goal(0), arm_tick(0.1f)) << "ESTOP = 현재 위치에서 멈춤";
+        EXPECT_EQ(b.arm_goal(0), arm_tick(0.1f, 0)) << "ESTOP = 현재 위치에서 멈춤";
       }
     });
   }
@@ -860,12 +871,12 @@ TEST(FirmwareSil, EstopInRejectedFrameStops)
     b.ha.arm[0] = 0.5f;
     b.drive(50, NO_CMD, FLAG_TORQUE_ON);
     b.a.motors_follow_goals = false;
-    b.a.motors[11].position = arm_tick(0.45f);   // 아직 가는 중
+    b.a.motors[11].position = arm_tick(0.45f, 0);   // 아직 가는 중
     b.a.motors[11].velocity = 40;                 // 움직이는 중 (ESTOP_STILL_VEL_RAW 넘음)
     b.ha.arm[1] = ARM_MAX_RAD[1] + 0.2f;
     b.drive(10, NO_CMD, FLAG_TORQUE_ON | FLAG_ESTOP);
     EXPECT_TRUE(b.ha.last().error & ERR_HOLD);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.45f)) << "현재 위치에서 멈춤";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.45f, 0)) << "현재 위치에서 멈춤";
   });
 }
 
@@ -876,7 +887,7 @@ TEST(FirmwareSil, BootKeepsArmTorqueOn)
     Bench b;
     for (uint8_t id = 11; id <= 16; ++id) {
       b.a.motors[id].torque = true;
-      b.a.motors[id].position = arm_tick(0.1f * (id - 10));
+      b.a.motors[id].position = arm_tick(0.1f * (id - 10), id - 11);
       b.a.motors[id].goal_position = b.a.motors[id].position;
     }
     b.boot();
@@ -888,7 +899,7 @@ TEST(FirmwareSil, BootKeepsArmTorqueOn)
     b.run(50);
     for (uint8_t id = 11; id <= 16; ++id) {
       EXPECT_TRUE(b.a.motors[id].torque) << int(id);
-      EXPECT_EQ(b.a.motors[id].goal_position, arm_tick(0.1f * (id - 10))) << "목표 = 현재 위치 " << int(id);
+      EXPECT_EQ(b.a.motors[id].goal_position, arm_tick(0.1f * (id - 10), id - 11)) << "목표 = 현재 위치 " << int(id);
       EXPECT_EQ(b.a.motors[id].watchdog, BUS_WATCHDOG_UNIT);
     }
     const State sa = b.ha.last();
@@ -896,10 +907,10 @@ TEST(FirmwareSil, BootKeepsArmTorqueOn)
     EXPECT_FALSE(sa.error & ERR_FAULT);
     b.ha.arm[0] = 0.3f;
     b.drive(100, NO_CMD, FLAG_TORQUE_ON);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.1f)) << "TORQUE_ON 만으로는 움직이지 않음";
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.1f, 0)) << "TORQUE_ON 만으로는 움직이지 않음";
     b.drive(20, NO_CMD, FLAG_TORQUE_ON | FLAG_REARM);
     b.drive(20, NO_CMD, FLAG_TORQUE_ON);
-    EXPECT_EQ(b.arm_goal(0), arm_tick(0.3f));
+    EXPECT_EQ(b.arm_goal(0), arm_tick(0.3f, 0));
   });
   isolated([] {   // 일부 관절만 토크 ON → 손대지 않고 FAULT
     Bench b;
@@ -1346,5 +1357,92 @@ TEST(FirmwareSil, WheelForwardsRc100Buttons)
     EXPECT_EQ(sw.pos[RC100_SLOT_BUTTONS], 0.f);
     EXPECT_LE(sw.pos[RC100_SLOT_AGE], 21.f);
     for (int k = 0; k < 2; ++k) {EXPECT_EQ(b.ha.last().pos[RC100_SLOT_BUTTONS + k], 0.f) << "팔 보드 칸은 팔 관절 값 (0 rad) 그대로";}
+  });
+}
+
+// ---- 관절 1 π 보정 (config.h ARM_J1_FLIP, 2026-11-16): 모터가 모델과 180° 돌아 달린 조립 ----
+//   위치 모드 한 바퀴 (0 ~ 4095) 의 경계가 모델 정면 (0 rad) 에 와서, 관절 1 만 확장 위치 모드 + 바퀴 보정으로 모델 각도를 씀.
+//   실물 11-16: 평소 대기 자리에서 위치 모드로 1420 tick (−55°) — 모델 STOW 2.200 rad (+126°) 와 181° 차이.
+
+// J1-1. 켤 때 모터 한 바퀴 tick → 모델 각도 (창 [−π, π)). 대기 자리 1420 tick = 모델 약 +125° · 정면 바로 오른쪽 4000 tick = −8°
+TEST(FirmwareSil, J1FlipReportsModelAngle)
+{
+  if (!ARM_J1_FLIP) {GTEST_SKIP() << "ARM_J1_FLIP 0";}
+  for (const auto & c : {std::pair<int32_t, float>{1420, 1420 * RAD_PER_TICK}, {4000, (4000 - 4096) * RAD_PER_TICK},
+                         {65, 65 * RAD_PER_TICK}, {2100, (2100 - 4096) * RAD_PER_TICK}}) {
+    isolated([c] {
+      Bench b;
+      b.arm_motor(0).position = b.arm_motor(0).goal_position = c.first;
+      b.boot();
+      b.run(50);
+      b.ha.poll();
+      EXPECT_NEAR(b.ha.last().pos[MAX_WHEELS + 0], c.second, 1e-4) << "켤 때 tick " << c.first;
+      EXPECT_FALSE(b.ha.last().error & ERR_MOTOR_CONFIG) << "확장 위치 모드는 EEPROM 위치 한계 검사 안 함";
+    });
+  }
+}
+
+// J1-2. 정면 (모델 0) 을 지나는 명령: 모터 목표는 짧은 쪽 (경계를 넘어 한 바퀴 돌지 않음), 토크 ON 중에는 값이 이어짐
+TEST(FirmwareSil, J1FlipCrossesFrontShortWay)
+{
+  if (!ARM_J1_FLIP) {GTEST_SKIP() << "ARM_J1_FLIP 0";}
+  isolated([] {
+    Bench b;
+    b.arm_motor(0).position = b.arm_motor(0).goal_position = arm_tick(0.1f, 0);   // 정면 왼쪽 0.1 rad (tick 65)
+    b.boot();
+    b.arm_activate();
+    b.ha.arm[0] = 0.1f;
+    b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+    for (float q : {-0.2f, 0.3f, -0.5f, 0.0f}) {
+      b.ha.arm[0] = q;
+      b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+      EXPECT_EQ(b.arm_goal(0), arm_tick(q, 0)) << q;
+      EXPECT_LT(std::abs(b.arm_goal(0)), 2048) << "모델 정면 근처 목표는 tick 0 근처 (한 바퀴 돌지 않음) " << q;
+      EXPECT_NEAR(b.ha.last().pos[MAX_WHEELS + 0], q, 0.002) << "이어지는 모델 각도 " << q;
+    }
+  });
+}
+
+// J1-3. 정면 오른쪽에서 토크를 끄고 다시 켜도 (바퀴 보정을 다시 재도) 같은 모델 각도 · 목표가 튀지 않음
+TEST(FirmwareSil, J1FlipTurnOffsetStableAcrossTorqueOff)
+{
+  if (!ARM_J1_FLIP) {GTEST_SKIP() << "ARM_J1_FLIP 0";}
+  isolated([] {
+    Bench b;
+    b.boot();
+    b.arm_activate();
+    b.ha.arm[0] = -0.3f;
+    b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+    const int32_t raw = b.arm_goal(0);
+    ASSERT_EQ(raw, arm_tick(-0.3f, 0));
+    ASSERT_LT(raw, 0) << "모터 여러 바퀴 tick 은 음수 (정면 오른쪽)";
+    b.drive(ARM_TORQUE_OFF_CMDS * 10 + 20, NO_CMD, 0);
+    ASSERT_FALSE(b.arm_motor(0).torque);
+    b.drive(50, NO_CMD, 0);
+    EXPECT_NEAR(b.ha.last().pos[MAX_WHEELS + 0], -0.3f, 0.002) << "토크 OFF 뒤 다시 잰 보정도 같은 각도";
+    b.ha.arm[0] = -0.3f;
+    b.arm_activate();
+    EXPECT_EQ(b.arm_goal(0), raw) << "다시 켜도 목표 그대로";
+  });
+}
+
+// J1-4. 모델 범위 끝 (±π = 뒤쪽) 밖 명령은 safety_core 가 거부, 창 끝 목표는 창 안에 머묾
+TEST(FirmwareSil, J1FlipRearLimitStaysInWindow)
+{
+  if (!ARM_J1_FLIP) {GTEST_SKIP() << "ARM_J1_FLIP 0";}
+  isolated([] {
+    Bench b;
+    b.arm_motor(0).position = b.arm_motor(0).goal_position = 1420;   // 대기 자리 (모델 약 +2.18 rad)
+    b.boot();
+    b.arm_activate();
+    b.ha.arm[0] = 2.18f;
+    b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+    b.ha.arm[0] = 3.10f;   // 뒤쪽 끝 근처 (모델 π 안)
+    b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+    EXPECT_EQ(b.arm_goal(0), arm_tick(3.10f, 0));
+    EXPECT_LE(b.arm_goal(0), 2047) << "창 [−2048, 2047] (보정 −4096) 안";
+    b.ha.arm[0] = 3.3f;    // 모델 범위 밖
+    b.drive(50, NO_CMD, FLAG_TORQUE_ON);
+    EXPECT_EQ(b.arm_goal(0), arm_tick(3.10f, 0)) << "범위 밖 목표는 적용하지 않음";
   });
 }

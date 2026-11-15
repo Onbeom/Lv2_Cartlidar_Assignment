@@ -8,7 +8,7 @@
 | | **주행 보드 (역할 1)** | **팔 보드 (역할 2)** |
 |---|---|---|
 | 빌드 | `tools/build_firmware.sh wheel` | `tools/build_firmware.sh arm` |
-| 결과 파일 | `~/opencr_builds/opencr_wheel_v5.bin` | `~/opencr_builds/opencr_arm_v5.bin` |
+| 결과 파일 | `~/opencr_builds/opencr_wheel_v5.bin` | `~/opencr_builds/opencr_arm_v6.bin` (관절 1 π 보정) |
 | 빌드 옵션 | `OPENCR_BOARD_ROLE=1` | `OPENCR_BOARD_ROLE=2` |
 | 모터 | 바퀴 XM430-W210 **4개, ID 1~4** | 팔 XM430-W350 6개, ID 11~16 |
 | 모드 | Velocity (바퀴 각속도 rad/s) | Position (관절각 rad) |
@@ -83,6 +83,18 @@ tools/build_firmware.sh wheel --upload /dev/ttyACM0    # 빌드 후 업로드 �
 
 ## 팔 보드 (역할 2)
 
+### 관절 1 π 보정 (팔 fw v6, 2026-11-16)
+- 11-15 에 다시 조립한 관절 1 브라켓은 모터가 **모델과 180° 돌아** 달려 있다 (회전 방향은 같음). 위치 모드로는 평소 대기 자리가 −55° (모델 +126°) 로 읽히고,
+  DRIVE (모델 J1 0) 를 보내면 집게가 퍽 스토리지 쪽으로 간다 (11-16 실물). 조립은 그대로 두고 펌웨어에서 고친다: `config.h` `ARM_J1_FLIP 1`.
+- 관절 1 만 **확장 위치 모드** (Operating Mode 4). 위치 모드 한 바퀴 (0 ~ 4095) 의 경계가 모델 정면에 와서 앞 동작이 경계를 넘기 때문.
+  모델 각도 = (모터 tick − 바퀴 보정 − 4096) × RAD_PER_TICK. 바퀴 보정은 토크가 꺼져 있을 때 (켤 때 · 토크 OFF) tick 을 창 [2048, 6143] = 모델 [−π, π) 로
+  펼쳐 정한다 — 경계는 모델 뒤쪽 (±180°) 으로, 예전 팔과 같은 자리. 토크 ON 중에는 그대로 둔다.
+- 확장 위치 모드는 모터 EEPROM Min/Max Position Limit 을 쓰지 않는다 → 관절 1 범위 보호는 `safety_core` (모델 rad ±π) 와 목표 자르기 (창 안) 뿐. 부팅 점검 `checkArmLimits` 는 관절 1 을 건너뛴다.
+- 팔 보드만 `fw_version` = `ARM_FW_VERSION` (6) 을 보낸다 (패킷 길이 · 오프셋은 v5 그대로). 호스트 (`opencr_hardware` · `opencr_arm_tool.py` · `arm_stow.py`) 는
+  팔 v6 · 주행 v5 를 기대하고, 보정 없는 팔 펌웨어 (5) 면 활성화 · 이동을 거부한다. **주행 보드는 다시 올릴 필요 없음.**
+- 호스트 설정 (STOW · 대기 범위 · 이름 자세 · IK · 정책) 은 모델 각도 그대로. STOW 관절 1 = 2.200 rad, 대기 범위 3425 ~ 3539.
+- ★ 토크 ON 중 12 V 만 끊겼다 켜지면 (모터가 한 바퀴 tick 으로 다시 시작) 보정이 어긋난다 → OpenCR 도 리셋. 실물 시험 순서: `tools/arm_bench/real/j1_flip_bench.sh`.
+
 - 관절 칸 · 모터 ID (2026-10-26 실물 확인, **벤치 임시 매핑 ★** — 팀 규격과 다름, `../../../docs/opencr_v5_change_request.md`).
   칸 = STATE 의 관절 칸 (CMD 의 `arm_pos[0..5]` 와 같은 순서):
 
@@ -112,7 +124,7 @@ tools/build_firmware.sh wheel --upload /dev/ttyACM0    # 빌드 후 업로드 �
 - 실기 시험 기록 · 알려진 문제: `../../../docs/arm_bench_test_2026-10-26.md` (중력 처짐 · 게인), `arm_bench_test_2026-10-27.md` (범위 · 그리퍼 결합 · 막힘 보호 실물 시험).
 - ROS 없이 팔 보드만 시험: `../opencr_hardware/scripts/opencr_arm_tool.py` (monitor = 읽기만, move = 0.1 rad/s 이하 저속, `--yes` 필요).
 
-## 공통 동작 (프로토콜 v5)
+## 공통 동작 (프로토콜 v5, 팔 보드 fw 값 6 = 관절 1 π 보정)
 
 프레임 `FF FD | TYPE | LEN | PAYLOAD | CRC16-LE`, CMD 55 B · STATE 192 B (OpenCR 2대용 `role` 바이트 포함). 자세한 것은 `opencr_protocol.h`.
 

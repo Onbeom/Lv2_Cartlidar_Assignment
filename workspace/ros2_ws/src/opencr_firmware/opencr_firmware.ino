@@ -62,6 +62,7 @@ static bool g_positions_valid = false;    // 이번 SyncRead 에서 모든 모�
 static int32_t g_wheel_goal_raw[WHEEL_COUNT];
 static int32_t g_arm_goal_raw[ARM_COUNT];
 static int32_t g_gripper_goal_raw = 0;
+static int32_t g_arm_turn_off[ARM_COUNT];   // 확장 위치 모드 관절의 바퀴 보정 (모터 tick − 창 안 tick, 4096 의 배수). 위치 모드 관절은 0
 
 static opencr_safety::SafetyCore g_safety(BOARD_ROLE, ARM_MIN_RAD, ARM_MAX_RAD, CMD_TIMEOUT_MS, ARM_TORQUE_OFF_CMDS);
 static bool g_torque_on = false;
@@ -103,6 +104,35 @@ static int32_t radToTick(float rad, int8_t dir)
   return t;
 }
 static float tickToRad(int32_t tick, int8_t dir) {return dir * (tick - TICK_CENTER) * RAD_PER_TICK;}
+
+// 팔 관절 rad ↔ 모터 tick (관절별 가운데 · 바퀴 보정, config.h ARM_J1_FLIP). 위치 모드 관절은 radToTick · tickToRad 와 같음
+static bool armExtended(int i) {return ARM_OP_MODE[i] == OP_EXTENDED_POSITION;}
+static int32_t armRadToRaw(int i, float rad)
+{
+  const int32_t lo = ARM_TICK_CENTER[i] - TICK_CENTER;   // 창 [lo, lo + 4095]: 위치 모드 0 ~ 4095, 확장 2048 ~ 6143
+  int32_t t = ARM_TICK_CENTER[i] + (int32_t)lroundf(ARM_DIR[i] * rad / RAD_PER_TICK);
+  if (t < lo) {t = lo;}
+  if (t > lo + 4095) {t = lo + 4095;}
+  return t + g_arm_turn_off[i];
+}
+static float armRawToRad(int i, int32_t raw) {return ARM_DIR[i] * (raw - g_arm_turn_off[i] - ARM_TICK_CENTER[i]) * RAD_PER_TICK;}
+
+// 확장 위치 모드 관절: 토크가 꺼져 있는 동안 (켤 때 · 토크 OFF) 모터 tick 을 창 [lo, lo + 4096) 로 펼치는 바퀴 보정을 다시 잰다.
+//   모터 전원을 켜면 tick 이 0 ~ 4095 로 시작하고 손으로 돌리면 바퀴 수가 쌓임 — 토크 OFF 라 스스로 움직이지 않으니 언제 재도 같은 자세 = 같은 각도.
+//   토크 ON 중에는 그대로 둔다 (창 끝 근처에서 다시 재면 목표가 한 바퀴 튐). OpenCR 만 재부팅 (모터 토크 ON, D5-1) 때도
+//   setup() 의 첫 readState() 가 g_torque_on 을 켜기 전이라 한 번 잼. ★ 토크 ON 중 12 V 만 끊겼다 켜지면 보정이 어긋남 (재부팅 필요)
+static void updateArmTurnOffsets()
+{
+  if (BOARD_ROLE != opencr_proto::ROLE_ARM || g_torque_on || !g_positions_valid) {return;}
+  for (int i = 0; i < ARM_COUNT; ++i) {
+    if (!armExtended(i)) {continue;}
+    const int32_t d = g_present[i].position - (ARM_TICK_CENTER[i] - TICK_CENTER);
+    const int32_t k = d >= 0 ? d / 4096 : -((-d + 4095) / 4096);
+    const int32_t off = k * 4096;
+    g_arm_goal_raw[i] += off - g_arm_turn_off[i];   // 목표도 같은 각도 그대로
+    g_arm_turn_off[i] = off;
+  }
+}
 
 static int32_t wheelRadsToRaw(float wheel_rads, int8_t dir)
 {
@@ -155,6 +185,7 @@ static void checkArmLimits(int i)
 {
   const uint8_t id = ARM_IDS[i];
   if (!dxl.ping(id)) {return;}   // 응답 없음은 setupMotor 가 이미 알림
+  if (armExtended(i)) {return;}  // 확장 위치 모드는 EEPROM 위치 한계를 쓰지 않음 (범위는 safety_core · armRadToRaw)
   const int32_t a = radToTick(ARM_MIN_RAD[i], ARM_DIR[i]);
   const int32_t b = radToTick(ARM_MAX_RAD[i], ARM_DIR[i]);
   const int32_t lo = dxl.readControlTableItem(MIN_POSITION_LIMIT, id);
@@ -296,6 +327,7 @@ static void readState()
     k = (k + 1) % N_MOTORS;
   }
   if (g_hw_error_mask) {g_error |= opencr_proto::ERR_MOTOR_HW;} else {g_error &= ~opencr_proto::ERR_MOTOR_HW;}
+  updateArmTurnOffsets();
 }
 
 // keep_grip (ESTOP · 토크 OFF 요청 HOLD): 그리퍼 목표가 현재에서 GRIP_STALL_TICKS 안이면 (쥐는 중이거나 멈춤) 그대로 둔다 —
@@ -383,7 +415,7 @@ static void handleCmd()
   } else {
     for (int i = 0; i < ARM_COUNT; ++i) {
       const float q = clampf(cmd.arm_pos[i], ARM_MIN_RAD[i], ARM_MAX_RAD[i]);   // 범위 밖은 safety_core 가 이미 거부
-      g_arm_goal_raw[i] = radToTick(q, ARM_DIR[i]);
+      g_arm_goal_raw[i] = armRadToRaw(i, q);
     }
   }
 #if GRIPPER_ID != 0
@@ -508,7 +540,7 @@ static void sendState()
     for (int i = 0; i < ARM_COUNT; ++i) {
       const PresentData & p = g_present[i];
       const int k = opencr_proto::MAX_WHEELS + i;
-      s.pos[k] = tickToRad(p.position, ARM_DIR[i]);
+      s.pos[k] = armRawToRad(i, p.position);
       s.vel[k] = ARM_DIR[i] * p.velocity * RADS_PER_VEL_RAW;
       s.effort[k] = ARM_DIR[i] * p.current * AMP_PER_CUR_RAW;
     }
@@ -531,7 +563,8 @@ static void sendState()
   s.battery_v = g_battery_v;   // 두 보드 모두 (보드마다 배터리 따로, 2026-11-11). 예전 팔 펌웨어는 0 을 보냄
   if (g_config_error) {g_error |= opencr_proto::ERR_MOTOR_CONFIG;}
   s.error = g_error | g_safety.status_bits();
-  s.fw_version = opencr_proto::PROTOCOL_VERSION;
+  // 팔 보드는 관절 1 π 보정 (ARM_J1_FLIP) 을 버전으로 알림 — 보정 없는 팔 펌웨어는 5 라 호스트가 거부 (opencr_protocol.h)
+  s.fw_version = (BOARD_ROLE == opencr_proto::ROLE_ARM && ARM_J1_FLIP) ? opencr_proto::ARM_FW_VERSION : opencr_proto::PROTOCOL_VERSION;
   s.seq = g_state_seq++;
   uint8_t frame[opencr_proto::MAX_FRAME];
   const size_t n = opencr_proto::encode_state(s, frame);
@@ -560,7 +593,7 @@ void setup()
     }
   } else {
     for (int i = 0; i < ARM_COUNT; ++i) {
-      torque_kept += setupMotor(ARM_IDS[i], OP_POSITION, true, ARM_MODEL) ? 1 : 0;
+      torque_kept += setupMotor(ARM_IDS[i], ARM_OP_MODE[i], true, ARM_MODEL) ? 1 : 0;
       checkArmLimits(i);
       writeArmGains(i);
     }

@@ -17,6 +17,9 @@
   11-15 범위 (위 끝 3325) 를 예전 STOW 로 봄.
 - [11-16 오후] 평소 대기 자리 실물 읽기로 STOW 를 옮김 (관절 1 −0.9633 rad = 1420 tick, 범위 1363 ~ 1477 · 관절 5 0 = 2048, 범위 1849 ~ 2246 그대로).
   #311 범위 (위 끝 3539) 도 예전 STOW 로 봄 — 그 판으로 돌리면 접힌 팔을 관절 1 로 반 바퀴 돌리려 함 (왼쪽 스토리지 1 열에 닿음).
+- [11-16 저녁] 관절 1 모터가 모델과 180° 돌아 달린 것 확정 → 팔 펌웨어 v6 (관절 1 π 보정) 이 모델 각도로 보냄.
+  STOW 관절 1 을 다시 모델 2.200 (126°, 범위 3425 ~ 3539) 으로, #314 범위 (위 끝 1477) 를 예전 STOW 로 봄.
+  **팔 펌웨어가 v6 이 아니면 움직이지 않음** (v5 펌웨어의 관절 1 은 반 바퀴 틀린 값이라 접는 계획이 위험).
   움직이기 전에 접는 경로 틈을 계산 (tools/arm_bench/fold_clearance.py, 팀 URDF 팔레트 v5 · 퍽 10 개):
   모델 그대로 + 실측 칸 맞춤 (pallet_slot_teach.json 의 1_3, 관절 2 · 3 · 4) 으로 옮긴 실물 추정, 둘 중 작은 값이 MIN_CLEAR_MM 미만이면 거부.
 """
@@ -27,12 +30,15 @@ import subprocess
 import sys
 import time
 
-TOOL = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/opencr_hardware/scripts/opencr_arm_tool.py")
+# 저장소 안에서 실행하면 그 자리 (노트북 · 젯슨), ~/arm_stow.py 로 복사해 쓰면 젯슨 저장소
+WS = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
+if not os.path.isdir(os.path.join(WS, "ros2_ws")):
+    WS = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace")
+TOOL = os.path.join(WS, "ros2_ws/src/opencr_hardware/scripts/opencr_arm_tool.py")
 ORDER = [5, 1, 4, 2, 3]          # 접는 차례 (관절 번호)
 FAR_DEG = 15.0
-WS = os.path.expanduser("~/Lv2_Cartlidar_Assignment/workspace")
 OLD_J1_MAX = {3118: "89° (#277 전)", 3325: "107° (11-15, 모터 돌아 설치)", 1266: "−74° (11-15 잘못 조립 때)",
-              3539: "126° (#277 · 11-16 오전 #311)"}   # 관절 1 대기 범위 위 끝 -> 예전 STOW (11-16 오후부터 −55°, 1420 tick)
+              1477: "−55° (11-16 #314, 관절 1 π 보정 전 펌웨어로 읽은 값)"}   # 관절 1 대기 범위 위 끝 -> 예전 STOW (11-16 저녁부터 모델 126°)
 MIN_CLEAR_MM = 5.0
 
 
@@ -118,10 +124,13 @@ def main():
         sys.exit("팔 보드 (role 2) 를 못 찾음 — USB · 모터 전원 확인")
     if st["error"] & oat.ERR_ABORT:
         sys.exit(f"팔 보드 오류 {oat.err_text(st['error'])} -> 모터 전원 켠 채 팔 OpenCR 리셋 뒤 다시")
+    if st["fw"] != getattr(oat, "ARM_FW_VERSION", -1):
+        sys.exit(f"!! 팔 펌웨어 v{st['fw']} — 관절 1 π 보정 펌웨어 (v{getattr(oat, 'ARM_FW_VERSION', 6)}) 가 아님. 관절 1 이 반 바퀴 틀리게 읽혀 "
+                 "접는 계획이 위험 -> 노트북에서 opencr_firmware/tools/build_firmware.sh arm --upload <포트> 로 올린 뒤 다시. 움직이지 않음.")
     smin, smax = oat.load_standby()
     if smax[0] in OLD_J1_MAX:
         sys.exit("!! 젯슨 저장소의 대기 자세가 예전 STOW (관절 1 %s, 범위 %d ~ %d).\n"
-                 "   저장소를 11-16 오후 STOW (관절 1 −0.9633 rad = 1420 tick, 범위 1363 ~ 1477) 이후로 업데이트 · 빌드한 뒤 다시 (README 참고). 움직이지 않음."
+                 "   저장소를 11-16 저녁 STOW (관절 1 2.200 rad = 126°, 범위 3425 ~ 3539, 팔 펌웨어 v6) 이후로 업데이트 · 빌드한 뒤 다시 (README 참고). 움직이지 않음."
                  % (OLD_J1_MAX[smax[0]], smin[0], smax[0]))
     ticks = [oat.tick_of(q) for q in oat.arm_pos(st)]
     print(f"팔 보드 {port} (오류 {oat.err_text(st['error'])})")
