@@ -1,0 +1,21 @@
+# 실물 단계 시험용 퍽 등록표 (2026-11-15, mission_stage_test.md). 측량 (#154) 을 정하기 전이라 use_survey:=false 로 이 파일을 계획에 씀.
+# ★ 이 표대로 경기장에 퍽을 놓는다 (표를 실물에 맞추는 게 아니라 실물을 표에 맞춤). 바꿔 놓으면 이 파일도 같이 고칠 것.
+#   box = 시작 박스 1 ~ 6, side = 박스 중심 X 기준 −1 (X − 40 mm) / +1 (X + 40 mm), Y 는 박스 중심. 모두 세움 (누운 퍽 = pose: lying 은 #193 세우기 정책 실물 확인 뒤)
+#   박스 중심 (m, mission_planner/poses.py START_BOXES · 발제 07 쪽): 1 (1.468, 0.950) · 2 (3.670, 3.152) · 3 (2.936, 5.354) · 4 (0.734, 5.354) · 5 (2.202, 5.354) · 6 (3.670, 3.886)
+#   색 · 모양 수: 빨강 원기둥 3 · 빨강 직육면체 3 · 초록 원기둥 3 · 초록 직육면체 3 (problem_q1_example 과 같은 배치)
+# signal · barcode 는 실물 관측값을 쓰므로 아래 값은 무시됨 (mock 시험 때만 씀, 발제 05 쪽 공개 연습 Q1)
+signal: RGRRGRGGYGYG
+barcode: P2-01
+pucks:
+  - {id: 0,  color: red,   shape: cylinder, box: 1, side: -1, pose: standing}
+  - {id: 1,  color: green, shape: box,      box: 1, side: 1,  pose: standing}
+  - {id: 2,  color: red,   shape: box,      box: 2, side: -1, pose: standing}
+  - {id: 3,  color: green, shape: cylinder, box: 2, side: 1,  pose: standing}
+  - {id: 4,  color: red,   shape: cylinder, box: 3, side: -1, pose: standing}
+  - {id: 5,  color: green, shape: cylinder, box: 3, side: 1,  pose: standing}
+  - {id: 6,  color: red,   shape: box,      box: 4, side: -1, pose: standing}
+  - {id: 7,  color: green, shape: box,      box: 4, side: 1,  pose: standing}
+  - {id: 8,  color: red,   shape: cylinder, box: 5, side: -1, pose: standing}
+  - {id: 9,  color: green, shape: cylinder, box: 5, side: 1,  pose: standing}
+  - {id: 10, color: red,   shape: box,      box: 6, side: -1, pose: standing}
+  - {id: 11, color: green, shape: box,      box: 6, side: 1,  pose: standing}

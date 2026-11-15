@@ -2,7 +2,7 @@
 # waffle_4wd 매니퓰레이터 강화 학습 실행기 (팀 공유본 isaac/ 의 로봇 설정을 씀). Docker 컨테이너 isaac-lab-base 안에서, 또는 Isaac Lab 이 있는 PC 에서.
 # 창이 필요한 것 (*_play) 만 창으로, 나머지는 창 없이. 학습 중에는 창을 띄우지 말 것 (GPU 8 GB 부족).
 # B안 팔레트 (2026-11-02): 위에서 집기 + 고정 궤적 놓기
-#   ./run_rl.sh toppick [환경 수] [반복] [--checkpoint 경로]  위에서 집기 학습 -> logs/rsl_rl/waffle_toppick/ (--checkpoint 면 이어서)
+#   ./run_rl.sh toppick [환경 수] [반복] [--checkpoint 경로]  위에서 집기 학습 -> logs/rsl_rl/waffle_toppick/ (--checkpoint 면 이어서, env.gripper_open 을 안 주면 0.0042 = 벌림 50 mm)
 #   ./run_rl.sh toppick_play [환경 수]         위에서 집기 최근 체크포인트를 창으로
 #   ./run_rl.sh toppick_eval [환경 수] [--seed N] [--layout mix|rand|A|B|C] [--dr all|none|-friction,...]  위에서 집기 평가 (policies/toppick_latest.pt, 배치별, 무작위화 절제)
 #   ./run_rl.sh chain_eval [대 수] [--seed N] ...  집기 정책 -> 칸 궤적 이어서 평가 (칸별 성공률 · 손 안 어긋남, chain_pallet_eval.json)
@@ -68,7 +68,10 @@ eval_rec() {   # $1 = 기록 종류, $2 = 기본 결과 파일, 나머지 = 실�
 
 pol() { [ -f "$HERE/policies/$1" ] && echo "--checkpoint $HERE/policies/$1" || echo "--checkpoint latest"; }
 case "${1:-}" in
-  toppick) ckpt_ok "${@:4}" || exit 1; "${PY[@]}" "$HERE/train.py" --task Waffle-TopPick-Direct --num_envs "${2:-256}" --max_iterations "${3:-300}" --viz none "${@:4}"; record train waffle_toppick ;;
+  toppick) ckpt_ok "${@:4}" || exit 1; tp_args=("${@:4}")
+    printf '%s\n' "${tp_args[@]}" | grep -q '^env\.gripper_open=' || tp_args+=(env.gripper_open=0.0042)   # 실물 벌림 50 mm (환경 기본도 2026-11-14 부터 0.0042, 이전 0.010 = 61.6 mm 를 TP13 ~ TP15 가 빠뜨림)
+    echo "[run_rl] toppick 추가 인자: ${tp_args[*]}"
+    "${PY[@]}" "$HERE/train.py" --task Waffle-TopPick-Direct --num_envs "${2:-256}" --max_iterations "${3:-300}" --viz none "${tp_args[@]}"; record train waffle_toppick ;;
   toppick_play) env -u HEADLESS "${PY[@]}" "$HERE/play.py" --task Waffle-TopPick-Direct --num_envs "${2:-16}" --checkpoint latest --viz kit ;;
   toppick_eval) eval_rec toppick "$HERE/toppick_eval.json" "${PY[@]}" "$HERE/toppick_eval.py" --num_envs "${2:-256}" "${@:3}" ;;
   chain_eval) eval_rec chain "$HERE/chain_pallet_eval.json" "${PY[@]}" "$HERE/chain_pallet_eval.py" --num_envs "${2:-192}" "${@:3}" ;;
