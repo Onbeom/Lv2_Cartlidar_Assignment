@@ -4,6 +4,7 @@
   ros2 launch navigation navigation.launch.py use_sim_time:=true odom_topic:=/odom cmd_vel_out:=/cmd_vel   # Gazebo (waffle_4wd_description)
   ros2 launch navigation navigation.launch.py use_localization:=false            # map → odom · /map 을 다른 곳에서 낼 때
   ros2 launch navigation navigation.launch.py max_wz:=0.8 rotate_wz:=0.6         # 속도 한계만 바꿔 실행 (아래)
+  ros2 launch navigation navigation.launch.py use_composition:=false             # 서버마다 프로세스 (예전, 기본은 한 프로세스 nav2_composed #276)
 
 설정: config/nav2_params.yaml (★ 임시값). AMCL 설정은 localization/config/amcl.yaml, 출발 자세 start_x/y/yaw 등 localization 인자는 그대로 넘어간다.
 속도 한계 인자 (비우면 YAML 값 그대로): max_vx [m/s] · max_wz [rad/s] · rotate_wz [rad/s, 제자리 회전, ≤ max_wz].
@@ -13,6 +14,8 @@
 속도 명령: controller_server · behavior_server → /nav2/cmd_vel_raw → velocity_smoother → /nav2/cmd_vel_smoothed
   → collision_monitor → cmd_vel_out (기본 /cmd_vel_nav). use_collision_monitor:=false 면 smoother 가 바로 cmd_vel_out 으로 낸다.
   Nav2 기본 launch 는 중간 출력을 cmd_vel_nav 로 쓰므로, 그대로 쓰면 twist_mux 가 smoother · collision_monitor 를 건너뛴 명령을 받는다."""
+import tempfile
+
 import yaml
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, LogInfo, OpaqueFunction, TimerAction
@@ -88,27 +91,61 @@ def launch_setup(context):
     servers = ['controller_server', 'planner_server', 'behavior_server', 'velocity_smoother'] + \
         (['collision_monitor'] if use_cm else []) + ['bt_navigator']
 
+    lm_params = [sim, {'autostart': True, 'node_names': servers}]
+    # 서버마다 (패키지 · 실행 파일 · 컴포넌트 · 이름 · 매개변수 · 리매핑). 같은 표로 프로세스 따로 / 한 컨테이너 둘 다 만듦
+    spec = [
+        ('nav2_controller', 'controller_server', 'nav2_controller::ControllerServer', 'controller_server',
+         [params, sim, odom, over.get('controller_server', {})], [('cmd_vel', RAW)]),
+        ('nav2_planner', 'planner_server', 'nav2_planner::PlannerServer', 'planner_server', [params, sim], []),
+        ('nav2_behaviors', 'behavior_server', 'behavior_server::BehaviorServer', 'behavior_server',
+         [params, sim, over.get('behavior_server', {})], [('cmd_vel', RAW)]),
+        ('nav2_velocity_smoother', 'velocity_smoother', 'nav2_velocity_smoother::VelocitySmoother', 'velocity_smoother',
+         [params, sim, odom, over.get('velocity_smoother', {})],
+         [('cmd_vel', RAW), ('cmd_vel_smoothed', SMOOTHED if use_cm else out)]),
+        ('nav2_bt_navigator', 'bt_navigator', 'nav2_bt_navigator::BtNavigator', 'bt_navigator', [params, sim, odom], []),
+    ]
+    if use_cm:
+        spec.append(('nav2_collision_monitor', 'collision_monitor', 'nav2_collision_monitor::CollisionMonitor', 'collision_monitor',
+                     [params, sim, {'cmd_vel_in_topic': SMOOTHED, 'cmd_vel_out_topic': out}], []))
+
+    if LC('use_composition').perform(context).lower() == 'true':
+        # 한 프로세스 (#276): bt_navigator 가 BT 를 만들 때 planner_server 의 is_path_valid · compute_path_to_pose 를 DDS 찾기로
+        # 못 찾아 활성화 실패 (Jetson 7 판 중 6 판, 15 s 기다려도). 같은 프로세스 = 같은 DDS 참가자라 찾기 지연이 없고 프로세스도 6 개 줄어듦.
+        # component_container 대신 nav2_composed (src/nav2_composed.cpp): launch 의 load_node 서비스 응답도 DDS 에서 사라질 수 있어 (PC 재현)
+        # 서비스 없이 한 프로세스 안에서 직접 만든다. 매개변수는 프로세스 전체 --ros-args 라 노드별 값은 노드 이름 칸 yaml 로, 리매핑은 노드별 규칙으로 가른다.
+        per_node = {}
+        for _, _, _, name, prm, remap in spec:
+            vals = {}
+            for d in prm[1:]:   # prm[0] = nav2_params.yaml (노드 이름 칸 그대로 전체에 줌)
+                for k, v in d.items():
+                    vals[k] = v.perform(context) if hasattr(v, 'perform') else \
+                        (LC('use_sim_time').perform(context).lower() == 'true' if k == 'use_sim_time' else v)
+            per_node[name] = {'ros__parameters': vals}
+        sim_on = LC('use_sim_time').perform(context).lower() == 'true'
+        per_node['lifecycle_manager_navigation'] = {'ros__parameters': {'use_sim_time': sim_on, 'autostart': True, 'node_names': servers}}
+        f = tempfile.NamedTemporaryFile('w', prefix='nav2_composed_', suffix='.yaml', delete=False)
+        yaml.safe_dump(per_node, f, allow_unicode=True)
+        f.close()
+        # 리매핑은 노드별 규칙 (<노드>:<원래>:=<새것>). 전체에 걸면 Gazebo 의 collision_monitor 출력 /cmd_vel 까지 바뀌어 고리가 생김
+        node_remaps = [a for _, _, _, name, _, remap in spec for k, v in remap for a in ('-r', f'{name}:{k}:={v}')]
+        cmd = []
+        for pkg, _, plugin, name, _, _ in spec:
+            cmd += ['--node', f'{pkg}/{plugin}:{name}']
+        cmd += ['--manager', 'nav2_lifecycle_manager/nav2_lifecycle_manager::LifecycleManager:lifecycle_manager_navigation',
+                '--delay', str(delay), '--ros-args'] + node_remaps
+        return [LogInfo(msg=n) for n in notes] + [
+            Node(package='navigation', executable='nav2_composed', output='screen', arguments=cmd,
+                 parameters=[params, f.name])]
+
     nodes = [LogInfo(msg=n) for n in notes] + [
-        Node(package='nav2_controller', executable='controller_server', name='controller_server', output='screen',
-             parameters=[params, sim, odom, over.get('controller_server', {})], remappings=[('cmd_vel', RAW)]),
-        Node(package='nav2_planner', executable='planner_server', name='planner_server', output='screen',
-             parameters=[params, sim]),
-        Node(package='nav2_behaviors', executable='behavior_server', name='behavior_server', output='screen',
-             parameters=[params, sim, over.get('behavior_server', {})], remappings=[('cmd_vel', RAW)]),
-        Node(package='nav2_velocity_smoother', executable='velocity_smoother', name='velocity_smoother', output='screen',
-             parameters=[params, sim, odom, over.get('velocity_smoother', {})],
-             remappings=[('cmd_vel', RAW), ('cmd_vel_smoothed', SMOOTHED if use_cm else out)]),
-        Node(package='nav2_bt_navigator', executable='bt_navigator', name='bt_navigator', output='screen',
-             parameters=[params, sim, odom]),
+        Node(package=pkg, executable=exe, name=name, output='screen', parameters=prm, remappings=remap)
+        for pkg, exe, _, name, prm, remap in spec] + [
         # 켜 주는 노드는 서버들이 뜬 뒤 lifecycle_delay 만큼 늦게: 한꺼번에 뜰 때 change_state 응답이 DDS 에서 버려져
         # ("failed to send response … client will not receive response") 끝없이 기다리던 일 (Gazebo 11-12, 10 번 중 1 번) 을 줄임
         TimerAction(period=delay, actions=[
             Node(package='nav2_lifecycle_manager', executable='lifecycle_manager', name='lifecycle_manager_navigation', output='screen',
-                 parameters=[sim, {'autostart': True, 'node_names': servers}])]),
+                 parameters=lm_params)]),
     ]
-    if use_cm:
-        nodes.append(Node(package='nav2_collision_monitor', executable='collision_monitor', name='collision_monitor', output='screen',
-                          parameters=[params, sim, {'cmd_vel_in_topic': SMOOTHED, 'cmd_vel_out_topic': out}]))
     return nodes
 
 
@@ -122,6 +159,8 @@ def generate_launch_description():
         DeclareLaunchArgument('use_collision_monitor', default_value='true'),
         DeclareLaunchArgument('cmd_vel_out', default_value='/cmd_vel_nav', description='최종 속도 명령 (실물 = twist_mux nav 입력, Gazebo = /cmd_vel)'),
         DeclareLaunchArgument('odom_topic', default_value='/odometry/filtered', description='실물 = EKF, Gazebo = /odom'),
+        DeclareLaunchArgument('use_composition', default_value='true',
+                              description='Nav2 서버 · bt_navigator · lifecycle_manager 를 한 프로세스 (nav2_composed) 에 (#276). false = 예전처럼 노드마다 프로세스'),
         DeclareLaunchArgument('lifecycle_delay', default_value='3.0',
                               description='lifecycle_manager_navigation 을 서버들보다 이만큼 늦게 시작 [s] (시작 때 DDS 응답 유실 줄이기, 0 = 바로)'),
         DeclareLaunchArgument('max_vx', default_value='', description='전진 속도 한계 [m/s] (MPPI vx_max · smoother). 비우면 YAML'),

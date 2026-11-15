@@ -10,7 +10,14 @@ ros2 launch navigation navigation.launch.py                                     
 ros2 launch navigation navigation.launch.py use_localization:=false            # map → odom · /map 을 다른 곳에서 낼 때
 ros2 launch navigation navigation.launch.py use_collision_monitor:=false       # smoother 가 바로 cmd_vel_out 으로
 ros2 launch navigation navigation.launch.py max_wz:=0.8 rotate_wz:=0.6         # 속도 한계만 바꿔서 (아래 "속도 한계 인자")
+ros2 launch navigation navigation.launch.py use_composition:=false             # 서버마다 프로세스 (예전 방식)
 ```
+
+프로세스 (2026-11-15, #276): 기본 `use_composition:=true` 는 controller · planner · behavior · velocity_smoother · collision_monitor · bt_navigator · lifecycle_manager 를
+**한 프로세스 `nav2_composed`** (`src/nav2_composed.cpp`) 에 싣는다. Jetson 에서 bt_navigator 가 활성화 때 planner_server 의
+`is_path_valid` · `compute_path_to_pose` 를 DDS 찾기로 제때 못 찾아 Nav2 전체가 멈추던 것 (7 판 중 6 판) 을 막고, 프로세스 6 개를 줄인다.
+`component_container` 를 쓰지 않는 것은 launch 의 load_node 서비스 응답도 같은 DDS 응답 유실로 사라질 수 있어서다 (PC 재현).
+노드별 매개변수는 launch 가 노드 이름 칸 yaml 로, 리매핑은 `<노드>:<원래>:=<새것>` 규칙으로 넘긴다. CPU 를 노드별로 재려면 `use_composition:=false`.
 
 속도 한계 인자 (비우면 `config/nav2_params.yaml` 값 그대로):
 

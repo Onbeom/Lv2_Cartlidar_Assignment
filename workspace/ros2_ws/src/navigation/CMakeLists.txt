@@ -1,8 +1,16 @@
 cmake_minimum_required(VERSION 3.16)
 project(navigation)
-
 find_package(ament_cmake REQUIRED)
+find_package(rclcpp REQUIRED)
+find_package(rclcpp_components REQUIRED)
+find_package(class_loader REQUIRED)
+find_package(ament_index_cpp REQUIRED)
+
+# Nav2 서버 · bt_navigator · lifecycle_manager 를 한 프로세스에 (#276, navigation.launch.py use_composition)
+add_executable(nav2_composed src/nav2_composed.cpp)
+target_compile_features(nav2_composed PUBLIC cxx_std_17)
+target_link_libraries(nav2_composed rclcpp::rclcpp rclcpp_components::component class_loader::class_loader ament_index_cpp::ament_index_cpp)
+install(TARGETS nav2_composed DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY launch config behavior_trees DESTINATION share/${PROJECT_NAME})
-
 ament_package()
