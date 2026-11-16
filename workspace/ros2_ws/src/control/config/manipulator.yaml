@@ -149,6 +149,8 @@ manipulator_node:
     fixed_frame: odom            # 측정 시각 → 현재 변환 기준
     range_frame: tool_link       # /arm_range 기준 (perception arm.range.frame 과 같게, x = 팔 접근 방향)
     tf_cache_time: 10.0          # s (측정값은 300ms 안의 것만 쓴다)
+    tf_idle_off: 30.0            # s. TF 는 작업 (pose · pick · skill) 중과 끝난 뒤 이만큼만 받음 — 쉬는 동안 /tf CPU 줄임 (#265). 0 = 늘 받음
+    tf_warmup: 1.0               # s. TF 를 다시 켤 때 fixed_frame → base_frame 이 들어올 때까지 기다리는 최대 시간
 
     pick:
       # 목표 우선순위: ① 정밀 정렬 결과 → ② perception object_pose (300ms 안, object_found)
