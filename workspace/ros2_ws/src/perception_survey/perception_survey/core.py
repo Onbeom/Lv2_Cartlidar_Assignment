@@ -9,11 +9,19 @@ from pathlib import Path
 
 BOX_CENTERS = ((1.468,.950),(3.670,3.152),(2.936,5.354),(.734,5.354),(2.202,5.354),(3.670,3.886))
 CAMERAS = {0:'front_d435',1:'rear_d435',2:'arm'}
+BOX_HALF = .1025   # [m] 시작 박스 반 변 (205 mm)
 
 class Survey:
-    def __init__(self, frame='map', gate_m=.035, min_observations=2, tagged_min_confidence=.6, max_revisits=2):
+    def __init__(self, frame='map', gate_m=.035, min_observations=2, tagged_min_confidence=.6, max_revisits=2, free_layout=False,
+                 free_gate_m=.02):
+        """free_layout: 퍽이 박스 위 아무 자리 (사용자 규칙 11-16: 박스당 2 개, 중심에서 3 ~ 6 cm).
+        고정 ±40 mm 칸 대신 박스 (반 변 + 10 mm 안) 로 묶고, 박스 안에서 이미 잰 퍽 free_gate_m 안이면 같은 퍽, 아니면 그 박스의 빈 칸.
+        side 는 박스 안 이름표 (-1 · +1) 일 뿐 자리가 아님 -> 자리는 x_mm · y_mm. 퍽 쌍으로 박스 요를 재지 않음."""
         if not 0 < gate_m < .04 or min_observations < 1:
             raise ValueError('결합 문턱은 0~40mm 사이, 최소 관측은 1 이상')
+        if not 0 < free_gate_m < .035:
+            raise ValueError('free_layout 같은 퍽 문턱은 0~35mm 사이 (두 퍽 중심 최소 35 mm)')
+        self.free_layout, self.free_gate = bool(free_layout), free_gate_m
         if isinstance(max_revisits,bool) or not isinstance(max_revisits,int) or max_revisits < 0:
             raise ValueError('칸별 다시 보기 횟수 한도는 0 이상 정수')
         self.max_revisits = max_revisits
@@ -39,6 +47,18 @@ class Survey:
           'conf':{'color':0.,'shape':0.,'id':0.},'seen_by':[],'n_obs':0,'last_seen_stamp':None,'revisits':revisits,
           '_points':[],'_values':{k:{} for k in ('color','shape','pose','id')},'_arm_values':{'color':{},'shape':{}},'_seen':set(),'_yaw':[]}
 
+    def _free_track(self, x, y):
+        """free_layout: 관측 (x, y) [m] -> 칸 번호 또는 버림 이유"""
+        bs=[i for i,(cx,cy) in enumerate(BOX_CENTERS) if abs(x-cx)<=BOX_HALF+.01 and abs(y-cy)<=BOX_HALF+.01]
+        if not bs: return 'outside_box'
+        tr=[i for i,t in enumerate(self.tracks) if t['box']==bs[0]+1]
+        ds=sorted((math.hypot(x-self.tracks[i]['x_mm']/1000,y-self.tracks[i]['y_mm']/1000),i) for i in tr if self.tracks[i]['measured'])
+        if ds and ds[0][0]<=self.free_gate:
+            if len(ds)>1 and ds[1][0]-ds[0][0]<.005: return 'ambiguous_slot'
+            return ds[0][1]
+        empty=[i for i in tr if not self.tracks[i]['measured']]
+        return empty[0] if empty else 'outside_slot'
+
     @staticmethod
     def _votes(t,field):
         arm=t['_arm_values'].get(field)
@@ -63,10 +83,16 @@ class Survey:
             if color not in (None,'red','green') or shape not in (None,'cylinder','cuboid') or pose not in (None,'standing','lying'):
                 return self.reject('invalid_class')
         except (KeyError,ValueError,TypeError): return self.reject('invalid_value')
-        ds=sorted((math.hypot(x-t['x_mm']/1000,y-t['y_mm']/1000),i) for i,t in enumerate(self.tracks))
-        if ds[0][0]>self.gate: return self.reject('outside_slot')
-        if ds[1][0]-ds[0][0]<.005: return self.reject('ambiguous_slot')
-        t=self.tracks[ds[0][1]]; camera=o.get('camera','unknown')
+        if self.free_layout:
+            k=self._free_track(x,y)
+            if isinstance(k,str): return self.reject(k)
+            t=self.tracks[k]
+        else:
+            ds=sorted((math.hypot(x-t['x_mm']/1000,y-t['y_mm']/1000),i) for i,t in enumerate(self.tracks))
+            if ds[0][0]>self.gate: return self.reject('outside_slot')
+            if ds[1][0]-ds[0][0]<.005: return self.reject('ambiguous_slot')
+            t=self.tracks[ds[0][1]]
+        camera=o.get('camera','unknown')
         if camera not in CAMERAS.values(): return self.reject('invalid_camera')
         key=(round(stamp,9),camera)
         if key in t['_seen']: return self.reject('duplicate_frame')
@@ -93,8 +119,8 @@ class Survey:
             t['_yaw'].append(math.radians(float(yaw)))
             t['yaw_deg']=math.degrees(math.atan2(sum(math.sin(v) for v in t['_yaw']),sum(math.cos(v) for v in t['_yaw'])))
         self.stamp=stamp
-        # 초기 ±40mm 배치에서 두 관측 중심으로 박스 축 추정. 퍽 이동 전 조사 전용.
-        for b in self.boxes:
+        # 초기 ±40mm 배치에서 두 관측 중심으로 박스 축 추정. 퍽 이동 전 조사 전용. 무작위 자리 (free_layout) 는 퍽 쌍이 축이 아님
+        for b in ([] if self.free_layout else self.boxes):
             a,z=[v for v in self.tracks if v['box']==b['box']]
             if a['measured'] and z['measured']:
                 dx,dy=z['x_mm']-a['x_mm'],z['y_mm']-a['y_mm']

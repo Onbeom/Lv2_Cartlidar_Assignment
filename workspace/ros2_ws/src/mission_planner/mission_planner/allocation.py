@@ -7,6 +7,7 @@
 """
 from __future__ import annotations
 
+import math
 from dataclasses import dataclass
 from itertools import combinations
 
@@ -29,11 +30,20 @@ class Puck:
     box: int     # 시작 박스 1 ~ 6
     side: int    # 박스 중심 X 기준 -1 (X − 40 mm) | +1 (X + 40 mm)
     pose: str = "standing"   # standing | lying (측량 등록표 pose, 없거나 null 이면 standing, #193)
+    xy: tuple | None = None  # 측량이 잰 퍽 중심 (지도 m). 12 개 모두 있으면 measured.py 규칙 (사용자 규칙 11-16, 무작위 자리)
+
+
+def _xy(v):
+    if v is None:
+        return None
+    if len(v) != 2 or not all(math.isfinite(float(c)) for c in v):
+        raise MissionError(f"퍽 xy 는 [x, y] (지도 m): {v}")
+    return (float(v[0]), float(v[1]))
 
 
 def parse_pucks(rows):
-    pucks = [Puck(int(r["id"]), str(r["color"]), str(r["shape"]), int(r["box"]), int(r["side"]), str(r.get("pose") or "standing"))
-             for r in rows]
+    pucks = [Puck(int(r["id"]), str(r["color"]), str(r["shape"]), int(r["box"]), int(r["side"]), str(r.get("pose") or "standing"),
+                  _xy(r.get("xy"))) for r in rows]
     ids = [p.id for p in pucks]
     if len(pucks) != 12 or sorted(ids) != list(range(12)):
         raise MissionError(f"퍽 ID 는 0 ~ 11 이 한 번씩이어야 함: {sorted(ids)}")

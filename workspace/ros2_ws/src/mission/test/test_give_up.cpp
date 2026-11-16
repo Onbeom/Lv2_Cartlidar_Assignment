@@ -77,6 +77,34 @@ TEST(GiveUp, PickWithoutLoadIsNotSkipped)
   EXPECT_FALSE(pick_skip(t, 0).has_value());
 }
 
+TEST(GiveUp, EmptyHandLoad)
+{
+  // 빈손 pallet_load (운반 중 떨어뜨림, 2026-11-16): 다시 잴 곳 = 같은 묶음 target_look, 다 쓰면 그 칸만 건너뜀
+  const auto t = plan();
+  const std::string empty = "manipulator: pallet_load: empty hand: not holding a puck (dropped after pick, gripper closed fully)";
+  const std::string jam = "manipulator: pallet_load: trajectory aborted";
+  EXPECT_TRUE(is_empty_hand_load(t[5], empty));
+  EXPECT_FALSE(is_empty_hand_load(t[5], jam));                     // 쥔 채 걸림 -> 예전처럼 HOME 복귀
+  EXPECT_FALSE(is_empty_hand_load(t[4], empty));                   // pallet_load 가 아님
+  EXPECT_FALSE(is_empty_hand_load(t[5], "pallet_load: no recent /joint_states for gripper"));
+
+  EXPECT_EQ(retry_look(t, 5), std::optional<size_t>(3));           // 회전 있는 퍽
+  EXPECT_EQ(retry_look(t, 9), std::optional<size_t>(7));           // 회전 없는 퍽
+  EXPECT_EQ(retry_look(t, 4), std::optional<size_t>(3));           // toppick_tilt 도 같은 규칙
+  EXPECT_FALSE(retry_look(t, 12).has_value());                     // 앞이 approach_box (주행 · 정렬) -> 없음
+  EXPECT_FALSE(retry_look(t, 2).has_value());
+
+  const auto sk = load_skip(t, 5, "pallet_load_1_2 failed after 2 retries: " + empty);
+  ASSERT_TRUE(sk.has_value());
+  EXPECT_EQ(sk->slot, "1_2");
+  EXPECT_EQ(sk->resume, 6u);                                       // turn_0 (퍽 없이 정렬 방향으로)
+  const auto sk2 = load_skip(t, 9, empty);
+  ASSERT_TRUE(sk2.has_value());
+  EXPECT_EQ(sk2->resume, 10u);
+  EXPECT_FALSE(load_skip(t, 5, jam).has_value());
+  EXPECT_FALSE(load_skip(t, 13, empty).has_value());               // place 는 대상 아님
+}
+
 TEST(GiveUp, AfterUnloadSkipsPlace)
 {
   const auto t = plan();

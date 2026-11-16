@@ -83,3 +83,22 @@ TEST(SurveyPucks, RejectsBadPoseAndSlotCount)
   EXPECT_FALSE(surveyToPucksYaml(noid, "f.json", out, err));
   EXPECT_NE(err.find("id · color · shape"), std::string::npos) << err;
 }
+
+// 잰 칸 (measured true) 은 xy [m] 를 옮기고, 안 잰 칸 · x_mm 없는 칸은 안 씀 (계획기 measured.py, 사용자 규칙 11-16)
+TEST(SurveyPucks, CopiesMeasuredXy)
+{
+  YAML::Node doc = survey();
+  doc["slots"][0]["measured"] = true;
+  doc["slots"][0]["x_mm"] = 1508.25;
+  doc["slots"][0]["y_mm"] = 962.5;
+  doc["slots"][1]["measured"] = false;
+  doc["slots"][1]["x_mm"] = 1508.0;
+  doc["slots"][1]["y_mm"] = 950.0;
+  std::string out, err;
+  ASSERT_TRUE(surveyToPucksYaml(doc, "f.json", out, err)) << err;
+  EXPECT_EQ(count(out, "xy: "), 1) << out;
+  const YAML::Node reg = YAML::Load(out);
+  EXPECT_DOUBLE_EQ(reg["pucks"][0]["xy"][0].as<double>(), 1.50825);
+  EXPECT_DOUBLE_EQ(reg["pucks"][0]["xy"][1].as<double>(), 0.9625);
+  EXPECT_FALSE(reg["pucks"][1]["xy"]);
+}

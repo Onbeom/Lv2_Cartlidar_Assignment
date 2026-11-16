@@ -24,6 +24,7 @@ from . import gtsp
 from . import hybrid as hyb
 from .allocation import GROUPS, MissionError, count_signal, enumerate_allocations, order_groups, parse_pucks, y_options
 from .arena import build_maps, load_sdf
+from .measured import Measured
 from .pathcost import CostModel
 from .poses import PLACES, REACH_TILT, REACH_TILT_MIN, make_approaches, place_order
 
@@ -42,16 +43,17 @@ class World:
     def __init__(self, sdf_path, res=0.025, inflate_radius=0.19, turn_m_per_rad=0.10):
         self.solids = [s for s in load_sdf(sdf_path) if s.z1 > 0.002 and s.z0 < 0.45]
         _, self.nav, self.amcl = build_maps(sdf_path, res=res)
-        self.approaches = make_approaches(self.solids)
+        self.approaches = make_approaches(self.solids, alt_faces=True)
         self.cm = CostModel(self.nav, inflate_radius, turn_m_per_rad)
-        self.box_opts = {}
+        self.box_opts, self.alt_opts = {}, {}   # alt_opts: ±Y 가 되는 박스의 ±X 접근 (잰 퍽 자리 규칙만 씀, measured.py)
         for a in self.approaches.values():
             if a.kind == "box" and a.ok:
-                self.box_opts.setdefault(a.extra["box"], []).append(a.key)
+                (self.alt_opts if a.extra.get("alt") else self.box_opts).setdefault(a.extra["box"], []).append(a.key)
         missing = [b for b in range(1, 7) if b not in self.box_opts]
         if missing:
             raise MissionError(f"접근 자세가 없는 박스 {missing}")
         self.hybrid_nodes = hyb.Nodes(self, sorted(PLACES))   # hybrid 비용표: 노드 시작 때 만들어 둠 (경기 중 계획 시간에서 뺌)
+        self.hybrid_nodes_alt = hyb.Nodes(self, sorted(PLACES), extra=self.alt_opts)   # + ±X 대안 (박스 후보는 같음)
 
     def inout(self, key):
         a = self.approaches[key]
@@ -227,6 +229,9 @@ def plan(world: World, problem: dict, mode="hybrid", alloc_limit=2000, stop_afte
     groups = order_groups(counts, problem["barcode"])
     pucks = parse_pucks(problem["pucks"])
     y_options(pucks, counts)  # 불가능하면 여기서 MissionError
+    # 퍽 12 개 모두 잰 자리 (xy) 가 있으면 시작 박스 집기 규칙 (measured.py): 좁은 박스는 면 후보를 줄인 world 사본으로 계획
+    meas = Measured(world, pucks) if all(p.xy is not None for p in pucks) else None
+    world = meas.restrict(world) if meas else world
     group_of_L = {f"L{k + 1}": g for k, (g, _) in enumerate(groups)}
     best = None
     n_alloc = 0
@@ -249,14 +254,16 @@ def plan(world: World, problem: dict, mode="hybrid", alloc_limit=2000, stop_afte
     if mode == "hybrid" and cands:
         # 탐색의 3 열 · 모양 넘침은 동시 적재 수로 본 추정 (아래 경계) -> 상위 RESCORE_TOP 개는 실제 칸 배정 값으로 다시 고름
         for _, _, alloc, r, yshape in sorted(cands, key=lambda c: c[:2])[:RESCORE_TOP]:
-            out = _steps(world, mode, alloc, group_of_L, r, avoid, row_rule, shape_slots)
+            out = _steps(world, mode, alloc, group_of_L, r, avoid, row_rule, shape_slots, meas)
             true = r[3]["path_m"] + out[2]["row3"] * hyb.ROW3_PENALTY_M + ((out[2]["shape_pen_m"] + out[2]["blocked"] * hyb.BLOCK_PENALTY_M) if shape_slots else 0.0)
             if best is None or true < best[3] - 1e-9:
                 best = (alloc, r, yshape, true, out)
     if best is None:
         raise MissionError("경로를 찾지 못함")
     alloc, r, yshape = best[:3]
-    steps, warnings, sinfo = best[4] if len(best) > 3 else _steps(world, mode, alloc, group_of_L, r, avoid, row_rule, shape_slots)
+    steps, warnings, sinfo = best[4] if len(best) > 3 else _steps(world, mode, alloc, group_of_L, r, avoid, row_rule, shape_slots, meas)
+    if meas:
+        warnings += meas.notes()
     if avoid:
         warnings.append(f"팔레트 칸 {avoid} 안 씀 (avoid_slots, #219)")
     if mode == "hybrid" and sinfo["row3"]:
@@ -337,8 +344,9 @@ def _lying_order_warnings(world, steps):
     return warn
 
 
-def _steps(world, mode, alloc, group_of_L, r, avoid=(), row_rule="free", shape_slots=True):
-    """실행 단계 목록 (navigate · pick · place · verify · return) + 경고."""
+def _steps(world, mode, alloc, group_of_L, r, avoid=(), row_rule="free", shape_slots=True, meas=None):
+    """실행 단계 목록 (navigate · pick · place · verify · return) + 경고.
+    meas (measured.Measured): 있으면 잰 퍽 자리로 같은 정차 집기 차례 · 회전 · target_look 을 정함."""
     steps, warn = [dict(type="observe", at="HOME", note="바코드 -> 12 회 점멸 -> 3 초 소등 확인 뒤 출발")], []
     cur = "HOME"
     pallet = {}  # 칸 -> 퍽
@@ -349,14 +357,28 @@ def _steps(world, mode, alloc, group_of_L, r, avoid=(), row_rule="free", shape_s
             steps.append(_nav_step(world, cur, to))
             cur = to
 
+    picked = set()
+
     def pick(key, p, slot):
         a = world.approaches[key]
         pk = a.extra["pucks"][p.side]
         turn = pk["turn_deg"] if p.shape == "box" else 0.0  # 상자 퍽: 면을 J1→퍽 방향에 맞추는 제자리 회전
+        dist, extra = pk["dist"], {}
+        g = meas.pick_geom(key, p, alone=any(q.box == p.box and q.id != p.id for q in picked)) if meas else None
+        if g is not None:   # 잰 자리: 회전 · target_look 예상 자리 · J1 거리를 그 자리로
+            turn, dist = g.turn_deg, g.dist
+            extra = dict(look=[round(g.look[0], 4), round(g.look[1], 4)], j1_yaw_deg=round(g.j1_yaw, 1),
+                         nb_deg=None if g.nb_deg is None else round(g.nb_deg, 1))
+            if not REACH_TILT_MIN <= dist <= REACH_TILT:
+                warn.append(f"퍽 {p.id}: 잰 자리 J1 거리 {dist:.3f} m 가 45° 범위 {REACH_TILT_MIN} ~ {REACH_TILT} 밖")
+        picked.add(p)
         steps.append(dict(type="pick", at=key, puck=p.id, color=p.color, shape=p.shape, pose=p.pose, box=p.box, side=p.side,
-                          j1_dist=pk["dist"], tilt=True, turn_deg=turn, turn_range_deg=list(a.extra["turn_range_deg"]), slot=list(slot)))
+                          j1_dist=round(dist, 4), tilt=True, turn_deg=round(turn, 2), turn_range_deg=list(a.extra["turn_range_deg"]),
+                          slot=list(slot), **extra))
         pallet[slot] = p
-        if a.extra.get("inline"):
+        if a.extra.get("alt"):
+            warn.append(f"퍽 {p.id}: 박스 {p.box} 두 퍽이 좁게 붙어 {a.extra['side']} 면에서 집음 (잰 자리 규칙, 옆 퍽 각 {extra.get('nb_deg')})")
+        elif a.extra.get("inline"):
             warn.append(f"퍽 {p.id}: 박스 {p.box} 는 ±Y 면이 막혀 {a.extra['side']} 면 (두 퍽 앞뒤) 에서 집음, J1 거리 {pk['dist']:.3f}")
 
     def place(L, unload):
@@ -404,6 +426,18 @@ def _steps(world, mode, alloc, group_of_L, r, avoid=(), row_rule="free", shape_s
         seq += [("place", L, list(alloc[group_of_L[L]])) for L in perm]
         if n_comb > 400:
             warn.append(f"열 나누기 경우 {n_comb} 중 400 개만 봄")
+    if meas:   # 같은 정차 (이어진 같은 키 집기) 안 차례: 세운 퍽 먼저 (#193), 그다음 규칙이 정한 먼저 집을 퍽
+        load = [init[e[1].id] for e in seq if e[0] == "pick"] if init is not None else None
+        k = 0
+        while k < len(seq):
+            j = k
+            while j + 1 < len(seq) and seq[j + 1][0] == "pick" and seq[k][0] == "pick" and seq[j + 1][2] == seq[k][2]:
+                j += 1
+            if seq[k][0] == "pick" and j > k:
+                seq[k:j + 1] = sorted(seq[k:j + 1], key=lambda e: (e[1].pose == "lying", meas.rank(e[2], e[1])))
+            k = j + 1
+        if load is not None:   # per_location · single_load 는 싣는 차례대로 칸을 정해 둠 -> 바뀐 차례에 같은 칸 차례
+            init = dict(zip([e[1].id for e in seq if e[0] == "pick"], load))
     slot_of, unload, sinfo = slots_mod.assign(seq, avoid, row_rule=row_rule, shape=shape_slots, init=init)
     by_id = {e[1].id: e[1] for e in seq if e[0] == "pick"}
     for k, e in enumerate(seq):

@@ -27,6 +27,8 @@ ANSWER_LIMIT = 5000   # 정답표에 적을 할당 수 상한 (12 개라 실제�
 
 
 def puck_xyz_mm(p):
+    if p.xy is not None:   # 잰 자리 (측량 등록표 xy, 무작위 자리)
+        return round(p.xy[0] * 1000), round(p.xy[1] * 1000), PUCK_Z_MM
     cx, cy = BOX_CENTER_MM[p.box]
     return cx + PUCK_DX_MM * p.side, cy, PUCK_Z_MM
 

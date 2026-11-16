@@ -6,6 +6,8 @@ puck_survey:
     world_frame: map            # 발제 원점 좌표 frame. localization 패키지가 map(발제) → odom 을 내고 Cartographer 지도는 carto_map(map 아래)
                                 #   모의 odom 시험은 launch 사본 설정으로 바꿈
     merge_gate_m: 0.035         # 슬롯 결합 문턱 (퍽 중심 ±40 mm 배치, 0~40 mm)
+    free_layout: false          # true = 퍽이 박스 위 아무 자리 (사용자 규칙 11-16, 중심에서 3 ~ 6 cm): 박스로 묶고 잰 자리 (x_mm · y_mm) 를 계획에 넘김
+    free_gate_m: 0.02           # free_layout: 이미 잰 퍽 이 거리 안 관측 = 같은 퍽 (두 퍽 중심 최소 35 mm)
     min_observations: 2
     max_revisits: 2             # ★ /perception/survey/revisit 로 한 칸을 다시 보는 횟수 한도. 넘으면 그 칸은 미확인(unconfirmed). 실물 조사 경로 시간에 맞춰 정할 값
     max_age_s: 0.5              # [s] 이보다 오래된 /perception/pucks 는 넣지 않음

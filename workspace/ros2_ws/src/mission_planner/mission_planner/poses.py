@@ -224,13 +224,15 @@ def turn_range(solids, final: Pose, target=None, box_yaws=BOX_YAWS, limit=TURN_R
     return [lo, hi]
 
 
-def make_approaches(solids, gap=0.02, standoffs=STANDOFFS, margin=0.05):
+def make_approaches(solids, gap=0.02, standoffs=STANDOFFS, margin=0.05, alt_faces=False):
     """접근 자세표 (solids = 주행 높이 장애물). stage = 외곽 + margin 이 비고 그 자리에서 제자리 한 바퀴 돌 수 있는 (rotate_clear)
     가장 큰 standoff (0.45 부터 0.01 m 씩 줄임). 돌 수 있는 자리가 없으면 외곽만 보는 가장 큰 standoff (note 에 남김).
     왜 (#135): 좁은 통로 (B3 · B4 · B5 북쪽, 기둥 받침 ~ 북쪽 벽 0.551 m) 의 stage 가 통로 가운데에서 멀면 돌아선 뒤 차체 옆이
     기둥에 붙어 Nav2 가 기둥 옆에서 꺾다 갇힘. B3:N → L3 Gazebo (2026-11-06): standoff 0.35 (기둥 옆 21 mm) · 0.37 (41 mm) 실패,
     0.40 (71 mm, 제자리 회전 여유 8 mm) 2 / 2 도착. 회전 여유를 크게 잡으면 (0.03 → 0.37) 기둥 옆 여유가 모자라 0.005 로 둠.
-    final 은 대상 면에 gap 만큼 붙으므로 대상 물체는 빼고 margin 0.01 로 판정 (final 이 막히면 ok False)."""
+    final 은 대상 면에 gap 만큼 붙으므로 대상 물체는 빼고 margin 0.01 로 판정 (final 이 막히면 ok False).
+    alt_faces: ±Y 면이 되는 박스도 ±X 면 접근을 만들어 extra["alt"] = True 로 둠 (잰 퍽 자리 규칙 measured.py 가 두 퍽이
+    좁게 붙은 박스에서만 고름). 접근 자세표 파일 (cli mission_make_maps) 은 False 그대로."""
     out = {}
 
     def best(key, kind, target, face_dir, face_dist, extra, gap=gap):
@@ -252,9 +254,11 @@ def make_approaches(solids, gap=0.02, standoffs=STANDOFFS, margin=0.05):
     for b, (cx, cy) in START_BOXES.items():
         # ±Y 면 (두 퍽 잇는 선에 수직) 이 기본. 둘 다 안 되는 박스만 ±X 면 (두 퍽이 앞뒤로 줄 섬 = inline) 을 대안으로
         sides = {side: best(f"B{b}:{side}", "box", (cx, cy), fdir, BOX_HALF, {}, gap=BOX_GAP) for side, fdir in (("S", (0.0, -1.0)), ("N", (0.0, 1.0)))}
-        if not any(a.ok for a in sides.values()):
+        alt = any(a.ok for a in sides.values())
+        if not alt or alt_faces:
             # inline 은 가까운 퍽이 J1 0.12 m 아래로 오지 않게 틈 GAP_INLINE (TopPick 학습 gap 0.005 ~ 0.04 안)
-            sides.update({side: best(f"B{b}:{side}", "box", (cx, cy), fdir, BOX_HALF, {}, gap=GAP_INLINE) for side, fdir in (("W", (-1.0, 0.0)), ("E", (1.0, 0.0)))})
+            sides.update({side: best(f"B{b}:{side}", "box", (cx, cy), fdir, BOX_HALF, {"alt": True} if alt else {}, gap=GAP_INLINE)
+                          for side, fdir in (("W", (-1.0, 0.0)), ("E", (1.0, 0.0)))})
         for side, a in sides.items():
             pk = {}
             for sx in (-1, 1):

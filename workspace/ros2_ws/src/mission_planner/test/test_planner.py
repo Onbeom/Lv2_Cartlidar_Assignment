@@ -409,6 +409,8 @@ def test_approach_poses_file_up_to_date(world):
     path = os.path.join(os.path.dirname(__file__), "..", "config", "approach_poses.yaml")
     table = yaml.safe_load(open(path, encoding="utf-8"))
     for k, a in world.approaches.items():
+        if a.extra.get("alt"):   # ±X 대안 (잰 퍽 자리 규칙만, measured.py) 은 자세표 파일에 없음
+            continue
         assert k in table, k
         for kk, v in a.extra.items():
             got = table[k][kk]

@@ -3048,13 +3048,14 @@ private:
       for (size_t i = failed; i-- > 0;) {
         if (steps_[i].type == "search") {target = i; break;}
       }
-    } else if (isArmSkill(s, "toppick_tilt")) {
-      // toppick_tilt 실패 (빈손 · 정책 시간 초과 등) 는 바로 앞 target_look 부터: manipulator 는 target_look 이 잰 퍽 위치를
-      //   한 번만 쓰므로 (집기 시작 때 지움) 다시 재야 같은 퍽을 집는다 (#69). 사이에 주행 · 정렬이 끼면 찾지 않음
-      for (size_t i = failed; i-- > 0;) {
-        if (steps_[i].type != "skill") {break;}
-        if (isArmSkill(steps_[i], "target_look:")) {target = i; break;}
-      }
+    } else if (isArmSkill(s, "toppick_tilt") || is_empty_hand_load(s.text, reason)) {
+      // toppick_tilt 실패 (빈손 · 들다 놓침 · 정책 시간 초과 등) 와 빈손 pallet_load (운반 중 떨어뜨림, 2026-11-16) 는
+      //   바로 앞 target_look 부터: manipulator 는 target_look 이 잰 퍽 위치를 한 번만 쓰므로 (집기 시작 때 지움)
+      //   다시 재야 같은 퍽을 집는다 (#69). 사이에 주행 · 정렬이 끼면 찾지 않음
+      std::vector<std::string> texts;
+      texts.reserve(steps_.size());
+      for (const auto & st : steps_) {texts.push_back(st.text);}
+      if (const auto look = retry_look(texts, failed)) {target = *look;}
     }
     RCLCPP_INFO(get_logger(), "retry %d/%d -> [%zu] %s in %.1fs", count, max_retries_, target,
       steps_[target].text.c_str(), retry_delay_);
@@ -3068,9 +3069,9 @@ private:
   }
 
   // 재시도를 다 쓴 단계 (R1). plan 모드 계획 단계에서만:
-  //   집기 묶음 (turn · target_look · toppick_tilt) -> 그 퍽만 건너뜀 (칸은 빈 칸, 그 칸 unload · place 도 건너뜀)
+  //   집기 묶음 (turn · target_look · toppick_tilt) · 빈손 pallet_load -> 그 퍽만 건너뜀 (칸은 빈 칸, 그 칸 unload · place 도 건너뜀)
   //   pallet_unload -> 바로 뒤 place 를 건너뜀 (퍽은 팔레트에 남음)
-  //   그 밖 (주행 · 정렬 · pallet_load · place, 퍽을 쥐었을 수 있음) -> HOME 복귀 줄로 가서 복귀 뒤 FAILED
+  //   그 밖 (주행 · 정렬 · 쥔 채 실패한 pallet_load · place, 퍽을 쥐었을 수 있음) -> HOME 복귀 줄로 가서 복귀 뒤 FAILED
   //   계획 전 (observe · survey · plan) · 복귀 줄 자체 실패 -> 바로 FAILED
   void giveUp(size_t failed, const std::string & why)
   {
@@ -3080,7 +3081,9 @@ private:
     const auto home = plan_mode_ ? home_index(texts) : std::nullopt;
     if (home && failed < *home) {
       if (skip_puck_) {
-        if (const auto sk = pick_skip(texts, failed)) {
+        auto sk = pick_skip(texts, failed);
+        if (!sk) {sk = load_skip(texts, failed, why);}   // 빈손 pallet_load (운반 중 떨어뜨림) 도 그 퍽만 건너뜀
+        if (sk) {
           skipped_slots_.insert(sk->slot);
           skipped_.push_back("pick " + sk->slot);
           RCLCPP_ERROR(get_logger(), "[%zu] %s -> 퍽 건너뜀 (칸 %s 빈 칸, 그 칸 꺼내기 · 놓기도 건너뜀)",
@@ -3278,9 +3281,10 @@ private:
       const typename rclcpp_action::ClientGoalHandle<ActionT>::WrappedResult & wr) {
         if (id != stage_id_) {return;}
         handle_slot.reset();
+        // 실패 (ABORTED) 결과의 message 도 읽음 — 예전에는 성공일 때만 읽어 실패 이유가 "did not succeed" 로 사라졌음
         std::string msg;
-        const bool ok = wr.code == rclcpp_action::ResultCode::SUCCEEDED && wr.result &&
-          result_ok(*wr.result, msg);
+        const bool res_ok = wr.result && result_ok(*wr.result, msg);
+        const bool ok = wr.code == rclcpp_action::ResultCode::SUCCEEDED && res_ok;
         if (!ok && msg.empty()) {msg = label + " did not succeed";}
         report(ok, msg);
       };

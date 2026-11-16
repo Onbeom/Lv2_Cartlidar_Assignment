@@ -35,8 +35,12 @@ def _idx(v):
     return {-1: "m1", 0: "0", 1: "p1"}[v]
 
 
-def turn_name(deg):
-    """17.06 -> 'turn_p17', -17.06 -> 'turn_m17', 0 -> 'turn_0'."""
+def turn_name(deg, fine=False):
+    """17.06 -> 'turn_p17', -17.06 -> 'turn_m17', 0 -> 'turn_0'.
+    fine (잰 퍽 자리 회전, measured.py): 0.1° 자리, |deg| < 0.5 면 turn_0 -> 12.5 -> 'turn_p12.5' (mission start_box sb_turn_name 과 같은 꼴)."""
+    if fine:
+        n = round(abs(deg), 1)
+        return "turn_0" if n < 0.5 else f"turn_{'p' if deg > 0 else 'm'}{n:.1f}"
     n = round(abs(deg))
     return "turn_0" if n == 0 else f"turn_{'p' if deg > 0 else 'm'}{n}"
 
@@ -72,11 +76,14 @@ def to_lines(world, plan, fine_distance=0.13, skill_timeout=40.0, return_wait=3.
                 lines.append(f"approach {_n(fine_distance)}")
                 approached = True
             r, i = s["slot"]
-            turn = turn_name(s.get("turn_deg", 0.0))
+            turn = turn_name(s.get("turn_deg", 0.0), fine="look" in s)
             if turn != "turn_0":
                 lines.append(f"skill drive {turn} {T} mode=OFF")
-            pk = A[s["at"]].extra["pucks"][s["side"]]
-            lx, ly = puck_after_turn(pk["fwd"], pk["lat"], s.get("turn_deg", 0.0))
+            if "look" in s:   # 잰 퍽 자리 (measured.py): 회전 뒤 예상 자리를 계획이 이미 셈
+                lx, ly = s["look"]
+            else:
+                pk = A[s["at"]].extra["pucks"][s["side"]]
+                lx, ly = puck_after_turn(pk["fwd"], pk["lat"], s.get("turn_deg", 0.0))
             lines.append(f"skill manipulator target_look:base_footprint:{lx:.4f}:{ly:.4f}:{PUCK_CENTER_Z:.3f} {T} "
                          "mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG")
             lines.append(f"skill manipulator toppick_tilt {T} mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG")
