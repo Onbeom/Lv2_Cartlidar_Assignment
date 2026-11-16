@@ -27,7 +27,7 @@ case "$URDFFIX$ROTN" in
 esac
 # 11-15: 위치 감시 (loc_monitor) 는 시연 때 끔 (잃었다고 보면 /initialpose 로 자세를 바꿔 넣음 — 11-14 1 회차). 떠 있으면 알려 줌
 LOCMON=0; echo "$NODES" | grep -q "/loc_monitor$" && LOCMON=1
-[ $LOCMON = 1 ] && echo "  ⚠ loc_monitor 가 떠 있음 — 시연 권장은 끄기: pkill -INT -f lib/localization/loc_monitor (출발 확인은 상태 OK 만 통과)" \
+[ $LOCMON = 1 ] && echo "  ⚠ loc_monitor 가 떠 있음 — 시연 권장은 끄기: pkill -INT -f \"lib/(localization|perception)/loc_monitor\" (11-16 부터 C++ 판 perception, 출발 확인은 상태 OK 만 통과)" \
                 || ok "loc_monitor 꺼짐 (출발 확인 = AMCL σ + RViz 눈 확인 y)"
 echo "$NODES" | grep -qE "^/(controller_server|behavior_server|bt_navigator)$" && bad "Nav2 노드가 이미 있음 (use_nav2:=false 로)" || ok "다른 Nav2 없음"
 for t in /scan_front /scan_rear /scan_merged /odometry/filtered /map /e_stop; do

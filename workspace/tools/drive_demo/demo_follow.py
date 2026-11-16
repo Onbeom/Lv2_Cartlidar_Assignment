@@ -87,6 +87,7 @@ class Follower(Node):
                                      QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=dur))
         self.step = -1
         self.head_fix = []   # 조각 시작 방향 맞추기 각 [deg]
+        self.head_skip = []  # 11-16: 거부 · 실패해서 건너뛴 방향 맞추기 각 [deg]
         self.rows = []
         self.lock = threading.Lock()
         self.create_timer(0.1, self._rec)
@@ -259,9 +260,17 @@ def follow_piece(node, pc):
         if abs(err) > HEAD_FIX:
             print(f"    · 조각 시작 방향 맞추기 {math.degrees(err):+.1f}°", flush=True)
             node.head_fix.append(round(math.degrees(err), 1))
-            r, msg = follow_piece(node, {"kind": "S", "dth": err})
+            if os.environ.get("DEMO_TEST_HEADFIX_FAIL") == "1":   # 시험용: 방향 맞추기가 모두 거부된 것처럼 (건너뛰기 경로 확인)
+                r, msg = False, "시험용 거부 (DEMO_TEST_HEADFIX_FAIL=1)"
+            else:
+                r, msg = follow_piece(node, {"kind": "S", "dth": err})
             if not r:
-                return False, f"시작 방향 맞추기 {math.degrees(err):+.0f}°: {msg}"
+                if STOP.is_set():
+                    return False, f"시작 방향 맞추기 {math.degrees(err):+.0f}°: {msg}"
+                # 11-16 (사용자 결정): Nav2 Spin 이 충돌 예상 (Collision Ahead) · 시간 초과로 거부하면 구간 전체를 멈추지 않고
+                #   방향 맞추기만 건너뛰고 조각을 그대로 진행 (RPP 가 따라가며 바로잡음, 경로 이탈 멈춤이 지킴). 시뮬 P2 S2 에서 나옴
+                print(f"    · 시작 방향 맞추기 건너뜀 ({msg}) — 조각을 그대로 진행 (경로 이탈 멈춤 {OFF_PATH * 100:.0f} cm 가 지킴)", flush=True)
+                node.head_skip.append(round(math.degrees(err), 1))
     d = 1.0 if pc["kind"] == "F" else -1.0
     ex, ey, eth = poses[-1]
     ext = EXT_F if d > 0 else EXT_R
@@ -486,6 +495,7 @@ def run_leg(node, g, results):
     node.step = g["leg"]
     tl = node.now_s()
     node.head_fix = []
+    node.head_skip = []
     tries, ok = [], True
     for i, pc in enumerate(g["pieces"]):
         what = {"F": "전진", "R": "후진", "S": "제자리"}[pc["kind"]] + (f" {math.degrees(pc['dth']):+.0f}°" if pc["kind"] == "S" else "")
@@ -517,9 +527,9 @@ def run_leg(node, g, results):
         tries.append({"status": "ok", "msg": "", "t": round(node.now_s() - tl, 1)})
     results.append({"seg": f"S{g['leg']}", "name": g["name"], "points": g["points"], "ok": ok, "tries": tries,
                     "sim_s": round(node.now_s() - tl, 1), "end_err_cm": round(dpos * 100, 1), "end_err_deg": round(math.degrees(dyaw), 1),
-                    "head_fix_deg": list(node.head_fix), "detour": bool(g.get("detour"))})
+                    "head_fix_deg": list(node.head_fix), "head_skip_deg": list(node.head_skip), "detour": bool(g.get("detour"))})
     print(f"{'✓' if ok else '✗'} {g['name']}: {node.now_s() - tl:.1f} s · 정지점 어긋남 {dpos * 100:.1f} cm · {math.degrees(dyaw):.1f}°"
-          f" · 위치 추정 {node.loc or '-'}" + (f" · 조각 방향 맞추기 {node.head_fix}" if node.head_fix else ""), flush=True)
+          f" · 위치 추정 {node.loc or '-'}" + (f" · 조각 방향 맞추기 {node.head_fix}" if node.head_fix else "") + (f" · 건너뜀 {node.head_skip}" if node.head_skip else ""), flush=True)
     if ok:   # 도착 알림 (팔 · 미션 쪽이 들을 수 있게)
         node.arrived.publish(String(data=g.get("to") or g["name"].split("→")[-1]))
     return not any("조각" in t["msg"] or "방향 맞추기" in t["msg"] for t in tries)

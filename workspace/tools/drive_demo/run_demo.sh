@@ -24,7 +24,7 @@ set +u; source /opt/ros/lyrical/setup.bash; set -u
 for d in "$(cd "$HERE/../../.." 2>/dev/null && pwd)" "$HOME/Lv2_Cartlidar_Assignment" "$HOME/GIT/lv2_CartLidar/Lv2_Cartlidar_Assignment"; do   # 첫 후보 = 이 폴더가 든 저장소 (workspace/tools/drive_demo)
   [ -f "$d/workspace/ros2_ws/install/setup.bash" ] && { set +u; source "$d/workspace/ros2_ws/install/setup.bash"; set -u; REPO=$d; break; }
 done
-OUT="$HERE/runs/$(date +%m%d_%H%M)_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}"
+OUT="$HERE/runs/$(date +%m%d_%H%M)_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"   # 11-15: RUN_TAG= (같은 분에 여러 시뮬)
 mkdir -p "$OUT"
 LOG="$OUT/nav.log"
 ODOM=/odometry/filtered; SIMP=(); OUTT=cmd_vel_nav
@@ -58,7 +58,7 @@ start python3 "$HERE/v2_filter.py" --ros-args "${SIMP[@]}" -p out_topic:=$OUTT -
 start ros2 run nav2_lifecycle_manager lifecycle_manager --ros-args -r __node:=lifecycle_manager_demo "${SIMP[@]}" \
   -p autostart:=true -p bond_timeout:=0.0 -p node_names:="[$NODES]"
 
-{ echo "이름: 계획따라_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}"; echo "시각: $(date '+%F %T')"
+{ echo "이름: 계획따라_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"; echo "시각: $(date '+%F %T')"
   echo "경로: $(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['course'])" "$PLAN")"; echo "GUI=0"
   echo "추가 인자: $([ $MODE = real ] && echo '실물 (AMCL · EKF)' || echo 'loopback 시뮬') · 계획 $(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['plan'])" "$PLAN") · RPP 전진 $VF · 후진 $VR · Spin · 규칙 v2 필터 (제자리 ≤ $SW · 벨트 ${BELT:-1.5} · 꺾는 중 모터 ≤ ${TURN_MOTOR:-3.0} · 이어진 후진 ≤ ${REV_MAX:-$([ $MODE = real ] && echo 0.50 || echo 0.40)} m)${PARAMS:+ · Nav2 설정 $(basename "$PARAMS")}"
   [ $MODE = real ] && echo "실물 벨트: ${HW_BELT:-2.0} (11-15 v7 44T → 22T, 다르면 HW_BELT=)"
