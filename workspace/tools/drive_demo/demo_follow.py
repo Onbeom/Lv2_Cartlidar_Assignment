@@ -35,6 +35,7 @@ from builtin_interfaces.msg import Duration
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped, TwistStamped
 from nav2_msgs.action import FollowPath, Spin
 from nav_msgs.msg import Path
+from std_srvs.srv import Empty
 from rclpy.action import ActionClient
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.node import Node
@@ -50,6 +51,8 @@ START_TOL, START_YAW_TOL = 0.15, math.radians(15.0)
 AMCL_XY_OK, AMCL_YAW_OK = 0.05, 5.0   # 위치 감시를 껐을 때 출발 허용 AMCL σ [m] · [deg]
 OFF_PATH = 0.10   # 11-15 21:4x 사용자 결정: 전진 · 후진 조각 중 AMCL 자리가 조각 경로에서 max(이 값, 시작 때 어긋남 + 3 cm) 넘게
                   #   벗어나면 그 조각을 취소하고 멈춤 (S6 벽 닿음: 경로에서 24 cm). 소프트웨어 정지, 물리 비상정지 아님. 0 = 끔 (--off-path)
+RECOVER_TRIES, BACK_MAX = 2, 0.30   # 11-16 사용자 결정: 조각 실패 시 되찾기 (자기 위치 찾기 → 왔던 길 ≤ BACK_MAX m → 다시) 최대 횟수 (0 = 끔)
+STEP_MODE = False                  # step 모드면 되찾기도 안 될 때 사람에게 물음
 HEAD_FIX = math.radians(4.0)          # 전진 · 후진 조각 시작 때 방향이 이보다 틀어져 있으면 먼저 제자리로 맞춤 (0 = 끔, --no-head-fix)
 STOP = threading.Event()
 LIVE = None   # 11-15 21:3x: track_live.csv — 0.1 s 마다 바로 씀 (Ctrl+C · 강제 종료로 save() 를 못 해도 남음)
@@ -72,6 +75,9 @@ class Follower(Node):
         self.tfl = TransformListener(self.tf, self)
         self.fp = ActionClient(self, FollowPath, "follow_path")
         self.spin = ActionClient(self, Spin, "spin")
+        self.sim = sim
+        self.nomotion = self.create_client(Empty, "/request_nomotion_update")   # AMCL: 멈춘 채 위치 다시 계산 (되찾기)
+        self.recover = []   # 이 구간 되찾기 기록
         self.init_pub = self.create_publisher(PoseWithCovarianceStamped, "initialpose", 10)
         self.raw = (0.0, 0.0, -9.0)
         self.out = (0.0, 0.0, -9.0)
@@ -307,7 +313,13 @@ def follow_piece(node, pc):
     lim = max(OFF_PATH, d0 + 0.03)
     last = [0.0]
 
+    t_start = time.time()
+    test_fail = os.environ.get("DEMO_TEST_PIECE_FAIL") == "1" and pc["kind"] == "F" and length > 0.6 and not pc.get("_tested")
+
     def off_path():
+        if test_fail and time.time() - t_start > 3.0:   # 시험용: 되찾기 확인 (DEMO_TEST_PIECE_FAIL=1, 조각마다 처음 한 번)
+            pc["_tested"] = True
+            return "시험용 실패 (DEMO_TEST_PIECE_FAIL=1)"
         if OFF_PATH <= 0 or time.time() - last[0] < 0.1:
             return None
         last[0] = time.time()
@@ -316,6 +328,51 @@ def follow_piece(node, pc):
             return f"경로에서 {d * 100:.0f} cm 벗어남 (한도 {lim * 100:.0f} cm) — 멈춤 (소프트웨어 정지)"
         return None
     return run_action(node.fp, g, length / 0.03 + 30, done_when=passed, abort_when=off_path)
+
+
+def relocalize(node, label):
+    """멈춘 채 자기 위치 다시 찾기 (11-16): 실물이면 AMCL nomotion 갱신을 몇 번 요청 (움직이지 않아도 라이다로 다시 맞춤) → σ 를 알림"""
+    sleep_s(node, 0.5)
+    n = 0
+    if not node.sim and node.nomotion.wait_for_service(timeout_sec=1.0):
+        for _ in range(5):
+            if STOP.is_set():
+                break
+            wait_future(node.nomotion.call_async(Empty.Request()), 2.0)
+            n += 1
+            sleep_s(node, 0.3)
+    am = node.amcl
+    sig = f"AMCL σ {am[0] * 100:.1f} cm · {am[1]:.1f}°" if am and time.time() - am[2] < 10 else ("시뮬 (AMCL 없음)" if node.sim else "AMCL σ 모름")
+    print(f"    · {label}: 자기 위치 다시 찾기 (nomotion 갱신 {n} 번) · {sig}", flush=True)
+
+
+def backtrack_piece(node, pc):
+    """왔던 길 되돌아가기 조각 (11-16): 이 조각에서 이미 지나온 부분을 거꾸로, 최대 BACK_MAX m. 전진 조각이면 후진으로 (반대도)"""
+    p = node.pose()
+    poses = pc["poses"]
+    if p is None or len(poses) < 2 or BACK_MAX <= 0:
+        return None
+    k = min(range(len(poses)), key=lambda i: math.hypot(poses[i][0] - p[0], poses[i][1] - p[1]))
+    back, length = [tuple(poses[k])], 0.0
+    for i in range(k - 1, -1, -1):
+        step = math.hypot(poses[i][0] - back[-1][0], poses[i][1] - back[-1][1])
+        if length + step > BACK_MAX:
+            break
+        back.append(tuple(poses[i])); length += step
+    if length < 0.05:
+        return None
+    return {"kind": "R" if pc["kind"] == "F" else "F", "poses": back, "len": length}
+
+
+def ask_choice(prompt):
+    """되찾기도 안 될 때 (step 모드): Enter = 한 번 더 · s = 이 조각 건너뛰기 · q = 구간 끝"""
+    print(prompt, end="", flush=True)
+    while not STOP.is_set():
+        r, _, _ = select.select([sys.stdin], [], [], 0.2)
+        if r:
+            t = sys.stdin.readline().strip().lower()
+            return "quit" if t == "q" else ("skip" if t == "s" else "retry")
+    return "quit"
 
 
 def ask(prompt):
@@ -361,10 +418,15 @@ def main():
     ap.add_argument("--legs", default="")
     ap.add_argument("--no-head-fix", action="store_true", help="조각 시작 방향 맞추기 끔 (11-14 판처럼)")
     ap.add_argument("--off-path", type=float, default=None, help="경로 이탈 멈춤 한도 [m] (기본 0.10, 0 = 끔)")
+    ap.add_argument("--no-recover", action="store_true", help="조각 실패 시 되찾기 끔 (11-16 전처럼)")
     a = ap.parse_args()
     if a.off_path is not None:
         global OFF_PATH
         OFF_PATH = a.off_path
+    global RECOVER_TRIES, STEP_MODE
+    STEP_MODE = a.step
+    if a.no_recover:
+        RECOVER_TRIES = 0
     if a.no_head_fix:
         global HEAD_FIX
         HEAD_FIX = 0.0
@@ -496,11 +558,42 @@ def run_leg(node, g, results):
     tl = node.now_s()
     node.head_fix = []
     node.head_skip = []
+    node.recover = []
     tries, ok = [], True
     for i, pc in enumerate(g["pieces"]):
         what = {"F": "전진", "R": "후진", "S": "제자리"}[pc["kind"]] + (f" {math.degrees(pc['dth']):+.0f}°" if pc["kind"] == "S" else "")
         print(f"  · 조각 {i + 1}/{len(g['pieces'])} {what}", flush=True)
         r, msg = follow_piece(node, pc)
+        k = 0
+        while not r and not STOP.is_set() and k < RECOVER_TRIES:   # 11-16 되찾기: 자기 위치 찾기 → 왔던 길 되돌아가기 → 다시
+            k += 1
+            print(f"  ↺ 되찾기 {k}/{RECOVER_TRIES} ({msg})", flush=True)
+            tries.append({"status": "recover", "msg": f"조각 {i + 1} ({what}): {msg}", "t": round(node.now_s() - tl, 1)})
+            relocalize(node, "멈춤")
+            back = backtrack_piece(node, pc) if pc["kind"] in "FR" else None
+            if back:
+                print(f"    · 왔던 길 {back['len']:.2f} m 되돌아가기 ({'후진' if back['kind'] == 'R' else '전진'})", flush=True)
+                rb, mb = follow_piece(node, back)
+                if not rb:
+                    print(f"    · 되돌아가기 못 함 ({mb}) — 이 자리에서 다시", flush=True)
+                relocalize(node, "되돌아간 뒤")
+            if STOP.is_set():
+                break
+            print(f"    · 조각 {i + 1}/{len(g['pieces'])} {what} 다시", flush=True)
+            r, msg = follow_piece(node, pc)
+        if k:
+            node.recover.append(k)
+        while not r and not STOP.is_set() and STEP_MODE:
+            c = ask_choice(f"  ▶ 조각 {i + 1} 되찾기 실패 ({msg}) — Enter 한 번 더 · s 이 조각 건너뛰기 · q 구간 끝 : ")
+            if c == "quit":
+                break
+            if c == "skip":
+                print(f"    · 조각 {i + 1} 건너뜀 (사람)", flush=True)
+                tries.append({"status": "skip", "msg": f"조각 {i + 1} ({what}) 사람이 건너뜀", "t": round(node.now_s() - tl, 1)})
+                r, msg = True, ""
+                break
+            relocalize(node, "사람 요청")
+            r, msg = follow_piece(node, pc)
         if not r:
             ok = False
             tries.append({"status": "fail", "msg": f"조각 {i + 1} ({what}): {msg}", "t": round(node.now_s() - tl, 1)})
@@ -527,12 +620,13 @@ def run_leg(node, g, results):
         tries.append({"status": "ok", "msg": "", "t": round(node.now_s() - tl, 1)})
     results.append({"seg": f"S{g['leg']}", "name": g["name"], "points": g["points"], "ok": ok, "tries": tries,
                     "sim_s": round(node.now_s() - tl, 1), "end_err_cm": round(dpos * 100, 1), "end_err_deg": round(math.degrees(dyaw), 1),
-                    "head_fix_deg": list(node.head_fix), "head_skip_deg": list(node.head_skip), "detour": bool(g.get("detour"))})
+                    "head_fix_deg": list(node.head_fix), "head_skip_deg": list(node.head_skip), "recover": list(node.recover), "detour": bool(g.get("detour"))})
     print(f"{'✓' if ok else '✗'} {g['name']}: {node.now_s() - tl:.1f} s · 정지점 어긋남 {dpos * 100:.1f} cm · {math.degrees(dyaw):.1f}°"
-          f" · 위치 추정 {node.loc or '-'}" + (f" · 조각 방향 맞추기 {node.head_fix}" if node.head_fix else "") + (f" · 건너뜀 {node.head_skip}" if node.head_skip else ""), flush=True)
+          f" · 위치 추정 {node.loc or '-'}" + (f" · 조각 방향 맞추기 {node.head_fix}" if node.head_fix else "") + (f" · 건너뜀 {node.head_skip}" if node.head_skip else "") + (f" · 되찾기 {sum(node.recover)} 번" if node.recover else ""), flush=True)
     if ok:   # 도착 알림 (팔 · 미션 쪽이 들을 수 있게)
         node.arrived.publish(String(data=g.get("to") or g["name"].split("→")[-1]))
-    return not any("조각" in t["msg"] or "방향 맞추기" in t["msg"] for t in tries)
+    # 11-16: 되찾기 (recover) · 사람 건너뛰기 (skip) 기록은 실패가 아님 — 실패 (fail) 만 봄
+    return not any(t["status"] == "fail" and ("조각" in t["msg"] or "방향 맞추기" in t["msg"]) for t in tries)
 
 
 def run_route(a, node, data, LIB, PTS, results):

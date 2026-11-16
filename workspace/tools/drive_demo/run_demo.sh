@@ -5,12 +5,14 @@
 #     slow = 전진 0.20 · 후진 0.10 m/s · 제자리 0.4 rad/s (첫 실물 권장)   full = 0.30 · 0.15 · 0.5 (시뮬 18:46 과 같음)
 #     step = 구간마다 Enter 로 출발 (q = 끝)   init = 출발 자세를 /initialpose 로 한 번 (로봇을 출발 자리에 정확히 놓았을 때)
 #     구간 = 그 구간만 (예 0-0 = 첫 구간 signal → box1 만, 2-4)
+#   환경 변수: NO_RECOVER=1 (되찾기 끔) · SIM_TURN=0.79,0.70 (시뮬만, 실물처럼 덜 돎) · RUN_TAG= · REV_MAX= · OFF_PATH= · PLAN= · PARAMS= · SIM_DOMAIN= · SIM_MAP=
 # 멈추기: 이 터미널 Ctrl+C (Nav2 동작 취소 → 0) · 리모컨 1 (E-stop, 풀기 2+3) — 소프트웨어 정지, 물리 비상정지 아님
 # 기록: 이 폴더 runs/<월일_시각>_<실물|시뮬>_<speed>/ → 노트북 2026-11-12_기준주행/runs/ 로 복사하면 주행기록 HTML 에 Nav2 기록으로 보임
 set -u
 HERE="$(cd "$(dirname "$0")" && pwd)"
 BELT="${BELT:-}"; TURN_MOTOR="${TURN_MOTOR:-}"   # 11-15: 필터의 벨트 기어비 · 꺾는 중 모터 상한 (빈 값 = 1.5 · 3.0, 예 BELT=2.0 TURN_MOTOR=2.6)
 PLAN="${PLAN:-$HERE/demo_plan.json}"   # 11-15: 다른 계획 시험 (PLAN=… ./run_demo.sh sim slow) · PARAMS= 로 Nav2 설정 · SIM_DOMAIN= 로 시뮬 ROS_DOMAIN_ID
+SIM_TURN="${SIM_TURN:-}"   # 11-16: 시뮬만 — 실물처럼 덜 도는 로봇 (예 SIM_TURN=0.79,0.70 = 꺾기 79 % · 제자리 70 %, sim_turn_scale.py)
 MODE=""; SPEED=slow; STEP=""; INIT=""; LEGS=""
 for a in "$@"; do
   case "$a" in
@@ -24,13 +26,14 @@ set +u; source /opt/ros/lyrical/setup.bash; set -u
 for d in "$(cd "$HERE/../../.." 2>/dev/null && pwd)" "$HOME/Lv2_Cartlidar_Assignment" "$HOME/GIT/lv2_CartLidar/Lv2_Cartlidar_Assignment"; do   # 첫 후보 = 이 폴더가 든 저장소 (workspace/tools/drive_demo)
   [ -f "$d/workspace/ros2_ws/install/setup.bash" ] && { set +u; source "$d/workspace/ros2_ws/install/setup.bash"; set -u; REPO=$d; break; }
 done
-OUT="$HERE/runs/$(date +%m%d_%H%M)_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"   # 11-15: RUN_TAG= (같은 분에 여러 시뮬)
+OUT="$HERE/runs/$(date +%m%d_%H%M)_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${SIM_TURN:+_실물형회전}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"   # 11-15: RUN_TAG= (같은 분에 여러 시뮬)
 mkdir -p "$OUT"
 LOG="$OUT/nav.log"
 ODOM=/odometry/filtered; SIMP=(); OUTT=cmd_vel_nav
 if [ $MODE = sim ]; then
   export ROS_DOMAIN_ID=${SIM_DOMAIN:-73} ROS_AUTOMATIC_DISCOVERY_RANGE=LOCALHOST
   ODOM=/odom; SIMP=(-p use_sim_time:=true); OUTT=cmd_vel
+  [ -n "$SIM_TURN" ] && OUTT=cmd_vel_turn   # 필터 → sim_turn_scale → cmd_vel
 else   # 실물: 로봇 쪽과 같은 ROS 설정 그대로. 이미 Nav2 가 떠 있으면 이름이 겹침
   if ros2 node list 2>/dev/null | grep -qE "^/(controller_server|behavior_server|v2_filter)$"; then
     echo "✗ controller_server · behavior_server · v2_filter 가 이미 있음 (bringup use_nav2:=false 인지, 이 스크립트가 두 번 떴는지 확인)"; exit 1; fi
@@ -50,6 +53,7 @@ if [ $MODE = sim ]; then
   start ros2 run nav2_loopback_sim loopback_simulator --ros-args --params-file "$OUT/params.yml" "${SIMP[@]}"
   start ros2 run tf2_ros static_transform_publisher --x 0.0 --y 0.0 --z 0.0755 --frame-id base_link --child-frame-id base_scan
   NODES="'map_server', 'loopback_simulator', $NODES"
+  [ -n "$SIM_TURN" ] && start python3 "$HERE/sim_turn_scale.py" --ros-args "${SIMP[@]}" -p k_curve:=${SIM_TURN%,*} -p k_spin:=${SIM_TURN#*,}
 fi
 start ros2 run nav2_controller controller_server --ros-args --params-file "$OUT/params.yml" "${SIMP[@]}" -r cmd_vel:=cmd_vel_raw
 start ros2 run nav2_behaviors behavior_server --ros-args --params-file "$OUT/params.yml" "${SIMP[@]}" -r cmd_vel:=cmd_vel_raw
@@ -58,9 +62,9 @@ start python3 "$HERE/v2_filter.py" --ros-args "${SIMP[@]}" -p out_topic:=$OUTT -
 start ros2 run nav2_lifecycle_manager lifecycle_manager --ros-args -r __node:=lifecycle_manager_demo "${SIMP[@]}" \
   -p autostart:=true -p bond_timeout:=0.0 -p node_names:="[$NODES]"
 
-{ echo "이름: 계획따라_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"; echo "시각: $(date '+%F %T')"
+{ echo "이름: 계획따라_$([ $MODE = real ] && echo 실물 || echo 시뮬)_$SPEED${BELT:+_벨트$BELT}${TURN_MOTOR:+_모터$TURN_MOTOR}${SIM_TURN:+_실물형회전}${LEGS:+_구간$LEGS}${RUN_TAG:+_$RUN_TAG}"; echo "시각: $(date '+%F %T')"
   echo "경로: $(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['course'])" "$PLAN")"; echo "GUI=0"
-  echo "추가 인자: $([ $MODE = real ] && echo '실물 (AMCL · EKF)' || echo 'loopback 시뮬') · 계획 $(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['plan'])" "$PLAN") · RPP 전진 $VF · 후진 $VR · Spin · 규칙 v2 필터 (제자리 ≤ $SW · 벨트 ${BELT:-1.5} · 꺾는 중 모터 ≤ ${TURN_MOTOR:-3.0} · 이어진 후진 ≤ ${REV_MAX:-$([ $MODE = real ] && echo 0.50 || echo 0.40)} m)${PARAMS:+ · Nav2 설정 $(basename "$PARAMS")}"
+  echo "추가 인자: $([ $MODE = real ] && echo '실물 (AMCL · EKF)' || echo 'loopback 시뮬') · 계획 $(python3 -c "import json,sys;print(json.load(open(sys.argv[1]))['plan'])" "$PLAN") · RPP 전진 $VF · 후진 $VR · Spin · 규칙 v2 필터 (제자리 ≤ $SW · 벨트 ${BELT:-1.5} · 꺾는 중 모터 ≤ ${TURN_MOTOR:-3.0} · 이어진 후진 ≤ ${REV_MAX:-$([ $MODE = real ] && echo 0.50 || echo 0.40)} m)${PARAMS:+ · Nav2 설정 $(basename "$PARAMS")}${SIM_TURN:+ · 실물형 회전 (꺾기 × ${SIM_TURN%,*} · 제자리 × ${SIM_TURN#*,})}"
   [ $MODE = real ] && echo "실물 벨트: ${HW_BELT:-2.0} (11-15 v7 44T → 22T, 다르면 HW_BELT=)"
   echo "저장소: Nav2 노드만 (시연 폴더 $(basename "$HERE"))"; } > "$OUT/settings.txt"
 
@@ -84,7 +88,7 @@ ensure_active() {
 }
 if [ $MODE = sim ]; then ensure_active map_server loopback_simulator controller_server behavior_server
 else ensure_active map_server controller_server behavior_server; fi
-python3 "$HERE/demo_follow.py" --plan "$PLAN" --out "$OUT" $([ $MODE = sim ] && echo --sim) $STEP $INIT ${LEGS:+--legs "$LEGS"} ${OFF_PATH:+--off-path "$OFF_PATH"} 2>&1 | (trap '' INT; tee "$OUT/follow.log")   # 11-15: Ctrl+C 로 tee 가 먼저 죽으면 demo_follow 가 BrokenPipe 로 저장 못 함
+python3 "$HERE/demo_follow.py" --plan "$PLAN" --out "$OUT" $([ $MODE = sim ] && echo --sim) $STEP $INIT ${LEGS:+--legs "$LEGS"} ${OFF_PATH:+--off-path "$OFF_PATH"} ${NO_RECOVER:+--no-recover} 2>&1 | (trap '' INT; tee "$OUT/follow.log")   # 11-15: Ctrl+C 로 tee 가 먼저 죽으면 demo_follow 가 BrokenPipe 로 저장 못 함
 cleanup; trap - EXIT
 grep -h "잘림 횟수" "$LOG" | tail -1
 echo "기록: $OUT"
