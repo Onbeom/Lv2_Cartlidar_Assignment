@@ -13,11 +13,11 @@
 
 | 파일 | 하는 일 |
 |---|---|
-| `run_demo.sh` | 시연 한 회차: 시연 Nav2 노드 · 규칙 v2 필터를 띄우고 active 확인 → 계획을 따라감 → 기록 → 끝나면 끔 (`real` · `sim`) |
-| `demo_follow.py` | 계획의 조각 (전진 · 후진 · 제자리) 을 Nav2 에 차례로 보냄 · 출발 확인 · 경로 이탈 멈춤 (10 cm) · 기록 (`track_live.csv`) |
+| `run_demo.sh` | 시연 한 회차: 시연 Nav2 노드 · 규칙 v2 필터를 띄우고 active 확인 → 계획을 따라감 → 기록 → 끝나면 끔 (`real` · `sim`, `RUN_TAG=` 이름표) |
+| `demo_follow.py` | 계획의 조각 (전진 · 후진 · 제자리) 을 Nav2 에 차례로 보냄 · 출발 확인 · 경로 이탈 멈춤 (10 cm) · 방향 맞추기 거부 시 건너뛰기 · 기록 (`track_live.csv`) |
 | `v2_filter.py` | Nav2 속도를 규칙 v2 로 자름 (제자리 ≤ 90° 실제 각도 · 이어진 후진 ≤ 0.40 m (실물 0.50) · 반경 ≥ 0.20 · 꺾는 중 모터 상한) |
 | `scan_rotate.py` | LDS-03 두 대 드라이버 (URDF 에 라이다 보정이 없을 때만 180° 돌림, 자동) |
-| `check_jetson.sh` · `jetson_check.sh` | 시연 전 점검 · Jetson / OpenCR / 센서 장치 점검 (읽기만) |
+| `check_jetson.sh` · `jetson_check.sh` | 시연 전 점검 · Jetson / OpenCR (펌웨어 버전 · 팔 대기 범위) / 센서 장치 점검 (읽기만) |
 | `params_demo*.yaml` | 시연 Nav2 설정 (A = 기본, B · C = 벨트 v7 빠른 꺾기) |
 | `demo_plan.json` · `legs.json` · `route_*.json` | 오늘 계획 `7cm_실측L_어제순서` (10 구간, L1 ~ L3 실측) · 미리 계산한 길 90 개 · 들르기 방식 |
 | `scan_view/` | 노트북 RViz 감시 (ssh 로 Jetson 라이다 · AMCL 자세만 받음) |
@@ -25,7 +25,7 @@
 
 - Jetson 에서는 `~/demo_v2` 로 복사해 씁니다 (아래 명령은 모두 `~/demo_v2` 기준, 2 장 단계 1).
 - 계획을 새로 만드는 도구 (방문 순서 바꾸기 · 상자가 옮겨졌을 때 길 다시 계산) 는 제어 담당 노트북에만 있습니다.
-- 이 안내는 11-15 밤 판입니다. 같은 내용의 페이지: https://claude.ai/artifact/Ukqy8zXuXLv747KctzifRh
+- 같은 내용의 페이지: https://claude.ai/artifact/Ukqy8zXuXLv747KctzifRh
 
 ## 0. 먼저 알아 둘 것 (11-15 실물에서 확인한 것)
 
@@ -41,8 +41,9 @@
 | 무엇 | 내용 | 할 일 |
 |---|---|---|
 | 전원 순서 | USB (Jetson) 가 배터리보다 먼저 켜지면 OpenCR 부팅 점검이 모터를 못 찾아 `MOTOR_CONFIG\|FAULT` 가 걸림 (재부팅으로만 풀림). **Jetson 을 재부팅해도 같음** | 배터리를 켠 채 **두 OpenCR 모두 RESET** |
-| 팔 대기 자세 | 하드웨어를 켤 때 팔 여섯 칸이 대기 범위 안이어야 함 (아니면 토크를 안 켜고 거부). 범위: J1 **3211 ~ 3325** · J2 653 ~ 721 · J3 3025 ~ 3091 · J4 797 ~ 864 · J5 **1849 ~ 2077** · 집게 **1531 ~ 2669** (tick). 오늘 J1 3138 · J5 2133 으로 거부됨 | 손으로 가운데 쪽 (J1 3268 · J5 1963) 에 맞추고, 집게는 손으로 닫기 (단계 2-3) |
-| 라이다 USB | 허브가 2.1.x 로 옮겨져 팀 udev 이름 `/dev/lidar_front` · `/dev/lidar_rear` 가 안 생김 (규칙은 2.2.x) | by-path 로 직접: **앞 = 2.1.2 · 뒤 = 2.1.1** (20:48 손 가림으로 확인) |
+| 팔 대기 자세 | 하드웨어를 켤 때 팔 여섯 칸이 대기 범위 안이어야 함 (아니면 토크를 안 켜고 거부). 범위 (dev 11-16): J1 **3425 ~ 3539** · J2 653 ~ 721 · J3 3025 ~ 3091 · J4 797 ~ 864 · J5 **1849 ~ 2246** · 집게 **1531 ~ 2669** (tick, 팔 펌웨어 v6 이 보고하는 모델 각도). 11-15 에 J1 · J5 로 거부된 적 있음 | 손으로 가운데 쪽 (J1 3482 · J5 2048) 에 맞추고, 집게는 손으로 닫기 (단계 3) |
+| 팔 펌웨어 | dev 11-16 (#316) 부터 호스트가 팔 보드 **v6** (관절 1 π 보정) 을 요구. 주행 보드는 v5 그대로. 다르면 하드웨어가 안 켜짐 | `./jetson_check.sh opencr` 가 버전이 다르면 ❌ — 팔 담당이 `opencr_arm_v6.bin` 업로드 |
+| 라이다 USB | 11-15 에는 허브가 2.1.x 로 옮겨져 udev 이름이 안 생겼음. dev 11-16 (#309) 규칙은 허브 칸 기준 (**2 번 칸 = 앞 · 1 번 칸 = 뒤**) 이라 Jetson 에 설치되면 `/dev/lidar_front` · `rear` 가 생김 | `ls -l /dev/lidar_*` 가 있으면 인자 없이, 없으면 by-path 로 직접 (11-15: 앞 2.1.2 · 뒤 2.1.1) |
 | 라이다 방향 | dev 1b9266c (PR #304) 부터 URDF 가 실물 라이다 180° 를 고침 | 따로 돌리지 않음 (시연 도구가 자동 판단) |
 | lifecycle 응답 지연 | Jetson 에서 노드 켜기 응답이 시간 초과로 사라져 `map_server` · `controller_server` · `behavior_server` · `bt_navigator` 가 `inactive` 로 남는 일이 잦음 (#276 같은 종류) | `ros2 lifecycle set /<노드> activate` (시연 도구는 자동으로 함) |
 | 출발 자리 | 11 cm 벗어나 놓으면 출발 확인에서 멈춤 · 계획 경로와 어긋남 | 출발 자리 **(0.694, 0.950) · 앞이 신호등 쪽 (180°)**, 2 ~ 3 cm 안 |
@@ -89,13 +90,13 @@ cd ~/Lv2_Cartlidar_Assignment && git log -1 --oneline && git status --short | he
 grep -o 'arm_standby_m.._tick">[0-9,]*' ~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/install/opencr_hardware/share/opencr_hardware/urdf/opencr.ros2_control.xacro
 python3 -c "import json;print(json.load(open('/home/cart11/demo_v2/demo_plan.json'))['plan'])"
 ```
-- 첫 줄: 저장소 판. 11-15 20:40 기준 **dev 1b9266c** (PR #301 팔 대기 자세 · #304 라이다 방향 포함) 였습니다.
-- 둘째 줄: 빌드된 팔 대기 범위. 첫 숫자 **3211** 이면 맞습니다 (3425 면 옛 판 → 빌드 담당에게).
+- 첫 줄: 저장소 판. 11-16 아침 기준 **dev 1a381b2** 이상 (#316 팔 v6 · #309 라이다 udev · #306 이 폴더 포함) 이어야 합니다.
+- 둘째 줄: 빌드된 팔 대기 범위. 첫 숫자 **3425** · J5 끝 (다섯째) **2246** 이면 11-16 판입니다. 다르면 빌드 담당에게 (`opencr_hardware` · `control` 다시 빌드).
 - 셋째 줄: 시연 계획 이름. **`7cm_실측L_어제순서`** 이면 L 실측이 들어간 판입니다.
   `길모음7cm_어제순서` (L 실측 전) 가 나오거나 `~/demo_v2` 가 없으면 저장소의 이 폴더를 복사합니다 (아래). 복사 전 판으로는 **S6 ~ S9 (L 구간) 을 하지 않습니다** (L3 상자 면까지 3.4 cm).
 
 ```bash
-# Jetson — 저장소 workspace/tools/drive_demo 를 ~/demo_v2 로 (runs/ 기록은 그대로 남음). 저장소에 이 폴더가 없으면 먼저 git pull (dev 병합 뒤)
+# Jetson — 저장소 workspace/tools/drive_demo 를 ~/demo_v2 로 (runs/ 기록은 그대로 남음). 먼저 git pull
 mkdir -p ~/demo_v2 && cp -r ~/Lv2_Cartlidar_Assignment/workspace/tools/drive_demo/. ~/demo_v2/ && chmod +x ~/demo_v2/*.sh ~/demo_v2/scan_view/*.sh
 ```
 
@@ -115,11 +116,11 @@ ls -l /dev/serial/by-path/
 - 나와야 하는 것: 두 보드 `err -` (또는 `CMD_TIMEOUT` 만) · 팔 여섯 칸 범위 안 (❗ 없음) · 배터리 11.1 V 넘음.
 - `ls -l /dev/serial/by-path/`: USB 자리. 라이다 `…usb-0:2.1.1:1.0-port0` · `…2.1.2…` 두 줄, OpenCR `2.1.3` · `2.1.4`, TFmini `2.1.6` (11-15 밤 기준).
 
-팔이 범위 밖이면 (예: `J1 3138❗(3211~3325)`), tick 을 보면서 손으로 맞춥니다 (읽기만, 토크 꺼짐):
+팔이 범위 밖이면 (예: `J1 3138❗(3425~3539)`), tick 을 보면서 손으로 맞춥니다 (읽기만, 토크 꺼짐):
 ```bash
 python3 ~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/opencr_hardware/scripts/opencr_arm_tool.py monitor --port /dev/serial/by-path/platform-3610000.usb-usb-0:2.1.4:1.0 --seconds 120
 ```
-- `2.1.4` 가 팔 보드 USB 자리입니다 (주행 보드로 나오면 `2.1.3`). 가운데 (J1 3268 · J5 1963) 쪽으로, 범위 끝은 피합니다. 끝나면 Ctrl+C.
+- `2.1.4` 가 팔 보드 USB 자리입니다 (주행 보드로 나오면 `2.1.3`). 가운데 (J1 3482 · J5 2048) 쪽으로, 범위 끝은 피합니다. 끝나면 Ctrl+C.
 - `jetson_check.sh` 는 **소스** 범위를 읽고 하드웨어는 **빌드된** 범위를 씁니다. 단계 1 의 grep 과 다르면 빌드 담당에게.
 
 | 문제 | 원인 · 해결 |
@@ -127,6 +128,7 @@ python3 ~/Lv2_Cartlidar_Assignment/workspace/ros2_ws/src/opencr_hardware/scripts
 | `MOTOR_CONFIG` · `FAULT` | 배터리보다 USB 가 먼저 → 배터리 켠 채 그 보드 RESET |
 | 보드가 한 대만 | USB 케이블 · 허브 → Jetson 본체 포트 |
 | 배터리 11.1 V 아래 | 바꿈. 부저: 11.1 V 아래 30 초마다 1 번, 10.5 V 아래 2 초마다 3 번 |
+| `팔 보드 펌웨어 v5 ≠ 저장소 기대 v6` | 팔 보드에 11-16 펌웨어 (관절 1 π 보정) 가 안 올라감 → 팔 담당에게 (`tools/build_firmware.sh arm --upload`) |
 | 라이다 by-path 가 2.1.1 · 2.1.2 가 아님 | USB 자리가 또 바뀜 → 아래 시험의 라이다 장치를 새 이름으로 (앞 · 뒤는 손으로 가려서 확인) |
 
 ## 3. A. 주행 시연 시험
@@ -153,7 +155,7 @@ ros2 launch opencr_hardware base_bringup.launch.py rc100:=true obstacle_lock:=fa
 ```bash
 python3 ~/demo_v2/scan_rotate.py /dev/serial/by-path/platform-3610000.usb-usb-0:2.1.2:1.0-port0 /dev/serial/by-path/platform-3610000.usb-usb-0:2.1.1:1.0-port0
 ```
-- 인자 = 앞 · 뒤 라이다 장치. udev 이름 (`/dev/lidar_front` · `rear`) 이 생기면 인자 없이 써도 됩니다.
+- 인자 = 앞 · 뒤 라이다 장치. **udev 이름 (`/dev/lidar_front` · `rear`) 이 있으면 인자 없이** `python3 ~/demo_v2/scan_rotate.py` 로 씁니다 (#309 규칙 설치 뒤).
 - 나와야 하는 것: `라이다 그대로 (돌리지 않음) 내보내는 중 … [URDF 에 라이다 yaw 보정 있음 (PR #304) → 돌리지 않음]`.
 - 팀원의 `sensors.launch.py` 가 켜져 있으면 라이다를 서로 잡습니다 → 그것을 끔.
 
@@ -161,7 +163,7 @@ python3 ~/demo_v2/scan_rotate.py /dev/serial/by-path/platform-3610000.usb-usb-0:
 
 ```bash
 ros2 launch bringup bringup.launch.py use_hardware:=false use_sensors:=false use_perception:=false use_tfmini:=false \
-  use_planner:=false use_localization:=true use_amcl_node:=true use_nav2:=false 2>&1 | tee ~/demo_loc.log
+  use_planner:=false use_localization:=true use_amcl_node:=true use_nav2:=false use_loc_monitor:=false 2>&1 | tee ~/demo_loc.log
 ```
 - 지도 · 라이다 몸체 가림 · 합치기 (`/scan_merged`) · AMCL · EKF 를 띄움. 하드웨어 (J1) · 라이다 드라이버 (J2) · 인식 · 계획기 · 팀 Nav2 는 안 띄움.
 - ⚠ **켜질 때 팔이 대기 → 주행 자세로 펴집니다** (J3 → J2 → J4 → J1 → J5). 손을 빼고, 리모컨 1 준비. 계산상 틈이 거의 없는 곳이 있어 지켜봅니다.
@@ -170,10 +172,10 @@ ros2 launch bringup bringup.launch.py use_hardware:=false use_sensors:=false use
 ### 단계 7 — J4: 위치 감시 끄기 · 점검
 
 ```bash
-pkill -INT -f lib/localization/loc_monitor
+pkill -INT -f "lib/(localization|perception)/loc_monitor"     # 단계 6 에서 use_loc_monitor:=false 면 이미 없음
 cd ~/demo_v2 && ./check_jetson.sh
 ```
-- `loc_monitor` (팀 위치 감시) 는 실물에서 너무 예민해 시연 때는 끕니다.
+- `loc_monitor` (팀 위치 감시) 는 실물에서 너무 예민해 시연 때는 끕니다. dev 11-16 (#310) 부터 C++ 판 (`lib/perception/loc_monitor`) 이 기본이라, 예전 `lib/localization/…` 만 찾는 명령으로는 안 꺼집니다.
 - `check_jetson.sh` (읽기만): Nav2 패키지 · 노드 · 토픽 · **라이다 방향** · 위치 · 배터리. 마지막 줄 **`== 점검 통과`**.
 
 | ✗ 항목 | 해결 |
@@ -206,6 +208,7 @@ cd ~/demo_v2 && ./check_jetson.sh
 - **출발 확인:** `지금 위치 … 출발과 x cm · AMCL σ …` → RViz 에서 빨간 점이 벽과 겹치면 `y` + Enter. 출발과 3 cm 넘게 다르면 로봇을 다시 놓습니다.
 - **정지점마다 팔 동작:** `▶ … Enter 출발` 이 나와 있는 동안 팔 동작을 하고 Enter.
 - **안전장치 (11-15 밤 추가):** 전진 · 후진 중 AMCL 자리가 계획 경로에서 **10 cm** 넘게 벗어나면 그 조각을 취소하고 멈춥니다 (`✗ 경로에서 xx cm 벗어남 — 멈춤`). 실물에서 벽에 닿은 S6 (경로에서 24 cm) 때문에 넣은 것입니다.
+- **방향 맞추기 건너뛰기 (11-16 추가):** 조각을 시작할 때 방향 맞추기 (작은 제자리 회전) 를 Nav2 가 거부하면 (`Collision Ahead` · 시간 초과) `· 시작 방향 맞추기 건너뜀 (…)` 을 찍고 조각을 그대로 진행합니다. 예전에는 그 구간이 실패로 끝났습니다.
 
 **중간 구간부터 다시** — 로봇을 그 앞 구간의 정지점에 놓고 `init` 을 붙여 실행합니다 (`init` 이 그 정지점을 AMCL 에 알림):
 
@@ -251,7 +254,7 @@ ros2 launch bringup bringup.launch.py rc100:=true \
 ```
 - 인자 없이 `ros2 launch bringup bringup.launch.py` 가 경기 명령입니다 (하드웨어 + 카메라 · 라이다 · TFmini + 인식 + 위치 추정 (AMCL · loc_monitor) + Nav2 + 계획기 + 미션).
 - `rc100:=true`: 리모컨 사용 (bringup 이 넘겨받아 base_bringup 으로 감).
-- `lidar_front_port` · `lidar_rear_port`: udev 이름이 없어서 라이다 USB 를 직접 줌 (`sensors.launch.py` 로 감).
+- `lidar_front_port` · `lidar_rear_port`: udev 이름이 없을 때만 라이다 USB 를 직접 줌 (`sensors.launch.py` 로 감). `/dev/lidar_*` 가 있으면 두 줄을 빼도 됩니다.
 - `max_wz:=0.5 rotate_wz:=0.5`: 팀 Nav2 의 회전 속도 상한을 규칙 v2 (제자리 ≤ 0.5 rad/s) 로 낮춤. ⚠ 팀 Nav2 는 **제자리 회전 각도 (≤ 90°)** 는 막지 않습니다 (RotationShim 이 경로가 45° 넘게 틀어지면 제자리로 돎).
 - ⚠ 켜질 때 팔이 대기 → 주행 자세로 펴집니다. Nav2 는 `/joint_states` 가 나온 뒤 10 s 뒤에 뜹니다.
 
@@ -304,6 +307,17 @@ src/mission_planner/test/gazebo_mission.sh /tmp/gazebo_mission     # 결과: /tm
 - `Nav2 bringup 실패 (active 2/3)` 가 가끔 남 → 다시 실행.
 - ⚠ 이 스크립트는 끝날 때 `map_server` · `lifecycle_manager` 같은 이름의 프로세스를 모두 끕니다 → **다른 시뮬 · scan_view 와 같이 돌리지 않습니다.**
 - 실측판 미로로 돌리려면 제어 담당 노트북의 `~/Desktop/CartRider/2026-11-15_미로실측/README.md` (실측 SDF 로 덮어쓰기 공간을 만들어 그 터미널에서 실행).
+
+### 11-16 새벽 시뮬 묶음 (팀 전체 미션 12 회 · 주행 시연 9 회)
+
+| 시뮬 | 조건 | 결과 |
+|---|---|---|
+| 팀 전체 미션 (Gazebo + 가짜 팔 · 인식) | 문제 5 가지 (Q1 · 바코드 내림 · 신호 바꿈 · 퍽 섞음 · 무작위 2) × 기본 · 실물형 (위치 감시 켬 + `max_wz:=0.5 rotate_wz:=0.5`) · 실측 벽 · 상자 어긋남 | **12 회 중 10 회 DONE** (646 ~ 957 s) |
+| 실패 1 | 무작위 2 · 실물형 | box1 → box6 서쪽 접근 주행이 3 번 모두 `Controller patience exceeded` → **미션 전체 FAILED** (재시도 2 번 뒤 퍽을 건너뛰지 않음). 같은 조건 다시 · 기본 설정은 DONE → 가끔 나는 실패 |
+| 실패 2 | 무작위 2 · 실측 벽 | 계획기가 60 s 안에 계획을 못 냄 (실측 벽 지도는 쓰지 않기로 함) |
+| Nav2 켜기 | 15 번 중 5 번 다시 켬 | lifecycle 응답 지연 (실물과 같은 종류) |
+| 주행 시연 (계획기 방문 순서 5 가지, 13 ~ 16 구간) | 느린 | 3 개 완주, 1 개 정지점 5.2 cm (계속 감), 1 개는 방향 맞추기 `Collision Ahead` 로 멈춤 → **건너뛰기로 고침** |
+| 주행 시연 (오늘 계획 · 고친 판) | 느린 · 방향 맞추기 모두 거부 강제 | **10/10** · 10/10 (8 번 건너뛰고도 완주, 이탈 멈춤 0) |
 
 ### 11-15 밤 결과
 

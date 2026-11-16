@@ -96,6 +96,16 @@ roles = []
 W = 0   # ⚠ · ❌ 수 → 종료 코드 (bash 요약에 더함)
 
 
+def expected_fw(role):   # 11-16: 저장소 헤더가 기대하는 펌웨어 버전 (주행 = PROTOCOL_VERSION, 팔 = ARM_FW_VERSION 이 있으면 그것, #316)
+    try:
+        t = (SCRIPTS.parent / 'include' / 'opencr_hardware' / 'opencr_protocol.hpp').read_text()
+        pv = int(re.search(r'PROTOCOL_VERSION = (\d+)', t).group(1))
+        m = re.search(r'ARM_FW_VERSION = (\d+)', t)
+        return int(m.group(1)) if (role == 2 and m) else pv
+    except Exception:
+        return None
+
+
 def standby():   # 호스트 on_activate 가 쓰는 대기 자세 범위 (xacro arm_standby_min/max_tick)
     try:
         t = (SCRIPTS.parent / 'urdf' / 'opencr.ros2_control.xacro').read_text()
@@ -140,6 +150,10 @@ for p in sys.argv[1:]:
         print(f'    ❌ {p}: STATE 없음 (펌웨어 · 전원 확인)'); W += 1; continue
     roles.append(st['role'])
     print(f"    ✅ {p}: {ROLE.get(st['role'], '?')} 보드 · fw v{st['fw']} · {n} 프레임/s · 배터리 {st['battery']:.2f} V · err {err_text(st['error'])}")
+    ef = expected_fw(st['role'])
+    if ef is not None and st['fw'] != ef:
+        print(f"    ❌ {ROLE.get(st['role'], '?')} 보드 펌웨어 v{st['fw']} ≠ 저장소 기대 v{ef} — 호스트가 활성화를 거부함"
+              + (" (팔 v6 = 관절 1 π 보정 #316, 팔 담당이 opencr_arm_v6.bin 업로드)" if st['role'] == 2 else "")); W += 1
     if st['role'] == 2:
         arm_report(st)
 if sorted(roles) == [1, 2]:
