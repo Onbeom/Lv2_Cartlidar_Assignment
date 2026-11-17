@@ -28,5 +28,6 @@
 - `placement.csv` — 퍽 속성 · 시작 좌표
 - `allocation_answers.md` · `.json` — 유효 할당 정답 전부
 - `verification.md` — 발제 04 쪽 운영자 검증 ① ~ ④ 결과 (통과)
+- `dice_targets.csv` — 장소별 주사위 눈 배치 좌표 (3×3 격자 ±60 mm, 바닥 Z 70) 와 놓을 퍽 ID
 - `rules.md` — 경기 규칙 · 신호 · 바코드 해석 · 배치 조건 · 100 점 채점표 · 초기화 · 운영
 - `review.md` — 다른 팀 검토 기록
