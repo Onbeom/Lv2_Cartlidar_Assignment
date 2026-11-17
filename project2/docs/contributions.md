@@ -189,76 +189,446 @@
 
 ## 2. 이홍주 (kanichong)
 
-> 아래는 틀만 있다. 내용은 본인이 작성한다.
+> 저장소 기록 (커밋 · PR · 이슈) 으로 정리함 — 본인 확인 필요
+> git 작성자 `kanichong <kanichong1@gmail.com>` (dev 비병합 커밋 79 개), GitHub `kanichong`.
 
 ### 2.1 맡은 일
-(본인 작성 필요)
 
-### 2.2 구현
-(본인 작성 필요)
+| 영역 | 내용 | 주요 파일 |
+|---|---|---|
+| 계획기 | `mission_planner`: 할당 (Y 모양 · ID 전부 나열), 일반화 TSP (Held-Karp), 운영 방식 `per_location` · `single_load` · `hybrid`, 팔레트 칸 배정 (모양 · 막는 쌍), 접근 자세표 · 지도 생성, 회전 범위, 부분 시험 `stop_after`, 제출물 `mission_submit` | `workspace/ros2_ws/src/mission_planner/` |
+| 미션 (plan 모드) | `mission_node` plan 모드 단계 (`observe` · `plan` · `goto` · `pick_target` · `verify` · `measure_box` · `approach_box`), 복귀 기록 · 채점 스크립트, 시작 전 준비 확인 · 퍽 건너뛰기 · HOME 복귀, 떨어뜨림 다시 집기 | `mission/src/mission_node.cpp`, `mission/include/mission/give_up.hpp` |
+| 주행 · 위치 추정 연결 | drive 제자리 회전 skill (`turn_*`), 박스 앞 정차 (`box_park`), 위치 확인 (`loc_gate`), EKF 회전 중심 보정 (`odom_icr`), twist_mux 위치 잃음 잠금, Nav2 통합 실행 · BT 복구 · 한 프로세스 실행 (`nav2_composed`), Gazebo 미션 시험 스크립트 | `control/src/drive_node.cpp`, `bringup/`, `navigation/`, `mission_planner/test/gazebo_*.sh` |
+| 시뮬레이션 모델 | B안 URDF · USD (팔레트 v3 → v5, 증속벨트 → v7, LDS-03 브라켓 v2, joint1 브라켓 v3, 퍽 충돌 형상 · 실측 무게), Isaac 브리지, 실기 ↔ Isaac 모델 비교 시험 | `workspace/urdf_and_usd/`, `tools/isaac_sim/`, `opencr_hardware/test/test_model_compare.py` |
+| 팔 강화학습 · Isaac 평가 | TopPick 학습 환경 (TP2 ~ TP17, 물리 무작위화, 보상 항목 기록), 팔레트 놓기 · 꺼내기 궤적 확인, 고정 동작 집기 평가, 이웃 퍽 · 장소 상자 놓기 평가 | `workspace/urdf_and_usd/policy/manipulator/` |
+| 문서 · 제출물 | 초기 구조 (#1), 중간 제출물, 채점 대응표, 도전 B, TF 규약 | `submission/`, `challenge/B/`, `workspace/docs/frames_tf.md` |
 
-참고 — 병합된 PR 번호 (GitHub 기준, 55 건): #1, #11, #13, #17, #50, #60, #61, #62, #67, #70, #79, #99, #104, #105, #106, #117, #136, #138, #142, #149, #152, #156, #167, #169, #170, #196, #200, #206, #208, #211, #213, #222, #224, #227, #235, #237, #239, #260, #261, #263, #264, #267, #268, #269, #270, #272, #283, #285, #288, #289, #307, #308, #313, #315, #320
+### 2.2 구현 (작성 · 병합된 PR)
 
-### 2.3 검증
-(본인 작성 필요)
+병합된 PR 55 건, 닫힌 PR 0 건.
+
+**계획기 (mission_planner)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#61](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/61) (11-02) | 계획기 새로 씀: 경기장 SDF 에서 지도 2 장 (`map_nav` · `map_amcl`), 접근 자세표, 할당 (Y 모양 · ID 전부 나열), 적재 방식 2 가지, 일반화 TSP (Held-Karp) + A* 경로 비용 | pytest 13 개 (도전 B 형식 할당 6 건 포함). AMCL 모의 위치 오차 평균 16 mm (nav2 기본값 32 mm) |
+| [#79](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/79) (11-03) | 팔레트 12 칸 모두 45° 집기 · 놓기, 열별 속도, 상자 퍽 ±17° 제자리 회전, 접근 간격 조정 | Isaac 놓기 · 꺼내기 24/24, 놓기 173.9 → 157.8 s (CSV S-06) |
+| [#138](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/138) (11-06) | 대기 자리 거리 (standoff) 를 0.01 m 단위로 골라 북쪽 통로에서 갇히지 않게 | 원인 = 통로 0.551 m < 차체 회전 지름 0.563 m. Gazebo 미션 105 단계 DONE ([#135](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/135)) |
+| [#224](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/224) · [#227](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/227) (11-12) | 운영 방식 `hybrid` 기본값 (싣다가 한 장소 퍽이 다 모이면 내림), 같은 박스는 세운 퍽 먼저 | 회의 결정 ([#197 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/197#issuecomment-6811873397)) 반영. 할당 전부 약 0.01 s, 무작위 20 문제 위반 0 |
+| [#235](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/235) · [#237](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/237) (11-12) | 시작 박스 회전 범위 `turn_range_deg`, 싣지 않을 칸 `avoid_slots` | 막히지 않은 박스 8 곳 모두 ±45° 회전 가능 ([#226 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226#issuecomment-6816084117)). `avoid_slots` 는 DRIVE = E2 ([#270](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/270)) 뒤 쓸 필요 없어짐 ([#219 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/219#issuecomment-6855678974)) |
+| [#239](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/239) · [#260](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/260) (11-12 ~ 13) | 칸 배정에 퍽 모양 반영 (`slots.assign`), 꺼내기 막는 쌍 · 모양 벌점 28 m | 무작위 80 문제 hybrid 막힌 꺼내기 33 → 3. 팔 담당 모의 ([#230](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/230)) 를 계획기 조건으로 옮김 |
+| [#261](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/261) (11-13) | 팔레트 v5 (10 칸) · 막는 쌍 v5 · 벌점 분리 (모델 · control 궤적 · 계획기 함께) | 무작위 100 문제 막힌 꺼내기 0, 3 열 사용 0.85 → 0.57 칸. 시험 control 78 · opencr_hardware 104 · 계획기 54 통과 |
+| [#263](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/263) · [#272](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/272) (11-13) | 시작 박스 · 비스듬히 서기 기하 값을 자세표 `geom` 과 `robot_geometry.yaml` 한 곳에서 읽기 ([#262](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/262)) | 숫자가 따로 있어 FINE 거리가 바뀌면 조준점이 1 cm 씩 어긋나던 위험 제거. 옛 자세표는 노드가 거부 |
+| [#269](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/269) (11-13) | 외곽 판정에서 장애물 외곽을 한 번만 계산, `odom_icr` 를 C++ 로 | PC World 33 → 3.2 s. Jetson 실측 (온창범): `ready` 시작 뒤 22.1 s, odom_icr CPU 28 → 6.9 ([#265 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265#issuecomment-6869612498)) |
+| [#211](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/211) · [#167](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/167) (11-09 ~ 11) | 부분 실물 시험 `stop_after`, 제출물 생성 `mission_submit`, 도전 B 비교 | 도전 B: 탐색 6/6, 순차 선택 3/6 ([`challenge/B/`](../../challenge/B/)) |
+
+**미션 (mission_node)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#67](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/67) (11-02) | plan 모드: observe (신호 · 바코드) → `/mission_planner/plan` → 단계 문장 실행, `mission_log.jsonl`, 가짜 로봇 `mock_robot.py` | mock Q1: 85 단계 DONE, skill 거절 → 재시도 뒤 FAILED, 미등록 바코드 → FAILED (CSV S-12) |
+| [#104](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/104) (11-04) | 팔레트 꺼내기를 놓기 궤적 역순으로 (Isaac 확인 순서), 놓기 전 장소 상자 측정 `measure_box`, FINE 자리 그대로 집기 · 놓기 (안 A, `FINE_GAP` 0.1272) | 상자 2 cm · 5° 밀림 mock DONE (CSV S-13). YAML 이 `N` 을 불리언으로 읽어 plan 모드가 안 뜨던 버그도 고침 |
+| [#213](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/213) · [#222](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/222) (11-11) | 복귀 판정 `return_check`, 채점 스크립트 `mission_score`, [`submission/scoring_map.md`](../../submission/scoring_map.md), 재검증에서 한 장소 같은 ID 합침 | [#222](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/222) 는 한상준 리뷰 ([#172 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172#issuecomment-6757717891)) 반영 |
+| [#289](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/289) (11-14) | 시작 전 준비 확인 표 · `/mission/ready`, 재시도 소진 시 그 퍽만 건너뛰기, 그 밖 실패는 HOME 복귀 뒤 FAILED, 경기 명령 기본값 | mock: 한 퍽 거절 → `DONE (skipped: pick 1_1)`, 놓기 거절 → HOME 복귀 FAILED. 11-16 실물 로그에서 준비 확인이 빠진 항목 (계획기 서버 · Nav2 · 위치 추정) 으로 시작을 거절한 판이 남음 ([`results/README.md`](../results/README.md) M-13 · M-17) |
+| [#315](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/315) (11-16) | 들기 뒤 · 운반 중 떨어뜨림도 `target_look` 부터 다시 집기 · 그 퍽만 건너뛰기, 실패 이유 문구가 사라지던 버그 | mock 3 경우 DONE, mission 49 · control 85 통과. 실물 미확인 |
+
+**주행 · 위치 추정 · Nav2 · bringup**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#11](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/11) · [#13](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/13) (10-27) | 주행 skill 장애물 처리, 증속벨트 기어비 · `drive` 인자 | 기어비 루프백 시험 |
+| [#99](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/99) · [#105](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/105) (11-04) | 제자리 회전 skill `turn_p/m<deg>` ([#77](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/77)), `target_look` (45° 집기 전 내려다보고 재기, [#82](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/82)), EKF 회전 중심 옆 이동 보정 `odom_icr` ([#92](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/92)), twist_mux 위치 잃음 잠금 ([#93](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/93)), D435 노출 고정 | 온창범 요청 이슈 [#82](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/82) · [#92](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/92) · [#93](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/93) · [#89](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/89) 처리 |
+| [#117](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/117) · [#136](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/136) (11-05 ~ 06) | 통합 launch 에 plan 미션 · 위치 추정 · 계획기 · Nav2, drive `loc_gate` ([#121](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/121)), `xy_goal_tolerance` 0.05 통일 | Gazebo 미션 연동 시험 (`gazebo_mission.sh`) 시작 |
+| [#142](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/142) (11-08) | Nav2 BT 복사본: 플래너 복구 조건에 GOAL_OCCUPIED 206 등 추가 | 목표 칸이 잠깐 막히면 1 s 만에 중단하던 것. Q1 105 단계 DONE · 재시도 0 (바뀐 복구가 실제로 도는 장면은 못 봄) |
+| [#169](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/169) (11-09) | 박스 앞 FINE 정렬 뒤 낮춘 비상 정지 거리 유지 · navigate 전 후진 (`box_park.hpp`), float32 0.13 거절 수정 ([#168](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/168)) | 한상준 이슈 [#157](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157) 해결. Gazebo `gazebo_box_park.sh` 통과, 한상준이 다시 돌려 확인 ([#157 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157#issuecomment-6761667521)) |
+| [#200](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/200) (11-11) | 빈 장소 상자 앞은 퍽 없이 TFmini 로 접근 (`approach_box`, `AlignBase.box_only`) | 한상준 이슈 [#160](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/160) 해결 |
+| [#152](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/152) · [#208](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/208) · [#268](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/268) (11-09 ~ 13) | Gazebo `loc_monitor` 지도 맞춤, 다시 넣는 자세 이동 보정, Gazebo 도 EKF odom | 다시 넣은 자세 오차 5 ~ 8 cm → 0.8 ~ 2.8 cm. Gazebo 바퀴 odom 이 회전을 21 ~ 24 % 크게 셈을 찾음 ([#151 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/151#issuecomment-6850403088)) |
+| [#283](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/283) (11-14) | 컨트롤러 spawner 하나로 · 시간 초과 늘림, `bringup_repeat.sh`, `/joint_states` 뒤 무거운 노드 띄우기 | 온창범 이슈 [#275](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275): Jetson 30 번 중 25 번 실패 → 온창범 실물 확인 4/4 · 4 판, 무거운 구성 8 판 모두 첫 bringup 4/4 ([#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6893200035), [#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6896389227)) |
+| [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) (11-15) | Nav2 서버 6 개를 한 프로세스 `nav2_composed` 로, 팔 대기 자세 범위 넓힘 ([#305](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/305)) | 온창범 이슈 [#276](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/276). PC Gazebo 5/5. Jetson 무거운 구성 확인은 PR 에 "필요" 로 남음 |
+
+**팔 (control) 쪽 기여**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#106](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/106) (11-04) | 팔레트 놓기 · 꺼내기 처짐 보정 스트리밍 (`sag_comp.hpp`) | mock 팔 bias 0.055 → 0.009 rad |
+| [#170](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/170) (11-09) | `toppick_tilt` 를 위에서 내려오는 접근 (`approach_mode top`) | Isaac 실제 배치 top 84/88 vs 예전 축 접근 48/88 (측정 오차 0) |
+| [#270](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/270) (11-13) | 주행 자세 DRIVE = ALIGN E2, 켤 때 순서 J3 → J2 → J4 → J1, TopPick 칸 퍽 틈 벌점 | 팀 URDF 충돌 상자로 v5 칸 퍽과 틈 계산 (옛 DRIVE −9 mm 겹침 → 새 값 퍽 15 · 차체 23 mm). 이창엽 제안 ([#219](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/219)) 반영 |
+
+**시뮬레이션 모델 · Isaac**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#17](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/17) · [#62](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/62) (10-28 ~ 11-02) | TF · 카메라 프레임 규약 [`frames_tf.md`](../../workspace/docs/frames_tf.md), Isaac Sim 브리지 (관절 · 카메라 3 · 라이다 2 발행), `sensors.launch.py` | 온창범 요청 [#40](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/40) · [#41](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/41) · [#43](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/43) 처리 |
+| [#50](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/50) · [#60](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/60) (11-02) | B안 차체 · 팔레트 v3 URDF · USD, 팔레트 충돌 형상 수정, 놓기 궤적 | 상자 퍽이 칸 바닥 위 13 ~ 20 mm 에 걸리던 문제 해결, 놓기 24/24 |
+| [#149](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/149) · [#156](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/156) (11-09) | 모의 팔 카메라를 실측 보정값 (fx 865.4) 으로, 실기 ↔ Isaac URDF 비교 시험 (FK 프레임 11 개, self-test 7) | 모델 차이를 시험이 잡음 (이후 [#264](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/264) 라이다 24.3 mm 차이 발견) |
+| [#264](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/264) · [#267](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/267) · [#285](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/285) · [#288](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/288) (11-13 ~ 14) | LDS-03 브라켓 v2, 퍽 실측 무게 13 · 17 g · 팔 영점 보정 도구 `arm_calib`, 증속벨트 v7 (1:2.0), joint1 브라켓 v3 | 무게 반영 뒤 고정 동작 집기 σ2 137 → 168/192. 벨트 v7 모의 제자리 회전 69.2° → 47.4° (실물 확인 필요로 적음) |
+
+**팔 강화학습 · Isaac 평가**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#70](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/70) · [#99](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/99) · [#106](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/106) (11-03 ~ 04) | TopPick 보상 항목별 · 종료 원인 기록, 다시 학습 설정 (배치 A · B · C), 물리 무작위화 | 기존 정책 무작위화 끔 23 % · 켬 17 % → 다시 학습 필요 (CSV S-07), TP2 좌표 고정 0/46 (S-08) |
+| [#170](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/170) · [#196](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/196) · [#206](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/206) (11-09 ~ 11) | TP8 · TP9 · TP10 등록, 이어 평가에 다시 쥐기 · 고정 동작 집기 | 고정 동작 집기 172/192 (σ 0) vs TP9 39 · TP8 23 → 미션은 고정 동작 집기로 |
+| [#308](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/308) (11-15) | TP14 ~ TP17 기록, 벌림 50 mm 기본값 | TP14 · TP15 가 61.6 mm 로 잘못 학습된 것을 찾아 버림. TP17 202/384 로 개선 없음 → **RL 집기 학습 멈춤** |
+| [#313](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/313) · [#320](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/320) (11-15 ~ 17) | 팔레트 이웃 퍽 시험 `--neighbors`, 장소 상자 놓기 평가 `--place` | 아래 2.3 |
+
+그 밖의 병합 PR: [#1](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/1) (초기 SYSTEM base 구조, 패키지 뼈대 · 펌웨어 프로토콜 확인 · colcon test 53 개).
+
+### 2.3 검증 (직접 돌린 시험)
+
+원자료: PR 본문 · 이슈 댓글, Isaac 결과 JSON (`workspace/urdf_and_usd/policy/manipulator/` 의 `policies/evals/`, `정책_학습기록.md`), [`project2/results/test-results.csv`](../results/test-results.csv).
+
+**모의 (Gazebo · mock)**
+
+| 시험 | 조건 | 기대 | 실제 | 원자료 | 한계 · 개선 |
+|---|---|---|---|---|---|
+| Gazebo 미션 전체 (Q1) | Nav2 + AMCL + 진짜 drive_node, 팔 · 인식 mock | DONE | 처음 B3:N → L3 에서 갇혀 FAILED → standoff 수정 뒤 105 단계 DONE, goto 18 번 xy 중앙 48 ~ 49 mm, yaw 최대 5.5° | [#135](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/135), [#138](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/138), [#142](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/142), CSV S-14 | 팔 · 인식이 mock 이라 `/drive/align` 실패 ([#160](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/160)) 는 못 잡음 (한상준 지적) |
+| Gazebo 위치 감시 켬 (LOC=1) | `loc_monitor` + twist_mux 잠금 + `loc_gate` | DONE · FAILED 0 | Q1 107 단계 DONE (522 s), LOST:residual 17 번 모두 1.3 ~ 1.5 s 복구 | [#151 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/151#issuecomment-6818481818) | 원인이던 Gazebo odom 회전 과대는 [#268](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/268) 로 따로 고침 |
+| 박스 앞 정차 | `gazebo_box_park.sh`: FINE 0.13 → turn_p17 → turn_0 → navigate | 종료 코드 0 | FINE 6.2 s, turn 0.93° · −0.66°, navigate 18.3 s | [#169](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/169) | 한상준이 같은 스크립트로 재현 ([#157 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157#issuecomment-6761667521)) |
+| 계획기 무작위 문제 | hybrid · per_location, 무작위 80 · 100 문제 | 막힌 꺼내기 0 | v3: 33 → 3 (80 문제), v5: 0 (Q1 + 100 문제) | [#260](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/260), [#261](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/261), [#230 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/230#issuecomment-6849002125) | 모의 칸 쌍 시험 근거. 실물 시험 (#266 4 번) 전 |
+
+**모의 (Isaac)**
+
+| 시험 | 조건 | 기대 | 실제 | 원자료 | 한계 · 개선 |
+|---|---|---|---|---|---|
+| 팔레트 놓기 · 꺼내기 | v3 12 칸 · v5 10 칸, 원기둥 · 직육면체 | 전부 성공 | v3 24/24 (놓기 157.8 s · 꺼내기 137.8 s), v5 24/24, 옆 칸 퍽 (pairs) 56/56 | [#79](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/79), [#261](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/261), [#313](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/313), CSV S-06 · S-30 | 옆 퍽이 밀린 쌍 1_0 ← 1_1 · 1_2 ← 1_3 확인, 1_1 ← 1_0 은 재현 안 됨 → 실물 (#266) 로 넘김 |
+| 퍽 자리 측정 오차 σ 별 집기 | 고정 동작 집기, 192 대 × 시드 2 | — | σ0 98.3 % · σ2 96.1 % · σ3 93.4 % · σ4 84.0 % · σ6 66.3 %. σ3 mm 넘으면 운반 미끄럼 급증 | [#313](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/313), [#266 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/266#issuecomment-6898310022) | 이 결과로 [#315](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/315) (운반 중 떨어뜨림 다시 집기) 를 넣음. 팔 영점 · 링크 길이 오차는 안 넣음 |
+| 장소 상자 놓기 | `--place`, 180 경우 × 시드 2 = 360 회, 5 cm 정차 | 기본 조건 전부 성공 | 기본 360/360 (p50 3.7 mm), σ 2 mm · 2° 353/360, 12.7 cm 정차 360/360, **이웃 8 칸 54/180** | [#320](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/320), [#266 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/266#issuecomment-6933544497), CSV S-31 | 이웃이 다 찬 경우 실패 → 먼 칸 먼저 놓는 순서가 꼭 필요하다는 결론 |
+| TopPick 강화학습 | TP8 ~ TP17, 이어 평가 384 대 | 고정 동작보다 좋음 | TP17 최고 202/384 · 집기 67 ~ 72 % 그대로, 고정 동작 332 ~ 347/384 | [#308](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/308), CSV S-09 | 개선 없어 RL 집기 학습 멈춤 |
+
+**실물**
+
+| 시험 | 조건 | 결과 | 원자료 | 한계 |
+|---|---|---|---|---|
+| 라이다 브라켓 · 퍽 무게 · 대기 자세 거부 | 실물 브라켓 확인 (11-13), 퍽 무게 저울 (원기둥 13 · 직육면체 17 g), 11-15 실물 시작 거부 기록 | xacro · Isaac 모델에 반영, 대기 범위 J1 · J5 넓힘 (18:43 · 19:08 판은 통과, 18:53 J1 96.3° 는 여전히 밖) | [#264](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/264), [#267](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/267), [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) | 직접 돌린 실물 주행 · 미션 시험 기록은 저장소에 없음 |
 
 ### 2.4 리뷰
-(본인 작성 필요)
 
-### 2.5 설명
-(본인 작성 필요)
+**사실 그대로의 집계 (GitHub, 2026-11-17)**
 
-### 2.6 한계
-(본인 작성 필요)
+- 다른 팀원 PR 에 남긴 PR 리뷰: **3 PR** — [#214](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/214) (이창엽, 본문 있는 COMMENTED + 같은 본문 APPROVED), [#284](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/284) · [#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312) (이창엽, "LGTM." 승인). 줄 단위 리뷰 댓글 0 건 (팀 전체 0 건).
+- 다른 팀원 PR 대화 댓글 1 건: [#94 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94#issuecomment-6620155997).
+- 다른 팀원 PR 병합 1 건 ([#284](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/284)).
+- 이슈 댓글 89 건 (이슈 87 · PR 2). 대부분 다른 팀원이 올린 요청 · 문제 이슈에 원인 분석과 처리 결과를 남긴 것이다.
+
+**PR 에 준 의견**
+
+| 대상 PR (작성자) | 문제 · 의견 (요지) | 반영 여부 · 후속 |
+|---|---|---|
+| [#94](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94) (이창엽) — [#94 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94#issuecomment-6620155997) | 팔레트 skill 6 가지: ① 꺼내기가 Isaac 에서 확인한 순서 (놓기 궤적 역순) 와 다름 ② 3 열 꺼내기 속도 0.4 vs 표 0.8 ③ 칸 안에서 끝까지 열면 칸 벽에 닿을 수 있음 (Isaac 은 37.6 mm) ④ 놓은 뒤 0.3 s 머물기 ⑤ STOW J1 91° 회전 ⑥ 궤적 사본 일치 시험 | ①~④ 는 **본인이 [#104](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/104) 로 반영** (꺼내기 역순, 쥔 구간만 0.4, `pallet.release_position` 0.0798 rad, `place_dwell` 0.3 s). ⑤ · ⑥ 은 반영 기록 없음 |
+| [#214](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/214) (이창엽) | ① 옆 퍽 없음 (0, 0) 을 학습에서 본 적이 있는지 (가장 중요) ② 행동 → IK 자세가 학습 환경과 같은지 ③ 정책 로드 실패가 조용함 ④ 관절 속도 상한 2.0 rad/s ⑤ 로그 문구 | ④ 는 [#231](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/231) 에서 정책별 4.0 rad/s 로 반영 (1.4 받은 리뷰). ① · ② 에는 PR 에 답이 없음 |
+
+**이슈 스레드에서 다른 팀원 요청 · 문제를 받아 처리**
+
+| 이슈 (올린 사람) | 의견 · 분석 (요지) | 반영 · 후속 |
+|---|---|---|
+| [#230](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/230) (이창엽) | 칸 배정이 모양을 안 봐 Q1 도 12 개 중 8 개만 맞음 → 모양 · 막는 쌍을 계획기에 넣음. 팔레트 v3 기준이던 값을 v5 로 스스로 [정정](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/230#issuecomment-6849002125) | [#239](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/239) → [#260](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/260) → [#261](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/261) |
+| [#226](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226) · [#193](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193) · [#197](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/197) (온창범) | 박스 접근별 회전 가능 범위 계산 ([#226 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226#issuecomment-6816084117)), 집기 순서는 mission 이 아닌 계획기에 넣는 것이 맞다고 판단 ([#193 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193#issuecomment-6798225562)), 운영 방식은 회의 결정대로 hybrid ([#197 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/197#issuecomment-6811873397)) | [#235](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/235), [#227](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/227), [#224](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/224) |
+| [#219](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/219) · [#220](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/220) (온창범) | 팔꿈치-퍽 겹침에 계획기 우회책 `avoid_slots` 를 먼저 넣고, DRIVE = E2 뒤 필요 없음을 정리 ([#219 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/219#issuecomment-6855678974)). Isaac loaded 판 퍽에 충돌 형상 추가 ([#220 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/220#issuecomment-6812960987)) | [#237](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/237), [#270](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/270), [#227](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/227) |
+| [#157](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157) · [#160](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/160) (한상준) | 박스 앞 정차 잠금 원인 · 안 A 수정 ([#157 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157#issuecomment-6740772654)), 빈 상자 접근을 `approach_box` 로 ([#160 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/160#issuecomment-6783179326)). `AlignBase` 변경이라 Controller 승인 요청 | [#169](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/169), [#200](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/200) |
+| [#275](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275) · [#276](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/276) · [#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265) · [#305](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/305) (온창범) | spawner 파일 잠금 다툼 · 서비스 찾기 지연 원인을 코드로 찾음 ([#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6874209312)), PC 에서 재현 ([#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6875580386)), bt_navigator 활성화 실패 원인 ([#276 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/276#issuecomment-6896179878)), 계획기 시작 계산 · odom_icr 줄임 ([#265 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265#issuecomment-6852688133)) | [#283](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/283), [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307), [#269](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/269). 실물 확인은 온창범이 함 |
+| [#145](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/145) · [#15](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/15) · [#112](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/112) (온창범 · 본인) | 모의 세 곳 팔 카메라 화각 ([#145 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/145#issuecomment-6733107255)), 바퀴 한계를 11.1 V 기준으로 통일 ([#15 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/15#issuecomment-6734881769)), 실기 ↔ Isaac 비교 시험 ([#112 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/112#issuecomment-6734561911)) | [#149](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/149), [#156](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/156) |
+| [#278](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/278) (온창범) | 팔 카메라 장착 · 손눈 보정은 카메라를 쓰는 인지 쪽이 맡는 것이 맞다고 의견 ([#278 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/278#issuecomment-6872592831)) | 온창범이 맡아 [#296](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/296) |
+
+### 2.5 설명 (전체 흐름 이해)
+
+| 근거 | 내가 맡지 않은 부분 | 무엇을 이해 · 판단했나 |
+|---|---|---|
+| 중간 제출물 [`nodes_topics_states.md`](../../submission/midterm/nodes_topics_states.md) · [`test_results.md`](../../submission/midterm/test_results.md) · [`open_issues.md`](../../submission/midterm/open_issues.md) ([#167](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/167)) | 전 패키지 | 노드 구성 · 미션 경로 토픽 그래프 · 상태도 3 개 (실행 상태 · plan 모드 단계 · `loc_monitor`), 전 패키지 단위 시험을 다시 빌드해 실패 0 (perception 199 · control 49 · opencr_hardware 107 · mission_planner 19), 열린 이슈 21 건을 경기 영향 순으로 정리. 온창범 요청 ([#187](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/187)) 에 맞춰 기록 표를 이동 전후 사진 · 미션 폴더로 고침 ([#187 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/187#issuecomment-6768294131)) |
+| [`scoring_map.md`](../../submission/scoring_map.md) ([#213](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/213)) | 채점 · 기록 전체 | 채점표 항목마다 근거 기록 · 만드는 노드 · 경기 뒤 점검 순서를 대응 |
+| [#135](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/135) · [#142](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/142) Nav2 | 주행 (한상준 담당 Nav2 설정) | 북쪽 통로 (0.551 m) 가 차체 회전 지름 (0.563 m) 보다 좁고 대기 자리가 통로 가운데보다 88 mm 남쪽이라 MPPI 가 갇히는 것, 기본 BT 가 GOAL_OCCUPIED 206 을 복구 대상으로 안 보는 것을 Nav2 코드로 확인 |
+| [#283](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/283) · [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) bringup · Nav2 | 브링업 · Nav2 시작 | controller_manager spawner 가 파일 잠금 하나를 같이 쓰는 구조, bt_navigator 가 활성화 때 서버를 못 찾으면 스스로 포기하는 구조를 설치된 Nav2 1.5.0 코드에서 찾음 |
+| [#168](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/168) · [#169](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/169) drive | drive 정렬 (`AlignBase`) | `float32` 0.13 이 0.1299999952 로 와서 `< 0.13` 비교에 거절되던 원인 |
+| [#270](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/270) 팔 | 팔 자세 (이창엽 담당) | 팀 URDF 충돌 상자로 DRIVE · 접기 순서별 퍽 · 차체 틈을 계산해 자세와 순서를 함께 바꿈 |
+
+### 2.6 한계 (저장소 기록으로 본 것)
+
+1. **실물 시험 기록이 적다.** 검증 대부분이 Gazebo · Isaac · mock 이다. 계획기 · plan 모드 미션을 실물로 끝까지 돌린 기록이 없고, 11-16 실물 미션은 observe 단계에서 FAILED 였다 ([`results/README.md`](../results/README.md) M-11).
+2. Jetson 문제를 PC 에서 재현하지 못한 채 병합한 PR 이 있다. [#283](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/283) 은 이후 온창범이 실물로 확인했지만, [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) 의 Jetson 무거운 구성 확인은 기록이 없다. 11-16 로그에도 Nav2 lifecycle 미완으로 시작이 거절된 판이 있다 (M-13, 원인은 가리지 못함).
+3. 강화학습 집기 (TopPick) 는 TP17 까지 고정 동작 집기보다 나아지지 않아 멈췄다 ([#308](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/308)). 고정 동작 집기 · 장소 상자 놓기 수치도 모의다.
+4. PR 리뷰는 3 PR, 그중 본문이 있는 것은 [#214](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/214) 하나다. 의견은 대부분 이슈 댓글로 남겼다.
+5. 몇 이슈 댓글에 커밋 해시 대신 `<해시>` 자리표시가 남아 있다 ([#77](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/77) · [#78](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/78) · [#89](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/89)). 모델 파일이 든 큰 PR ([#50](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/50) +60,193 / −540,953, [#261](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/261), [#196](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/196)) 은 코드 변경을 따로 보기 어렵다.
+6. 실측 이슈 [#87](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/87) (TFmini 보정) · [#266](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/266) (바퀴 · 팔 영점 · 팔레트 v5 실물 확인) 이 열려 있다.
 
 ---
 
 ## 3. 온창범 (Onbeom)
 
-> 아래는 틀만 있다. 내용은 본인이 작성한다.
+> 저장소 기록 (커밋 · PR · 이슈) 으로 정리함 — 본인 확인 필요
+> git 작성자 `onchangbum <dhsckdqja@gmail.com>` (dev 비병합 커밋 144 개), GitHub `Onbeom`.
 
 ### 3.1 맡은 일
-(본인 작성 필요)
 
-### 3.2 구현
-(본인 작성 필요)
+| 영역 | 내용 | 주요 파일 |
+|---|---|---|
+| 인지 | 퍽 검출 · 카메라 사이 병합, 장소 태그 · READ_TAG, 신호등 순서, 바코드 (R3) 찾기 · 읽기, 주사위 확인, 팔 정렬 목표 잠금 · `/arm_range`, 장소 상자 윗면 `place_box` (팔 · 앞 D435), 뒤 D435 장애물 `rear_obstacle`, TFmini 끊김 | `workspace/ros2_ws/src/perception/` |
+| YOLO 배포 | 4 클래스 후처리, 엔진 D → E2 → E3, 팔 전용 엔진, 엔진 해시 검사, 배포 모델 원본 | `perception/config/perception.yaml`, `perception/models/yolo/` |
+| 퍽 측량 (B0) | 등록부 · 다시 보기 · 위치 상태 확인 · 좌표계 | `workspace/ros2_ws/src/perception_survey/` |
+| 위치 추정 | `localization` 패키지 (`loc_monitor` · 차체 가림 · 스캔 합치기 · AMCL 설정), C++ 판 | `localization/`, `perception/src/loc_*` |
+| 센서 · TF · bringup | 실물 TF (B안 기준, IMU 요, D435 피치, 라이다 요 180°), 팔 Arducam 드라이버 · 보정 · 180° 회전 · DDS, udev | `opencr_hardware/urdf/robot.urdf.xacro`, `bringup/launch/sensors.launch.py`, `perception/udev/` |
+| 미션 통합 일부 ([#172](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172)) | 재검증 ID 기록, 이동 전후 사진 · 미션 폴더, plan 기본값, 측량 pose 전달, 시작 박스 재기 | `mission/` |
+| 누운 직육면체 세우기 ([#192](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/192) · [#193](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193)) | Isaac 학습 코드, `lie_upright` 스킬, 정책 r2g2 | `policy/manipulator/lie_*`, `control/include/control/lieupright.hpp` |
+| 실물 Jetson 측정 | 정지 CPU 분석, spawner · Nav2 실패 기록, Cartographer 지도 시도 | 이슈 [#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265) · [#275](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275) · [#276](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/276) · [#317](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/317) |
 
-참고 — 병합된 PR 번호 (GitHub `Onbeom` 기준, 91 건): #2, #3, #5, #7, #8, #9, #16, #18, #19, #21, #22, #23, #24, #25, #26, #27, #28, #29, #32, #33, #42, #44, #45, #46, #47, #48, #51, #54, #56, #57, #58, #68, #72, #80, #90, #91, #95, #96, #97, #100, #102, #103, #120, #122, #123, #124, #125, #126, #129, #130, #131, #137, #140, #146, #147, #148, #150, #153, #158, #159, #162, #164, #171, #174, #175, #176, #180, #181, #182, #186, #198, #203, #210, #212, #215, #217, #223, #228, #232, #234, #240, #247, #250, #252, #253, #256, #280, #296, #304, #309, #310
+### 3.2 구현 (작성 · 병합된 PR)
 
-### 3.3 검증
-(본인 작성 필요)
+병합된 PR 91 건, 닫힌 PR 1 건 ([#52](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/52) → [#56](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/56) 에 포함).
+
+**인지 — 검출 · 판정 (주로 모의 렌더로 확인)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#2](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/2) · [#3](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/3) · [#5](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/5) (10-23 ~ 26) | 영상 토픽 입력으로 재구성, 라이다 합치기 · TFmini 비상 정지, 퍽 · 장소 태그 · 신호등 · 주사위 인지, 바코드 찾기 · 읽기 C++ 이식 | Isaac 렌더: 퍽 검출 99.3 % · 장소 태그 100 % · 주사위 72/72. 바코드 C++ ↔ Python 3,936 장면 일치 |
+| [#7](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/7) · [#8](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/8) · [#19](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/19) · [#29](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/29) (10-26 ~ 11-01) | 퍽 병합 같은 색 일대일 · 앞뒤 중복 제거, READ_TAG 장소 태그, 팔 정렬 목표 잠금 · 가림 뒤 재획득, 퍽 모양 판별 보완 | B0′ 판정 24 회 0/24 → 24/24 · 288/288 칸, 틀린 완료 0 |
+| [#26](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/26) · [#27](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/27) · [#28](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/28) (11-01) | 신호등 자리 고정 전 이력 복원, 바코드 회전 후보 읽기, 따뜻한 조명 색별 문턱 | 렌더 R1 320/320 · R2 100/100 · R2′ 40/40, R3′ 72/72 (CSV S-01 ~ S-03) |
+| [#22](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/22) · [#23](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/23) · [#25](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/25) · [#32](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/32) · [#33](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/33) · [#42](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/42) (11-01) | YOLO 4 클래스 색 · 모양 대응 · 후처리, 촬영 시각과 먼 TF 안 쓰기, 잘못된 camera_info 거부, 차체 · 집게 안 퍽 빼기, TFmini 끊기면 거리 안 내기 | TFmini 선이 빠져도 비상 정지가 풀린 채 남던 문제: 끊김 0.28 s 뒤 정지 (가짜 시리얼) |
+| [#47](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/47) · [#97](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/97) (11-02 ~ 04) | D435 바코드 찾기 기본값을 판정 7 차 통과 설정과 맞춤, 앞 · 뒤 D435 는 촬영 시각 TF 가 온 장을 고름 | C++ ↔ Python 816 장면 위치 차 0.0 mm (CSV S-04). 촬영 시각 TF 를 쓴 비율 0.044 ~ 1.0 → 모두 1.0 (모의) |
+| [#181](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/181) (11-10) | 신호등 빨강 · 노랑을 켜진 칸 높이로 가름 | **실물 Jetson 연습 신호등**: 고치기 전 빨강 6 개를 노랑으로 → 무작위 12 회 여러 판 모두 정답, 약 25 s 에 첫 묶음 확정 |
+| [#72](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/72) · [#223](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/223) · [#228](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/228) · [#234](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/234) · [#250](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/250) (11-03 ~ 13) | 장소 상자 윗면 (중심 · 요 · 칸 9 개) 팔 · 앞 D435 측정, 화면 밖 후보 제외, 카메라 높이 오차에 강하게, 배율 후보 줄임 | 렌더 120/120 (중심 최대 0.68 mm), 앞 D435 240/240, 높이 ±1 cm 에서 95.4 → 0.66 mm. Jetson 처리 시간 p95 4.77 s 를 보고 배율 5 → 3 |
+| [#45](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/45) · [#58](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/58) · [#68](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/68) · [#95](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/95) (11-02 ~ 04) | 뒤 D435 후방 장애물, 팔 카메라 평면 교차 예비 거리 · `/arm_range` 세 번째 출처, 상자 퍽 면 요 정의 ([#81](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/81)) | 후방 렌더 350/350 · 헛검출 0. 면 요 최대 0.617° |
+
+**인지 — 팔 카메라 · 실물 (Jetson)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#130](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/130) · [#131](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/131) (11-06) | 바코드 라벨 찾기 · 막대 방향 흐림, 태그 줄여 찾기 · 바닥 무늬 문턱 | 실물 바코드 1 차 0/1038 → 4 라벨 499 장 100 %, p95 64.8 ms (CSV R-02 ~ R-04). 태그 15 종 1.000 |
+| [#140](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/140) · [#146](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/146) · [#147](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/147) · [#148](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/148) · [#150](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/150) (11-08 ~ 09) | Arducam 드라이버를 OpenCV 노드 1280×720 으로, 실측 보정 파일 · 기본값 ([#143](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/143)), 180° 돌려 발행, 공유 메모리 32 MB, V4L2 버퍼 2 개 | usb_cam 세그폴트 해결. 보정 RMS 0.203 px. 팔 영상 5 구독 5.4 → 15.3 Hz, 드라이버 15.3 → 30.5 Hz |
+| [#158](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/158) · [#159](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/159) · [#171](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/171) · [#180](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/180) (11-09 ~ 10) | 팔 영상 촬영 시각 TF 잠깐 기다림, READ_TAG 검색 한 번으로, 태그 검색 단축 · 둘레 추적 · 놓친 장 다시 찾기 | Jetson: ARM_ALIGN 10.1 → 14.7 Hz, 태그 없는 장면 4.1 → 14.5 Hz, 실물 J1 왕복 녹화 9 판 잃음 0 |
+| [#296](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/296) (11-15) | 팔 카메라 자세별 실측 보정 ([#278](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/278)), 기본 꺼짐 | 보드 사진 맞춤 뒤 높이 잔차 ≤ 1.2 mm. 켜는 조건을 yaml 에 적음 |
+
+**YOLO 배포**: [#80](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/80) · [#96](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/96) · [#100](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/100) · [#103](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/103) · [#120](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/120) · [#126](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/126) · [#210](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/210) — 엔진 D → E2 → E3 (YOLO 파트 경기장 판정 근거, 팔 0.871 → 0.956), 팔 전용 384 엔진, 팔 검출기 기본 YOLO, 해시 파일 대조로 변조 엔진 거부, 배포 원본 (pt · ONNX · SHA256SUMS) 저장소 보관.
+
+**퍽 측량 (perception_survey)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#18](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/18) · [#21](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/21) · [#24](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/24) (10-30 ~ 11-01) | 시작 박스 퍽 등록부 (ID · 색 · 모양 · 위치, 중복 · 충돌 거부), 태그 관측 문턱 분리, launch 연결 | 6 월드 72/72, 모의 통합 6/12 → 12/12 칸 |
+| [#44](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/44) · [#90](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/90) (11-01 ~ 03) | 측량 좌표계를 발제 좌표로 (`mission_map` → localization 에 맞춰 `map`) | 옛 설정 0/24 → 24/24 |
+| [#48](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/48) · [#51](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/51) · [#54](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/54) · [#57](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/57) (11-02) | 위치 추정 OK 아닐 때 관측 버림, 색 · 모양은 팔 태그 우선 · 모양은 팔 태그로만, 문제 칸만 다시 보기 `/perception/survey/revisit` | 후보 C 23/24 → 24/24. 다시 보기는 이창엽 [#94](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94) 에서 mission 이 씀 |
+
+**위치 추정 (localization)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#91](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/91) (11-03) | `localization` 패키지: `loc_monitor` (위치 잃음 감지 · 다시 찾기, `/localization/status` · `lock`), 지도, AMCL 입력, AMCL 설정 | Isaac K1 (정지 중 0.20 m · 10° 강제 이동): 0.52 s 감지, 다시 찾은 오차 0.0156 m |
+| [#102](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/102) · [#129](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/129) · [#256](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/256) (11-04 ~ 13) | 콜백 안 TF 기다림 막힘, 멈춰 있을 때 거짓 LOST, 실물 라이다 점 수 399 · 400 변화에 죽던 것 | Jetson: loc_monitor CPU 47 → 33 %, Gazebo LOST:gap 40 → 0 |
+| [#310](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/310) (11-15) | 위치 추정 노드 셋 C++ 판 (`loc_cpp` 기본), 퍽 조사 TF 필요할 때만 ([#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265)) | Jetson 실물: 셋 합 CPU 66.8 → 10.5 (코어 하나 = 100), 재생 비교 상태 순서 같음 |
+
+**센서 · TF · bringup**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#56](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/56) · [#46](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/46) · [#162](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/162) · [#164](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/164) (11-02 ~ 09) | 실물 TF 를 기준 모델 B안에 맞춤 (IMU · TFmini · LDS · D435 · Arducam 부모 link5), 라이다 차체 상자, 실물 IMU 요 −90° | 실물 보드: 앞 들기 y + · 반시계 ωz + 확인 |
+| [#240](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/240) · [#253](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/253) · [#304](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/304) (11-12 ~ 15) | 앞 · 뒤 D435 피치 실측값, 실물 라이다 요 180° ([#303](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/303)) | 앞 D435 PnP 세 번 평균 −2.59° → 남은 피치 +0.09°. 0.85 m 앞 상자 9.6 cm 틀리던 것. 라이다는 상자 가림 시험으로 확인 |
+| [#182](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/182) · [#252](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/252) · [#280](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/280) · [#309](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/309) (11-10 ~ 15) | D435 시리얼 기본값, udev 실제 값 · 허브 칸 기준, TFmini 노드 두 번 뜨던 것 | 실물 신호등 시험에서 앞 · 뒤 카메라가 바뀌어 열리던 문제, `/dev/lidar_*` 가 허브를 옮길 때마다 사라지던 문제 |
+| [#9](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/9) · [#153](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/153) (10-27 · 11-09) | `use_sim_time` 전달, Gazebo 팔 카메라 주점 | — |
+
+**미션 통합 (인지 담당이 [#172](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172) 로 맡음)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#174](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/174) · [#175](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/175) · [#186](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/186) (11-10) | verify 장소별 퍽 ID · 위치 기록, 기본 실행을 plan 미션으로, 이동 전후 팔 카메라 사진 · 미션별 폴더 | 발제 '이동 후 검증 8 점' · '이동 전후 이미지' 기록이 생김. mock 미션 DONE · 27 장 |
+| [#198](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/198) · [#247](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/247) · [#232](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/232) (11-11 ~ 13) | 측량 pose 를 등록표로 ([#193](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193)), 시작 박스를 앞 D435 로 재서 회전각 · `target_look` 맞추기 (기본 꺼짐, [#226](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226)), `box_look` 7 필드 | mock 9 경우 모두 DONE, target_look 자리 참 퍽과 0.07 mm. #232 는 이창엽 확인 뒤 병합 |
+
+**누운 직육면체 세우기 ([#192](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/192) · [#193](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193))**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#215](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/215) (11-11) | Isaac 학습 환경 `Waffle-LieUpright` B ~ B7, 평가 · 진단 도구 | 정책을 노드와 같은 관측 · 속도 축소 · 놓음 규칙으로 학습 |
+| [#203](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/203) · [#212](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/212) · [#217](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/217) (11-11) | `manipulator_node` 스킬 `lie_upright`, 관절 속도 비율 축소 · 상자 보기 자세 · 놓음 기준, 정책 r2e → r2g2 | 관절마다 자르면 3.0 rad/s 79.4 % → 비율 축소 95.4 %. r2g2 정책 단계 98.9 % (모의). C++ ↔ Isaac 315 스텝 관측 1.2e-6 일치 |
+
+그 밖의 병합 PR: [#16](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/16) · [#176](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/176) (.gitignore), [#122](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/122) · [#123](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/123) (주석), [#124](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/124) (`arm.align_point`, [#14](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/14)), [#125](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/125) (동작 안 하는 mock 시험 삭제), [#137](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/137) (requirements).
+
+### 3.3 검증 (직접 돌린 시험)
+
+원자료: PR 본문 · 이슈 댓글, [`test-results.csv`](../results/test-results.csv). Jetson 측정 원본은 Jetson `~/real_drive/` 아래에 있다고 댓글에 적혀 있고 저장소에는 없다.
+
+**실물**
+
+| 시험 | 조건 | 기대 | 실제 | 원자료 | 한계 · 개선 |
+|---|---|---|---|---|---|
+| 바코드 판독 | Jetson, 팔 Arducam 1280×720, 약 10 cm, 로봇 없이 | 라벨별 ≥ 90 %, 틀림 0, p95 ≤ 1000 ms | 1 차 0/1038 → 고친 뒤 4 라벨 499 장 100 %, p95 64.8 ms. 손 · 구부림 1025/1038 | [#130](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/130), CSV R-02 ~ R-04 | 로봇에 붙인 출발 자세 시험은 미수행 (R-05), 11-16 경기에서 관측 못 함 (M-12) |
+| 태그 퍽 → `/perception/pucks` | Jetson, READ_TAG, 30 s, 태그 5 번 퍽 | base_link 위치로 나옴 | 103/103, 흔들림 p95 0.37 mm, 색 · 모양 맞음. 퍽 윗면 높이 계산 157.5 vs 실측 130 mm | [#143 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/143#issuecomment-6735636307) | 약 3 cm 높이 차이를 팔 FK 쪽으로 보고 [#278](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/278) · [#295](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/295) 로 이어 감 |
+| 신호등 | Jetson, 앞 D435 약 0.66 m, 연습 신호등 12 회 무작위 | 정답 순서 확정 · 틀린 확정 0 | 고치기 전 빨강 6 개를 노랑 → 고친 뒤 여러 판 모두 정답, 첫 묶음 약 25 s | [#181](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/181) | 경기장 실물 조명 · 거리 판정은 아님 (CSV R-01 은 11-09 기준 미수행) |
+| 팔 카메라 주기 | Jetson, D435 두 대 함께 | 30 Hz | 15.3 → 30.5 Hz, 5 구독 5.4 → 15.3 Hz | [#148](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/148), [#150](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/150) | 인지 · YOLO 를 함께 돌린 부하는 따로 |
+| 센서 TF 실측 | 앞 · 뒤 D435 (PnP · 깊이 평면), IMU 원시값, 라이다 상자 가림 | 기준 ≤ 0.28° | 앞 남은 피치 +0.09° · +0.16°, 뒤 +0.19 · +0.18°, 라이다 요 약 180° 틀림 확인 · 수정 | [#240](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/240), [#253](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/253), [#162](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/162), [#304](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/304) | 요는 판 정렬이 ±2° 흔들려 못 잼 |
+| 주행 S1 · 팔 M4 | 11-10 바퀴 키보드 조종 · E-stop, 관절별 0.1 rad 이동 | 기준표 | S1 바퀴 방향 4/4 · E-stop 0.124 · 0.145 s 에 멈춤 · 조종 끊김 0.601 s. M4 도달 오차 ≤ 0.013 rad | [#183](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/183), [#178 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/178#issuecomment-6851503264) | S2 · S3 · S6 은 바퀴 담당에게 넘김 |
+| 직진 옆 미끄럼 | 카펫, 0.05 m/s, 바닥 태그 판 PnP 16 구간 | — | 오른쪽 약 2.35° (1 m 에 약 4 cm) | [#248](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/248) | 바닥 경사와 로봇 원인을 아직 못 가름 (열림) |
+| Jetson CPU · bringup | 정지 5 분, 인지 모드 7 | — | 정지 CPU 94.8 % 를 담당별로 나눠 요청 → 계획기 수정 뒤 82.8 %, 위치 추정 C++ 66.8 → 10.5, spawner 수정 뒤 4/4 × 4 판 · 무거운 구성 8 판 모두 4/4 | [#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265), [#265 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265#issuecomment-6869612498), [#310](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/310), [#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6893200035), [#275 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275#issuecomment-6896389227) | 로봇이 미로 밖이라 위치 추정이 LOST 인 상태의 부하 |
+| 실물 Cartographer 지도 | 11-14 · 11-16 미로 bag, PC 오프라인 | 실물 ↔ SDF 벽 5 cm 안 70 % 이상 (미리 정함) | 최고 58 % · 43 %, 11-16 bag 17 ~ 30 % · 8 ~ 12 % → **기준 미달, 시연은 SDF 지도** | [#317](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/317) | 바퀴 odom 회전이 IMU 보다 1.32 배, 원인 미확인 |
+
+**모의 (Isaac 렌더 재생 · mock)**
+
+| 시험 | 조건 | 기대 | 실제 | 원자료 | 한계 |
+|---|---|---|---|---|---|
+| 신호 · 바코드 | 3000 K · 6500 K 렌더, R3 판정 7 차 렌더 | 기준표 | R1 320/320 · R2 100/100 · R2′ 40/40, R3 벽 92/92 · 윗면 45 ~ 46/46 · 위치 ≤ 3.44 mm | [#28](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/28), [#26](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/26), [#47](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/47), CSV S-01 ~ S-04 | 렌더 · AWB 흉내로 정한 문턱 |
+| 퍽 측량 B0′ | 6 월드 × 조명 4 = 24 회, YOLO 엔진 | 24/24 · 틀린 완료 0 | 24/24 · 288/288, 중심 최대 4.92 ~ 6.07 mm (엔진 · 판마다) | [#29](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/29), [#51](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/51), [#120](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/120) | 위치는 저장된 FK · 항등 map → odom |
+| 누운 직육면체 세우기 | Isaac 512 대 × 시드 3 | 95 % 이상 | r2g2 정책 단계 98.9 %, 미션 순서 칸 넣기까지 80.5 % (r2e 기준) | [#212](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/212), [#217](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/217), [#192 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/192#issuecomment-6782880369) | 실물 미확인 (11-16 로그에서 r2g2 로드만 확인됨, 1.4 표 #192 · #193 행) |
 
 ### 3.4 리뷰
-(본인 작성 필요)
 
-### 3.5 설명
-(본인 작성 필요)
+**사실 그대로의 집계 (GitHub, 2026-11-17)**
 
-### 3.6 한계
-(본인 작성 필요)
+- 다른 팀원 PR 에 남긴 PR 리뷰: **1 PR** — [#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312) (이창엽, COMMENTED 반려 의견). 줄 단위 리뷰 댓글 0 건.
+- 다른 팀원 PR 대화 댓글 1 건: [#94 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94#issuecomment-6619011743). 다른 팀원 PR 병합 0 건.
+- 이슈 댓글 59 건 (이슈 54 · PR 5). 직접 연 이슈가 많다 (요청 · 측정 결과 · 계산 공유, 2.4 · 4.4 의 상대 이슈 다수).
+
+**PR 에 준 의견**
+
+| 대상 PR (작성자) | 문제 · 의견 (요지) | 반영 여부 · 후속 |
+|---|---|---|
+| [#94](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94) (이창엽) — [#94 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/94#issuecomment-6619011743) | `registered` 모드에서 측량이 실패해도 지난 실행 결과로 계획될 수 있음, `survey.poses` 가 계획기 파일 복사본이라 어긋날 수 있음 | **반영** (이창엽 a573322: 측량 시작 때 지난 등록표 삭제, `approach_poses.yaml` 직접 읽기 — 1.4 받은 리뷰) |
+| [#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312) (이창엽) | CPU 0.68 % 변화는 의미 없으니 반려 | **반영 안 됨** — 한상준이 승인 · 병합, 합의 기록 없음 |
+
+**이슈 스레드에서 준 의견 → 다른 팀원 코드 반영**
+
+| 이슈 | 문제 · 의견 (요지) | 반영 · 후속 |
+|---|---|---|
+| [#219](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/219) · [#218](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/218) · [#154 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/154#issuecomment-6792349716) | DRIVE · ALIGN 자세에서 팔꿈치가 팔레트 가운데 줄 퍽과 겹침, ALIGN_A 가 차체에 닿음 (계산 · Isaac). 계산 도구의 base_footprint 6.75 mm 오류를 스스로 [정정](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/218#issuecomment-6808331964) | 이홍주 [#237](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/237) (우회) → [#270](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/270) DRIVE = E2, 이창엽 [#231](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/231) ALIGN = E2 |
+| [#220](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/220) | Isaac 퍽 실은 판에 퍽 충돌 형상이 없어 팔-퍽 충돌을 못 잡음 | 이홍주 a1cea6e ([#227](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/227)) |
+| [#226](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226) | 상자가 돌면 퍽 면과 J1 → 퍽 방향이 어긋남. 제안 흐름 '기본각 + β' 는 방향이 반대임을 계산 ([#226 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/226#issuecomment-6821994172)) | 이홍주 [#235](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/235), 본인 [#247](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/247), 이창엽 #226 모의 (1.4) |
+| [#197](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/197) · [#193](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/193) | 계획기 기본 `per_location` 이 회의 결정과 다름, 누운 퍽 순서 · 스킬 이름 | 이홍주 [#224](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/224) hybrid, [#227](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/227) |
+| [#259](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/259) · [#277](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/277) · [#305](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/305) | 팔 관절 3 토크 꺼짐 · 모터별 HW 오류 요청, STOW 접기 충돌 · HOLD 가 막힌 목표 유지, 대기 자세 범위 | 이창엽 [#284](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/284) · [#286](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/286), 이홍주 [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) |
+| [#275](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/275) · [#276](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/276) · [#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265) | Jetson spawner 실패율 · bt_navigator 실패 · 정지 CPU 를 실물로 재고 담당별로 나눠 요청 | 이홍주 [#283](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/283) · [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) · [#269](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/269), 이창엽 [#299](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/299) · [#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312). 고친 뒤 실물 재측정도 본인 |
+| [#49](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/49) | 4 륜 스키드 회전 보정 측정 방법 · 스크립트 제공 ([#49 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/49#issuecomment-6733288198)) | 한상준이 측정 체크 목록으로 모음 ([#49 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/49#issuecomment-6757608581)) |
+| [#141](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/141) · [#128](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/128) | 집기 넘어뜨림 · 쥐는 깊이 제안, 팔 카메라로는 손 안 퍽이 화면 밖이라 잴 수 없다는 답 ([#128 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/128#issuecomment-6729719064)) | 부분 반영: 이홍주 [#206](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/206) 퍽 밀림 벌점 (1.4) |
+
+### 3.5 설명 (전체 흐름 이해)
+
+| 근거 | 내가 맡지 않은 부분 | 무엇을 이해 · 판단했나 |
+|---|---|---|
+| [#265](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/265) 정지 CPU 표 | 전 노드 | 프로세스별 CPU 를 담당자별로 나눈 표 (perception 104 · 카메라 101 · control 48 · Python 보조 120 …) 를 만들어 각자 줄일 곳을 요청 |
+| [#184](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/184) S7 실물 미션 시험 계획 | 전 파트 | 미션 전체 (관측 → 측량 → 계획 → 집기 · 놓기 → 재검증 → 복귀) 를 막는 이슈를 파트별로 정리 |
+| [#172](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172) · [#174](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/174) · [#186](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/186) · [#247](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/247) | mission (이창엽 · 이홍주 코드) | 인지 담당이 mission_node 에 재검증 기록 · 사진 · 시작 박스 재기를 넣음. 남의 코드를 고친 부분은 PR 본문에 리뷰 요청을 적음 ([#198](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/198), [#203](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/203)) |
+| [#203](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/203) · [#212](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/212) | manipulator_node (이창엽 코드) | 스킬 연결 줄만 바꾸고 계산을 `lieupright.hpp` 로 분리, Isaac 기록과 스텝마다 비교 |
+| [#303](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/303) · [#304](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/304) | 라이다를 쓰는 모든 노드 | TF 를 거치는 소비자 (scan_merger · AMCL 입력 · 차체 가림 · loc_monitor · costmap · collision_monitor) 를 모두 확인하고 실물에만 적용 |
+| 문서 | 인터페이스 · 패키지 | `docs/interfaces.md` 면 요 정의 ([#95](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/95)), [`localization/README.md`](../../workspace/ros2_ws/src/localization/README.md), [`perception_survey/README.md`](../../workspace/ros2_ws/src/perception_survey/README.md), YOLO 모델 README ([#210](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/210)) |
+
+### 3.6 한계 (저장소 기록으로 본 것)
+
+1. 인지 수치 대부분이 **모의 렌더 재생** 이거나 **로봇에 붙이지 않은 실물** (카메라만 PC · Jetson 에 연결) 이다. 로봇 장착 출발 자세 바코드 판정은 미수행 (CSV R-05) 이고, 11-16 경기에서 신호 · 바코드를 관측하지 못했다 (M-12).
+2. [#131](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/131) 의 태그 수치는 "결과를 본 뒤 정리한 자료" 라고 본인이 PR 에 적었다 (tag03 은 일부 장만 셈).
+3. 팔 카메라 높이가 FK 와 약 3 cm 다른 문제는 자세별 보정 [#296](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/296) (기본 꺼짐) 까지이고, 손눈 보정 [#278](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/278) · 링크 길이 [#295](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/295) 는 열려 있다.
+4. 실물 Cartographer 지도는 기준 미달이었다 ([#317](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/317)). SDF 지도와 실물 미로 차이도 재지 못했다. 11-16 로그에서 위치 추정이 RECOVERING · FAILED 로 시작이 거절된 판이 있다 ([`results/README.md`](../results/README.md) M-10 · M-13 · M-17).
+5. 누운 직육면체 세우기 (r2g2) 는 모의만이다.
+6. PR 리뷰는 1 건 (반려 의견) 이고 반영되지 않았다. 의견은 주로 직접 연 이슈로 냈다.
 
 ---
 
 ## 4. 한상준 (WindForce08)
 
-> 아래는 틀만 있다. 내용은 본인이 작성한다.
+> 저장소 기록 (커밋 · PR · 이슈) 으로 정리함 — 본인 확인 필요
+> git 작성자 `WindForce08 <hsj38038@gmail.com>` (dev 비병합 커밋 30 개), GitHub `WindForce08`.
 
 ### 4.1 맡은 일
-(본인 작성 필요)
 
-### 4.2 구현
-(본인 작성 필요)
+| 영역 | 내용 | 주요 파일 |
+|---|---|---|
+| OpenCR 펌웨어 | 프로토콜 v5 (팔 HOLD · REARM · FAULT), 4 륜, 보드 역할별 빌드, 팔 벤치 이식 (범위 · 게인 · 그리퍼 막힘 보호), 바퀴 속도 한계, 보드별 배터리 경고, RC-100 리모컨 | `workspace/ros2_ws/src/opencr_firmware/` |
+| opencr_hardware 호스트 | `backend` 선택 (opencr · mock · isaac), 팔 대기 자세 검사, 팔 벤치 도구 `opencr_arm_tool.py`, 펌웨어 SIL 시험 | `opencr_hardware/src/`, `opencr_hardware/test/`, `opencr_hardware/scripts/` |
+| 주행 (Nav2) | `navigation` 패키지 (Smac 2D · RotationShim + MPPI), 출발 자세 통일, 후진 때 뒤 카메라, footprint, 속도 한계 인자 · 시작 지연 · 모서리 대책, 실물 기본 지도, 실물 첫 실행 문서 | `workspace/ros2_ws/src/navigation/` |
+| 주행 도구 | Isaac 주행 RL `drive_rl`, 규칙 v2 주행 시연 `drive_demo` (경로 이탈 멈춤 · 되찾기) | `workspace/tools/drive_rl/`, `workspace/tools/drive_demo/` |
+| 팔 벤치 (초기) | 팔 OpenCR 단독 시험, 슬라이더 · 모니터 · pick RL task | `workspace/tools/arm_bench/`, `workspace/docs/arm_bench_test_2026-10-2*.md` |
 
-참고 — 병합된 PR 번호 (GitHub 기준, 16 건): #6, #12, #76, #115, #155, #163, #166, #179, #207, #241, #257, #258, #302, #306, #318, #319
+### 4.2 구현 (작성 · 병합된 PR)
 
-### 4.3 검증
-(본인 작성 필요)
+병합된 PR 16 건, 닫힌 PR 0 건.
+
+**펌웨어 · opencr_hardware**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#6](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/6) (10-26) | 펌웨어 프로토콜 v5: 팔 HOLD / REARM · FAULT (멈춰도 토크 유지, 리셋으로만 재개), 4 륜 (ID 1 ~ 4), 보드 역할 지정 빌드 | SIL 시험 77 건 통과. 인터페이스 변경은 [`opencr_v5_change_request.md`](../../workspace/docs/opencr_v5_change_request.md) 로 승인 요청 |
+| [#12](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/12) (10-27) | 팔 벤치 펌웨어 이식: 관절 범위 · 게인 · 그리퍼 막힘 보호 (`GripGuard`), 벤치 도구 · pick RL task | 10-27 실기 시험 결과 반영 (4.3) |
+| [#76](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/76) (11-03) | bringup `backend` 인자 (opencr · mock · isaac), 잘못된 불리언 인자 거부, diff_drive 6.x 에서 무시되던 감속 한계 이름 수정 | 장치 없이 mock 으로 컨트롤러 · twist_mux · e_stop 확인 가능. colcon test 92 건 실패 0 |
+| [#166](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/166) (11-09) | 팔이 대기 자세 범위 밖이면 활성화 거부 (토크 · 명령 없이), 실물 첫 실행 문서 | 켤 때 팔이 튀는 것을 막음. 새 시험 6 개 · opencr_hardware 115 개 통과 ([#166 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/166#issuecomment-6739882520)) |
+| [#179](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/179) (11-10) | 벤치 도구 `--stages` (관절 하나씩) · `--check-standby`, Nav2 footprint 에 주행 자세 팔, 켜기 전 대기 자세 안내 | 실물 대기 ↔ 주행 왕복: 오류 비트 없음, 최대 0.25 A, 끝 오차 ≤ 0.016 rad |
+| [#207](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/207) (11-11) | 바퀴 속도 한계 7.91 → 7.51 rad/s, 두 보드 배터리 각각 읽기 · 부저 경고 · `/diagnostics` · `/battery/*` | 실물 바퀴 띄움 시험으로 바퀴끼리 어긋남 2.18 % → 0.04 %. colcon test 130 / 실패 0 |
+| [#257](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/257) · [#258](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/258) (11-13) | RC-100 리모컨 주행 시험 (`rc100:=true`, 프로토콜 길이 · 버전 그대로), 수신 UART1 → UART2 | 실물 주행 보드에서 버튼 값 수신 확인 (UART1 0 바이트 · UART2 패킷) |
+
+**주행 (Nav2) · 인터페이스**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#115](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/115) (11-05) | `navigation` 패키지 (Smac 2D, RotationShim + MPPI, `/cmd_vel_nav`), Gazebo 시험 launch, 출발 자세 base_link (0.69365, 0.95, π) 통일, 후진 때 `/perception/rear_obstacle` ([#84](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/84)) | Gazebo 대기 자세 12 곳 연속 12/12, AMCL 오차 평균 1.9 cm |
+| [#163](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/163) (11-09) | 실물 기본 지도를 Isaac SLAM 지도 → 발제 SDF 지도 ([#116](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/116)) | SLAM 지도는 도면과 7 ~ 15 cm 달라 Gazebo 2/12 → SDF 12/12 |
+| [#241](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/241) (11-12) | 속도 한계 launch 인자 (`max_vx` · `max_wz` · `rotate_wz`), lifecycle 시작 지연, MPPI PathAlign 14 → 28, 실물 회전 상한 2.0 → 1.0 rad/s (벨트 보호) | Nav2 시작 10 번 중 5 실패 → 15 번 중 0, 미션 Q1 FAILED 2/2 → DONE (Gazebo) |
+| [#155](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/155) (11-09) | 쓰는 노드가 없는 `/arm/skill_state` · `/arm/safety_state` 삭제 ([#86](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/86) 결정 B) | control 49 · opencr_hardware 98 실패 0 |
+
+**주행 도구 (ROS 패키지 밖)**
+
+| PR | 바뀐 기능 | 효과 · 결과 |
+|---|---|---|
+| [#76](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/76) · [#302](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/302) (11-03 · 11-15) | Isaac 주행 RL `drive_rl`, 회전 규칙 v2 (제자리 ≤ 90° · 후진 ≤ 0.40 m · 반경 ≥ 0.20 m), 관측 55 | 벨트 v7 물리 전체 경로 1/58 → **실물에는 쓰지 않음** (본문에 명시) |
+| [#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306) (11-15) | `drive_demo`: 규칙 v2 계획 경로를 Nav2 로 따라가는 시연 도구, 경로 이탈 멈춤 10 cm, 팀원용 안내 [`README.md`](../../workspace/tools/drive_demo/README.md) | 노트북 바탕화면에만 있던 도구를 팀원이 혼자 쓸 수 있게 함 |
+| [#318](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/318) · [#319](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/319) (11-16) | 방향 맞추기 거부 시 건너뛰기, dev 11-16 맞춤 (팔 펌웨어 v6 판정 · 위치 감시 C++), 조각 실패 시 되찾기 (위치 다시 찾기 → 0.30 m 되돌아감 → 다시), 실물형 회전 시뮬 | loopback 10/10, 일부러 실패 10/10 · 되찾기 1 번씩. 되찾기 기록을 실패로 세던 버그를 시험에서 잡음 |
+
+### 4.3 검증 (직접 돌린 시험)
+
+원자료: [`results/reproduction_20261115/`](../results/reproduction_20261115/) (11-15 실물 drive_demo 기록), [`results/real_20261116/drive_runs/`](../results/real_20261116/drive_runs/) (11-16 drive_demo 기록), [`workspace/docs/arm_bench_test_2026-10-26.md`](../../workspace/docs/arm_bench_test_2026-10-26.md) · [`-10-27.md`](../../workspace/docs/arm_bench_test_2026-10-27.md), PR 본문 · 이슈 댓글.
+
+**실물**
+
+| 시험 | 조건 | 기대 | 실제 | 원자료 | 한계 · 개선 |
+|---|---|---|---|---|---|
+| 팔 OpenCR 단독 벤치 (10-26 · 27) | 팔 OpenCR 만 PC 에 연결, 단계마다 승인 | 관절 범위 · 방향 · 대기 자세 · 그리퍼 | 모터 6 대 ID · 범위 · + 방향 정리, 그리퍼 다시 결합 (열림 1550 · 닫힘 2650 tick), 퍽 쥐다 `MOTOR_HW` → PWM 400 · 막힘 보호 | arm_bench_test 문서, CSV R-06 | 물리 E-stop 없음을 기록. 과부하 모터는 확인 전에 전원을 꺼 못 가림 |
+| 팔 펌웨어 · J1 혼 (11-09) | dev 빌드 업로드, 혼 재조립 | 부팅 점검 통과, 정면 2048 근처 | 업로드 CRC OK · 99 Hz, J1 정면 2029 tick (−1.7°), J2 ~ J5 기준 자세 · + 방향 URDF 와 같음 | [#139 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/139#issuecomment-6738448640), [#161 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/161#issuecomment-6739352224) | 이후 11-16 에 관절 1 모터 180° 문제가 다시 나옴 (1.6 이창엽 한계) |
+| 대기 ↔ 주행 자세 왕복 | `opencr_arm_tool.py move --stages` | 오류 없음 | 오류 비트 없음 · 최대 0.25 A · 끝 오차 ≤ 0.016 rad · 한쪽 약 59 s | [#179](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/179) | 한 관절씩, 충돌 검사 없음 (벤치 도구) |
+| 바퀴 속도 한계 (11-11) | 바퀴 띄움, 네 바퀴 6 s 회전 수 비교 | 바퀴끼리 어긋남 작게 | 7.91 rad/s 2.18 % (오뒤 +47°) → 7.51 rad/s 0.04 %, 업로드 뒤 7.49 rad/s 로 잘림 | [#207](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/207) | 배터리 11.9 V 아래면 다시 재야 함 (#49) |
+| RC-100 수신 (11-13) | 주행 OpenCR 단독, 확인용 스케치 | 패킷 수신 | UART1 0 바이트 · UART2 패킷 → 펌웨어 수정 뒤 STATE 에 버튼 값, 누르는 동안 50 ~ 60 ms 마다 반복 | [#258](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/258) | 블루투스 포함 응답 시간 미측정, 소프트웨어 정지일 뿐 |
+| **drive_demo 실물 (11-15 저녁)** | Jetson 실물, AMCL · EKF, 계획 `길모음7cm_어제순서`, RPP 전진 0.20 · 후진 0.10 | 구간 모두 정지점 ≤ 5 cm · 충돌 없음 | 20:52 S0 1/1 (3.8 cm). 20:55 빠르게 1/10 (S1 Spin 시간 초과). 21:04 2/10 (S2 7.7 · S3 5.3 cm, S4 `Failed to make progress`). 21:13 구간마다 Enter: S0 · S1 · S4 · S5 ✓, S2 8.3 · S3 5.2 cm, **S6 벽 닿음** | [`1115_2052`](../results/reproduction_20261115/1115_2052_실물_slow_구간0-0/summary.txt) · [`1115_2055`](../results/reproduction_20261115/1115_2055_실물_full/summary.txt) · [`1115_2104`](../results/reproduction_20261115/1115_2104_실물_slow/summary.txt) · [`1115_2113/follow.log`](../results/reproduction_20261115/1115_2113_실물_slow/follow.log), CSV R-27 | 실물이 명령 회전의 66 ~ 80 % 만 돎 → 실물 이어진 후진 0.50 m, 경로 이탈 멈춤 10 cm ([#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306)), 되찾기 ([#319](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/319)) 추가 |
+| 경기 당일 drive_demo (11-16) | 같은 도구, max 모드 · 벨트 2.0 · 모터 3.0, 계획 `7cm_실측L_어제순서_끝90도` | 10/10 | 12:04 0/10 (위치 확인 안 해 출발 안 함), 12:15 0/10 (S0 진행 실패 → 되찾기 1 번 → Ctrl+C), 12:25 **4/10** (S0 2.3 · S3 4.2 · S6 2.2 · S7 4.0 cm, 나머지 6.0 ~ 14.4 cm) | [`drive_runs/`](../results/real_20261116/drive_runs/), CSV M-04 · M-05 · M-08 | 실행자는 로그에 남지 않음. 정지점 5 cm 넘는 구간이 많음 |
+| 배터리 진단 (경기 당일) | 데모 브링업 | 팔 배터리 위험이면 ERROR | `opencr/battery` 진단이 팔 배터리 6.78 V · 0 % 를 ERROR 로 냄 → 그 판은 시작 안 됨 | [`demo_261116_124053.log`](../results/real_20261116/launch_logs/demo_261116_124053.log), M-15 | [#207](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/207) 의 두 보드 진단이 실물에서 동작한 기록 (부저는 로그로 확인 불가) |
+
+**모의 · 코드 시험**
+
+| 시험 | 조건 | 실제 | 원자료 |
+|---|---|---|---|
+| Gazebo Nav2 | SDF 지도, 대기 자세 12 곳 · 북쪽 통로 · 기둥 모서리 · 미션 Q1 | 12/12, 북쪽 통로 멈춤 3 → 0, B2:S → B6:W 멈춤 3 → 통과 3 (기둥 여유 6.2 ~ 7.9 cm), Q1 DONE | [#115](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/115), [#241](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/241) |
+| 박스 앞 정차 재현 | 이홍주 `gazebo_box_park.sh` | FINE 5.8 s · turn 0.86° · 같은 결과 → [#157](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157) 닫음 | [#157 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/157#issuecomment-6761667521) |
+| drive_demo loopback · Gazebo | 노트북 loopback, Gazebo 전체 미션 (가짜 팔 · 인식), 새벽 묶음 12 회 | 10/10 · 정지점 밖 최소 여유 4.7 cm, Gazebo DONE 451 s, 묶음 10/12 | [#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306), [#318](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/318), CSV S-32 ~ S-34 |
+| 실물형 회전 시뮬 | 꺾기 79 % · 제자리 70 % | 10 구간 끝까지, 정지점 3 곳 5 cm 넘음 (6.9 · 5.9 · 6.2 cm) | [#319](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/319) |
+| 펌웨어 SIL · colcon | 펌웨어 SIL · opencr_hardware | v5 SIL 77 건, 배터리 130 / 0, RC-100 141 중 실패 1 (기존 `test_real_vs_isaac`) · 펌웨어에서 리모컨 읽기를 빼면 실패함을 확인 | [#6](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/6), [#207](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/207), [#257](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/257) |
 
 ### 4.4 리뷰
-(본인 작성 필요)
 
-### 4.5 설명
-(본인 작성 필요)
+**사실 그대로의 집계 (GitHub, 2026-11-17)**
 
-### 4.6 한계
-(본인 작성 필요)
+- 다른 팀원 PR 에 남긴 PR 리뷰: **6 PR** — [#153](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/153) (온창범, 본문 있는 COMMENTED), [#4](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/4) (이창엽, 짧은 확인 댓글), [#20](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/20) (이창엽, 본문 없는 승인), [#176](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/176) (온창범) · [#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312) (이창엽) · [#315](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/315) (이홍주) "확인했습니다" 승인. 줄 단위 리뷰 댓글 0 건.
+- 다른 팀원 PR 대화 댓글 4 건 (모두 표 형식 리뷰): [#180 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/180#issuecomment-6761758924) · [#181 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/181#issuecomment-6761756396) · [#182 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/182#issuecomment-6761752376) (온창범), [#301 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/301#issuecomment-6893025993) (이창엽).
+- 다른 팀원 PR 병합 2 건 ([#312](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/312), [#315](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/315)).
+- 이슈 댓글 45 건 (이슈 39 · PR 6). [#172](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172) 에는 리뷰 전에 병합된 PR 세 개 ([#171](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/171) · [#174](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/174) · [#175](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/175)) 리뷰를 모아 남겼다 ([#172 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172#issuecomment-6757717891)).
+
+**PR 에 준 의견**
+
+| 대상 PR (작성자) | 문제 · 의견 (요지) | 반영 여부 · 후속 |
+|---|---|---|
+| [#153](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/153) (온창범) | 주점 180° 값은 맞지만, 실물 인지는 왜곡 편 영상 (newK fx 601.2 · fy 792.0 · cx 529.6) 을 쓰므로 Gazebo K 도 그 값이어야 화면 방향이 맞음 (실물 +10.4° vs PR +3.7°). Gazebo 에서 표지 3 개 0.6 px 안 확인 | **반영 안 됨** — dev 의 Gazebo 값은 PR 의 K (cx 584.12) 그대로. 본인이 [#145](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/145) 를 닫으며 '넣지 못한 것' 으로 남김 |
+| [#174](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/174) (온창범) — [#172 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/172#issuecomment-6757717891) | 칸 경계 퍽이 영상마다 칸이 바뀌어 같은 ID 가 "중복" 으로 판정됨. 재현 시험 코드 첨부 | **반영** — 이홍주 [#222](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/222) (한 장소 같은 ID 합침) |
+| [#175](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/175) (온창범) — 같은 댓글 | `coarse_distance` 주석의 상한 0.48 은 Nav2 허용 오차를 넣으면 0.47 | **반영 안 됨** — `mission.yaml` 주석 0.48 그대로 |
+| [#171](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/171) (온창범) — 같은 댓글 | 추적 중 새 퍽 태그가 다음 전체 검색까지 안 나옴 (모드 바뀐 첫 장에 reset 제안), CPU 측정에 Nav2 포함 여부 | 답 · 반영 기록 없음 |
+| [#180](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/180) · [#182](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/182) (온창범) | 문제 없음 + 선택: 줄여 · 키워 다시 찾기 단위 시험 추가, launch 사용법 주석 · 두 파일 기본값 중복 | 선택 항목은 반영 기록 없음 (시험 파일 · 주석 그대로) |
+| [#181](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/181) (온창범) | 문제 없음. 노드 없이 높이 잡음 모의를 따로 돌려 판정 기준 확인 | 승인 성격 |
+| [#301](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/301) (이창엽) | 병합 찬성 (tick 환산 · 펌웨어 범위 · 옛 값 남은 곳 · colcon 230 개 확인). 부탁: ① PR 제목 · 본문을 최종 값으로 ② 집게 1418 tick 이 열림 끝보다 9.9° 더 열림 → 닫힘 · 열림 끝 실측 ③ 켤 때 펴기 틈 −0.4 ~ +1.4 mm 지켜보기 | ① **반영 안 됨** (제목이 첫 커밋 값 J1 −1.287 그대로). ② · ③ 답 기록 없음 |
+| [#144](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/144) (이창엽 테스트 브랜치) — [#144 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/144#issuecomment-6732687724) | 켜질 때 정리: 허용 여유 0.3 → 0.1 rad, 관절 공간 직선 이동 중 팔끼리 닿을 수 있음. 이후 목표를 STOW → DRIVE, 순서 3 → 2 → 1 → 4, 0.1 rad/s 로 정리 ([#144 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/144#issuecomment-6761714359)) | 목표 · 순서 · 속도는 **반영** ([#189](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/189), 1.4 받은 리뷰). 여유 값 반영 여부는 확인 못 함 |
+
+### 4.5 설명 (전체 흐름 이해)
+
+| 근거 | 내가 맡지 않은 부분 | 무엇을 이해 · 판단했나 |
+|---|---|---|
+| [#183 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/183#issuecomment-6761699897) | 온창범 S1 시험 결과 | 조종 끊김 0.601 s 가 정상 범위인 이유를 `opencr_hardware.cpp` 줄 번호 (잠금 판정 100 Hz · `/e_stop` 100 ms 타이머) 로 설명하고 기준 문구를 제안 |
+| [#160 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/160#issuecomment-6757676995) · [#154 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/154#issuecomment-6761739407) | mission · 계획기 · drive 정렬 | 놓기 전 접근이 퍽을 찾다 실패하는 원인을 `mission_lines.py` · `drive_node.cpp` 줄로 짚고, Gazebo 시험이 `/drive/align` 을 mock 해서 못 잡는다는 것을 찾음 → 이홍주 [#200](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/200). 팔 카메라 자세 계산을 온창범에게 넘김 |
+| [#107 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/107#issuecomment-6756905722) | 팔 처짐 보정 스트리밍 (control) | manipulator 50 Hz → controller_manager 100 Hz → 호스트 → 펌웨어까지 주기를 구간별로 확인, E-stop 리셋 튐 문제를 [#144](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/144) 로 옮김 |
+| [#114 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/114#issuecomment-6758215384) · [#113 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/113#issuecomment-6732735798) · [#86 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/86#issuecomment-6732727023) | Nav2 · 주행 정책 · 인터페이스 | footprint 후보 3 개를 Gazebo 미션으로 비교해 볼록 6 각형 채택, 주행 정책은 실기에서 쓰지 않기로 정리, 아무도 쓰지 않는 토픽 삭제 결정 |
+| [#49](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/49) · [#165](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/165) 체크 목록 ([#49 댓글](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/issues/49#issuecomment-6757608581)) | 조립 뒤 실물 시험 전체 | 흩어진 이슈 (#107 · #108 · #109 · #114 · #157 · #183) 를 주행 · 팔 실물 체크 목록 두 개로 모음 |
+| 문서 | 펌웨어 · 주행 운용 | [`firmware_safety_analysis.md`](../../workspace/docs/firmware_safety_analysis.md), [`opencr_dual_board_v4.md`](../../workspace/docs/opencr_dual_board_v4.md), navigation README "실물 첫 실행" ([#166](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/166)), drive_demo 팀원용 안내 0 ~ 8 장 ([#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306)) |
+
+### 4.6 한계 (저장소 기록으로 본 것)
+
+1. **실물 주행을 계획대로 끝까지 마친 기록이 없다.** 11-15 S6 에서 벽에 닿았고, 11-16 경기 당일 최고는 4/10 구간이며 정지점 5 cm 를 넘는 구간이 많았다 (M-08).
+2. 경로 이탈 멈춤 · 실물 0.50 m 후진 · 되찾기는 실물 확인 전에 병합됐다 ([#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306) · [#318](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/318) · [#319](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/319) 본문). 11-16 12:15 에 되찾기가 실물에서 한 번 돌았지만 사람이 Ctrl+C 로 멈췄다 (M-05).
+3. Isaac 주행 RL (`drive_rl`) 은 전체 경로 1/58 로 실물에 쓰지 않았다 ([#302](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/302)).
+4. 저전압 부저 · `/battery/*` 발행 · 리모컨 응답 시간은 실물로 재지 않았다 ([#207](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/207) · [#257](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/257) 본문).
+5. Gazebo 창 모드 Nav2 시작이 7 번 중 3 번 실패하는 문제를 남긴 채 병합했다 ([#241](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/241)). 이후 이홍주 [#307](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/307) 로 이어짐.
+6. PR 리뷰에서 낸 부탁 일부 ([#301](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/301) 제목, [#153](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/153) newK, [#175](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/175) 상한) 가 반영되지 않았고, 그 뒤 따라간 기록이 없다.
+7. `drive_demo` 는 ROS 패키지 밖 도구이고, 계획을 새로 만드는 도구는 제어 담당 노트북에만 있다 ([#306](https://github.com/developlcy-oss/Lv2_Cartlidar_Assignment/pull/306) 본문).
