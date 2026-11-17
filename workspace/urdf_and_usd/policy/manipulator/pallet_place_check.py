@@ -21,6 +21,9 @@
     ./run_rl.sh pallet_unload --neighbors pairs   # 이웃 칸 퍽: 같은 열 바로 옆 칸에 퍽을 앉혀 두고 빼기 -> 결과 nb_max_speed (이웃이 밀린 최대 속도) · nb_slot
                                         #   slot = 같은 열 · 뒤 열 모두, behind = 뒤 열만, opposite = 같은 곳 모양 반대, none = 비움 (기본)
                                         #   막는 쌍 (2026-11-13): 1 열 1_0 ↔ 1_1 · 1_2 ← 1_3 -> mission_planner slots.BLOCKERS. 디버그 NB_DEBUG=1 · NB_TRACE=1
+    ./run_rl.sh pallet_unload --place --num_envs 180 --seed 1   # 꺼낸 퍽을 장소 상자 칸에 놓기 (ROS placeAt 경로) -> dice_place_eval.json
+                                        #   대 = (칸 10 x 모양 2) x 상자 칸 9. 상자 = 차체 앞 끝 5 ~ 6 cm (--box_gap), 좌우 ±2 cm, 요 ±2°
+                                        #   --box_neighbors far (먼 칸에 퍽, 계획기 place_order 순서) · --box_err 2 --box_err_deg 2 (상자 측정 오차) · --no-place_comp
     ./run_rl.sh pallet_check_play       # 창으로 (대 수를 줄여 보기: --num_envs 4)
 """
 
@@ -64,7 +67,23 @@ parser.add_argument("--hand_offset", default="", help="[mm] 쥔 퍽을 기대 �
 AppLauncher.add_app_launcher_args(parser)
 parser.add_argument("--neighbors", default="none", choices=["none", "slot", "opposite", "pairs", "behind"],
                     help="이웃 칸 퍽 (막는 쌍 시험, 2026-11-13 · 계획기 slots.BLOCKERS 근거): slot = 같은 열 · 뒤 열 모두 (칸 모양대로), opposite = 같은 곳 (모양 반대), pairs = 같은 열 바로 옆 칸 하나씩 (칸 모양대로), behind = 뒤 열만, none = 비움")
+parser.add_argument("--place", action="store_true",
+                    help="꺼낸 뒤 장소 상자 칸에 놓기 (ROS placeAt 과 같은 경로, 2026-11-16) -> dice_place_eval.json. --unload 를 켬. "
+                         "대 i = (칸 · 모양 20 가지) x 상자 칸 9 곳 순서 (180 대면 한 번씩)")
+parser.add_argument("--box_gap", default="0.05,0.06", help="[m] 차체 앞 끝 -> 상자 앞면 거리 범위 (균일, #225 가까이 붙기 5 ~ 6 cm)")
+parser.add_argument("--box_lat", type=float, default=0.02, help="[m] 상자 중심 좌우 어긋남 ± (균일)")
+parser.add_argument("--box_yaw", type=float, default=2.0, help="[deg] 상자 요 ± (균일, #225 다가간 뒤 방향 ±2°)")
+parser.add_argument("--box_err", type=float, default=0.0, help="[mm] 상자 측정 오차 σ (정규, 중심 x · y 각각). 칸 좌표는 잰 상자로 계산")
+parser.add_argument("--box_err_deg", type=float, default=0.0, help="[deg] 상자 요 측정 오차 σ (정규)")
+parser.add_argument("--place_comp", action=argparse.BooleanOptionalAction, default=True,
+                    help="ROS place 보정 (radial_offset · slope · lateral · source_offset_mm, control manipulator.yaml) 적용. 끄면 칸 중심 그대로")
+parser.add_argument("--box_neighbors", default="none", choices=["none", "far", "all"],
+                    help="상자 다른 칸에 원기둥 퍽을 미리 세워 둠: far = J1 에서 목표보다 먼 칸 모두 (계획기 place_order 가 먼 칸부터 놓으므로 실제 최악),"
+                         " all = 다른 8 칸 모두 (순서를 안 지킬 때), none = 비움")
+parser.add_argument("--seed", type=int, default=0, help="상자 자리 · 측정 오차 난수")
 args_cli = parser.parse_args()
+if args_cli.place:
+    args_cli.unload = True
 args_cli.headless = not args_cli.gui
 app_launcher = AppLauncher(args_cli)
 simulation_app = app_launcher.app
@@ -85,7 +104,7 @@ from isaaclab.utils.math import quat_apply, quat_apply_inverse, quat_from_matrix
 
 from pallet_timeline import PHASE_OF, PHASES, SEGS, Speeds, parse_row_speed  # noqa: E402  (chain_pallet_eval.py 와 같은 궤적)
 from pallet_timeline import seg_speed as _seg_speed, timeline as _timeline  # noqa: E402
-from waffle_isaac.dice2_cfg import PUCK_H, puck_cfg  # noqa: E402
+from waffle_isaac.dice2_cfg import BOX_H, BOX_SIZE, PUCK_H, box_cfg, puck_cfg  # noqa: E402
 from waffle_isaac.robot_cfg import (  # noqa: E402
     ARM_JOINTS, ARM_LINKS_REGEX, BODY_LINK, EE_BODY, FINGER_CLOSE, FINGER_LINKS_REGEX, FINGER_RELEASED,
     FLOOR_MATERIAL, GRIPPER_JOINT, GRIPPER_MIMIC, WAFFLE_CFG, WHEEL_REGEX,
@@ -144,6 +163,12 @@ class SceneCfg(InteractiveSceneCfg):
         if args_cli.neighbors == "opposite": _sh = "box" if _sh == "cyl" else "cyl"   # pairs · behind 는 칸 모양대로
         locals()[f"nb{_k}"] = _puck(f"N{_k}", _sh, (0.6, 0.6, 0.6), (-0.6 + 0.12 * _k, 0.95))
     del _k, _s, _sh
+    if args_cli.place:   # 장소 상자 (자리는 실행 중 정함) · 다른 칸 퍽 (--box_neighbors)
+        boxL = box_cfg("L", (0.0, -0.8))
+        if args_cli.box_neighbors != "none":
+            for _k in range(8):
+                locals()[f"bn{_k}"] = _puck(f"BN{_k}", "cyl", (0.2, 0.7, 0.2), (0.6 + 0.07 * _k, -0.95))
+            del _k
     light = AssetBaseCfg(prim_path="/World/Light", spawn=sim_utils.DomeLightCfg(intensity=2000.0, color=(0.85, 0.85, 0.85)))
 
 
@@ -213,7 +238,7 @@ ROLL_PI = {tuple(int(v) for v in x.split(":")) for x in args_cli.roll_pi.split("
 ROW_SPEED = parse_row_speed(args_cli.row_speed)
 HAND_OFFSETS = [tuple(float(v) for v in x.split(":")) for x in args_cli.hand_offset.split(",") if x]
 SPEEDS = Speeds(args_cli.speed, args_cli.tilt_speed, ROW_SPEED, args_cli.empty_speed)
-OUT = args_cli.out or os.path.join(HERE, "pallet_unload_check.json" if args_cli.unload else "pallet_place_check.json")
+OUT = args_cli.out or os.path.join(HERE, "dice_place_eval.json" if args_cli.place else "pallet_unload_check.json" if args_cli.unload else "pallet_place_check.json")
 
 
 def seg_speed(slot, held):
@@ -302,6 +327,7 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
         o.write_root_pose_to_sim_index(root_pose=torch.where(m[:, None], pose, cur), env_ids=ids)
         o.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=ids)
     place_neighbors(u, case, ids)
+    box = setup_box(u, case, ids) if args_cli.place else None
     u.grip[:] = FINGER_RELEASED
     bias = torch.zeros(n, 5, device=dev)
     for _ in range(int(1.5 / dt)):  # 앞 운반 자세 자리 잡기 (처짐 보정) + 퍽이 칸에 앉음
@@ -373,7 +399,251 @@ def unload_test(u, case, is_box, ids, q_start, step, puck_pose, ee_frame, exp_ce
                    duration_s_per_slot={r["slot"]: r["duration_s"] for r in res[:len(TRAJ["slots"])]},
                    arm_body_max_N=round(float(fmax["arm"].max()), 1), finger_body_max_N=round(float(fmax["finger"].max()), 1))
     print(f"[PalletUnload] 요약 {summary}", flush=True)
+    if args_cli.place:
+        place_test(u, case, is_box, ids, step, puck_pose, bias, tgt[:, -1].clone(), res, box)
+        return
     json.dump(dict(summary=summary, results=res), open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+# ---------------------------------------------------------------- 장소 상자에 놓기 (--place, 2026-11-16)
+# ROS manipulator_node placeAt + runPlaceStream 과 같은 경로 · 시간표:
+#   칸 (잰 상자 칸 중심, 윗면 z) -> 보정 (J1 바깥 a + b (r − 0.2665)/0.06 mm · 꺼낸 칸별 · 옆) -> tip = 칸 + 퍽 반 높이 + grasp_z_offset + clearance
+#   집게 45° (place.pitch), pre = back = tip − 집게 축 x 0.04 -> [꺼내기 끝 자세 + bias 이어 씀] -> pre (0.8 rad/s, 처음 최소 1 s)
+#   -> tip 직선 (1 cm 마다 max(0.2 s, dq / 0.8)) -> 벌림 1.0 s (release 0.0798 rad = 36.4 mm) -> 머묾 0.3 s -> back 직선 -> 이동 자세 q_front_tilt
+#   처짐 보정 = 꺼내기와 같은 적분 (ki · bias_max). 결과: 퍽 바닥 가운데 - 참 칸 중심 (수평), 서 있음, 상자 위, 옆 퍽 밀림
+FRONT_X = 0.1328          # 차체 앞 끝 (mission_planner poses.FRONT)
+TOOL_X = 0.139            # gripper_roll_link -> tool_link (ROS 집게 끝)
+GRASP_Z, CLEAR, APPROACH = 0.015, 0.001, 0.04   # pick.grasp_z_offset · place.clearance · place.approach_distance = retreat_distance
+PLACE_PITCH = math.radians(45.0)
+RELEASE_PLACE = (36.4 - 41.6) / 2000.0   # place.release_position 0.0798 rad = 36.4 mm -> 손가락 m (sim_skill_server 와 같은 식)
+CELL = 0.06
+
+
+def _place_params():
+    """control manipulator.yaml place 보정값 (radial a · b, lateral, 꺼낸 칸별)."""
+    import yaml
+    f = os.path.join(HERE, "..", "..", "..", "ros2_ws", "src", "control", "config", "manipulator.yaml")
+    d = yaml.safe_load(open(f, encoding="utf-8"))
+    pl = next(iter(d.values()))["ros__parameters"]["place"]
+    so = {}
+    for e in pl.get("source_offset_mm", []):
+        k, a, b = e.split(":")
+        so[k] = (float(a), float(b))
+    return dict(a=pl["radial_offset_mm"], b=pl["radial_offset_slope_mm"], lat=pl["lateral_offset_mm"], src=so, file=os.path.normpath(f))
+
+
+def setup_box(u, case, ids):
+    """대마다 상자 참 자리 (차체 앞 끝 -> 앞면 box_gap, 좌우 box_lat, 요 box_yaw) · 잰 자리 (+ 오차) · 놓을 칸. 상자 · 옆 퍽을 장면에 둠."""
+    dev, n = u.device, u.num_envs
+    g = torch.Generator(device="cpu").manual_seed(args_cli.seed)
+    U = lambda lo, hi: lo + (hi - lo) * torch.rand(n, generator=g)
+    glo, ghi = (float(v) for v in args_cli.box_gap.split(","))
+    yaw = torch.deg2rad(U(-args_cli.box_yaw, args_cli.box_yaw))
+    cx, cy = FRONT_X + U(glo, ghi) + BOX_SIZE / 2, U(-args_cli.box_lat, args_cli.box_lat)
+    mx = cx + torch.randn(n, generator=g) * args_cli.box_err / 1000.0
+    my = cy + torch.randn(n, generator=g) * args_cli.box_err / 1000.0
+    myaw = yaw + torch.deg2rad(torch.randn(n, generator=g) * args_cli.box_err_deg)
+    combos = 2 * len(TRAJ["slots"])
+    cells = [((i // combos) % 9) // 3 - 1 for i in range(n)], [((i // combos) % 9) % 3 - 1 for i in range(n)]
+    dxs, dys = torch.tensor(cells[0], dtype=torch.float32), torch.tensor(cells[1], dtype=torch.float32)
+
+    def cell_xy(x, y, th, dx, dy):
+        return x + CELL * (dx * torch.cos(th) - dy * torch.sin(th)), y + CELL * (dx * torch.sin(th) + dy * torch.cos(th))
+
+    tx, ty = cell_xy(cx, cy, yaw, dxs, dys)       # 참 칸 중심 (base_link)
+    px, py = cell_xy(mx, my, myaw, dxs, dys)      # 잰 칸 중심 -> 놓을 점
+    rp, rq = u.robot.data.root_link_pos_w.torch, u.robot.data.root_link_quat_w.torch
+    to_w = lambda x, y: rp + quat_apply(rq, torch.stack((x, y, torch.zeros_like(x)), 1).to(dev))
+    bw = to_w(cx, cy)
+    bw[:, 2] = BOX_H / 2
+    ryaw = 2 * torch.atan2(rq[:, 2], rq[:, 3]).cpu()   # 차체 요 (평지)
+    hq = (yaw + ryaw) / 2
+    bq = torch.stack((torch.zeros(n), torch.zeros(n), torch.sin(hq), torch.cos(hq)), 1).to(dev)
+    o = u.scene["boxL"]
+    o.write_root_pose_to_sim_index(root_pose=torch.cat((bw, bq), 1), env_ids=ids)
+    o.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=ids)
+    top_b = BOX_H - rp[:, 2]   # 상자 윗면 높이 (base_link, 평지)
+    nb0 = None
+    if args_cli.box_neighbors != "none":   # 다른 칸에 원기둥 (far = 목표보다 J1 에서 먼 칸만, 쓰지 않는 퍽은 상자 밖 바닥)
+        nb0 = []
+        J1 = (0.096, 0.0)
+
+        def jd(i, a, b):
+            x_, y_ = cell_xy(cx[i:i + 1], cy[i:i + 1], yaw[i:i + 1], torch.tensor([float(a)]), torch.tensor([float(b)]))
+            return math.hypot(float(x_) - J1[0], float(y_) - J1[1])
+        use = []
+        for k in range(8):
+            ox, oy, us = [], [], []
+            for i in range(n):
+                others = [(a, b) for a in (-1, 0, 1) for b in (-1, 0, 1) if (a, b) != (cells[0][i], cells[1][i])]
+                a, b = others[k]
+                ox.append(a); oy.append(b)
+                us.append(args_cli.box_neighbors == "all" or jd(i, a, b) > jd(i, cells[0][i], cells[1][i]) + 1e-6)
+            qx, qy = cell_xy(cx, cy, yaw, torch.tensor(ox, dtype=torch.float32), torch.tensor(oy, dtype=torch.float32))
+            w = to_w(qx, qy)
+            w[:, 2] = BOX_H + PUCK_H / 2 + 0.0005
+            um = torch.tensor(us, device=dev)
+            away = to_w(torch.full((n,), -0.6), torch.full((n,), -0.5 + 0.07 * k))
+            away[:, 2] = PUCK_H / 2 + 0.0005
+            w = torch.where(um[:, None], w, away)
+            use.append(um)
+            ob = u.scene[f"bn{k}"]
+            ob.write_root_pose_to_sim_index(root_pose=torch.cat((w, torch.tensor([[0, 0, 0, 1.0]], device=dev).expand(n, 4)), 1), env_ids=ids)
+            ob.write_root_velocity_to_sim_index(root_velocity=torch.zeros(n, 6, device=dev), env_ids=ids)
+            nb0.append(w.clone())
+        box_nb_count = torch.stack(use, 1).sum(1).cpu()
+    return dict(nb_count=(box_nb_count if args_cli.box_neighbors != "none" else torch.zeros(n)), true=torch.stack((tx, ty), 1), aim=torch.stack((px, py), 1), top=top_b.cpu(), dx=cells[0], dy=cells[1], nb0=nb0,
+                gap=(cx - BOX_SIZE / 2 - FRONT_X), lat=cy, yaw_deg=torch.rad2deg(yaw))
+
+
+_ARM = None
+
+
+def ik45(p, yaw, q0):
+    """ROS solveArm (pitch 45° 아래 · 바깥, 손목 롤 0, 집게 끝 tool_link) -> (q 5, 위치 오차 m). 팀 URDF (pallet_traj.Arm)."""
+    global _ARM
+    import numpy as np
+    from scipy.optimize import least_squares
+    if _ARM is None:
+        import pallet_traj
+        _ARM = pallet_traj.Arm(pallet_traj.URDF)
+    A = _ARM
+    a_dir = np.array([math.cos(PLACE_PITCH) * math.cos(yaw), math.cos(PLACE_PITCH) * math.sin(yaw), -math.sin(PLACE_PITCH)])
+
+    def res(x):
+        t, R = A.tcp([yaw, x[0], x[1], x[2], 0.0], TOOL_X)
+        return np.r_[(t - p) * 1000.0, (R[:, 0] - a_dir) * 100.0]
+    starts = [q0] if q0 is not None else [[a, b, c] for a in (-1.2, -0.8, -0.4, 0.0, 0.4) for b in (-1.2, -0.8, 0.0, 0.8) for c in (0.7, 1.2, 1.6, 1.95)]
+    best = None
+    for x0 in starts:
+        x0 = np.clip(x0, A.lo[1:4] + 1e-4, A.hi[1:4] - 1e-4)
+        s_ = least_squares(res, x0, bounds=(A.lo[1:4], A.hi[1:4]), xtol=1e-12, ftol=1e-12)
+        r = res(s_.x)
+        e = float(np.linalg.norm(r[:3])) / 1000.0 + float(np.linalg.norm(r[3:])) / 100.0 * 0.05
+        if best is None or e < best[1]:
+            best = ([yaw, *s_.x, 0.0], e)
+        if q0 is not None and e < 2e-4:
+            break
+    return best
+
+
+def place_plan(slot, q_end, aim_xy, top_z, comp, j1):
+    """한 대의 놓기 시간표 [(t, q5, 손가락 m)] (ROS JointTimeline 규칙) · tip · IK 최대 오차."""
+    import numpy as np
+    x, y = float(aim_xy[0]), float(aim_xy[1])
+    if comp:
+        r = math.hypot(x - j1[0], y - j1[1])
+        c = (comp["a"] + comp["b"] * (r - 0.2665) / 0.06) / 1000.0
+        x += (x - j1[0]) / r * c
+        y += (y - j1[1]) / r * c
+        so = comp["src"].get(f"{slot['row']}_{slot['index']}")
+        if so:
+            x += so[0] / 1000.0
+            y += so[1] / 1000.0
+        y += comp["lat"] / 1000.0
+    tip = np.array([x, y, top_z + PUCK_H / 2 + GRASP_Z + CLEAR])
+    yaw = math.atan2(tip[1] - j1[1], tip[0] - j1[0])
+    d = np.array([math.cos(PLACE_PITCH) * math.cos(yaw), math.cos(PLACE_PITCH) * math.sin(yaw), -math.sin(PLACE_PITCH)])
+    pre = back = tip - d * APPROACH
+    q_pre, emax = ik45(pre, yaw, None)
+    pts = [(0.0, list(q_end), FINGER_CLOSE)]
+
+    def move_through(q, speed, grip, first_min):
+        dq = max(abs(a - b) for a, b in zip(q, pts[-1][1]))
+        pts.append((pts[-1][0] + max(first_min, dq / speed), list(q), grip))
+
+    def hold(sec, grip):
+        pts.append((pts[-1][0] + sec, pts[-1][1], grip))
+    move_through(q_pre, 0.8, FINGER_CLOSE, 1.0)
+    seed = q_pre
+    for a_, b_, grip in ((pre, tip, FINGER_CLOSE), (tip, back, RELEASE_PLACE)):
+        nn = max(1, math.ceil(np.linalg.norm(b_ - a_) / 0.01 - 1e-9))
+        for i in range(1, nn + 1):
+            q, e = ik45(a_ + (b_ - a_) * i / nn, yaw, seed[1:4])
+            emax = max(emax, e)
+            dq = max(abs(u_ - v_) for u_, v_ in zip(q, seed))
+            pts.append((pts[-1][0] + max((float(np.linalg.norm(b_ - a_)) / nn) / 0.05, dq / 0.8), q, grip))
+            seed = q
+        if grip == FINGER_CLOSE:
+            hold(1.0, RELEASE_PLACE)   # gripper.move_time
+            hold(0.3, RELEASE_PLACE)   # pallet.place_dwell
+    move_through(TRAJ["transit"]["q_front_tilt"], 0.8, RELEASE_PLACE, 1.0)
+    hold(1.5, RELEASE_PLACE)           # 끝난 뒤 퍽이 자리 잡을 시간 (판정용)
+    return pts, tip, emax
+
+
+def place_test(u, case, is_box, ids, step, puck_pose, bias, q_end, unload_res, box):
+    dev, n, dt = u.device, u.num_envs, u.physics_dt
+    comp = _place_params() if args_cli.place_comp else None
+    import pallet_traj
+    j1 = pallet_traj.Arm(pallet_traj.URDF).j1
+    plans, tips, ik_err = [], [], []
+    for i, (s, _) in enumerate(case):
+        pts, tip, e = place_plan(s, q_end[i].tolist(), box["aim"][i], float(box["top"][i]), comp, j1)
+        plans.append(pts); tips.append(tip); ik_err.append(e)
+    T = int(max(p[-1][0] for p in plans) / dt) + 1
+    print(f"[DicePlace] {n} 대, 놓기 {T * dt:.1f} s, 보정 {'켬 ' + comp['file'] if comp else '끔'}, IK 최대 오차 {max(ik_err) * 1000:.2f} mm", flush=True)
+
+    def at(pts, t):
+        for k in range(1, len(pts)):
+            if t <= pts[k][0]:
+                a, b = pts[k - 1], pts[k]
+                f = (t - a[0]) / max(b[0] - a[0], 1e-9)
+                return [x + (y - x) * f for x, y in zip(a[1], b[1])], a[2] + (b[2] - a[2]) * f
+        return pts[-1][1], pts[-1][2]
+    for t in range(T):
+        qs, gs = zip(*(at(p, t * dt) for p in plans))
+        plan = torch.tensor(qs, device=dev, dtype=torch.float32)
+        if args_cli.ki > 0:
+            bias = torch.clamp(bias + args_cli.ki * dt * (plan - u.robot.data.joint_pos.torch[:, u._arm]), -args_cli.bias_max, args_cli.bias_max)
+        u.arm_target[:] = plan + bias
+        u.grip[:, 0] = torch.tensor(gs, device=dev, dtype=torch.float32)
+        step()
+        if t % 240 == 0:
+            print(f"[DicePlace] t={t * dt:5.1f} s", flush=True)
+    rp, rq = u.robot.data.root_link_pos_w.torch, u.robot.data.root_link_quat_w.torch
+    pc, qc = puck_pose()
+    ax = quat_apply(qc, torch.tensor([[0, 0, 1.0]], device=dev).expand(n, 3))
+    ax = ax * torch.where(ax[:, 2:3] < 0, -1.0, 1.0)
+    bot = quat_apply_inverse(rq, pc - ax * (PUCK_H / 2) - rp).cpu()
+    tilt = torch.rad2deg(torch.acos(torch.clamp(ax[:, 2], max=1.0))).cpu()
+    nbm = torch.zeros(n)
+    if box["nb0"] is not None:
+        for k in range(8):
+            d = torch.linalg.norm((u.scene[f"bn{k}"].data.root_pos_w.torch - box["nb0"][k])[:, :2], dim=1).cpu()
+            nbm = torch.maximum(nbm, d)
+    res = []
+    for i, (s, shape) in enumerate(case):
+        err = math.hypot(float(bot[i, 0] - box["true"][i, 0]), float(bot[i, 1] - box["true"][i, 1]))
+        dz = float(bot[i, 2] - box["top"][i])
+        stand = float(tilt[i]) < 10.0 and abs(dz) < 0.005
+        ok_unload = bool(unload_res[i]["held"])
+        ok = ok_unload and stand and err < 0.010 and float(nbm[i]) < 0.004
+        res.append(dict(slot=f"{s['row']}_{s['index']}", puck_shape=shape, cell=[box["dx"][i], box["dy"][i]], unload_ok=ok_unload, placed=ok,
+                        err_mm=round(err * 1000, 1), err_xy_mm=[round(float(bot[i, 0] - box["true"][i, 0]) * 1000, 1), round(float(bot[i, 1] - box["true"][i, 1]) * 1000, 1)],
+                        standing=stand, tilt_deg=round(float(tilt[i]), 1), dz_mm=round(dz * 1000, 1),
+                        nb_moved_mm=round(float(nbm[i]) * 1000, 1), nb_count=int(box["nb_count"][i]), box_gap_mm=round(float(box["gap"][i]) * 1000, 1),
+                        box_lat_mm=round(float(box["lat"][i]) * 1000, 1), box_yaw_deg=round(float(box["yaw_deg"][i]), 2),
+                        j1_dist_m=round(math.hypot(tips[i][0] - j1[0], tips[i][1] - j1[1]), 4), ik_err_mm=round(ik_err[i] * 1000, 2)))
+    good = [r for r in res if r["unload_ok"]]
+    errs = sorted(r["err_mm"] for r in good if r["standing"])
+    pct = lambda q: errs[min(len(errs) - 1, int(q * len(errs)))] if errs else None
+    by = lambda key: {k: f"{sum(r['placed'] for r in res if key(r) == k)}/{sum(1 for r in res if key(r) == k)}" for k in sorted({key(r) for r in res})}
+    summary = dict(placed=sum(r["placed"] for r in res), total=n, unload_ok=len(good), placed_given_unload=sum(r["placed"] for r in good),
+                   standing=sum(r["standing"] for r in good), within_10mm=sum(r["standing"] and r["err_mm"] < 10 for r in good),
+                   within_4mm=sum(r["standing"] and r["err_mm"] < 4 for r in good), nb_pushed=sum(r["nb_moved_mm"] >= 4 for r in good),
+                   err_mm_p50=pct(0.5), err_mm_p95=pct(0.95), by_slot=by(lambda r: r["slot"]), by_cell=by(lambda r: f"{r['cell'][0]},{r['cell'][1]}"),
+                   by_shape=by(lambda r: r["puck_shape"]),
+                   config=dict(box_gap=args_cli.box_gap, box_lat=args_cli.box_lat, box_yaw=args_cli.box_yaw, box_err_mm=args_cli.box_err,
+                               box_err_deg=args_cli.box_err_deg, place_comp=args_cli.place_comp, box_neighbors=args_cli.box_neighbors,
+                               seed=args_cli.seed, ki=args_cli.ki, puck_mu=args_cli.puck_mu, grip_close=FINGER_CLOSE,
+                               comp=({k: v for k, v in comp.items() if k != "file"} if comp else None)))
+    for r in res[:min(n, 40)]:
+        print(f"[DicePlace] {r['slot']} {r['puck_shape']:3s} 칸 {r['cell']} {'놓음' if r['placed'] else '실패'} | 어긋남 {r['err_mm']:5.1f} mm 기울기 {r['tilt_deg']:5.1f}° "
+              f"높이 {r['dz_mm']:+5.1f} mm 옆퍽 {r['nb_moved_mm']:4.1f} mm | 꺼냄 {r['unload_ok']} | J1 {r['j1_dist_m']:.3f} m", flush=True)
+    print(f"[DicePlace] 요약 {json.dumps(summary, ensure_ascii=False)}", flush=True)
+    json.dump(dict(summary=summary, results=res), open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 
 
 def drop_test(u, case, is_box, ids):
