@@ -3,6 +3,8 @@
 팀 저장소 `Lv2_Cartlidar_Assignment`, 기준 `dev` 2026-11-17 (`0bbc537`). 루트 [README.md](../README.md) 를 제출용으로 정리한 문서다.
 확인하지 못한 값은 **미확인** 으로 적었다.
 
+**공식 경기 (2026-11-16) 때 젯슨 코드 = `fd03441`** (dev, PR #319 병합 — 젯슨 git reflog 10:06 · 10:14 KST pull). #316 (팔 펌웨어 v6 · STOW 2.200) 코드는 들어 있으나 팔 OpenCR 에 v6 를 올렸는지는 미확인.
+
 ## 1. 프로젝트 목표
 
 경기장 신호등의 R / Y / G 점멸 12 회와 바코드 (`P2-01` ~ `P2-04`) 를 관측해 장소 L1 ~ L3 의 그룹 · 횟수를 정하고, 시작 박스 6 개의 퍽 12 개를 할당 규칙대로 집어 팔레트에 실은 뒤 각 장소의 주사위 눈 자리에 놓고, 새로 관측해 재검증한 다음 출발 구역으로 돌아와 3 초 정지한다 (규칙: [problem/rules.md](problem/rules.md), 채점 근거: [submission/scoring_map.md](../submission/scoring_map.md)).
@@ -42,7 +44,7 @@ grep -v '^#' requirements.txt | grep -v '^$' | xargs sudo apt install -y   # 저
 |---|---|---|
 | librealsense2 | D435 검색 모드 거부 | `realsense2_camera` 와 같이 설치 |
 | TensorRT (+ CUDA) | HSV 색 검출만 | Jetson 은 JetPack 에 포함 |
-| ONNX Runtime | `skill_enabled:=false` (정책 skill 거절 → 미션 fallback) | 기본 bringup 은 `skill_enabled:=false`. Jetson 설치 여부 **미확인** |
+| ONNX Runtime | `skill_enabled:=false` (정책 skill 거절 → 미션 fallback) | 기본 bringup 은 `skill_enabled:=false`. Jetson 은 `~/onnxruntime/lib` 에 설치 · ldconfig 등록 (2026-11-08) |
 
 ### 3-3. udev 규칙 · 권한
 
@@ -132,7 +134,7 @@ ros2 launch bringup bringup.launch.py        # 하드웨어 · 센서 · 인식 
 | 퍽 등록표 (측량 끌 때) | `use_survey:=false pucks_file:=<등록표.yaml>` — 실물 단계 시험용 `workspace/docs/stage_test/pucks_stage.yaml` | `workspace/docs/mission_stage_test.md` |
 | 지도 | 발제 도면 SDF 지도 `mission_planner/maps/map_amcl` (AMCL) · `map_nav` (주행, 박스 70 mm 포함). 실측 지도는 쓰지 않음 (11-15 결정) | `bringup.launch.py`, drive_demo README 6 장 |
 
-> 지금 `problem/` 의 값은 **발제 공개 연습 문제 Q1** (`mission_planner/config/problem_q1_example.yaml`, 신호 `RGRRGRGGYGYG` · 바코드 `P2-01`) 을 `mission_submit` 으로 만든 것이다. **공식 문제로 바꿔 다시 만들어야 한다** ([problem/README.md](problem/README.md)).
+> `problem/` 은 팀 실물 퍽 등록표 (`workspace/docs/stage_test/pucks_stage.yaml`, 빨강 · 초록 원기둥 · 직육면체 각 3) 와 발제 공개 연습 Q1 신호 `RGRRGRGGYGYG` · 바코드 `P2-01` 로 `mission_submit` 이 만든 것이다. 운영자가 다른 신호 · 바코드를 내면 [problem/README.md](problem/README.md) 의 명령으로 다시 만든다.
 
 ## 7. 정지 방법
 
@@ -182,7 +184,7 @@ ros2 launch bringup bringup.launch.py        # 하드웨어 · 센서 · 인식 
 
 | 경로 | 내용 | 상태 |
 |---|---|---|
-| [problem/](problem/) | 문제 패키지: [problem.md](problem/problem.md) · [signals.json](problem/signals.json) · [placement.csv](problem/placement.csv) · [allocation_answers.md](problem/allocation_answers.md) / [.json](problem/allocation_answers.json) · [verification.md](problem/verification.md) (+ [rules.md](problem/rules.md) · [review.md](problem/review.md)) | 있음 — 단 **공개 연습 Q1** (`config/problem_q1_example.yaml`, `mission_submit`) 로 만든 것. **공식 문제로 교체 필요**. `review.md` 다른 팀 검토 기록 비어 있음 |
+| [problem/](problem/) | 문제 패키지: [problem.md](problem/problem.md) · [signals.json](problem/signals.json) · [placement.csv](problem/placement.csv) · [allocation_answers.md](problem/allocation_answers.md) / [.json](problem/allocation_answers.json) · [verification.md](problem/verification.md) · [dice_targets.csv](problem/dice_targets.csv) (+ [rules.md](problem/rules.md) · [review.md](problem/review.md)) | 있음 — 팀 실물 퍽 등록표 + 공개 연습 Q1 신호 · 바코드. `review.md` 다른 팀 검토 기록 비어 있음 |
 | [docs/architecture.md](docs/architecture.md) | ROS 2 노드 · 토픽 · 메시지, TF, 단계 · 완료 조건, 안전 · 오류 상태도 | 있음 |
 | [docs/issues.md](docs/issues.md) | GitHub 이슈 목록 (발견자 · 수정 담당 · 검토자 · 처리 현황) | 있음 |
 | [docs/contributions.md](docs/contributions.md) | 팀원별 기여 · 근거 | 있음 (작성 중) |
@@ -199,6 +201,6 @@ ros2 launch bringup bringup.launch.py        # 하드웨어 · 센서 · 인식 
 |---|---|
 | 공식 경기 영상 1 회차 | 링크: _(작성 필요)_ |
 | 공식 경기 영상 2 회차 | 링크: _(작성 필요)_ |
-| 발표 자료 | 링크 · 파일: _(작성 필요)_ |
+| 발표 자료 | `project2/docs/presentation/` 에 올림 (예: `project2/docs/presentation/발표자료.pdf`) — _(작성 필요)_ |
 | 태그 `project2-submit` | 최종 제출 커밋에 (아직 없음) |
 | 태그 `project2-problem-submit` | 문제 패키지 (`problem/`) 제출 커밋에 (아직 없음, 공식 문제로 교체 뒤) |
