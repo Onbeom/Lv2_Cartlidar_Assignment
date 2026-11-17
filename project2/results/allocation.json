@@ -173,5 +173,6 @@
   ],
   "all_rules_ok": true,
   "verdict": "통과 (모의)"
- }
+ },
+ "official_rounds_note": "공식 1 · 2 회차 (11-16 12:15 · 12:25, 시간 순서 팀장 결정) 는 drive_demo 주행만 돌려 신호 · 바코드 관측과 할당 계산이 없었다 (official_scoring.md). 이 reason 은 그 뒤 12:36 전체 미션 시도 기록이다."
 }
