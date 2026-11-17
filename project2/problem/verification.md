@@ -1,7 +1,7 @@
 # 검증 기록
 
 - 날짜: 2026-11-17
-- 입력: `config/problem_q1_example.yaml`
+- 입력: `../../../docs/stage_test/pucks_stage.yaml`
 - 결과: **통과**
 
 | 단계 | 결과 | 내용 |
