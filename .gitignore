@@ -107,3 +107,6 @@ photo/review1026_depth_check_*
 photo/review1026_contact_*
 # RealSense 캡처 원본 (capture_*, 4,484 장 1.77 GB, 10-26 것은 사람 배경) — 이 컴퓨터에만. 넣으려면 이 줄을 지움
 photo/capture_*
+
+# Claude 작업 규칙 · 상태 (이 컴퓨터에만)
+.claude/
