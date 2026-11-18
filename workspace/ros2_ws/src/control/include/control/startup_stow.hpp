@@ -5,6 +5,8 @@
 // 어떻게: 관절을 묶음 (stages) 순서로 움직인다. 기본 = J3 → J2 → J4 → J1 → (J5 · 그리퍼, 2026-11-13 새 DRIVE), 대기 → 주행을 한 관절씩
 //     실물로 확인한 순서 (#165). 묶음 밖 관절은 지금 자리 (한계 안으로 자른 값) 에 둔다.
 //     이미 정리 자세 근처 (skip_tolerance 안) 인 묶음은 건너뛴다.
+// 2026-11-18: 팔이 STOW 가 아닌 자리에서 켜지면 먼저 startup.fold_path 순서로 STOW 로 접는다 (parseFoldPath).
+//     기본 경로 = 팔을 들어 올림 (J2 · J3 · J4 함께, FOLD_UP) → 손목 · 집게 → J1 을 STOW 쪽으로 → J4 → J2 → J3 (DRIVE → STOW 접기와 같은 끝 순서).
 #pragma once
 
 #include <algorithm>
@@ -75,6 +77,33 @@ inline bool startupStageNeeded(
     if (std::abs(current[k] - pose[k]) > tol) {return true;}
   }
   return false;
+}
+
+// 접기 경로 한 단계: 움직일 관절 칸 · 그 관절의 목표 이름 자세 (poses.*)
+struct FoldStep
+{
+  std::vector<size_t> joints;
+  std::string pose;
+};
+
+// startup.fold_path ("5,6:STOW", "2,3,4:FOLD_UP", "1:STOW", …) → 단계 목록 (2026-11-18: 어느 자세에서 켜도 STOW 로 접기).
+//   관절 번호 규칙은 parseStartupStages 와 같되, 단계마다 목표 자세가 다를 수 있어 같은 관절이 여러 단계에 나와도 된다.
+inline std::vector<FoldStep> parseFoldPath(const std::vector<std::string> & path, size_t n)
+{
+  std::vector<FoldStep> out;
+  for (const auto & text : path) {
+    const auto colon = text.rfind(':');
+    if (colon == std::string::npos || colon + 1 >= text.size()) {
+      throw std::invalid_argument("startup.fold_path: '" + text + "' must be '<joints>:<pose>'");
+    }
+    std::string pose = text.substr(colon + 1);
+    pose.erase(0, pose.find_first_not_of(" \t"));
+    pose.erase(pose.find_last_not_of(" \t") + 1);
+    if (pose.empty()) {throw std::invalid_argument("startup.fold_path: empty pose in '" + text + "'");}
+    const auto joints = parseStartupStages({text.substr(0, colon)}, n);   // 한 묶음 안 중복 · 범위 검사
+    out.push_back({joints.front(), pose});
+  }
+  return out;
 }
 
 // 이동 시간 = 가장 많이 움직이는 관절 / max_vel (그리퍼 포함), min_duration 이상

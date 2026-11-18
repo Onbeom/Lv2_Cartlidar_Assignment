@@ -92,9 +92,11 @@
              J5 (칸 4) 는 STOW 0 rad (2048 tick) 로, 범위 1849 ~ 2246 (0° 중심 −199 · +198 = ±17.4°) 그대로. J2 ~ J4 는 그대로
              2026-11-16 저녁: 관절 1 모터가 모델과 180° 돌아 달린 것 확정 → 팔 펌웨어 v6 이 관절 1 을 π 돌려 모델 각도로 보냄 (config.h ARM_J1_FLIP).
              이 범위는 호스트가 받는 모델 각도 기준 tick (2048 + rad × 4096 / 2π) 이라 J1 (칸 0) 1363 ~ 1477 → 3425 ~ 3539 (STOW 2.200 rad, ±57).
-             팔 펌웨어가 v5 (보정 전) 면 opencr_hardware 가 버전으로 거부 -->
-        <param name="arm_standby_min_tick">3425,653,3025,797,1849,1531</param>
-        <param name="arm_standby_max_tick">3539,721,3091,864,2246,2669</param>
+             팔 펌웨어가 v5 (보정 전) 면 opencr_hardware 가 버전으로 거부
+             2026-11-18 (개인 프로젝트): 팔을 어느 자세에 두고 켜도 되게 — 관절마다 펌웨어 범위 전체 (J1 ±π · J2 −2.14 ~ 1.6 · J3 ±1.6 ·
+             J4 −1.92 ~ 2.0 · J5 ±2.8 rad). 켜진 뒤 manipulator 가 정해진 접기 순서로 STOW 로 접는다 (startup.fold_*, manipulator.yaml) -->
+        <param name="arm_standby_min_tick">1,653,1005,797,223,1531</param>
+        <param name="arm_standby_max_tick">4095,3091,3091,3351,3873,2669</param>
         </xacro:if>
       </hardware>
 

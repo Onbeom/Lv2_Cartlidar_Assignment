@@ -860,6 +860,23 @@ private:
       }
       startup_stages_ = parseStartupStages(stages, joint_names_.size());
     }
+    // 2026-11-18: STOW 가 아닌 자리에서 켜져도 정해진 순서로 STOW 로 접은 뒤 (startup.pose 가 있으면) 펼침.
+    //   false = 예전처럼 STOW · 정리 자세가 아니면 움직이지 않고 기다림
+    startup_fold_ = declare_parameter<bool>("startup.fold_to_stow", true);
+    const auto fold_path = declare_parameter<std::vector<std::string>>(
+      "startup.fold_path", {"2,3,4:FOLD_UP", "5,6:STOW", "1:STOW", "4:STOW", "2:STOW", "3:STOW"});
+    if (startup_fold_) {
+      if (poses_.count("STOW") == 0) {throw std::invalid_argument("startup.fold_to_stow needs pose STOW in poses.names");}
+      fold_path_ = parseFoldPath(fold_path, joint_names_.size());
+      for (const auto & st : fold_path_) {
+        if (poses_.count(st.pose) == 0) {
+          throw std::invalid_argument("startup.fold_path: pose '" + st.pose + "' is not in poses.names");
+        }
+        if (!withinLimits(poses_.at(st.pose))) {
+          throw std::invalid_argument("startup.fold_path: pose '" + st.pose + "' exceeds joint limits");
+        }
+      }
+    }
     requirePositive("startup.max_joint_velocity", startup_vel_);
     requirePositive("pallet.start_tolerance", pallet_start_tol_);
     requirePositive("pallet.start_pose_tolerance", pallet_start_pose_tol_);
@@ -1561,10 +1578,10 @@ private:
   // 켜질 때 정리를 아직 마치지 않음 (startup.block_goals): HOLD 해제 (REARM) 를 기다리거나 joint_states · arm_controller 를 기다리는 중
   bool startupPending(const char * what)
   {
-    if (!startup_block_goals_ || startup_done_ || startup_pose_.empty()) {return false;}
+    if (!startup_block_goals_ || startup_done_ || !startupEnabled()) {return false;}
     RCLCPP_WARN_THROTTLE(get_logger(), *get_clock(), 2000,
       "%s: startup to '%s' not finished (REARM, wait for 'startup: arm at %s') -> reject", what,
-      startup_pose_.c_str(), startup_pose_.c_str());
+      startupTarget().c_str(), startupTarget().c_str());
     return true;
   }
 
@@ -1572,7 +1589,7 @@ private:
   {
     if (job_ != Job::STARTUP) {return false;}
     RCLCPP_WARN(get_logger(), "%s: arm is moving to startup pose '%s' -> reject (retry after it finishes)",
-      what, startup_pose_.c_str());
+      what, startupTarget().c_str());
     return true;
   }
 
@@ -1584,9 +1601,13 @@ private:
     return diag_arm_hold_ || diag_estop_ || estop_topic_ || (now() - diag_rx_).seconds() > 3.0;
   }
 
+  // 켜질 때 정리의 마지막 자세: startup.pose, 없으면 (접기만 켬) STOW
+  std::string startupTarget() const {return startup_pose_.empty() ? std::string("STOW") : startup_pose_;}
+  bool startupEnabled() const {return !startup_pose_.empty() || startup_fold_;}
+
   void startupTick()
   {
-    if (startup_done_ || startup_pose_.empty()) {return;}
+    if (startup_done_ || !startupEnabled()) {return;}
     const auto t = now();
     if (job_ == Job::STARTUP) {
       if (armHeld()) {
@@ -1618,7 +1639,7 @@ private:
       if (armHeld()) {
         RCLCPP_INFO_THROTTLE(get_logger(), *get_clock(), 10000,
           "startup: waiting for arm HOLD / E-stop release (reset button = REARM) before moving to '%s'",
-          startup_pose_.c_str());
+          startupTarget().c_str());
         return;
       }
     } else {
@@ -1633,11 +1654,24 @@ private:
     {
       const auto stow = poses_.find("STOW");
       const double d_stow = stow != poses_.end() ? armDistance(*current, stow->second) : 1e9;
-      const double d_goal = armDistance(*current, poses_.at(startup_pose_));
+      const double d_goal = startup_pose_.empty() ? 1e9 : armDistance(*current, poses_.at(startup_pose_));
       if (d_stow > pose_start_tol_ && d_goal > pose_start_tol_) {
-        RCLCPP_ERROR_THROTTLE(get_logger(), *get_clock(), 10000,
-          "startup: arm is not at STOW (%.2f rad) nor '%s' (%.2f rad) -> not moving. Put the arm in STOW by hand "
-          "(support it, 12 V off), then power on / restart bringup", d_stow, startup_pose_.c_str(), d_goal);
+        if (!startup_fold_) {
+          RCLCPP_ERROR_THROTTLE(get_logger(), *get_clock(), 10000,
+            "startup: arm is not at STOW (%.2f rad) nor '%s' (%.2f rad) -> not moving. Put the arm in STOW by hand "
+            "(support it, 12 V off), then power on / restart bringup", d_stow, startup_pose_.c_str(), d_goal);
+          return;
+        }
+        job_ = Job::STARTUP;
+        fold_stage_ = 0;
+        RCLCPP_INFO(get_logger(), "startup: arm is %.2f rad from STOW -> folding to STOW first (%zu steps, %.2f rad/s)",
+          d_stow, fold_path_.size(), startup_vel_);
+        runFoldStage();
+        return;
+      }
+      if (startup_pose_.empty()) {   // 접기만 켬 · 이미 STOW 근처
+        RCLCPP_INFO(get_logger(), "startup: arm at STOW (%.2f rad)", d_stow);
+        startup_done_ = true;
         return;
       }
     }
@@ -1681,6 +1715,49 @@ private:
         }
         ++startup_stage_;
         runStartupStage();
+      });
+  }
+
+  // 어느 자세에서 켜졌든 startup.fold_path 순서로 STOW 로 접음. 이미 그 단계 자세인 관절 묶음은 건너뜀
+  void runFoldStage()
+  {
+    const auto current = currentJoints();
+    if (!current) {
+      failStartup("no recent /joint_states for arm joints");
+      return;
+    }
+    while (fold_stage_ < fold_path_.size() &&
+      !startupStageNeeded(*current, poses_.at(fold_path_[fold_stage_].pose), fold_path_[fold_stage_].joints, startup_skip_tol_))
+    {
+      ++fold_stage_;
+    }
+    if (fold_stage_ >= fold_path_.size()) {
+      if (startup_pose_.empty()) {
+        RCLCPP_INFO(get_logger(), "startup: arm at STOW (folded)");
+        startup_done_ = true;
+        endJob();
+        return;
+      }
+      RCLCPP_INFO(get_logger(), "startup: folded to STOW -> moving arm to '%s' (%zu stages)",
+        startup_pose_.c_str(), startup_stages_.size());
+      startup_stage_ = 0;
+      runStartupStage();
+      return;
+    }
+    const auto & st = fold_path_[fold_stage_];
+    const auto target = startupStageTarget(*current, poses_.at(st.pose), st.joints, lower_, upper_);
+    if (gripper_mode_ == GripperMode::ARM_JOINT && std::count(st.joints.begin(), st.joints.end(), size_t{5})) {
+      gripper_cmd_ = target[5];
+    }
+    const double duration = startupStageDuration(*current, target, startup_vel_, min_duration_);
+    RCLCPP_INFO(get_logger(), "startup: fold %zu/%zu -> %s (%.1f s)", fold_stage_ + 1, fold_path_.size(), st.pose.c_str(), duration);
+    sendArm(target, duration, [this](bool ok, const std::string & msg) {
+        if (!ok) {
+          failStartup(msg);
+          return;
+        }
+        ++fold_stage_;
+        runFoldStage();
       });
   }
 
@@ -4169,6 +4246,9 @@ private:
   double max_step_{0.02}, correction_min_duration_{0.3}, settle_time_{0.2}, wait_timeout_{1.0};
   std::string startup_pose_{"DRIVE"};                 // 빈 문자열 = 켜질 때 정리 끔
   std::vector<std::vector<size_t>> startup_stages_;   // 관절 칸 묶음 순서
+  bool startup_fold_{true};                          // STOW 가 아닌 자리에서 켜지면 먼저 STOW 로 접음 (2026-11-18)
+  std::vector<FoldStep> fold_path_;                  // 접기 순서 (관절 묶음 → 이름 자세)
+  size_t fold_stage_{0};
   double startup_vel_{0.1}, startup_skip_tol_{0.05}, startup_diag_wait_{5.0}, startup_warn_after_{15.0};
 
   // ROS 인터페이스

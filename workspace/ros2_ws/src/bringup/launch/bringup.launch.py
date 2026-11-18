@@ -115,7 +115,7 @@ def generate_launch_description():
         if on('use_nav2'):
             ready['ready.lifecycle_managers'] = ['lifecycle_manager_navigation']
         mission_params.append(ready)
-        # 켜질 때 팔 펴기 (STOW → startup.pose). none = 펴지 않고 지금 자리를 붙잡음 — 팔 없이 주행만 시험할 때 (2026-11-18)
+        # 켜질 때 팔: 어느 자세든 STOW 로 접은 뒤 startup.pose 로 폄. none = STOW 에서 멈춤 — 팔 없이 주행만 시험할 때 (2026-11-18)
         pose = LaunchConfiguration('arm_startup_pose').perform(context)
         arm_startup = {'startup.pose': '' if pose.lower() in ('', 'none') else pose}
         groups = [
@@ -211,7 +211,7 @@ def generate_launch_description():
                                                               LaunchConfiguration('sim'), "'.lower() != 'true' else '0.0'"]),
                               description='mission_node diagnostics.timeout [s]: opencr/* 진단이 이만큼 끊기면 안전 정지. 기본 실물 3.0 · sim · 하드웨어 없음 0 (끔)'),
         DeclareLaunchArgument('arm_startup_pose', default_value='DRIVE',
-                              description='켜질 때 팔을 펼 자세 (manipulator startup.pose). none = 펴지 않음 (팔 없이 주행만 시험)'),
+                              description='켜질 때 팔을 펼 자세 (manipulator startup.pose). none = 펴지 않고 STOW 로 접은 채 붙잡음 (팔 없이 주행만 시험)'),
         DeclareLaunchArgument('use_teleop', default_value='false', description='조이스틱 (끄면 E-stop heartbeat 검사도 끔)'),
         DeclareLaunchArgument('use_perception', default_value='true', description='⑦ 카메라 3대 · 검출'),
         DeclareLaunchArgument('split_control', default_value='false',

@@ -84,3 +84,28 @@ TEST(StartupStow, DurationFromLargestMoveIncludingGripper)
   EXPECT_DOUBLE_EQ(startupStageDuration(from, to, 0.2, 1.0), 8.0);   // 그리퍼 1.6 rad / 0.2
   EXPECT_DOUBLE_EQ(startupStageDuration(from, from, 0.2, 1.0), 1.0);   // 최소 시간
 }
+
+// 2026-11-18: 어느 자세에서 켜도 STOW 로 접는 경로
+using control::parseFoldPath;
+
+TEST(StartupStow, ParsesFoldPathWithRepeatedJoints)
+{
+  const auto f = parseFoldPath({"5,6:STOW", "2,3,4:FOLD_UP", "1:STOW", "4:STOW", "2 :STOW", "3: STOW"}, 6);
+  ASSERT_EQ(f.size(), 6u);
+  EXPECT_EQ(f[0].joints, (std::vector<size_t>{4, 5}));
+  EXPECT_EQ(f[0].pose, "STOW");
+  EXPECT_EQ(f[1].joints, (std::vector<size_t>{1, 2, 3}));
+  EXPECT_EQ(f[1].pose, "FOLD_UP");
+  EXPECT_EQ(f[3].joints, (std::vector<size_t>{3}));   // J4 가 두 번 나와도 됨 (목표 자세가 다름)
+  EXPECT_EQ(f[4].joints, (std::vector<size_t>{1}));
+  EXPECT_EQ(f[5].pose, "STOW");
+}
+
+TEST(StartupStow, RejectsBadFoldPath)
+{
+  EXPECT_THROW(parseFoldPath({"1,2"}, 6), std::invalid_argument);        // 자세 없음
+  EXPECT_THROW(parseFoldPath({"1:"}, 6), std::invalid_argument);
+  EXPECT_THROW(parseFoldPath({":STOW"}, 6), std::invalid_argument);      // 관절 없음
+  EXPECT_THROW(parseFoldPath({"7:STOW"}, 6), std::invalid_argument);     // 범위 밖
+  EXPECT_THROW(parseFoldPath({"1,1:STOW"}, 6), std::invalid_argument);   // 한 단계 안 중복
+}

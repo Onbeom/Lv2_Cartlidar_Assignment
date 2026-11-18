@@ -168,7 +168,7 @@ ros2 launch bringup bringup.launch.py use_hardware:=false use_sensors:=false use
 ```
 - 지도 · 라이다 몸체 가림 · 합치기 (`/scan_merged`) · AMCL · EKF 를 띄움. 하드웨어 (J1) · 라이다 드라이버 (J2) · 인식 · 계획기 · 팀 Nav2 는 안 띄움.
 - ⚠ **켜질 때 팔이 대기 → 주행 자세로 펴집니다** (J3 → J2 → J4 → J1 → J5). 손을 빼고, 리모컨 1 준비. 계산상 틈이 거의 없는 곳이 있어 지켜봅니다.
-- **팔 없이 주행만 시험할 때 (11-18 추가):** 끝에 `arm_startup_pose:=none` 을 붙이면 팔을 펴지 않고 대기 자세 그대로 붙잡습니다 (`bringup.launch.py` 인자). 라이다는 팔보다 낮아 가리지 않습니다 (팔 최저 0.131 m · 라이다 약 0.068 m, 팀 URDF 계산).
+- **팔 없이 주행만 시험할 때 (11-18 추가):** 끝에 `arm_startup_pose:=none` 을 붙이면 팔을 펴지 않습니다 — 어느 자세에서 켰든 STOW 로 접은 뒤 그대로 붙잡습니다 (`bringup.launch.py` 인자). 라이다는 팔보다 낮아 가리지 않습니다 (팔 최저 0.131 m · 라이다 약 0.068 m, 팀 URDF 계산).
 - 10 ~ 30 초 걸립니다.
 
 ### 단계 7 — J4: 위치 감시 끄기 · 점검
