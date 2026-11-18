@@ -206,7 +206,7 @@ def generate_launch_description():
                               default_value=PythonExpression(["'3.0' if '", LaunchConfiguration('use_hardware'), "'.lower() == 'true' and '",
                                                               LaunchConfiguration('sim'), "'.lower() != 'true' else '0.0'"]),
                               description='mission_node diagnostics.timeout [s]: opencr/* 진단이 이만큼 끊기면 안전 정지. 기본 실물 3.0 · sim · 하드웨어 없음 0 (끔)'),
-        DeclareLaunchArgument('use_teleop', default_value='true', description='조이스틱 (끄면 E-stop heartbeat 검사도 끔)'),
+        DeclareLaunchArgument('use_teleop', default_value='false', description='조이스틱 (끄면 E-stop heartbeat 검사도 끔)'),
         DeclareLaunchArgument('use_perception', default_value='true', description='⑦ 카메라 3대 · 검출'),
         DeclareLaunchArgument('split_control', default_value='false',
                               description='측정용 (#265): control_container 를 mission · drive · manipulator · tfmini 프로세스 넷으로 나눔 '
