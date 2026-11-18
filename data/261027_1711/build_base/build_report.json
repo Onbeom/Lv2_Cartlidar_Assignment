@@ -1,0 +1,283 @@
+{
+ "removed": [
+  {
+   "row": 0,
+   "path": "Motor_Front_Left:1+Motor_Left (1):1",
+   "body": "본체1",
+   "solid": 0,
+   "area_removed_mm2": 79.16665852344579,
+   "area_solid_mm2": 79.16673006939266,
+   "mass_g": 0.07291644477209885
+  },
+  {
+   "row": 1,
+   "path": "Motor_Front_Left:1+Motor_Left (1):1",
+   "body": "본체2",
+   "solid": 1,
+   "area_removed_mm2": 9670.75772602161,
+   "area_solid_mm2": 9675.313583655,
+   "mass_g": 81.92708355522791
+  },
+  {
+   "row": 2,
+   "path": "Motor_Front_Right:1+Motor_Right (1):1",
+   "body": "본체1",
+   "solid": 2,
+   "area_removed_mm2": 9670.75772602161,
+   "area_solid_mm2": 9675.313583463609,
+   "mass_g": 81.92708355522791
+  },
+  {
+   "row": 3,
+   "path": "Motor_Front_Right:1+Motor_Right (1):1",
+   "body": "본체2",
+   "solid": 3,
+   "area_removed_mm2": 79.16665852344579,
+   "area_solid_mm2": 79.16673006939266,
+   "mass_g": 0.07291644477209881
+  },
+  {
+   "row": 39,
+   "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+   "body": "본체1",
+   "solid": 34,
+   "area_removed_mm2": 79.16665852344579,
+   "area_solid_mm2": 79.16673006939266,
+   "mass_g": 0.07291644477209885
+  },
+  {
+   "row": 40,
+   "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+   "body": "본체2",
+   "solid": 35,
+   "area_removed_mm2": 9670.75772602161,
+   "area_solid_mm2": 9675.313583463609,
+   "mass_g": 81.92708355522791
+  },
+  {
+   "row": 43,
+   "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+   "body": "본체1",
+   "solid": 38,
+   "area_removed_mm2": 9670.75772602161,
+   "area_solid_mm2": 9675.313583655,
+   "mass_g": 81.92708355522791
+  },
+  {
+   "row": 44,
+   "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+   "body": "본체2",
+   "solid": 39,
+   "area_removed_mm2": 79.16665852344579,
+   "area_solid_mm2": 79.16673006939266,
+   "mass_g": 0.07291644477209881
+  },
+  {
+   "row": 33,
+   "path": "housing:1+Open CASCADE STEP translator 8.0 1:1",
+   "body": "본체1",
+   "solid": 28,
+   "area_removed_mm2": 23034.93564271265,
+   "area_solid_mm2": 23034.949223263793,
+   "mass_g": 47.7453680862954
+  },
+  {
+   "row": 71,
+   "path": "housing:2+Open CASCADE STEP translator 8.0 1:1",
+   "body": "본체1",
+   "solid": 61,
+   "area_removed_mm2": 23034.94079685938,
+   "area_solid_mm2": 23034.94899007739,
+   "mass_g": 47.7453680862954
+  },
+  {
+   "row": 72,
+   "path": "Open CASCADE STEP translator 8.0 1:2",
+   "body": "본체1",
+   "solid": 62,
+   "area_removed_mm2": 23034.88749757242,
+   "area_solid_mm2": 23034.947441417695,
+   "mass_g": 47.7453680862954
+  },
+  {
+   "row": 34,
+   "path": "magazine_B:1+Open CASCADE STEP translator 8.0 1 (1):1",
+   "body": "본체1",
+   "solid": 29,
+   "area_removed_mm2": 32852.04062486344,
+   "area_solid_mm2": 32851.99230841527,
+   "mass_g": 56.568880111962706
+  },
+  {
+   "row": 35,
+   "path": "magazine_G:1+Open CASCADE STEP translator 8.0 1 (2):1",
+   "body": "본체1",
+   "solid": 30,
+   "area_removed_mm2": 32871.18050891085,
+   "area_solid_mm2": 32871.13593374936,
+   "mass_g": 56.55996706740507
+  },
+  {
+   "row": 36,
+   "path": "magazine_R:1+Open CASCADE STEP translator 8.0 1 (3):1",
+   "body": "본체1",
+   "solid": 31,
+   "area_removed_mm2": 32857.531161605846,
+   "area_solid_mm2": 32857.46743172399,
+   "mass_g": 56.56799894360725
+  },
+  {
+   "row": 665,
+   "path": "Chassis_Bracket_Left_16mm:1",
+   "body": "Floor_Bracket_Left_Main",
+   "solid": 67,
+   "area_removed_mm2": 74343.62187123389,
+   "area_solid_mm2": 74337.15567288767,
+   "mass_g": 176.0517749193527
+  },
+  {
+   "row": 666,
+   "path": "Chassis_Bracket_Left_16mm:1",
+   "body": "Floor_Bracket_Left_Profile_Carrier",
+   "solid": 68,
+   "area_removed_mm2": 31671.400335141254,
+   "area_solid_mm2": 31669.227260176543,
+   "mass_g": 82.34683389933107
+  },
+  {
+   "row": 667,
+   "path": "Chassis_Bracket_Right_16mm:1",
+   "body": "Floor_Bracket_Right_Main",
+   "solid": 69,
+   "area_removed_mm2": 74343.62187123389,
+   "area_solid_mm2": 74337.15565279264,
+   "mass_g": 176.0517749193527
+  },
+  {
+   "row": 668,
+   "path": "Chassis_Bracket_Right_16mm:1",
+   "body": "Floor_Bracket_Right_Profile_Carrier",
+   "solid": 70,
+   "area_removed_mm2": 31671.40033514125,
+   "area_solid_mm2": 31669.227256684673,
+   "mass_g": 82.34683389933105
+  },
+  {
+   "row": 37,
+   "path": "rail_hi:1+Open CASCADE STEP translator 8.0 1 (5):1",
+   "body": "본체1",
+   "solid": 32,
+   "area_removed_mm2": 31774.889322816434,
+   "area_solid_mm2": 31774.93561911011,
+   "mass_g": 98.78254328242922
+  },
+  {
+   "row": 38,
+   "path": "rail_lo:1+Open CASCADE STEP translator 8.0 1 (6):1",
+   "body": "본체1",
+   "solid": 33,
+   "area_removed_mm2": 31774.876339640283,
+   "area_solid_mm2": 31774.879539510315,
+   "mass_g": 98.78228635716304
+  }
+ ],
+ "removed_in_old_motor_box": [
+  {
+   "row": 1,
+   "faces": 144,
+   "area_mm2": 7.54207451692292
+  },
+  {
+   "row": 2,
+   "faces": 144,
+   "area_mm2": 7.542074516921517
+  },
+  {
+   "row": 40,
+   "faces": 144,
+   "area_mm2": 7.542074516921517
+  },
+  {
+   "row": 43,
+   "faces": 144,
+   "area_mm2": 7.54207451692292
+  }
+ ],
+ "faces_old": 989932,
+ "faces_removed": 72788,
+ "faces_new": 1174616,
+ "added": [
+  "Floor_Bracket_Left_Main_TO_v3",
+  "Floor_Bracket_Left_Profile_Carrier_TO_v3",
+  "Floor_Bracket_Right_Main_TO_v3",
+  "Floor_Bracket_Right_Profile_Carrier_TO_v3",
+  "housing_1",
+  "housing_2",
+  "housing_3",
+  "magazine_B",
+  "magazine_G",
+  "magazine_R",
+  "rail_hi_new",
+  "rail_lo_new",
+  "bearing_block_FL",
+  "bearing_block_RL",
+  "bearing_block_FR",
+  "bearing_block_RR",
+  "motor_sled_FL",
+  "motor_sled_RL",
+  "motor_sled_FR",
+  "motor_sled_RR",
+  "wheel_pulley_FL",
+  "wheel_pulley_RL",
+  "wheel_pulley_FR",
+  "wheel_pulley_RR",
+  "motor_pulley_FL",
+  "motor_pulley_RL",
+  "motor_pulley_FR",
+  "motor_pulley_RR",
+  "spacer_FL",
+  "spacer_RL",
+  "spacer_FR",
+  "spacer_RR",
+  "collar_FL",
+  "collar_RL",
+  "collar_FR",
+  "collar_RR",
+  "guard_FL",
+  "guard_RL",
+  "guard_FR",
+  "guard_RR",
+  "motor_FL",
+  "motor_RL",
+  "motor_FR",
+  "motor_RR",
+  "shaft_FL",
+  "shaft_RL",
+  "shaft_FR",
+  "shaft_RR",
+  "bearing_in_FL",
+  "bearing_in_RL",
+  "bearing_in_FR",
+  "bearing_in_RR",
+  "bearing_out_FL",
+  "bearing_out_RL",
+  "bearing_out_FR",
+  "bearing_out_RR",
+  "belt_FL",
+  "belt_RL",
+  "belt_FR",
+  "belt_RR"
+ ],
+ "bounds_new_m": [
+  [
+   -0.22598999738693237,
+   -0.154,
+   0.003000000026077032
+  ],
+  [
+   0.14499999582767487,
+   0.154,
+   0.5061410069465637
+  ]
+ ]
+}

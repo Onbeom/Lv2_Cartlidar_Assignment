@@ -1,0 +1,359 @@
+{
+ "mass_kg": 4.615637480982298,
+ "com_m": [
+  -0.02722161194890253,
+  -0.004674512007326665,
+  0.12829579451252748
+ ],
+ "inertia_com_kg_m2": [
+  [
+   0.1275797940181671,
+   0.003036076456139546,
+   0.031875714505630925
+  ],
+  [
+   0.003036076456139546,
+   0.13458306812120308,
+   -0.0009434972343576467
+  ],
+  [
+   0.031875714505630925,
+   -0.0009434972343576467,
+   0.07636073545585904
+  ]
+ ],
+ "old": {
+  "mass": 3.72180302244876,
+  "com": [
+   -0.05354795499650813,
+   -2.202453130900904e-05,
+   0.14667466611266705
+  ],
+  "I": [
+   [
+    0.11556446013925142,
+    -0.00019271830760513178,
+    0.025205750302463154
+   ],
+   [
+    -0.00019271830760513178,
+    0.11477421546923385,
+    0.0001088149297917809
+   ],
+   [
+    0.025205750302463154,
+    0.0001088149297917809,
+    0.05362001126481296
+   ]
+  ]
+ },
+ "removed_mass_kg": 1.1577301680192287,
+ "added_mass_kg": 2.0515646265527687,
+ "eig_inertia": [
+  0.061017615379560304,
+  0.13403219871190147,
+  0.14347378350376752
+ ],
+ "added": [
+  {
+   "name": "Floor_Bracket_Left_Main_TO_v3",
+   "mass_g": 134.6500055166444,
+   "material": "PLA"
+  },
+  {
+   "name": "Floor_Bracket_Left_Profile_Carrier_TO_v3",
+   "mass_g": 71.05431010875515,
+   "material": "PLA"
+  },
+  {
+   "name": "Floor_Bracket_Right_Main_TO_v3",
+   "mass_g": 134.65000675948218,
+   "material": "PLA"
+  },
+  {
+   "name": "Floor_Bracket_Right_Profile_Carrier_TO_v3",
+   "mass_g": 71.05430966874523,
+   "material": "PLA"
+  },
+  {
+   "name": "housing_1",
+   "mass_g": 48.25802977917118,
+   "material": "PLA"
+  },
+  {
+   "name": "housing_2",
+   "mass_g": 48.25804546171338,
+   "material": "PLA"
+  },
+  {
+   "name": "housing_3",
+   "mass_g": 48.2580296476059,
+   "material": "PLA"
+  },
+  {
+   "name": "magazine_B",
+   "mass_g": 45.14180633784978,
+   "material": "PLA"
+  },
+  {
+   "name": "magazine_G",
+   "mass_g": 45.141808433844695,
+   "material": "PLA"
+  },
+  {
+   "name": "magazine_R",
+   "mass_g": 45.14180650495072,
+   "material": "PLA"
+  },
+  {
+   "name": "bearing_block_FL",
+   "mass_g": 52.152318534543866,
+   "material": "PLA"
+  },
+  {
+   "name": "bearing_block_RL",
+   "mass_g": 52.152318534543866,
+   "material": "PLA"
+  },
+  {
+   "name": "bearing_block_FR",
+   "mass_g": 52.152318534543866,
+   "material": "PLA"
+  },
+  {
+   "name": "bearing_block_RR",
+   "mass_g": 52.152318534543866,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_sled_FL",
+   "mass_g": 27.901243847116863,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_sled_RL",
+   "mass_g": 27.901243847116863,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_sled_FR",
+   "mass_g": 27.901243847116863,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_sled_RR",
+   "mass_g": 27.901243847116863,
+   "material": "PLA"
+  },
+  {
+   "name": "wheel_pulley_FL",
+   "mass_g": 2.9456514768158475,
+   "material": "PLA"
+  },
+  {
+   "name": "wheel_pulley_RL",
+   "mass_g": 2.9456514768158475,
+   "material": "PLA"
+  },
+  {
+   "name": "wheel_pulley_FR",
+   "mass_g": 2.9456514768158475,
+   "material": "PLA"
+  },
+  {
+   "name": "wheel_pulley_RR",
+   "mass_g": 2.9456514768158475,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_pulley_FL",
+   "mass_g": 3.7547782118314292,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_pulley_RL",
+   "mass_g": 3.7547782118314292,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_pulley_FR",
+   "mass_g": 3.7547782118314292,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_pulley_RR",
+   "mass_g": 3.7547782118314292,
+   "material": "PLA"
+  },
+  {
+   "name": "spacer_FL",
+   "mass_g": 0.08050292475572554,
+   "material": "PLA"
+  },
+  {
+   "name": "spacer_RL",
+   "mass_g": 0.08050292475572554,
+   "material": "PLA"
+  },
+  {
+   "name": "spacer_FR",
+   "mass_g": 0.08050292475572554,
+   "material": "PLA"
+  },
+  {
+   "name": "spacer_RR",
+   "mass_g": 0.08050292475572554,
+   "material": "PLA"
+  },
+  {
+   "name": "collar_FL",
+   "mass_g": 1.737489648395371,
+   "material": "PLA"
+  },
+  {
+   "name": "collar_RL",
+   "mass_g": 1.737489648395371,
+   "material": "PLA"
+  },
+  {
+   "name": "collar_FR",
+   "mass_g": 1.737489648395371,
+   "material": "PLA"
+  },
+  {
+   "name": "collar_RR",
+   "mass_g": 1.737489648395371,
+   "material": "PLA"
+  },
+  {
+   "name": "guard_FL",
+   "mass_g": 6.1631342740548805,
+   "material": "PLA"
+  },
+  {
+   "name": "guard_RL",
+   "mass_g": 6.1631342740548805,
+   "material": "PLA"
+  },
+  {
+   "name": "guard_FR",
+   "mass_g": 6.1631342740548805,
+   "material": "PLA"
+  },
+  {
+   "name": "guard_RR",
+   "mass_g": 6.1631342740548805,
+   "material": "PLA"
+  },
+  {
+   "name": "motor_FL",
+   "mass_g": 82.00000000000001,
+   "material": "XM430"
+  },
+  {
+   "name": "motor_RL",
+   "mass_g": 82.00000000000001,
+   "material": "XM430"
+  },
+  {
+   "name": "motor_FR",
+   "mass_g": 82.00000000000001,
+   "material": "XM430"
+  },
+  {
+   "name": "motor_RR",
+   "mass_g": 82.00000000000001,
+   "material": "XM430"
+  },
+  {
+   "name": "shaft_FL",
+   "mass_g": 22.03366126242209,
+   "material": "steel"
+  },
+  {
+   "name": "shaft_RL",
+   "mass_g": 22.03366126242209,
+   "material": "steel"
+  },
+  {
+   "name": "shaft_FR",
+   "mass_g": 22.03366126242209,
+   "material": "steel"
+  },
+  {
+   "name": "shaft_RR",
+   "mass_g": 22.03366126242209,
+   "material": "steel"
+  },
+  {
+   "name": "bearing_in_FL",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_in_RL",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_in_FR",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_in_RR",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_out_FL",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_out_RL",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_out_FR",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "bearing_out_RR",
+   "mass_g": 3.5,
+   "material": "bearing"
+  },
+  {
+   "name": "belt_FL",
+   "mass_g": 0.886473106977406,
+   "material": "rubber"
+  },
+  {
+   "name": "belt_RL",
+   "mass_g": 0.886473106977406,
+   "material": "rubber"
+  },
+  {
+   "name": "belt_FR",
+   "mass_g": 0.886473106977406,
+   "material": "rubber"
+  },
+  {
+   "name": "belt_RR",
+   "mass_g": 0.886473106977406,
+   "material": "rubber"
+  },
+  {
+   "name": "ballast_cup_-",
+   "mass_g": 24.65519645831682,
+   "material": "PLA"
+  },
+  {
+   "name": "ballast_steel_-",
+   "mass_g": 508.68025872803526,
+   "material": "steel_block"
+  }
+ ]
+}
