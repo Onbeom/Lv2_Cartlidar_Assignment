@@ -1,0 +1,7319 @@
+[
+ {
+  "image": "judge_v1_f__001_000000.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000000.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000000.png",
+  "time": 1793677905319.4631,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.937
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.836619 0.121367 0.077211 0.153941"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__002_000006.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000006.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000006.png",
+  "time": 1793677906321.522,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.94
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.811917 0.148113 0.073716 0.154257"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__003_000012.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000012.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000012.png",
+  "time": 1793677907323.6135,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.894,
+   0.863,
+   0.607,
+   0.231
+  ],
+  "classes": [
+   0,
+   2,
+   1,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.318131 0.175172 0.101363 0.096680",
+   "2 0.760826 0.411978 0.083232 0.164687",
+   "1 0.706747 0.041803 0.045445 0.083606",
+   "0 0.661637 0.059950 0.068258 0.119802"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 2,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__004_000018.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000018.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000018.png",
+  "time": 1793677908326.2795,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.948,
+   0.946,
+   0.888,
+   0.816,
+   0.755,
+   0.734,
+   0.395,
+   0.121
+  ],
+  "classes": [
+   0,
+   2,
+   2,
+   3,
+   1,
+   3,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.153361 0.297095 0.093564 0.096895",
+   "2 0.628919 0.467834 0.082564 0.181850",
+   "2 0.502710 0.139891 0.070098 0.139533",
+   "3 0.566267 0.037377 0.061609 0.074754",
+   "1 0.422846 0.013611 0.048654 0.027021",
+   "3 0.598616 0.036915 0.032224 0.073766",
+   "3 0.539049 0.128458 0.031760 0.089641",
+   "1 0.538831 0.128281 0.031414 0.088555"
+  ],
+  "edits": {
+   "deleted": 3,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__005_000024.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000024.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000024.png",
+  "time": 1793677909338.7856,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.962,
+   0.957,
+   0.938,
+   0.843,
+   0.822,
+   0.535
+  ],
+  "classes": [
+   0,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.168057 0.283008 0.094600 0.097006",
+   "2 0.660021 0.443589 0.086083 0.182250",
+   "2 0.519633 0.114791 0.064627 0.135369",
+   "3 0.595313 0.024586 0.076924 0.049116",
+   "3 0.562851 0.100457 0.031943 0.089697",
+   "3 0.618327 0.023078 0.039703 0.046117"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__006_000030.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000030.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000030.png",
+  "time": 1793677910363.9563,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.953,
+   0.947,
+   0.892,
+   0.841,
+   0.778,
+   0.758,
+   0.43
+  ],
+  "classes": [
+   2,
+   0,
+   2,
+   3,
+   0,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.836308 0.493337 0.093531 0.180312",
+   "0 0.334297 0.289159 0.087118 0.093872",
+   "2 0.677620 0.123827 0.064191 0.132681",
+   "3 0.746403 0.022124 0.072344 0.044217",
+   "0 0.141032 0.369650 0.084406 0.063943",
+   "3 0.718884 0.105698 0.032191 0.088229",
+   "3 0.774822 0.020725 0.043420 0.041407"
+  ],
+  "edits": {
+   "deleted": 3,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__007_000036.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000036.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000036.png",
+  "time": 1793677911385.5588,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.945,
+   0.919,
+   0.896,
+   0.852,
+   0.331
+  ],
+  "classes": [
+   0,
+   2,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.389769 0.315998 0.089159 0.103868",
+   "2 0.936396 0.581503 0.099187 0.204921",
+   "2 0.758087 0.145471 0.073711 0.143040",
+   "3 0.839311 0.026925 0.091148 0.053850",
+   "3 0.794702 0.126756 0.050409 0.094778"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__008_000042.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000042.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000042.png",
+  "time": 1793677912405.3215,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.969,
+   0.967,
+   0.924,
+   0.91,
+   0.862,
+   0.781
+  ],
+  "classes": [
+   0,
+   2,
+   2,
+   3,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.341916 0.424440 0.099405 0.104294",
+   "2 0.948491 0.744664 0.102889 0.196618",
+   "2 0.737473 0.239507 0.074419 0.149684",
+   "3 0.828555 0.085101 0.097482 0.094315",
+   "1 0.641618 0.031011 0.046161 0.062022",
+   "3 0.753812 0.218472 0.103247 0.105234"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__009_000048.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000048.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000048.png",
+  "time": 1793677913422.987,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.967,
+   0.918,
+   0.683,
+   0.528,
+   0.433,
+   0.174
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   3,
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.381713 0.333146 0.104737 0.112169",
+   "2 0.828258 0.146549 0.106893 0.169771",
+   "3 0.917701 0.012400 0.109220 0.024603",
+   "3 0.873585 0.121269 0.037714 0.113008",
+   "0 0.990507 0.783217 0.018927 0.210524",
+   "3 0.884025 0.011562 0.040272 0.023030"
+  ],
+  "edits": {
+   "deleted": 3,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__010_000054.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000054.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000054.png",
+  "time": 1793677914438.9675,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.956,
+   0.901,
+   0.8,
+   0.605
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.406215 0.302253 0.109976 0.111606",
+   "2 0.890440 0.148204 0.115254 0.186328",
+   "3 0.897578 0.144896 0.133407 0.186121",
+   "3 0.964929 0.013240 0.064653 0.026481"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__011_000060.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000060.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000060.png",
+  "time": 1793677915451.9019,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.949,
+   0.907,
+   0.588,
+   0.255
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.419442 0.206643 0.117196 0.126055",
+   "2 0.933309 0.061380 0.082266 0.122597",
+   "3 0.985089 0.027389 0.029747 0.054777",
+   "1 0.907341 0.016122 0.065418 0.032141"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__012_000066.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000066.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000066.png",
+  "time": 1793677916463.2625,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.891,
+   0.579
+  ],
+  "classes": [
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.407360 0.391898 0.106286 0.125806",
+   "3 0.973634 0.028743 0.046582 0.057373"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__013_000072.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000072.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000072.png",
+  "time": 1793677917473.5078,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.965,
+   0.947,
+   0.923,
+   0.911,
+   0.896
+  ],
+  "classes": [
+   0,
+   3,
+   1,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.348024 0.547833 0.108874 0.111411",
+   "3 0.911125 0.176656 0.123922 0.120794",
+   "1 0.692961 0.034818 0.053277 0.069636",
+   "3 0.808488 0.351009 0.126448 0.127868",
+   "2 0.797298 0.394432 0.080489 0.177600"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__014_000078.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000078.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000078.png",
+  "time": 1793677918483.6885,
+  "batch": "judge_v1_f",
+  "dets": 8,
+  "conf": [
+   0.959,
+   0.902,
+   0.866,
+   0.725,
+   0.442,
+   0.366,
+   0.355,
+   0.196
+  ],
+  "classes": [
+   0,
+   3,
+   2,
+   3,
+   3,
+   2,
+   1,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.242774 0.458362 0.106654 0.109279",
+   "3 0.780449 0.110174 0.118116 0.120104",
+   "2 0.660779 0.320288 0.077900 0.141841",
+   "3 0.675634 0.268496 0.120167 0.130900",
+   "3 0.594999 0.009886 0.063748 0.019685",
+   "2 0.748742 0.948969 0.128290 0.102016",
+   "1 0.675600 0.269050 0.120585 0.132533",
+   "0 0.746090 0.949241 0.121384 0.101518"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__015_000083.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000083.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000083.png",
+  "time": 1793677919326.0188,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.9,
+   0.868,
+   0.81,
+   0.649,
+   0.395
+  ],
+  "classes": [
+   3,
+   0,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.725314 0.348294 0.102376 0.113250",
+   "0 0.198654 0.543087 0.124822 0.119650",
+   "3 0.560809 0.161093 0.050657 0.133873",
+   "2 0.612464 0.498686 0.071476 0.158210",
+   "3 0.669727 0.470892 0.064344 0.120986"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__016_000089.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000089.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000089.png",
+  "time": 1793677920335.653,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.888,
+   0.856,
+   0.823,
+   0.704,
+   0.698
+  ],
+  "classes": [
+   0,
+   2,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.400891 0.060992 0.127232 0.086211",
+   "2 0.728057 0.723029 0.082663 0.111680",
+   "2 0.858020 0.107599 0.169250 0.207892",
+   "3 0.976903 0.029395 0.046074 0.058790",
+   "3 0.858512 0.082960 0.165021 0.157892"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__017_000095.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000095.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000095.png",
+  "time": 1793677921342.054,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.146
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.969295 0.025341 0.061410 0.050601"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__018_000101.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000101.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000101.png",
+  "time": 1793677922347.6917,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.264
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.933645 0.700414 0.132188 0.151964"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__019_000107.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000107.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000107.png",
+  "time": 1793677923353.0166,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__020_000113.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000113.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000113.png",
+  "time": 1793677924357.6667,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.727
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.925867 0.870542 0.146121 0.166079"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__021_000119.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000119.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000119.png",
+  "time": 1793677925362.68,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__022_000125.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000125.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000125.png",
+  "time": 1793677926367.7295,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.824
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.920770 0.544345 0.073501 0.061657"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__023_000131.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000131.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000131.png",
+  "time": 1793677927372.4424,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.833
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.950680 0.593493 0.073543 0.095602"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__024_000137.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000137.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000137.png",
+  "time": 1793677928377.4595,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__025_000143.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000143.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000143.png",
+  "time": 1793677929382.1636,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.827,
+   0.668,
+   0.647,
+   0.101
+  ],
+  "classes": [
+   1,
+   0,
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.531285 0.075364 0.098202 0.150389",
+   "0 0.379093 0.655532 0.112860 0.107016",
+   "2 0.876440 0.977060 0.113223 0.045880",
+   "1 0.762153 0.238440 0.063950 0.107724"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__026_000149.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000149.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000149.png",
+  "time": 1793677930389.3005,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.897,
+   0.872,
+   0.835,
+   0.772
+  ],
+  "classes": [
+   3,
+   3,
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.299844 0.028987 0.102625 0.057825",
+   "3 0.234817 0.190015 0.117119 0.109528",
+   "2 0.410226 0.752455 0.070088 0.117414",
+   "2 0.235236 0.261822 0.082367 0.100033"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__027_000155.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000155.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000155.png",
+  "time": 1793677931393.7507,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 4,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__028_000161.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000161.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000161.png",
+  "time": 1793677932397.504,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.646,
+   0.577,
+   0.293
+  ],
+  "classes": [
+   0,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.222158 0.019810 0.152460 0.039510",
+   "3 0.740012 0.101926 0.154979 0.203853",
+   "2 0.615290 0.761770 0.068541 0.139167"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__029_000167.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000167.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000167.png",
+  "time": 1793677933401.07,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.91,
+   0.888,
+   0.713,
+   0.645,
+   0.605,
+   0.212
+  ],
+  "classes": [
+   0,
+   3,
+   3,
+   2,
+   0,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.333947 0.134470 0.121806 0.084639",
+   "3 0.834149 0.279097 0.153805 0.226724",
+   "3 0.975917 0.129237 0.048166 0.227218",
+   "2 0.663559 0.919697 0.068918 0.153489",
+   "0 0.663431 0.917894 0.069075 0.150957",
+   "1 0.976415 0.125397 0.047171 0.239688"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__030_000173.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000173.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000173.png",
+  "time": 1793677934404.7476,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.924
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.428167 0.296302 0.110069 0.087162"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__031_000179.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000179.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000179.png",
+  "time": 1793677935408.6265,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.422,
+   0.361,
+   0.121
+  ],
+  "classes": [
+   3,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.984552 0.348018 0.030897 0.261013",
+   "3 0.842017 0.431542 0.131305 0.230090",
+   "1 0.984709 0.364360 0.030582 0.279626"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 3,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__032_000185.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000185.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000185.png",
+  "time": 1793677936412.1868,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__033_000191.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000191.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000191.png",
+  "time": 1793677937415.992,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 3,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__034_000197.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000197.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000197.png",
+  "time": 1793677938419.7493,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.918,
+   0.884,
+   0.825,
+   0.738,
+   0.424,
+   0.101
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   1,
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.405435 0.111652 0.106026 0.079985",
+   "2 0.699597 0.785877 0.067948 0.105418",
+   "3 0.835809 0.168545 0.134329 0.226976",
+   "1 0.958416 0.064787 0.083168 0.129575",
+   "1 0.835231 0.168287 0.135633 0.225822",
+   "2 0.835615 0.168844 0.135039 0.226258"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__035_000203.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000203.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000203.png",
+  "time": 1793677939423.4448,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.934,
+   0.927,
+   0.918,
+   0.858,
+   0.799,
+   0.188
+  ],
+  "classes": [
+   3,
+   0,
+   3,
+   2,
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.957465 0.079356 0.085071 0.145057",
+   "0 0.446944 0.060053 0.085988 0.059913",
+   "3 0.808701 0.164049 0.124911 0.170152",
+   "2 0.616676 0.676091 0.067826 0.105448",
+   "2 0.809124 0.164598 0.126160 0.170945",
+   "2 0.779333 0.184658 0.067368 0.131500"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__036_000209.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000209.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000209.png",
+  "time": 1793677940427.2747,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.951,
+   0.877,
+   0.837,
+   0.813,
+   0.793,
+   0.792,
+   0.696,
+   0.423
+  ],
+  "classes": [
+   0,
+   3,
+   3,
+   2,
+   1,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.410450 0.201630 0.084196 0.096701",
+   "3 0.883072 0.436539 0.088409 0.142021",
+   "3 0.750536 0.467141 0.061836 0.114755",
+   "2 0.469776 0.886296 0.087201 0.106076",
+   "1 0.866726 0.138706 0.072644 0.140774",
+   "2 0.698969 0.473807 0.069710 0.106425",
+   "3 0.732272 0.404571 0.057075 0.050513",
+   "3 0.864758 0.130725 0.068591 0.155389"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__037_000215.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000215.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000215.png",
+  "time": 1793677941430.7126,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.789,
+   0.626,
+   0.587,
+   0.415,
+   0.203
+  ],
+  "classes": [
+   3,
+   3,
+   0,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.984313 0.540081 0.031244 0.201553",
+   "3 0.854321 0.436457 0.055571 0.125032",
+   "0 0.442307 0.779004 0.077319 0.117842",
+   "2 0.442342 0.778729 0.077458 0.116871",
+   "3 0.865397 0.523058 0.060466 0.101895"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 3,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__038_000221.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000221.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000221.png",
+  "time": 1793677942434.3647,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.864,
+   0.861,
+   0.83
+  ],
+  "classes": [
+   3,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.796824 0.545396 0.053116 0.119044",
+   "3 0.952914 0.593546 0.066871 0.132508",
+   "2 0.740475 0.565742 0.062102 0.085940"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__039_000227.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000227.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000227.png",
+  "time": 1793677943438.1033,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.942,
+   0.907,
+   0.89,
+   0.831,
+   0.747
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.390247 0.391505 0.099809 0.103124",
+   "1 0.947500 0.273709 0.092271 0.091758",
+   "3 0.939545 0.640130 0.092482 0.152286",
+   "3 0.768249 0.670255 0.083126 0.159151",
+   "2 0.720045 0.722259 0.070432 0.116817"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__040_000233.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000233.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000233.png",
+  "time": 1793677944441.686,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.948,
+   0.899,
+   0.862,
+   0.858,
+   0.853
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.322637 0.471874 0.102308 0.088659",
+   "1 0.890945 0.303998 0.083937 0.081556",
+   "3 0.737094 0.705343 0.090971 0.159123",
+   "2 0.691820 0.767000 0.071653 0.128784",
+   "3 0.907323 0.659979 0.103512 0.150539"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__041_000239.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000239.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000239.png",
+  "time": 1793677945444.8523,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.879,
+   0.673,
+   0.645,
+   0.529,
+   0.216
+  ],
+  "classes": [
+   3,
+   0,
+   2,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.910581 0.604711 0.113846 0.174485",
+   "0 0.256122 0.459245 0.114529 0.092647",
+   "2 0.256792 0.459487 0.115143 0.091567",
+   "2 0.681694 0.754724 0.077677 0.104410",
+   "3 0.711512 0.691212 0.130181 0.220659"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__042_000245.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000245.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000245.png",
+  "time": 1793677946447.9497,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.939,
+   0.939,
+   0.861,
+   0.859,
+   0.82
+  ],
+  "classes": [
+   3,
+   1,
+   0,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.914859 0.576473 0.104818 0.167092",
+   "1 0.900338 0.184829 0.090889 0.096583",
+   "0 0.289222 0.389278 0.107882 0.095113",
+   "2 0.684527 0.694162 0.076052 0.134965",
+   "3 0.731668 0.626415 0.094876 0.162408"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__043_000251.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000251.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000251.png",
+  "time": 1793677947451.1917,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.943,
+   0.832,
+   0.829,
+   0.602,
+   0.585,
+   0.18
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   2,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.463079 0.418059 0.088963 0.083765",
+   "1 0.966281 0.295941 0.067327 0.078200",
+   "3 0.969936 0.624964 0.060128 0.137283",
+   "2 0.783225 0.704911 0.071432 0.095192",
+   "3 0.817199 0.664495 0.095559 0.156515",
+   "2 0.807569 0.669908 0.116774 0.164665"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__044_000257.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000257.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000257.png",
+  "time": 1793677948454.6624,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.937,
+   0.81,
+   0.783,
+   0.759,
+   0.27,
+   0.201
+  ],
+  "classes": [
+   0,
+   3,
+   1,
+   2,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.519007 0.223761 0.087725 0.078917",
+   "3 0.872836 0.429245 0.115044 0.149087",
+   "1 0.983321 0.055826 0.033358 0.102159",
+   "2 0.840544 0.463836 0.066955 0.089468",
+   "3 0.992271 0.342596 0.015458 0.106817",
+   "2 0.864219 0.435173 0.115976 0.142635"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__045_000263.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000263.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000263.png",
+  "time": 1793677949457.8674,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.932,
+   0.908,
+   0.777,
+   0.711
+  ],
+  "classes": [
+   0,
+   3,
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.499703 0.308162 0.085829 0.068273",
+   "3 0.908925 0.375557 0.120934 0.167541",
+   "2 0.889332 0.387311 0.088796 0.168074",
+   "2 0.796105 0.944647 0.058841 0.110523"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__046_000269.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000269.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000269.png",
+  "time": 1793677950460.9875,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.946,
+   0.939,
+   0.904,
+   0.865
+  ],
+  "classes": [
+   3,
+   0,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.954722 0.119638 0.090555 0.144576",
+   "0 0.418211 0.292139 0.097099 0.085731",
+   "3 0.830134 0.256426 0.117803 0.146053",
+   "2 0.804467 0.316891 0.078032 0.110912"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__047_000275.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000275.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000275.png",
+  "time": 1793677951464.136,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.836,
+   0.595,
+   0.113,
+   0.103
+  ],
+  "classes": [
+   0,
+   1,
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.404838 0.134529 0.089648 0.105423",
+   "1 0.841790 0.046871 0.046844 0.093742",
+   "1 0.780460 0.021473 0.045742 0.042773",
+   "2 0.799708 0.069657 0.087567 0.139315"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 2,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__048_000281.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000281.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000281.png",
+  "time": 1793677952467.41,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [
+   0.268,
+   0.101
+  ],
+  "classes": [
+   0,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.445893 0.045479 0.085597 0.090958",
+   "2 0.834517 0.418620 0.089639 0.137309"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__049_000287.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000287.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000287.png",
+  "time": 1793677953470.37,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__050_000293.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000293.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000293.png",
+  "time": 1793677954473.4204,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [
+   0.919,
+   0.759
+  ],
+  "classes": [
+   0,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.452806 0.041632 0.073174 0.083219",
+   "2 0.859586 0.328529 0.068377 0.121996"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__051_000299.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000299.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000299.png",
+  "time": 1793677955476.9226,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.827,
+   0.689,
+   0.545,
+   0.523,
+   0.254,
+   0.243,
+   0.114
+  ],
+  "classes": [
+   1,
+   2,
+   2,
+   0,
+   1,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.784078 0.031873 0.063098 0.063722",
+   "2 0.897101 0.274222 0.072798 0.117968",
+   "2 0.886896 0.237193 0.118526 0.192373",
+   "0 0.576191 0.441048 0.079058 0.134578",
+   "1 0.941297 0.069518 0.115852 0.136794",
+   "3 0.888718 0.235450 0.120669 0.184369",
+   "3 0.941506 0.069498 0.116536 0.135456"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 2,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__052_000305.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000305.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000305.png",
+  "time": 1793677956479.952,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.947,
+   0.916
+  ],
+  "classes": [
+   0,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.586620 0.251521 0.089445 0.129833",
+   "0 0.425001 0.424461 0.078849 0.085830"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__053_000311.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000311.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000311.png",
+  "time": 1793677957482.9775,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.916
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.577305 0.171057 0.087121 0.141217"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__054_000317.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000317.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000317.png",
+  "time": 1793677958486.0608,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.932
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.643880 0.082776 0.093223 0.149571"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__055_000322.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000322.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000322.png",
+  "time": 1793677959321.8347,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.382
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.622271 0.048497 0.088142 0.096994"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__056_000328.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000328.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000328.png",
+  "time": 1793677960324.6616,
+  "batch": "judge_v1_f",
+  "dets": 1,
+  "conf": [
+   0.637,
+   0.409
+  ],
+  "classes": [
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.792630 0.017086 0.112794 0.033962",
+   "0 0.545072 0.390384 0.079184 0.133917"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__057_000334.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000334.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000334.png",
+  "time": 1793677961327.5369,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.893,
+   0.77,
+   0.604,
+   0.328
+  ],
+  "classes": [
+   0,
+   1,
+   0,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.627710 0.034422 0.124354 0.068844",
+   "1 0.629071 0.032735 0.126053 0.065427",
+   "0 0.475489 0.451711 0.067667 0.124216",
+   "1 0.600042 0.026390 0.066508 0.052545"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__058_000340.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000340.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000340.png",
+  "time": 1793677962330.5066,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.83,
+   0.806,
+   0.626
+  ],
+  "classes": [
+   1,
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.403988 0.026949 0.063364 0.053836",
+   "1 0.610492 0.042152 0.062092 0.082977",
+   "2 0.671610 0.043725 0.071014 0.086979"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__059_000346.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000346.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000346.png",
+  "time": 1793677963333.4375,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [
+   0.662,
+   0.119
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.599883 0.032137 0.055113 0.064274",
+   "2 0.650019 0.038170 0.071010 0.076341"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__060_000352.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000352.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000352.png",
+  "time": 1793677964336.5837,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.194,
+   0.125
+  ],
+  "classes": [
+   1,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.618082 0.116804 0.069816 0.188591",
+   "1 0.689291 0.232360 0.066093 0.190738"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 3,
+   "class_changed": 2,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__061_000358.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000358.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000358.png",
+  "time": 1793677965339.5295,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.9,
+   0.897,
+   0.887,
+   0.874,
+   0.859,
+   0.142
+  ],
+  "classes": [
+   2,
+   1,
+   0,
+   3,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.713536 0.475845 0.055847 0.097205",
+   "1 0.433291 0.468608 0.052725 0.078812",
+   "0 0.691482 0.939562 0.060588 0.120758",
+   "3 0.663996 0.469574 0.060091 0.101930",
+   "3 0.596791 0.352901 0.066972 0.109288",
+   "3 0.609857 0.334240 0.045938 0.075410"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__062_000364.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000364.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000364.png",
+  "time": 1793677966342.3594,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.931,
+   0.887,
+   0.859,
+   0.857,
+   0.808,
+   0.713
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   3,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.722843 0.941355 0.064771 0.117290",
+   "2 0.737957 0.470030 0.056293 0.100557",
+   "3 0.611535 0.356104 0.057959 0.096725",
+   "3 0.685559 0.469112 0.059156 0.096847",
+   "1 0.451163 0.464450 0.050833 0.087386",
+   "3 0.630193 0.324215 0.043546 0.075408"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__063_000370.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000370.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000370.png",
+  "time": 1793677967345.169,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.921,
+   0.907,
+   0.869,
+   0.859,
+   0.845,
+   0.682
+  ],
+  "classes": [
+   1,
+   0,
+   3,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.491195 0.410372 0.052722 0.089304",
+   "0 0.774329 0.940638 0.075282 0.118725",
+   "3 0.675878 0.281097 0.078250 0.127005",
+   "2 0.817122 0.419901 0.071173 0.112549",
+   "3 0.752537 0.419138 0.069696 0.104618",
+   "3 0.777443 0.380007 0.057526 0.078873"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__064_000376.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000376.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000376.png",
+  "time": 1793677968347.9727,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.939,
+   0.917,
+   0.884,
+   0.877,
+   0.845,
+   0.678
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   3,
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.435835 0.364876 0.063505 0.103186",
+   "2 0.812963 0.370546 0.081448 0.127660",
+   "3 0.745136 0.362228 0.088360 0.134155",
+   "3 0.644044 0.215407 0.079745 0.130940",
+   "0 0.775226 0.954043 0.072120 0.091329",
+   "3 0.664020 0.180497 0.060503 0.099796"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__065_000382.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000382.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000382.png",
+  "time": 1793677969350.784,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.931,
+   0.928,
+   0.9,
+   0.86,
+   0.79,
+   0.489
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   3,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.308549 0.400167 0.089902 0.124910",
+   "2 0.750475 0.378438 0.091989 0.147617",
+   "3 0.667407 0.382661 0.090919 0.135017",
+   "3 0.546529 0.198607 0.086507 0.159673",
+   "3 0.694803 0.325511 0.078575 0.108367",
+   "3 0.567269 0.150140 0.086755 0.093745"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__066_000388.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000388.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000388.png",
+  "time": 1793677970353.463,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.714,
+   0.569,
+   0.486,
+   0.128
+  ],
+  "classes": [
+   1,
+   1,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.249137 0.758986 0.117397 0.140870",
+   "1 0.668146 0.623549 0.091645 0.089385",
+   "3 0.516105 0.503726 0.113577 0.195137",
+   "2 0.734783 0.710785 0.097141 0.175211"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__067_000394.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000394.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000394.png",
+  "time": 1793677971356.0732,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.898,
+   0.4
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.209766 0.897142 0.103788 0.132139",
+   "3 0.476472 0.667886 0.096312 0.173873"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__068_000400.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000400.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000400.png",
+  "time": 1793677972358.4197,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.894,
+   0.745,
+   0.711,
+   0.692
+  ],
+  "classes": [
+   1,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.131154 0.501192 0.107560 0.132261",
+   "3 0.402283 0.309559 0.107440 0.169690",
+   "2 0.589172 0.487042 0.086732 0.157867",
+   "3 0.513616 0.474313 0.102746 0.173212"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__069_000406.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000406.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000406.png",
+  "time": 1793677973360.359,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.935,
+   0.879,
+   0.857,
+   0.824,
+   0.802,
+   0.432,
+   0.222
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   3,
+   0,
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.119275 0.308443 0.095387 0.134915",
+   "2 0.557211 0.329468 0.079012 0.148737",
+   "3 0.378166 0.150030 0.096960 0.162818",
+   "3 0.482832 0.329360 0.082413 0.134322",
+   "0 0.514471 0.949820 0.077312 0.099808",
+   "0 0.988285 0.379878 0.023270 0.128501",
+   "3 0.510100 0.296189 0.069545 0.132078"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__070_000412.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000412.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000412.png",
+  "time": 1793677974362.1206,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.949,
+   0.93,
+   0.914,
+   0.886,
+   0.88,
+   0.87
+  ],
+  "classes": [
+   1,
+   0,
+   3,
+   2,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.170277 0.228967 0.081840 0.132683",
+   "0 0.519377 0.880961 0.076221 0.178657",
+   "3 0.409467 0.082692 0.096054 0.159838",
+   "2 0.972204 0.302586 0.055591 0.124371",
+   "2 0.568951 0.253552 0.081851 0.149240",
+   "3 0.498470 0.247550 0.078000 0.150033"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__071_000418.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000418.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000418.png",
+  "time": 1793677975363.9814,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.924,
+   0.842,
+   0.804,
+   0.596,
+   0.342,
+   0.3
+  ],
+  "classes": [
+   1,
+   3,
+   2,
+   3,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.141194 0.639973 0.078487 0.115341",
+   "3 0.450061 0.623944 0.069219 0.113815",
+   "2 0.511943 0.618554 0.064794 0.128233",
+   "3 0.356588 0.474400 0.074445 0.144294",
+   "1 0.349934 0.486371 0.066838 0.124680",
+   "3 0.471817 0.578179 0.055375 0.090881"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__072_000424.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000424.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000424.png",
+  "time": 1793677976365.701,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.947,
+   0.925,
+   0.912,
+   0.882,
+   0.875,
+   0.768
+  ],
+  "classes": [
+   1,
+   2,
+   2,
+   3,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.135075 0.645511 0.079344 0.101617",
+   "2 0.879950 0.588056 0.087316 0.103205",
+   "2 0.494390 0.607268 0.062597 0.113180",
+   "3 0.435323 0.613172 0.069794 0.109983",
+   "3 0.333477 0.487218 0.064136 0.113001",
+   "3 0.356144 0.458514 0.052231 0.103639"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v1_f__073_000430.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000430.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000430.png",
+  "time": 1793677977367.2783,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.922,
+   0.884,
+   0.868,
+   0.866,
+   0.849,
+   0.695
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   2,
+   3,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.240893 0.543346 0.065749 0.096334",
+   "2 0.925358 0.542207 0.082756 0.096749",
+   "3 0.507495 0.532125 0.068196 0.112858",
+   "2 0.561106 0.534364 0.056418 0.106635",
+   "3 0.423382 0.409031 0.075178 0.121772",
+   "0 0.555739 0.986778 0.062699 0.026141"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__074_000436.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000436.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000436.png",
+  "time": 1793677978369.2473,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.865,
+   0.848,
+   0.835,
+   0.824,
+   0.804
+  ],
+  "classes": [
+   3,
+   3,
+   1,
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.600524 0.405098 0.066404 0.111434",
+   "3 0.678552 0.520232 0.070545 0.118544",
+   "1 0.438661 0.522139 0.048694 0.080287",
+   "2 0.725734 0.534281 0.057762 0.100045",
+   "0 0.713383 0.974180 0.062890 0.051639"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__075_000442.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000442.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000442.png",
+  "time": 1793677979371.458,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.915,
+   0.909,
+   0.876,
+   0.839,
+   0.83
+  ],
+  "classes": [
+   1,
+   0,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.429913 0.449406 0.050722 0.085589",
+   "0 0.707720 0.942299 0.061775 0.114372",
+   "3 0.607877 0.329483 0.073751 0.118817",
+   "2 0.737484 0.462473 0.064200 0.107655",
+   "3 0.685553 0.450238 0.075662 0.120886"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__076_000448.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000448.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000448.png",
+  "time": 1793677980373.8025,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.919,
+   0.881,
+   0.652,
+   0.32,
+   0.252
+  ],
+  "classes": [
+   0,
+   1,
+   0,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.664713 0.924269 0.084988 0.150866",
+   "1 0.270469 0.469299 0.086493 0.089365",
+   "0 0.983253 0.307611 0.033494 0.129495",
+   "3 0.450604 0.289055 0.075048 0.103928",
+   "3 0.471460 0.243525 0.075982 0.079073"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__077_000454.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000454.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000454.png",
+  "time": 1793677981376.0664,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.961,
+   0.943,
+   0.918,
+   0.903,
+   0.887,
+   0.847,
+   0.559
+  ],
+  "classes": [
+   0,
+   1,
+   2,
+   3,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.703353 0.816029 0.117891 0.159436",
+   "1 0.126611 0.444498 0.092707 0.111446",
+   "2 0.520450 0.234169 0.071801 0.130871",
+   "3 0.453652 0.251232 0.073044 0.164488",
+   "3 0.294931 0.169196 0.073145 0.133300",
+   "2 0.926719 0.060770 0.114766 0.121539",
+   "3 0.300407 0.108506 0.076998 0.082037"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__078_000460.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000460.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000460.png",
+  "time": 1793677982378.337,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.954,
+   0.949,
+   0.922,
+   0.9,
+   0.822,
+   0.122
+  ],
+  "classes": [
+   0,
+   1,
+   2,
+   3,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.864599 0.790764 0.129432 0.165257",
+   "1 0.253173 0.430594 0.087843 0.117736",
+   "2 0.646861 0.172178 0.080043 0.144416",
+   "3 0.573463 0.197765 0.069742 0.190042",
+   "3 0.400140 0.097430 0.066163 0.185783",
+   "1 0.400362 0.117822 0.064783 0.142539"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__079_000466.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000466.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000466.png",
+  "time": 1793677983380.6292,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.957,
+   0.954,
+   0.936,
+   0.901,
+   0.853
+  ],
+  "classes": [
+   1,
+   0,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.341358 0.536043 0.072510 0.099930",
+   "0 0.948163 0.779221 0.103673 0.149388",
+   "2 0.700682 0.228631 0.080493 0.128293",
+   "3 0.626650 0.270028 0.063762 0.144630",
+   "3 0.453732 0.188128 0.058094 0.171446"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__080_000472.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000472.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000472.png",
+  "time": 1793677984382.9622,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.85,
+   0.774,
+   0.748,
+   0.543,
+   0.535,
+   0.491,
+   0.148
+  ],
+  "classes": [
+   3,
+   2,
+   1,
+   3,
+   0,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.627033 0.348717 0.073118 0.135448",
+   "2 0.701044 0.277544 0.090425 0.152582",
+   "1 0.353467 0.689434 0.067911 0.111921",
+   "3 0.438277 0.282113 0.067923 0.193426",
+   "0 0.974628 0.806715 0.050743 0.114286",
+   "1 0.439326 0.290373 0.066446 0.176468",
+   "3 0.618307 0.294930 0.067441 0.132307"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__081_000478.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000478.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000478.png",
+  "time": 1793677985385.3337,
+  "batch": "judge_v1_f",
+  "dets": 6,
+  "conf": [
+   0.859,
+   0.685,
+   0.292
+  ],
+  "classes": [
+   0,
+   1,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.747788 0.810891 0.148022 0.151417",
+   "1 0.050764 0.755387 0.100591 0.120164",
+   "0 0.762951 0.021511 0.107158 0.042801"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 3,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__082_000484.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000484.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000484.png",
+  "time": 1793677986387.7007,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.951,
+   0.894,
+   0.885,
+   0.731
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.562316 0.784201 0.126042 0.146323",
+   "2 0.242304 0.231898 0.081294 0.149060",
+   "3 0.167612 0.306014 0.079358 0.142891",
+   "3 0.164047 0.237716 0.083835 0.118336"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__083_000490.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000490.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000490.png",
+  "time": 1793677987390.102,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.867,
+   0.798,
+   0.605,
+   0.47,
+   0.26,
+   0.176
+  ],
+  "classes": [
+   0,
+   0,
+   3,
+   2,
+   3,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.330675 0.837980 0.115120 0.182867",
+   "0 0.605023 0.043202 0.119423 0.086404",
+   "3 0.053069 0.176481 0.102569 0.151148",
+   "2 0.126776 0.137477 0.125424 0.174382",
+   "3 0.061400 0.090192 0.084559 0.082092",
+   "0 0.606823 0.018563 0.121535 0.037088"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v1_f__084_000496.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000496.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000496.png",
+  "time": 1793677988392.4866,
+  "batch": "judge_v1_f",
+  "dets": 2,
+  "conf": [
+   0.761,
+   0.207
+  ],
+  "classes": [
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.334712 0.548264 0.088637 0.165114",
+   "2 0.828347 0.024492 0.056428 0.048878"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__085_000502.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000502.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000502.png",
+  "time": 1793677989394.8677,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.944,
+   0.869,
+   0.78
+  ],
+  "classes": [
+   0,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.629681 0.523722 0.099726 0.145912",
+   "3 0.356921 0.022228 0.064653 0.044162",
+   "1 0.039426 0.178952 0.078853 0.145164"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__086_000508.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000508.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000508.png",
+  "time": 1793677990397.2778,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.961,
+   0.942,
+   0.907,
+   0.762,
+   0.7,
+   0.358
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   3,
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.750049 0.413661 0.115192 0.119539",
+   "1 0.119586 0.365165 0.098384 0.120939",
+   "3 0.363188 0.046271 0.070159 0.092541",
+   "3 0.171056 0.034257 0.073835 0.068482",
+   "1 0.171448 0.034866 0.073385 0.069723",
+   "2 0.411119 0.009573 0.075013 0.019144"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 4
+  }
+ },
+ {
+  "image": "judge_v1_f__087_000514.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000514.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000514.png",
+  "time": 1793677991399.6836,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.962,
+   0.902,
+   0.602,
+   0.46
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.777854 0.300192 0.123643 0.096810",
+   "1 0.177936 0.446285 0.084428 0.106747",
+   "3 0.330682 0.059442 0.097027 0.118530",
+   "2 0.370948 0.016914 0.100884 0.033806"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__088_000520.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000520.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000520.png",
+  "time": 1793677992402.0918,
+  "batch": "judge_v1_f",
+  "dets": 5,
+  "conf": [
+   0.822,
+   0.687,
+   0.675,
+   0.666,
+   0.257
+  ],
+  "classes": [
+   3,
+   2,
+   0,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.450006 0.180548 0.119873 0.229624",
+   "2 0.498639 0.102583 0.133351 0.202603",
+   "0 0.940376 0.511395 0.118951 0.132997",
+   "3 0.235659 0.217432 0.129309 0.237032",
+   "1 0.273804 0.697687 0.086819 0.147102"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__089_000526.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000526.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000526.png",
+  "time": 1793677993404.486,
+  "batch": "judge_v1_f",
+  "dets": 4,
+  "conf": [
+   0.942,
+   0.933,
+   0.883,
+   0.861
+  ],
+  "classes": [
+   2,
+   1,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.606198 0.198705 0.118067 0.199001",
+   "1 0.292821 0.927102 0.104685 0.145773",
+   "3 0.521856 0.293181 0.133967 0.235150",
+   "3 0.264600 0.334954 0.145519 0.248438"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v1_f__090_000532.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/color/000532.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125145_344597/depth_aligned/000532.png",
+  "time": 1793677994406.9275,
+  "batch": "judge_v1_f",
+  "dets": 3,
+  "conf": [
+   0.741
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.849542 0.764895 0.203281 0.162168"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__091_000000.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000000.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000000.png",
+  "time": 1793678275003.6,
+  "batch": "judge_v2_f",
+  "dets": 6,
+  "conf": [
+   0.967,
+   0.966,
+   0.963,
+   0.957,
+   0.919
+  ],
+  "classes": [
+   3,
+   0,
+   1,
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.345932 0.557651 0.118173 0.164328",
+   "0 0.095379 0.491236 0.079708 0.154350",
+   "1 0.202634 0.253355 0.060245 0.143035",
+   "2 0.242757 0.419009 0.079793 0.165653",
+   "2 0.429842 0.267485 0.084577 0.263825"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__092_000006.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000006.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000006.png",
+  "time": 1793678276005.8704,
+  "batch": "judge_v2_f",
+  "dets": 6,
+  "conf": [
+   0.953,
+   0.952,
+   0.926,
+   0.914,
+   0.887,
+   0.569
+  ],
+  "classes": [
+   0,
+   1,
+   3,
+   2,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.029857 0.411340 0.059683 0.159967",
+   "1 0.132917 0.154577 0.068480 0.153993",
+   "3 0.282958 0.471456 0.122327 0.168774",
+   "2 0.175345 0.329959 0.081888 0.169804",
+   "2 0.372673 0.121374 0.084362 0.185197",
+   "3 0.367857 0.230669 0.076790 0.142682"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__093_000012.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000012.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000012.png",
+  "time": 1793678277008.12,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.902,
+   0.837,
+   0.706
+  ],
+  "classes": [
+   2,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.036896 0.084895 0.073791 0.169755",
+   "3 0.145712 0.224992 0.126625 0.161437",
+   "3 0.212667 0.022918 0.094317 0.045712"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__094_000018.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000018.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000018.png",
+  "time": 1793678278010.4092,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.903,
+   0.685
+  ],
+  "classes": [
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.077621 0.237179 0.126606 0.168367",
+   "3 0.155817 0.023433 0.107012 0.046798"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__095_000024.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000024.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000024.png",
+  "time": 1793678279012.6384,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.857,
+   0.796
+  ],
+  "classes": [
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.162576 0.202152 0.142553 0.182826",
+   "2 0.054135 0.048357 0.106369 0.096714"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__096_000030.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000030.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000030.png",
+  "time": 1793678280014.8125,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.951,
+   0.929,
+   0.864,
+   0.75
+  ],
+  "classes": [
+   3,
+   2,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.211212 0.387368 0.167369 0.177453",
+   "2 0.111112 0.142199 0.123222 0.195915",
+   "2 0.399787 0.088629 0.125516 0.177041",
+   "3 0.398664 0.088824 0.124649 0.176503"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v2_f__097_000036.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000036.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000036.png",
+  "time": 1793678281017.025,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.935,
+   0.932,
+   0.621,
+   0.464
+  ],
+  "classes": [
+   2,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.079204 0.141465 0.156824 0.279492",
+   "3 0.177846 0.520622 0.267635 0.250966",
+   "2 0.508564 0.116899 0.215619 0.233799",
+   "3 0.506923 0.118137 0.210861 0.233044"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v2_f__098_000042.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000042.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000042.png",
+  "time": 1793678282019.289,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.915,
+   0.877,
+   0.252,
+   0.172
+  ],
+  "classes": [
+   3,
+   2,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.156165 0.635391 0.311509 0.297230",
+   "2 0.056629 0.168526 0.113048 0.325489",
+   "2 0.606046 0.120097 0.273533 0.238882",
+   "3 0.553738 0.148501 0.288309 0.273646"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v2_f__099_000048.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000048.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000048.png",
+  "time": 1793678283021.536,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.952,
+   0.914,
+   0.806,
+   0.741
+  ],
+  "classes": [
+   3,
+   2,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.242366 0.466995 0.270065 0.249089",
+   "2 0.131094 0.106554 0.198297 0.213107",
+   "3 0.599293 0.100659 0.235987 0.201318",
+   "2 0.603418 0.101700 0.242473 0.203399"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__100_000054.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000054.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000054.png",
+  "time": 1793678284023.8213,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.959,
+   0.933,
+   0.864,
+   0.859
+  ],
+  "classes": [
+   3,
+   2,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.268819 0.432277 0.245486 0.230293",
+   "2 0.164919 0.104021 0.176054 0.207994",
+   "3 0.588469 0.097755 0.210839 0.195510",
+   "2 0.589008 0.097057 0.210549 0.193914"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__101_000060.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000060.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000060.png",
+  "time": 1793678285026.123,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.961,
+   0.952,
+   0.948,
+   0.818,
+   0.195
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.145743 0.097383 0.114762 0.191589",
+   "2 0.361259 0.112290 0.109043 0.215149",
+   "3 0.417270 0.368504 0.159760 0.155363",
+   "2 0.662967 0.110464 0.185804 0.220928",
+   "3 0.662492 0.109530 0.186239 0.218962"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__102_000066.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000066.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000066.png",
+  "time": 1793678286028.4104,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.966,
+   0.958,
+   0.958,
+   0.897,
+   0.176
+  ],
+  "classes": [
+   0,
+   2,
+   3,
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.205781 0.096782 0.069074 0.155744",
+   "2 0.374695 0.141073 0.086498 0.166346",
+   "3 0.395773 0.349695 0.123830 0.111555",
+   "2 0.615970 0.147582 0.122995 0.236232",
+   "1 0.437919 0.007962 0.112522 0.015924"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 4
+  }
+ },
+ {
+  "image": "judge_v2_f__103_000072.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000072.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000072.png",
+  "time": 1793678287030.7083,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.956,
+   0.951,
+   0.94,
+   0.898
+  ],
+  "classes": [
+   3,
+   0,
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.367014 0.259586 0.100791 0.093017",
+   "0 0.208417 0.063998 0.055044 0.123338",
+   "2 0.344124 0.092552 0.067757 0.133563",
+   "2 0.532755 0.092020 0.096624 0.184040"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__104_000078.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000078.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000078.png",
+  "time": 1793678288033.0037,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.924,
+   0.909,
+   0.867,
+   0.817,
+   0.388
+  ],
+  "classes": [
+   3,
+   2,
+   2,
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.373537 0.204117 0.095636 0.082617",
+   "2 0.356816 0.051213 0.064429 0.102426",
+   "2 0.537869 0.071270 0.083299 0.142539",
+   "0 0.227190 0.028535 0.070074 0.057071",
+   "3 0.537877 0.071474 0.083802 0.142947"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__105_000084.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000084.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000084.png",
+  "time": 1793678289035.2954,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__106_000090.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000090.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000090.png",
+  "time": 1793678290037.5964,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__107_000096.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000096.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000096.png",
+  "time": 1793678291039.895,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.906
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.099137 0.076073 0.196694 0.152146"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__108_000102.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000102.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000102.png",
+  "time": 1793678292042.1953,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.81
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.231004 0.040487 0.216080 0.080974"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__109_000108.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000108.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000108.png",
+  "time": 1793678293044.5107,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__110_000114.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000114.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000114.png",
+  "time": 1793678294046.8625,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__111_000120.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000120.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000120.png",
+  "time": 1793678295049.1553,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__112_000126.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000126.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000126.png",
+  "time": 1793678296051.4233,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__113_000132.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000132.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000132.png",
+  "time": 1793678297053.7263,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__114_000138.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000138.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000138.png",
+  "time": 1793678298056.1086,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__115_000144.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000144.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000144.png",
+  "time": 1793678299058.4707,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__116_000150.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000150.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000150.png",
+  "time": 1793678300060.7244,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__117_000156.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000156.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000156.png",
+  "time": 1793678301063.0393,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.547
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.236125 0.029129 0.107734 0.058162"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__118_000162.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000162.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000162.png",
+  "time": 1793678302065.344,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.925,
+   0.776
+  ],
+  "classes": [
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.519323 0.117745 0.143814 0.235490",
+   "2 0.243245 0.037077 0.177074 0.074154"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__119_000168.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000168.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000168.png",
+  "time": 1793678303067.652,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.936,
+   0.832,
+   0.597
+  ],
+  "classes": [
+   3,
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.489537 0.126175 0.154715 0.251949",
+   "2 0.187383 0.048508 0.187494 0.096855",
+   "0 0.062199 0.231442 0.122522 0.375585"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__120_000174.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000174.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000174.png",
+  "time": 1793678304070.0093,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.407
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.444806 0.035985 0.117554 0.071882"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__121_000180.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000180.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000180.png",
+  "time": 1793678305072.3613,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__122_000186.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000186.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000186.png",
+  "time": 1793678306074.6724,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__123_000192.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000192.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000192.png",
+  "time": 1793678307076.9585,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__124_000198.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000198.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000198.png",
+  "time": 1793678308079.2402,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__125_000204.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000204.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000204.png",
+  "time": 1793678309081.5525,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__126_000210.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000210.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000210.png",
+  "time": 1793678310083.9,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__127_000216.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000216.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000216.png",
+  "time": 1793678311086.2688,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [
+   0.286
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.471227 0.464966 0.428735 0.536078"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__128_000222.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000222.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000222.png",
+  "time": 1793678312088.5383,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__129_000228.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000228.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000228.png",
+  "time": 1793678313090.7898,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.951
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.670586 0.083945 0.154443 0.167890"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 4,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__130_000234.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000234.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000234.png",
+  "time": 1793678314093.153,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.741,
+   0.126
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.575308 0.020571 0.104840 0.040968",
+   "2 0.113448 0.225195 0.226520 0.450391"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__131_000240.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000240.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000240.png",
+  "time": 1793678315095.4553,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.967,
+   0.864,
+   0.722,
+   0.39
+  ],
+  "classes": [
+   1,
+   2,
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.575727 0.099341 0.130317 0.198683",
+   "2 0.250546 0.042256 0.175538 0.084511",
+   "2 0.145922 0.299831 0.269791 0.364423",
+   "1 0.038174 0.063877 0.076092 0.127753"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__132_000246.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000246.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000246.png",
+  "time": 1793678316097.7925,
+  "batch": "judge_v2_f",
+  "dets": 6,
+  "conf": [
+   0.968,
+   0.966,
+   0.952,
+   0.946,
+   0.939
+  ],
+  "classes": [
+   1,
+   0,
+   2,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.593111 0.353601 0.075861 0.158726",
+   "0 0.404990 0.079515 0.071062 0.158944",
+   "2 0.383702 0.275133 0.099532 0.189456",
+   "3 0.218171 0.328270 0.097688 0.207436",
+   "2 0.345766 0.563844 0.140794 0.243985"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__133_000252.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000252.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000252.png",
+  "time": 1793678317100.0862,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.97,
+   0.951,
+   0.942,
+   0.919,
+   0.619
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.597457 0.216466 0.075624 0.173046",
+   "2 0.386188 0.141213 0.103184 0.199517",
+   "3 0.219929 0.195736 0.095016 0.216169",
+   "2 0.342493 0.426611 0.146097 0.269864",
+   "0 0.407038 0.011395 0.073014 0.022791"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__134_000258.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000258.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000258.png",
+  "time": 1793678318102.4272,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.833,
+   0.443
+  ],
+  "classes": [
+   1,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.636625 0.034334 0.078526 0.068567",
+   "1 0.297403 0.013385 0.075382 0.026598"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__135_000264.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000264.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000264.png",
+  "time": 1793678319104.7808,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.768
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.608531 0.049673 0.053338 0.099346"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__136_000270.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000270.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000270.png",
+  "time": 1793678320107.1152,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.111
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.503293 0.034649 0.061171 0.069298"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__137_000276.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000276.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000276.png",
+  "time": 1793678321109.4497,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__138_000282.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000282.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000282.png",
+  "time": 1793678322111.7625,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.255
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.341601 0.075455 0.124761 0.143995"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__139_000288.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000288.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000288.png",
+  "time": 1793678323114.059,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.918,
+   0.825
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.530996 0.080950 0.158005 0.161730",
+   "3 0.044777 0.152453 0.089483 0.303432"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__140_000294.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000294.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000294.png",
+  "time": 1793678324116.3818,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.964
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.550891 0.157092 0.183944 0.314183"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__141_000300.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000300.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000300.png",
+  "time": 1793678325118.6948,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.975,
+   0.935,
+   0.777,
+   0.419,
+   0.346
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   3,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.581406 0.299339 0.102095 0.253002",
+   "2 0.400414 0.095461 0.111058 0.190874",
+   "3 0.204823 0.070489 0.127368 0.140978",
+   "3 0.139585 0.300415 0.215097 0.345074",
+   "3 0.296156 0.015560 0.057347 0.031119"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__142_000306.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000306.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000306.png",
+  "time": 1793678326121.0205,
+  "batch": "judge_v2_f",
+  "dets": 6,
+  "conf": [
+   0.953,
+   0.947,
+   0.943,
+   0.895,
+   0.867
+  ],
+  "classes": [
+   1,
+   3,
+   2,
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.506054 0.299418 0.074167 0.149364",
+   "3 0.282795 0.060904 0.114996 0.121807",
+   "2 0.411103 0.100731 0.073630 0.178990",
+   "2 0.206351 0.219769 0.134826 0.286656",
+   "0 0.527231 0.032448 0.066911 0.064829"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__143_000312.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000312.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000312.png",
+  "time": 1793678327123.3499,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.459
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.456260 0.033388 0.063591 0.066209"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__144_000318.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000318.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000318.png",
+  "time": 1793678328125.6738,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__145_000324.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000324.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000324.png",
+  "time": 1793678329127.9807,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__146_000330.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000330.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000330.png",
+  "time": 1793678330130.2827,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.786,
+   0.278
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.555135 0.267511 0.114065 0.163482",
+   "2 0.119858 0.107517 0.238515 0.215035"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__147_000336.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000336.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000336.png",
+  "time": 1793678331132.5798,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.954,
+   0.917,
+   0.513
+  ],
+  "classes": [
+   1,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.468953 0.478160 0.129584 0.209201",
+   "3 0.064064 0.169399 0.128015 0.241156",
+   "2 0.423052 0.026002 0.200806 0.051944"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__148_000342.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000342.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000342.png",
+  "time": 1793678332134.8037,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.91,
+   0.761
+  ],
+  "classes": [
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.076849 0.130957 0.153678 0.259045",
+   "1 0.494919 0.442100 0.126600 0.208815"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__149_000348.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000348.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000348.png",
+  "time": 1793678333137.1243,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.903
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.568107 0.086049 0.073992 0.114340"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__150_000354.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000354.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000354.png",
+  "time": 1793678334139.449,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.908
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.589721 0.070308 0.061788 0.094151"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__151_000360.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000360.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000360.png",
+  "time": 1793678335141.6682,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__152_000366.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000366.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000366.png",
+  "time": 1793678336143.9438,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__153_000372.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000372.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000372.png",
+  "time": 1793678337146.2144,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 4,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__154_000378.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000378.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000378.png",
+  "time": 1793678338148.502,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.929,
+   0.915,
+   0.89,
+   0.846
+  ],
+  "classes": [
+   2,
+   3,
+   1,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.484420 0.174447 0.093843 0.144403",
+   "3 0.640626 0.200321 0.078712 0.185170",
+   "1 0.292099 0.042527 0.081303 0.084992",
+   "0 0.428344 0.403717 0.074219 0.099030"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__155_000384.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000384.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000384.png",
+  "time": 1793678339150.8005,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.876,
+   0.83,
+   0.304,
+   0.158
+  ],
+  "classes": [
+   2,
+   3,
+   0,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.521043 0.154671 0.137998 0.165489",
+   "3 0.702737 0.301165 0.135997 0.193264",
+   "0 0.375789 0.476043 0.124035 0.155700",
+   "3 0.732811 0.247449 0.127320 0.247122"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__156_000390.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000390.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000390.png",
+  "time": 1793678340153.1294,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.956,
+   0.939,
+   0.936
+  ],
+  "classes": [
+   2,
+   3,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.393889 0.195725 0.154433 0.187779",
+   "3 0.624077 0.337399 0.190550 0.310430",
+   "0 0.207285 0.569051 0.139604 0.203624"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__157_000396.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000396.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000396.png",
+  "time": 1793678341155.4656,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.949,
+   0.894,
+   0.803
+  ],
+  "classes": [
+   2,
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.367433 0.307971 0.131270 0.150469",
+   "3 0.570485 0.413310 0.150730 0.262850",
+   "1 0.114650 0.025281 0.114435 0.050562"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__158_000402.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000402.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000402.png",
+  "time": 1793678342157.801,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.905,
+   0.839,
+   0.146
+  ],
+  "classes": [
+   2,
+   3,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.427850 0.122390 0.086068 0.125348",
+   "3 0.568834 0.184318 0.086257 0.172655",
+   "0 0.352201 0.309713 0.070628 0.100596"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__159_000408.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000408.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000408.png",
+  "time": 1793678343160.1377,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.873,
+   0.76,
+   0.69
+  ],
+  "classes": [
+   3,
+   0,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.576286 0.057433 0.070465 0.114865",
+   "0 0.397241 0.114565 0.057520 0.110181",
+   "2 0.454143 0.010620 0.058251 0.021181"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v2_f__160_000414.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000414.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000414.png",
+  "time": 1793678344162.4673,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 3,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__161_000420.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000420.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000420.png",
+  "time": 1793678345164.793,
+  "batch": "judge_v2_f",
+  "dets": 7,
+  "conf": [
+   0.889,
+   0.807,
+   0.762,
+   0.655,
+   0.464
+  ],
+  "classes": [
+   1,
+   2,
+   2,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.424366 0.254572 0.053928 0.106524",
+   "2 0.632610 0.227906 0.089624 0.162387",
+   "2 0.492546 0.420360 0.066033 0.106561",
+   "1 0.587711 0.511379 0.089965 0.148483",
+   "3 0.586942 0.512197 0.088972 0.147890"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__162_000426.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000426.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000426.png",
+  "time": 1793678346167.113,
+  "batch": "judge_v2_f",
+  "dets": 6,
+  "conf": [
+   0.937,
+   0.891,
+   0.875,
+   0.874,
+   0.148
+  ],
+  "classes": [
+   1,
+   2,
+   3,
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.212699 0.343743 0.064196 0.148418",
+   "2 0.488274 0.331499 0.109759 0.240687",
+   "3 0.427706 0.699202 0.117492 0.193476",
+   "2 0.299627 0.563734 0.084945 0.165402",
+   "0 0.142461 0.720053 0.086597 0.145979"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__163_000432.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000432.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000432.png",
+  "time": 1793678347169.438,
+  "batch": "judge_v2_f",
+  "dets": 5,
+  "conf": [
+   0.842,
+   0.832,
+   0.735,
+   0.728,
+   0.141
+  ],
+  "classes": [
+   3,
+   0,
+   1,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.484158 0.081125 0.115679 0.162249",
+   "0 0.036251 0.359485 0.072502 0.271341",
+   "1 0.097448 0.042733 0.115555 0.085309",
+   "2 0.243546 0.208874 0.124779 0.275149",
+   "3 0.452811 0.404636 0.177421 0.264941"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__164_000437.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000437.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000437.png",
+  "time": 1793678348004.7073,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.931,
+   0.928,
+   0.489
+  ],
+  "classes": [
+   3,
+   0,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.612513 0.155189 0.224245 0.310377",
+   "0 0.101164 0.082577 0.161247 0.165154",
+   "2 0.382834 0.018023 0.171313 0.035660"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__165_000443.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000443.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000443.png",
+  "time": 1793678349007.0327,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.94,
+   0.817,
+   0.758
+  ],
+  "classes": [
+   0,
+   3,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.252475 0.101356 0.113653 0.202712",
+   "3 0.639115 0.158905 0.193205 0.286838",
+   "2 0.466912 0.034557 0.151671 0.069110"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__166_000449.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000449.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000449.png",
+  "time": 1793678350009.3567,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.959,
+   0.906,
+   0.862
+  ],
+  "classes": [
+   0,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.273920 0.152421 0.071969 0.166212",
+   "2 0.415112 0.062373 0.088872 0.124747",
+   "3 0.539337 0.178807 0.117542 0.187929"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__167_000455.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000455.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000455.png",
+  "time": 1793678351011.6816,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.937,
+   0.908,
+   0.891
+  ],
+  "classes": [
+   0,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.332655 0.205134 0.073832 0.139130",
+   "2 0.428142 0.063414 0.064592 0.126548",
+   "3 0.567558 0.146543 0.092207 0.186867"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__168_000461.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000461.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000461.png",
+  "time": 1793678352014.0083,
+  "batch": "judge_v2_f",
+  "dets": 4,
+  "conf": [
+   0.675,
+   0.372,
+   0.173
+  ],
+  "classes": [
+   3,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.443695 0.146177 0.063557 0.117536",
+   "1 0.147361 0.017641 0.066302 0.035189",
+   "3 0.443176 0.084440 0.062430 0.078373"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 1
+  }
+ },
+ {
+  "image": "judge_v2_f__169_000467.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000467.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000467.png",
+  "time": 1793678353016.333,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__170_000473.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000473.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000473.png",
+  "time": 1793678354018.6594,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__171_000479.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000479.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000479.png",
+  "time": 1793678355020.986,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__172_000485.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000485.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000485.png",
+  "time": 1793678356023.3132,
+  "batch": "judge_v2_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__173_000491.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000491.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000491.png",
+  "time": 1793678357025.6445,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.945,
+   0.115
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.230061 0.242385 0.085688 0.175399",
+   "2 0.337669 0.070697 0.113850 0.141060"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__174_000497.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000497.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000497.png",
+  "time": 1793678358027.9766,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.923
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.228087 0.220591 0.173765 0.194629"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__175_000503.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000503.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000503.png",
+  "time": 1793678359030.3076,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.779,
+   0.5
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.293078 0.144805 0.198073 0.174631",
+   "2 0.493974 0.020837 0.169557 0.041256"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 2,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__176_000509.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000509.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000509.png",
+  "time": 1793678360032.6409,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.893,
+   0.878,
+   0.754
+  ],
+  "classes": [
+   0,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.572630 0.108344 0.162189 0.168388",
+   "1 0.225366 0.112264 0.181441 0.219262",
+   "3 0.224549 0.114111 0.180943 0.216297"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v2_f__177_000515.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000515.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000515.png",
+  "time": 1793678361034.973,
+  "batch": "judge_v2_f",
+  "dets": 2,
+  "conf": [
+   0.942,
+   0.913
+  ],
+  "classes": [
+   1,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.308323 0.112202 0.093758 0.123177",
+   "0 0.558982 0.055862 0.100499 0.111033"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__178_000521.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000521.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000521.png",
+  "time": 1793678362037.3032,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.835,
+   0.327
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.510470 0.189841 0.091515 0.090348",
+   "2 0.562181 0.030448 0.234886 0.060782"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__179_000527.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000527.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000527.png",
+  "time": 1793678363039.637,
+  "batch": "judge_v2_f",
+  "dets": 1,
+  "conf": [
+   0.904
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.493820 0.175368 0.074410 0.100621"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v2_f__180_000533.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/color/000533.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_125755_107185/depth_aligned/000533.png",
+  "time": 1793678364041.9744,
+  "batch": "judge_v2_f",
+  "dets": 3,
+  "conf": [
+   0.946,
+   0.683,
+   0.641
+  ],
+  "classes": [
+   1,
+   2,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.654694 0.164380 0.086214 0.103907",
+   "2 0.421645 0.041663 0.096683 0.083327",
+   "3 0.424110 0.041700 0.094455 0.083401"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 2,
+   "resized": 2
+  }
+ },
+ {
+  "image": "judge_v3_f__181_000000.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000000.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000000.png",
+  "time": 1793678545325.529,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.954
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.632784 0.774488 0.096292 0.196082"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__182_000006.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000006.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000006.png",
+  "time": 1793678546327.8735,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.944
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.708318 0.519506 0.083786 0.153606"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__183_000012.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000012.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000012.png",
+  "time": 1793678547330.4814,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.95
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.599552 0.599860 0.066888 0.147165"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__184_000018.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000018.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000018.png",
+  "time": 1793678548333.4214,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.935
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.652261 0.524943 0.062557 0.143292"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__185_000024.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000024.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000024.png",
+  "time": 1793678549335.8672,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.948
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.653643 0.507789 0.066290 0.140990"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__186_000030.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000030.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000030.png",
+  "time": 1793678550338.0435,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.956
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.750121 0.430229 0.075971 0.157540"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__187_000036.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000036.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000036.png",
+  "time": 1793678551340.3037,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.963
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.777143 0.427637 0.079139 0.155095"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__188_000042.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000042.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000042.png",
+  "time": 1793678552342.2302,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.958
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.803508 0.403193 0.084690 0.163697"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__189_000048.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000048.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000048.png",
+  "time": 1793678553343.348,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.956
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.704261 0.561692 0.077755 0.156362"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__190_000054.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000054.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000054.png",
+  "time": 1793678554342.956,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.945
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.586335 0.634623 0.077259 0.187945"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__191_000060.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000060.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000060.png",
+  "time": 1793678555341.876,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.89
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.717665 0.466296 0.113173 0.243301"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__192_000066.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000066.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000066.png",
+  "time": 1793678556341.3716,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.891
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.822398 0.439568 0.153071 0.315457"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__193_000072.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000072.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000072.png",
+  "time": 1793678557341.1326,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.955
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.691252 0.678878 0.126380 0.242841"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__194_000078.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000078.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000078.png",
+  "time": 1793678558341.1418,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.923
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.701409 0.726645 0.082496 0.138368"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__195_000084.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000084.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000084.png",
+  "time": 1793678559341.8208,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__196_000090.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000090.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000090.png",
+  "time": 1793678560342.912,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.443
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.400741 0.642372 0.078667 0.135988"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__197_000096.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000096.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000096.png",
+  "time": 1793678561344.09,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__198_000102.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000102.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000102.png",
+  "time": 1793678562345.3342,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__199_000108.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000108.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000108.png",
+  "time": 1793678563346.794,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__200_000114.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000114.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000114.png",
+  "time": 1793678564348.5964,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__201_000120.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000120.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000120.png",
+  "time": 1793678565350.5396,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__202_000126.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000126.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000126.png",
+  "time": 1793678566352.4011,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__203_000132.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000132.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000132.png",
+  "time": 1793678567354.34,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__204_000138.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000138.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000138.png",
+  "time": 1793678568356.3428,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__205_000144.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000144.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000144.png",
+  "time": 1793678569358.3838,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__206_000150.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000150.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000150.png",
+  "time": 1793678570360.4438,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__207_000156.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000156.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000156.png",
+  "time": 1793678571362.6504,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.34
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.303141 0.991319 0.068654 0.017154"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__208_000162.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000162.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000162.png",
+  "time": 1793678572364.8584,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.643,
+   0.612
+  ],
+  "classes": [
+   0,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.172472 0.703262 0.080093 0.081460",
+   "2 0.172560 0.703822 0.080438 0.082261"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__209_000168.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000168.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000168.png",
+  "time": 1793678573366.864,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__210_000174.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000174.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000174.png",
+  "time": 1793678574368.9573,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.524
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.013628 0.822550 0.027257 0.077310"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__211_000180.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000180.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000180.png",
+  "time": 1793678575371.1196,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.811
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.267225 0.714842 0.088048 0.096512"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__212_000186.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000186.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000186.png",
+  "time": 1793678576373.2966,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.715,
+   0.43
+  ],
+  "classes": [
+   3,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.347615 0.719727 0.090474 0.099307",
+   "1 0.347682 0.719673 0.090099 0.099602"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__213_000192.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000192.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000192.png",
+  "time": 1793678577375.5493,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.901,
+   0.471
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.141242 0.736587 0.118180 0.127494",
+   "3 0.140828 0.736313 0.117025 0.126872"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__214_000198.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000198.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000198.png",
+  "time": 1793678578377.845,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.915
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.951756 0.685859 0.096488 0.242003"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__215_000204.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000204.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000204.png",
+  "time": 1793678579380.1152,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.956
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.940717 0.696516 0.097390 0.211373"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__216_000210.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000210.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000210.png",
+  "time": 1793678580382.33,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.867
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.892619 0.596855 0.119459 0.222688"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__217_000216.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000216.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000216.png",
+  "time": 1793678581384.505,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.155,
+   0.119
+  ],
+  "classes": [
+   2,
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.487560 0.710887 0.163905 0.221014",
+   "0 0.486444 0.712610 0.157373 0.218601"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__218_000222.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000222.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000222.png",
+  "time": 1793678582386.6816,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__219_000228.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000228.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000228.png",
+  "time": 1793678583388.9478,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__220_000234.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000234.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000234.png",
+  "time": 1793678584391.277,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__221_000240.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000240.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000240.png",
+  "time": 1793678585393.5781,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__222_000246.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000246.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000246.png",
+  "time": 1793678586395.8572,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__223_000252.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000252.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000252.png",
+  "time": 1793678587398.1514,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__224_000258.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000258.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000258.png",
+  "time": 1793678588400.4705,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__225_000264.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000264.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000264.png",
+  "time": 1793678589402.8005,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__226_000270.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000270.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000270.png",
+  "time": 1793678590405.1,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__227_000276.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000276.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000276.png",
+  "time": 1793678591407.4265,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.899
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.573638 0.836948 0.047797 0.120846"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__228_000282.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000282.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000282.png",
+  "time": 1793678592409.801,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.95
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.624315 0.523479 0.059710 0.141560"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__229_000288.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000288.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000288.png",
+  "time": 1793678593412.1716,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.949
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.325165 0.688895 0.102294 0.294228"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__230_000294.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000294.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000294.png",
+  "time": 1793678594414.5283,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.957
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.312094 0.688756 0.163980 0.380353"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__231_000300.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000300.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000300.png",
+  "time": 1793678595416.8972,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.928
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.519421 0.660886 0.155573 0.389299"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__232_000306.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000306.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000306.png",
+  "time": 1793678596419.2751,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.571
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.490413 0.556792 0.160565 0.406999"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__233_000312.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000312.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000312.png",
+  "time": 1793678597421.6392,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.837
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.645477 0.750883 0.183202 0.445641"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__234_000318.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000318.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000318.png",
+  "time": 1793678598424.0232,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.774
+  ],
+  "classes": [
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "3 0.732537 0.777232 0.182569 0.439589"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__235_000324.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000324.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000324.png",
+  "time": 1793678599426.4233,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.598,
+   0.383
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.904191 0.934027 0.156201 0.131945",
+   "3 0.899399 0.933367 0.161730 0.133230"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__236_000330.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000330.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000330.png",
+  "time": 1793678600428.805,
+  "batch": "judge_v3_f",
+  "dets": 0,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__237_000336.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000336.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000336.png",
+  "time": 1793678601431.2048,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.147
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.889066 0.356661 0.044282 0.120291"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__238_000342.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000342.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000342.png",
+  "time": 1793678602433.6072,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__239_000348.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000348.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000348.png",
+  "time": 1793678603435.9973,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__240_000354.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000354.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000354.png",
+  "time": 1793678604438.3877,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__241_000360.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000360.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000360.png",
+  "time": 1793678605440.7832,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.679
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.704621 0.574806 0.053167 0.130776"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__242_000366.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000366.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000366.png",
+  "time": 1793678606443.186,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.904
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.727236 0.641551 0.053892 0.118971"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__243_000372.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000372.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000372.png",
+  "time": 1793678607445.5874,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.695
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.556601 0.628970 0.044127 0.135064"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__244_000378.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000378.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000378.png",
+  "time": 1793678608447.9944,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.805
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.434430 0.519837 0.068632 0.134115"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__245_000384.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000384.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000384.png",
+  "time": 1793678609450.4048,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.753,
+   0.176
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.601397 0.478493 0.043798 0.098976",
+   "3 0.600892 0.477349 0.043930 0.097969"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__246_000390.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000390.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000390.png",
+  "time": 1793678610452.8115,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.782,
+   0.709
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.783716 0.371408 0.058440 0.106636",
+   "3 0.783586 0.372276 0.057871 0.105828"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__247_000396.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000396.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000396.png",
+  "time": 1793678611455.235,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.896
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.979034 0.186551 0.041904 0.113275"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__248_000402.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000402.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000402.png",
+  "time": 1793678612457.6655,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.929
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.620258 0.229986 0.049971 0.100723"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__249_000408.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000408.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000408.png",
+  "time": 1793678613460.098,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__250_000414.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000414.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000414.png",
+  "time": 1793678614462.538,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.484,
+   0.461
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.977222 0.808998 0.045555 0.283312",
+   "2 0.780250 0.236088 0.029757 0.100249"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__251_000420.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000420.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000420.png",
+  "time": 1793678615465.0015,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__252_000426.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000426.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000426.png",
+  "time": 1793678616467.5754,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.725,
+   0.234
+  ],
+  "classes": [
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.926239 0.563431 0.120539 0.287780",
+   "3 0.931638 0.563617 0.127570 0.286028"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 1,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__253_000432.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000432.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000432.png",
+  "time": 1793678617470.9424,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.842,
+   0.613,
+   0.518
+  ],
+  "classes": [
+   2,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.918800 0.141041 0.038769 0.104487",
+   "1 0.982276 0.918443 0.035432 0.162893",
+   "3 0.982613 0.916484 0.034774 0.167032"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__254_000438.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000438.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000438.png",
+  "time": 1793678618475.1343,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.792
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.975676 0.651498 0.048077 0.106155"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__255_000444.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000444.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000444.png",
+  "time": 1793678619479.344,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.885
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.773976 0.856572 0.049159 0.103269"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__256_000450.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000450.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000450.png",
+  "time": 1793678620483.355,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.833
+  ],
+  "classes": [
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.687939 0.806591 0.047672 0.084693"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__257_000456.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000456.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000456.png",
+  "time": 1793678621487.3022,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.886,
+   0.775
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.518969 0.791902 0.043962 0.076004",
+   "2 0.511112 0.158455 0.036547 0.078601"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__258_000462.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000462.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000462.png",
+  "time": 1793678622491.2568,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.426
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.313455 0.315420 0.052190 0.090022"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__259_000467.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000467.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000467.png",
+  "time": 1793678623327.6567,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.692
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.359027 0.466690 0.048361 0.075221"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__260_000473.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000473.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000473.png",
+  "time": 1793678624331.0015,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.888
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.502602 0.483474 0.039654 0.068665"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__261_000479.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000479.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000479.png",
+  "time": 1793678625334.2854,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [],
+  "classes": [],
+  "checked": true,
+  "draft": [],
+  "edits": {
+   "deleted": 0,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__262_000485.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000485.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000485.png",
+  "time": 1793678626337.5686,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.101
+  ],
+  "classes": [
+   0
+  ],
+  "checked": true,
+  "draft": [
+   "0 0.517588 0.484349 0.053312 0.081059"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 1,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__263_000491.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000491.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000491.png",
+  "time": 1793678627340.8618,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.836,
+   0.732
+  ],
+  "classes": [
+   1,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "1 0.241007 0.975168 0.075787 0.049665",
+   "2 0.754444 0.504299 0.048995 0.092762"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__264_000497.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000497.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000497.png",
+  "time": 1793678628344.0486,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.929,
+   0.273,
+   0.227
+  ],
+  "classes": [
+   2,
+   1,
+   3
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.608972 0.541387 0.048245 0.084852",
+   "1 0.087780 0.990555 0.061986 0.018669",
+   "3 0.085489 0.990294 0.059986 0.019093"
+  ],
+  "edits": {
+   "deleted": 1,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__265_000503.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000503.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000503.png",
+  "time": 1793678629347.1104,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.865,
+   0.851
+  ],
+  "classes": [
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.598997 0.536095 0.056095 0.089592",
+   "1 0.064735 0.847394 0.076718 0.095914"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__266_000509.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000509.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000509.png",
+  "time": 1793678630350.2053,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.881,
+   0.814
+  ],
+  "classes": [
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.717376 0.463936 0.046727 0.101820",
+   "1 0.126422 0.566342 0.065551 0.087904"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__267_000515.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000515.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000515.png",
+  "time": 1793678631353.29,
+  "batch": "judge_v3_f",
+  "dets": 2,
+  "conf": [
+   0.853,
+   0.105
+  ],
+  "classes": [
+   2,
+   1
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.688015 0.259298 0.056224 0.130888",
+   "1 0.008107 0.362300 0.016214 0.126417"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__268_000521.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000521.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000521.png",
+  "time": 1793678632356.3352,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.904
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.741835 0.250819 0.068882 0.166583"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__269_000527.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000527.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000527.png",
+  "time": 1793678633359.3535,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.228,
+   0.192
+  ],
+  "classes": [
+   2,
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.687006 0.352372 0.079860 0.087178",
+   "2 0.698879 0.275946 0.058678 0.132021"
+  ],
+  "edits": {
+   "deleted": 2,
+   "added": 1,
+   "class_changed": 0,
+   "resized": 0
+  }
+ },
+ {
+  "image": "judge_v3_f__270_000533.png",
+  "source": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/color/000533.png",
+  "depth": "/home/pa4/git/lv2_next_module/Cartlidar/video_judge_20261103/20261103_130225_321558/depth_aligned/000533.png",
+  "time": 1793678634362.3677,
+  "batch": "judge_v3_f",
+  "dets": 1,
+  "conf": [
+   0.937
+  ],
+  "classes": [
+   2
+  ],
+  "checked": true,
+  "draft": [
+   "2 0.705383 0.292655 0.068644 0.179158"
+  ],
+  "edits": {
+   "deleted": 0,
+   "added": 0,
+   "class_changed": 0,
+   "resized": 0
+  }
+ }
+]

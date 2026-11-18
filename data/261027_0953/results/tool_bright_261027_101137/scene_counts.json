@@ -1,0 +1,21 @@
+{
+  "sim_s": 22.983333333333334,
+  "wall_s": 14.550237655639648,
+  "done_t": 19.95,
+  "wp_reached": 4,
+  "n_wp": 4,
+  "js_sent": 1150,
+  "odom_sent": 690,
+  "scan_sent": {
+    "/scan_front": 230,
+    "/scan_rear": 230
+  },
+  "ir_in": {
+    "infra1": 0,
+    "infra2": 0
+  },
+  "ir_sent": {
+    "infra1": 0,
+    "infra2": 0
+  }
+}

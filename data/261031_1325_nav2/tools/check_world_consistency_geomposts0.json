@@ -1,0 +1,404 @@
+{
+ "args": {
+  "maze": "/home/pa4/git/lv2_next_module/261030_1943/maze_src/maze/maze.usda",
+  "wall_map": "/home/pa4/git/lv2_next_module/261031_1325_nav2/config/map_mission_nav.yaml",
+  "objects_map": "../config/map_objects_fine.yaml",
+  "z_range": [
+   0.0,
+   0.5
+  ],
+  "res": 0.005,
+  "tol": 0.02,
+  "geom_posts": 0,
+  "out": "check_world_consistency_geomposts0.json"
+ },
+ "collision_prim_kinds": {
+  "Cylinder": 110,
+  "Mesh": 9
+ },
+ "geom_missing_truth": {
+  "what": "참값 충돌 형상인데 geom 에 없음",
+  "n_cells": 2484,
+  "n_blobs": 113,
+  "max_dist_m": 0.0453,
+  "blobs_top": [
+   {
+    "center": [
+     4.12,
+     1.277
+    ],
+    "n_cells": 70,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     1.073,
+     2.774
+    ],
+    "n_cells": 76,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     4.176,
+     3.547
+    ],
+    "n_cells": 70,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     4.135,
+     4.337
+    ],
+    "n_cells": 70,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     1.132,
+     5.695
+    ],
+    "n_cells": 70,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     3.393,
+     5.805
+    ],
+    "n_cells": 74,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     1.073,
+     0.522
+    ],
+    "n_cells": 72,
+    "max_dist_m": 0.043
+   },
+   {
+    "center": [
+     2.666,
+     2.061
+    ],
+    "n_cells": 68,
+    "max_dist_m": 0.043
+   },
+   {
+    "center": [
+     0.311,
+     4.312
+    ],
+    "n_cells": 66,
+    "max_dist_m": 0.043
+   },
+   {
+    "center": [
+     1.067,
+     3.557
+    ],
+    "n_cells": 62,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     3.367,
+     4.332
+    ],
+    "n_cells": 62,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     1.135,
+     4.927
+    ],
+    "n_cells": 65,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     1.867,
+     5.022
+    ],
+    "n_cells": 62,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     3.392,
+     5.037
+    ],
+    "n_cells": 62,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     2.626,
+     5.778
+    ],
+    "n_cells": 67,
+    "max_dist_m": 0.041
+   }
+  ]
+ },
+ "nav_missing_truth": {
+  "what": "참값 충돌 형상인데 Nav2 지도에 없음",
+  "n_cells": 566,
+  "n_blobs": 45,
+  "max_dist_m": 0.0552,
+  "blobs_top": [
+   {
+    "center": [
+     1.175,
+     1.275
+    ],
+    "n_cells": 15,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     3.394,
+     5.092
+    ],
+    "n_cells": 45,
+    "max_dist_m": 0.052
+   },
+   {
+    "center": [
+     4.181,
+     3.547
+    ],
+    "n_cells": 50,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     4.14,
+     4.346
+    ],
+    "n_cells": 44,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     2.624,
+     5.782
+    ],
+    "n_cells": 55,
+    "max_dist_m": 0.045
+   },
+   {
+    "center": [
+     3.378,
+     5.808
+    ],
+    "n_cells": 36,
+    "max_dist_m": 0.041
+   },
+   {
+    "center": [
+     4.129,
+     1.277
+    ],
+    "n_cells": 38,
+    "max_dist_m": 0.04
+   },
+   {
+    "center": [
+     1.119,
+     5.703
+    ],
+    "n_cells": 24,
+    "max_dist_m": 0.036
+   },
+   {
+    "center": [
+     1.051,
+     0.518
+    ],
+    "n_cells": 15,
+    "max_dist_m": 0.035
+   },
+   {
+    "center": [
+     1.812,
+     1.253
+    ],
+    "n_cells": 31,
+    "max_dist_m": 0.035
+   },
+   {
+    "center": [
+     4.503,
+     2.387
+    ],
+    "n_cells": 19,
+    "max_dist_m": 0.035
+   },
+   {
+    "center": [
+     1.052,
+     2.764
+    ],
+    "n_cells": 33,
+    "max_dist_m": 0.035
+   },
+   {
+    "center": [
+     3.365,
+     4.32
+    ],
+    "n_cells": 31,
+    "max_dist_m": 0.032
+   },
+   {
+    "center": [
+     1.86,
+     5.035
+    ],
+    "n_cells": 21,
+    "max_dist_m": 0.032
+   },
+   {
+    "center": [
+     4.491,
+     -0.011
+    ],
+    "n_cells": 21,
+    "max_dist_m": 0.03
+   }
+  ]
+ },
+ "nav_extra_vs_truth": {
+  "what": "Nav2 지도 점유인데 참값 충돌 형상 근처에 없음(layout 물체 · 잡음 포함)",
+  "n_cells": 23341,
+  "n_blobs": 5568,
+  "max_dist_m": 1.1866,
+  "blobs_top": [
+   {
+    "center": [
+     2.218,
+     3.19
+    ],
+    "n_cells": 4,
+    "max_dist_m": 1.187
+   },
+   {
+    "center": [
+     2.238,
+     3.2
+    ],
+    "n_cells": 2,
+    "max_dist_m": 1.185
+   },
+   {
+    "center": [
+     2.238,
+     3.215
+    ],
+    "n_cells": 6,
+    "max_dist_m": 1.185
+   },
+   {
+    "center": [
+     2.238,
+     3.235
+    ],
+    "n_cells": 6,
+    "max_dist_m": 1.185
+   },
+   {
+    "center": [
+     2.218,
+     3.2
+    ],
+    "n_cells": 4,
+    "max_dist_m": 1.184
+   },
+   {
+    "center": [
+     2.238,
+     3.19
+    ],
+    "n_cells": 2,
+    "max_dist_m": 1.183
+   },
+   {
+    "center": [
+     2.218,
+     3.18
+    ],
+    "n_cells": 4,
+    "max_dist_m": 1.181
+   },
+   {
+    "center": [
+     2.218,
+     3.215
+    ],
+    "n_cells": 12,
+    "max_dist_m": 1.181
+   },
+   {
+    "center": [
+     2.238,
+     3.255
+    ],
+    "n_cells": 6,
+    "max_dist_m": 1.18
+   },
+   {
+    "center": [
+     2.238,
+     3.275
+    ],
+    "n_cells": 6,
+    "max_dist_m": 1.18
+   },
+   {
+    "center": [
+     2.218,
+     3.235
+    ],
+    "n_cells": 12,
+    "max_dist_m": 1.176
+   },
+   {
+    "center": [
+     2.238,
+     3.295
+    ],
+    "n_cells": 6,
+    "max_dist_m": 1.175
+   },
+   {
+    "center": [
+     2.238,
+     3.843
+    ],
+    "n_cells": 4,
+    "max_dist_m": 1.175
+   },
+   {
+    "center": [
+     2.258,
+     3.843
+    ],
+    "n_cells": 8,
+    "max_dist_m": 1.175
+   },
+   {
+    "center": [
+     2.218,
+     3.17
+    ],
+    "n_cells": 4,
+    "max_dist_m": 1.174
+   }
+  ]
+ },
+ "pass": false
+}

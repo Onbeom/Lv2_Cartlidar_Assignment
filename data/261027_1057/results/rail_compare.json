@@ -1,0 +1,256 @@
+{
+ "old_input/rail_hi": {
+  "file": "/home/pa4/git/lv2_next_module/mine/CADai/CAD/Input_References/rail_hi.step",
+  "solids": 1,
+  "volume_cm3": 79.66,
+  "size_mm": [
+   31.59,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -0.0,
+   -14.5,
+   162.0
+  ],
+  "max_mm": [
+   31.59,
+   264.5,
+   190.0
+  ],
+  "solid_sizes_mm": [
+   [
+    31.6,
+    279.0,
+    28.0
+   ]
+  ]
+ },
+ "old_input/rail_lo": {
+  "file": "/home/pa4/git/lv2_next_module/mine/CADai/CAD/Input_References/rail_lo.step",
+  "solids": 1,
+  "volume_cm3": 79.66,
+  "size_mm": [
+   31.59,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -0.0,
+   -14.5,
+   -4.0
+  ],
+  "max_mm": [
+   31.59,
+   264.5,
+   24.0
+  ],
+  "solid_sizes_mm": [
+   [
+    31.6,
+    279.0,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_hi_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_hi_1EA.step",
+  "solids": 1,
+  "volume_cm3": 94.51,
+  "size_mm": [
+   87.11,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -1.5,
+   -14.5,
+   162.0
+  ],
+  "max_mm": [
+   85.61,
+   264.5,
+   190.0
+  ],
+  "solid_sizes_mm": [
+   [
+    87.1,
+    279.0,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_hi_L_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_hi_L_1EA.step",
+  "solids": 1,
+  "volume_cm3": 46.34,
+  "size_mm": [
+   87.11,
+   139.5,
+   28.0
+  ],
+  "min_mm": [
+   -1.5,
+   -14.5,
+   162.0
+  ],
+  "max_mm": [
+   85.61,
+   125.0,
+   190.0
+  ],
+  "solid_sizes_mm": [
+   [
+    87.1,
+    139.5,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_hi_R_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_hi_R_1EA.step",
+  "solids": 1,
+  "volume_cm3": 48.09,
+  "size_mm": [
+   85.61,
+   145.0,
+   28.0
+  ],
+  "min_mm": [
+   0.0,
+   119.5,
+   162.0
+  ],
+  "max_mm": [
+   85.61,
+   264.5,
+   190.0
+  ],
+  "solid_sizes_mm": [
+   [
+    85.6,
+    145.0,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_lo_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_lo_1EA.step",
+  "solids": 1,
+  "volume_cm3": 94.51,
+  "size_mm": [
+   87.11,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -1.5,
+   -14.5,
+   -4.0
+  ],
+  "max_mm": [
+   85.61,
+   264.5,
+   24.0
+  ],
+  "solid_sizes_mm": [
+   [
+    87.1,
+    279.0,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_lo_L_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_lo_L_1EA.step",
+  "solids": 1,
+  "volume_cm3": 46.34,
+  "size_mm": [
+   87.11,
+   139.5,
+   28.0
+  ],
+  "min_mm": [
+   -1.5,
+   -14.5,
+   -4.0
+  ],
+  "max_mm": [
+   85.61,
+   125.0,
+   24.0
+  ],
+  "solid_sizes_mm": [
+   [
+    87.1,
+    139.5,
+    28.0
+   ]
+  ]
+ },
+ "new/rail_lo_R_1EA": {
+  "file": "/home/pa4/snap/slack/261/Desktop/STEP/rail_lo_R_1EA.step",
+  "solids": 1,
+  "volume_cm3": 48.09,
+  "size_mm": [
+   85.61,
+   145.0,
+   28.0
+  ],
+  "min_mm": [
+   -0.0,
+   119.5,
+   -4.0
+  ],
+  "max_mm": [
+   85.61,
+   264.5,
+   24.0
+  ],
+  "solid_sizes_mm": [
+   [
+    85.6,
+    145.0,
+    28.0
+   ]
+  ]
+ },
+ "old_assembly/rail_hi": {
+  "solid": 32,
+  "volume_cm3": 79.66,
+  "size_mm": [
+   31.59,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -130.50000000000298,
+   -139.5,
+   285.9999999999929
+  ],
+  "max_mm": [
+   -98.91259999999563,
+   139.5,
+   314.0000000000073
+  ]
+ },
+ "old_assembly/rail_lo": {
+  "solid": 33,
+  "volume_cm3": 79.66,
+  "size_mm": [
+   31.59,
+   279.0,
+   28.0
+  ],
+  "min_mm": [
+   -130.50000000000273,
+   -139.5,
+   175.99999999999528
+  ],
+  "max_mm": [
+   -98.91259999999616,
+   139.5,
+   204.00000000000458
+  ]
+ }
+}

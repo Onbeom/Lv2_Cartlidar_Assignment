@@ -1,0 +1,224 @@
+{
+ "mode_ok": true,
+ "boot_line": [
+  "[component_container_mt-1] [INFO] [1793933438.524697030] [perception_node]: 검출기: tensorrt TensorRT /home/pa4/git/lv2_next_module/261106_1130_fault_inject/trt/yolo11n_task4_E3_480_fp16.engine (입력 640×480, 클래스 4) · 해시 일치 2ee1797fa0dc07e4 · 팔 tensorrt TensorRT /h"
+ ],
+ "F1": {
+  "base_hz": 15.0,
+  "stop_s": 0.022,
+  "late": 0,
+  "recover_s": 0.088,
+  "stall_warn": 1,
+  "alive": true,
+  "pass": true,
+  "took_s": 8.0
+ },
+ "F2": {
+  "base_hz": 15.0,
+  "age02": {
+   "hz": 15.0,
+   "max_age": 0.26
+  },
+  "age04": {
+   "hz": 0.0,
+   "max_age": null
+  },
+  "alive": true,
+  "pass": true,
+  "took_s": 10.6
+ },
+ "F3": {
+  "new_after_first": 0,
+  "alive": true,
+  "pass": true,
+  "took_s": 5.3
+ },
+ "F4": {
+  "n": 28,
+  "regress": 0,
+  "alive": true,
+  "pass": true,
+  "took_s": 6.0
+ },
+ "F5": {
+  "base_found": 30,
+  "found": 0,
+  "puck3d": 0,
+  "n": 45,
+  "recover_found_s": 0.105,
+  "alive": true,
+  "t0": 0.2,
+  "pass": true,
+  "took_s": 9.2
+ },
+ "F6": {
+  "base_hz": 15.0,
+  "during_hz": 14.82,
+  "warn": 2,
+  "recover_s": 0.08,
+  "alive": true,
+  "pass": true,
+  "took_s": 18.0
+ },
+ "F7": {
+  "base_hz": 15.0,
+  "stop_s": 0.0,
+  "late": 0,
+  "recover_s": 0.2,
+  "stall_warn": 1,
+  "alive": true,
+  "mode_ok": true,
+  "pass": true,
+  "took_s": 9.1
+ },
+ "F8": {
+  "cases": {
+   "color_mono8": {
+    "alive": true,
+    "recover_s": 0.071,
+    "pass": true
+   },
+   "color_short": {
+    "alive": true,
+    "recover_s": 0.123,
+    "pass": true
+   },
+   "color_zero": {
+    "alive": true,
+    "recover_s": 0.109,
+    "pass": true
+   },
+   "color_weird": {
+    "alive": true,
+    "recover_s": 0.097,
+    "pass": true
+   },
+   "depth_size": {
+    "alive": true,
+    "recover_s": 0.083,
+    "pass": true
+   },
+   "depth_short": {
+    "alive": true,
+    "recover_s": 0.07,
+    "pass": true
+   },
+   "arm_short": {
+    "alive": true,
+    "recover_s": 0.169,
+    "pass": true
+   }
+  },
+  "pass": true,
+  "took_s": 35.6
+ },
+ "F9": {
+  "base_hz": 14.67,
+  "stale": 0,
+  "max_age": 0.06,
+  "recover_s": 0.116,
+  "alive": true,
+  "pass": true,
+  "took_s": 7.0
+ },
+ "F10": {
+  "base_hz": 14.33,
+  "hz": 6.87,
+  "age_p50": 0.06,
+  "age_p99": 0.209,
+  "over03": 0.0,
+  "alive": true,
+  "pass": true,
+  "took_s": 34.1
+ },
+ "F11": {
+  "stop_s": 0.013,
+  "auto_restart": false,
+  "launch_ended": false,
+  "service": true,
+  "results_before_mode": 0,
+  "first_result_s": 2.094,
+  "alive": true,
+  "pass": true,
+  "took_s": 13.1
+ },
+ "F12": {
+  "cases": {
+   "empty": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 15.0,
+    "found": 45,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933598.752011701] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 해�� 불일치: 파일 e3b0c44298fc1c14 · 기대 2ee1797fa0dc07e4 → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933598.752396037] [perception_node]: 검출기: color(any) 엔진 해시 불일치: 파일 e3b0c44298fc1c14 · 기대 2ee1797fa0dc07e4 → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "half": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 15.0,
+    "found": 45,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933609.166011417] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 해시 불일치: 파일 969ce3db2d4abc2c · 기대 2ee1797fa0dc07e4 → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933609.166248181] [perception_node]: 검출기: color(any) 엔진 해시 불일치: 파일 969ce3db2d4abc2c · 기대 2ee1797fa0dc07e4 → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "random": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 15.0,
+    "found": 45,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933619.588967671] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 해�� 불일치: 파일 f598a06ba97b45e7 · 기대 2ee1797fa0dc07e4 → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933619.589688653] [perception_node]: 검출기: color(any) 엔진 해시 불일치: 파일 f598a06ba97b45e7 · 기대 2ee1797fa0dc07e4 → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "flip": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 13.0,
+    "found": 39,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933630.785466189] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 해시 불일치: 파일 b9106a0629f886df · 기대 2ee1797fa0dc07e4 → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933630.785694588] [perception_node]: 검출기: color(any) 엔진 해시 불일치: 파일 b9106a0629f886df · 기대 2ee1797fa0dc07e4 → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "flip_nofile": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 0,
+    "hz": 14.67,
+    "found": 0,
+    "line": [],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933641.110491710] [perception_node]: 검출기: tensorrt TensorRT judge2/bad_engines/flip_nofile.engine (입력 640×480, 클래스 4) · 해시 파일 없음(검사 안 함) · 팔 tensorrt TensorRT judge2/bad_engines/flip_nofile.engine (입력 640×480, 클래스 4) · 해시"
+    ],
+    "boot_s": 5.0,
+    "pass": false
+   }
+  },
+  "pass": true,
+  "took_s": 54.2
+ }
+}

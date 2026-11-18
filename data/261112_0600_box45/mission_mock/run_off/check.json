@@ -1,0 +1,79 @@
+{
+ "run": "run_off",
+ "oblique": 0,
+ "rot": 0.0,
+ "shift": "0,0",
+ "checks": [
+  {
+   "check": "미션 DONE",
+   "ok": true,
+   "detail": "{\"state\": \"DONE\", \"reason\": \"\", \"step\": \"wait 3\"}"
+  },
+  {
+   "check": "measure_front 없음 · oblique 줄 없음",
+   "ok": true,
+   "detail": "0 / 0"
+  },
+  {
+   "check": "box_look 은 5 칸만",
+   "ok": true,
+   "detail": "['box_look:map:3.6700:5.3540:0.0700', 'box_look:map:2.2020:3.7000:0.0700', 'box_look:map:3.6700:0.9500:0.0700']"
+  },
+  {
+   "check": "기준과 같음: steps_seen",
+   "ok": true,
+   "detail": "115 vs 115"
+  },
+  {
+   "check": "기준과 같음: navigate",
+   "ok": true,
+   "detail": "18 vs 18"
+  },
+  {
+   "check": "기준과 같음: align",
+   "ok": true,
+   "detail": "29 vs 29"
+  },
+  {
+   "check": "기준과 같음: drive_skill",
+   "ok": true,
+   "detail": "8 vs 8"
+  },
+  {
+   "check": "기준과 같음: pose",
+   "ok": true,
+   "detail": "50 vs 50"
+  },
+  {
+   "check": "기준과 같음: skill",
+   "ok": true,
+   "detail": "64 vs 64"
+  },
+  {
+   "check": "기준과 같음: set_mode",
+   "ok": true,
+   "detail": "100 vs 100"
+  },
+  {
+   "check": "기준과 같음: check_dice",
+   "ok": true,
+   "detail": "3 vs 3"
+  },
+  {
+   "check": "기준과 같음: place_box",
+   "ok": true,
+   "detail": "3 vs 3"
+  },
+  {
+   "check": "기준과 같음: nav_sim",
+   "ok": true,
+   "detail": "18 vs 18"
+  },
+  {
+   "check": "기준과 같음: align_sim",
+   "ok": true,
+   "detail": "5 vs 5"
+  }
+ ],
+ "places": []
+}

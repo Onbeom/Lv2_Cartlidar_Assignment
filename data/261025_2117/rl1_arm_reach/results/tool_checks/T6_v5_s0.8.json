@@ -1,0 +1,53 @@
+{
+ "design": "v5",
+ "step_rad": 0.8,
+ "max_acc": null,
+ "max_rate": 3.0,
+ "alpha": 0.2,
+ "per_joint": {
+  "RMX52_Base_Yaw": {
+   "vel_max_rad_s": 3.845,
+   "sat_ratio_physics_steps": 0.0721,
+   "sat_ratio_policy_steps": 0.038,
+   "lead_max_rad": 0.1146,
+   "reach_go_s_median": 0.7,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.7,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 30
+  },
+  "RMX52_Shoulder": {
+   "vel_max_rad_s": 4.308,
+   "sat_ratio_physics_steps": 0.0818,
+   "sat_ratio_policy_steps": 0.0512,
+   "lead_max_rad": 0.1857,
+   "reach_go_s_median": 0.7,
+   "reach_go_never": 1,
+   "reach_back_s_median": 0.4666666666666667,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 25
+  },
+  "RMX52_Elbow": {
+   "vel_max_rad_s": 3.756,
+   "sat_ratio_physics_steps": 0.0759,
+   "sat_ratio_policy_steps": 0.0405,
+   "lead_max_rad": 0.1069,
+   "reach_go_s_median": 0.6666666666666666,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.6666666666666666,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 27
+  },
+  "RMX52_Wrist_Pitch": {
+   "vel_max_rad_s": 3.515,
+   "sat_ratio_physics_steps": 0.0749,
+   "sat_ratio_policy_steps": 0.0387,
+   "lead_max_rad": 0.0754,
+   "reach_go_s_median": 0.7,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.6666666666666666,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 29
+  }
+ }
+}

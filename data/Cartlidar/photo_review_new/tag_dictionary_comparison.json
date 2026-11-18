@@ -1,0 +1,16 @@
+{
+  "DICT_4X4_50": [
+    {
+      "index": "93",
+      "ids": [
+        17
+      ]
+    }
+  ],
+  "DICT_5X5_100": [],
+  "DICT_6X6_250": [],
+  "DICT_APRILTAG_16h5": [],
+  "DICT_APRILTAG_25h9": [],
+  "DICT_APRILTAG_36h10": [],
+  "DICT_APRILTAG_36h11": []
+}

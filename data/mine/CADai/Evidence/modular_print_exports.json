@@ -1,0 +1,271 @@
+{
+  "parts": [
+    {
+      "name": "Floor_Bracket_Right_Main",
+      "bounds_mm": {
+        "min": [
+          -1.7763568394002505e-14,
+          0.0,
+          0.0
+        ],
+        "max": [
+          217.64994699999994,
+          90.0,
+          41.999998000000005
+        ],
+        "size": [
+          217.64994699999994,
+          90.0,
+          41.999998000000005
+        ]
+      },
+      "solid": true,
+      "volume_mm3": 141977.23783818763,
+      "material": "PLA",
+      "stl": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Right_Main.stl",
+      "step": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Right_Main.step",
+      "motor_bore_diameter_mm": 2.8,
+      "motor_bore_surfaces": 12,
+      "unique_motor_axes": 6,
+      "obsolete_2p05_diameter_surfaces": 0,
+      "layout_transform_cm": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "layout_bounds_mm": {
+        "min": [
+          -0.010000000000017764,
+          -0.01,
+          -0.01
+        ],
+        "max": [
+          217.65994699999996,
+          90.00999999999999,
+          42.00999800000001
+        ],
+        "size": [
+          217.66994699999998,
+          90.01999999999998,
+          42.019998000000015
+        ]
+      }
+    },
+    {
+      "name": "Floor_Bracket_Right_Profile_Carrier",
+      "bounds_mm": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          52.700023,
+          110.0,
+          58.0
+        ],
+        "size": [
+          52.700023,
+          110.0,
+          58.0
+        ]
+      },
+      "solid": true,
+      "volume_mm3": 66408.73701558962,
+      "material": "PLA",
+      "stl": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Right_Profile_Carrier.stl",
+      "step": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Right_Profile_Carrier.step",
+      "layout_transform_cm": [
+        -2.220446049250313e-16,
+        -1.0000000000000002,
+        0.0,
+        11.0,
+        1.0000000000000002,
+        -2.220446049250313e-16,
+        0.0,
+        19.2,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "layout_bounds_mm": {
+        "min": [
+          -0.010000000000029985,
+          191.98999999999998,
+          -0.01
+        ],
+        "max": [
+          110.00999999999999,
+          244.71002300000004,
+          58.010000000000005
+        ],
+        "size": [
+          110.02000000000002,
+          52.72002300000004,
+          58.02
+        ]
+      }
+    },
+    {
+      "name": "Floor_Bracket_Left_Main",
+      "bounds_mm": {
+        "min": [
+          -1.7763568394002505e-14,
+          0.0,
+          0.0
+        ],
+        "max": [
+          217.64994699999994,
+          90.0,
+          41.999998000000005
+        ],
+        "size": [
+          217.64994699999994,
+          90.0,
+          41.999998000000005
+        ]
+      },
+      "solid": true,
+      "volume_mm3": 141977.2378381877,
+      "material": "PLA",
+      "stl": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Left_Main.stl",
+      "step": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Left_Main.step",
+      "motor_bore_diameter_mm": 2.8,
+      "motor_bore_surfaces": 12,
+      "unique_motor_axes": 6,
+      "obsolete_2p05_diameter_surfaces": 0,
+      "layout_transform_cm": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        9.6,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "layout_bounds_mm": {
+        "min": [
+          -0.010000000000017764,
+          95.99000000000001,
+          -0.01
+        ],
+        "max": [
+          217.65994699999996,
+          186.01,
+          42.00999800000001
+        ],
+        "size": [
+          217.66994699999998,
+          90.01999999999998,
+          42.019998000000015
+        ]
+      }
+    },
+    {
+      "name": "Floor_Bracket_Left_Profile_Carrier",
+      "bounds_mm": {
+        "min": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "max": [
+          52.70002299999999,
+          110.0,
+          58.0
+        ],
+        "size": [
+          52.70002299999999,
+          110.0,
+          58.0
+        ]
+      },
+      "solid": true,
+      "volume_mm3": 66408.73701558966,
+      "material": "PLA",
+      "stl": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Left_Profile_Carrier.stl",
+      "step": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021\\Floor_Bracket_Left_Profile_Carrier.step",
+      "layout_transform_cm": [
+        -2.220446049250313e-16,
+        -1.0000000000000002,
+        0.0,
+        22.6,
+        1.0000000000000002,
+        -2.220446049250313e-16,
+        0.0,
+        19.2,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "layout_bounds_mm": {
+        "min": [
+          115.98999999999998,
+          191.98999999999995,
+          -0.01
+        ],
+        "max": [
+          226.01000000000002,
+          244.71002299999998,
+          58.010000000000005
+        ],
+        "size": [
+          110.02000000000004,
+          52.72002300000004,
+          58.02
+        ]
+      }
+    }
+  ],
+  "combined_layout_bounds_mm": {
+    "min": [
+      -0.010000000000029985,
+      -0.01,
+      -0.01
+    ],
+    "max": [
+      226.01000000000002,
+      244.71002300000004,
+      58.010000000000005
+    ],
+    "size": [
+      226.02000000000004,
+      244.72002300000003,
+      58.02
+    ]
+  },
+  "bolt": "M5x20 button head, washer both sides, nut; four per side, eight total",
+  "support_notes": "Main: broad web on bed. Carrier: rear plate on bed; local support under socket bridges and keys may be needed. Slicer and actual print not validated."
+}

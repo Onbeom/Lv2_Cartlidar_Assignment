@@ -1,0 +1,15 @@
+{
+ "mode": "r2",
+ "runs": 50,
+ "correct": 0,
+ "wrong_confirmations": 0,
+ "not_confirmed": 50,
+ "rate": 1.0,
+ "mission": true,
+ "within_limit": 0,
+ "max_confirm_after_cycles": null,
+ "pass": false,
+ "render": "/home/pa4/git/lv2_next_module/261031_0005/judge/signal/render_T6500_awb",
+ "seed": 20261024,
+ "emissive": 1.0
+}

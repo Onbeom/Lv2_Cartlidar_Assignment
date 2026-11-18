@@ -1,0 +1,90 @@
+{
+  "dt": 0.016666666666666666,
+  "camera": {
+    "width": 640,
+    "height": 480,
+    "encoding": "rgb8",
+    "fx": 317.04312114989733,
+    "fy": 317.04312114989733,
+    "cx": 320.0,
+    "cy": 240.0,
+    "frame_skip": 1,
+    "baseline_m": 0.05,
+    "frame_left": "camera_left",
+    "frame_right": "camera_right"
+  },
+  "lidar": {
+    "config": "Example_Rotary_2D",
+    "hz": 10.0,
+    "wall_dist_m": 2.0,
+    "frame": "lidar_link",
+    "scan_rate_hz": 10.0,
+    "near_m": 1.0,
+    "far_m": 200.0,
+    "horizontal_resolution_deg": 0.1
+  },
+  "tf": {
+    "parent": "world",
+    "child": "base_link",
+    "translation": [
+      1.0,
+      2.0,
+      0.0
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      0.7071067811865475,
+      0.7071067811865476
+    ]
+  },
+  "tf2": {
+    "parent": "world",
+    "child": "marker_link",
+    "translation": [
+      -0.5,
+      0.25,
+      0.75
+    ],
+    "rotation_xyzw": [
+      0.0,
+      0.0,
+      -0.3826834323650898,
+      0.9238795325112867
+    ]
+  },
+  "odom": {
+    "frame": "odom",
+    "child": "base_link",
+    "position": [
+      1.5,
+      -0.75,
+      0.125
+    ],
+    "orientation_xyzw": [
+      0.0,
+      0.0,
+      0.25881904510252074,
+      0.9659258262890683
+    ],
+    "linear": [
+      0.25,
+      -0.125,
+      0.0625
+    ],
+    "angular": [
+      0.5,
+      -0.25,
+      0.125
+    ]
+  },
+  "timeline": {
+    "pause_at_s": 20.0,
+    "pause_len_s": 5.0,
+    "duration_s": 60.0
+  },
+  "skipped": [
+    "camera_info",
+    "stamped"
+  ]
+}

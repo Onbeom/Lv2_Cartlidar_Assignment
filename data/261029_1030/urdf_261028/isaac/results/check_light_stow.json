@@ -1,0 +1,188 @@
+{
+ "kind": "light",
+ "params": "바퀴: 한계 1.8 N·m · 11.00 rad/s, 감쇠 0.2133, armature 0.00222 | 팔: 강성 18.88 · 감쇠 0.851 · 4.1 N·m | 손가락: 13.0 N · 강성 6500 | 마찰 1.0/1.0 · 자기 충돌 True | 시작 자세 drive",
+ "usd_values": {
+  "ok": true,
+  "mismatches": [],
+  "self_collision": true,
+  "filtered_pairs": 28,
+  "friction": [
+   1.0,
+   1.0
+  ]
+ },
+ "mass": 4.040910720825195,
+ "rest": {
+  "base_z": 0.006751015782356262,
+  "base_z_expected": 0.00675,
+  "tilt_deg": 0.0,
+  "joint_err": {
+   "joint1": 0.001,
+   "joint2": 0.0,
+   "joint3": 0.012,
+   "joint4": -0.015,
+   "joint5": -0.0,
+   "gripper_roll": -0.0,
+   "gripper_left_joint": -0.0,
+   "gripper_right_joint": 0.0
+  },
+  "rtf": 1.920420062585406
+ },
+ "lidar": {
+  "lds03_front": {
+   "sensor_height": 0.0823,
+   "blocked_by_robot_deg": 138.6,
+   "obstacles": {
+    "front": {
+     "rays": 72,
+     "min_dist": 0.7902,
+     "expected_perpendicular": 0.7902
+    },
+    "rear": {
+     "rays": 32,
+     "min_dist": 0.9131,
+     "expected_perpendicular": 0.9098
+    },
+    "left": {
+     "rays": 39,
+     "min_dist": 0.6995,
+     "expected_perpendicular": 0.6995
+    },
+    "right": {
+     "rays": 33,
+     "min_dist": 0.9005,
+     "expected_perpendicular": 0.9005
+    }
+   },
+   "floor_hits": 0
+  },
+  "lds03_rear": {
+   "sensor_height": 0.0823,
+   "blocked_by_robot_deg": 196.2,
+   "obstacles": {
+    "front": {
+     "rays": 42,
+     "min_dist": 1.0119,
+     "expected_perpendicular": 1.008
+    },
+    "rear": {
+     "rays": 80,
+     "min_dist": 0.692,
+     "expected_perpendicular": 0.692
+    },
+    "left": {
+     "rays": 2,
+     "min_dist": 0.7887,
+     "expected_perpendicular": 0.6995
+    },
+    "right": {
+     "rays": 0,
+     "min_dist": null,
+     "expected_perpendicular": 0.9005
+    }
+   },
+   "floor_hits": 0
+  }
+ },
+ "tfmini": {
+  "dist": 0.7588096261024475,
+  "expected": 0.7588
+ },
+ "imu": {
+  "lin_acc_b": [
+   -0.00023149960907176137,
+   -0.0001865820086095482,
+   9.808880805969238
+  ],
+  "ang_vel_b": [
+   0.0008621164015494287,
+   -0.003430332988500595,
+   0.0009906662162393332
+  ]
+ },
+ "poses": {
+  "1_zero": {
+   "joint_err": {
+    "joint1": -0.0,
+    "joint2": 0.059,
+    "joint3": 0.049,
+    "joint4": 0.018,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.059,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    0.000876210629940033,
+    0.00048055523075163364
+   ]
+  },
+  "2_drive": {
+   "joint_err": {
+    "joint1": 0.0,
+    "joint2": 0.007,
+    "joint3": 0.047,
+    "joint4": 0.015,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.047,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    0.000829208642244339,
+    0.0004809410311281681
+   ]
+  },
+  "3_zero": {
+   "joint_err": {
+    "joint1": -0.0,
+    "joint2": 0.059,
+    "joint3": 0.049,
+    "joint4": 0.018,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.059,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    0.000772528350353241,
+    0.0004812388215214014
+   ]
+  },
+  "4_stow": {
+   "joint_err": {
+    "joint1": -0.022,
+    "joint2": 0.0,
+    "joint3": 0.012,
+    "joint4": -0.015,
+    "joint5": -0.0,
+    "gripper_roll": -0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": -0.022,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    0.0007298402488231659,
+    0.00048130122013390064
+   ]
+  }
+ },
+ "forward": {
+  "dist": 0.29813267302829966,
+  "expected": 0.3,
+  "yaw_drift_deg": -0.008672099090094783,
+  "rtf": 1.8964703520514443
+ },
+ "spin": {
+  "yaw_deg": 76.96349831231626,
+  "ideal_no_slip_deg": 108.44627037176465
+ },
+ "finite": true
+}

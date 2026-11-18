@@ -1,0 +1,3892 @@
+{
+  "status": "complete",
+  "units": {
+    "length": "mm",
+    "mass": "g",
+    "inertia": "g*mm^2"
+  },
+  "fits": [],
+  "mass_rows": [
+    {
+      "path": "Motor_Front_Left:1+Motor_Left (1):1",
+      "body": "본체1",
+      "mass_g": 0.07291644477209885
+    },
+    {
+      "path": "Motor_Front_Left:1+Motor_Left (1):1",
+      "body": "본체2",
+      "mass_g": 81.92708355522791
+    },
+    {
+      "path": "Motor_Front_Right:1+Motor_Right (1):1",
+      "body": "본체1",
+      "mass_g": 81.92708355522794
+    },
+    {
+      "path": "Motor_Front_Right:1+Motor_Right (1):1",
+      "body": "본체2",
+      "mass_g": 0.07291644477209884
+    },
+    {
+      "path": "Wheel_Front_Left:1+Wheel_Left (1):1",
+      "body": "본체1",
+      "mass_g": 14.84149025075294
+    },
+    {
+      "path": "Wheel_Front_Left:1+Wheel_Left (1):1",
+      "body": "본체2",
+      "mass_g": 15.627115785921363
+    },
+    {
+      "path": "Wheel_Front_Right:1+Wheel_Right (1):1",
+      "body": "본체1",
+      "mass_g": 14.841490250754504
+    },
+    {
+      "path": "Wheel_Front_Right:1+Wheel_Right (1):1",
+      "body": "본체2",
+      "mass_g": 15.627116843811493
+    },
+    {
+      "path": "Floor_1_Joined:1+Floor_1_Joined (1):1",
+      "body": "본체1",
+      "mass_g": 462.55000258009545
+    },
+    {
+      "path": "Floor_3_Joined:1+Floor_3_Joined (1):1",
+      "body": "본체1",
+      "mass_g": 462.5516639011823
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체1",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체6",
+      "mass_g": 1.5977722959577005
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체7",
+      "mass_g": 0.0513713304819213
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체8",
+      "mass_g": 8.539148903865486
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체9",
+      "mass_g": 0.7961218360346661
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체10",
+      "mass_g": 9.099382788538353
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체11",
+      "mass_g": 13.546034483909397
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체12",
+      "mass_g": 13.546034483792795
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체13",
+      "mass_g": 1.181896923275412
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체14",
+      "mass_g": 1.5977722959577025
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체15",
+      "mass_g": 8.901082530933987
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체16",
+      "mass_g": 9.694631290907116
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체17",
+      "mass_g": 9.09938278853837
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체18",
+      "mass_g": 1.1818969232754812
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체19",
+      "mass_g": 9.694631290907138
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체20",
+      "mass_g": 1.4377327722839883
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체21",
+      "mass_g": 8.539148903892329
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체22",
+      "mass_g": 24.898185861490447
+    },
+    {
+      "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+      "body": "본체23",
+      "mass_g": 1.5977722959576985
+    },
+    {
+      "path": "housing:1+Open CASCADE STEP translator 8.0 1:1",
+      "body": "본체1",
+      "mass_g": 47.7453680862954
+    },
+    {
+      "path": "magazine_B:1+Open CASCADE STEP translator 8.0 1 (1):1",
+      "body": "본체1",
+      "mass_g": 56.56888011196271
+    },
+    {
+      "path": "magazine_G:1+Open CASCADE STEP translator 8.0 1 (2):1",
+      "body": "본체1",
+      "mass_g": 56.55996706740506
+    },
+    {
+      "path": "magazine_R:1+Open CASCADE STEP translator 8.0 1 (3):1",
+      "body": "본체1",
+      "mass_g": 56.56799894360725
+    },
+    {
+      "path": "rail_hi:1+Open CASCADE STEP translator 8.0 1 (5):1",
+      "body": "본체1",
+      "mass_g": 98.78254328242922
+    },
+    {
+      "path": "rail_lo:1+Open CASCADE STEP translator 8.0 1 (6):1",
+      "body": "본체1",
+      "mass_g": 98.78228635716304
+    },
+    {
+      "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+      "body": "본체1",
+      "mass_g": 0.07291644477209885
+    },
+    {
+      "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+      "body": "본체2",
+      "mass_g": 81.92708355522791
+    },
+    {
+      "path": "Wheel_Rear_Left:1+Wheel_Left (1) (1):1",
+      "body": "본체1",
+      "mass_g": 14.84149025075294
+    },
+    {
+      "path": "Wheel_Rear_Left:1+Wheel_Left (1) (1):1",
+      "body": "본체2",
+      "mass_g": 15.627115785921363
+    },
+    {
+      "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+      "body": "본체1",
+      "mass_g": 81.92708355522794
+    },
+    {
+      "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+      "body": "본체2",
+      "mass_g": 0.07291644477209884
+    },
+    {
+      "path": "Wheel_Rear_Right:1+Wheel_Right (1) (1):1",
+      "body": "본체1",
+      "mass_g": 14.841490250754504
+    },
+    {
+      "path": "Wheel_Rear_Right:1+Wheel_Right (1) (1):1",
+      "body": "본체2",
+      "mass_g": 15.627116843811493
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체1",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체6",
+      "mass_g": 1.5977722959577005
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체7",
+      "mass_g": 0.0513713304819213
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체8",
+      "mass_g": 8.539148903865486
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체9",
+      "mass_g": 0.7961218360346661
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체10",
+      "mass_g": 9.099382788538353
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체11",
+      "mass_g": 13.546034483909397
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체12",
+      "mass_g": 13.546034483792795
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체13",
+      "mass_g": 1.181896923275412
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체14",
+      "mass_g": 1.5977722959577025
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체15",
+      "mass_g": 8.901082530933987
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체16",
+      "mass_g": 9.694631290907116
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체17",
+      "mass_g": 9.09938278853837
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체18",
+      "mass_g": 1.1818969232754812
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체19",
+      "mass_g": 9.694631290907138
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체20",
+      "mass_g": 1.4377327722839883
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체21",
+      "mass_g": 8.539148903892329
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체22",
+      "mass_g": 24.898185861490447
+    },
+    {
+      "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+      "body": "본체23",
+      "mass_g": 1.5977722959576985
+    },
+    {
+      "path": "USB2LSD:1",
+      "body": "본체1",
+      "mass_g": 7.999999999999998
+    },
+    {
+      "path": "housing:2+Open CASCADE STEP translator 8.0 1:1",
+      "body": "본체1",
+      "mass_g": 47.7453680862954
+    },
+    {
+      "path": "Open CASCADE STEP translator 8.0 1:2",
+      "body": "본체1",
+      "mass_g": 47.7453680862954
+    },
+    {
+      "path": "Manipulator_Support_Cyan:1",
+      "body": "본체1",
+      "mass_g": 8.21568823558696
+    },
+    {
+      "path": "Manipulator_Support_Coral:1",
+      "body": "본체1",
+      "mass_g": 8.215685133134842
+    },
+    {
+      "path": "Profile_2020_450mm_Rear_Left_Envelope:1",
+      "body": "Profile_2020_450mm_Rear_Left_Envelope",
+      "mass_g": 225.00000000000003
+    },
+    {
+      "path": "Profile_2020_450mm_Rear_Right_Envelope:1",
+      "body": "Profile_2020_450mm_Rear_Right_Envelope",
+      "mass_g": 225.00000000000003
+    },
+    {
+      "path": "Chassis_Bracket_Left_16mm:1",
+      "body": "Floor_Bracket_Left_Main",
+      "mass_g": 176.05177491935274
+    },
+    {
+      "path": "Chassis_Bracket_Left_16mm:1",
+      "body": "Floor_Bracket_Left_Profile_Carrier",
+      "mass_g": 82.34683389933107
+    },
+    {
+      "path": "Chassis_Bracket_Right_16mm:1",
+      "body": "Floor_Bracket_Right_Main",
+      "mass_g": 176.05177491935268
+    },
+    {
+      "path": "Chassis_Bracket_Right_16mm:1",
+      "body": "Floor_Bracket_Right_Profile_Carrier",
+      "mass_g": 82.34683389933105
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체1",
+      "mass_g": 81.92513075905158
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체2",
+      "mass_g": 0.07486924094841944
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체1",
+      "mass_g": 23.780386120118195
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_FR12_S102_1:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체1",
+      "mass_g": 82.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체36",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체37",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체38",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체39",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체40",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체41",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "body": "본체42",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_H101_1:1",
+      "body": "본체1",
+      "mass_g": 19.424997694305112
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_H101_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_H101_1:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_H101_1:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_H101_1:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_ILA-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 29.474577860514447
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체1",
+      "mass_g": 13.951712293278726
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_FR12_S101_1:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_ILA-A02_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 23.12199929073803
+    },
+    {
+      "path": "arm_link_4__RMX52_FR12_H104_1:1",
+      "body": "본체1",
+      "mass_g": 14.260531495432065
+    },
+    {
+      "path": "arm_link_5__RMX52_IRB-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 21.49227079761902
+    },
+    {
+      "path": "arm_link_5__RMX52_IRB-A02_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 21.30085770647386
+    },
+    {
+      "path": "arm_link_5__RMX52_ICA-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 3.122631296501102
+    },
+    {
+      "path": "arm_link_5__RMX52_IBL-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 11.295865145198244
+    },
+    {
+      "path": "arm_link_5__RMX52_ILR-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 1.7345128892493247
+    },
+    {
+      "path": "arm_link_5__RMX52_PR33_IFB-A01_1:1",
+      "body": "본체1",
+      "mass_g": 0.4206968370267969
+    },
+    {
+      "path": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "body": "본체1",
+      "mass_g": 21.087641111550926
+    },
+    {
+      "path": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M3X10_1:1",
+      "body": "본체1",
+      "mass_g": 1.2803423444936013
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M3X10_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_1:1",
+      "body": "본체1",
+      "mass_g": 0.8085989396313636
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_1:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_1:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_1:1",
+      "body": "본체1",
+      "mass_g": 0.31790625528305255
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_left_link__RMX52_PR33_SPD-A01_1:1",
+      "body": "본체1",
+      "mass_g": 2.99930705074604
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_1:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_1:1",
+      "body": "본체1",
+      "mass_g": 0.4769659347753161
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_1:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_1:1",
+      "body": "본체1",
+      "mass_g": 0.09035963852367407
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체1",
+      "mass_g": 82.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체36",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체37",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체38",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체39",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체40",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체41",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "body": "본체42",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_H101_2:1",
+      "body": "본체1",
+      "mass_g": 21.522063234232842
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_H101_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_H101_2:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_H101_2:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_H101_2:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체1",
+      "mass_g": 10.212790804734212
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_FR12_S102_2:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체1",
+      "mass_g": 82.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체36",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체37",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체38",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체39",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체40",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체41",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "body": "본체42",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체1",
+      "mass_g": 81.92513075905158
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체2",
+      "mass_g": 0.07486924094841944
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_PR33_IFB-A01_2:1",
+      "body": "본체1",
+      "mass_g": 0.4206968370267969
+    },
+    {
+      "path": "arm_link_5__RMX52_IBL-A01_OPEN_2:1",
+      "body": "본체1",
+      "mass_g": 11.295865145198244
+    },
+    {
+      "path": "arm_link_5__RMX52_ILR-A01_OPEN_2:1",
+      "body": "본체1",
+      "mass_g": 1.7345128892493247
+    },
+    {
+      "path": "arm_link_5__RMX52_PR33_IFB-A01_3:1",
+      "body": "본체1",
+      "mass_g": 0.4206968370267969
+    },
+    {
+      "path": "arm_link_5__RMX52_PR33_IFB-A01_4:1",
+      "body": "본체1",
+      "mass_g": 0.4206968370267969
+    },
+    {
+      "path": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "body": "본체1",
+      "mass_g": 21.087641111550926
+    },
+    {
+      "path": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_2:1",
+      "body": "본체1",
+      "mass_g": 0.8085989396313636
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_3:1",
+      "body": "본체1",
+      "mass_g": 0.8085989396313636
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_4:1",
+      "body": "본체1",
+      "mass_g": 0.8085989396313636
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X10_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_2:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_3:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_4:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_5:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_5:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_6:1",
+      "body": "본체1",
+      "mass_g": 0.5727469263841573
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X5_6:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_2:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M3X10_2:1",
+      "body": "본체1",
+      "mass_g": 1.2803423444936013
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M3X10_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_left_link__RMX52_WBH_M3X10_3:1",
+      "body": "본체1",
+      "mass_g": 1.2803423444936013
+    },
+    {
+      "path": "gripper_left_link__RMX52_WBH_M3X10_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_right_link__RMX52_WBH_M3X10_4:1",
+      "body": "본체1",
+      "mass_g": 1.2803423444936013
+    },
+    {
+      "path": "gripper_right_link__RMX52_WBH_M3X10_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_2:1",
+      "body": "본체1",
+      "mass_g": 0.31790625528305255
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_3:1",
+      "body": "본체1",
+      "mass_g": 0.31790625528305255
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_4:1",
+      "body": "본체1",
+      "mass_g": 0.31790625528305255
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2X4_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "gripper_right_link__RMX52_PR33_SPD-A01_2:1",
+      "body": "본체1",
+      "mass_g": 2.99930705074604
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_3:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_4:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_5:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_5:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_6:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_6:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_7:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_7:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_8:1",
+      "body": "본체1",
+      "mass_g": 0.7142581343324812
+    },
+    {
+      "path": "arm_link_5__RMX52_WBH_M2_5X8_8:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_2:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_3:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_4:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_5:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_5:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_6:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_6:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_7:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_7:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_8:1",
+      "body": "본체1",
+      "mass_g": 0.3425628225829132
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M2_5_8:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_2:1",
+      "body": "본체1",
+      "mass_g": 0.4769659347753161
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_2:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_3:1",
+      "body": "본체1",
+      "mass_g": 0.4769659347753161
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_3:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_4:1",
+      "body": "본체1",
+      "mass_g": 0.4769659347753161
+    },
+    {
+      "path": "arm_link_5__RMX52_NUT2_M3_4:1",
+      "body": "본체2",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_2:1",
+      "body": "본체1",
+      "mass_g": 0.09035963852367407
+    },
+    {
+      "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_3:1",
+      "body": "본체1",
+      "mass_g": 0.09035963852367407
+    },
+    {
+      "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_4:1",
+      "body": "본체1",
+      "mass_g": 0.09035963852367407
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체1",
+      "mass_g": 81.92513075905158
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체2",
+      "mass_g": 0.07486924094841944
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체3",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체4",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체5",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체6",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체7",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체8",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체9",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체10",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체11",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체12",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체13",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체14",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체15",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체16",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체17",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체18",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체19",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체20",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체21",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체22",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체23",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체24",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체25",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체26",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체27",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체28",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체29",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체30",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체31",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체32",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체33",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체34",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "body": "본체35",
+      "mass_g": 0.0
+    },
+    {
+      "path": "arm_link_4__RMX52_RW01_Reversed_Motor_Mount:1",
+      "body": "본체1",
+      "mass_g": 0.11423162999364776
+    },
+    {
+      "path": "arm_link_5__RMX52_Wrist_Horn_Adapter_3mm:1",
+      "body": "본체1",
+      "mass_g": 0.015768370006352218
+    },
+    {
+      "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+bracket_v5:1",
+      "body": "본체1",
+      "mass_g": 62.03945011868396
+    },
+    {
+      "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435:1",
+      "body": "본체1",
+      "mass_g": 74.86968035935976
+    },
+    {
+      "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435_cover:1",
+      "body": "본체1",
+      "mass_g": 0.13030939741743872
+    },
+    {
+      "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435(미러):1",
+      "body": "본체1",
+      "mass_g": 74.86970084581141
+    },
+    {
+      "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435_cover(미러):1",
+      "body": "본체1",
+      "mass_g": 0.13030939741136544
+    },
+    {
+      "path": "Camera_Top_Crossbar_2020_261mm:1",
+      "body": "2020_261mm_Outer_Envelope",
+      "mass_g": 139.50000000000003
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체1",
+      "mass_g": 58.506260560011555
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체2",
+      "mass_g": 0.007031001824595494
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체3",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체4",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체5",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체6",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체7",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체8",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체9",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체10",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체11",
+      "mass_g": 1.2687271314512811
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체12",
+      "mass_g": 0.007031001824595494
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체13",
+      "mass_g": 0.003462726816646019
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체14",
+      "mass_g": 0.007031001824815233
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체15",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체16",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체17",
+      "mass_g": 0.005775438723626341
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체18",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체19",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체20",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체21",
+      "mass_g": 0.007031001824375746
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체22",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체23",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체24",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체25",
+      "mass_g": 0.007031001824595484
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체26",
+      "mass_g": 0.00703100182460526
+    },
+    {
+      "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체27",
+      "mass_g": 0.06109210285840882
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체1",
+      "mass_g": 58.506260560011555
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체2",
+      "mass_g": 0.007031001824595494
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체3",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체4",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체5",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체6",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체7",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체8",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체9",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체10",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체11",
+      "mass_g": 1.2687271314512811
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체12",
+      "mass_g": 0.007031001824595494
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체13",
+      "mass_g": 0.003462726816646019
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체14",
+      "mass_g": 0.007031001824815233
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체15",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체16",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체17",
+      "mass_g": 0.005775438723626341
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체18",
+      "mass_g": 0.007031001824375756
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체19",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체20",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체21",
+      "mass_g": 0.007031001824375746
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체22",
+      "mass_g": 0.007031001824375755
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체23",
+      "mass_g": 0.007031001824375747
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체24",
+      "mass_g": 0.007031001824595495
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체25",
+      "mass_g": 0.007031001824595484
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체26",
+      "mass_g": 0.00703100182460526
+    },
+    {
+      "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+      "body": "본체27",
+      "mass_g": 0.06109210285840882
+    },
+    {
+      "path": "Jetson_Orin_Nano_DevKit_Envelope:1",
+      "body": "Jetson_Orin_Nano_DevKit_Envelope",
+      "mass_g": 174.0
+    },
+    {
+      "path": "ROBOTIS_LB012_Battery_Left_Envelope:1",
+      "body": "ROBOTIS_LB012_Battery_Left_Envelope",
+      "mass_g": 106.00000000000001
+    },
+    {
+      "path": "ROBOTIS_LB012_Battery_Right_Envelope:1",
+      "body": "ROBOTIS_LB012_Battery_Right_Envelope",
+      "mass_g": 106.00000000000001
+    },
+    {
+      "path": "LDS_Front_Deck_Fixed_Slotted_Base:1",
+      "body": "LDS_Front_Deck_Fixed_Slotted_Base",
+      "mass_g": 13.717767410627774
+    },
+    {
+      "path": "LDS_Front_Sliding_Carrier:1",
+      "body": "LDS_Front_Sliding_Carrier",
+      "mass_g": 27.84877869452651
+    },
+    {
+      "path": "LDS_Rear_Deck_Fixed_Slotted_Base:1",
+      "body": "LDS_Rear_Deck_Fixed_Slotted_Base",
+      "mass_g": 13.717767410627774
+    },
+    {
+      "path": "LDS_Rear_Sliding_Carrier:1",
+      "body": "LDS_Rear_Sliding_Carrier",
+      "mass_g": 27.84877869452651
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체1",
+      "mass_g": 0.00019642611056500136
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체2",
+      "mass_g": 0.00019642611056499266
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체3",
+      "mass_g": 0.0007397946532809007
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체4",
+      "mass_g": 0.00039966730079720445
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체5",
+      "mass_g": 0.00019642611056501827
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체6",
+      "mass_g": 0.00019642611056499542
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체7",
+      "mass_g": 0.0007397946532809179
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체8",
+      "mass_g": 0.00019642611056499716
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체9",
+      "mass_g": 0.0001964261105650137
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체10",
+      "mass_g": 0.0007397946532808835
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체11",
+      "mass_g": 0.00039966730079713073
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체12",
+      "mass_g": 0.00039966730079672816
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체13",
+      "mass_g": 0.0971546230846683
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체14",
+      "mass_g": 0.01805273089465075
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체15",
+      "mass_g": 0.018052730894650718
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체16",
+      "mass_g": 0.018052730894650346
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체17",
+      "mass_g": 0.018052730894650672
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체18",
+      "mass_g": 0.018052730894650395
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체19",
+      "mass_g": 0.018052730894650346
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체20",
+      "mass_g": 0.00039966730079719166
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체21",
+      "mass_g": 0.0003996673007972452
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체22",
+      "mass_g": 0.0003996673007970968
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체23",
+      "mass_g": 0.0003996673007967144
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체24",
+      "mass_g": 0.00039966730079676156
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체25",
+      "mass_g": 0.0003996673007967614
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체26",
+      "mass_g": 0.0003996673007971167
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체27",
+      "mass_g": 0.0003996673007971501
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체28",
+      "mass_g": 0.0003996673007971751
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체29",
+      "mass_g": 0.00039966730079716586
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체30",
+      "mass_g": 0.0001964261105649944
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체31",
+      "mass_g": 0.00019642611056500315
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체32",
+      "mass_g": 0.000739794653280751
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체33",
+      "mass_g": 0.0001964261105649907
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체34",
+      "mass_g": 0.00019642611056500895
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체35",
+      "mass_g": 0.0007397946532808028
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체36",
+      "mass_g": 0.00019642611056495469
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체37",
+      "mass_g": 0.00019642611056497575
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체38",
+      "mass_g": 0.0007397946532809645
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체39",
+      "mass_g": 0.00019642611056493642
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체40",
+      "mass_g": 0.00019642611056495458
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체41",
+      "mass_g": 0.0007397946532808942
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체42",
+      "mass_g": 0.00019642611056497718
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체43",
+      "mass_g": 0.00019642611056497718
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체44",
+      "mass_g": 0.0007397946532809739
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체45",
+      "mass_g": 0.00019642611056495433
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체46",
+      "mass_g": 0.00019642611056497548
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체47",
+      "mass_g": 0.0007397946532808926
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체48",
+      "mass_g": 0.00019642611056500394
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체49",
+      "mass_g": 0.0001964261105650123
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체50",
+      "mass_g": 0.0007397946532809092
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체51",
+      "mass_g": 0.0001964261105649859
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체52",
+      "mass_g": 0.0001964261105649928
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체53",
+      "mass_g": 0.0007397946532808144
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체54",
+      "mass_g": 0.0034212232091428117
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체55",
+      "mass_g": 0.00019642611056501017
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체56",
+      "mass_g": 0.00019642611056500808
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체57",
+      "mass_g": 0.0007397946532807997
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체58",
+      "mass_g": 0.0001964261105650122
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체59",
+      "mass_g": 0.00019642611056501218
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체60",
+      "mass_g": 0.0007397946532807978
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체61",
+      "mass_g": 0.00019642611056501096
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체62",
+      "mass_g": 0.00019642611056499093
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체63",
+      "mass_g": 0.0007397946532808626
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체64",
+      "mass_g": 0.0001964261105649907
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체65",
+      "mass_g": 0.0001964261105649907
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체66",
+      "mass_g": 0.0007397946532808808
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체67",
+      "mass_g": 0.00019642611056498987
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체68",
+      "mass_g": 0.00019642611056498987
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체69",
+      "mass_g": 0.0007397946532808808
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체70",
+      "mass_g": 0.00019642611056493495
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체71",
+      "mass_g": 0.00019642611056493693
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체72",
+      "mass_g": 0.0007397946532808193
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체73",
+      "mass_g": 0.0001964261105649907
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체74",
+      "mass_g": 0.00019642611056498987
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체75",
+      "mass_g": 0.0007397946532808808
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체76",
+      "mass_g": 0.00019642611056499716
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체77",
+      "mass_g": 0.00019642611056499542
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체78",
+      "mass_g": 0.0007397946532808773
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체79",
+      "mass_g": 0.00019642611056501052
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체80",
+      "mass_g": 0.0001964261105650106
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체81",
+      "mass_g": 0.0007397946532808807
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체82",
+      "mass_g": 0.00019642611056500182
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체83",
+      "mass_g": 0.00019642611056499266
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체84",
+      "mass_g": 0.0007397946532807508
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체85",
+      "mass_g": 0.00019642611056498065
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체86",
+      "mass_g": 0.00019642611056499266
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체87",
+      "mass_g": 0.0007397946532809007
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체88",
+      "mass_g": 0.00019642611056501985
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체89",
+      "mass_g": 0.0001964261105650137
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체90",
+      "mass_g": 0.0007397946532809321
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체91",
+      "mass_g": 0.00019642611056497306
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체92",
+      "mass_g": 0.00019642611056501204
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체93",
+      "mass_g": 0.0007397946532808724
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체94",
+      "mass_g": 0.0001964261105650138
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체95",
+      "mass_g": 0.0001964261105649548
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체96",
+      "mass_g": 0.0007397946532808731
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체97",
+      "mass_g": 0.00019642611056501985
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체98",
+      "mass_g": 0.00019642611056501654
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체99",
+      "mass_g": 0.0007397946532808509
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체100",
+      "mass_g": 0.000196426110565005
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체101",
+      "mass_g": 0.00019642611056500952
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체102",
+      "mass_g": 0.0007397946532808724
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체103",
+      "mass_g": 0.00019642611056500922
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체104",
+      "mass_g": 0.00019642611056500337
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체105",
+      "mass_g": 0.0007397946532808182
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체106",
+      "mass_g": 0.00019642611056497306
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체107",
+      "mass_g": 0.0001964261105650155
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체108",
+      "mass_g": 0.0007397946532808711
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체109",
+      "mass_g": 0.00019642611056501304
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체110",
+      "mass_g": 0.00019642611056502115
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체111",
+      "mass_g": 0.000739794653280874
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체112",
+      "mass_g": 0.00019642611056499483
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체113",
+      "mass_g": 0.00019642611056498466
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체114",
+      "mass_g": 0.000739794653280874
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체115",
+      "mass_g": 0.00019642611056497656
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체116",
+      "mass_g": 0.0001964261105649822
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체117",
+      "mass_g": 0.0007397946532808396
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체118",
+      "mass_g": 0.00019642611056502136
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체119",
+      "mass_g": 0.00019642611056499266
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체120",
+      "mass_g": 0.0007397946532808824
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체121",
+      "mass_g": 0.00019642611056497306
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체122",
+      "mass_g": 0.0001964261105650138
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체123",
+      "mass_g": 0.0007397946532808729
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체124",
+      "mass_g": 0.00019642611056497748
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체125",
+      "mass_g": 0.00019642611056497748
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체126",
+      "mass_g": 0.0007397946532808242
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체127",
+      "mass_g": 0.0003996673007972492
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체128",
+      "mass_g": 0.00039966730079722326
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체129",
+      "mass_g": 0.00039966730079707267
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체130",
+      "mass_g": 0.00039966730079710297
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체131",
+      "mass_g": 0.24462090997475627
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체132",
+      "mass_g": 0.24485905382648107
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체133",
+      "mass_g": 2.3836306110093015
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체134",
+      "mass_g": 5.9939551293368325
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체135",
+      "mass_g": 0.4693162913957613
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체136",
+      "mass_g": 0.09611476224258468
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체137",
+      "mass_g": 9.33397199522094
+    },
+    {
+      "path": "UC684_Camera_On_Gripper:1",
+      "body": "본체138",
+      "mass_g": 0.9782020306136976
+    },
+    {
+      "path": "UC684_Camera_Bracket_PLA:1",
+      "body": "본체1",
+      "mass_g": 10.31906160261017
+    }
+  ],
+  "motor_holes": [
+    {
+      "motor": "Motor_Front_Left:1",
+      "bracket_center_world_mm": [
+        88.000018293945,
+        121.59999871948202,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.8338706338799546e-05
+    },
+    {
+      "motor": "Motor_Front_Left:1",
+      "bracket_center_world_mm": [
+        72.000019293945,
+        121.59999871948202,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.933639159956373e-05
+    },
+    {
+      "motor": "Motor_Rear_Left:1",
+      "bracket_center_world_mm": [
+        -71.999983706055,
+        121.59999871948202,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.634418458857534e-05
+    },
+    {
+      "motor": "Motor_Rear_Left:1",
+      "bracket_center_world_mm": [
+        -87.999983706055,
+        121.59999871948202,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.6344184574408164e-05
+    },
+    {
+      "motor": "Motor_Front_Right:1",
+      "bracket_center_world_mm": [
+        88.000018293945,
+        -121.600001280518,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.833870633681497e-05
+    },
+    {
+      "motor": "Motor_Front_Right:1",
+      "bracket_center_world_mm": [
+        72.000019293945,
+        -121.600001280518,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.933639159768155e-05
+    },
+    {
+      "motor": "Motor_Rear_Right:1",
+      "bracket_center_world_mm": [
+        -71.999983706055,
+        -121.600001280518,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.634418458634858e-05
+    },
+    {
+      "motor": "Motor_Rear_Right:1",
+      "bracket_center_world_mm": [
+        -87.999983706055,
+        -121.600001280518,
+        15.0
+      ],
+      "nearest_motor_axis_error_mm": 1.634418457218141e-05
+    }
+  ],
+  "hardware_clearance": [],
+  "moved_component_pose_errors": [
+    {
+      "part": "Motor_Front_Left:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Motor_Front_Right:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Wheel_Front_Left:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Wheel_Front_Right:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "housing:1",
+      "max_matrix_error": 8.881784197001252e-16
+    },
+    {
+      "part": "magazine_B:1",
+      "max_matrix_error": 8.881784197001252e-16
+    },
+    {
+      "part": "magazine_G:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "magazine_R:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "rail_hi:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "rail_lo:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Motor_Rear_Left:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Wheel_Rear_Left:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Motor_Rear_Right:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Wheel_Rear_Right:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "housing:2",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Open CASCADE STEP translator 8.0 1:2",
+      "max_matrix_error": 8.881784197001252e-16
+    },
+    {
+      "part": "Profile_2020_450mm_Rear_Left_Envelope:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Profile_2020_450mm_Rear_Right_Envelope:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Chassis_Bracket_Left_16mm:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Chassis_Bracket_Right_16mm:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Camera_D435_Pair_Source:1",
+      "max_matrix_error": 0.0
+    },
+    {
+      "part": "Camera_Top_Crossbar_2020_261mm:1",
+      "max_matrix_error": 0.0
+    }
+  ],
+  "new_bracket_physics": [
+    {
+      "path": "Chassis_Bracket_Left_16mm:1",
+      "body": "Floor_Bracket_Left_Main",
+      "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSElMM7E0sUzRTTE3NdA1MQMSFmZJKbqmppZJKUYGlqamBpZgtUAzGNAA2D4DBbB1IOsNTYxNLCwBAumnNIsAAAA=",
+      "bounds": {
+        "min": [
+          -122.399927706055,
+          90.999991719482,
+          12.0
+        ],
+        "max": [
+          95.25001929394499,
+          132.99998971948202,
+          102.0
+        ],
+        "size": [
+          217.649947,
+          41.999998000000005,
+          90.0
+        ]
+      },
+      "volume_mm3": 141977.23783818766,
+      "default_mass_g": 176.05177491935274,
+      "com_component_mm": [
+        -32.42053721176377,
+        141.22015227705762,
+        45.72390794804942
+      ],
+      "transform_cm": [
+        0.0,
+        -1.0,
+        0.0,
+        12.8,
+        1.0,
+        0.0,
+        0.0,
+        13.3,
+        0.0,
+        0.0,
+        1.0,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inertia_component_origin_g_mm2": [
+        4762912.241740196,
+        775040.1262274189,
+        4405911.416752295,
+        805918.4957388755,
+        261796.2607526878,
+        -1135561.6758274182
+      ],
+      "source_material": "Waffle_PLA_Printed_1240_1240.0",
+      "valid_inertia": true
+    },
+    {
+      "path": "Chassis_Bracket_Left_16mm:1",
+      "body": "Floor_Bracket_Left_Profile_Carrier",
+      "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSElMM7E0sUzRTTE3NdA1MQMSFmZJKbqmppZJKUYGlqamBpZgtUAzGNAA2D4DBbB1IOsNTYyBZgEA/qQNU4sAAAA=",
+      "bounds": {
+        "min": [
+          -154.699927706055,
+          90.99999171948201,
+          12.0
+        ],
+        "max": [
+          -96.699927706055,
+          143.700014719482,
+          122.0
+        ],
+        "size": [
+          58.00000000000001,
+          52.70002299999998,
+          110.0
+        ]
+      },
+      "volume_mm3": 66408.73701558958,
+      "default_mass_g": 82.34683389933107,
+      "com_component_mm": [
+        -20.212818217664143,
+        266.3312514932171,
+        48.793808246595994
+      ],
+      "transform_cm": [
+        0.0,
+        -1.0,
+        0.0,
+        12.8,
+        1.0,
+        0.0,
+        0.0,
+        13.3,
+        0.0,
+        0.0,
+        1.0,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inertia_component_origin_g_mm2": [
+        6153306.308967139,
+        347405.90720658953,
+        5914493.628263796,
+        436880.50866010855,
+        79705.91469933737,
+        -1073449.7691015305
+      ],
+      "source_material": "Waffle_PLA_Printed_1240_1240.0",
+      "valid_inertia": true
+    },
+    {
+      "path": "Chassis_Bracket_Right_16mm:1",
+      "body": "Floor_Bracket_Right_Main",
+      "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEkzM0tJSTTStUhLNtE1SUxO1LUwMTYEEuZmKaYGBmYWSWZgtUAzGNAA2D4DBbB1IOsNTYxNDU0BSq/I4IsAAAA=",
+      "bounds": {
+        "min": [
+          -122.399927706055,
+          -133.00000628051802,
+          12.0
+        ],
+        "max": [
+          95.25001929394499,
+          -91.00000828051802,
+          102.0
+        ],
+        "size": [
+          217.649947,
+          41.999998000000005,
+          90.0
+        ]
+      },
+      "volume_mm3": 141977.23783818766,
+      "default_mass_g": 176.05177491935268,
+      "com_component_mm": [
+        -71.57947938885165,
+        141.22015227705762,
+        45.72390794805136
+      ],
+      "transform_cm": [
+        0.0,
+        -1.0,
+        0.0,
+        12.8,
+        1.0,
+        0.0,
+        0.0,
+        -2.9,
+        0.0,
+        0.0,
+        1.0,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inertia_component_origin_g_mm2": [
+        4762912.241740222,
+        1492016.3734498476,
+        5122887.6639746865,
+        1779735.997253497,
+        575380.4888289346,
+        -1135561.6758274974
+      ],
+      "source_material": "Waffle_PLA_Printed_1240_1240.0",
+      "valid_inertia": true
+    },
+    {
+      "path": "Chassis_Bracket_Right_16mm:1",
+      "body": "Floor_Bracket_Right_Profile_Carrier",
+      "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEkzM0tJSTTStUhLNtE1SUxO1LUwMTYEEuZmKaYGBmYWSWZgtUAzGNAA2D4DBbB1IOsNTYxNjQwABgiPu4sAAAA=",
+      "bounds": {
+        "min": [
+          -154.699927706055,
+          -143.700031280518,
+          12.0
+        ],
+        "max": [
+          -96.699927706055,
+          -91.00000828051802,
+          122.0
+        ],
+        "size": [
+          58.00000000000001,
+          52.700023,
+          110.0
+        ]
+      },
+      "volume_mm3": 66408.73701558955,
+      "default_mass_g": 82.34683389933105,
+      "com_component_mm": [
+        -83.78719834337495,
+        266.3312514932171,
+        48.79380824660258
+      ],
+      "transform_cm": [
+        0.0,
+        -1.0,
+        0.0,
+        12.8,
+        1.0,
+        0.0,
+        0.0,
+        -2.9,
+        0.0,
+        0.0,
+        1.0,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "inertia_component_origin_g_mm2": [
+        6153306.30896718,
+        891861.4816344961,
+        6458949.2026916435,
+        1843999.5287558504,
+        338167.7766350342,
+        -1073449.7691016633
+      ],
+      "source_material": "Waffle_PLA_Printed_1240_1240.0",
+      "valid_inertia": true
+    }
+  ],
+  "native_total_mass_g": 4891.194067702904,
+  "native_body_count": 669,
+  "storage_support_z_mm": 200.0,
+  "puck_support_status": "CAD support footprint upper surface",
+  "payload_12": [
+    {
+      "channel": "B",
+      "index": 1,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        230.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 2,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        290.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 3,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        350.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 4,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        410.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 1,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        230.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 2,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        290.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 3,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        350.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 4,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        410.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 1,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        230.01999999999998
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 2,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        290.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 3,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        350.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 4,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        410.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    }
+  ],
+  "max_payload_g": 803.52,
+  "fully_loaded_mass_g": 5694.714067702904,
+  "additional_fasteners": "Eight M5x20 button-head screws, nuts and washers are not in the CAD mass; estimate about 50g until weighed."
+}

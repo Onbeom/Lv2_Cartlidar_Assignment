@@ -1,0 +1,29 @@
+{
+  "kind": "lidar_only",
+  "light": "dark",
+  "simulation_only": true,
+  "old_model": "261027_1711",
+  "truth_as_input": false,
+  "diagnostic_only": true,
+  "play_exit": 0,
+  "finish_exit": 0,
+  "write_exit": 0,
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1257953,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1257954,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1258114,
+      "exit": 0
+    }
+  ],
+  "to_map_exit": 0
+}

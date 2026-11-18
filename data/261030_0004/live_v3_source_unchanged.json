@@ -1,0 +1,9 @@
+{
+  "nav2_live_holdout.py": true,
+  "command_gate.py": true,
+  "navigation_coordinator.py": true,
+  "observation_monitor.py": true,
+  "analytic_depth_holdout.py": true,
+  "nav2.yaml": true,
+  "dynamic_v2.yaml": true
+}

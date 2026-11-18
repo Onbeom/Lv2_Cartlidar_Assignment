@@ -1,0 +1,108 @@
+{
+ "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+ "start": {
+  "name": "start",
+  "x": 0.734,
+  "y": 0.95,
+  "yaw": 3.14159
+ },
+ "min_clear": 0.05,
+ "rot_clear": null,
+ "goals": [
+  {
+   "name": "start_box_1",
+   "x": 2.2325,
+   "y": 0.6663,
+   "yaw": 2.78623,
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31
+  },
+  {
+   "name": "L1(tag 12 +x)",
+   "x": 4.266,
+   "y": 0.95,
+   "yaw": -3.14159,
+   "standoff": 0.23,
+   "clearance": 0.0535,
+   "face": [
+    3.773,
+    0.95
+   ],
+   "normal": [
+    1.0,
+    0.0
+   ],
+   "rot_clearance": -0.1031
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "x": 2.202,
+   "y": 2.3715,
+   "yaw": 1.5708,
+   "standoff": 0.45,
+   "clearance": 0.3,
+   "face": [
+    2.202,
+    3.0845
+   ],
+   "normal": [
+    0.0,
+    -1.0
+   ],
+   "rot_clearance": 0.217
+  },
+  {
+   "name": "start_box_3",
+   "x": 2.5752,
+   "y": 4.6227,
+   "yaw": 1.11249,
+   "standoff": 0.45,
+   "clearance": 0.0864,
+   "face": [
+    2.8907,
+    5.2621
+   ],
+   "normal": [
+    -0.4424,
+    -0.8968
+   ],
+   "rot_clearance": 0.0842
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "x": 4.276,
+   "y": 5.354,
+   "yaw": -3.14159,
+   "standoff": 0.24,
+   "clearance": 0.0516,
+   "face": [
+    3.773,
+    5.354
+   ],
+   "normal": [
+    1.0,
+    0.0
+   ],
+   "rot_clearance": -0.1046
+  },
+  {
+   "name": "start",
+   "x": 0.734,
+   "y": 0.95,
+   "yaw": 3.14159
+  }
+ ],
+ "notes": [
+  "L1(tag 12 +x): 범퍼-면 0.23 m < coarse_min 0.30 m (면 앞 칸이 차체 길이 0.418 m + 0.30 m 보다 좁음)",
+  "L3(tag 14 +x): 범퍼-면 0.24 m < coarse_min 0.30 m (면 앞 칸이 차체 길이 0.418 m + 0.30 m 보다 좁음)"
+ ]
+}

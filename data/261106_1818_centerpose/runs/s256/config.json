@@ -1,0 +1,10 @@
+{
+ "data": "data/train",
+ "val": "data/val",
+ "out": "runs/s256",
+ "size": "256",
+ "epochs": "40",
+ "batch": "12",
+ "lr": "0.0005",
+ "limit": "0"
+}

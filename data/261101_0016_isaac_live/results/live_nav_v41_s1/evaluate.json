@@ -1,0 +1,80 @@
+{
+ "n_goals": 6,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": -0.001,
+ "G3_n_overlap_samples": 465,
+ "G4_loc_rmse_m": 0.0065,
+ "G4_loc_max_m": 0.0125,
+ "G4_yaw_rmse_rad": 0.0071,
+ "G4_n_samples": 1260,
+ "G5_cmd": {
+  "n": 2270,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.08606227519694197,
+  "wz_abs_max": 0.6966942148760331
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 58.33,
+   "pos_err": 0.0115,
+   "yaw_err": 0.0527,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 38.63,
+   "pos_err": 0.0196,
+   "yaw_err": 0.0167,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "ABORTED",
+   "duration_s": 15.43,
+   "pos_err": 0.253,
+   "yaw_err": 0.0494,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 2.7265,
+   "yaw_err": 1.2254,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (4.04, 0.59) [q: 0.00, 0.00, 0.98, 0.18] (yaw: 2.79) to (2.20, 2.62) [q: 0.00, 0.00, 0.71, 0.71] (yaw: 1.57): \"Start occupied\""
+  },
+  {
+   "name": "start_box_3",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 4.2432,
+   "yaw_err": 1.6837,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (4.03, 0.59) [q: 0.00, 0.00, 0.99, 0.17] (yaw: 2.80) to (2.54, 4.55) [q: 0.00, 0.00, 0.53, 0.85] (yaw: 1.11): \"Start occupied\""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙)",
+   "status": "TIMEOUT",
+   "duration_s": 0.0,
+   "pos_err": 4.8545,
+   "yaw_err": 0.6344,
+   "error_code": null,
+   "error_msg": null
+  }
+ ],
+ "G3_pass": false,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

@@ -1,0 +1,82 @@
+{
+ "n_images": 236,
+ "synthetic_only": true,
+ "oracle": {
+  "table": {
+   "all": {
+    "n": 496,
+    "output": 496,
+    "output_rate": 1.0,
+    "orientation": 496,
+    "success": 142,
+    "success_rate": 0.2863,
+    "center_mm_p50_p95": [
+     16.989,
+     73.584
+    ],
+    "axis_deg_p50_p95": [
+     2.421,
+     6.841
+    ]
+   },
+   "tag_seen": {
+    "n": 0,
+    "output": 0,
+    "output_rate": 0.0,
+    "orientation": 0,
+    "success": 0,
+    "success_rate": 0.0,
+    "center_mm_p50_p95": null,
+    "axis_deg_p50_p95": null
+   },
+   "tag_not_seen": {
+    "n": 496,
+    "output": 496,
+    "output_rate": 1.0,
+    "orientation": 496,
+    "success": 142,
+    "success_rate": 0.2863,
+    "center_mm_p50_p95": [
+     16.989,
+     73.584
+    ],
+    "axis_deg_p50_p95": [
+     2.421,
+     6.841
+    ]
+   },
+   "standing_cuboid": {
+    "n": 496,
+    "output": 496,
+    "output_rate": 1.0,
+    "orientation": 496,
+    "success": 142,
+    "success_rate": 0.2863,
+    "center_mm_p50_p95": [
+     16.989,
+     73.584
+    ],
+    "axis_deg_p50_p95": [
+     2.421,
+     6.841
+    ]
+   }
+  },
+  "false_outputs": 0,
+  "ms_all_p50_p95": [
+   6.412,
+   14.887
+  ],
+  "ms_det_p50_p95": [
+   0.034,
+   0.054
+  ],
+  "ms_pose_p50_p95": [
+   6.376,
+   14.836
+  ],
+  "ms_pose_per_det_p50": [
+   3.223
+  ]
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "design": "v6",
+ "step_rad": 0.8,
+ "max_acc": 20.0,
+ "hold_current": false,
+ "max_rate": 1.0,
+ "alpha": 0.2,
+ "per_joint": {
+  "RMX52_Base_Yaw": {
+   "vel_max_rad_s": 1.019,
+   "sat_ratio_physics_steps": 0.0878,
+   "sat_ratio_policy_steps": 0.1067,
+   "lead_max_rad": 0.0102,
+   "reach_go_s_median": 0.8333333333333334,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.8333333333333334,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 30,
+   "sat_ratio_per_arm5_joint": [
+    0.4389,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "physx_force_abs_max_moved": 0.837,
+   "physx_force_ge_3p8_ratio_moved": 0.0,
+   "computed_tau_ge_3p8_ratio_moved": 0.4389
+  },
+  "RMX52_Shoulder": {
+   "vel_max_rad_s": 1.032,
+   "sat_ratio_physics_steps": 0.0998,
+   "sat_ratio_policy_steps": 0.1115,
+   "lead_max_rad": 0.1793,
+   "reach_go_s_median": 0.8333333333333334,
+   "reach_go_never": 1,
+   "reach_back_s_median": 0.8333333333333334,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 25,
+   "sat_ratio_per_arm5_joint": [
+    0.0,
+    0.4989,
+    0.0001,
+    0.0,
+    0.0
+   ],
+   "physx_force_abs_max_moved": 7.318,
+   "physx_force_ge_3p8_ratio_moved": 0.009,
+   "computed_tau_ge_3p8_ratio_moved": 0.4989
+  },
+  "RMX52_Elbow": {
+   "vel_max_rad_s": 1.027,
+   "sat_ratio_physics_steps": 0.0981,
+   "sat_ratio_policy_steps": 0.1079,
+   "lead_max_rad": 0.0118,
+   "reach_go_s_median": 0.8333333333333334,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.8333333333333334,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 26,
+   "sat_ratio_per_arm5_joint": [
+    0.0,
+    0.0,
+    0.4907,
+    0.0,
+    0.0
+   ],
+   "physx_force_abs_max_moved": 1.215,
+   "physx_force_ge_3p8_ratio_moved": 0.0,
+   "computed_tau_ge_3p8_ratio_moved": 0.4907
+  },
+  "RMX52_Wrist_Pitch": {
+   "vel_max_rad_s": 1.036,
+   "sat_ratio_physics_steps": 0.0901,
+   "sat_ratio_policy_steps": 0.1089,
+   "lead_max_rad": 0.0128,
+   "reach_go_s_median": 0.8333333333333334,
+   "reach_go_never": 0,
+   "reach_back_s_median": 0.8333333333333334,
+   "reach_back_never": 0,
+   "envs_used_no_contact": 29,
+   "sat_ratio_per_arm5_joint": [
+    0.0,
+    0.0111,
+    0.0003,
+    0.4393,
+    0.0
+   ],
+   "physx_force_abs_max_moved": 3.028,
+   "physx_force_ge_3p8_ratio_moved": 0.0,
+   "computed_tau_ge_3p8_ratio_moved": 0.4393
+  }
+ }
+}

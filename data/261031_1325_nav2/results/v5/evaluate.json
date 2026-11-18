@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0319,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.025,
+ "G4_loc_max_m": 0.0545,
+ "G4_yaw_rmse_rad": 0.0183,
+ "G4_n_samples": 3570,
+ "G5_cmd": {
+  "n": 7008,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.1815173476934433,
+  "vx_min": -0.0707407295703888,
+  "wz_abs_max": 0.5125604271888733
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 47.54,
+   "pos_err": 0.0377,
+   "yaw_err": 0.0438,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 38.9,
+   "pos_err": 0.0536,
+   "yaw_err": 0.0077,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x)",
+   "status": "SUCCEEDED",
+   "duration_s": 17.73,
+   "pos_err": 0.0922,
+   "yaw_err": 0.0304,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 52.93,
+   "pos_err": 0.0309,
+   "yaw_err": 0.0638,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 50.27,
+   "pos_err": 0.0669,
+   "yaw_err": 0.0274,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "status": "SUCCEEDED",
+   "duration_s": 37.19,
+   "pos_err": 0.052,
+   "yaw_err": 0.0446,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start",
+   "status": "ABORTED",
+   "duration_s": 99.18,
+   "pos_err": 0.0518,
+   "yaw_err": 0.7025,
+   "error_code": 103,
+   "error_msg": "Resulting plan has 0 poses in it."
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

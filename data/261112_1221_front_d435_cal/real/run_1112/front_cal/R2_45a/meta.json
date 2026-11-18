@@ -1,0 +1,102 @@
+{
+ "camera": "top_camera_front",
+ "frame_id": "top_camera_front_color_optical_frame",
+ "n": 10,
+ "frames": [
+  {
+   "file": "000.png",
+   "stamp": 1794483848.545335,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.24395182291667
+  },
+  {
+   "file": "001.png",
+   "stamp": 1794483848.6454587,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.14825846354167
+  },
+  {
+   "file": "002.png",
+   "stamp": 1794483848.7455852,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.22700954861111
+  },
+  {
+   "file": "003.png",
+   "stamp": 1794483848.8457146,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.20202799479166
+  },
+  {
+   "file": "004.png",
+   "stamp": 1794483848.9458468,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.26587456597223
+  },
+  {
+   "file": "005.png",
+   "stamp": 1794483849.045959,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.015361328125
+  },
+  {
+   "file": "006.png",
+   "stamp": 1794483849.1460288,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.07871419270833
+  },
+  {
+   "file": "007.png",
+   "stamp": 1794483849.2460983,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.01854600694445
+  },
+  {
+   "file": "008.png",
+   "stamp": 1794483849.346168,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.23513020833333
+  },
+  {
+   "file": "009.png",
+   "stamp": 1794483849.4462373,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 90.214208984375
+  }
+ ],
+ "K": [
+  605.8507690429688,
+  0.0,
+  324.3658142089844,
+  0.0,
+  605.6798706054688,
+  245.13917541503906,
+  0.0,
+  0.0,
+  1.0
+ ],
+ "D": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "width": 640,
+ "height": 480,
+ "distortion_model": "plumb_bob",
+ "T_link_optical": {
+  "xyz": [
+   -0.00018251649453304708,
+   0.015094959177076817,
+   -7.015527808107436e-05
+  ],
+  "xyzw": [
+   -0.5015669274143875,
+   0.501628805650398,
+   -0.4965997555991635,
+   0.5001878220355139
+  ]
+ },
+ "time": "2026-11-12 20:44:09"
+}

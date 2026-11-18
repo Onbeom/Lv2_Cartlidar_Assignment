@@ -1,0 +1,63 @@
+{
+  "bodies": 669,
+  "mass_g": 4891.194067546911,
+  "expected_g": 4891.194067702904,
+  "links": [
+    {
+      "name": "arm_link_1",
+      "mass_g": 105.78038612011822
+    },
+    {
+      "name": "arm_link_2",
+      "mass_g": 144.85128784853333
+    },
+    {
+      "name": "arm_link_3",
+      "mass_g": 136.8568533297052
+    },
+    {
+      "name": "arm_link_4",
+      "mass_g": 96.37476312478593
+    },
+    {
+      "name": "arm_link_5",
+      "mass_g": 207.22119002407737
+    },
+    {
+      "name": "base_link",
+      "mass_g": 3721.803022447411
+    },
+    {
+      "name": "gripper_left_link",
+      "mass_g": 25.367290477609565
+    },
+    {
+      "name": "gripper_right_link",
+      "mass_g": 25.367290506790415
+    },
+    {
+      "name": "lidar_front",
+      "mass_g": 152.8487787028617
+    },
+    {
+      "name": "lidar_rear",
+      "mass_g": 152.84877870291533
+    },
+    {
+      "name": "wheel_front_left",
+      "mass_g": 30.46860603657999
+    },
+    {
+      "name": "wheel_front_right",
+      "mass_g": 30.468607094471693
+    },
+    {
+      "name": "wheel_rear_left",
+      "mass_g": 30.468606036579907
+    },
+    {
+      "name": "wheel_rear_right",
+      "mass_g": 30.46860709447178
+    }
+  ]
+}

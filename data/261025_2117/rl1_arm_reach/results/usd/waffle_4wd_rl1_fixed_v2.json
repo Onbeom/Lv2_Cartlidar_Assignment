@@ -1,0 +1,21 @@
+{
+ "source": "/home/pa4/git/lv2_next_module/261022_2119/usd/waffle_4wd_261022_2119/waffle_4wd/waffle_4wd.usda",
+ "variant": "physx",
+ "method": "평탄화 + base_link→로봇 원점 FixedJoint(articulation 제외)",
+ "before": {
+  "bodies": 14,
+  "joints": 13,
+  "mass_kg": 4.891194,
+  "articulation_roots": [
+   "/waffle_4wd/Geometry/base_footprint/base_link"
+  ]
+ },
+ "after": {
+  "bodies": 14,
+  "joints": 14,
+  "mass_kg": 4.891194,
+  "articulation_roots": [
+   "/waffle_4wd/Geometry/base_footprint/base_link"
+  ]
+ }
+}

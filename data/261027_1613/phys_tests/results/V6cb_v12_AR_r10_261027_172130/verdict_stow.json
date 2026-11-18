@@ -1,0 +1,52 @@
+{
+  "measured": {
+    "corner": "A",
+    "side": "R",
+    "radius_cmd_m": 0.1,
+    "align": {
+      "avg_head_err_deg": 0.4406205105329977,
+      "n_samples": 120,
+      "skipped": true,
+      "direction": -1,
+      "target_deg": 0.24062051053299777
+    },
+    "align_time_s": 0.0,
+    "align_turned_deg": -7.854485259428501e-05,
+    "align_lat_shift_mm": 0.00020000026557109862,
+    "align_along_shift_mm": -0.002969999982171956,
+    "min_clearance_mm": 139.72397361549062,
+    "min_clearance_t_s": 18.608334303833544,
+    "arc_end_outward_mm": -42.860011161425014,
+    "arc_end_along_m": 0.1878835194879779,
+    "settle_along_m": 0.6636315232723602,
+    "w_sat_fraction": 0.011063306699446834,
+    "lat_at_normalize_start_mm": -42.860011161425014,
+    "head_at_normalize_start_deg": -0.18123767586051096,
+    "end_outward_mm": 0.20693511354963334,
+    "end_heading_deg": 0.44056349617956836,
+    "end_along_err_mm": 0.7866133384727414,
+    "stop_time_s": 0.0,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 5e-05,
+      "RMX52_Shoulder": 7e-05,
+      "RMX52_Elbow": 0.00179,
+      "RMX52_Wrist_Pitch": 0.00058,
+      "RMX52_Wrist_Roll_Reversed": 1e-05
+    }
+  },
+  "checks": {
+    "호 회전 90° 도달": true,
+    "최소 간격 ≥ 30 mm": true,
+    "옆 오차 ≤ 10 mm": true,
+    "헤딩 오차 ≤ 1°": true,
+    "정지 위치 앞뒤 ≤ 20 mm": true,
+    "정지 명령 뒤 0.5 s 안에 ≤ 0.005 m/s": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "Isaac Sim",
+  "test": "V6cb"
+}

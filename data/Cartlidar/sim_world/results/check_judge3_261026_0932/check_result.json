@@ -1,0 +1,1129 @@
+{
+ "seeds": [
+  16,
+  17,
+  18
+ ],
+ "task": "B_dice",
+ "criteria": "W v2 (사용자 확정 2026-10-23)",
+ "W": {
+  "W1": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "17": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "18": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    }
+   }
+  },
+  "W2": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "maze_colliders": 178,
+     "center_y_negative": [],
+     "post_body_bad": [],
+     "post_bodies": 45,
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "17": {
+     "pass": true,
+     "maze_colliders": 178,
+     "center_y_negative": [],
+     "post_body_bad": [],
+     "post_bodies": 45,
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "18": {
+     "pass": true,
+     "maze_colliders": 178,
+     "center_y_negative": [],
+     "post_body_bad": [],
+     "post_bodies": 45,
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    }
+   }
+  },
+  "W3": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "fails": [],
+     "sequence": "GYGRGGYYRRYR",
+     "counts": {
+      "R": 4,
+      "G": 4,
+      "Y": 4
+     },
+     "yellow_shape": "cylinder",
+     "floor_pucks": 2,
+     "pucks": [
+      {
+       "name": "puck_06",
+       "location": "shelf_0",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 6,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_02",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "role": "G",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_07",
+       "location": "shelf_0",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 7,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_08",
+       "location": "shelf_0",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_11",
+       "location": "floor",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 11,
+       "role": "Y",
+       "z_mm": 0.0,
+       "cell": "c32",
+       "home_cell": "c32",
+       "overlap": []
+      },
+      {
+       "name": "puck_09",
+       "location": "floor",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 9,
+       "role": "R",
+       "z_mm": 0.0,
+       "cell": "c33",
+       "home_cell": "c33",
+       "overlap": []
+      },
+      {
+       "name": "puck_00",
+       "location": "shelf_1",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_10",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 10,
+       "role": "Y",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_04",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 4,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_01",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_03",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 3,
+       "role": "G",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_05",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 5,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      }
+     ]
+    },
+    "17": {
+     "pass": true,
+     "fails": [],
+     "sequence": "RGGRGGGRRGRY",
+     "counts": {
+      "R": 5,
+      "G": 6,
+      "Y": 1
+     },
+     "yellow_shape": "cylinder",
+     "floor_pucks": 3,
+     "pucks": [
+      {
+       "name": "puck_03",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_01",
+       "location": "shelf_0",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_10",
+       "location": "floor",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "role": "G",
+       "z_mm": 0.0,
+       "cell": "c12",
+       "home_cell": "c12",
+       "overlap": []
+      },
+      {
+       "name": "puck_02",
+       "location": "shelf_1",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "role": "R",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_04",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 4,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_08",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_05",
+       "location": "floor",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 5,
+       "role": "R",
+       "z_mm": 0.0,
+       "cell": "c21",
+       "home_cell": "c21",
+       "overlap": []
+      },
+      {
+       "name": "puck_11",
+       "location": "floor",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 11,
+       "role": "R",
+       "z_mm": -0.0,
+       "cell": "c50",
+       "home_cell": "c50",
+       "overlap": []
+      },
+      {
+       "name": "puck_07",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_00",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_09",
+       "location": "shelf_2",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 9,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_06",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 6,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      }
+     ]
+    },
+    "18": {
+     "pass": true,
+     "fails": [],
+     "sequence": "RGRRRGGYRYRY",
+     "counts": {
+      "R": 6,
+      "G": 3,
+      "Y": 3
+     },
+     "yellow_shape": "cuboid",
+     "floor_pucks": 0,
+     "pucks": [
+      {
+       "name": "puck_09",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 9,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_06",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 6,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_02",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_04",
+       "location": "shelf_0",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 4,
+       "role": "Y",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_10",
+       "location": "shelf_0",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "role": "R",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_07",
+       "location": "shelf_1",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "role": "G",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_05",
+       "location": "shelf_1",
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 5,
+       "role": "R",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_11",
+       "location": "shelf_1",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 11,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_01",
+       "location": "shelf_1",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_08",
+       "location": "shelf_2",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 8,
+       "role": "R",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_03",
+       "location": "shelf_2",
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "role": "G",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "on_barcode": []
+      },
+      {
+       "name": "puck_00",
+       "location": "shelf_2",
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "role": "R",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "on_barcode": []
+      }
+     ]
+    }
+   }
+  },
+  "W4": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "base_link",
+      "object": "/World/Maze/post_07/foot",
+      "gap_linf_mm": 146.348
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.0257,
+       0.1989
+      ],
+      [
+       -1.6263,
+       0.6315
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": 0.1268209961110911,
+      "RMX52_Shoulder": 1.0636460330372541,
+      "RMX52_Elbow": -0.35942098637590736,
+      "RMX52_Wrist_Pitch": 0.5857919760090828,
+      "RMX52_Wrist_Roll_Reversed": 1.6118070102112994,
+      "gripper_left_joint": 0.0037159998901188374
+     },
+     "yaw_deg": 46.2865104675293
+    },
+    "17": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "lidar_front",
+      "object": "/World/Maze/post_07/foot",
+      "gap_linf_mm": 127.111
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.0449,
+       0.2043
+      ],
+      [
+       -1.6052,
+       0.555
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": -1.9571130097831912,
+      "RMX52_Shoulder": 0.8790500207638205,
+      "RMX52_Elbow": 0.30268200645663296,
+      "RMX52_Wrist_Pitch": 0.7643159809971358,
+      "RMX52_Wrist_Roll_Reversed": -2.8332079204224327,
+      "gripper_left_joint": 0.0057760002091526985
+     },
+     "yaw_deg": -166.4994659423828
+    },
+    "18": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "base_link",
+      "object": "/World/Maze/post_07/foot",
+      "gap_linf_mm": 113.973
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.058,
+       0.1745
+      ],
+      [
+       -1.6191,
+       0.6065
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": 1.7543769423237103,
+      "RMX52_Shoulder": 0.23564499872094244,
+      "RMX52_Elbow": -0.9107150061248627,
+      "RMX52_Wrist_Pitch": 1.2016490433543427,
+      "RMX52_Wrist_Roll_Reversed": -0.023936999542714988,
+      "gripper_left_joint": 2.8000000384054147e-05
+     },
+     "yaw_deg": 46.05044937133789
+    }
+   }
+  },
+  "W6": {
+   "pass": false,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "fails": [],
+     "values": {
+      "place_tag_ids": [
+       12,
+       13,
+       14
+      ],
+      "barcode_count": 4,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     },
+     "place_tags": {
+      "12": {
+       "panel": "/World/Maze/panel_31",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.179,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0095,
+       "pass": true
+      },
+      "13": {
+       "panel": "/World/Maze/panel_31",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2616,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.032,
+       "pass": true
+      },
+      "14": {
+       "panel": "/World/Maze/panel_17",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2928,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0151,
+       "pass": true
+      }
+     },
+     "barcodes": {
+      "P2-01": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_14",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.2968,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-02": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_28",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.2996,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-03": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_21",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.287,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-04": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_11",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.1807,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      }
+     }
+    },
+    "17": {
+     "pass": false,
+     "fails": [
+      "바코드 P2-01"
+     ],
+     "values": {
+      "place_tag_ids": [
+       12,
+       13,
+       14
+      ],
+      "barcode_count": 1,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     },
+     "place_tags": {
+      "12": {
+       "panel": "/World/Maze/panel_23",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2308,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0253,
+       "pass": true
+      },
+      "13": {
+       "panel": "/World/Maze/panel_12",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2914,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0317,
+       "pass": true
+      },
+      "14": {
+       "panel": "/World/Maze/panel_09",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.1487,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0085,
+       "pass": true
+      }
+     },
+     "barcodes": {
+      "P2-01": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_25",
+       "offset_m": 0.002,
+       "inside_panel": false,
+       "center_z": 0.1973,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": false
+      }
+     }
+    },
+    "18": {
+     "pass": false,
+     "fails": [
+      "장소 태그 13"
+     ],
+     "values": {
+      "place_tag_ids": [
+       12,
+       13,
+       14
+      ],
+      "barcode_count": 4,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     },
+     "place_tags": {
+      "12": {
+       "panel": "/World/Maze/panel_29",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2304,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0266,
+       "pass": true
+      },
+      "13": {
+       "panel": "/World/Maze/panel_07",
+       "offset_m": 0.002,
+       "inside_panel": false,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2146,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0143,
+       "pass": false
+      },
+      "14": {
+       "panel": "/World/Maze/panel_17",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "size_m": [
+        0.06,
+        0.06
+       ],
+       "center_z": 0.2511,
+       "shelf_front_m": 0.0995,
+       "along_m": 0.0242,
+       "pass": true
+      }
+     },
+     "barcodes": {
+      "P2-01": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_10",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.1864,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-02": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_23",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.2792,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-03": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_34",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.201,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      },
+      "P2-04": {
+       "where": "wall",
+       "panel": "/World/Maze/panel_31",
+       "offset_m": 0.002,
+       "inside_panel": true,
+       "center_z": 0.2445,
+       "size_m": [
+        0.02,
+        0.035
+       ],
+       "pass": true
+      }
+     }
+    }
+   }
+  },
+  "W7": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "fails": [],
+     "dims": {
+      "base": [
+       0.0198,
+       0.01
+      ],
+      "pole": [
+       0.005,
+       0.0589
+      ],
+      "green": [
+       0.0198,
+       0.0349
+      ],
+      "yellow": [
+       0.0198,
+       0.0349
+      ],
+      "red": [
+       0.0198,
+       0.0349
+      ],
+      "cap": [
+       0.0198,
+       0.0033
+      ]
+     },
+     "top_m": 0.1769,
+     "segment_z": [
+      0.0863,
+      0.1212,
+      0.1562
+     ],
+     "wall_gap_m": 0.02,
+     "cell": "c40",
+     "overlap": [],
+     "timing": [
+      0.446267,
+      0.792474,
+      3.462118
+     ],
+     "sequence": "GYGRGGYYRRYR"
+    },
+    "17": {
+     "pass": true,
+     "fails": [],
+     "dims": {
+      "base": [
+       0.0198,
+       0.01
+      ],
+      "pole": [
+       0.005,
+       0.0589
+      ],
+      "green": [
+       0.0198,
+       0.0349
+      ],
+      "yellow": [
+       0.0198,
+       0.0349
+      ],
+      "red": [
+       0.0198,
+       0.0349
+      ],
+      "cap": [
+       0.0198,
+       0.0033
+      ]
+     },
+     "top_m": 0.1769,
+     "segment_z": [
+      0.0863,
+      0.1212,
+      0.1562
+     ],
+     "wall_gap_m": 0.02,
+     "cell": "c22",
+     "overlap": [],
+     "timing": [
+      0.833432,
+      0.461049,
+      2.117954
+     ],
+     "sequence": "RGGRGGGRRGRY"
+    },
+    "18": {
+     "pass": true,
+     "fails": [],
+     "dims": {
+      "base": [
+       0.0198,
+       0.01
+      ],
+      "pole": [
+       0.005,
+       0.0589
+      ],
+      "green": [
+       0.0198,
+       0.0349
+      ],
+      "yellow": [
+       0.0198,
+       0.0349
+      ],
+      "red": [
+       0.0198,
+       0.0349
+      ],
+      "cap": [
+       0.0198,
+       0.0033
+      ]
+     },
+     "top_m": 0.1769,
+     "segment_z": [
+      0.0863,
+      0.1212,
+      0.1562
+     ],
+     "wall_gap_m": 0.02,
+     "cell": "c32",
+     "overlap": [],
+     "timing": [
+      0.663549,
+      0.808383,
+      2.444204
+     ],
+     "sequence": "RGRRRGGYRYRY"
+    }
+   }
+  },
+  "W5": {
+   "pass": true,
+   "by_seed": {
+    "16": {
+     "pass": true,
+     "build_rc": 0,
+     "identical": {
+      "task_world.usda": true,
+      "layout.json": true
+     }
+    }
+   }
+  }
+ },
+ "all_pass": false
+}

@@ -1,0 +1,10 @@
+{
+ "data": "diag/data_d435/cuboid_train480",
+ "val": "diag/data_d435/cuboid_val80",
+ "out": "diag/d6_runs/cuboid",
+ "size": "128",
+ "epochs": "30",
+ "batch": "16",
+ "lr": "0.0005",
+ "limit": "0"
+}

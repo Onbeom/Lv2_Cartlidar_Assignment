@@ -1,0 +1,14 @@
+{
+ "name": "P2-01",
+ "distance_cm": "10",
+ "frames": 256,
+ "every": 3,
+ "device": "/dev/video12",
+ "width": 1280,
+ "height": 720,
+ "start": 1793785718.6593268,
+ "end": 1793785747.8249,
+ "fps_measured": 26.43,
+ "auto_exposure": 3.0,
+ "exposure": 156.0
+}

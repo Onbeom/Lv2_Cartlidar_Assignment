@@ -1,0 +1,18 @@
+# Joint configuration for joint_state_publisher_gui
+
+joint_state_publisher:
+  ros__parameters:
+    # Joint names and default positions
+    zeros:
+      RMX52_Base_Yaw: 0.0
+      RMX52_Elbow: 0.0
+      RMX52_Shoulder: 0.0
+      RMX52_Wrist_Pitch: 0.0
+      RMX52_Wrist_Roll_Reversed: 0.0
+      Wheel_Revolute_Front_Left: 0.0
+      Wheel_Revolute_Front_Right: 0.0
+      Wheel_Revolute_Rear_Left: 0.0
+      Wheel_Revolute_Rear_Right: 0.0
+      gripper_left_joint: 0.0
+      gripper_right_joint: 0.0
+

@@ -1,0 +1,23 @@
+{
+ "engine": "/home/cart11/trt_check/jetson_results/yolo11n_task4_D_fp32_notf32.engine",
+ "seconds": 60.5,
+ "rate_target_hz": 15.0,
+ "cams": {
+  "front": {
+   "frames": 1880,
+   "gaps": 0
+  },
+  "rear": {
+   "frames": 1877,
+   "gaps": 0
+  },
+  "arm": {
+   "frames": 1894,
+   "gaps": 0,
+   "device": "/dev/video0"
+  }
+ },
+ "errors": [],
+ "tensorrt": "10.16.2.10",
+ "note": "결과 나이는 받은 뒤부터(노출 · USB 전송 제외)"
+}

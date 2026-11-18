@@ -1,0 +1,42 @@
+{
+  "measured": {
+    "corner": "A",
+    "side": "R",
+    "radius_cmd_m": 0.1,
+    "min_clearance_mm": 98.98099181052137,
+    "min_clearance_t_s": 31.64166831690818,
+    "min_clearance_phase": "exit",
+    "min_clearance_pose": [
+      0.663329001471462,
+      -0.8620040909184273,
+      -90.33399936221458
+    ],
+    "arc_time_s": 3.508333516307175,
+    "arc_time_nominal_s": 3.141592653589793,
+    "arc_radius_fit_m": 0.1364365650359342,
+    "arc_end_outward_mm": -66.36686316606522,
+    "arc_end_side_mm": 189.71913306541748,
+    "yaw_overshoot_deg": 0.33616455476779394,
+    "end_outward_mm": -70.76510666243452,
+    "end_along_mm": 90.30972087148426,
+    "end_heading_err_deg": 0.33609635421749695,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 4e-05,
+      "RMX52_Shoulder": 6e-05,
+      "RMX52_Elbow": 0.00177,
+      "RMX52_Wrist_Pitch": 0.00057,
+      "RMX52_Wrist_Roll_Reversed": 1e-05
+    }
+  },
+  "checks": {
+    "최소 간격 ≥ 30 mm": true,
+    "호 회전 90° 도달": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "Isaac Sim",
+  "test": "V4"
+}

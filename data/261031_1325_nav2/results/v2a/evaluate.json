@@ -1,0 +1,80 @@
+{
+ "n_goals": 6,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": -0.001,
+ "G3_n_overlap_samples": 12,
+ "G4_loc_rmse_m": 0.0253,
+ "G4_loc_max_m": 0.0533,
+ "G4_yaw_rmse_rad": 0.0193,
+ "G4_n_samples": 4790,
+ "G5_cmd": {
+  "n": 9013,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.1869664192199707,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 49.62,
+   "pos_err": 0.034,
+   "yaw_err": 0.1305,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x)",
+   "status": "ABORTED",
+   "duration_s": 141.78,
+   "pos_err": 0.1057,
+   "yaw_err": 2.1118,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 63.72,
+   "pos_err": 0.0525,
+   "yaw_err": 0.1344,
+   "error_code": 703,
+   "error_msg": "spin failed:Collision Ahead - Exiting Spin"
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 46.39,
+   "pos_err": 0.0598,
+   "yaw_err": 0.1426,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "status": "ABORTED",
+   "duration_s": 90.86,
+   "pos_err": 0.3692,
+   "yaw_err": 1.8841,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "start",
+   "status": "SUCCEEDED",
+   "duration_s": 73.73,
+   "pos_err": 0.0643,
+   "yaw_err": 0.1421,
+   "error_code": 0,
+   "error_msg": ""
+  }
+ ],
+ "G3_pass": false,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

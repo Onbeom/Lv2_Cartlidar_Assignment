@@ -1,0 +1,115 @@
+{
+ "M1": {
+  "set_mode": [
+   true,
+   "모드 0 → 1"
+  ],
+  "expected_base_m": [
+   0.75262,
+   0.04366,
+   -0.09802
+  ],
+  "16UC1": {
+   "results": 38,
+   "found": 38,
+   "rate_hz": 14.86,
+   "max_axis_err_m": 0.0,
+   "last_pos": [
+    0.75262,
+    0.04366,
+    -0.09802
+   ],
+   "frame_id": "base_link",
+   "pass": true
+  },
+  "32FC1": {
+   "results": 37,
+   "found": 37,
+   "rate_hz": 15.09,
+   "max_axis_err_m": 0.0,
+   "last_pos": [
+    0.75262,
+    0.04366,
+    -0.09802
+   ],
+   "frame_id": "base_link",
+   "pass": true
+  },
+  "pass": true
+ },
+ "M2": {
+  "results_after_stop_s": [
+   0.014
+  ],
+  "last_after_stop_s": 0.014,
+  "pass": true
+ },
+ "M3": {
+  "first_result": 1,
+  "new_results_on_duplicate": 0,
+  "restart_warnings": 1,
+  "results_after_restart": 29,
+  "found_after_restart": 29,
+  "pass": true
+ },
+ "M4": {
+  "expected": {
+   "front_out": {
+    "base_xy": [
+     1.06308,
+     -0.42943
+    ],
+    "range": 1.14654,
+    "bin": 158
+   },
+   "rear_out": {
+    "base_xy": [
+     -0.6855,
+     -0.05
+    ],
+    "range": 0.68732,
+    "bin": 4
+   },
+   "front_in": {
+    "base_xy": [
+     0.0855,
+     0.05
+    ],
+    "range": 0.09905,
+    "bin": 210
+   }
+  },
+  "scans_received": 15,
+  "finite_bins": {
+   "4": 0.68732,
+   "158": 1.14582
+  },
+  "frame_id": "base_link",
+  "pass": true
+ },
+ "M5": {
+  "state_changes": [
+   true,
+   false,
+   true,
+   false,
+   true
+  ],
+  "reasons_seen": [
+   "stale",
+   "clear",
+   "obstacle"
+  ],
+  "pass": true
+ },
+ "warnings": [
+  "perception_node: TF base_link→odom 없음: base_link 기준으로 추적",
+  "perception_node: CAMERA_STALL: 모드 0x01 에 쓸 수 있는 영상 없음",
+  "perception_node: front 영상 시각이 1 s 넘게 뒤로 감(시각 재시작): 추적 상태를 초기화",
+  "perception_node: 시계가 뒤로 감: TF 리스너를 새로 만들어 /tf_static 을 다시 받음 (기억한 고정 변환 1개 유지)",
+  "scan_merger: 시계가 뒤로 감: TF 리스너를 새로 만들어 /tf_static 을 다시 받음 (기억한 고정 변환 0개 유지)",
+  "scan_merger: TF lidar_front_scan→base_link 없음: \"base_link\" passed to lookupTransform argument target_frame does not exist. ",
+  "scan_merger: 라이다 1/2대만 합침 (나머지는 없거나 0.15 s 넘게 차이)"
+ ],
+ "all_pass": true
+}

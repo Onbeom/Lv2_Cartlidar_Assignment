@@ -1,0 +1,67 @@
+{
+  "measured": {
+    "self_collision_newton_now": false,
+    "base_arm34_contacts": {},
+    "참고_separation≤0_인_base_arm34_접촉": {},
+    "all_contact_pairs": {
+      "CollisionPlane|base_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": 0.009749164804816246,
+        "steps_sep_le_0": 0,
+        "first_t_sep_le_0": null
+      },
+      "CollisionPlane|wheel_front_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.1937091812797007e-06,
+        "steps_sep_le_0": 713,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_front_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.1527611150086159e-06,
+        "steps_sep_le_0": 677,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.0674921213649213e-06,
+        "steps_sep_le_0": 529,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.1196435707461205e-06,
+        "steps_sep_le_0": 520,
+        "first_t_sep_le_0": 0.008333333767950535
+      }
+    },
+    "reach_err_end_rad": {
+      "RMX52_Base_Yaw": 7.8019167e-07,
+      "RMX52_Shoulder": 0.00020970000000009037,
+      "RMX52_Elbow": 1.0000000005838672e-07,
+      "RMX52_Wrist_Pitch": 0.0001012000000000235,
+      "RMX52_Wrist_Roll_Reversed": 1.2975455e-08
+    },
+    "reach_err_max_rad": 0.00020970000000009037,
+    "참고_관절속도_위치차분_최대": {
+      "RMX52_Base_Yaw": 1.8666009026491767e-05,
+      "RMX52_Shoulder": 0.552174110201876,
+      "RMX52_Elbow": 0.5436161639482078,
+      "RMX52_Wrist_Pitch": 0.5135437532166062,
+      "RMX52_Wrist_Roll_Reversed": 4.028821989880559e-06,
+      "gripper_left_joint": 8.011245982180963e-07,
+      "gripper_right_joint": 8.584291152294328e-07
+    }
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base_link–arm_link_3/4 접촉(separation ≤ 0) 없음": true,
+    "도달 오차 ≤ 0.05 rad": true
+  },
+  "verdict": "성공"
+}

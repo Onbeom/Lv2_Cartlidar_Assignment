@@ -1,0 +1,35 @@
+{
+ "n_goals": 1,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.053,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0074,
+ "G4_loc_max_m": 0.0148,
+ "G4_yaw_rmse_rad": 0.0132,
+ "G4_n_samples": 455,
+ "G5_cmd": {
+  "n": 940,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.04,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 52.03,
+   "pos_err": 1.6873,
+   "yaw_err": 0.5336,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

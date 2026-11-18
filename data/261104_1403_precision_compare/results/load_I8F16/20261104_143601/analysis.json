@@ -1,0 +1,101 @@
+{
+ "seconds": 182.1,
+ "cams": {
+  "front": {
+   "yolo_hz": 14.83,
+   "stale_slots": 0,
+   "cam_fps": 29.92,
+   "cam_gaps": 29,
+   "infer_ms": {
+    "50": 14.13,
+    "95": 16.44,
+    "99": 18.13,
+    "max": 164.97
+   },
+   "age_ms": {
+    "50": 30.96,
+    "95": 48.8,
+    "99": 49.78,
+    "max": 194.47
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "age_p99_first5min": 49.8,
+   "age_p99_last5min": 49.8
+  },
+  "rear": {
+   "yolo_hz": 14.83,
+   "stale_slots": 0,
+   "cam_fps": 29.95,
+   "cam_gaps": 22,
+   "infer_ms": {
+    "50": 13.79,
+    "95": 16.07,
+    "99": 17.07,
+    "max": 19.74
+   },
+   "age_ms": {
+    "50": 29.84,
+    "95": 45.13,
+    "99": 47.45,
+    "max": 49.29
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "age_p99_first5min": 47.5,
+   "age_p99_last5min": 47.5
+  },
+  "arm": {
+   "yolo_hz": 14.83,
+   "stale_slots": 0,
+   "cam_fps": 30.49,
+   "cam_gaps": 0,
+   "infer_ms": {
+    "50": 14.25,
+    "95": 15.93,
+    "99": 16.96,
+    "max": 22.87
+   },
+   "age_ms": {
+    "50": 30.77,
+    "95": 45.65,
+    "99": 48.69,
+    "max": 52.41
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "age_p99_first5min": 48.7,
+   "age_p99_last5min": 48.7
+  }
+ },
+ "errors": [],
+ "tegrastats": {
+  "cpu_avg_pct": {
+   "mean": 26.1,
+   "p95": 27.8,
+   "max": 31.8
+  },
+  "gpu_pct": {
+   "mean": 24.2,
+   "p95": 43.0,
+   "max": 54.0
+  },
+  "ram_mb": {
+   "mean": 1906.1,
+   "p95": 1944.5,
+   "max": 1948.0
+  },
+  "ram_growth_mb_last_minus_first_min": 35.3,
+  "temp_max_c": {
+   "mean": 55.3,
+   "p95": 55.8,
+   "max": 56.1
+  },
+  "vdd_in_mw": {
+   "mean": 7940.3,
+   "p95": 8041.0,
+   "max": 8120.0
+  },
+  "samples": 184
+ }
+}

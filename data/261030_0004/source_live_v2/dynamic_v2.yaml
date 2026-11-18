@@ -1,0 +1,33 @@
+nvblox_probe:
+  ros__parameters:
+    global_frame: odom
+    pose_frame: base_link
+    use_tf_transforms: true
+    use_topic_transforms: false
+    use_sim_time: false
+    input_qos: SENSOR_DATA
+    num_cameras: 1
+    use_color: false
+    use_depth: true
+    use_lidar: false
+    use_segmentation: false
+    mapping_type: dynamic
+    esdf_mode: 2d
+    voxel_size: 0.05
+    integrate_depth_rate_hz: 15.0
+    update_esdf_rate_hz: 10.0
+    update_mesh_rate_hz: 1.0
+    map_clearing_frame_id: odom
+    map_clearing_radius_m: 6.0
+    maximum_input_queue_length: 3
+    publish_esdf_distance_slice: true
+    esdf_slice_bounds_visualization_attachment_frame_id: odom
+    static_mapper:
+      min_consecutive_occupancy_duration_for_reset_ms: 10000
+      esdf_slice_min_height: 0.08
+      esdf_slice_max_height: 0.65
+      esdf_slice_height: 0.15
+    dynamic_mapper:
+      esdf_slice_min_height: 0.08
+      esdf_slice_max_height: 0.65
+      esdf_slice_height: 0.15

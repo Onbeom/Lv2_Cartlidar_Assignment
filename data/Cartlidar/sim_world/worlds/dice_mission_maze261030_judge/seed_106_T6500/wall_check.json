@@ -1,0 +1,18 @@
+{
+ "wall_clearance_m": {
+  "start_box_1": 0.190603,
+  "start_box_2": 0.108935,
+  "start_box_3": 0.187085,
+  "start_box_4": 0.263533,
+  "start_box_5": 0.214885,
+  "start_box_6": 0.202617,
+  "place_L1": 0.223488,
+  "place_L3": 0.173996,
+  "center_stand": 0.724291,
+  "signal_light": 0.06056,
+  "start_tape": 0.034943
+ },
+ "barcode_x_face": 0.003404,
+ "robot_min_clearance_m": 0.107452,
+ "errors": []
+}

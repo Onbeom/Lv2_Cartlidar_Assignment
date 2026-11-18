@@ -1,0 +1,74 @@
+{
+ "board": {
+  "nvpmodel": "NV Power Mode: 25W\n1",
+  "trtexec": "&&&& RUNNING TensorRT.trtexec [TensorRT v101602] [b10] # /usr/src/tensorrt/bin/trtexec --version\n[11/04/2026-09:48:13] [I] TF32 is enabled by default. Add --noTF32 flag to further improve accuracy with some performance cost."
+ },
+ "engines": {
+  "J32": {
+   "path": "/home/cart11/yolo_D/deploy/yolo11n_task4_D_fp32_notf32.engine",
+   "sha256": "dbbf4a0babfc569a9acd493eecee908ff303c54a2c7b1ac560b4cb81fb1a181a",
+   "bytes": 14901980,
+   "trtexec_gpu_ms": {
+    "min": 10.3633,
+    "max": 10.4873,
+    "mean": 10.3948,
+    "median": 10.3887,
+    "p90": 10.418,
+    "p95": 10.4209,
+    "p99": 10.4263
+   },
+   "trtexec_qps": 96.1184,
+   "python_ms": {
+    "letterbox": {
+     "median": 3.267,
+     "p95": 3.908,
+     "max": 9.452
+    },
+    "infer": {
+     "median": 13.239,
+     "p95": 13.63,
+     "max": 13.897
+    },
+    "decode": {
+     "median": 1.002,
+     "p95": 1.428,
+     "max": 2.931
+    },
+    "n": 1478
+   }
+  },
+  "J16": {
+   "path": "/home/cart11/fp16_check/results/yolo11n_task4_D_fp16.engine",
+   "sha256": "ef52e0a72173cb3cae81f48ce6573e51ad4e2798003a677eb848d8c3b956fbfb",
+   "bytes": 8256500,
+   "trtexec_gpu_ms": {
+    "min": 4.22656,
+    "max": 6.28369,
+    "mean": 4.27219,
+    "median": 4.27148,
+    "p90": 4.27783,
+    "p95": 4.27979,
+    "p99": 4.2832
+   },
+   "trtexec_qps": 233.903,
+   "python_ms": {
+    "letterbox": {
+     "median": 3.127,
+     "p95": 3.892,
+     "max": 6.25
+    },
+    "infer": {
+     "median": 6.431,
+     "p95": 6.753,
+     "max": 7.403
+    },
+    "decode": {
+     "median": 0.909,
+     "p95": 1.294,
+     "max": 1.647
+    },
+    "n": 1478
+   }
+  }
+ }
+}

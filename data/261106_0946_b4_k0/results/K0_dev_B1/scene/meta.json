@@ -1,0 +1,346 @@
+{
+  "model": "261029_1030/urdf_261028 (Isaac light, pose drive)",
+  "maze": "/home/pa4/git/lv2_next_module/261030_1943/maze_src/maze/maze.usda",
+  "route": "/home/pa4/git/lv2_next_module/261030_1943/route_maze.json",
+  "n_waypoints": 91,
+  "route_length_m": 52.11665791520285,
+  "start": [
+    -1.54085,
+    -2.2636
+  ],
+  "start_yaw": 3.14159265,
+  "light_level": 1.0,
+  "dome": 600.0,
+  "rect": 20000.0,
+  "n_rect": 6,
+  "phys_dt": 0.008333333333333333,
+  "ir_K_model": [
+    386.57766664078594,
+    386.57766664078594,
+    320.0,
+    240.0
+  ],
+  "ir_K_isaaclab": {
+    "infra1": [
+      386.5777,
+      0.0,
+      320.0,
+      0.0,
+      386.5777,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "infra2": [
+      386.5777,
+      0.0,
+      320.0,
+      0.0,
+      386.5777,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "ir_baseline_m": 0.050041,
+  "wheel_separation_m": 0.317,
+  "wheel_radius_m": 0.033,
+  "odom_multiplier": 1.0,
+  "lidar_bins": 400,
+  "lidar_occluders": 0,
+  "occluder_mode": "analytic",
+  "joint_names": [
+    "wheel_left_front_joint",
+    "wheel_right_front_joint",
+    "wheel_left_rear_joint",
+    "wheel_right_rear_joint",
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "gripper_left_joint",
+    "gripper_right_joint",
+    "gripper_roll"
+  ],
+  "truth_body": "base_link (root)",
+  "truth_in_ros": false,
+  "live": {
+    "mode": "cmd_vel",
+    "odom_hz": 50.0,
+    "odom_rot_scale": 1.15,
+    "odom_tf": false,
+    "cmd_topic": "/cmd_vel_nav",
+    "cmd_timeout": 0.5,
+    "imu_topic": "/imu/data",
+    "imu_hz": 100.0,
+    "imu_gyro_sigma": 0.0017
+  },
+  "objects": {
+    "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+    "legs": [
+      2.525,
+      5.285,
+      4.285,
+      4.365,
+      0.145,
+      3.125
+    ],
+    "placed": [
+      {
+        "name": "start_box_1",
+        "mission_xy": [
+          1.468,
+          0.95
+        ],
+        "z": 0.035,
+        "yaw": -0.355364
+      },
+      {
+        "name": "start_box_2",
+        "mission_xy": [
+          3.67,
+          3.152
+        ],
+        "z": 0.035,
+        "yaw": 0.289742
+      },
+      {
+        "name": "start_box_3",
+        "mission_xy": [
+          2.936,
+          5.354
+        ],
+        "z": 0.035,
+        "yaw": -0.458306
+      },
+      {
+        "name": "start_box_4",
+        "mission_xy": [
+          0.734,
+          5.354
+        ],
+        "z": 0.035,
+        "yaw": 0.011403
+      },
+      {
+        "name": "start_box_5",
+        "mission_xy": [
+          2.202,
+          5.354
+        ],
+        "z": 0.035,
+        "yaw": 0.300647
+      },
+      {
+        "name": "start_box_6",
+        "mission_xy": [
+          3.67,
+          3.886
+        ],
+        "z": 0.035,
+        "yaw": 0.378335
+      },
+      {
+        "name": "place_L1",
+        "mission_xy": [
+          3.67,
+          0.95
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "place_L3",
+        "mission_xy": [
+          3.67,
+          5.354
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "center_stand_1",
+        "mission_xy": [
+          1.997,
+          3.29
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "center_stand_2",
+        "mission_xy": [
+          2.407,
+          3.29
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "center_stand_3",
+        "mission_xy": [
+          1.997,
+          3.7
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "center_stand_4",
+        "mission_xy": [
+          2.407,
+          3.7
+        ],
+        "z": 0.035,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_03",
+        "mission_xy": [
+          1.4304995,
+          0.9639175
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_11",
+        "mission_xy": [
+          1.505501,
+          0.9360825
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_09",
+        "mission_xy": [
+          3.631667,
+          3.140572
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_02",
+        "mission_xy": [
+          3.7083325,
+          3.1634285
+        ],
+        "z": 0.085,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_08",
+        "mission_xy": [
+          2.900128,
+          5.3716975
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_04",
+        "mission_xy": [
+          2.9718720000000003,
+          5.336303
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_00",
+        "mission_xy": [
+          0.6940025000000001,
+          5.353543999999999
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_10",
+        "mission_xy": [
+          0.7739975,
+          5.354456000000001
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_07",
+        "mission_xy": [
+          2.163794,
+          5.3421544999999995
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_06",
+        "mission_xy": [
+          2.2402055,
+          5.3658455
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_05",
+        "mission_xy": [
+          3.632829,
+          3.871225
+        ],
+        "z": 0.085,
+        "yaw": 0.0
+      },
+      {
+        "name": "puck_01",
+        "mission_xy": [
+          3.7071709999999998,
+          3.900775
+        ],
+        "z": 0.1,
+        "yaw": 0.0
+      },
+      {
+        "name": "signal_light",
+        "mission_xy": [
+          0.08,
+          0.95
+        ],
+        "z": 0.08845,
+        "yaw": 0.0
+      },
+      {
+        "name": "leg_0",
+        "mission_xy": [
+          2.525,
+          5.285
+        ],
+        "z": 0.4,
+        "yaw": 0.0
+      },
+      {
+        "name": "leg_1",
+        "mission_xy": [
+          4.285,
+          4.365
+        ],
+        "z": 0.4,
+        "yaw": 0.0
+      },
+      {
+        "name": "leg_2",
+        "mission_xy": [
+          0.145,
+          3.125
+        ],
+        "z": 0.4,
+        "yaw": 0.0
+      }
+    ]
+  }
+}

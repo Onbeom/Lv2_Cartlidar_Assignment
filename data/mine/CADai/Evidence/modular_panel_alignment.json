@@ -1,0 +1,26 @@
+[
+  {
+    "side": "Right",
+    "floor": "Floor_1_Joined:1",
+    "holes": 9,
+    "max_center_error_mm": 2.24582628592871e-05
+  },
+  {
+    "side": "Right",
+    "floor": "Floor_3_Joined:1",
+    "holes": 9,
+    "max_center_error_mm": 1.4210854715202004e-14
+  },
+  {
+    "side": "Left",
+    "floor": "Floor_1_Joined:1",
+    "holes": 9,
+    "max_center_error_mm": 1.937784460665934e-05
+  },
+  {
+    "side": "Left",
+    "floor": "Floor_3_Joined:1",
+    "holes": 9,
+    "max_center_error_mm": 1.4210854715202004e-14
+  }
+]

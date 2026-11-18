@@ -1,0 +1,544 @@
+{
+ "run": "/home/pa4/git/lv2_next_module/261103_1913_jetson_load2/results/jetson/20261104_085937",
+ "live_pc_amcl": {
+  "n": 3480,
+  "hz": 10.0,
+  "rx_minus_stamp_s": {
+   "p50": 0.0167,
+   "p95": 0.0167,
+   "p99": 0.0167,
+   "mean": 0.0167,
+   "max": 0.0167
+  },
+  "pos_err_m": {
+   "rmse": 0.0191,
+   "p95": 0.0322,
+   "max": 0.044
+  }
+ },
+ "passes": {
+  "pass_1": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0169,
+     "p95": 0.0369,
+     "p99": 0.0568,
+     "mean": 0.0171,
+     "max": 0.0673
+    },
+    "pos_err_m": {
+     "rmse": 0.0201,
+     "p95": 0.0353,
+     "max": 0.0475
+    }
+   },
+   "scan_merged_hz": 10.001,
+   "ekf_hz": 49.286,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9486,
+     "max": 10.0,
+     "min": 8.2
+    },
+    "res_max": 0.0403,
+    "n_check_total": 3482,
+    "n_skip_total": 14,
+    "suspect": 1,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  },
+  "pass_2": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0069,
+     "p95": 0.0368,
+     "p99": 0.0469,
+     "mean": 0.0136,
+     "max": 0.0668
+    },
+    "pos_err_m": {
+     "rmse": 0.0196,
+     "p95": 0.0329,
+     "max": 0.0426
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.464,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9543,
+     "max": 10.0,
+     "min": 8.4
+    },
+    "res_max": 0.0437,
+    "n_check_total": 3484,
+    "n_skip_total": 12,
+    "suspect": 3,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK",
+     "SUSPECT",
+     "OK",
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  },
+  "pass_3": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0068,
+     "p95": 0.0368,
+     "p99": 0.0368,
+     "mean": 0.0102,
+     "max": 0.0568
+    },
+    "pos_err_m": {
+     "rmse": 0.0192,
+     "p95": 0.0329,
+     "max": 0.0469
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.994,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9543,
+     "max": 10.1,
+     "min": 8.4
+    },
+    "res_max": 0.0414,
+    "n_check_total": 3484,
+    "n_skip_total": 10,
+    "suspect": 0,
+    "lost": 0,
+    "states": []
+   }
+  },
+  "pass_4": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0172,
+     "p95": 0.0468,
+     "p99": 0.0569,
+     "mean": 0.0193,
+     "max": 0.0583
+    },
+    "pos_err_m": {
+     "rmse": 0.0192,
+     "p95": 0.0322,
+     "max": 0.0433
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.49,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 0.0,
+     "mean": 0.0,
+     "max": 0.0,
+     "min": 0.0
+    },
+    "res_max": null,
+    "n_check_total": 0,
+    "n_skip_total": 3056,
+    "suspect": 0,
+    "lost": 0,
+    "states": []
+   }
+  },
+  "pass_5": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0069,
+     "p95": 0.0368,
+     "p99": 0.0371,
+     "mean": 0.0114,
+     "max": 0.057
+    },
+    "pos_err_m": {
+     "rmse": 0.0873,
+     "p95": 0.2745,
+     "max": 0.4429
+    }
+   },
+   "scan_merged_hz": 10.001,
+   "ekf_hz": 49.575,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 0.0,
+     "mean": 0.0,
+     "max": 0.0,
+     "min": 0.0
+    },
+    "res_max": null,
+    "n_check_total": 0,
+    "n_skip_total": 3047,
+    "suspect": 0,
+    "lost": 6,
+    "states": [
+     "LOST",
+     "RECOVERING",
+     "CONFIRM",
+     "LOST",
+     "RECOVERING",
+     "CONFIRM",
+     "LOST",
+     "RECOVERING",
+     "CONFIRM",
+     "LOST",
+     "RECOVERING",
+     "CONFIRM",
+     "LOST",
+     "RECOVERING",
+     "CONFIRM",
+     "LOST",
+     "RECOVERING",
+     "FAILED"
+    ]
+   }
+  }
+ },
+ "ref_passes": {
+  "pass_1": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0168,
+     "p95": 0.0178,
+     "p99": 0.0268,
+     "mean": 0.0159,
+     "max": 0.0297
+    },
+    "pos_err_m": {
+     "rmse": 0.0179,
+     "p95": 0.0288,
+     "max": 0.0422
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.672,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.98,
+     "max": 10.0,
+     "min": 9.3
+    },
+    "res_max": 0.0391,
+    "n_check_total": 3493,
+    "n_skip_total": 3,
+    "suspect": 1,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  }
+ },
+ "windows_s": [
+  352.4,
+  352.5,
+  352.6,
+  352.5,
+  352.5
+ ],
+ "proc_by_pass": {
+  "pass_1": {
+   "ALL": 50.3,
+   "amcl": 13.2,
+   "ekf_node": 11.0,
+   "lifecycle_manager": 8.8,
+   "load_test": 97.6,
+   "loc_monitor": 47.0,
+   "map_server": 7.1,
+   "ros2 bag": 15.1,
+   "ros2_launch": 0.0,
+   "scan_body_mask": 27.0,
+   "scan_merge": 29.1
+  },
+  "pass_2": {
+   "ALL": 45.9,
+   "amcl": 13.3,
+   "ekf_node": 11.1,
+   "lifecycle_manager": 8.8,
+   "load_test": 98.0,
+   "loc_monitor": 47.3,
+   "map_server": 7.0,
+   "ros2 bag": 14.8,
+   "ros2_launch": 0.0,
+   "scan_body_mask": 27.0,
+   "scan_merge": 29.2
+  },
+  "pass_3": {
+   "ALL": 44.6,
+   "amcl": 13.1,
+   "ekf_node": 11.1,
+   "lifecycle_manager": 8.7,
+   "load_test": 96.6,
+   "loc_monitor": 47.0,
+   "map_server": 6.9,
+   "ros2 bag": 14.6,
+   "ros2_launch": 0.0,
+   "scan_body_mask": 26.7,
+   "scan_merge": 28.2
+  },
+  "pass_4": {
+   "ALL": 56.3,
+   "amcl": 13.3,
+   "ekf_node": 10.8,
+   "lifecycle_manager": 8.5,
+   "load_test": 92.6,
+   "loc_monitor": 98.0,
+   "map_server": 6.9,
+   "ros2 bag": 14.4,
+   "ros2_launch": 0.0,
+   "scan_body_mask": 25.7,
+   "scan_merge": 27.6
+  },
+  "pass_5": {
+   "ALL": 54.2,
+   "amcl": 12.3,
+   "ekf_node": 10.6,
+   "lifecycle_manager": 8.4,
+   "load_test": 92.4,
+   "loc_monitor": 101.6,
+   "map_server": 6.8,
+   "ros2 bag": 14.1,
+   "ros2_launch": 0.0,
+   "scan_body_mask": 25.2,
+   "scan_merge": 27.2
+  }
+ },
+ "proc": {
+  "ALL": {
+   "cpu_pct": {
+    "p50": 49.8,
+    "p95": 57.2,
+    "mean": 50.2663,
+    "max": 82.0
+   },
+   "rss_mb_max": 0.0
+  },
+  "load_test": {
+   "cpu_pct": {
+    "p50": 95.6,
+    "p95": 100.3,
+    "mean": 95.4293,
+    "max": 109.6
+   },
+   "rss_mb_max": 998.5
+  },
+  "ros2_launch": {
+   "cpu_pct": {
+    "p50": 0.0,
+    "p95": 0.0,
+    "mean": 0.0328,
+    "max": 2.0
+   },
+   "rss_mb_max": 57.3
+  },
+  "ekf_node": {
+   "cpu_pct": {
+    "p50": 10.9,
+    "p95": 11.9,
+    "mean": 10.9187,
+    "max": 13.8
+   },
+   "rss_mb_max": 42.4
+  },
+  "scan_body_mask": {
+   "cpu_pct": {
+    "p50": 26.6,
+    "p95": 28.5,
+    "mean": 26.3324,
+    "max": 30.6
+   },
+   "rss_mb_max": 82.6
+  },
+  "map_server": {
+   "cpu_pct": {
+    "p50": 6.9,
+    "p95": 8.0,
+    "mean": 6.9431,
+    "max": 15.8
+   },
+   "rss_mb_max": 98.9
+  },
+  "lifecycle_manager": {
+   "cpu_pct": {
+    "p50": 8.8,
+    "p95": 9.8,
+    "mean": 8.633,
+    "max": 16.6
+   },
+   "rss_mb_max": 85.7
+  },
+  "scan_merge": {
+   "cpu_pct": {
+    "p50": 28.6,
+    "p95": 30.6,
+    "mean": 28.2601,
+    "max": 33.5
+   },
+   "rss_mb_max": 82.9
+  },
+  "amcl": {
+   "cpu_pct": {
+    "p50": 10.9,
+    "p95": 29.6,
+    "mean": 13.0559,
+    "max": 132.9
+   },
+   "rss_mb_max": 163.4
+  },
+  "loc_monitor": {
+   "cpu_pct": {
+    "p50": 49.2,
+    "p95": 100.7,
+    "mean": 68.1883,
+    "max": 158.8
+   },
+   "rss_mb_max": 230.3
+  },
+  "ros2 bag": {
+   "cpu_pct": {
+    "p50": 13.8,
+    "p95": 15.8,
+    "mean": 14.6288,
+    "max": 127.4
+   },
+   "rss_mb_max": 182.0
+  }
+ },
+ "cams": {
+  "errors": [],
+  "summary_cams": {
+   "front": {
+    "frames": 57182,
+    "gaps": 8
+   },
+   "rear": {
+    "frames": 57178,
+    "gaps": 8
+   },
+   "arm": {
+    "frames": 58250,
+    "gaps": 0,
+    "device": "/dev/video0"
+   }
+  },
+  "seconds_total": 1906.3,
+  "front": {
+   "yolo_hz": 15.0,
+   "infer_ms": {
+    "p50": 18.72,
+    "p95": 20.78,
+    "p99": 22.22,
+    "mean": 18.8479,
+    "max": 35.55
+   },
+   "age_ms": {
+    "p50": 31.14,
+    "p95": 48.44,
+    "p99": 50.3865,
+    "mean": 34.4013,
+    "max": 77.62
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "stale_slots_total": 3,
+   "age_p99_first5min": 50.6,
+   "age_p99_last5min": 50.0
+  },
+  "rear": {
+   "yolo_hz": 15.0,
+   "infer_ms": {
+    "p50": 19.23,
+    "p95": 21.8,
+    "p99": 23.2867,
+    "mean": 19.4269,
+    "max": 42.49
+   },
+   "age_ms": {
+    "p50": 44.53,
+    "p95": 57.6835,
+    "p99": 62.0267,
+    "mean": 42.2663,
+    "max": 75.72
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "stale_slots_total": 4,
+   "age_p99_first5min": 61.7,
+   "age_p99_last5min": 61.8
+  },
+  "arm": {
+   "yolo_hz": 15.0,
+   "infer_ms": {
+    "p50": 19.83,
+    "p95": 22.57,
+    "p99": 24.17,
+    "mean": 20.0787,
+    "max": 35.72
+   },
+   "age_ms": {
+    "p50": 36.46,
+    "p95": 52.2415,
+    "p99": 55.6963,
+    "mean": 36.5152,
+    "max": 82.87
+   },
+   "miss_rate_age300": 0.0,
+   "longest_miss_run": 0,
+   "stale_slots_total": 0,
+   "age_p99_first5min": 56.1,
+   "age_p99_last5min": 55.4
+  }
+ },
+ "tegrastats": {
+  "samples": 1750,
+  "cpu_avg_pct": {
+   "p95": 56.5917,
+   "mean": 49.7911,
+   "max": 82.1667
+  },
+  "gpu_pct": {
+   "p95": 75.0,
+   "mean": 54.9086,
+   "max": 78.0
+  },
+  "ram_mb": {
+   "p95": 1734.0,
+   "mean": 1651.3394,
+   "max": 1892.0
+  },
+  "ram_growth_mb_last_minus_first_min": 86.0,
+  "temp_max_c": 61.906,
+  "vdd_in_mw": {
+   "p95": 11628.0,
+   "mean": 11330.2954,
+   "max": 13640.0
+  }
+ }
+}

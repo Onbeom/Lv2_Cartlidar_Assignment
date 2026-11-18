@@ -1,0 +1,648 @@
+{
+ "n_images": 300,
+ "synthetic_only": true,
+ "tag": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 336,
+    "output_rate": 0.8058,
+    "orientation": 336,
+    "success": 330,
+    "success_rate": 0.7914,
+    "center_mm_p50_p95": [
+     1.986,
+     5.016
+    ],
+    "axis_deg_p50_p95": [
+     0.35,
+     1.777
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 336,
+    "output_rate": 0.8571,
+    "orientation": 336,
+    "success": 330,
+    "success_rate": 0.8418,
+    "center_mm_p50_p95": [
+     1.986,
+     5.016
+    ],
+    "axis_deg_p50_p95": [
+     0.35,
+     1.777
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 0,
+    "output_rate": 0.0,
+    "orientation": 0,
+    "success": 0,
+    "success_rate": 0.0,
+    "center_mm_p50_p95": null,
+    "axis_deg_p50_p95": null
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 1,
+    "output_rate": 0.0227,
+    "orientation": 1,
+    "success": 1,
+    "success_rate": 0.0227,
+    "center_mm_p50_p95": [
+     3.974,
+     3.974
+    ],
+    "axis_deg_p50_p95": [
+     0.325,
+     0.325
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 38,
+    "output_rate": 0.8261,
+    "orientation": 38,
+    "success": 36,
+    "success_rate": 0.7826,
+    "center_mm_p50_p95": [
+     2.815,
+     7.206
+    ],
+    "axis_deg_p50_p95": [
+     0.396,
+     1.658
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 116,
+    "output_rate": 0.9748,
+    "orientation": 116,
+    "success": 113,
+    "success_rate": 0.9496,
+    "center_mm_p50_p95": [
+     1.871,
+     5.758
+    ],
+    "axis_deg_p50_p95": [
+     0.382,
+     1.945
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 181,
+    "output_rate": 0.8702,
+    "orientation": 181,
+    "success": 180,
+    "success_rate": 0.8654,
+    "center_mm_p50_p95": [
+     1.896,
+     4.508
+    ],
+    "axis_deg_p50_p95": [
+     0.342,
+     1.414
+    ]
+   }
+  },
+  "wrong_id": 0,
+  "ms_all_p50_p95": [
+   14.986,
+   124.009
+  ],
+  "ms_max": 134.563
+ },
+ "s128_e3": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 414,
+    "output_rate": 0.9928,
+    "orientation": 414,
+    "success": 386,
+    "success_rate": 0.9257,
+    "center_mm_p50_p95": [
+     3.074,
+     10.816
+    ],
+    "axis_deg_p50_p95": [
+     1.321,
+     4.838
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 389,
+    "output_rate": 0.9923,
+    "orientation": 389,
+    "success": 364,
+    "success_rate": 0.9286,
+    "center_mm_p50_p95": [
+     3.105,
+     10.696
+    ],
+    "axis_deg_p50_p95": [
+     1.266,
+     4.633
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 25,
+    "output_rate": 1.0,
+    "orientation": 25,
+    "success": 22,
+    "success_rate": 0.88,
+    "center_mm_p50_p95": [
+     2.786,
+     11.69
+    ],
+    "axis_deg_p50_p95": [
+     2.445,
+     7.872
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 44,
+    "output_rate": 1.0,
+    "orientation": 44,
+    "success": 39,
+    "success_rate": 0.8864,
+    "center_mm_p50_p95": [
+     2.999,
+     10.846
+    ],
+    "axis_deg_p50_p95": [
+     2.557,
+     6.348
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 46,
+    "output_rate": 1.0,
+    "orientation": 46,
+    "success": 42,
+    "success_rate": 0.913,
+    "center_mm_p50_p95": [
+     4.012,
+     14.44
+    ],
+    "axis_deg_p50_p95": [
+     2.965,
+     6.848
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 116,
+    "output_rate": 0.9748,
+    "orientation": 116,
+    "success": 111,
+    "success_rate": 0.9328,
+    "center_mm_p50_p95": [
+     2.84,
+     8.821
+    ],
+    "axis_deg_p50_p95": [
+     1.248,
+     3.976
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 208,
+    "output_rate": 1.0,
+    "orientation": 208,
+    "success": 194,
+    "success_rate": 0.9327,
+    "center_mm_p50_p95": [
+     3.168,
+     10.978
+    ],
+    "axis_deg_p50_p95": [
+     1.082,
+     3.272
+    ]
+   }
+  },
+  "false_outputs": 3,
+  "ms_all_p50_p95": [
+   6.36,
+   12.319
+  ],
+  "ms_det_p50_p95": [
+   3.237,
+   3.468
+  ],
+  "ms_pose_p50_p95": [
+   3.097,
+   9.095
+  ],
+  "ms_pose_per_det_p50": [
+   3.071
+  ]
+ },
+ "s128_oracle": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 415,
+    "output_rate": 0.9952,
+    "orientation": 415,
+    "success": 388,
+    "success_rate": 0.9305,
+    "center_mm_p50_p95": [
+     2.991,
+     11.141
+    ],
+    "axis_deg_p50_p95": [
+     1.4,
+     4.771
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 390,
+    "output_rate": 0.9949,
+    "orientation": 390,
+    "success": 367,
+    "success_rate": 0.9362,
+    "center_mm_p50_p95": [
+     2.986,
+     10.771
+    ],
+    "axis_deg_p50_p95": [
+     1.331,
+     4.291
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 25,
+    "output_rate": 1.0,
+    "orientation": 25,
+    "success": 21,
+    "success_rate": 0.84,
+    "center_mm_p50_p95": [
+     3.005,
+     12.183
+    ],
+    "axis_deg_p50_p95": [
+     2.641,
+     7.799
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 44,
+    "output_rate": 1.0,
+    "orientation": 44,
+    "success": 37,
+    "success_rate": 0.8409,
+    "center_mm_p50_p95": [
+     3.158,
+     14.974
+    ],
+    "axis_deg_p50_p95": [
+     2.563,
+     6.194
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 46,
+    "output_rate": 1.0,
+    "orientation": 46,
+    "success": 42,
+    "success_rate": 0.913,
+    "center_mm_p50_p95": [
+     3.392,
+     14.838
+    ],
+    "axis_deg_p50_p95": [
+     2.868,
+     6.879
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 117,
+    "output_rate": 0.9832,
+    "orientation": 117,
+    "success": 112,
+    "success_rate": 0.9412,
+    "center_mm_p50_p95": [
+     2.567,
+     9.041
+    ],
+    "axis_deg_p50_p95": [
+     1.342,
+     3.86
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 208,
+    "output_rate": 1.0,
+    "orientation": 208,
+    "success": 197,
+    "success_rate": 0.9471,
+    "center_mm_p50_p95": [
+     3.042,
+     10.035
+    ],
+    "axis_deg_p50_p95": [
+     1.1,
+     3.336
+    ]
+   }
+  },
+  "false_outputs": 0,
+  "ms_all_p50_p95": [
+   3.387,
+   8.989
+  ],
+  "ms_det_p50_p95": [
+   0.03,
+   0.037
+  ],
+  "ms_pose_p50_p95": [
+   3.357,
+   8.956
+  ],
+  "ms_pose_per_det_p50": [
+   3.225
+  ]
+ },
+ "s256_e3": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 416,
+    "output_rate": 0.9976,
+    "orientation": 416,
+    "success": 395,
+    "success_rate": 0.9472,
+    "center_mm_p50_p95": [
+     2.075,
+     9.619
+    ],
+    "axis_deg_p50_p95": [
+     0.946,
+     3.144
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 391,
+    "output_rate": 0.9974,
+    "orientation": 391,
+    "success": 373,
+    "success_rate": 0.9515,
+    "center_mm_p50_p95": [
+     2.051,
+     9.223
+    ],
+    "axis_deg_p50_p95": [
+     0.906,
+     3.025
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 25,
+    "output_rate": 1.0,
+    "orientation": 25,
+    "success": 22,
+    "success_rate": 0.88,
+    "center_mm_p50_p95": [
+     2.14,
+     10.888
+    ],
+    "axis_deg_p50_p95": [
+     1.91,
+     5.036
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 44,
+    "output_rate": 1.0,
+    "orientation": 44,
+    "success": 41,
+    "success_rate": 0.9318,
+    "center_mm_p50_p95": [
+     2.119,
+     10.647
+    ],
+    "axis_deg_p50_p95": [
+     1.32,
+     7.078
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 46,
+    "output_rate": 1.0,
+    "orientation": 46,
+    "success": 42,
+    "success_rate": 0.913,
+    "center_mm_p50_p95": [
+     3.418,
+     11.316
+    ],
+    "axis_deg_p50_p95": [
+     2.126,
+     6.428
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 119,
+    "output_rate": 1.0,
+    "orientation": 119,
+    "success": 115,
+    "success_rate": 0.9664,
+    "center_mm_p50_p95": [
+     1.943,
+     7.086
+    ],
+    "axis_deg_p50_p95": [
+     0.911,
+     2.444
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 207,
+    "output_rate": 0.9952,
+    "orientation": 207,
+    "success": 197,
+    "success_rate": 0.9471,
+    "center_mm_p50_p95": [
+     1.698,
+     9.442
+    ],
+    "axis_deg_p50_p95": [
+     0.8,
+     1.967
+    ]
+   }
+  },
+  "false_outputs": 3,
+  "ms_all_p50_p95": [
+   7.366,
+   15.28
+  ],
+  "ms_det_p50_p95": [
+   3.248,
+   3.587
+  ],
+  "ms_pose_p50_p95": [
+   4.077,
+   11.978
+  ],
+  "ms_pose_per_det_p50": [
+   4.041
+  ]
+ },
+ "s256_oracle": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 416,
+    "output_rate": 0.9976,
+    "orientation": 416,
+    "success": 404,
+    "success_rate": 0.9688,
+    "center_mm_p50_p95": [
+     1.931,
+     7.978
+    ],
+    "axis_deg_p50_p95": [
+     0.879,
+     3.246
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 391,
+    "output_rate": 0.9974,
+    "orientation": 391,
+    "success": 383,
+    "success_rate": 0.977,
+    "center_mm_p50_p95": [
+     1.891,
+     7.652
+    ],
+    "axis_deg_p50_p95": [
+     0.841,
+     2.935
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 25,
+    "output_rate": 1.0,
+    "orientation": 25,
+    "success": 21,
+    "success_rate": 0.84,
+    "center_mm_p50_p95": [
+     2.309,
+     11.533
+    ],
+    "axis_deg_p50_p95": [
+     1.633,
+     5.065
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 44,
+    "output_rate": 1.0,
+    "orientation": 44,
+    "success": 41,
+    "success_rate": 0.9318,
+    "center_mm_p50_p95": [
+     2.242,
+     11.04
+    ],
+    "axis_deg_p50_p95": [
+     1.429,
+     6.164
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 46,
+    "output_rate": 1.0,
+    "orientation": 46,
+    "success": 41,
+    "success_rate": 0.8913,
+    "center_mm_p50_p95": [
+     3.124,
+     10.749
+    ],
+    "axis_deg_p50_p95": [
+     2.113,
+     6.252
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 119,
+    "output_rate": 1.0,
+    "orientation": 119,
+    "success": 118,
+    "success_rate": 0.9916,
+    "center_mm_p50_p95": [
+     1.966,
+     6.497
+    ],
+    "axis_deg_p50_p95": [
+     0.87,
+     2.464
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 207,
+    "output_rate": 0.9952,
+    "orientation": 207,
+    "success": 204,
+    "success_rate": 0.9808,
+    "center_mm_p50_p95": [
+     1.717,
+     7.143
+    ],
+    "axis_deg_p50_p95": [
+     0.697,
+     1.867
+    ]
+   }
+  },
+  "false_outputs": 0,
+  "ms_all_p50_p95": [
+   4.109,
+   11.78
+  ],
+  "ms_det_p50_p95": [
+   0.031,
+   0.038
+  ],
+  "ms_pose_p50_p95": [
+   4.079,
+   11.747
+  ],
+  "ms_pose_per_det_p50": [
+   4.031
+  ]
+ }
+}

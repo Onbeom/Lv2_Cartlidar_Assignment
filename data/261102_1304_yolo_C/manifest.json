@@ -1,0 +1,92 @@
+{
+  "model": "YOLO 후보 C(yolo11n, 4클래스, B 자료 + 튜터 154225 1500장, 80 epoch, last.pt)",
+  "created": "2026-11-02",
+  "source_checkpoint": "/home/pa4/git/lv2_next_module/261102_1141_tutor_yolo/runs/C_tutor/weights/last.pt",
+  "classes": [
+    "red_cylinder",
+    "green_cylinder",
+    "red_cuboid",
+    "green_cuboid"
+  ],
+  "class_order_same_as_B": true,
+  "input": {
+    "name": "images",
+    "shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "dtype": "float32",
+    "layout": "NCHW RGB /255, 정사각 letterbox 114"
+  },
+  "output": {
+    "name": "output0",
+    "shape": [
+      1,
+      8,
+      8400
+    ],
+    "dtype": "float32",
+    "layout": "[cx,cy,w,h(640 px), 4 클래스 점수], NMS 없음"
+  },
+  "onnx": {
+    "opset": 17,
+    "dynamic": false,
+    "nms": false,
+    "fp": 32,
+    "checker": true
+  },
+  "thresholds_used_in_eval": {
+    "score": 0.25,
+    "nms_iou": 0.45,
+    "note": "설정 yolo_task4_C.yaml(B 와 같음). 등록부 D435 문턱 0.6 은 인지 쪽 값"
+  },
+  "finite_check": {
+    "images": 203,
+    "nonfinite_values": 0,
+    "pass": true
+  },
+  "pt_onnx_cpu": {
+    "n_images": 203,
+    "n_pass": 203,
+    "pass": true,
+    "max_box_px": 0.0035552978515625,
+    "max_score_abs": 5.8710575103759766e-06,
+    "criteria": "box ≤ 0.01 px · score ≤ 1e-4 · 개수 · 클래스 순서 · IoU ≥ 0.999"
+  },
+  "trt_pc_fp32_notf32": {
+    "n_images": 203,
+    "same_classes_counts": 203,
+    "max_box_px": 0.000519000000053893,
+    "max_score": 1.132000000070299e-06,
+    "raw_max_abs": 0.0066986083984375,
+    "detections_onnx": 368,
+    "criteria": {
+      "same_all": true,
+      "box_px_le": 0.5,
+      "score_le": 0.001
+    },
+    "pass": true,
+    "tensorrt": "10.16.1",
+    "gpu": "RTX 5060 Laptop(PC)",
+    "jetson": "미검증(대상 GPU 에서 엔진 다시 빌드 · 같은 방식 확인 필요)",
+    "fp16": "미시험"
+  },
+  "sha256": {
+    "yolo_export/yolo11n_task4_C.pt": "aebea2ab7f2ad8888961002b16941a6ae3e657b49b3c5cf6db0f63bc34df488c",
+    "yolo_export/yolo11n_task4_C.onnx": "f0e51f88d96b9958e16e5ffc009d4a3d337f496450e75e37317f90ac8082c95b",
+    "yolo_export/classes.txt": "eb22ffb1840f10ae1ed7262aba32dc2e9eabc3c5a9e6dd4f25b7fd81b20abca8",
+    "yolo_task4_C.yaml": "6efba33f25a67f2329c4878dceb002ed40d0a728b6ee78e8b41609a37e0ad47d",
+    "trt_results/yolo11n_task4_C_fp32_notf32.engine": "c536421d6167b555321928b1b57a794ec5a077e25b427304029d1e7f4edf42b4",
+    "export_c.py": "3b4a7bbcbeee03281ef8d6e7613d2c8f7286707d07e87e8b46b0187353d427d8",
+    "check_trt.py": "0039784029ed86ca9ff2ac145664efe749b6b9fc9c27f2e45c5062b1a7ba69cd",
+    "make_manifest.py": "9f7626514a93bf820cdfa6c393b604d0ee5e8279ef8695d4d6fa4762a14d0e7a"
+  },
+  "cautions": [
+    "실물 평가 203장에서 맞힌 상자 중 등록부 문턱 0.6 밑 2개(0.538 · 0.549, B 는 0개)",
+    "0.6 넘는 헛검출 1개(0.814, B 는 2개 0.697 · 0.72)",
+    "실물 1.0 m 안쪽 · 팔 카메라(Arducam) 성능 미검증 — 11-02 새 실물 근접 사진으로 평가 예정",
+    "PC 엔진은 Jetson 에서 쓸 수 없음"
+  ]
+}

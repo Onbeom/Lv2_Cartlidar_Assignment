@@ -1,0 +1,127 @@
+{
+  "status": "equivalent_parallel_finger_pair_not_internal_linkage_simulation",
+  "joints": [
+    "gripper_left_joint",
+    "gripper_right_joint"
+  ],
+  "origin_world_mm": [
+    [
+      361.1,
+      16.11386968283,
+      318.5
+    ],
+    [
+      361.1,
+      -16.11386968283,
+      318.5
+    ]
+  ],
+  "axis_world": [
+    0,
+    1,
+    0
+  ],
+  "mimic_multiplier": -1,
+  "tests": [
+    {
+      "name": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "delta_mm": [
+        0.0,
+        0.9999999999999765,
+        0.0
+      ]
+    },
+    {
+      "name": "gripper_left_link__RMX52_PR33_SPD-A01_1:1",
+      "delta_mm": [
+        0.0,
+        1.0000000000000009,
+        0.0
+      ]
+    },
+    {
+      "name": "gripper_left_link__RMX52_WBH_M3X10_3:1",
+      "delta_mm": [
+        0.0,
+        0.999999999999992,
+        -3.552713678800501e-14
+      ]
+    },
+    {
+      "name": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "delta_mm": [
+        0.0,
+        -1.0000000000000009,
+        0.0
+      ]
+    },
+    {
+      "name": "gripper_right_link__RMX52_PR33_SPD-A01_2:1",
+      "delta_mm": [
+        0.0,
+        -1.0000000000000009,
+        0.0
+      ]
+    },
+    {
+      "name": "gripper_right_link__RMX52_WBH_M3X10_4:1",
+      "delta_mm": [
+        0.0,
+        -1.0000000000000009,
+        0.0
+      ]
+    }
+  ],
+  "restoration_error": 7.105427357601002e-15,
+  "aperture_limits_mm": [
+    16.8,
+    72.0
+  ],
+  "aperture_at_home_mm": 19.627739365660002,
+  "slide_limits_mm": [
+    [
+      -1.4138696828300006,
+      26.186130317169997
+    ],
+    [
+      -26.186130317169997,
+      1.4138696828300006
+    ]
+  ],
+  "limits_status": "user-specified aperture bounds applied; servo-angle-to-aperture transmission remains unverified",
+  "motor": "RMX52_Motor_J6_Gripper_Open_Close",
+  "limitation": "Internal crank/linkage parts remain in the gripper body; only the two fingers, pads and end pivot screws articulate. This is an equivalent URDF-style parallel-gripper model, not a reconstructed closed-loop mechanism.",
+  "native_expected_translation_axis_world": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      -1,
+      0
+    ]
+  ],
+  "native_motion_link_reversed": false,
+  "native_slide_limits_mm": [
+    [
+      -1.4138696828300006,
+      26.186130317169997
+    ],
+    [
+      -1.4138696828300006,
+      26.186130317169997
+    ]
+  ],
+  "axis_world_note": "The common +Y axis and -1 mimic are the review/URDF convention. Native Fusion uses opposite physical slide directions with equal signed linked displacements.",
+  "user_angular_reference": {
+    "assumed_closed_deg": 0,
+    "minimum_aperture_mm": 16.8,
+    "fully_open_deg": 180,
+    "fully_open_aperture_mm": 72.4,
+    "selected_aperture_cap_mm": 72.0,
+    "after_180": "closing branch",
+    "nonlinear_map_calibrated": false
+  }
+}

@@ -1,0 +1,11 @@
+{
+ "source": "/home/pa4/git/lv2_next_module/261031_1718_r3port/render_T6500",
+ "temp_k": 6500.0,
+ "gains_bgr": [
+  0.978,
+  1.011,
+  0.972
+ ],
+ "images_changed": 72,
+ "tool": "Cartlidar/sim_render/awb.py"
+}

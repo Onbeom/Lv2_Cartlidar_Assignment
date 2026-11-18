@@ -1,0 +1,58 @@
+{
+  "test": "M6",
+  "dt_s": 0.002,
+  "mujoco_version": "3.16.0",
+  "results": {
+    "M6": {
+      "measured": {
+        "forward_m": 0.19988229213486544,
+        "backward_m": 0.1996825294947071,
+        "side_max_m": 1.8827430609118112e-06,
+        "yaw_change_max_deg": 0.00029132840828291305,
+        "definition": "전진 = 1 s~7 s의 처음 방향 성분, 후진 = 7 s~13 s"
+      },
+      "checks": {
+        "유한값·스텝 수": true,
+        "전진 0.18~0.22 m": true,
+        "후진 0.18~0.22 m": true,
+        "옆 이탈 ≤ 10 mm": true,
+        "yaw 변화 ≤ 2°": true
+      },
+      "verdict": "성공"
+    },
+    "M8": {
+      "measured": {
+        "stop_time_after_backward_s": 0.23000000000041965,
+        "stop_time_after_forward_s(참고)": 0.23199999999964582,
+        "speed_at_end_mps": 3.5248044105838436e-09
+      },
+      "checks": {
+        "정지 명령 후 0.5 s 안에 ≤ 0.005 m/s(위치 차분, 후진 끝)": true
+      },
+      "verdict": "성공"
+    },
+    "K4": {
+      "measured": {
+        "forward_m": 0.19988229213486544,
+        "바퀴_회전거리_m": 0.19990022094756116,
+        "slip_ratio": 8.96888088003367e-05,
+        "명령_이상값_m(0.05 m/s × 4 s)": 0.2,
+        "참고_명령_바퀴속도_평균_rad_s": {
+          "Wheel_Revolute_Front_Left": 1.5143667840509911,
+          "Wheel_Revolute_Front_Right": 1.5143667840509911,
+          "Wheel_Revolute_Rear_Left": 1.5143667840509911,
+          "Wheel_Revolute_Rear_Right": 1.5143667840509911,
+          "RMX52_Base_Yaw": 0.0,
+          "RMX52_Shoulder": 0.0,
+          "RMX52_Elbow": 0.0,
+          "RMX52_Wrist_Pitch": 0.0,
+          "RMX52_Wrist_Roll_Reversed": 0.0
+        }
+      },
+      "checks": {
+        "전진 미끄럼률 |1 − 실제/바퀴 회전 거리| ≤ 2%": true
+      },
+      "verdict": "성공"
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+ "J1 0.203 옆 0.0": {
+  "case": "",
+  "q": [
+   0.0,
+   -0.98,
+   0.42,
+   1.54,
+   0.0
+  ],
+  "cam_z_bl": 0.284,
+  "cam_axis_down_deg": 18.9,
+  "puck_top_uv": [
+   640,
+   360
+  ],
+  "puck_top_in": true,
+  "tag_all_in": true,
+  "tag_side_px": 38.8,
+  "view_angle_deg": 18.9,
+  "range_m": 0.17,
+  "body_in_frac": 1.0
+ },
+ "J1 0.205 옆 0.06": {
+  "case": "",
+  "q": [
+   0.297,
+   -0.92,
+   0.1,
+   1.78,
+   0.0
+  ],
+  "cam_z_bl": 0.317,
+  "cam_axis_down_deg": 20.0,
+  "puck_top_uv": [
+   640,
+   360
+  ],
+  "puck_top_in": true,
+  "tag_all_in": true,
+  "tag_side_px": 31.9,
+  "view_angle_deg": 20.0,
+  "range_m": 0.206,
+  "body_in_frac": 1.0
+ },
+ "J1 0.139 옆 0.0": {
+  "case": "",
+  "q": [
+   0.0,
+   -1.12,
+   0.36,
+   1.88,
+   0.0
+  ],
+  "cam_z_bl": 0.272,
+  "cam_axis_down_deg": 10.8,
+  "puck_top_uv": [
+   640,
+   360
+  ],
+  "puck_top_in": true,
+  "tag_all_in": true,
+  "tag_side_px": 44.5,
+  "view_angle_deg": 10.8,
+  "range_m": 0.151,
+  "body_in_frac": 1.0
+ },
+ "J1 0.219 옆 0.0": {
+  "case": "",
+  "q": [
+   0.0,
+   -0.9,
+   0.34,
+   1.52,
+   0.0
+  ],
+  "cam_z_bl": 0.294,
+  "cam_axis_down_deg": 20.0,
+  "puck_top_uv": [
+   640,
+   360
+  ],
+  "puck_top_in": true,
+  "tag_all_in": true,
+  "tag_side_px": 36.2,
+  "view_angle_deg": 20.0,
+  "range_m": 0.182,
+  "body_in_frac": 1.0
+ }
+}

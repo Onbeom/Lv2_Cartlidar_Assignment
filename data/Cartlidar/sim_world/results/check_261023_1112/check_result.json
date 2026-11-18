@@ -1,0 +1,784 @@
+{
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "task": "A",
+ "W": {
+  "W1": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "2": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "3": {
+     "pass": true,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    }
+   }
+  },
+  "W2": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "2": {
+     "pass": true,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "3": {
+     "pass": true,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    }
+   }
+  },
+  "W3": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cylinder",
+       "cylinder",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_03",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_02",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_00",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_2",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_05",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 5,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      }
+     ]
+    },
+    "2": {
+     "pass": true,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cylinder",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cylinder",
+       "cylinder",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_05",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 5,
+       "tags": 6
+      },
+      {
+       "name": "puck_03",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_02",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_00",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 0,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      }
+     ]
+    },
+    "3": {
+     "pass": true,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_02",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_03",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_05",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 5,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      },
+      {
+       "name": "puck_00",
+       "shelf": "shelf_2",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 0,
+       "tags": 6
+      }
+     ]
+    }
+   }
+  },
+  "W4": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "arm_link_5",
+      "object": "/World/Maze/panel_10",
+      "gap_linf_mm": 26.192
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.029,
+       0.1995
+      ],
+      [
+       -1.626,
+       0.7603
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": 0.8188109813819094,
+      "RMX52_Shoulder": -0.4119089952736837,
+      "RMX52_Elbow": 0.806287000302621,
+      "RMX52_Wrist_Pitch": -1.8728019902031903,
+      "RMX52_Wrist_Roll_Reversed": -0.3341840063589622,
+      "gripper_left_joint": 0.009736999869346619
+     },
+     "yaw_deg": 125.656005859375
+    },
+    "2": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "gripper_right_link",
+      "object": "/World/Maze/panel_00",
+      "gap_linf_mm": 95.233
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.0626,
+       0.0967
+      ],
+      [
+       -1.604,
+       0.5455
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": -1.539828024375019,
+      "RMX52_Shoulder": 0.3622620133372903,
+      "RMX52_Elbow": -0.2816439992409021,
+      "RMX52_Wrist_Pitch": -0.33096501025986985,
+      "RMX52_Wrist_Roll_Reversed": 1.9137639377716447,
+      "gripper_left_joint": 0.021578000858426094
+     },
+     "yaw_deg": 171.589111328125
+    },
+    "3": {
+     "pass": true,
+     "pairs": [],
+     "closest": {
+      "link": "arm_link_5",
+      "object": "/World/Maze/post_07/head",
+      "gap_linf_mm": 26.943
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -2.2204,
+       0.2057
+      ],
+      [
+       -1.6033,
+       0.5936
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": 2.8094679698332485,
+      "RMX52_Shoulder": 1.026345998546686,
+      "RMX52_Elbow": 0.757617997697532,
+      "RMX52_Wrist_Pitch": 1.0143109738435363,
+      "RMX52_Wrist_Roll_Reversed": 2.0114930281879007,
+      "gripper_left_joint": 0.006645000074058771
+     },
+     "yaw_deg": 151.71389770507812
+    }
+   }
+  },
+  "W6": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.1,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.365,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    },
+    "2": {
+     "pass": true,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.100001,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.392,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    },
+    "3": {
+     "pass": true,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.100001,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.392,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "start_cell_id": "c00",
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    }
+   }
+  },
+  "W5": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "build_rc": 0,
+     "identical": {
+      "task_world.usda": true,
+      "layout.json": true
+     }
+    }
+   }
+  }
+ },
+ "all_pass": true
+}

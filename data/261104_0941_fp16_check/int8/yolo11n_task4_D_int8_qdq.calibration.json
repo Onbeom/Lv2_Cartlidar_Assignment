@@ -1,0 +1,531 @@
+{
+  "source_sha256": "eeb0d6bcb6ef7063949e4d51c49b765aa76229e1d08a7677ad49ce07f2fa8b7c",
+  "shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "method": "MinMax",
+  "calibration_count": 128,
+  "seed": 42,
+  "scope": "Conv QDQ INT8; not an all-INT8 network; accuracy not established",
+  "nodes": {
+    "QuantizeLinear": 168,
+    "DequantizeLinear": 256
+  },
+  "images": [
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__520_20261102_124839_074104.png",
+      "sha256": "ca2713c078515722a55d25c6b2ec8b62d6c7a1d116bb93f34325fce339ff8929"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0421.png",
+      "sha256": "30afba84a3701d49121a4351facb055fb845d12ec8c3141e18bf0f6c45cba204"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__476_20261102_124817_982875.png",
+      "sha256": "ebb6bf8312a9450c4f0cd4bfaf1927be1970125c85c978c9d8cd1dcc2a108ae7"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0035.png",
+      "sha256": "1f07f893c7017f0a5b654ab5b5c9594089882507223b6938814c437da07b6fd6"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1226__273_20261102_122618_679717.png",
+      "sha256": "cefe8a088bea2bfa7e6dc9f1ed0fff38fc72d7dd8fd68412f10686556c35c042"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0115.png",
+      "sha256": "1f27613e7d833d69f71bcf8d25ec5b1990567be61d350cbc77ec3da0ad3f2c4c"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels/images/r05_green_signal_scene__116_20261026_172506_560132_color.png",
+      "sha256": "c8918a9e4f81107b5a79d3c937f214ea994b54e5411e2419e13d021cc2c44789"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1229__307_20261102_122923_142398.png",
+      "sha256": "7b7f0a49b74432f75ac5f8738c136a6dd92c65e08883b0ccc4a72246013c3579"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w185_d006_L0.46.png",
+      "sha256": "08828b4f2597185ddf13887919d8404876336d7df8d669599b6efc0ad2bbb0f4"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w124_d011_L0.03.png",
+      "sha256": "22b0873ae7869880a87b2fdc5d2931a9a1f01355e5c25525ffa7c1c0992ab9eb"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1226__292_20261102_122623_452710.png",
+      "sha256": "a770984f9279eea07a94cdf2116b48c542c4276b1d291816a53160f44033af62"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1225__226_20261102_122513_360392.png",
+      "sha256": "37da5c52077f59c69a3fe085cf51f9dfead8ca6b6d204fbeb69abda2e6974138"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__247_20261102_124609_668777.png",
+      "sha256": "78f12cf174b4dc34dba947131558f320a7ebbcf0602587830c072b2a92a5d2d9"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0984.png",
+      "sha256": "8bc64db65b183fec674ad39ef546a36f5e10abbbfcac3bee06e9c4adfd675ce0"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1104.png",
+      "sha256": "4051be002ed91363c6739ce816c7809e1ecb7c0f01edd8523c3b7bf781273b36"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w120_d026_L0.19.png",
+      "sha256": "f917541471ef7745e1fe0c2329f91f85e70d76b8917725a94b57747d62bb0119"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels_261027/images/r17_1552__410_20261027_155229_836593.png",
+      "sha256": "2de4cfed97618ddbc649e8d74b96e985531f52d3c2fccea315f16e5d8c13f651"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1220__020_20261102_122018_648956.png",
+      "sha256": "bbcaead7059a28913370abe0ab33061d53ff0b1cf397d0acedc83174f9e21073"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w110_d043_L0.79.png",
+      "sha256": "53662ea2076ef8831759261bcae56164e5463a62293fa53fd80bc93d87c5cda5"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w127_d047_L0.79.png",
+      "sha256": "e5bd7a5bef0c7b9bf8a7f650f64b9c5bf8f69f9616a6c31a7f766f268e497a1c"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w115_d016_L0.41.png",
+      "sha256": "206f41cbcc62fe283207f494f3e89eacdbaf3c90674bcec0bc4382ae58118116"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0169.png",
+      "sha256": "fa80b41fd545fc54afab0ff7cabafa1aa863e40617252b638354bfdc5e1c6c5a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1245__185_20261102_124542_328447.png",
+      "sha256": "c910822545a236ba2f686d003c2e5feb3cbac9b4986b408c2d6e714d5aa41f23"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1247__374_20261102_124743_804476.png",
+      "sha256": "f90270dc9586b53cfeb3da277559648d44c35663acb1d3fc20ab0a6c473a8e39"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0410.png",
+      "sha256": "a1af0ef98956b2f729702192cef4d9cc259d5d6319b8e7fab2e647a8fa740fab"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1226__250_20261102_122606_438297.png",
+      "sha256": "25ab70268129e18b664dbc10967698b6b45416218dd3a81c6a55c6739a2da833"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w169_d014_L0.73.png",
+      "sha256": "9a744e7ac4fc3ace76502fbb79a38b6b1182a3349664706948dcf461dcd88a06"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w176_d049_L0.82.png",
+      "sha256": "af2c489875229da8cdf82d0642d47ebd7bf3daab71663a010ebd4a8711a02cb4"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1224__195_20261102_122422_923368.png",
+      "sha256": "d6a34f19680dc2ba7acfaacbba4df299bbe58caa73d26f545be4d388d23450c8"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1225__230_20261102_122514_299709.png",
+      "sha256": "bfc10d80f089ad7e3fb0d11e440d3286b253980bfe91ccb48ca1b30bc5990c67"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0230.png",
+      "sha256": "f63c6e09aac6c65f05f94d29f65e17b142151e92b018f958788c62d2e57c1199"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels/images/r05_green_signal_scene__120_20261026_172512_281237_color.png",
+      "sha256": "e77f9851173f27ae91ea18ad431937907f02fe6cb59327348c87ce1c2e3db7be"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1222__112_20261102_122212_238262.png",
+      "sha256": "55c539b684f96afa8b4cec9ae1568786fdc8cf662815d987cdaee8c4b79306a5"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w112_d021_L0.49.png",
+      "sha256": "17e86b209de987edd67dbba12c6ce878c03c3ecf3eaee4e85682855adc105c56"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels_261027/images/r11_1543__238_20261027_154315_166655.png",
+      "sha256": "df3ce2ec5213da64f3ca679b4a5e86f2145556b99aecf80d8ca5c4486e2d2757"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0564.png",
+      "sha256": "c6790ef87905790cc4dfa7a985a67a327e2b3a902b62b4f494e0de4e98d7b674"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1226__239_20261102_122605_019210.png",
+      "sha256": "974efcf18bd34ed0b32c56b69fd950015230261eff932f554e01583b345aab9f"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w106_d006_L0.61.png",
+      "sha256": "b648b513808161a99d058ec477896953ef5eadeedd5d18f6df27bfd6b0e2a82d"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0705.png",
+      "sha256": "0a62d7e86513e3b6e46e7d7078a8a5378803e99829be9f8c79a84b0484852478"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1146.png",
+      "sha256": "9f36cb5017c7ab90bb0f6dff96672380b192bd3de7010aff4e39d5f52bedd795"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels/images/r07_green_signal_scene__139_20261026_172630_500362_color.png",
+      "sha256": "1e0b03df6c7e3d16c60489379d081f3d7c5d95f025bfc96e55cb2b83813af989"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0555.png",
+      "sha256": "540cc8a7d07c7cd40d0d8d2acf520461122612389a72c0f57df8198ce0826059"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1225__218_20261102_122512_656700.png",
+      "sha256": "b8d8829c03a2516bfd90f005a271ab47059f3353510fd022aec6cdffb3183c25"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1220__016_20261102_122017_706896.png",
+      "sha256": "92af0eb8ff2036cec9a5ecf852d7b837bc6b36c6d4c63933662f75417b2627b1"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w163_d016_L0.97.png",
+      "sha256": "40d177487178c002bb28b2cbfd4a0cbca6946e1faae7a1edcfcde2f209c0c517"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0226.png",
+      "sha256": "bb60a21aa55960eaee4451b78f5aa2608c908d322975a1c8b1b5e45b9c3560c6"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0478.png",
+      "sha256": "59bce6cbf22ee2d983f223f41bd4104d503101a96d89b362c05e7943480d1885"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0926.png",
+      "sha256": "f8574233fcc1cc8bc79213e6e285e284843f4452d28d38ca29a09fbe87a9f7fa"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1226__286_20261102_122620_890429.png",
+      "sha256": "091bcf4b0fc039cd123f06e9bfc9290dd4437c0150d67d09f817dd8e81459540"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1165.png",
+      "sha256": "0dc01fdf5dd3a93bd131abfb0e30ee1b8ee73229b5b87ac1867513949a1fe0fe"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0625.png",
+      "sha256": "4fe873580cf55ffed498d93d53fed167e7100907afd28eafb037a1002e249d67"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1133.png",
+      "sha256": "a0c79d6accc3bce7ac4f0a7abe18e7f98001ffc4cae7f4fc6914b676bec50d5a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__314_20261102_124630_567065.png",
+      "sha256": "d0f309b8428dc04ff7212d2181bcf75515d728c794df28cd8f5446a91509d0c9"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1221__087_20261102_122157_301591.png",
+      "sha256": "e51aa7b35d35d16f262621f72f933e90e28c13466784a99d47134350392384e1"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1029.png",
+      "sha256": "e1819e10012f566d984b4a5ffd322746855dfeb21fc2e0d56ff6ad81fec0f769"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1221__078_20261102_122141_399943.png",
+      "sha256": "01a6358c563d89680c3ce04062f18685b241ff15a00a953571967e0c86ea5b71"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1226__289_20261102_122622_107168.png",
+      "sha256": "73d0a272785df7415972813bd6c87d1082a04e11ab0bdc13d8ef18896b2e08e5"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w165_d059_L0.43.png",
+      "sha256": "b88fdfd70ffc8714d2358b3580cf5129b2b612fe012df68dc3b11c36c807e6d1"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1221__080_20261102_122141_577397.png",
+      "sha256": "48cb0c1b8f7fe3bbb1c05e66a19f361b360ab24bfb9482fe1b1ae9b61c4646b2"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1117.png",
+      "sha256": "bb4bd0b2d989cdc7f59b29f9acd059c268127b44b7a494b2d5894f97788c644b"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1222__133_20261102_122220_230326.png",
+      "sha256": "bf0eed538ab60d9cc43b616b7a793bfce7c83526ce47c3f6a98981ff408c9e9e"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w110_d025_L0.70.png",
+      "sha256": "6e87027d75a713adf2934083dd6dbe48581cae17d4356791e25a4aee312c827b"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w158_d029_L0.41.png",
+      "sha256": "7a0d128da9ba9c838263917569baf1cf690c0f3afd61b9852297c1851b843663"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0190.png",
+      "sha256": "923410088db5b8a41db1860816ad9f9d3a706558cc55e08a5c84b59e61a4c0c1"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__502_20261102_124824_738256.png",
+      "sha256": "7501291832bb23a184ef5c60979897d608a6be5f42085ee9b59d92f2e0dd2a0a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w130_d057_L0.63.png",
+      "sha256": "f689138e6e15d06b1a038000ed1d7f8da38c5ea6c072c4ed5a8ed9aea3574935"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0066.png",
+      "sha256": "605870e00f2991d79048b8289b0690b3c47c4255352dcd5254062124001cd0ea"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1038.png",
+      "sha256": "a4227fd89d8fd2be58de2855a9e52ad0ad3df467f03b6bdfb76b1813eb90abca"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0836.png",
+      "sha256": "bbd38698b89ca8009ee36030a9e610bb60cfbe79aef18a9ea060466a1bbb2465"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1129.png",
+      "sha256": "51f8d6a1934f58b2531fd4cee18747a0235f847127fa84c832374843377678fc"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1224__203_20261102_122424_843696.png",
+      "sha256": "4d93414f8603330a9d2cd5cb3ca5492b7fca36d70b855f6d288256193b2c9d8f"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1226__262_20261102_122608_665827.png",
+      "sha256": "82bb5cb5c75eaf6d4243b3ec4e3e65e2fd6141d95a7fc0e2cbdffc840fceac3a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w158_d019_L0.72.png",
+      "sha256": "a9db09720770a52631ad968b2ded6467e61e542a391b419b6b65a13a0eaac04b"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w163_d056_L0.31.png",
+      "sha256": "5188f18b621f8ee580e4499f760274b4c0919080ae986e5c307d229362301e54"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w132_d037_L0.92.png",
+      "sha256": "085360bc14a745f14f2bc02d2b9f0f39a116a386e070577ce686c9e87e028e10"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__551_20261102_124855_766119.png",
+      "sha256": "36f5b382b0254f60b5bc4ba00932b190692cd5dce9c8bdb790bc2f8e74ac06d7"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0583.png",
+      "sha256": "9daa822f3f0d68be951e68821858100ac3c7497a0846589430d91638d6a2bd80"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0804.png",
+      "sha256": "af13d508a7c1c86c8771379a880ee5882d1987ed7ce1f0d24c2ec62afb476e25"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1245__183_20261102_124541_632916.png",
+      "sha256": "7c90db4446da1e86151d5a6c000ac19e36b95d0ad5e028fbf2c4730638858f8c"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1437.png",
+      "sha256": "b55f0bcf6bca6f37eaaa8f730c9f7b4350a88b52dd431bc45c9f3a8a2976e570"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1442.png",
+      "sha256": "e03d5a9c02b675f0565b8979b70381919c82724daa3a660c945c85b426080266"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0283.png",
+      "sha256": "0e129b1939e61126c3ec4271fb5bdbbd42b83fe2c7b4ad952467917f417de99d"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1247__411_20261102_124757_399729.png",
+      "sha256": "8921454c90917f66c4e6b9452597bc09dc5ae0375df6fccb4d5c5b9c21311de5"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1221__051_20261102_122110_962403.png",
+      "sha256": "3d4797a1b61036682f639d2024891fbfc3549112de656e535d983d4ee4e3aa61"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w103_d048_L0.10.png",
+      "sha256": "098f2647595a2ab935fc7fb9f5ba6a240cba768df894931afb30da84e46a47b0"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0198.png",
+      "sha256": "bbd9c4098b4ff868a1d6b488b50ba2d1d6e211b7ff89f6d99609f50fd1f2462b"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w103_d038_L0.02.png",
+      "sha256": "3dd5aafe771e5d75dc40aa6b75bf8de4a65d52fff4dfb9c5412358bb5f6441df"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w109_d007_L0.72.png",
+      "sha256": "e8667d670b220d7b00587972ce44f5460382874ba774278236dec3cd74d2300d"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1220__042_20261102_122054_057848.png",
+      "sha256": "fcfd2175a9e0e52c63df375d458c83a0e17989fe7cde9ae8c6d1ad766e19aa6e"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1424.png",
+      "sha256": "809129f71f06090c5b0b14e583e0dee1de985b8151617a1ceac198a5f677651e"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w110_d008_L0.93.png",
+      "sha256": "99af29b8bbfcb24250e452de860f6a665fe8c62363c47d7c4cd92be87197204a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1100.png",
+      "sha256": "0243ea7fb94ca93c2c2a63c596ca2787d8dbf9742a50c2769f1248fbdfda1723"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1228.png",
+      "sha256": "07175ed42d3136a6888120f423a06e828fa1c75c7526c3f28aebc16ebe86c87d"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1226__260_20261102_122608_488304.png",
+      "sha256": "367689586432d4503f818814a1c46fec3d268b4d54ae5f62720abc763cede0cd"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1373.png",
+      "sha256": "5ca2b6fb07ade20bf6bb6acba569d0e3962bd4172143f4ba81ca51c5b0dfeba3"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w152_d031_L0.98.png",
+      "sha256": "6b8854c24047ec6b42e1be3bfa39d8ee0046cbba15ad157bb146a6bc7982b031"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w132_d051_L0.47.png",
+      "sha256": "79f9525a11ca83bd2cf75dd552cb939e3f5c533b04ee84e53300e62701036626"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1247__365_20261102_124711_655426.png",
+      "sha256": "d8096f64504ceb243dfeb8666e3a24d8c6b9cf54e5081f248d676c06d2de8b7e"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1222__159_20261102_122258_499868.png",
+      "sha256": "18ad3c61851acc1d8e8bd1ccb7e3f9501b157005374fe0e9e96750b376260e35"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1321.png",
+      "sha256": "f2d3c3597f6ae4353c61db7fbdc97189484abf2643717c8f22d4f936791a8387"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0101.png",
+      "sha256": "d55ba0a2a263b05412b906fadfad98dd239589bb073a2bae7be7b095bb636400"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__269_20261102_124616_558536.png",
+      "sha256": "8e56397bef68624409ce568bdef8e72582772a1aa70c24d59ae2870671b1cdcd"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__274_20261102_124618_097613.png",
+      "sha256": "27d322ac06b10917f991829b3bdb80737f0c4e1b9cb9fd1bc02f38ef3e17f709"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w114_d021_L0.35.png",
+      "sha256": "8a48699faad496d9b6838ecf54f5281780cc4087b2e3702b88d42c0e0bbe916d"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__305_20261102_124628_433855.png",
+      "sha256": "520f5c7e11c522eb51b47b05a48181b22af971210ff66a9b53ddab0a2db154f6"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels_261027/images/r13_1545__294_20261027_154617_657009.png",
+      "sha256": "d280ffeef129eab3340425592d4e43896364996c05517ed07b12daa164915cb6"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__305_20261102_124628_433855.png",
+      "sha256": "520f5c7e11c522eb51b47b05a48181b22af971210ff66a9b53ddab0a2db154f6"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1229__326_20261102_122953_835464.png",
+      "sha256": "94bd9182fdaac54a2c82e1a6be9dae152d15e0074ee598a0e79bf2268ba678e0"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__517_20261102_124838_477402.png",
+      "sha256": "da2444c6aa9d689a89bf904db4737d4c7f9d0f680d87b4dba3ad5a4f34b760ac"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0758.png",
+      "sha256": "8c1bc55de16342814234cd9160662297b0360fd90a82ada9bea26a18cd5e32ef"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1248__546_20261102_124854_511489.png",
+      "sha256": "df897ff3def60c27adbf5c69cf9b82f5b8229fc93d64b890b0b91bd62b926950"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w110_d058_L0.45.png",
+      "sha256": "90a25ec92115f2c6b464050e612bbe91f0c6565b2f2380fad63b6369fc88f024"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w176_d016_L0.12.png",
+      "sha256": "4411e7b488d8671a95331157f12d2ddd26237b7b5c2ada35dc1457015ea90251"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w158_d046_L0.12.png",
+      "sha256": "0946f60b53656741dca8433b706b53a87c9c6a03649490231e7e76b60fa03c35"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0223.png",
+      "sha256": "e4b473217be707f49184d0af78917a7e5dbab20b87299a46f35566ee4a1b57d2"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1472.png",
+      "sha256": "1e1a8730686e1bc2a72d95b396ff62ee70b3d981e2a7db86d5fa7bdbc698db91"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w158_d046_L0.12.png",
+      "sha256": "5cea3af56760a047d6d7afa2cf4fcdc95c10012c4a3c675b260c5cfaa7536d80"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0645.png",
+      "sha256": "de4fd039bff9e5171748120c06a3192b15d1640830819cfdf18d6ef0ce0d672a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0013.png",
+      "sha256": "e30ed54a2801be4650eda5b8562bbd0b4c19049ad20246ede20ee8ad18782cc1"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_rear_C/images/r1229__302_20261102_122922_199522.png",
+      "sha256": "b029f6560e7273910cb706da0148c25b9dcb0e75f52c4bdc19d8b1997dd2656a"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_arm720_C/images/a1246__248_20261102_124609_854989.png",
+      "sha256": "33d535c4f486a05a7f4861483c826d838c18de403e5093d60a16cdd752d43950"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0399.png",
+      "sha256": "d3bdef035f3fca1807d9495446c52fcee89c21003885dc9ee152ff220f8cef61"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/real_labels/images/r07_green_signal_scene__153_20261026_172642_021223_color.png",
+      "sha256": "58743c331e9ba4b17a3b8a0669a5fffb53bcba0fbf337a48334454c09d4d3994"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261026_1414/data/images/train/train_w169_d000_L0.02.png",
+      "sha256": "cdf7af90f879e2949ce64833b3eef041144667854e040a2ec78c87cf1a719e2f"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/train/aug_train_w115_d059_L0.80.png",
+      "sha256": "283f2c2c3dd0c858d4506f681925db80d38460bf9955bf8f09ba6726db47593f"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/1306.png",
+      "sha256": "71e7b079fdd1084e5bf29d3728830c039af732303b71792a6a43cadcb48a1250"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/261102_1330_yolo_close_draft/real_labels_close_front_C/images/f1222__116_20261102_122213_291371.png",
+      "sha256": "2f7dd6171c42f7fead19f395a1f390fa7ccb469a3f84c86f2b2d80201c3e6364"
+    },
+    {
+      "path": "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/train/0362.png",
+      "sha256": "d21e941766d60bbde2608ed9ecea986461941b3afd8678854ef7d2fc14bd3fac"
+    }
+  ]
+}

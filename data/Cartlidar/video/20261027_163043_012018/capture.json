@@ -1,0 +1,117 @@
+{
+  "label": "signal_lighton",
+  "mode": "video",
+  "started_at": "2026-10-27T16:30:43.012018+09:00",
+  "requested_seconds": 120,
+  "requested_frames": null,
+  "configured_fps": 30,
+  "calibration": {
+    "serial": "261822072247",
+    "device_name": "RealSense D435",
+    "depth_unit_m": 0.0010000000474974513,
+    "color_intrinsics": {
+      "width": 640,
+      "height": 480,
+      "fx": 605.8507690429688,
+      "fy": 605.6798706054688,
+      "ppx": 324.3658142089844,
+      "ppy": 245.13917541503906,
+      "distortion_model": "distortion.inverse_brown_conrady",
+      "coeffs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "raw_depth_intrinsics": {
+      "width": 640,
+      "height": 480,
+      "fx": 385.0128173828125,
+      "fy": 385.0128173828125,
+      "ppx": 320.859619140625,
+      "ppy": 239.9280242919922,
+      "distortion_model": "distortion.brown_conrady",
+      "coeffs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_to_color_extrinsics": {
+      "rotation_column_major": [
+        0.9999871253967285,
+        -0.0036386160645633936,
+        -0.003537853481248021,
+        0.0036612122785300016,
+        0.9999728202819824,
+        0.006401666905730963,
+        0.003514464246109128,
+        -0.006414537318050861,
+        0.9999732375144958
+      ],
+      "translation_m": [
+        0.015095149166882038,
+        -0.00012624889495782554,
+        0.00012865873577538878
+      ]
+    },
+    "aligned_depth_intrinsics": {
+      "width": 640,
+      "height": 480,
+      "fx": 605.8507690429688,
+      "fy": 605.6798706054688,
+      "ppx": 324.3658142089844,
+      "ppy": 245.13917541503906,
+      "distortion_model": "distortion.inverse_brown_conrady",
+      "coeffs": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "sensor_options_at_start": {
+    "Stereo Module": {
+      "enable_auto_exposure": 1.0,
+      "exposure": 8500.0,
+      "gain": 16.0,
+      "emitter_enabled": 1.0,
+      "laser_power": 150.0
+    },
+    "RGB Camera": {
+      "enable_auto_exposure": 1.0,
+      "exposure": 166.0,
+      "gain": 64.0,
+      "enable_auto_white_balance": 1.0,
+      "white_balance": 4600.0
+    }
+  },
+  "depth_filtering": "none; raw Z16 and depth aligned to color are saved",
+  "color_order_in_memory": "BGR",
+  "depth_invalid_value": 0,
+  "video_note": "color.avi is MJPEG at configured FPS; use frames.csv timestamps and lossless PNG originals for timing analysis. No frames are duplicated to fill gaps.",
+  "state": "error",
+  "complete": false,
+  "stop_reason": "frame_number_error",
+  "error": "Repeated or reversed frame number; recording stopped",
+  "accepted_frames": 40,
+  "saved_frames": 40,
+  "color_frame_gaps": 0,
+  "depth_frame_gaps": 0,
+  "consecutive_frames": true,
+  "first_timestamps_ms": [
+    1793086242993.8513,
+    1793086242993.8342
+  ],
+  "last_timestamps_ms": [
+    1793086244294.8142,
+    1793086244294.797
+  ],
+  "closed_at": "2026-10-27T16:30:45.126624+09:00"
+}

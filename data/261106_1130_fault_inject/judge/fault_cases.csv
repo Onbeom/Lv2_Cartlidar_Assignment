@@ -1,0 +1,13 @@
+fault,expected_diagnostic,expected_controller_action,measured_response_ms,result,evidence
+F1 앞 D435 중단 · 재개,결과 발행 멈춤,받는 쪽 300 ms 규칙으로 값 버림(코드),53,PASS,result.json
+F2 stamp 지연 0.2 · 0.4 s,0.3 s 넘으면 결과 없음,받는 쪽 300 ms 규칙(코드),,PASS,result.json
+F3 같은 stamp 반복,새 결과 없음,받는 쪽 300 ms 규칙으로 값 만료(코드),,PASS,result.json
+F4 stamp 앞뒤 번갈아,결과 stamp 역행 없음,해당 없음,,PASS,result.json
+F5 깊이만 중단,3D 퍽 · 목표 없음,목표 없음으로 처리(코드 미확인),,PASS,result.json
+F6 odom TF 중단,"WARN, base_link 기준 추적",해당 없음,70,PASS,result.json
+F7 팔 카메라 중단 · 재개,결과 발행 멈춤,받는 쪽 300 ms 규칙(코드),51,PASS,result.json
+F8 깨진 영상,죽지 않음,해당 없음,,PASS,result.json
+F9 노드 1 s 정지,재개 뒤 오래된 결과 없음,받는 쪽 300 ms 규칙(코드),136,PASS,result.json
+F10 정지 · 실행 반복(과부하 모사),나이 > 0.3 s ≤ 0.5 %,받는 쪽 300 ms 규칙(코드),,PASS,result.json
+F11 프로세스 강제 종료,"결과 멈춤, 재기동 후 복귀","스킬 시간 초과(코드), 재기동은 사람",6,PASS,result.json
+F12 엔진 파일 손상 기동,"WARN, 색 검출기 대체",해당 없음,,FAIL,result.json

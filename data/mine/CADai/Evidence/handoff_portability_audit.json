@@ -1,0 +1,9 @@
+{
+  "frames": 402,
+  "portable_fk_vs_engineering_reference_max_com_error_mm": 0.00016579936186953553,
+  "preview_mesh_links": 14,
+  "reference_limit_violating_frames": 159,
+  "freecad_gui_tested": false,
+  "freecad_native_import_tested": false,
+  "source_original_frames_preserved": true
+}

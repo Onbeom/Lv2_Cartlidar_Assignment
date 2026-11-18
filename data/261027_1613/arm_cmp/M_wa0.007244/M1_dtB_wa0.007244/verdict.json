@@ -1,0 +1,64 @@
+{
+  "test": "M1",
+  "dt_s": 0.002,
+  "mujoco_version": "3.16.0",
+  "results": {
+    "M1": {
+      "measured": {
+        "base_z_at_1s_m": -5.279004160152825e-06,
+        "base_z_change_max_m": 4.942490347724306e-13,
+        "roll_change_max_deg": 3.288343958552611e-11,
+        "pitch_change_max_deg": 1.666859787154191e-10,
+        "링크속도_위치차분_최대_1s이후_mps": 1.5147032492180455e-08,
+        "자기충돌_접촉수_최대": 0
+      },
+      "checks": {
+        "유한값·스텝 수": true,
+        "base 높이 변화 ≤ 3 mm": true,
+        "roll·pitch 변화 ≤ 1°": true,
+        "모든 링크 속도(위치 차분) ≤ 0.01 m/s": true
+      },
+      "verdict": "성공"
+    },
+    "K1": {
+      "measured": {
+        "weight_N(질량×g)": 56.75112984237948,
+        "mean_Fn_total_N": 56.751129842397155,
+        "relative_error": 3.1150575001433437e-13,
+        "Fn_total_min_max_N": [
+          56.751129808181595,
+          56.75113001605803
+        ],
+        "mean_Fn_each_wheel_N": {
+          "Wheel_Revolute_Front_Left": 15.060046509338749,
+          "Wheel_Revolute_Front_Right": 15.764852299345767,
+          "Wheel_Revolute_Rear_Left": 12.655369972454553,
+          "Wheel_Revolute_Rear_Right": 13.27086106125809
+        }
+      },
+      "checks": {
+        "평균 수직 반력 합이 무게의 ±1% 안": true,
+        "바퀴 아닌 부분의 바닥 접촉 없음": true
+      },
+      "verdict": "성공"
+    },
+    "K2": {
+      "measured": {
+        "mean_|CoP−CoM|_xy_m": 9.879916121278739e-12,
+        "max_m": 7.929639970649268e-11,
+        "com_xy_m": [
+          0.0069056784977262935,
+          -0.003699189035224608
+        ],
+        "cop_xy_m": [
+          0.006905678498030874,
+          -0.0036991890354932857
+        ]
+      },
+      "checks": {
+        "압력 중심과 질량 중심의 수평 거리(평균) ≤ 1 mm": true
+      },
+      "verdict": "성공"
+    }
+  }
+}

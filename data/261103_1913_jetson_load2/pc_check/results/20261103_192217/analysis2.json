@@ -1,0 +1,147 @@
+{
+ "run": "/home/pa4/git/lv2_next_module/261103_1913_jetson_load2/pc_check/results/20261103_192217",
+ "live_pc_amcl": {
+  "n": 3480,
+  "hz": 10.0,
+  "rx_minus_stamp_s": {
+   "p50": 0.0167,
+   "p95": 0.0167,
+   "p99": 0.0167,
+   "mean": 0.0167,
+   "max": 0.0167
+  },
+  "pos_err_m": {
+   "rmse": 0.0191,
+   "p95": 0.0322,
+   "max": 0.044
+  }
+ },
+ "passes": {
+  "pass_1": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0168,
+     "p95": 0.0178,
+     "p99": 0.0268,
+     "mean": 0.0159,
+     "max": 0.0297
+    },
+    "pos_err_m": {
+     "rmse": 0.0179,
+     "p95": 0.0288,
+     "max": 0.0422
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.672,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.98,
+     "max": 10.0,
+     "min": 9.3
+    },
+    "res_max": 0.0391,
+    "n_check_total": 3493,
+    "n_skip_total": 3,
+    "suspect": 1,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  }
+ },
+ "windows_s": [
+  351.3
+ ],
+ "proc_by_pass": {
+  "pass_1": {
+   "ALL": 10.9,
+   "amcl": 5.9,
+   "ekf_node": 1.9,
+   "lifecycle_manager": 1.6,
+   "loc_monitor": 7.4,
+   "map_server": 1.2,
+   "scan_body_mask": 4.7,
+   "scan_merge": 5.1
+  }
+ },
+ "proc": {
+  "ALL": {
+   "cpu_pct": {
+    "p50": 10.6,
+    "p95": 13.655,
+    "mean": 10.9269,
+    "max": 18.9
+   },
+   "rss_mb_max": 0.0
+  },
+  "amcl": {
+   "cpu_pct": {
+    "p50": 5.0,
+    "p95": 10.0,
+    "mean": 5.8637,
+    "max": 37.7
+   },
+   "rss_mb_max": 195.6
+  },
+  "loc_monitor": {
+   "cpu_pct": {
+    "p50": 7.0,
+    "p95": 8.9,
+    "mean": 7.3883,
+    "max": 9.9
+   },
+   "rss_mb_max": 180.6
+  },
+  "ekf_node": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 3.0,
+    "mean": 1.9057,
+    "max": 3.0
+   },
+   "rss_mb_max": 26.7
+  },
+  "scan_body_mask": {
+   "cpu_pct": {
+    "p50": 5.0,
+    "p95": 6.0,
+    "mean": 4.6923,
+    "max": 7.0
+   },
+   "rss_mb_max": 69.0
+  },
+  "map_server": {
+   "cpu_pct": {
+    "p50": 1.0,
+    "p95": 3.0,
+    "mean": 1.2114,
+    "max": 4.0
+   },
+   "rss_mb_max": 66.8
+  },
+  "lifecycle_manager": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 3.0,
+    "mean": 1.5943,
+    "max": 4.0
+   },
+   "rss_mb_max": 53.0
+  },
+  "scan_merge": {
+   "cpu_pct": {
+    "p50": 5.0,
+    "p95": 6.0,
+    "mean": 5.0531,
+    "max": 7.0
+   },
+   "rss_mb_max": 69.2
+  }
+ }
+}

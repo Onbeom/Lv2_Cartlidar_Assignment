@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": -0.001,
+ "G3_n_overlap_samples": 1938,
+ "G4_loc_rmse_m": 0.0514,
+ "G4_loc_max_m": 0.1216,
+ "G4_yaw_rmse_rad": 0.0584,
+ "G4_n_samples": 3148,
+ "G5_cmd": {
+  "n": 5472,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.19255748391151428,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 66.65,
+   "pos_err": 0.1552,
+   "yaw_err": 0.0367,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 31.8,
+   "pos_err": 0.19,
+   "yaw_err": 0.0007,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 구간 규칙)",
+   "status": "ABORTED",
+   "duration_s": 104.92,
+   "pos_err": 0.3504,
+   "yaw_err": 1.8746,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 53.88,
+   "pos_err": 0.0282,
+   "yaw_err": 0.044,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "ABORTED",
+   "duration_s": 20.55,
+   "pos_err": 1.7692,
+   "yaw_err": 0.0646,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 구간 규칙)",
+   "status": "ABORTED",
+   "duration_s": 8.0,
+   "pos_err": 2.9012,
+   "yaw_err": 1.9635,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 8.0,
+   "pos_err": 2.736,
+   "yaw_err": 1.9621,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  }
+ ],
+ "G3_pass": false,
+ "G4_pass": false,
+ "G5_pass": true,
+ "pass": false
+}

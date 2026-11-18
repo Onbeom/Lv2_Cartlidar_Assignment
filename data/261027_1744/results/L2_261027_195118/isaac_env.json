@@ -1,0 +1,7 @@
+{
+  "ROS_DISTRO": "lyrical",
+  "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+  "ROS_DOMAIN_ID": "26",
+  "ROS_AUTOMATIC_DISCOVERY_RANGE": "LOCALHOST",
+  "PYTHONPATH": "/home/pa4/git/lv2_next_module/261025_0307/bridge_check/pylinks:/opt/ros/lyrical/opt/gz_sim_vendor/lib/python:/opt/ros/lyrical/opt/gz_transport_vendor/lib/python:/opt/ros/lyrical/opt/sdformat_vendor/lib/python:/opt/ros/lyrical/opt/gz_msgs_vendor/lib/python:/opt/ros/lyrical/opt/gz_math_vendor/lib/python:/opt/ros/lyrical/lib/python3.12/site-packages"
+}

@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0443,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0072,
+ "G4_loc_max_m": 0.0118,
+ "G4_yaw_rmse_rad": 0.0106,
+ "G4_n_samples": 381,
+ "G5_cmd": {
+  "n": 507,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.0806565537541442,
+  "wz_abs_max": 0.6966942148760331
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 25.25,
+   "pos_err": 1.4424,
+   "yaw_err": 2.8224,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 3.2121,
+   "yaw_err": 1.6069,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.75, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.05) to (4.05, 0.31) [q: 0.00, 0.00, 0.71, 0.71] (yaw: 1.57): \"Start occupied\""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 3.3325,
+   "yaw_err": 2.7829,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.76, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.05) to (4.21, 0.77) [q: 0.00, 0.00, 0.98, 0.20] (yaw: 2.75): \"Start occupied\""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 2.7617,
+   "yaw_err": 1.6069,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.75, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.04) to (2.20, 2.62) [q: 0.00, 0.00, 0.71, 0.71] (yaw: 1.57): \"Start occupied\""
+  },
+  {
+   "name": "start_box_3",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 4.6652,
+   "yaw_err": 1.1486,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.75, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.04) to (2.54, 4.55) [q: 0.00, 0.00, 0.53, 0.85] (yaw: 1.11): \"Start occupied\""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 6.1367,
+   "yaw_err": 2.8165,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.75, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.04) to (4.22, 5.49) [q: 0.00, 0.00, -0.99, 0.14] (yaw: -2.85): \"Start occupied\""
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 0.6676,
+   "yaw_err": 3.1055,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.75, 0.29) [q: 0.00, 0.00, -0.02, 1.00] (yaw: -0.04) to (0.80, 0.95) [q: 0.00, 0.00, 1.00, 0.00] (yaw: 3.14): \"Start occupied\""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

@@ -1,0 +1,58 @@
+{
+ "mode_ok": true,
+ "boot_line": [
+  "[component_container_mt-1] [INFO] [1793932669.450789594] [perception_node]: 검출기: color(any) engine_path 없음 → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+ ],
+ "F7": {
+  "base_hz": 15.0,
+  "stop_s": 0.009,
+  "late": 0,
+  "recover_s": 0.143,
+  "stall_warn": 1,
+  "alive": true,
+  "mode_ok": true,
+  "pass": true,
+  "took_s": 9.1
+ },
+ "F8": {
+  "cases": {
+   "color_mono8": {
+    "alive": true,
+    "recover_s": 0.057,
+    "pass": true
+   },
+   "color_short": {
+    "alive": true,
+    "recover_s": 0.098,
+    "pass": true
+   },
+   "color_zero": {
+    "alive": true,
+    "recover_s": 0.081,
+    "pass": true
+   },
+   "color_weird": {
+    "alive": true,
+    "recover_s": 0.036,
+    "pass": true
+   },
+   "depth_size": {
+    "alive": true,
+    "recover_s": 0.083,
+    "pass": true
+   },
+   "depth_short": {
+    "alive": true,
+    "recover_s": 0.063,
+    "pass": true
+   },
+   "arm_short": {
+    "alive": true,
+    "recover_s": 0.163,
+    "pass": true
+   }
+  },
+  "pass": true,
+  "took_s": 35.7
+ }
+}

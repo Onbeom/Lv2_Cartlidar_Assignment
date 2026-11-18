@@ -1,0 +1,59 @@
+{
+  "measured": {
+    "segments": {
+      "elbow=+0.1": {
+        "target_rad": 0.1,
+        "q_end_rad": 0.09517919,
+        "ok": true
+      },
+      "elbow back 0": {
+        "target_rad": 0.0,
+        "q_end_rad": -0.004877474,
+        "ok": true
+      },
+      "elbow=-0.1": {
+        "target_rad": -0.1,
+        "q_end_rad": -0.10488827,
+        "ok": true
+      },
+      "elbow back 0 (2)": {
+        "target_rad": 0.0,
+        "q_end_rad": -0.0048775766,
+        "ok": true
+      }
+    },
+    "다른 팔 관절 |q| 최대": {
+      "RMX52_Base_Yaw": 8.519245e-06,
+      "RMX52_Shoulder": 0.024833234,
+      "RMX52_Wrist_Pitch": 0.0057387617,
+      "RMX52_Wrist_Roll_Reversed": 7.154618e-07
+    },
+    "max_velocities": {
+      "Wheel_Revolute_Front_Left": 1000.0,
+      "Wheel_Revolute_Front_Right": 1000.0,
+      "Wheel_Revolute_Rear_Left": 1000.0,
+      "Wheel_Revolute_Rear_Right": 1000.0,
+      "RMX52_Base_Yaw": 1000.0,
+      "RMX52_Shoulder": 1000.0,
+      "RMX52_Elbow": 1000.0,
+      "RMX52_Wrist_Pitch": 1000.0,
+      "RMX52_Wrist_Roll_Reversed": 1000.0,
+      "gripper_left_joint": 1000.0,
+      "gripper_right_joint": 1000.0
+    },
+    "정지구간_팔꿈치_|보고−위치차분|_평균_rad_s": 0.10181098028335,
+    "solver": [
+      "TGS",
+      {
+        "physxArticulation:solverPositionIterationCount": null,
+        "physxArticulation:solverVelocityIterationCount": null
+      }
+    ],
+    "gravity": 9.81
+  },
+  "checks": {
+    "구간 끝마다 부호 같고 오차 ≤ 0.01 rad": true,
+    "정지 구간 |보고 − 위치 차분| ≤ 0.005 rad/s": false
+  },
+  "verdict": "실패"
+}

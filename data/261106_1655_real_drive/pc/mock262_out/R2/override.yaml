@@ -1,0 +1,9 @@
+mission_node:
+  ros__parameters:
+    survey:
+      enabled: false
+    start_box:
+      enabled: true
+    oblique:
+      enabled: true
+    log_dir: /home/pa4/git/lv2_next_module/261106_1655_real_drive/pc/mock262_out/R2/log

@@ -1,0 +1,37 @@
+{
+ "checkpoint": "/home/pa4/git/lv2_next_module/261025_2117/rl1_arm_reach/logs/rsl_rl/rl1_arm_reach/2026-10-26_20-38-56_v6_seed1/model_999.pt",
+ "design": "v6",
+ "num_envs": 100,
+ "n_targets": 1000,
+ "eval_table": "/home/pa4/git/lv2_next_module/261025_2117/rl1_arm_reach/results/targets/targets_eval_seed2.npz",
+ "start_pose_seed": 0,
+ "wall_s": 121.8,
+ "step_dt": 0.03333333333333333,
+ "J1_ratio_err3s_le_10mm": 0.66,
+ "J1_err3s_mm": {
+  "median": 7.516419887542725,
+  "p95": 34.14044189453125,
+  "max": 412.4971618652344
+ },
+ "J2_first_10mm_s": {
+  "median": 1.4833333333333334,
+  "never_reached": 212
+ },
+ "J3_contact_segments": 39,
+ "J3_contact_steps": 1226,
+ "J4_joint_vel_max_rad_s": 16.21984100341797,
+ "J4_torque_sat_time_ratio": 0.4163033664226532,
+ "ref_physx_force_sat_time_ratio": 0.000151666667079553,
+ "J5_last1s_vel_rms_rad_s": {
+  "max": 2.8043956756591797,
+  "p95": 0.27724072337150574,
+  "median": 0.23233723640441895
+ },
+ "verdict": {
+  "J1": false,
+  "J2": true,
+  "J3": false,
+  "J4": false,
+  "J5": false
+ }
+}

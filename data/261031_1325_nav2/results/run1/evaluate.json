@@ -1,0 +1,80 @@
+{
+ "n_goals": 6,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0443,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0457,
+ "G4_loc_max_m": 0.1078,
+ "G4_yaw_rmse_rad": 0.0325,
+ "G4_n_samples": 5987,
+ "G5_cmd": {
+  "n": 11565,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.18246209621429443,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 61.6,
+   "pos_err": 0.0443,
+   "yaw_err": 0.102,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x)",
+   "status": "ABORTED",
+   "duration_s": 114.73,
+   "pos_err": 0.2092,
+   "yaw_err": 0.0322,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 80.42,
+   "pos_err": 0.046,
+   "yaw_err": 0.0916,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "ABORTED",
+   "duration_s": 110.5,
+   "pos_err": 0.3817,
+   "yaw_err": 0.021,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "status": "ABORTED",
+   "duration_s": 85.66,
+   "pos_err": 0.1801,
+   "yaw_err": 0.0099,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "start",
+   "status": "ABORTED",
+   "duration_s": 135.83,
+   "pos_err": 0.2076,
+   "yaw_err": 0.0377,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

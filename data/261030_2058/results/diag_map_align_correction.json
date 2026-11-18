@@ -1,0 +1,213 @@
+{
+ "simulation_only": true,
+ "rows": [
+  {
+   "kind": "lidar_only",
+   "light": "bright",
+   "variant": "c6_r1",
+   "A1_rmse_m": 0.04698830730830918,
+   "map_align": [
+    0.010000000000000283,
+    2.8102520310824275e-16,
+    -0.5
+   ],
+   "A1_rmse_after_map_align_m": 0.01472114074922874,
+   "A1_max_after_map_align_m": 0.061721519472104046
+  },
+  {
+   "kind": "lidar_only",
+   "light": "bright",
+   "variant": "V1_csm_cost",
+   "A1_rmse_m": 0.06795977587908135,
+   "map_align": [
+    2.8102520310824275e-16,
+    2.8102520310824275e-16,
+    -1.125
+   ],
+   "A1_rmse_after_map_align_m": 0.01090914707732688,
+   "A1_max_after_map_align_m": 0.04764881276002168
+  },
+  {
+   "kind": "lidar_only",
+   "light": "bright",
+   "variant": "V2_no_csm",
+   "A1_rmse_m": 10.891847052427794,
+   "map_align": [
+    0.29500000000000054,
+    -0.13499999999999984,
+    5.5
+   ],
+   "A1_rmse_after_map_align_m": 10.89337912997894,
+   "A1_max_after_map_align_m": 16.99627195775986
+  },
+  {
+   "kind": "lidar_only",
+   "light": "bright",
+   "variant": "V3_ceres_rot400",
+   "A1_rmse_m": 0.03759303146018058,
+   "map_align": [
+    0.010000000000000283,
+    2.8102520310824275e-16,
+    -0.5
+   ],
+   "A1_rmse_after_map_align_m": 0.011281281460225797,
+   "A1_max_after_map_align_m": 0.0538285528339421
+  },
+  {
+   "kind": "truth_odom",
+   "light": "bright",
+   "variant": "c6_r1",
+   "A1_rmse_m": 0.05635592996634192,
+   "map_align": [
+    0.010000000000000283,
+    0.005000000000000296,
+    -0.7500000000000001
+   ],
+   "A1_rmse_after_map_align_m": 0.01964611087182737,
+   "A1_max_after_map_align_m": 0.05431844858324699
+  },
+  {
+   "kind": "truth_odom",
+   "light": "bright",
+   "variant": "V1_csm_cost",
+   "A1_rmse_m": 0.06099255509598996,
+   "map_align": [
+    2.8102520310824275e-16,
+    0.005000000000000282,
+    -1.0
+   ],
+   "A1_rmse_after_map_align_m": 0.019169799816786497,
+   "A1_max_after_map_align_m": 0.04871720068894175
+  },
+  {
+   "kind": "truth_odom",
+   "light": "bright",
+   "variant": "V2_no_csm",
+   "A1_rmse_m": 0.0370481552284183,
+   "map_align": [
+    2.8102520310824275e-16,
+    0.010000000000000283,
+    -0.25
+   ],
+   "A1_rmse_after_map_align_m": 0.035539767842726645,
+   "A1_max_after_map_align_m": 0.16023969049793363
+  },
+  {
+   "kind": "truth_odom",
+   "light": "bright",
+   "variant": "V3_ceres_rot400",
+   "A1_rmse_m": 0.04994080730779338,
+   "map_align": [
+    0.005000000000000296,
+    0.005000000000000282,
+    -0.7500000000000001
+   ],
+   "A1_rmse_after_map_align_m": 0.019488122755407355,
+   "A1_max_after_map_align_m": 0.05970061053279105
+  },
+  {
+   "kind": "lidar_only",
+   "light": "dark",
+   "variant": "c6_r1",
+   "A1_rmse_m": 0.008549154806272321,
+   "map_align": [
+    -0.00499999999999972,
+    0.005000000000000282,
+    0.0
+   ],
+   "A1_rmse_after_map_align_m": 0.009448952039061329,
+   "A1_max_after_map_align_m": 0.052756352005335724
+  },
+  {
+   "kind": "lidar_only",
+   "light": "dark",
+   "variant": "V1_csm_cost",
+   "A1_rmse_m": 0.056853863120129626,
+   "map_align": [
+    0.005000000000000282,
+    0.005000000000000282,
+    -0.875
+   ],
+   "A1_rmse_after_map_align_m": 0.009749743109553836,
+   "A1_max_after_map_align_m": 0.0441624875493662
+  },
+  {
+   "kind": "lidar_only",
+   "light": "dark",
+   "variant": "V2_no_csm",
+   "A1_rmse_m": 13.353978071713803,
+   "map_align": [
+    -0.32,
+    -0.32,
+    -5.5
+   ],
+   "A1_rmse_after_map_align_m": 13.791723484338801,
+   "A1_max_after_map_align_m": 20.741609252258666
+  },
+  {
+   "kind": "lidar_only",
+   "light": "dark",
+   "variant": "V3_ceres_rot400",
+   "A1_rmse_m": 0.03865334077963808,
+   "map_align": [
+    0.010000000000000283,
+    2.8102520310824275e-16,
+    -0.5
+   ],
+   "A1_rmse_after_map_align_m": 0.0089830725945961,
+   "A1_max_after_map_align_m": 0.04877922363687879
+  },
+  {
+   "kind": "truth_odom",
+   "light": "dark",
+   "variant": "c6_r1",
+   "A1_rmse_m": 0.05451828195998511,
+   "map_align": [
+    0.005000000000000282,
+    0.005000000000000282,
+    -0.875
+   ],
+   "A1_rmse_after_map_align_m": 0.0134938177899249,
+   "A1_max_after_map_align_m": 0.04587904097688189
+  },
+  {
+   "kind": "truth_odom",
+   "light": "dark",
+   "variant": "V1_csm_cost",
+   "A1_rmse_m": 0.056463749798839585,
+   "map_align": [
+    0.005000000000000282,
+    0.005000000000000282,
+    -0.875
+   ],
+   "A1_rmse_after_map_align_m": 0.013343396202166489,
+   "A1_max_after_map_align_m": 0.046818380581886684
+  },
+  {
+   "kind": "truth_odom",
+   "light": "dark",
+   "variant": "V2_no_csm",
+   "A1_rmse_m": 0.03287708754676202,
+   "map_align": [
+    0.005000000000000282,
+    0.010000000000000283,
+    -0.125
+   ],
+   "A1_rmse_after_map_align_m": 0.031362530837456694,
+   "A1_max_after_map_align_m": 0.14296938929251274
+  },
+  {
+   "kind": "truth_odom",
+   "light": "dark",
+   "variant": "V3_ceres_rot400",
+   "A1_rmse_m": 0.04829942491135906,
+   "map_align": [
+    0.005000000000000296,
+    0.005000000000000282,
+    -0.7500000000000001
+   ],
+   "A1_rmse_after_map_align_m": 0.01323049342064829,
+   "A1_max_after_map_align_m": 0.05047017006020526
+  }
+ ]
+}

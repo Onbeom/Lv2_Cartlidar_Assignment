@@ -1,0 +1,46 @@
+{
+ "joints_last": {
+  "joint1": -6.215661692810059,
+  "joint2": -0.6902913451194763,
+  "joint3": -0.15800002217292786,
+  "joint4": 1.8929322957992554,
+  "joint5": 0.0,
+  "gripper_roll": 0.9357283115386963
+ },
+ "info_topic": "/arm_camera/camera_info",
+ "cx": 584.1242501,
+ "cy": 359.363197,
+ "joints": 3006,
+ "msgs": 103,
+ "hit": 103,
+ "rate_pct": 100.0,
+ "frames": [
+  "base_link"
+ ],
+ "tags": {
+  "5": 103
+ },
+ "meta": {
+  "tag_id": 5,
+  "color": 1,
+  "shape": 1,
+  "confidence": 0.638
+ },
+ "other_pucks": 0,
+ "median_xyz_m": [
+  0.3225,
+  -0.0138,
+  0.1207
+ ],
+ "stab_p95_mm": 0.37,
+ "checks": {
+  "camera_info 가 돌린 값": true,
+  "관절값 받음": true,
+  "팔 태그 퍽 비율 80 % 이상": true,
+  "frame_id = base_link": true,
+  "태그 번호 하나": true,
+  "수평 흔들림 p95 5 mm 이하": true,
+  "위치 유한": true
+ },
+ "passed": true
+}

@@ -1,0 +1,18 @@
+{
+  "measured": {
+    "base_z_at_1s_m": 0.006750509,
+    "base_z_change_max_m": 2.0880000000007837e-07,
+    "roll_change_max_deg": 3.2870292708676886e-05,
+    "pitch_change_max_deg": 4.750054868083245e-05,
+    "링크속도_위치차분_최대_1s이후_mps": 7.589393519257754e-06,
+    "참고_보고속도_링크최대_1s이후_mps": 0.013638453558087349,
+    "max_link_speed_before_1s_mps": 0.020169707015156746
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base 높이 변화 ≤ 3 mm": true,
+    "roll·pitch 변화 ≤ 1°": true,
+    "모든 링크 속도(위치 차분) ≤ 0.01 m/s": true
+  },
+  "verdict": "성공"
+}

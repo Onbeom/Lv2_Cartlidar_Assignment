@@ -1,0 +1,59 @@
+{
+  "bag_counts": {
+    "/tf_static": 1,
+    "/clock": 866,
+    "/odom": 436,
+    "/tf": 677,
+    "/joint_states": 726,
+    "/scan_front": 146,
+    "/scan_rear": 146,
+    "/top_camera_front/infra1/image_rect_raw": 431,
+    "/top_camera_front/infra1/camera_info": 431,
+    "/top_camera_front/infra2/camera_info": 431,
+    "/top_camera_front/infra2/image_rect_raw": 431
+  },
+  "T1": {
+    "left_n": 431,
+    "right_n": 431,
+    "paired_ratio_le_1ms": 1.0,
+    "baseline_m": 0.050041150301694884,
+    "frame_dt_median_s": 0.033333332999999965,
+    "frame_dt_max_s": 0.03333333500000002,
+    "ir_mean_brightness": 149.45294921874998,
+    "ir_std_brightness": 35.4175985930424,
+    "pass": true
+  },
+  "T2": {
+    "rcvbuf_errors_delta": 0,
+    "count_over_expected": {
+      "/scan_front": 1.0057405281285876,
+      "/scan_rear": 1.0057405281285876,
+      "/odom": 1.0011481056257177,
+      "/joint_states": 1.0002296211251434,
+      "/top_camera_front/infra1/image_rect_raw": 0.9896670493685419,
+      "/top_camera_front/infra2/image_rect_raw": 0.9896670493685419
+    },
+    "recorded_over_sent": {
+      "/scan_front": 1.0,
+      "/odom": 1.0,
+      "/joint_states": 1.0,
+      "/top_camera_front/infra1/image_rect_raw": 1.0
+    },
+    "pass": true
+  },
+  "T3": {
+    "path_truth_m": 0.776327841307457,
+    "path_odom_m": 0.5369599383434099,
+    "path_ratio": 0.6916664710093171,
+    "turn_truth_deg": 178.75868816583358,
+    "turn_odom_deg": 196.4561680275433,
+    "turn_ratio": 1.0990020683374666,
+    "end_pos_err_m": 0.23702614496847585,
+    "end_yaw_err_deg": 18.21400945720106,
+    "go_speed_truth_med": 0.20001390304452943,
+    "go_speed_odom_med": 0.19997985812129138,
+    "turn_rate_truth_med": 0.5461847545633945,
+    "turn_rate_odom_med": 0.5961830647927686,
+    "pass_straight": true
+  }
+}

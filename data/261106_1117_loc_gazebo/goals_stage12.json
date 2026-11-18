@@ -1,0 +1,210 @@
+{
+ "layout": null,
+ "rule": "approach_poses.yaml stage, ok 인 12 곳 차례(navigation README 와 같은 목록)",
+ "goals": [
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B1:S",
+   "x": 1.468,
+   "y": 0.3647,
+   "yaw": 1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B2:S",
+   "x": 3.67,
+   "y": 2.4667,
+   "yaw": 1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B3:S",
+   "x": 2.936,
+   "y": 4.6687,
+   "yaw": 1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B3:N",
+   "x": 2.936,
+   "y": 5.9393,
+   "yaw": -1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B4:S",
+   "x": 0.734,
+   "y": 4.6687,
+   "yaw": 1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B4:N",
+   "x": 0.734,
+   "y": 5.9393,
+   "yaw": -1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B5:N",
+   "x": 2.202,
+   "y": 5.9393,
+   "yaw": -1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "B6:W",
+   "x": 2.9847,
+   "y": 3.886,
+   "yaw": -0.0
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "L1",
+   "x": 2.9847,
+   "y": 0.95,
+   "yaw": -0.0
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "L2",
+   "x": 2.202,
+   "y": 4.3853,
+   "yaw": -1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "L3",
+   "x": 3.67,
+   "y": 4.6687,
+   "yaw": 1.5708
+  },
+  {
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31,
+   "name": "HOME",
+   "x": 0.6936,
+   "y": 0.95,
+   "yaw": 3.1416
+  }
+ ]
+}

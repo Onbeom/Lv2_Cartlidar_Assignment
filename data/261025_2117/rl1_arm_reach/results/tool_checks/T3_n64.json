@@ -1,0 +1,12 @@
+{
+ "test": "T3",
+ "num_envs": 64,
+ "startup_s": 13.4,
+ "gpu_used_after_reset_mib": 2465,
+ "gpu_peak_mib": 2695,
+ "torch_max_alloc_mib": 0.7,
+ "policy_steps": 300,
+ "wall_s": 18.61,
+ "env_steps_per_s": 1031.4,
+ "s_per_iteration_sim_only": 1.489
+}

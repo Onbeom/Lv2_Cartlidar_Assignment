@@ -1,0 +1,71 @@
+{
+ "n_goals": 5,
+ "G1_succeeded": true,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.034,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0271,
+ "G4_loc_max_m": 0.0546,
+ "G4_yaw_rmse_rad": 0.0164,
+ "G4_n_samples": 2559,
+ "G5_cmd": {
+  "n": 4963,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.17973515391349792,
+  "vx_min": -0.047539882361888885,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 48.14,
+   "pos_err": 0.0409,
+   "yaw_err": 0.1445,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 30.14,
+   "pos_err": 0.0593,
+   "yaw_err": 0.1591,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 45.12,
+   "pos_err": 0.0713,
+   "yaw_err": 0.1453,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "status": "SUCCEEDED",
+   "duration_s": 35.82,
+   "pos_err": 0.0404,
+   "yaw_err": 0.1244,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start",
+   "status": "SUCCEEDED",
+   "duration_s": 84.34,
+   "pos_err": 0.0612,
+   "yaw_err": 0.1729,
+   "error_code": 0,
+   "error_msg": ""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

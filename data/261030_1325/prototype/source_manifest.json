@@ -1,0 +1,35 @@
+{
+  "purpose": "개인 PC 운용후보, 팀 반영/Jetson 실행 전",
+  "classes": [
+    "red_cylinder",
+    "green_cylinder",
+    "red_cuboid",
+    "green_cuboid"
+  ],
+  "input": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output": [
+    1,
+    8,
+    8400
+  ],
+  "postprocess": "실수좌표·클래스별NMS, 최대300",
+  "verification": {
+    "pt_onnx_raw_equivalence_203_images": true,
+    "actual_cpp_postprocess": true,
+    "trt10_full_compile": false,
+    "jetson_engine": false
+  },
+  "sources": {
+    "yolo_task4.yaml": "300173b3f7330a1c3af4d813c6eced724a58ce5dfa794c934f2dc650904d3aa0",
+    "yolo_models/yolo11n_task4_B.pt": "e754b74318c8c7acb8a66e909f6fbbc2832c94445688f6a39fbec38c2d095587",
+    "yolo_models/yolo11n_task4_B.onnx": "d9214dafc3ef2eadd747f3f1e83154d86559e452273cae4f025015c1b3f09350",
+    "yolo_models/classes.txt": "eb22ffb1840f10ae1ed7262aba32dc2e9eabc3c5a9e6dd4f25b7fd81b20abca8",
+    "perception/src/trt_detector.cpp": "b0300f626d71025c7b0604ab6e249398023762f6d96aa54ee9c985458386bc10",
+    "perception/include/perception/yolo_postprocess.hpp": "86a0fddf208f9c0f04ffabcdfcbc5726c81af8e89d002bad1ace0ee52c8ae8a0"
+  }
+}

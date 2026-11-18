@@ -1,0 +1,680 @@
+[
+  {
+    "canonical": "Motor_Front_Left",
+    "old": "Motor_Front_Left",
+    "new": "Motor_Front_Left",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Motor_Front_Right",
+    "old": "Motor_Front_Right",
+    "new": "Motor_Front_Right",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Wheel_Front_Left",
+    "old": "Wheel_Front_Left",
+    "new": "Wheel_Front_Left",
+    "link": "wheel_front_left"
+  },
+  {
+    "canonical": "Wheel_Front_Right",
+    "old": "Wheel_Front_Right",
+    "new": "Wheel_Front_Right",
+    "link": "wheel_front_right"
+  },
+  {
+    "canonical": "Floor_1_Joined",
+    "old": "Floor_1_Joined",
+    "new": "Floor_1_Joined",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Floor_3_Joined",
+    "old": "Floor_3_Joined",
+    "new": "Floor_3_Joined",
+    "link": "base_link"
+  },
+  {
+    "canonical": "LDS_Front_Underside",
+    "old": "LDS_Front_Underside",
+    "new": "LDS_Front_Underside",
+    "link": "lidar_front"
+  },
+  {
+    "canonical": "housing",
+    "old": "housing",
+    "new": "housing",
+    "link": "base_link"
+  },
+  {
+    "canonical": "magazine_B",
+    "old": "magazine_B",
+    "new": "magazine_B",
+    "link": "base_link"
+  },
+  {
+    "canonical": "magazine_G",
+    "old": "magazine_G",
+    "new": "magazine_G",
+    "link": "base_link"
+  },
+  {
+    "canonical": "magazine_R",
+    "old": "magazine_R",
+    "new": "magazine_R",
+    "link": "base_link"
+  },
+  {
+    "canonical": "rail_hi",
+    "old": "rail_hi",
+    "new": "rail_hi",
+    "link": "base_link"
+  },
+  {
+    "canonical": "rail_lo",
+    "old": "rail_lo",
+    "new": "rail_lo",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Motor_Rear_Left",
+    "old": "Motor_Rear_Left",
+    "new": "Motor_Rear_Left",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Wheel_Rear_Left",
+    "old": "Wheel_Rear_Left",
+    "new": "Wheel_Rear_Left",
+    "link": "wheel_rear_left"
+  },
+  {
+    "canonical": "Motor_Rear_Right",
+    "old": "Motor_Rear_Right",
+    "new": "Motor_Rear_Right",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Wheel_Rear_Right",
+    "old": "Wheel_Rear_Right",
+    "new": "Wheel_Rear_Right",
+    "link": "wheel_rear_right"
+  },
+  {
+    "canonical": "LDS_Rear_Underside",
+    "old": "LDS_Rear_Underside",
+    "new": "LDS_Rear_Underside",
+    "link": "lidar_rear"
+  },
+  {
+    "canonical": "USB2LSD",
+    "old": "USB2LSD",
+    "new": "USB2LSD",
+    "link": "base_link"
+  },
+  {
+    "canonical": "housing",
+    "old": "housing",
+    "new": "housing",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Open CASCADE STEP translator 8.0 1",
+    "old": "Open CASCADE STEP translator 8.0 1",
+    "new": "Open CASCADE STEP translator 8.0 1",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Manipulator_Support_Cyan",
+    "old": "Manipulator_Support_Cyan",
+    "new": "Manipulator_Support_Cyan",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Manipulator_Support_Coral",
+    "old": "Manipulator_Support_Coral",
+    "new": "Manipulator_Support_Coral",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Profile_2020_450mm_Rear_Left_Envelope",
+    "old": "Profile_2020_450mm_Rear_Left_Envelope",
+    "new": "Profile_2020_450mm_Rear_Left_Envelope",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Profile_2020_450mm_Rear_Right_Envelope",
+    "old": "Profile_2020_450mm_Rear_Right_Envelope",
+    "new": "Profile_2020_450mm_Rear_Right_Envelope",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Chassis_Bracket_Left_16mm",
+    "old": "Chassis_Bracket_Left_16mm",
+    "new": "Chassis_Bracket_Left_16mm",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Chassis_Bracket_Right_16mm",
+    "old": "Chassis_Bracket_Right_16mm",
+    "new": "Chassis_Bracket_Right_16mm",
+    "link": "base_link"
+  },
+  {
+    "canonical": "RMX52_DC12_STD_1",
+    "old": "RMX52_Motor_J1_Base_Yaw",
+    "new": "base_link__RMX52_Motor_J1_Base_Yaw",
+    "link": "base_link"
+  },
+  {
+    "canonical": "RMX52_FR12_S102_1",
+    "old": "RMX52_FR12_S102_1",
+    "new": "arm_link_1__RMX52_FR12_S102_1",
+    "link": "arm_link_1"
+  },
+  {
+    "canonical": "RMX52_DC12_W-IDLE_ALT1_1",
+    "old": "RMX52_Motor_J2_Shoulder",
+    "new": "arm_link_1__RMX52_Motor_J2_Shoulder",
+    "link": "arm_link_1"
+  },
+  {
+    "canonical": "RMX52_FR12_H101_1",
+    "old": "RMX52_FR12_H101_1",
+    "new": "arm_link_2__RMX52_FR12_H101_1",
+    "link": "arm_link_2"
+  },
+  {
+    "canonical": "RMX52_ILA-A01_OPEN_1",
+    "old": "RMX52_ILA-A01_OPEN_1",
+    "new": "arm_link_2__RMX52_ILA-A01_OPEN_1",
+    "link": "arm_link_2"
+  },
+  {
+    "canonical": "RMX52_FR12_S101_1",
+    "old": "RMX52_FR12_S101_1",
+    "new": "arm_link_2__RMX52_FR12_S101_1",
+    "link": "arm_link_2"
+  },
+  {
+    "canonical": "RMX52_ILA-A02_OPEN_1",
+    "old": "RMX52_ILA-A02_OPEN_1",
+    "new": "arm_link_3__RMX52_ILA-A02_OPEN_1",
+    "link": "arm_link_3"
+  },
+  {
+    "canonical": "RMX52_FR12_H104_1",
+    "old": "RMX52_FR12_H104_1",
+    "new": "arm_link_4__RMX52_FR12_H104_1",
+    "link": "arm_link_4"
+  },
+  {
+    "canonical": "RMX52_IRB-A01_OPEN_1",
+    "old": "RMX52_IRB-A01_OPEN_1",
+    "new": "arm_link_5__RMX52_IRB-A01_OPEN_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_IRB-A02_OPEN_1",
+    "old": "RMX52_IRB-A02_OPEN_1",
+    "new": "arm_link_5__RMX52_IRB-A02_OPEN_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_ICA-A01_OPEN_1",
+    "old": "RMX52_ICA-A01_OPEN_1",
+    "new": "arm_link_5__RMX52_ICA-A01_OPEN_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_IBL-A01_OPEN_1",
+    "old": "RMX52_IBL-A01_OPEN_1",
+    "new": "arm_link_5__RMX52_IBL-A01_OPEN_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_ILR-A01_OPEN_1",
+    "old": "RMX52_ILR-A01_OPEN_1",
+    "new": "arm_link_5__RMX52_ILR-A01_OPEN_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_IFB-A01_1",
+    "old": "RMX52_PR33_IFB-A01_1",
+    "new": "arm_link_5__RMX52_PR33_IFB-A01_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_IGP-A01_OPEN_1",
+    "old": "RMX52_IGP-A01_OPEN_1",
+    "new": "gripper_left_link__RMX52_IGP-A01_OPEN_1",
+    "link": "gripper_left_link"
+  },
+  {
+    "canonical": "RMX52_WBH_M3X10_1",
+    "old": "RMX52_WBH_M3X10_1",
+    "new": "arm_link_5__RMX52_WBH_M3X10_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X10_1",
+    "old": "RMX52_WBH_M2_5X10_1",
+    "new": "arm_link_5__RMX52_WBH_M2_5X10_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_1",
+    "old": "RMX52_WBH_M2_5X5_1",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_1",
+    "old": "RMX52_WBH_M2_5X8_1",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2X4_1",
+    "old": "RMX52_WBH_M2X4_1",
+    "new": "arm_link_5__RMX52_WBH_M2X4_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_SPD-A01_1",
+    "old": "RMX52_PR33_SPD-A01_1",
+    "new": "gripper_left_link__RMX52_PR33_SPD-A01_1",
+    "link": "gripper_left_link"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_1",
+    "old": "RMX52_NUT2_M2_5_1",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M3_1",
+    "old": "RMX52_NUT2_M3_1",
+    "new": "arm_link_5__RMX52_NUT2_M3_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DC12_A01_SPACER_RING_1",
+    "old": "RMX52_DC12_A01_SPACER_RING_1",
+    "new": "arm_link_5__RMX52_DC12_A01_SPACER_RING_1",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DC12_W-IDLE_ALT1_2",
+    "old": "RMX52_Motor_J3_Elbow",
+    "new": "arm_link_2__RMX52_Motor_J3_Elbow",
+    "link": "arm_link_2"
+  },
+  {
+    "canonical": "RMX52_FR12_H101_2",
+    "old": "RMX52_FR12_H101_2",
+    "new": "arm_link_3__RMX52_FR12_H101_2",
+    "link": "arm_link_3"
+  },
+  {
+    "canonical": "RMX52_FR12_S102_2",
+    "old": "RMX52_FR12_S102_2",
+    "new": "arm_link_3__RMX52_FR12_S102_2",
+    "link": "arm_link_3"
+  },
+  {
+    "canonical": "RMX52_DC12_W-IDLE_ALT1_3",
+    "old": "RMX52_Motor_J4_Wrist_Pitch",
+    "new": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch",
+    "link": "arm_link_3"
+  },
+  {
+    "canonical": "RMX52_DC12_STD_2",
+    "old": "RMX52_Motor_J6_Gripper_Open_Close",
+    "new": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_IFB-A01_2",
+    "old": "RMX52_PR33_IFB-A01_2",
+    "new": "arm_link_5__RMX52_PR33_IFB-A01_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_IBL-A01_OPEN_2",
+    "old": "RMX52_IBL-A01_OPEN_2",
+    "new": "arm_link_5__RMX52_IBL-A01_OPEN_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_ILR-A01_OPEN_2",
+    "old": "RMX52_ILR-A01_OPEN_2",
+    "new": "arm_link_5__RMX52_ILR-A01_OPEN_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_IFB-A01_3",
+    "old": "RMX52_PR33_IFB-A01_3",
+    "new": "arm_link_5__RMX52_PR33_IFB-A01_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_IFB-A01_4",
+    "old": "RMX52_PR33_IFB-A01_4",
+    "new": "arm_link_5__RMX52_PR33_IFB-A01_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_IGP-A01_OPEN_2",
+    "old": "RMX52_IGP-A01_OPEN_2",
+    "new": "gripper_right_link__RMX52_IGP-A01_OPEN_2",
+    "link": "gripper_right_link"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X10_2",
+    "old": "RMX52_WBH_M2_5X10_2",
+    "new": "arm_link_5__RMX52_WBH_M2_5X10_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X10_3",
+    "old": "RMX52_WBH_M2_5X10_3",
+    "new": "arm_link_5__RMX52_WBH_M2_5X10_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X10_4",
+    "old": "RMX52_WBH_M2_5X10_4",
+    "new": "arm_link_5__RMX52_WBH_M2_5X10_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_2",
+    "old": "RMX52_WBH_M2_5X5_2",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_3",
+    "old": "RMX52_WBH_M2_5X5_3",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_4",
+    "old": "RMX52_WBH_M2_5X5_4",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_5",
+    "old": "RMX52_WBH_M2_5X5_5",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_5",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X5_6",
+    "old": "RMX52_WBH_M2_5X5_6",
+    "new": "arm_link_5__RMX52_WBH_M2_5X5_6",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_2",
+    "old": "RMX52_WBH_M2_5X8_2",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M3X10_2",
+    "old": "RMX52_WBH_M3X10_2",
+    "new": "arm_link_5__RMX52_WBH_M3X10_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M3X10_3",
+    "old": "RMX52_WBH_M3X10_3",
+    "new": "gripper_left_link__RMX52_WBH_M3X10_3",
+    "link": "gripper_left_link"
+  },
+  {
+    "canonical": "RMX52_WBH_M3X10_4",
+    "old": "RMX52_WBH_M3X10_4",
+    "new": "gripper_right_link__RMX52_WBH_M3X10_4",
+    "link": "gripper_right_link"
+  },
+  {
+    "canonical": "RMX52_WBH_M2X4_2",
+    "old": "RMX52_WBH_M2X4_2",
+    "new": "arm_link_5__RMX52_WBH_M2X4_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2X4_3",
+    "old": "RMX52_WBH_M2X4_3",
+    "new": "arm_link_5__RMX52_WBH_M2X4_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2X4_4",
+    "old": "RMX52_WBH_M2X4_4",
+    "new": "arm_link_5__RMX52_WBH_M2X4_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_PR33_SPD-A01_2",
+    "old": "RMX52_PR33_SPD-A01_2",
+    "new": "gripper_right_link__RMX52_PR33_SPD-A01_2",
+    "link": "gripper_right_link"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_3",
+    "old": "RMX52_WBH_M2_5X8_3",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_4",
+    "old": "RMX52_WBH_M2_5X8_4",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_5",
+    "old": "RMX52_WBH_M2_5X8_5",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_5",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_6",
+    "old": "RMX52_WBH_M2_5X8_6",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_6",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_7",
+    "old": "RMX52_WBH_M2_5X8_7",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_7",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_WBH_M2_5X8_8",
+    "old": "RMX52_WBH_M2_5X8_8",
+    "new": "arm_link_5__RMX52_WBH_M2_5X8_8",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_2",
+    "old": "RMX52_NUT2_M2_5_2",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_3",
+    "old": "RMX52_NUT2_M2_5_3",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_4",
+    "old": "RMX52_NUT2_M2_5_4",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_5",
+    "old": "RMX52_NUT2_M2_5_5",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_5",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_6",
+    "old": "RMX52_NUT2_M2_5_6",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_6",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_7",
+    "old": "RMX52_NUT2_M2_5_7",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_7",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M2_5_8",
+    "old": "RMX52_NUT2_M2_5_8",
+    "new": "arm_link_5__RMX52_NUT2_M2_5_8",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M3_2",
+    "old": "RMX52_NUT2_M3_2",
+    "new": "arm_link_5__RMX52_NUT2_M3_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M3_3",
+    "old": "RMX52_NUT2_M3_3",
+    "new": "arm_link_5__RMX52_NUT2_M3_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_NUT2_M3_4",
+    "old": "RMX52_NUT2_M3_4",
+    "new": "arm_link_5__RMX52_NUT2_M3_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DC12_A01_SPACER_RING_2",
+    "old": "RMX52_DC12_A01_SPACER_RING_2",
+    "new": "arm_link_5__RMX52_DC12_A01_SPACER_RING_2",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DC12_A01_SPACER_RING_3",
+    "old": "RMX52_DC12_A01_SPACER_RING_3",
+    "new": "arm_link_5__RMX52_DC12_A01_SPACER_RING_3",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DC12_A01_SPACER_RING_4",
+    "old": "RMX52_DC12_A01_SPACER_RING_4",
+    "new": "arm_link_5__RMX52_DC12_A01_SPACER_RING_4",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "RMX52_DYNAMIXEL_Wrist_Roll",
+    "old": "RMX52_Motor_J5_Wrist_Roll",
+    "new": "arm_link_4__RMX52_Motor_J5_Wrist_Roll",
+    "link": "arm_link_4"
+  },
+  {
+    "canonical": "RMX52_RW01_Reversed_Motor_Mount",
+    "old": "RMX52_RW01_Reversed_Motor_Mount",
+    "new": "arm_link_4__RMX52_RW01_Reversed_Motor_Mount",
+    "link": "arm_link_4"
+  },
+  {
+    "canonical": "RMX52_Wrist_Horn_Adapter_3mm",
+    "old": "RMX52_Wrist_Horn_Adapter_3mm",
+    "new": "arm_link_5__RMX52_Wrist_Horn_Adapter_3mm",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "Camera_D435_Pair_Source",
+    "old": "Camera_D435_Pair_Source",
+    "new": "Camera_D435_Pair_Source",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Camera_Top_Crossbar_2020_261mm",
+    "old": "Camera_Top_Crossbar_2020_261mm",
+    "new": "Camera_Top_Crossbar_2020_261mm",
+    "link": "base_link"
+  },
+  {
+    "canonical": "OpenCR_Floor1_A",
+    "old": "OpenCR_Floor1_A",
+    "new": "OpenCR_Floor1_A",
+    "link": "base_link"
+  },
+  {
+    "canonical": "OpenCR_Floor1_A",
+    "old": "OpenCR_Floor1_A",
+    "new": "OpenCR_Floor1_A",
+    "link": "base_link"
+  },
+  {
+    "canonical": "Jetson_Orin_Nano_DevKit_Envelope",
+    "old": "Jetson_Orin_Nano_DevKit_Envelope",
+    "new": "Jetson_Orin_Nano_DevKit_Envelope",
+    "link": "base_link"
+  },
+  {
+    "canonical": "ROBOTIS_LB012_Battery_Left_Envelope",
+    "old": "ROBOTIS_LB012_Battery_Left_Envelope",
+    "new": "ROBOTIS_LB012_Battery_Left_Envelope",
+    "link": "base_link"
+  },
+  {
+    "canonical": "ROBOTIS_LB012_Battery_Right_Envelope",
+    "old": "ROBOTIS_LB012_Battery_Right_Envelope",
+    "new": "ROBOTIS_LB012_Battery_Right_Envelope",
+    "link": "base_link"
+  },
+  {
+    "canonical": "LDS_Front_Deck_Fixed_Slotted_Base",
+    "old": "LDS_Front_Deck_Fixed_Slotted_Base",
+    "new": "LDS_Front_Deck_Fixed_Slotted_Base",
+    "link": "base_link"
+  },
+  {
+    "canonical": "LDS_Front_Sliding_Carrier",
+    "old": "LDS_Front_Sliding_Carrier",
+    "new": "LDS_Front_Sliding_Carrier",
+    "link": "lidar_front"
+  },
+  {
+    "canonical": "LDS_Rear_Deck_Fixed_Slotted_Base",
+    "old": "LDS_Rear_Deck_Fixed_Slotted_Base",
+    "new": "LDS_Rear_Deck_Fixed_Slotted_Base",
+    "link": "base_link"
+  },
+  {
+    "canonical": "LDS_Rear_Sliding_Carrier",
+    "old": "LDS_Rear_Sliding_Carrier",
+    "new": "LDS_Rear_Sliding_Carrier",
+    "link": "lidar_rear"
+  },
+  {
+    "canonical": "UC684_Camera_On_Gripper",
+    "old": "UC684_Camera_On_Gripper",
+    "new": "UC684_Camera_On_Gripper",
+    "link": "arm_link_5"
+  },
+  {
+    "canonical": "UC684_Camera_Bracket_PLA",
+    "old": "UC684_Camera_Bracket_PLA",
+    "new": "UC684_Camera_Bracket_PLA",
+    "link": "arm_link_5"
+  }
+]

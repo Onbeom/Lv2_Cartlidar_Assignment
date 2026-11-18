@@ -1,0 +1,162 @@
+{
+ "args": {
+  "maze": "/home/pa4/git/lv2_next_module/261030_1943/maze_src/maze/maze.usda",
+  "wall_map": "/home/pa4/git/lv2_next_module/261031_1325_nav2/config/map_mission_nav.yaml",
+  "objects_map": "../config/map_objects_fine_posts_walls.yaml",
+  "z_range": [
+   0.0,
+   0.5
+  ],
+  "res": 0.005,
+  "tol": 0.02,
+  "geom_posts": 1,
+  "out": "check_world_consistency_posts_walls.json"
+ },
+ "collision_prim_kinds": {
+  "Cylinder": 110,
+  "Mesh": 9
+ },
+ "geom_missing_truth": {
+  "what": "참값 충돌 형상인데 geom 에 없음",
+  "n_cells": 0,
+  "n_blobs": 0,
+  "max_dist_m": 0.005,
+  "blobs_top": []
+ },
+ "nav_missing_truth": {
+  "what": "참값 충돌 형상인데 Nav2 지도에 없음",
+  "n_cells": 0,
+  "n_blobs": 0,
+  "max_dist_m": 0.0112,
+  "blobs_top": []
+ },
+ "nav_extra_vs_truth": {
+  "what": "Nav2 벽 지도 점유인데 참값 충돌 형상 근처에 없음(물체 지도는 장면에 없는 layout 물체라 뺌)",
+  "n_cells": 4565,
+  "n_blobs": 1276,
+  "max_dist_m": 0.055,
+  "blobs_top": [
+   {
+    "center": [
+     0.28,
+     -0.05
+    ],
+    "n_cells": 1,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     0.29,
+     -0.05
+    ],
+    "n_cells": 1,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     0.3,
+     -0.05
+    ],
+    "n_cells": 1,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     0.31,
+     -0.05
+    ],
+    "n_cells": 1,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     0.32,
+     -0.05
+    ],
+    "n_cells": 1,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     -0.035,
+     2.48
+    ],
+    "n_cells": 7,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     -0.035,
+     2.49
+    ],
+    "n_cells": 7,
+    "max_dist_m": 0.055
+   },
+   {
+    "center": [
+     -0.035,
+     2.47
+    ],
+    "n_cells": 7,
+    "max_dist_m": 0.053
+   },
+   {
+    "center": [
+     -0.035,
+     2.5
+    ],
+    "n_cells": 7,
+    "max_dist_m": 0.052
+   },
+   {
+    "center": [
+     -0.037,
+     0.07
+    ],
+    "n_cells": 6,
+    "max_dist_m": 0.05
+   },
+   {
+    "center": [
+     -0.037,
+     0.08
+    ],
+    "n_cells": 6,
+    "max_dist_m": 0.05
+   },
+   {
+    "center": [
+     -0.037,
+     0.09
+    ],
+    "n_cells": 6,
+    "max_dist_m": 0.05
+   },
+   {
+    "center": [
+     -0.037,
+     0.125
+    ],
+    "n_cells": 66,
+    "max_dist_m": 0.05
+   },
+   {
+    "center": [
+     -0.037,
+     4.295
+    ],
+    "n_cells": 42,
+    "max_dist_m": 0.05
+   },
+   {
+    "center": [
+     -0.037,
+     4.32
+    ],
+    "n_cells": 6,
+    "max_dist_m": 0.05
+   }
+  ]
+ },
+ "pass": true
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "side": "Left",
+    "profile_bottom_world_z_mm": 19,
+    "stop_top_world_z_mm": 19,
+    "stop_thickness_mm": 7,
+    "vertical_gap_mm": 0,
+    "socket_internal_width_mm": 20.4,
+    "profile_width_mm": 20,
+    "nominal_side_gap_mm": 0.2
+  },
+  {
+    "side": "Right",
+    "profile_bottom_world_z_mm": 19,
+    "stop_top_world_z_mm": 19,
+    "stop_thickness_mm": 7,
+    "vertical_gap_mm": 0,
+    "socket_internal_width_mm": 20.4,
+    "profile_width_mm": 20,
+    "nominal_side_gap_mm": 0.2
+  }
+]

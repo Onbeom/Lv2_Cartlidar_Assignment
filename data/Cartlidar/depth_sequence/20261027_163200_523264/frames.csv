@@ -1,0 +1,3 @@
+index,host_elapsed_s,color_timestamp_ms,depth_timestamp_ms,color_frame_number,depth_frame_number,color_exposure,depth_exposure,color_timestamp_domain,depth_timestamp_domain
+0,0.0107166439993307,1793086320496.3306,1793086320496.3135,252,218,,31979,timestamp_domain.global_time,timestamp_domain.global_time
+1,0.04784224600007292,1793086320529.689,1793086320529.6719,253,219,,31979,timestamp_domain.global_time,timestamp_domain.global_time

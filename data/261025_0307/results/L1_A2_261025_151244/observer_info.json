@@ -1,0 +1,44 @@
+{
+  "subs_created_at": {
+    "/clock": 1792908765.3264735,
+    "/tf": 1792908765.348649,
+    "/odom": 1792908765.349774,
+    "/scan": 1792908765.3505766,
+    "/left/image_raw": 1792908765.3508523,
+    "/right/image_raw": 1792908765.351094,
+    "/left/camera_info": 1792908765.3514917,
+    "/right/camera_info": 1792908765.3518279
+  },
+  "twist_sent": 130,
+  "twist_lin": [
+    0.25,
+    -0.125,
+    0.0625
+  ],
+  "twist_ang": [
+    0.5,
+    -0.75,
+    1.0
+  ],
+  "stamped_lin": [
+    0.375,
+    -0.0625,
+    0.03125
+  ],
+  "stamped_ang": [
+    -0.25,
+    0.125,
+    -1.5
+  ],
+  "stamped_frame": "base_footprint",
+  "publishers": {
+    "/clock": [],
+    "/tf": [],
+    "/odom": [],
+    "/scan": [],
+    "/left/image_raw": [],
+    "/right/image_raw": [],
+    "/left/camera_info": [],
+    "/right/camera_info": []
+  }
+}

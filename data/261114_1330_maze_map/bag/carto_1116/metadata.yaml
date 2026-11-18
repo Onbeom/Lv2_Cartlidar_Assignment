@@ -1,0 +1,62 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 715998535510
+  starting_time:
+    nanoseconds_since_epoch: 1794782236222337818
+  message_count: 157303
+  topics_with_message_count:
+    - topic_metadata:
+        name: /tf_static
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 3
+    - topic_metadata:
+        name: /imu
+        type: sensor_msgs/msg/Imu
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 71488
+    - topic_metadata:
+        name: /odom
+        type: nav_msgs/msg/Odometry
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 71485
+    - topic_metadata:
+        name: /scan_2
+        type: sensor_msgs/msg/LaserScan
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 7163
+    - topic_metadata:
+        name: /scan_1
+        type: sensor_msgs/msg/LaserScan
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 7164
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - 0_carto_1116_2026_11_16-08_00_05.mcap
+  files:
+    - path: 0_carto_1116_2026_11_16-08_00_05.mcap
+      starting_time:
+        nanoseconds_since_epoch: 1794782236222337818
+      duration:
+        nanoseconds: 715998535510
+      message_count: 157303
+  custom_data: ~
+  ros_distro: lyrical

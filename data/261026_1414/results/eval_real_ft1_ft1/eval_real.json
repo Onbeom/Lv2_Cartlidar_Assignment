@@ -1,0 +1,780 @@
+{
+ "args": {
+  "model": "/home/pa4/git/lv2_next_module/261026_1414/runs/ft1/weights/best.pt",
+  "data": "/home/pa4/git/lv2_next_module/261026_1414/data_ft1",
+  "split": "eval",
+  "out": "/home/pa4/git/lv2_next_module/261026_1414/results/eval_real_ft1_ft1",
+  "conf": "0.25",
+  "nms": "0.45",
+  "iou": "0.5",
+  "pass_shape": "0.95",
+  "imgsz": "640",
+  "device": "0"
+ },
+ "counts": {
+  "r04": {
+   "matched": 78,
+   "shape_ok": 71,
+   "color_ok": 78,
+   "targets": 78,
+   "images": 13,
+   "fp": 12
+  },
+  "all": {
+   "matched": 138,
+   "shape_ok": 124,
+   "color_ok": 138,
+   "targets": 150,
+   "images": 25,
+   "fp": 17
+  },
+  "r06": {
+   "matched": 60,
+   "shape_ok": 53,
+   "color_ok": 60,
+   "targets": 72,
+   "images": 12,
+   "fp": 5
+  }
+ },
+ "pass": false,
+ "images": [
+  {
+   "image": "real_r04_green_signal_scene__093_20261026_172424_460469_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.375,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__094_20261026_172424_810606_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.502,
+     "iou": 0.851,
+     "box": [
+      329.49984,
+      285.41064,
+      347.39744,
+      315.00024
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.516,
+     "box": [
+      331,
+      283,
+      347,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__095_20261026_172427_030260_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.56,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__096_20261026_172427_272464_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.335,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__097_20261026_172430_121603_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.457,
+     "iou": 0.875,
+     "box": [
+      329.49984,
+      284.49984,
+      348.49952,
+      314.49984
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.596,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__098_20261026_172430_318648_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.4,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__099_20261026_172430_557392_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 6,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": []
+  },
+  {
+   "image": "real_r04_green_signal_scene__100_20261026_172433_131935_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.361,
+     "iou": 0.896,
+     "box": [
+      332.51455999999996,
+      285.71784,
+      347.28832,
+      315.40536
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.647,
+     "box": [
+      331,
+      284,
+      347,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__101_20261026_172433_389517_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.311,
+     "iou": 0.901,
+     "box": [
+      332.40384,
+      285.85584000000006,
+      347.03168,
+      315.45744
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.662,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__102_20261026_172435_961145_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.291,
+     "iou": 0.858,
+     "box": [
+      332.21632,
+      285.67896,
+      347.72352,
+      315.522
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.599,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__103_20261026_172436_296429_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.468,
+     "iou": 0.842,
+     "box": [
+      332.6592,
+      285.59304,
+      347.75552,
+      315.41016
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.508,
+     "box": [
+      331,
+      282,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__104_20261026_172439_119242_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.416,
+     "box": [
+      331,
+      284,
+      348,
+      315
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r04_green_signal_scene__105_20261026_172439_385796_color.png",
+   "batch": "r04",
+   "targets": 6,
+   "dets": 7,
+   "matched": 6,
+   "missed": [],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.313,
+     "iou": 0.826,
+     "box": [
+      332.67264,
+      285.53783999999996,
+      346.97792000000004,
+      315.21384
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.653,
+     "box": [
+      331,
+      284,
+      347,
+      314
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r06_green_signal_scene__121_20261026_172534_974609_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 7,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      341.50016,
+      292.00008,
+      357.50016,
+      317.50008
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.612,
+     "iou": 0.833,
+     "box": [
+      346.49984,
+      284.49983999999995,
+      370.49984,
+      330.0
+     ]
+    }
+   ],
+   "fp": [
+    {
+     "cls": 4,
+     "conf": 0.661,
+     "box": [
+      347,
+      287,
+      368,
+      331
+     ]
+    },
+    {
+     "cls": 1,
+     "conf": 0.307,
+     "box": [
+      325,
+      278,
+      344,
+      319
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r06_green_signal_scene__122_20261026_172535_560897_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 7,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      339.99968,
+      301.5,
+      355.49984000000006,
+      318.99983999999995
+     ]
+    ]
+   ],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.719,
+     "box": [
+      346,
+      287,
+      369,
+      332
+     ]
+    },
+    {
+     "cls": 1,
+     "conf": 0.4,
+     "box": [
+      325,
+      278,
+      344,
+      319
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r06_green_signal_scene__123_20261026_172536_354768_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      335.0,
+      295.5002400000001,
+      353.0,
+      317.50008
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.762,
+     "iou": 0.792,
+     "box": [
+      343.49984,
+      284.00016000000005,
+      363.99967999999996,
+      329.00016000000005
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__124_20261026_172536_735812_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      337.50015999999994,
+      294.00024,
+      359.00032,
+      316.50024
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.841,
+     "iou": 0.8,
+     "box": [
+      344.0,
+      280.50024,
+      366.49983999999995,
+      330.00024
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__125_20261026_172539_290751_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      327.00032000000004,
+      293.99976,
+      345.50016,
+      316.99992000000003
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.769,
+     "iou": 0.822,
+     "box": [
+      332.99968,
+      283.49976000000004,
+      352.99968,
+      329.99976000000004
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__126_20261026_172539_761490_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      323.0,
+      295.5,
+      342.50016000000005,
+      314.00016000000005
+     ]
+    ]
+   ],
+   "wrong": [],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__127_20261026_172542_180276_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      321.49984,
+      298.00008,
+      339.49984,
+      317.50008
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.868,
+     "iou": 0.878,
+     "box": [
+      328.51648,
+      284.13671999999997,
+      350.46208,
+      330.5724
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__128_20261026_172542_640336_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      323.00032,
+      295.5,
+      341.50015999999994,
+      316.5
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.808,
+     "iou": 0.895,
+     "box": [
+      328.40863999999993,
+      284.12424,
+      350.58144,
+      330.64824
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__129_20261026_172545_118318_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      322.49984,
+      300.49992,
+      334.49984,
+      316.4997599999999
+     ]
+    ]
+   ],
+   "wrong": [],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__130_20261026_172545_567735_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 6,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      321.49952,
+      295.00032000000004,
+      336.49984,
+      315.50016
+     ]
+    ]
+   ],
+   "wrong": [],
+   "fp": [
+    {
+     "cls": 1,
+     "conf": 0.458,
+     "box": [
+      328,
+      287,
+      349,
+      331
+     ]
+    }
+   ]
+  },
+  {
+   "image": "real_r06_green_signal_scene__131_20261026_172548_122356_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      322.00000000000006,
+      298.00032,
+      336.49984,
+      318.50015999999994
+     ]
+    ]
+   ],
+   "wrong": [
+    {
+     "truth": 4,
+     "det": 1,
+     "conf": 0.803,
+     "iou": 0.827,
+     "box": [
+      327.12896,
+      280.91568,
+      349.80416,
+      330.18095999999997
+     ]
+    }
+   ],
+   "fp": []
+  },
+  {
+   "image": "real_r06_green_signal_scene__132_20261026_172548_551261_color.png",
+   "batch": "r06",
+   "targets": 6,
+   "dets": 5,
+   "matched": 5,
+   "missed": [
+    [
+     1,
+     [
+      320.50015999999994,
+      295.99968,
+      336.00032,
+      317.49984000000006
+     ]
+    ]
+   ],
+   "wrong": [],
+   "fp": []
+  }
+ ]
+}

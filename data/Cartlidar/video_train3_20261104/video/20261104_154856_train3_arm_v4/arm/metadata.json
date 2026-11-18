@@ -1,0 +1,16 @@
+{
+ "started_at": "2026-11-04T15:48:56.638028+09:00",
+ "label": "train3_arm_v4",
+ "device": "/dev/video12",
+ "fourcc": "MJPG",
+ "image_size": [
+  1280,
+  720
+ ],
+ "requested_fps": 30,
+ "jpeg_quality": 95,
+ "frames": 19,
+ "dropped": 0,
+ "seconds": 0.64,
+ "mean_fps": 29.64
+}

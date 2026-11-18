@@ -1,0 +1,8 @@
+# 후보 B용. 대상 Jetson에서 엔진 생성/동등성 확인 후 실제 engine_path를 별도로 지정한다.
+perception_node:
+  ros__parameters:
+    detector:
+      class_names: [red_cylinder, green_cylinder, red_cuboid, green_cuboid]
+      input_size: 640
+      score_threshold: 0.25
+      nms_threshold: 0.45

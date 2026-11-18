@@ -1,0 +1,83 @@
+{
+ "test": "T5",
+ "num_envs": 4,
+ "startup_s": 3.8,
+ "per_joint": {
+  "RMX52_Base_Yaw": {
+   "vel_max_rad_s": 6.22,
+   "sat_ratio_move": 0.2,
+   "sat_ratio_all": 0.089,
+   "vel_end_rad_s": 0.0003,
+   "q_start": [
+    -0.087,
+    -1.34,
+    1.033,
+    0.752
+   ],
+   "q_end": [
+    2.165,
+    -1.344,
+    1.031,
+    0.751
+   ],
+   "contacts": {}
+  },
+  "RMX52_Shoulder": {
+   "vel_max_rad_s": 5.947,
+   "sat_ratio_move": 0.12,
+   "sat_ratio_all": 0.04,
+   "vel_end_rad_s": 0.0001,
+   "q_start": [
+    -1.222,
+    0.525,
+    -1.138,
+    1.323
+   ],
+   "q_end": [
+    -1.222,
+    1.5,
+    -1.139,
+    1.323
+   ],
+   "contacts": {}
+  },
+  "RMX52_Elbow": {
+   "vel_max_rad_s": 5.446,
+   "sat_ratio_move": 0.04,
+   "sat_ratio_all": 0.013,
+   "vel_end_rad_s": 0.0004,
+   "q_start": [
+    -1.468,
+    1.422,
+    1.056,
+    1.686
+   ],
+   "q_end": [
+    -1.468,
+    1.425,
+    1.5,
+    1.686
+   ],
+   "contacts": {}
+  },
+  "RMX52_Wrist_Pitch": {
+   "vel_max_rad_s": 5.372,
+   "sat_ratio_move": 0.12,
+   "sat_ratio_all": 0.04,
+   "vel_end_rad_s": 0.0,
+   "q_start": [
+    0.812,
+    0.371,
+    0.282,
+    0.284
+   ],
+   "q_end": [
+    0.812,
+    0.371,
+    0.281,
+    1.7
+   ],
+   "contacts": {}
+  }
+ }
+}

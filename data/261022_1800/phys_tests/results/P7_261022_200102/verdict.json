@@ -1,0 +1,13 @@
+{
+  "measured": {
+    "yaw_change_deg(기록만)": 0.00019983650562350785,
+    "center_move_max_m": 0.0003660135411882732,
+    "ideal_no_slip_deg(참고)": null
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "yaw가 + 방향(반시계)으로 1° 이상 증가": false,
+    "중심 이동 ≤ 30 mm": true
+  },
+  "verdict": "실패"
+}

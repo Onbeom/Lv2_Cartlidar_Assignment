@@ -1,0 +1,193 @@
+{
+ "mode_ok": true,
+ "boot_line": [
+  "[component_container_mt-1] [INFO] [1793932866.031400965] [perception_node]: 검출기: tensorrt TensorRT /home/pa4/git/lv2_next_module/261105_2015_yolo_e3/trt/yolo11n_task4_E3_480_fp16.engine (입력 640×480, 클래스 4) · 팔 tensorrt TensorRT /home/pa4/git/lv2_next_module/26"
+ ],
+ "F1": {
+  "base_hz": 15.0,
+  "stop_s": 0.053,
+  "late": 0,
+  "recover_s": 0.12,
+  "stall_warn": 1,
+  "alive": true,
+  "pass": true,
+  "took_s": 8.0
+ },
+ "F2": {
+  "base_hz": 15.0,
+  "age02": {
+   "hz": 15.0,
+   "max_age": 0.259
+  },
+  "age04": {
+   "hz": 0.0,
+   "max_age": null
+  },
+  "alive": true,
+  "pass": true,
+  "took_s": 10.6
+ },
+ "F3": {
+  "new_after_first": 0,
+  "alive": true,
+  "pass": true,
+  "took_s": 5.3
+ },
+ "F4": {
+  "n": 20,
+  "regress": 0,
+  "alive": true,
+  "pass": true,
+  "took_s": 6.0
+ },
+ "F5": {
+  "base_found": 30,
+  "found": 0,
+  "puck3d": 0,
+  "n": 45,
+  "recover_found_s": 0.101,
+  "alive": true,
+  "t0": 0.2,
+  "pass": true,
+  "took_s": 9.2
+ },
+ "F6": {
+  "base_hz": 15.0,
+  "during_hz": 9.82,
+  "warn": 2,
+  "recover_s": 0.07,
+  "alive": true,
+  "pass": true,
+  "took_s": 18.0
+ },
+ "F7": {
+  "base_hz": 15.0,
+  "stop_s": 0.051,
+  "late": 0,
+  "recover_s": 0.184,
+  "stall_warn": 1,
+  "alive": true,
+  "mode_ok": true,
+  "pass": true,
+  "took_s": 9.1
+ },
+ "F8": {
+  "cases": {
+   "color_mono8": {
+    "alive": true,
+    "recover_s": 0.121,
+    "pass": true
+   },
+   "color_short": {
+    "alive": true,
+    "recover_s": 0.084,
+    "pass": true
+   },
+   "color_zero": {
+    "alive": true,
+    "recover_s": 0.066,
+    "pass": true
+   },
+   "color_weird": {
+    "alive": true,
+    "recover_s": 0.123,
+    "pass": true
+   },
+   "depth_size": {
+    "alive": true,
+    "recover_s": 0.102,
+    "pass": true
+   },
+   "depth_short": {
+    "alive": true,
+    "recover_s": 0.088,
+    "pass": true
+   },
+   "arm_short": {
+    "alive": true,
+    "recover_s": 0.187,
+    "pass": true
+   }
+  },
+  "pass": true,
+  "took_s": 35.7
+ },
+ "F9": {
+  "base_hz": 15.0,
+  "stale": 0,
+  "max_age": 0.059,
+  "recover_s": 0.136,
+  "alive": true,
+  "pass": true,
+  "took_s": 7.0
+ },
+ "F10": {
+  "base_hz": 14.33,
+  "hz": 6.77,
+  "age_p50": 0.058,
+  "age_p99": 0.209,
+  "over03": 0.0,
+  "alive": true,
+  "pass": true,
+  "took_s": 34.1
+ },
+ "F11": {
+  "stop_s": 0.006,
+  "auto_restart": false,
+  "launch_ended": false,
+  "service": true,
+  "results_before_mode": 0,
+  "first_result_s": 2.07,
+  "alive": true,
+  "pass": true,
+  "took_s": 12.9
+ },
+ "F12": {
+  "cases": {
+   "empty": {
+    "alive": true,
+    "service": true,
+    "warn": 1,
+    "hz": 0.0,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933026.352017367] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_s": 24.0,
+    "pass": false
+   },
+   "half": {
+    "alive": true,
+    "service": true,
+    "warn": 1,
+    "hz": 0.0,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933056.610777769] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_s": 24.0,
+    "pass": false
+   },
+   "random": {
+    "alive": true,
+    "service": true,
+    "warn": 1,
+    "hz": 0.0,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933086.850059965] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_s": 24.0,
+    "pass": false
+   },
+   "flip": {
+    "alive": true,
+    "service": true,
+    "warn": 0,
+    "hz": 0.0,
+    "line": [],
+    "boot_s": 24.0,
+    "pass": false
+   }
+  },
+  "pass": false,
+  "took_s": 121.9
+ }
+}

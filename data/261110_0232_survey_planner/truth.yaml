@@ -1,0 +1,14 @@
+# 모의 시험용 '실제' 퍽 배치 (problem_q1_example 에서 ID 뒤집고 박스 1·3·5 모양 바꿈)
+pucks:
+  - {id: 0, color: green, shape: box, box: 6, side: 1}
+  - {id: 1, color: red, shape: box, box: 6, side: -1}
+  - {id: 2, color: green, shape: box, box: 5, side: 1}
+  - {id: 3, color: red, shape: box, box: 5, side: -1}
+  - {id: 4, color: green, shape: box, box: 4, side: 1}
+  - {id: 5, color: red, shape: box, box: 4, side: -1}
+  - {id: 6, color: green, shape: box, box: 3, side: 1}
+  - {id: 7, color: red, shape: box, box: 3, side: -1}
+  - {id: 8, color: green, shape: cylinder, box: 2, side: 1}
+  - {id: 9, color: red, shape: box, box: 2, side: -1}
+  - {id: 10, color: green, shape: cylinder, box: 1, side: 1}
+  - {id: 11, color: red, shape: box, box: 1, side: -1}

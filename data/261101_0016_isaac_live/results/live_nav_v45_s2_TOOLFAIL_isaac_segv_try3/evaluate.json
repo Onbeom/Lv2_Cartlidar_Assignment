@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0142,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.006,
+ "G4_loc_max_m": 0.0154,
+ "G4_yaw_rmse_rad": 0.0073,
+ "G4_n_samples": 2050,
+ "G5_cmd": {
+  "n": 4693,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.07732243214483271,
+  "wz_abs_max": 0.6966942148760331
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 72.58,
+   "pos_err": 0.0215,
+   "yaw_err": 0.0679,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 37.98,
+   "pos_err": 0.0208,
+   "yaw_err": 0.0055,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 21.28,
+   "pos_err": 0.0192,
+   "yaw_err": 0.0475,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 42.53,
+   "pos_err": 0.0228,
+   "yaw_err": 0.0053,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 30.83,
+   "pos_err": 0.0203,
+   "yaw_err": 0.002,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 28.42,
+   "pos_err": 0.02,
+   "yaw_err": 0.193,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "TIMEOUT",
+   "duration_s": 0.0,
+   "pos_err": 5.6686,
+   "yaw_err": 0.482,
+   "error_code": null,
+   "error_msg": null
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

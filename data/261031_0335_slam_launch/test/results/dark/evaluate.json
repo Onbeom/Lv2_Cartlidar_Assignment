@@ -1,0 +1,87 @@
+{
+  "simulation_only": true,
+  "name": "dark",
+  "recording": "/home/pa4/git/lv2_next_module/261030_1943/results/n261028_dark_261030_213001",
+  "eval_end_s": 508.05,
+  "truth_end_s": 512.683333,
+  "A_realtime_pos_m": {
+    "rmse": 0.0408305287027802,
+    "p95": 0.06356004692803989,
+    "max": 0.07374925010429532
+  },
+  "A_realtime_yaw_deg": {
+    "rmse": 0.5635960828225878,
+    "p95": 1.1593123798312122,
+    "max": 2.1847025231875397
+  },
+  "B_after_map_align_pos_m": {
+    "rmse": 0.00829808048914253,
+    "p95": 0.014572105230442547,
+    "max": 0.024999244104490236
+  },
+  "B_after_map_align_yaw_deg": {
+    "rmse": 0.7283700363608405,
+    "p95": 1.4290063524707755,
+    "max": 2.650210150132617
+  },
+  "C_image_minus_ekf_stamp_s": {
+    "n": 15241,
+    "median": 0.0,
+    "p95": 0.03333333400001948,
+    "max": 0.06666666700004953,
+    "over_0.1s": 0
+  },
+  "ekf_tf_period_s_median": 0.03333333300000163,
+  "relay_tf_period_s_median": 0.03333333300003005,
+  "relay_stamp_minus_rx_s_median": 0.09999999999999432,
+  "D_probe": {
+    "n": 5073,
+    "zero_ok_ratio": 1.0,
+    "zero_age_s_median": 0.0333,
+    "zero_age_s_p95": 0.0667,
+    "zero_age_s_max": 0.0833,
+    "now_ok_ratio": 0.107431500098561
+  },
+  "E_mask": {
+    "/scan_front": {
+      "scans": 5100,
+      "mean_masked_bins": 159.7,
+      "deg": 143.73
+    },
+    "/scan_rear": {
+      "scans": 5100,
+      "mean_masked_bins": 219.9,
+      "deg": 197.91
+    }
+  },
+  "map_align": {
+    "mission_from_carto_map": {
+      "x": 0.7390000000000003,
+      "y": 0.9600000000000002,
+      "yaw": 3.1306843457648283
+    },
+    "correction_from_start_guess": {
+      "dx_m": 0.005000000000000282,
+      "dy_m": 0.010000000000000252,
+      "dyaw_deg": -0.625
+    },
+    "start_guess": {
+      "x": 0.734,
+      "y": 0.95,
+      "yaw": 3.141592653589793
+    },
+    "n_wall_cells": 2132,
+    "wall_err_cm_before": 2.6224549275283016,
+    "wall_err_cm_after": 1.2265760930321454,
+    "ghost_ratio_before": 0.01876172607879925,
+    "ghost_ratio_after": 0.01876172607879925,
+    "walls": "/home/pa4/git/lv2_next_module/261030_1943/maze_slice_z0.08.json",
+    "usd_offset": [
+      2.2345,
+      3.2136
+    ],
+    "unknown_value": 128,
+    "static_tf_example": "ros2 run tf2_ros static_transform_publisher --x 0.7390 --y 0.9600 --yaw 3.130684 --frame-id mission_map --child-frame-id map",
+    "note": "거리는 10 cm 에서 자름. map_mission.yaml 을 map_server 로 읽으면 map frame = 발제 좌표"
+  }
+}

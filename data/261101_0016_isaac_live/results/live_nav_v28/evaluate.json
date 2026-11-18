@@ -1,0 +1,62 @@
+{
+ "n_goals": 4,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0039,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0069,
+ "G4_loc_max_m": 0.0181,
+ "G4_yaw_rmse_rad": 0.012,
+ "G4_n_samples": 3455,
+ "G5_cmd": {
+  "n": 7818,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.10852401703596115,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 116.0,
+   "pos_err": 1.639,
+   "yaw_err": 2.8951,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "ABORTED",
+   "duration_s": 100.28,
+   "pos_err": 3.6805,
+   "yaw_err": 1.6921,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "ABORTED",
+   "duration_s": 65.63,
+   "pos_err": 3.804,
+   "yaw_err": 2.2544,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "ABORTED",
+   "duration_s": 134.28,
+   "pos_err": 2.7947,
+   "yaw_err": 1.0444,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

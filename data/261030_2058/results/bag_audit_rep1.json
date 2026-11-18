@@ -1,0 +1,38 @@
+{
+  "recording": "/home/pa4/git/lv2_next_module/261030_1943/results/n261028_rep1_261031_003832",
+  "light": "rep1",
+  "counts": {
+    "/clock": 30761,
+    "/tf_static": 1,
+    "/tf": 8544,
+    "/scan_front": 5126,
+    "/scan_rear": 5126
+  },
+  "wheel_msgs": 30760,
+  "truth_odom_msgs": 25635,
+  "body_mask_bins": {
+    "/scan_front": 157,
+    "/scan_rear": 219
+  },
+  "body_mask_deg": {
+    "/scan_front": 141.3,
+    "/scan_rear": 197.1
+  },
+  "body_mask_rule": "v2: 정지 (0.5, 1.9) s 스캔 점이 base_link 몸체 상자 (-0.175, 0.285, 0.19) 안인 칸",
+  "qos_copied": {
+    "/clock": 1,
+    "/tf_static": 1,
+    "/odom": 1,
+    "/tf": 2,
+    "/scan_front": 1,
+    "/scan_rear": 1
+  },
+  "truth_in": {
+    "lidar_only": false,
+    "wheel_odom": false,
+    "truth_odom": "diagnostic_upper_bound_only"
+  },
+  "source_sha256": {
+    "0_bag_2026_10_31-00_38_32.mcap": "b5cacf6577fe69522d399a2476fd33dc8c417ce1f56906ed184a964fd8cd0811"
+  }
+}

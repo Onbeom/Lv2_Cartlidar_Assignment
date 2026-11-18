@@ -1,0 +1,20 @@
+{
+  "base": "261028_1457 private R6v5",
+  "changed": [
+    "config/lidar.yaml",
+    "config/tfmini.yaml",
+    "include/perception/obstacle_stop.hpp",
+    "src/obstacle_stop_node.cpp",
+    "src/tfmini_node.cpp",
+    "test/test_lidar.cpp"
+  ],
+  "sha256": {
+    "config/lidar.yaml": "67d95c11ec418cacf78c56d0c6ee791f8b6ed7278d491f18e57b87477ee7935e",
+    "config/tfmini.yaml": "871fae2c6ae80c0d26e7b14de84b52e7dab8396e67faf70f63f3a33e22ffa42c",
+    "include/perception/obstacle_stop.hpp": "4ef99906c99d87129ad7d2775dc4615e85026d80a4b36c0bff53037f57a41d7c",
+    "src/obstacle_stop_node.cpp": "3bfe5a38f334edcfba24c75225bf8156deada1b7bf3a6892b9707f135bccc7b5",
+    "src/tfmini_node.cpp": "f29be83ce7136701c1160c1861a12dd32f22b42d76c6bd45898ca1519c4671e6",
+    "test/test_lidar.cpp": "c0ad4855858b03d731d91f91a708417a39e31cb21ff7a0f7ef8d0f285dc6a98c"
+  },
+  "team_applied": false
+}

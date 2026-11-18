@@ -1,0 +1,26 @@
+{
+ "pose_carto_to_sdf": {
+  "x": 3.02,
+  "y": 4.95,
+  "yaw_deg": 5.0,
+  "about_carto_wall_centroid": [
+   -0.759,
+   -0.128
+  ]
+ },
+ "mean_clipped_dist_m": 0.12,
+ "carto_wall_cells": 617,
+ "carto_to_sdf": {
+  "median_m": 0.025,
+  "p90_m": 0.3766,
+  "within_5cm": 0.35,
+  "over_15cm": 0.554,
+  "outside_sdf_map": 0.386
+ },
+ "sdf_wall_cells_in_seen_area": 1511,
+ "sdf_to_carto": {
+  "median_m": 0.2649,
+  "within_5cm": 0.228,
+  "over_15cm": 0.64
+ }
+}

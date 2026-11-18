@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0847,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 3.8199,
+ "G4_loc_max_m": 5.0843,
+ "G4_yaw_rmse_rad": 3.0622,
+ "G4_n_samples": 538,
+ "G5_cmd": {
+  "n": 262,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.0470709502696991,
+  "vx_min": 0.0,
+  "wz_abs_max": 0.5
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 2.98,
+   "pos_err": 1.4999,
+   "yaw_err": 1.1851,
+   "error_code": 103,
+   "error_msg": "Resulting plan has 0 poses in it."
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "ABORTED",
+   "duration_s": 7.45,
+   "pos_err": 3.3649,
+   "yaw_err": 2.4024,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 구간 규칙)",
+   "status": "ABORTED",
+   "duration_s": 7.93,
+   "pos_err": 3.4087,
+   "yaw_err": 0.9741,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "ABORTED",
+   "duration_s": 8.08,
+   "pos_err": 2.3183,
+   "yaw_err": 2.4044,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "start_box_3",
+   "status": "ABORTED",
+   "duration_s": 7.95,
+   "pos_err": 4.1573,
+   "yaw_err": 2.8642,
+   "error_code": 104,
+   "error_msg": "Controller patience exceeded"
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 구간 규칙)",
+   "status": "ABORTED",
+   "duration_s": 7.25,
+   "pos_err": 5.6213,
+   "yaw_err": 0.8357,
+   "error_code": 103,
+   "error_msg": "Resulting plan has 0 poses in it."
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 2.83,
+   "pos_err": 0.1103,
+   "yaw_err": 1.3458,
+   "error_code": 103,
+   "error_msg": "Resulting plan has 0 poses in it."
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": false,
+ "G5_pass": true,
+ "pass": false
+}

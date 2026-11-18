@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20261106-0015-Experimental"
+	Name="pa4-Legion-Pro-5-16IAX10"
+	Generator="ctest-3.28.3"
+	CompilerName="/usr/bin/c++"
+	CompilerVersion="13.3.0"
+	OSName="Linux"
+	Hostname="pa4-Legion-Pro-5-16IAX10"
+	OSRelease="6.8.0-147-generic"
+	OSVersion="#147-Ubuntu SMP PREEMPT_DYNAMIC Thu Sep 24 11:33:16 UTC 2026"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="198"
+	ProcessorCacheSize="36864"
+	NumberOfLogicalCPU="24"
+	NumberOfPhysicalCPU="1"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="31516"
+	LogicalProcessorsPerPhysical="24"
+	ProcessorClockFrequency="1834.45"
+	>
+	<Testing>
+		<StartDateTime>Nov 06 09:15 KST</StartDateTime>
+		<StartTestTime>1793924158</StartTestTime>
+		<TestList>
+			<Test>./test_rear_obstacle</Test>
+			<Test>./test_arm_plane</Test>
+			<Test>./test_place_box</Test>
+			<Test>./test_face_yaw</Test>
+			<Test>./test_perception_logic</Test>
+			<Test>./test_camera_info</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>test_rear_obstacle</Name>
+			<Path>.</Path>
+			<FullName>./test_rear_obstacle</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_rear_obstacle.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_rear_obstacle" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.256658</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_rear_obstacle.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_rear_obstacle" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_rear_obstacle --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from RearObstacle
+[ RUN      ] RearObstacle.FloorOnlyIsEmpty
+[       OK ] RearObstacle.FloorOnlyIsEmpty (13 ms)
+[ RUN      ] RearObstacle.WallDistance
+[       OK ] RearObstacle.WallDistance (94 ms)
+[ RUN      ] RearObstacle.LowPuckSeenOnlyOutsideBlindZone
+[       OK ] RearObstacle.LowPuckSeenOnlyOutsideBlindZone (46 ms)
+[ RUN      ] RearObstacle.OutsideCorridorIgnored
+[       OK ] RearObstacle.OutsideCorridorIgnored (23 ms)
+[ RUN      ] RearObstacle.U16MatchesF32AndSkipsInvalid
+[       OK ] RearObstacle.U16MatchesF32AndSkipsInvalid (28 ms)
+[ RUN      ] RearObstacle.FewNoisePixelsIgnored
+[       OK ] RearObstacle.FewNoisePixelsIgnored (13 ms)
+[ RUN      ] RearObstacle.StopLogicWithCameraSettings
+[       OK ] RearObstacle.StopLogicWithCameraSettings (0 ms)
+[----------] 7 tests from RearObstacle (219 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (219 ms total)
+[  PASSED  ] 7 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_rear_obstacle.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_arm_plane</Name>
+			<Path>.</Path>
+			<FullName>./test_arm_plane</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_arm_plane.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_arm_plane" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0344571</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_arm_plane.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_arm_plane" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_arm_plane --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ArmPlane
+[ RUN      ] ArmPlane.PicksNearestSupportAndHalfHeight
+[       OK ] ArmPlane.PicksNearestSupportAndHalfHeight (0 ms)
+[ RUN      ] ArmPlane.RayPlaneRecoversProjectedPoint
+[       OK ] ArmPlane.RayPlaneRecoversProjectedPoint (0 ms)
+[ RUN      ] ArmPlane.RejectsParallelAndBehind
+[       OK ] ArmPlane.RejectsParallelAndBehind (0 ms)
+[----------] 3 tests from ArmPlane (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 3 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_arm_plane.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_place_box</Name>
+			<Path>.</Path>
+			<FullName>./test_place_box</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_place_box.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_place_box" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>4.84671</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_place_box.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_place_box" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_place_box --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from PlaceBox
+[ RUN      ] PlaceBox.FindsRotatedShiftedBox
+[       OK ] PlaceBox.FindsRotatedShiftedBox (3659 ms)
+[ RUN      ] PlaceBox.PuckColoredPixelsIgnored
+[       OK ] PlaceBox.PuckColoredPixelsIgnored (1149 ms)
+[ RUN      ] PlaceBox.CellsRowMajor
+[       OK ] PlaceBox.CellsRowMajor (0 ms)
+[----------] 3 tests from PlaceBox (4808 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (4808 ms total)
+[  PASSED  ] 3 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_place_box.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_face_yaw</Name>
+			<Path>.</Path>
+			<FullName>./test_face_yaw</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_face_yaw.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_face_yaw" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0358357</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_face_yaw.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_face_yaw" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_face_yaw --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 4 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from FaceYaw
+[ RUN      ] FaceYaw.FoldsToQuarterTurn
+[       OK ] FaceYaw.FoldsToQuarterTurn (0 ms)
+[ RUN      ] FaceYaw.TiltAndLying
+[       OK ] FaceYaw.TiltAndLying (0 ms)
+[ RUN      ] FaceYaw.ErrorAgainstReference
+[       OK ] FaceYaw.ErrorAgainstReference (0 ms)
+[----------] 3 tests from FaceYaw (0 ms total)
+
+[----------] 1 test from FaceHint
+[ RUN      ] FaceHint.StandingTopByHeight
+[       OK ] FaceHint.StandingTopByHeight (0 ms)
+[----------] 1 test from FaceHint (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 4 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_face_yaw.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_perception_logic</Name>
+			<Path>.</Path>
+			<FullName>./test_perception_logic</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_perception_logic.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_perception_logic" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>41.3352</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_perception_logic.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_perception_logic" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_perception_logic --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 165 tests from 31 test suites.
+[----------] Global test environment set-up.
+[----------] 6 tests from Tfmini
+[ RUN      ] Tfmini.ParsesValidFrame
+[       OK ] Tfmini.ParsesValidFrame (0 ms)
+[ RUN      ] Tfmini.ResyncAfterNoiseAndBadChecksum
+[       OK ] Tfmini.ResyncAfterNoiseAndBadChecksum (0 ms)
+[ RUN      ] Tfmini.ValidityRules
+[       OK ] Tfmini.ValidityRules (0 ms)
+[ RUN      ] Tfmini.MillimeterUnit
+[       OK ] Tfmini.MillimeterUnit (0 ms)
+[ RUN      ] Tfmini.OutputFormatCommandChecksum
+[       OK ] Tfmini.OutputFormatCommandChecksum (0 ms)
+[ RUN      ] Tfmini.Calibration
+[       OK ] Tfmini.Calibration (0 ms)
+[----------] 6 tests from Tfmini (0 ms total)
+
+[----------] 4 tests from ColorDetector
+[ RUN      ] ColorDetector.KeepsInputImage
+[       OK ] ColorDetector.KeepsInputImage (4 ms)
+[ RUN      ] ColorDetector.FindsColoredPucks
+[       OK ] ColorDetector.FindsColoredPucks (2 ms)
+[ RUN      ] ColorDetector.IgnoresSmallAndGray
+[       OK ] ColorDetector.IgnoresSmallAndGray (1 ms)
+[ RUN      ] ColorDetector.RejectsLowFillAndUsesConfiguredHsv
+[       OK ] ColorDetector.RejectsLowFillAndUsesConfiguredHsv (1 ms)
+[----------] 4 tests from ColorDetector (10 ms total)
+
+[----------] 6 tests from Geometry
+[ RUN      ] Geometry.SizePlausible
+[       OK ] Geometry.SizePlausible (0 ms)
+[ RUN      ] Geometry.DeprojectOptical
+[       OK ] Geometry.DeprojectOptical (0 ms)
+[ RUN      ] Geometry.DepthScaleForEncoding
+[       OK ] Geometry.DepthScaleForEncoding (0 ms)
+[ RUN      ] Geometry.MedianDepthFloatMeters
+[       OK ] Geometry.MedianDepthFloatMeters (0 ms)
+[ RUN      ] Geometry.MedianDepthIgnoresHoles
+[       OK ] Geometry.MedianDepthIgnoresHoles (0 ms)
+[ RUN      ] Geometry.ImageOffset
+[       OK ] Geometry.ImageOffset (0 ms)
+[----------] 6 tests from Geometry (0 ms total)
+
+[----------] 3 tests from Tracker
+[ RUN      ] Tracker.PicksClosestOutsideExcludeAboveConfidence
+[       OK ] Tracker.PicksClosestOutsideExcludeAboveConfidence (0 ms)
+[ RUN      ] Tracker.StaysOnSameObjectWithinGateAndReacquiresAfterTimeout
+[       OK ] Tracker.StaysOnSameObjectWithinGateAndReacquiresAfterTimeout (0 ms)
+[ RUN      ] Tracker.GateUsesOdomSoRobotMotionDoesNotBreakTracking
+[       OK ] Tracker.GateUsesOdomSoRobotMotionDoesNotBreakTracking (0 ms)
+[----------] 3 tests from Tracker (0 ms total)
+
+[----------] 2 tests from TagDetector
+[ RUN      ] TagDetector.DetectsAprilTag36h11WithPose
+[       OK ] TagDetector.DetectsAprilTag36h11WithPose (22 ms)
+[ RUN      ] TagDetector.SmallTagFoundWithCornersInOriginalPixels
+[       OK ] TagDetector.SmallTagFoundWithCornersInOriginalPixels (6 ms)
+[----------] 2 tests from TagDetector (28 ms total)
+
+[----------] 1 test from TagDepth
+[ RUN      ] TagDepth.ScalesRangeToDepthInsideQuad
+[       OK ] TagDepth.ScalesRangeToDepthInsideQuad (0 ms)
+[----------] 1 test from TagDepth (0 ms total)
+
+[----------] 2 tests from StampGate
+[ RUN      ] StampGate.DropsDuplicateAndOlderFrames
+[       OK ] StampGate.DropsDuplicateAndOlderFrames (0 ms)
+[ RUN      ] StampGate.AcceptsClockRestart
+[       OK ] StampGate.AcceptsClockRestart (0 ms)
+[----------] 2 tests from StampGate (0 ms total)
+
+[----------] 1 test from NearestCache
+[ RUN      ] NearestCache.PicksClosestWithinTolerance
+[       OK ] NearestCache.PicksClosestWithinTolerance (0 ms)
+[----------] 1 test from NearestCache (0 ms total)
+
+[----------] 2 tests from PickTfFrame
+[ RUN      ] PickTfFrame.NewestWithBodyTf
+[       OK ] PickTfFrame.NewestWithBodyTf (0 ms)
+[ RUN      ] PickTfFrame.FallsBackToNewest
+[       OK ] PickTfFrame.FallsBackToNewest (0 ms)
+[----------] 2 tests from PickTfFrame (0 ms total)
+
+[----------] 3 tests from ScanBinner
+[ RUN      ] ScanBinner.BinsByAngleAndKeepsNearest
+[       OK ] ScanBinner.BinsByAngleAndKeepsNearest (0 ms)
+[ RUN      ] ScanBinner.DropsSelfBoxAndOutOfRange
+[       OK ] ScanBinner.DropsSelfBoxAndOutOfRange (0 ms)
+[ RUN      ] ScanBinner.UpsideDownLidarMirrorsAngle
+[       OK ] ScanBinner.UpsideDownLidarMirrorsAngle (0 ms)
+[----------] 3 tests from ScanBinner (0 ms total)
+
+[----------] 7 tests from ObstacleStop
+[ RUN      ] ObstacleStop.StartsStoppedAndReleasesAfterCount
+[       OK ] ObstacleStop.StartsStoppedAndReleasesAfterCount (0 ms)
+[ RUN      ] ObstacleStop.StopsAndHysteresis
+[       OK ] ObstacleStop.StopsAndHysteresis (0 ms)
+[ RUN      ] ObstacleStop.InvalidAfterNearMeansTooClose
+[       OK ] ObstacleStop.InvalidAfterNearMeansTooClose (0 ms)
+[ RUN      ] ObstacleStop.InvalidWhenFarMeansClear
+[       OK ] ObstacleStop.InvalidWhenFarMeansClear (0 ms)
+[ RUN      ] ObstacleStop.StaleInputStops
+[       OK ] ObstacleStop.StaleInputStops (0 ms)
+[ RUN      ] ObstacleStop.ApproachLowersStopDistance
+[       OK ] ObstacleStop.ApproachLowersStopDistance (0 ms)
+[ RUN      ] ObstacleStop.ApproachClearRestoresNormal
+[       OK ] ObstacleStop.ApproachClearRestoresNormal (0 ms)
+[----------] 7 tests from ObstacleStop (0 ms total)
+
+[----------] 10 tests from Puck
+[ RUN      ] Puck.ClassifyHsv
+[       OK ] Puck.ClassifyHsv (0 ms)
+[ RUN      ] Puck.SideFaceLongAxisVertical
+[       OK ] Puck.SideFaceLongAxisVertical (23 ms)
+[ RUN      ] Puck.SideFaceLongAxisHorizontal
+[       OK ] Puck.SideFaceLongAxisHorizontal (14 ms)
+[ RUN      ] Puck.SideFaceCutByImageEdgeIsNotEndFace
+[       OK ] Puck.SideFaceCutByImageEdgeIsNotEndFace (13 ms)
+[ RUN      ] Puck.EndFace
+[       OK ] Puck.EndFace (8 ms)
+[ RUN      ] Puck.WhiteFaceIsCylinderCap
+[       OK ] Puck.WhiteFaceIsCylinderCap (10 ms)
+[ RUN      ] Puck.WhiteDiscOnGrayIsCylinderCap
+[       OK ] Puck.WhiteDiscOnGrayIsCylinderCap (11 ms)
+[ RUN      ] Puck.NoColorNoCapMeansNoOrientation
+[       OK ] Puck.NoColorNoCapMeansNoOrientation (8 ms)
+[ RUN      ] Puck.TopFaceCuboidAndCylinder
+[       OK ] Puck.TopFaceCuboidAndCylinder (38 ms)
+[ RUN      ] Puck.TopFaceCylinderNextToSameColor
+[       OK ] Puck.TopFaceCylinderNextToSameColor (11 ms)
+[----------] 10 tests from Puck (142 ms total)
+
+[----------] 1 test from Marker
+[ RUN      ] Marker.DetectsAruco4x4
+[       OK ] Marker.DetectsAruco4x4 (1 ms)
+[----------] 1 test from Marker (1 ms total)
+
+[----------] 8 tests from SignalSequence
+[ RUN      ] SignalSequence.U1_Random1000
+[       OK ] SignalSequence.U1_Random1000 (5866 ms)
+[ RUN      ] SignalSequence.U2_SameColorRuns
+[       OK ] SignalSequence.U2_SameColorRuns (8 ms)
+[ RUN      ] SignalSequence.U2_StartInsideOnAndInsideTerm
+[       OK ] SignalSequence.U2_StartInsideOnAndInsideTerm (5 ms)
+[ RUN      ] SignalSequence.U2_DifferentCyclesDoNotConfirm
+[       OK ] SignalSequence.U2_DifferentCyclesDoNotConfirm (6 ms)
+[ RUN      ] SignalSequence.U2_LostFramesKeepsCompletedCycles
+[       OK ] SignalSequence.U2_LostFramesKeepsCompletedCycles (4 ms)
+[ RUN      ] SignalSequence.U2_NothingSeen
+[       OK ] SignalSequence.U2_NothingSeen (0 ms)
+[ RUN      ] SignalSequence.U2_MeasuredTimesAndCounts
+[       OK ] SignalSequence.U2_MeasuredTimesAndCounts (5 ms)
+[ RUN      ] SignalSequence.U2_TermMeasuredAfterConfirm
+106: 텀 2.36667 (정답 2.82462) on 0.964461 off 0.886818
+[       OK ] SignalSequence.U2_TermMeasuredAfterConfirm (4042 ms)
+[----------] 8 tests from SignalSequence (9939 ms total)
+
+[----------] 8 tests from DiceCheck
+[ RUN      ] DiceCheck.U3_CorrectPatternsPass
+[       OK ] DiceCheck.U3_CorrectPatternsPass (0 ms)
+[ RUN      ] DiceCheck.U3_WrongColor
+[       OK ] DiceCheck.U3_WrongColor (0 ms)
+[ RUN      ] DiceCheck.U3_YellowMixedShapes
+[       OK ] DiceCheck.U3_YellowMixedShapes (0 ms)
+[ RUN      ] DiceCheck.U3_MissingAndUnexpected
+[       OK ] DiceCheck.U3_MissingAndUnexpected (0 ms)
+[ RUN      ] DiceCheck.U3_TwoPucksInOneCell
+[       OK ] DiceCheck.U3_TwoPucksInOneCell (0 ms)
+[ RUN      ] DiceCheck.U3_OffsetBeyondTolerance
+[       OK ] DiceCheck.U3_OffsetBeyondTolerance (0 ms)
+[ RUN      ] DiceCheck.U3_UnknownAttributesFail
+[       OK ] DiceCheck.U3_UnknownAttributesFail (0 ms)
+[ RUN      ] DiceCheck.U3_EmptyShelf
+[       OK ] DiceCheck.U3_EmptyShelf (0 ms)
+[----------] 8 tests from DiceCheck (0 ms total)
+
+[----------] 10 tests from SignalLight
+[ RUN      ] SignalLight.BrightColorsAreBlobsDullAreNot
+[       OK ] SignalLight.BrightColorsAreBlobsDullAreNot (7 ms)
+[ RUN      ] SignalLight.PerColorBrightnessAndWarmRedBand
+[       OK ] SignalLight.PerColorBrightnessAndWarmRedBand (9 ms)
+[ RUN      ] SignalLight.LocksOnBlinkingSiteNotOnSteadyPuck
+[       OK ] SignalLight.LocksOnBlinkingSiteNotOnSteadyPuck (0 ms)
+[ RUN      ] SignalLight.OneFrameDropoutIsNotABlink
+[       OK ] SignalLight.OneFrameDropoutIsNotABlink (0 ms)
+[ RUN      ] SignalLight.LockedSiteFeedsSequence
+[       OK ] SignalLight.LockedSiteFeedsSequence (7 ms)
+[ RUN      ] SignalLight.U5a_OccludedFrameIsUnknownNotOff
+[       OK ] SignalLight.U5a_OccludedFrameIsUnknownNotOff (0 ms)
+[ RUN      ] SignalLight.U5a_OccludedSteadyObjectDoesNotLock
+[       OK ] SignalLight.U5a_OccludedSteadyObjectDoesNotLock (0 ms)
+[ RUN      ] SignalLight.U5a_SegmentsFillUnseenColors
+[       OK ] SignalLight.U5a_SegmentsFillUnseenColors (0 ms)
+[ RUN      ] SignalLight.U5b_OcclusionRandom1000
+occl: 10주기 안 정답 984 (5주기 안 754), 틀린 확정 0, 확정 못 함 16
+old: 10주기 안 정답 989 (5주기 안 842), 틀린 확정 0, 확정 못 함 11
+[       OK ] SignalLight.U5b_OcclusionRandom1000 (25202 ms)
+[ RUN      ] SignalLight.BlobDepthUsesOwnPixelsWhenPartlyHidden
+[       OK ] SignalLight.BlobDepthUsesOwnPixelsWhenPartlyHidden (1 ms)
+[----------] 10 tests from SignalLight (25227 ms total)
+
+[----------] 1 test from SignalLightHistory
+[ RUN      ] SignalLightHistory.ReplayOnlyLockedCandidateAndReset
+[       OK ] SignalLightHistory.ReplayOnlyLockedCandidateAndReset (0 ms)
+[----------] 1 test from SignalLightHistory (0 ms total)
+
+[----------] 7 tests from DepthSplit
+[ RUN      ] DepthSplit.TouchingSameColorAtDifferentDepths
+[       OK ] DepthSplit.TouchingSameColorAtDifferentDepths (2 ms)
+[ RUN      ] DepthSplit.SlopedSingleFaceStaysWhole
+[       OK ] DepthSplit.SlopedSingleFaceStaysWhole (1 ms)
+[ RUN      ] DepthSplit.NoDepthNoPiece
+[       OK ] DepthSplit.NoDepthNoPiece (1 ms)
+[ RUN      ] DepthSplit.DropsSmallPieceAndKeepsImage
+[       OK ] DepthSplit.DropsSmallPieceAndKeepsImage (1 ms)
+[ RUN      ] DepthSplit.OverlappingBoxesNoDuplicate
+[       OK ] DepthSplit.OverlappingBoxesNoDuplicate (1 ms)
+[ RUN      ] DepthSplit.OversizeThinBridgeSeparatesTwoCores
+[       OK ] DepthSplit.OversizeThinBridgeSeparatesTwoCores (1 ms)
+[ RUN      ] DepthSplit.OversizeSingleSurfaceRemainsRejected
+[       OK ] DepthSplit.OversizeSingleSurfaceRemainsRejected (1 ms)
+[----------] 7 tests from DepthSplit (11 ms total)
+
+[----------] 4 tests from TagUpright
+[ RUN      ] TagUpright.AxisDeviation
+[       OK ] TagUpright.AxisDeviation (0 ms)
+[ RUN      ] TagUpright.PrefersVerticalWhenErrorsClose
+[       OK ] TagUpright.PrefersVerticalWhenErrorsClose (0 ms)
+[ RUN      ] TagUpright.PrefersHorizontalInBaseFrame
+[       OK ] TagUpright.PrefersHorizontalInBaseFrame (0 ms)
+[ RUN      ] TagUpright.KeepsBestOtherwise
+[       OK ] TagUpright.KeepsBestOtherwise (0 ms)
+[----------] 4 tests from TagUpright (0 ms total)
+
+[----------] 2 tests from NumpyCompat
+[ RUN      ] NumpyCompat.RngMatchesNumpy
+[       OK ] NumpyCompat.RngMatchesNumpy (0 ms)
+[ RUN      ] NumpyCompat.Float32TrigAndReductions
+[       OK ] NumpyCompat.Float32TrigAndReductions (0 ms)
+[----------] 2 tests from NumpyCompat (0 ms total)
+
+[----------] 6 tests from BarcodeLocator
+[ RUN      ] BarcodeLocator.TemplatesBuilt
+[ WARN:0@35.380] global ./modules/imgcodecs/src/loadsave.cpp (239) findDecoder imread_('/없는/그림.png'): can't open/read file: check file path/integrity
+[       OK ] BarcodeLocator.TemplatesBuilt (3 ms)
+[ RUN      ] BarcodeLocator.FindsLabelOnWall
+[       OK ] BarcodeLocator.FindsLabelOnWall (661 ms)
+[ RUN      ] BarcodeLocator.FindsLabelOnTop
+[       OK ] BarcodeLocator.FindsLabelOnTop (542 ms)
+[ RUN      ] BarcodeLocator.NothingOnBlankPlanesOrLowWall
+[       OK ] BarcodeLocator.NothingOnBlankPlanesOrLowWall (1344 ms)
+[ RUN      ] BarcodeLocator.ContrastLimit
+[       OK ] BarcodeLocator.ContrastLimit (1014 ms)
+[ RUN      ] BarcodeLocator.SurfacesSplitWallAndTop
+[       OK ] BarcodeLocator.SurfacesSplitWallAndTop (333 ms)
+[----------] 6 tests from BarcodeLocator (3900 ms total)
+
+[----------] 8 tests from BarcodeReader
+[ RUN      ] BarcodeReader.ReadsLabelPicture
+[       OK ] BarcodeReader.ReadsLabelPicture (313 ms)
+[ RUN      ] BarcodeReader.TwoDifferentStringsIsUnread
+[       OK ] BarcodeReader.TwoDifferentStringsIsUnread (295 ms)
+[ RUN      ] BarcodeReader.QualityFilterAndGamma
+[       OK ] BarcodeReader.QualityFilterAndGamma (167 ms)
+[ RUN      ] BarcodeReader.Decide
+[       OK ] BarcodeReader.Decide (0 ms)
+[ RUN      ] BarcodeReader.RotatedJpegKeepsChecksumAndDecision
+[       OK ] BarcodeReader.RotatedJpegKeepsChecksumAndDecision (68 ms)
+[ RUN      ] BarcodeReader.LabelPathReadsNarrowMarginOnTexturedFloor
+[       OK ] BarcodeReader.LabelPathReadsNarrowMarginOnTexturedFloor (24 ms)
+[ RUN      ] BarcodeReader.LabelPathBarBlurReadsNoisyBars
+[       OK ] BarcodeReader.LabelPathBarBlurReadsNoisyBars (324 ms)
+[ RUN      ] BarcodeReader.LabelPathKeepsSafetyRules
+[       OK ] BarcodeReader.LabelPathKeepsSafetyRules (670 ms)
+[----------] 8 tests from BarcodeReader (1863 ms total)
+
+[----------] 7 tests from PuckMerge
+[ RUN      ] PuckMerge.NeighborDifferentPuckStays
+[       OK ] PuckMerge.NeighborDifferentPuckStays (0 ms)
+[ RUN      ] PuckMerge.SamePuckKeepsTag
+[       OK ] PuckMerge.SamePuckKeepsTag (0 ms)
+[ RUN      ] PuckMerge.DifferentColorNotMerged
+[       OK ] PuckMerge.DifferentColorNotMerged (0 ms)
+[ RUN      ] PuckMerge.FrontRearDuplicateKeepsHigherConfidence
+[       OK ] PuckMerge.FrontRearDuplicateKeepsHigherConfidence (0 ms)
+[ RUN      ] PuckMerge.TagFrontRearSamePuck
+[       OK ] PuckMerge.TagFrontRearSamePuck (0 ms)
+[ RUN      ] PuckMerge.UnknownColorMatchesAny
+[       OK ] PuckMerge.UnknownColorMatchesAny (0 ms)
+[ RUN      ] PuckMerge.ShapeMustMatchWhenKnown
+[       OK ] PuckMerge.ShapeMustMatchWhenKnown (0 ms)
+[----------] 7 tests from PuckMerge (0 ms total)
+
+[----------] 3 tests from ReadTag
+[ RUN      ] ReadTag.LargestOfBothLists
+[       OK ] ReadTag.LargestOfBothLists (0 ms)
+[ RUN      ] ReadTag.KeepIdsEmptyKeepsAll
+[       OK ] ReadTag.KeepIdsEmptyKeepsAll (0 ms)
+[ RUN      ] ReadTag.PlaceTagReadWithItsOwnSize
+[       OK ] ReadTag.PlaceTagReadWithItsOwnSize (31 ms)
+[----------] 3 tests from ReadTag (31 ms total)
+
+[----------] 20 tests from ArmLock
+[ RUN      ] ArmLock.KeepsTargetWhenScoresSwap
+[       OK ] ArmLock.KeepsTargetWhenScoresSwap (0 ms)
+[ RUN      ] ArmLock.LostTargetDoesNotSwitchAndReacquires
+[       OK ] ArmLock.LostTargetDoesNotSwitchAndReacquires (0 ms)
+[ RUN      ] ArmLock.SeedPicksProjectedTarget
+[       OK ] ArmLock.SeedPicksProjectedTarget (0 ms)
+[ RUN      ] ArmLock.DifferentClassNotTaken
+[       OK ] ArmLock.DifferentClassNotTaken (0 ms)
+[ RUN      ] ArmLock.SizeJumpNotTaken
+[       OK ] ArmLock.SizeJumpNotTaken (0 ms)
+[ RUN      ] ArmLock.SeedGateRejectsNeighbor
+[       OK ] ArmLock.SeedGateRejectsNeighbor (0 ms)
+[ RUN      ] ArmLock.NeighborInTargetSpotNotTakenWhileOut
+[       OK ] ArmLock.NeighborInTargetSpotNotTakenWhileOut (0 ms)
+[ RUN      ] ArmLock.ReacquireNearLastWithoutSeed
+[       OK ] ArmLock.ReacquireNearLastWithoutSeed (0 ms)
+[ RUN      ] ArmLock.PredictionFollowsFastMove
+[       OK ] ArmLock.PredictionFollowsFastMove (0 ms)
+[ RUN      ] ArmLock.VerticalDistanceUsesAspect
+[       OK ] ArmLock.VerticalDistanceUsesAspect (0 ms)
+[ RUN      ] ArmLock.MergedBoxNotFollowed
+[       OK ] ArmLock.MergedBoxNotFollowed (0 ms)
+[ RUN      ] ArmLock.ReacquireUsesUnclippedWidth
+[       OK ] ArmLock.ReacquireUsesUnclippedWidth (0 ms)
+[ RUN      ] ArmLock.ReferenceWidthKeepsClassAndSizeGuards
+[       OK ] ArmLock.ReferenceWidthKeepsClassAndSizeGuards (0 ms)
+[ RUN      ] ArmLock.OccludedReacquireDoesNotShrinkReference
+[       OK ] ArmLock.OccludedReacquireDoesNotShrinkReference (0 ms)
+[ RUN      ] ArmLock.CameraMotionUsesProjectedSeedDisplacement
+[       OK ] ArmLock.CameraMotionUsesProjectedSeedDisplacement (0 ms)
+[ RUN      ] ArmLock.CameraMotionStillRejectsWrongClassAndSize
+[       OK ] ArmLock.CameraMotionStillRejectsWrongClassAndSize (0 ms)
+[ RUN      ] ArmLock.DistinctSeedDistancesChooseNearest
+[       OK ] ArmLock.DistinctSeedDistancesChooseNearest (0 ms)
+[ RUN      ] ArmLock.EqualSeedDistancesStayUncertain
+[       OK ] ArmLock.EqualSeedDistancesStayUncertain (0 ms)
+[ RUN      ] ArmLock.RotatingBoxUsesStableDetectionSize
+[       OK ] ArmLock.RotatingBoxUsesStableDetectionSize (0 ms)
+[ RUN      ] ArmLock.DepthPredictsSizeAndReacquireReference
+[       OK ] ArmLock.DepthPredictsSizeAndReacquireReference (0 ms)
+[----------] 20 tests from ArmLock (0 ms total)
+
+[----------] 5 tests from ArmTargetLock
+[ RUN      ] ArmTargetLock.DiagCountsRejectedBoxes
+[       OK ] ArmTargetLock.DiagCountsRejectedBoxes (0 ms)
+[ RUN      ] ArmTargetLock.SizeFieldOverridesWidth
+[       OK ] ArmTargetLock.SizeFieldOverridesWidth (0 ms)
+[ RUN      ] ArmTargetLock.DropOverlappingSameClass
+[       OK ] ArmTargetLock.DropOverlappingSameClass (0 ms)
+[ RUN      ] ArmTargetLock.ReacquireUsesLastSeedBias
+[       OK ] ArmTargetLock.ReacquireUsesLastSeedBias (0 ms)
+[ RUN      ] ArmTargetLock.BiasOnlyBreaksTies
+[       OK ] ArmTargetLock.BiasOnlyBreaksTies (0 ms)
+[----------] 5 tests from ArmTargetLock (0 ms total)
+
+[----------] 10 tests from ArmDetect
+[ RUN      ] ArmDetect.CylinderTopFound
+[       OK ] ArmDetect.CylinderTopFound (3 ms)
+[ RUN      ] ArmDetect.RotatedCuboidFound
+[       OK ] ArmDetect.RotatedCuboidFound (3 ms)
+[ RUN      ] ArmDetect.TouchingSameColorSplit
+[       OK ] ArmDetect.TouchingSameColorSplit (3 ms)
+[ RUN      ] ArmDetect.LabelJoinsItsOwnColor
+[       OK ] ArmDetect.LabelJoinsItsOwnColor (3 ms)
+[ RUN      ] ArmDetect.PlainSideStillFound
+[       OK ] ArmDetect.PlainSideStillFound (3 ms)
+[ RUN      ] ArmDetect.RelativeThresholdOnDarkBackground
+[       OK ] ArmDetect.RelativeThresholdOnDarkBackground (2 ms)
+[ RUN      ] ArmDetect.ShadowSideRestoresBoxCenter
+[       OK ] ArmDetect.ShadowSideRestoresBoxCenter (5 ms)
+[ RUN      ] ArmDetect.ArmThresholdDoesNotChangeD435
+[       OK ] ArmDetect.ArmThresholdDoesNotChangeD435 (2 ms)
+[ RUN      ] ArmDetect.SameDecodedPuckFacesAreNotSplit
+[       OK ] ArmDetect.SameDecodedPuckFacesAreNotSplit (17 ms)
+[ RUN      ] ArmDetect.DifferentDecodedPucksRemainSplit
+[       OK ] ArmDetect.DifferentDecodedPucksRemainSplit (29 ms)
+[----------] 10 tests from ArmDetect (74 ms total)
+
+[----------] 4 tests from PuckClass
+[ RUN      ] PuckClass.ColorDetectorNumbersWithoutNames
+[       OK ] PuckClass.ColorDetectorNumbersWithoutNames (0 ms)
+[ RUN      ] PuckClass.YoloFourClasses
+[       OK ] PuckClass.YoloFourClasses (0 ms)
+[ RUN      ] PuckClass.MissingWordIsUnknown
+[       OK ] PuckClass.MissingWordIsUnknown (0 ms)
+[ RUN      ] PuckClass.ClassNamesMismatch
+[       OK ] PuckClass.ClassNamesMismatch (0 ms)
+[----------] 4 tests from PuckClass (0 ms total)
+
+[----------] 5 tests from YoloPostprocess
+[ RUN      ] YoloPostprocess.PerClassNms
+[       OK ] YoloPostprocess.PerClassNms (0 ms)
+[ RUN      ] YoloPostprocess.LetterboxBackToImageWithoutRounding
+[       OK ] YoloPostprocess.LetterboxBackToImageWithoutRounding (0 ms)
+[ RUN      ] YoloPostprocess.ThresholdTargetAndClip
+[       OK ] YoloPostprocess.ThresholdTargetAndClip (0 ms)
+[ RUN      ] YoloPostprocess.RejectsBadValues
+[       OK ] YoloPostprocess.RejectsBadValues (0 ms)
+[ RUN      ] YoloPostprocess.AtMost300
+[       OK ] YoloPostprocess.AtMost300 (0 ms)
+[----------] 5 tests from YoloPostprocess (0 ms total)
+
+[----------] 6 tests from ArmRange
+[ RUN      ] ArmRange.TagPreferredOverHold
+[       OK ] ArmRange.TagPreferredOverHold (0 ms)
+[ RUN      ] ArmRange.NeighborTagIgnoredUsesHold
+[       OK ] ArmRange.NeighborTagIgnoredUsesHold (0 ms)
+[ RUN      ] ArmRange.ClosestTagOnAxis
+[       OK ] ArmRange.ClosestTagOnAxis (0 ms)
+[ RUN      ] ArmRange.HoldExpiresAndGates
+[       OK ] ArmRange.HoldExpiresAndGates (0 ms)
+[ RUN      ] ArmRange.ClampsInsideSurface
+[       OK ] ArmRange.ClampsInsideSurface (0 ms)
+[ RUN      ] ArmRange.PlaneIsLastFallback
+[       OK ] ArmRange.PlaneIsLastFallback (0 ms)
+[----------] 6 tests from ArmRange (0 ms total)
+
+[----------] 3 tests from TfLookup
+[ RUN      ] TfLookup.ExactTimeInterpolates
+[       OK ] TfLookup.ExactTimeInterpolates (0 ms)
+[ RUN      ] TfLookup.LatestOnlyWithinLimit
+[       OK ] TfLookup.LatestOnlyWithinLimit (0 ms)
+[ RUN      ] TfLookup.MissingFrameThrows
+[WARN] [1793924205.123496170] []: Invalid frame ID "arm_camera_optical_frame" passed to canTransform argument source_frame - frame does not exist
+[       OK ] TfLookup.MissingFrameThrows (0 ms)
+[----------] 3 tests from TfLookup (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 165 tests from 31 test suites ran. (41234 ms total)
+[  PASSED  ] 165 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_perception_logic.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<Test Status="passed">
+			<Name>test_camera_info</Name>
+			<Path>.</Path>
+			<FullName>./test_camera_info</FullName>
+			<FullCommandLine>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_camera_info.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_camera_info" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml"</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0350134</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/usr/bin/python3 "-u" "/opt/ros/lyrical/share/ament_cmake_test/cmake/run_test.py" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml" "--package-name" "perception" "--output-file" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/ament_cmake_gtest/test_camera_info.txt" "--command" "/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_camera_info" "--gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>-- run_test.py: invoking following command in '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception':
+ - /home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_camera_info --gtest_output=xml:/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml
+Running main() from ./googletest/src/gtest_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from CameraInfoCheck
+[ RUN      ] CameraInfoCheck.ValidPinholeAccepted
+[       OK ] CameraInfoCheck.ValidPinholeAccepted (0 ms)
+[ RUN      ] CameraInfoCheck.ShiftedMatrixRejected
+[       OK ] CameraInfoCheck.ShiftedMatrixRejected (0 ms)
+[ RUN      ] CameraInfoCheck.BadValuesRejected
+[       OK ] CameraInfoCheck.BadValuesRejected (0 ms)
+[ RUN      ] CameraInfoCheck.ResolutionMismatch
+[       OK ] CameraInfoCheck.ResolutionMismatch (0 ms)
+[----------] 4 tests from CameraInfoCheck (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.
+-- run_test.py: return code 0
+-- run_test.py: inject classname prefix into gtest result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml'
+-- run_test.py: verify result file '/home/pa4/git/lv2_next_module/261105_2032_barcode_label/build/perception/test_results/perception/test_camera_info.gtest.xml'
+</Value>
+				</Measurement>
+			</Results>
+			<Labels>
+				<Label>gtest</Label>
+			</Labels>
+		</Test>
+		<EndDateTime>Nov 06 09:16 KST</EndDateTime>
+		<EndTestTime>1793924205</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

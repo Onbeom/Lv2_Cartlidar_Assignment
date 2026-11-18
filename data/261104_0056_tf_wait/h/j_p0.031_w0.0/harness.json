@@ -1,0 +1,14 @@
+{
+ "pose": "w101_b1_d0",
+ "t0": 100.0,
+ "out": "/home/pa4/git/lv2_next_module/261104_0056_tf_wait/h/j_p0.031_w0.0",
+ "render": "/home/pa4/git/lv2_next_module/261031_1718_r3port/b0/judge/render_101_T3000_awb",
+ "pose_index": 0,
+ "duration": 35.0,
+ "fps": 30.0,
+ "tf_hz": 50.0,
+ "tf_lag": 0.005,
+ "img_phase": 0.031,
+ "omega": 0.5,
+ "tf_stop": null
+}

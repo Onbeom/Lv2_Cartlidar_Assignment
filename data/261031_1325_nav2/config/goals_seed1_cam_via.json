@@ -1,0 +1,87 @@
+{
+ "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+ "rule": "설계 4 목표: 장소 태그(L1 · L2 · L3) 목표를 '앞 카메라–태그 거리' 규칙으로 다시 고른다(범퍼 거리 규칙은 카메라가 차체 중심 0.06 m 뒤라 대리 지표로 틀림).\n조건: 앞 카메라(URDF top_camera_front x −0.0606) 수평 거리 0.35~0.55 m, 면 법선과 각 ≤ 15°, 카메라가 태그를 정면으로 봄(yaw = 중심→태그 방향),\nfootprint 여유 ≥ 0.05 m, 제자리 회전 여유 ≥ 0.03 m. 그중 |거리 − 0.45| + 각/90 이 가장 작은 자세. 시작 상자 · 출발 목표는 goals_seed1_rot.json 그대로. 설계 5: L1 앞에 경유 목표(칸 입구, 회전 여유 최대, +y 방향) 추가.",
+ "goals": [
+  {
+   "name": "start_box_1",
+   "x": 2.2325,
+   "y": 0.6663,
+   "yaw": 2.78623,
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "x": 4.08,
+   "y": 0.41,
+   "yaw": 1.5708,
+   "rot_clearance": 0.082,
+   "clearance": 0.2215
+  },
+  {
+   "name": "L1(tag 12 +x)",
+   "x": 4.123,
+   "y": 0.93,
+   "yaw": 3.08451,
+   "camera_dist": 0.411,
+   "off_normal_deg": 3.3,
+   "clearance": 0.0822,
+   "rot_clearance": 0.0333,
+   "bumper_to_face": 0.087
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "x": 2.202,
+   "y": 2.6945,
+   "yaw": 1.5708,
+   "camera_dist": 0.451,
+   "off_normal_deg": 0.0,
+   "clearance": 0.1275,
+   "rot_clearance": 0.0768,
+   "bumper_to_face": 0.127
+  },
+  {
+   "name": "start_box_3",
+   "x": 2.5752,
+   "y": 4.6227,
+   "yaw": 1.11249,
+   "standoff": 0.45,
+   "clearance": 0.0864,
+   "face": [
+    2.8907,
+    5.2621
+   ],
+   "normal": [
+    -0.4424,
+    -0.8968
+   ],
+   "rot_clearance": 0.0842
+  },
+  {
+   "name": "L3(tag 14 +x)",
+   "x": 4.133,
+   "y": 5.354,
+   "yaw": 3.14159,
+   "camera_dist": 0.421,
+   "off_normal_deg": 0.0,
+   "clearance": 0.0975,
+   "rot_clearance": 0.0384,
+   "bumper_to_face": 0.097
+  },
+  {
+   "name": "start",
+   "x": 0.734,
+   "y": 0.95,
+   "yaw": 3.14159
+  }
+ ]
+}

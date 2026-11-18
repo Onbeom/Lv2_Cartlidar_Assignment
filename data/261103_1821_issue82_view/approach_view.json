@@ -1,0 +1,386 @@
+[
+ {
+  "case": "J1 0.203 옆 0.0 h 0.10",
+  "q": [
+   0.0,
+   -0.491,
+   0.391,
+   0.885,
+   0.0
+  ],
+  "cam_z_bl": 0.291,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   703
+  ],
+  "puck_top_in": true,
+  "tag_all_in": false,
+  "tag_side_px": 58.4,
+  "view_angle_deg": 9.0,
+  "range_m": 0.17,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.08",
+  "q": [
+   0.0,
+   -0.494,
+   0.555,
+   0.725,
+   0.0
+  ],
+  "cam_z_bl": 0.271,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   718
+  ],
+  "puck_top_in": true,
+  "tag_all_in": false,
+  "tag_side_px": 67.7,
+  "view_angle_deg": 10.2,
+  "range_m": 0.15,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.06",
+  "q": [
+   0.0,
+   -0.469,
+   0.701,
+   0.554,
+   0.0
+  ],
+  "cam_z_bl": 0.251,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   739
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 80.6,
+  "view_angle_deg": 11.8,
+  "range_m": 0.131,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.04",
+  "q": [
+   0.0,
+   -0.411,
+   0.829,
+   0.367,
+   0.0
+  ],
+  "cam_z_bl": 0.231,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   767
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 99.6,
+  "view_angle_deg": 13.9,
+  "range_m": 0.111,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.03",
+  "q": [
+   0.0,
+   -0.366,
+   0.886,
+   0.266,
+   0.0
+  ],
+  "cam_z_bl": 0.221,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   787
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 112.9,
+  "view_angle_deg": 15.2,
+  "range_m": 0.101,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.02",
+  "q": [
+   0.0,
+   -0.311,
+   0.937,
+   0.159,
+   0.0
+  ],
+  "cam_z_bl": 0.211,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   812
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 130.2,
+  "view_angle_deg": 16.9,
+  "range_m": 0.092,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.01",
+  "q": [
+   0.0,
+   -0.243,
+   0.981,
+   0.047,
+   0.0
+  ],
+  "cam_z_bl": 0.201,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   846
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 153.8,
+  "view_angle_deg": 18.9,
+  "range_m": 0.082,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.203 옆 0.0 h 0.00",
+  "q": [
+   0.0,
+   -0.163,
+   1.019,
+   -0.071,
+   0.0
+  ],
+  "cam_z_bl": 0.191,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   892
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 187.6,
+  "view_angle_deg": 21.4,
+  "range_m": 0.073,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.10",
+  "q": [
+   0.297,
+   -0.475,
+   0.38,
+   0.88,
+   0.0
+  ],
+  "cam_z_bl": 0.291,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   703
+  ],
+  "puck_top_in": true,
+  "tag_all_in": false,
+  "tag_side_px": 58.4,
+  "view_angle_deg": 9.0,
+  "range_m": 0.17,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.08",
+  "q": [
+   0.297,
+   -0.478,
+   0.544,
+   0.72,
+   0.0
+  ],
+  "cam_z_bl": 0.271,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   718
+  ],
+  "puck_top_in": true,
+  "tag_all_in": false,
+  "tag_side_px": 67.7,
+  "view_angle_deg": 10.2,
+  "range_m": 0.15,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.06",
+  "q": [
+   0.297,
+   -0.452,
+   0.689,
+   0.549,
+   0.0
+  ],
+  "cam_z_bl": 0.251,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   739
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 80.6,
+  "view_angle_deg": 11.8,
+  "range_m": 0.131,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.04",
+  "q": [
+   0.297,
+   -0.393,
+   0.816,
+   0.363,
+   0.0
+  ],
+  "cam_z_bl": 0.231,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   767
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 99.6,
+  "view_angle_deg": 13.9,
+  "range_m": 0.111,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.03",
+  "q": [
+   0.297,
+   -0.349,
+   0.872,
+   0.262,
+   0.0
+  ],
+  "cam_z_bl": 0.221,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   787
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 112.9,
+  "view_angle_deg": 15.2,
+  "range_m": 0.101,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.02",
+  "q": [
+   0.297,
+   -0.294,
+   0.922,
+   0.157,
+   0.0
+  ],
+  "cam_z_bl": 0.211,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   812
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 130.2,
+  "view_angle_deg": 16.9,
+  "range_m": 0.092,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.01",
+  "q": [
+   0.297,
+   -0.227,
+   0.966,
+   0.046,
+   0.0
+  ],
+  "cam_z_bl": 0.201,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   846
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 153.8,
+  "view_angle_deg": 18.9,
+  "range_m": 0.082,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ },
+ {
+  "case": "J1 0.205 옆 0.06 h 0.00",
+  "q": [
+   0.297,
+   -0.148,
+   1.003,
+   -0.07,
+   0.0
+  ],
+  "cam_z_bl": 0.191,
+  "cam_axis_down_deg": 30.0,
+  "puck_top_uv": [
+   640,
+   892
+  ],
+  "puck_top_in": false,
+  "tag_all_in": false,
+  "tag_side_px": 187.6,
+  "view_angle_deg": 21.4,
+  "range_m": 0.073,
+  "body_in_frac": 0.5,
+  "ik_err_mm": 0.0,
+  "tilt_err_deg": 0.0
+ }
+]

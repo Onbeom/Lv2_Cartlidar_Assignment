@@ -1,0 +1,27 @@
+{
+  "kind": "truth_odom",
+  "light": "dark",
+  "simulation_only": true,
+  "old_model": "261027_1711",
+  "truth_as_input": true,
+  "diagnostic_only": true,
+  "play_exit": 0,
+  "error": "Command '['ros2', 'service', 'call', '/finish_trajectory', 'cartographer_ros_msgs/srv/FinishTrajectory', '{trajectory_id: 0}']' timed out after 29.999984693000442 seconds",
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1248122,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1248123,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1248284,
+      "exit": 0
+    }
+  ]
+}

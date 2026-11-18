@@ -1,0 +1,31 @@
+{
+  "measured": {
+    "yaw_deg": 35.98642365946289,
+    "pivot_mm": [
+      17.29036633309585,
+      6.766708718165393
+    ],
+    "pivot_fit_rms_mm": 1.1780431749430451,
+    "R_pivot_mm": 252.8373172135434,
+    "R_full_mm": 271.4046302881148,
+    "center_move_max_mm": 14.64605158646553,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 2e-05,
+      "RMX52_Shoulder": 3e-05,
+      "RMX52_Elbow": 0.00183,
+      "RMX52_Wrist_Pitch": 0.00057,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "회전 ≥ 1°": true,
+    "R_full ≤ 307 mm": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V1"
+}

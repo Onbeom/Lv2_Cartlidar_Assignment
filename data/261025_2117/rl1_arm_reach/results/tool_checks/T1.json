@@ -1,0 +1,193 @@
+{
+ "test": "T1",
+ "num_envs": 4,
+ "startup_s": 6.5,
+ "joint_names": [
+  "Wheel_Revolute_Front_Left",
+  "Wheel_Revolute_Front_Right",
+  "Wheel_Revolute_Rear_Left",
+  "Wheel_Revolute_Rear_Right",
+  "RMX52_Base_Yaw",
+  "RMX52_Shoulder",
+  "RMX52_Elbow",
+  "RMX52_Wrist_Pitch",
+  "RMX52_Wrist_Roll_Reversed",
+  "gripper_left_joint",
+  "gripper_right_joint"
+ ],
+ "body_names": [
+  "base_link",
+  "wheel_front_left",
+  "wheel_front_right",
+  "wheel_rear_left",
+  "wheel_rear_right",
+  "arm_link_1",
+  "lidar_front",
+  "lidar_rear",
+  "arm_link_2",
+  "arm_link_3",
+  "arm_link_4",
+  "arm_link_5",
+  "gripper_left_link",
+  "gripper_right_link"
+ ],
+ "physx": {
+  "stiffness": {
+   "Wheel_Revolute_Front_Left": 0.0,
+   "Wheel_Revolute_Front_Right": 0.0,
+   "Wheel_Revolute_Rear_Left": 0.0,
+   "Wheel_Revolute_Rear_Right": 0.0,
+   "RMX52_Base_Yaw": 400.0,
+   "RMX52_Shoulder": 400.0,
+   "RMX52_Elbow": 400.0,
+   "RMX52_Wrist_Pitch": 400.0,
+   "RMX52_Wrist_Roll_Reversed": 400.0,
+   "gripper_left_joint": 1000.0,
+   "gripper_right_joint": 0.0
+  },
+  "damping": {
+   "Wheel_Revolute_Front_Left": 1.0,
+   "Wheel_Revolute_Front_Right": 1.0,
+   "Wheel_Revolute_Rear_Left": 1.0,
+   "Wheel_Revolute_Rear_Right": 1.0,
+   "RMX52_Base_Yaw": 36.0,
+   "RMX52_Shoulder": 36.0,
+   "RMX52_Elbow": 36.0,
+   "RMX52_Wrist_Pitch": 36.0,
+   "RMX52_Wrist_Roll_Reversed": 36.0,
+   "gripper_left_joint": 10.0,
+   "gripper_right_joint": 0.0
+  },
+  "armature": {
+   "Wheel_Revolute_Front_Left": 0.016300000250339508,
+   "Wheel_Revolute_Front_Right": 0.016300000250339508,
+   "Wheel_Revolute_Rear_Left": 0.016300000250339508,
+   "Wheel_Revolute_Rear_Right": 0.016300000250339508,
+   "RMX52_Base_Yaw": 0.04500000178813934,
+   "RMX52_Shoulder": 0.04500000178813934,
+   "RMX52_Elbow": 0.04500000178813934,
+   "RMX52_Wrist_Pitch": 0.04500000178813934,
+   "RMX52_Wrist_Roll_Reversed": 0.04500000178813934,
+   "gripper_left_joint": 0.0,
+   "gripper_right_joint": 0.0
+  },
+  "max_force": {
+   "Wheel_Revolute_Front_Left": 2.700000047683716,
+   "Wheel_Revolute_Front_Right": 2.700000047683716,
+   "Wheel_Revolute_Rear_Left": 2.700000047683716,
+   "Wheel_Revolute_Rear_Right": 2.700000047683716,
+   "RMX52_Base_Yaw": 3.799999952316284,
+   "RMX52_Shoulder": 3.799999952316284,
+   "RMX52_Elbow": 3.799999952316284,
+   "RMX52_Wrist_Pitch": 3.799999952316284,
+   "RMX52_Wrist_Roll_Reversed": 3.799999952316284,
+   "gripper_left_joint": 10.0,
+   "gripper_right_joint": 10.0
+  },
+  "max_velocity": {
+   "Wheel_Revolute_Front_Left": 1000.0,
+   "Wheel_Revolute_Front_Right": 1000.0,
+   "Wheel_Revolute_Rear_Left": 1000.0,
+   "Wheel_Revolute_Rear_Right": 1000.0,
+   "RMX52_Base_Yaw": 1000.0,
+   "RMX52_Shoulder": 1000.0,
+   "RMX52_Elbow": 1000.0,
+   "RMX52_Wrist_Pitch": 1000.0,
+   "RMX52_Wrist_Roll_Reversed": 1000.0,
+   "gripper_left_joint": 1000.0,
+   "gripper_right_joint": 1000.0
+  },
+  "limits": {
+   "Wheel_Revolute_Front_Left": [
+    -3.4028234663852886e+38,
+    3.4028234663852886e+38
+   ],
+   "Wheel_Revolute_Front_Right": [
+    -3.4028234663852886e+38,
+    3.4028234663852886e+38
+   ],
+   "Wheel_Revolute_Rear_Left": [
+    -3.4028234663852886e+38,
+    3.4028234663852886e+38
+   ],
+   "Wheel_Revolute_Rear_Right": [
+    -3.4028234663852886e+38,
+    3.4028234663852886e+38
+   ],
+   "RMX52_Base_Yaw": [
+    -3.1415927410125732,
+    3.1415927410125732
+   ],
+   "RMX52_Shoulder": [
+    -1.5,
+    1.5
+   ],
+   "RMX52_Elbow": [
+    -1.399999976158142,
+    1.5
+   ],
+   "RMX52_Wrist_Pitch": [
+    -1.9700000286102295,
+    1.6999999284744263
+   ],
+   "RMX52_Wrist_Roll_Reversed": [
+    -3.1415927410125732,
+    3.1415927410125732
+   ],
+   "gripper_left_joint": [
+    -0.001413869671523571,
+    0.026186130940914154
+   ],
+   "gripper_right_joint": [
+    -0.026186130940914154,
+    0.001413869671523571
+   ]
+  }
+ },
+ "action_dim": 4,
+ "obs_dim": 15,
+ "physics_dt": 0.008333333333333333,
+ "step_dt": 0.03333333333333333,
+ "action_rate_step_rad": 0.03752457891787808,
+ "action_lo_hi": [
+  [
+   -3.1415927410125732,
+   -1.5,
+   -1.399999976158142,
+   -1.9700000286102295
+  ],
+  [
+   3.1415927410125732,
+   1.5,
+   1.5,
+   1.6999999284744263
+  ]
+ ],
+ "root_pos_w_env0": [
+  0.75,
+  -0.75,
+  0.006749972701072693
+ ],
+ "usd_root": {},
+ "fixed_joints_env0": [
+  "/World/envs/env_0/Robot/Geometry/base_footprint/FixedJoint",
+  "/World/envs/env_0/Robot/Physics/lidar_front_fixed",
+  "/World/envs/env_0/Robot/Physics/lidar_rear_fixed"
+ ],
+ "contacts_reset_pose": {},
+ "contacts_collision_pose_max_N": {
+  "arm_link_5|base_link": 225.836,
+  "gripper_left_link|base_link": 20.501
+ },
+ "q_collision_pose_end": [
+  -0.6144717931747437,
+  1.170986294746399,
+  0.22235558927059174,
+  1.1329221725463867
+ ],
+ "moveit_record": [
+  "base_link|arm_link_3 0.0084 m",
+  "base_link|arm_link_4 0.0034 m",
+  "gripper_right_link|lidar_rear 0.0148 m"
+ ]
+}

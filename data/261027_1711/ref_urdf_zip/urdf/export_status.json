@@ -1,0 +1,33 @@
+{
+  "stage": "complete",
+  "native_motion_passed": true,
+  "source_document": "assembly (~recovered)",
+  "derived_archive": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\Waffle_URDF_Export_261021.f3d",
+  "bodies": 669,
+  "mass_g": 4891.194067546911,
+  "links": 23,
+  "joints": 22,
+  "root": "base_footprint",
+  "errors": [],
+  "warnings": [],
+  "axis_errors": [],
+  "package": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021",
+  "mimic_patched_files": [
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021\\urdf\\waffle_4wd.urdf",
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021\\urdf\\assemblies\\main.urdf.xacro"
+  ],
+  "scope": "SIMULATION_INPUTS_ADDED_RUNTIME_VALIDATION_PENDING",
+  "native_probe_normalization": "Actual Fusion-applied increment; original test raw data retained.",
+  "postprocessing": [
+    "14 physical link inertials preserved",
+    "5 bounded arm references applied",
+    "11.1V peak efforts and provisional equivalent finger force",
+    "Simplified primitive/convex collision inputs",
+    "9 fixed logical frames including footprint and optical/scan frames"
+  ],
+  "native_archive_counts": {
+    "links": 14,
+    "joints": 13,
+    "bodies": 669
+  }
+}

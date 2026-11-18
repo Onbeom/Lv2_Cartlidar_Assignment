@@ -1,0 +1,8 @@
+path: /home/pa4/git/lv2_next_module/261102_1634_yolo_D/D_real
+train: images/train
+val: images/val
+names:
+  0: red_cylinder
+  1: green_cylinder
+  2: red_cuboid
+  3: green_cuboid

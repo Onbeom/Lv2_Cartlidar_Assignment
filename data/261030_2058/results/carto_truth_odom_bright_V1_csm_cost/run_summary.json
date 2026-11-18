@@ -1,0 +1,31 @@
+{
+  "kind": "truth_odom",
+  "light": "bright",
+  "simulation_only": true,
+  "model": "261029_1030/urdf_261028",
+  "maze": "maze.zip (261030_1943)",
+  "truth_as_input": true,
+  "diagnostic_only": true,
+  "variant_lua": "/home/pa4/git/lv2_next_module/261030_2058/variants/V1_csm_cost.lua",
+  "play_exit": 0,
+  "finish_exit": 0,
+  "write_exit": 0,
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1639386,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1639387,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1639623,
+      "exit": 0
+    }
+  ],
+  "to_map_exit": 0
+}

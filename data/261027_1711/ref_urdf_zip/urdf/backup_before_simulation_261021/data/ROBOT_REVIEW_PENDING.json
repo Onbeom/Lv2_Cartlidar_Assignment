@@ -1,0 +1,1616 @@
+{
+  "status": "USER_REVIEW_REQUIRED_NOT_FINAL_HANDOFF",
+  "units": {
+    "mass": "g",
+    "length": "mm",
+    "inertia": "g*mm^2",
+    "angle": "rad",
+    "torque": "N*mm"
+  },
+  "total_mass_g": 4891.194067702904,
+  "arm_mass_excluding_UC684_and_camera_bracket_g": 793.5,
+  "links": [
+    {
+      "name": "arm_link_1",
+      "mass_g": 105.7803861201182,
+      "com_world_mm": [
+        87.00000000011269,
+        0.5433991975097112,
+        173.0921788401353
+      ],
+      "inertia_com_world_g_mm2": [
+        40389.5285500866,
+        34472.23359812783,
+        19304.720004222727,
+        -1.2655171220937713e-06,
+        -6.176833707552165e-08,
+        -358.8082481102783
+      ],
+      "principal_moments_g_mm2": [
+        19296.236649926377,
+        34480.71695242419,
+        40389.5285500866
+      ],
+      "body_count": 51,
+      "com_link_mm": [
+        1.1269207789155189e-10,
+        0.5433991975097112,
+        20.742178840135267
+      ],
+      "inertia_com_link_g_mm2": [
+        40389.5285500866,
+        34472.23359812783,
+        19304.720004222727,
+        -1.2655171220937713e-06,
+        -6.176833707552165e-08,
+        -358.8082481102783
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          87.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          152.35000000000002
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "arm_link_2",
+      "mass_g": 144.85128784809828,
+      "com_world_mm": [
+        95.22027006191591,
+        0.3968275167958901,
+        290.1834945676447
+      ],
+      "inertia_com_world_g_mm2": [
+        261979.3394573479,
+        268523.5862797562,
+        42525.453563762654,
+        -265.2239637629553,
+        -30847.91554526852,
+        -1627.6603907131575
+      ],
+      "principal_moments_g_mm2": [
+        38259.9105500863,
+        266232.370082425,
+        268536.09866835544
+      ],
+      "body_count": 65,
+      "com_link_mm": [
+        8.220270061915912,
+        -99.68349443795812,
+        0.3968600928531627
+      ],
+      "inertia_com_link_g_mm2": [
+        261979.3394573479,
+        42525.454627609004,
+        268523.58521590993,
+        30847.915458593034,
+        -265.2340447043102,
+        1627.7342457492086
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          87.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          0.0
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          190.50000000000003
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "arm_link_3",
+      "mass_g": 136.85685332970507,
+      "com_world_mm": [
+        197.40674214332302,
+        0.42000800474027655,
+        318.50056417332513
+      ],
+      "inertia_com_world_g_mm2": [
+        25333.418723491213,
+        203180.28505024454,
+        212772.36910656196,
+        -1519.0868302001268,
+        2.347740348061567,
+        0.03242107740231519
+      ],
+      "principal_moments_g_mm2": [
+        25320.44429363149,
+        203193.25945067924,
+        212772.36913598698
+      ],
+      "body_count": 57,
+      "com_link_mm": [
+        86.40674214332302,
+        -0.0005640360618099015,
+        0.42004983467137996
+      ],
+      "inertia_com_link_g_mm2": [
+        25333.418723491213,
+        212772.36910653976,
+        203180.28505026674,
+        -2.3482367778849493,
+        -1519.086829432816,
+        -0.03555572151907748
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          111.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          -4.182974675688171e-05
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          318.4999999999932
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "arm_link_4",
+      "mass_g": 96.37476312542572,
+      "com_world_mm": [
+        277.4410505768062,
+        -4.6503366435857685e-08,
+        329.7960446521103
+      ],
+      "inertia_com_world_g_mm2": [
+        26162.515475644093,
+        33079.51442893827,
+        24314.94458550442,
+        3.652068159867887e-06,
+        -1126.1147230080148,
+        7.279109404986591e-07
+      ],
+      "principal_moments_g_mm2": [
+        23782.188263957763,
+        26695.271797190748,
+        33079.51442893827
+      ],
+      "body_count": 37,
+      "com_link_mm": [
+        42.44105057680622,
+        -11.296044652102873,
+        4.547473313382243e-05
+      ],
+      "inertia_com_link_g_mm2": [
+        26162.515475644093,
+        24314.944585505356,
+        33079.514428937335,
+        1126.114723007956,
+        -0.0003643564762356108,
+        0.0028634887842456007
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          235.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          -4.182974675688171e-05
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          318.4999999999932
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "arm_link_5",
+      "mass_g": 207.22119016568175,
+      "com_world_mm": [
+        334.76018063503824,
+        0.01906579850731151,
+        333.41073436338115
+      ],
+      "inertia_com_world_g_mm2": [
+        199308.55813560382,
+        163903.41395397385,
+        114673.70232904013,
+        44.81022756609918,
+        17432.437836037287,
+        426.3480320196295
+      ],
+      "principal_moments_g_mm2": [
+        111220.55001711717,
+        163906.18420029993,
+        202758.9402012007
+      ],
+      "body_count": 262,
+      "com_link_mm": [
+        0.01912274935294599,
+        14.910723493655357,
+        31.360185794019408
+      ],
+      "inertia_com_link_g_mm2": [
+        163903.41426192032,
+        114673.68997285016,
+        199308.57018384733,
+        426.33762530398565,
+        44.8276423058525,
+        17432.408363686412
+      ],
+      "link_frame_world_mm": [
+        [
+          3.2679489653813835e-07,
+          -3.46410206619375e-07,
+          0.9999999999998866,
+          303.4
+        ],
+        [
+          0.9999999999998932,
+          -3.2679478333303114e-07,
+          -3.267950097431889e-07,
+          -4.182974675688171e-05
+        ],
+        [
+          3.267948965381209e-07,
+          0.9999999999998866,
+          3.464100998244706e-07,
+          318.4999999999932
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "base_link",
+      "mass_g": 3721.80302244876,
+      "com_world_mm": [
+        -53.547954996508125,
+        -0.02202453130900904,
+        146.67466611266704
+      ],
+      "inertia_com_world_g_mm2": [
+        115564460.13925141,
+        114774215.46923384,
+        53620011.264812954,
+        -192718.30760513176,
+        25205750.30246315,
+        108814.92979178089
+      ],
+      "principal_moments_g_mm2": [
+        44659287.73747208,
+        114772453.6246741,
+        124526945.51115209
+      ],
+      "body_count": 127,
+      "com_link_mm": [
+        -53.547954996508125,
+        -0.02202453130900904,
+        146.67466611266704
+      ],
+      "inertia_com_link_g_mm2": [
+        115564460.13925141,
+        114774215.46923384,
+        53620011.264812954,
+        -192718.30760513176,
+        25205750.30246315,
+        108814.92979178089
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "gripper_left_link",
+      "mass_g": 25.36729050679057,
+      "com_world_mm": [
+        379.55266657305015,
+        17.223495149780838,
+        318.511624575792
+      ],
+      "inertia_com_world_g_mm2": [
+        5893.866086996253,
+        15864.294897627402,
+        12804.446257372092,
+        1013.5609303923602,
+        4.909111163373368,
+        0.18400356507822727
+      ],
+      "principal_moments_g_mm2": [
+        5791.870767837097,
+        12804.4494899754,
+        15966.286984183249
+      ],
+      "body_count": 7,
+      "com_link_mm": [
+        1.1096315009868354,
+        0.01161782098012855,
+        18.452666214454837
+      ],
+      "inertia_com_link_g_mm2": [
+        15864.295560199354,
+        12804.446253850425,
+        5893.86542794597,
+        0.18265411959941333,
+        1013.5576737744444,
+        4.911173772761751
+      ],
+      "link_frame_world_mm": [
+        [
+          3.2679489653813835e-07,
+          -3.46410206619375e-07,
+          0.9999999999998866,
+          361.1
+        ],
+        [
+          0.9999999999998932,
+          -3.2679478333303114e-07,
+          -3.267950097431889e-07,
+          16.11386968283
+        ],
+        [
+          3.267948965381209e-07,
+          0.9999999999998866,
+          3.464100998244706e-07,
+          318.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "gripper_right_link",
+      "mass_g": 25.36729050679057,
+      "com_world_mm": [
+        379.54257213790225,
+        -17.22349514978047,
+        318.4883754242306
+      ],
+      "inertia_com_world_g_mm2": [
+        5893.866086996052,
+        15876.853238180052,
+        12817.004597898936,
+        -1016.4776461577603,
+        -4.90613446316765,
+        0.18400357071230686
+      ],
+      "principal_moments_g_mm2": [
+        5791.415295695692,
+        12817.00781981947,
+        15979.300807559877
+      ],
+      "body_count": 7,
+      "com_link_mm": [
+        -1.1096194438107487,
+        -0.011630601844826846,
+        18.442572496493337
+      ],
+      "inertia_com_link_g_mm2": [
+        15876.852573939506,
+        12817.00460117701,
+        5893.866747958524,
+        0.1833541439633839,
+        -1016.4809100865871,
+        -4.903404097651558
+      ],
+      "link_frame_world_mm": [
+        [
+          3.2679489653813835e-07,
+          -3.46410206619375e-07,
+          0.9999999999998866,
+          361.1
+        ],
+        [
+          0.9999999999998932,
+          -3.2679478333303114e-07,
+          -3.267950097431889e-07,
+          -16.11386968283
+        ],
+        [
+          3.267948965381209e-07,
+          0.9999999999998866,
+          3.464100998244706e-07,
+          318.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "lidar_front",
+      "mass_g": 152.84877869452652,
+      "com_world_mm": [
+        175.32326532835688,
+        48.94414532248022,
+        77.42267644474826
+      ],
+      "inertia_com_world_g_mm2": [
+        66447.17778254472,
+        96728.92490425913,
+        127428.13778435445,
+        -803.9281916562328,
+        16794.4925520467,
+        1515.3981622742242
+      ],
+      "principal_moments_g_mm2": [
+        62089.21938939405,
+        96721.69750555244,
+        131793.32357621175
+      ],
+      "body_count": 24,
+      "com_link_mm": [
+        175.32326532835688,
+        48.94414532248022,
+        77.42267644474826
+      ],
+      "inertia_com_link_g_mm2": [
+        66447.17778254472,
+        96728.92490425913,
+        127428.13778435445,
+        -803.9281916562328,
+        16794.4925520467,
+        1515.3981622742242
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "lidar_rear",
+      "mass_g": 152.84877869452652,
+      "com_world_mm": [
+        -175.3232653283569,
+        -48.94414532248023,
+        77.42267644474826
+      ],
+      "inertia_com_world_g_mm2": [
+        66447.17778254472,
+        96728.92490425913,
+        127428.13778435442,
+        -803.9281916561862,
+        -16794.49255204686,
+        -1515.3981622742508
+      ],
+      "principal_moments_g_mm2": [
+        62089.21938939398,
+        96721.69750555247,
+        131793.32357621184
+      ],
+      "body_count": 24,
+      "com_link_mm": [
+        -175.3232653283569,
+        -48.94414532248023,
+        77.42267644474826
+      ],
+      "inertia_com_link_g_mm2": [
+        66447.17778254472,
+        96728.92490425913,
+        127428.13778435442,
+        -803.9281916561862,
+        -16794.49255204686,
+        -1515.3981622742508
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wheel_front_left",
+      "mass_g": 30.46860603667431,
+      "com_world_mm": [
+        80.00128271437984,
+        142.7505847435994,
+        26.250907343281014
+      ],
+      "inertia_com_world_g_mm2": [
+        11690.009279510501,
+        21638.326797239904,
+        11691.177350510221,
+        -1.6200515080142124,
+        -2.5141943288618247,
+        -1.456333584547892
+      ],
+      "principal_moments_g_mm2": [
+        11688.011702402879,
+        11693.174450699928,
+        21638.32727415783
+      ],
+      "body_count": 2,
+      "com_link_mm": [
+        0.0012827143798403995,
+        -0.0009063136859986826,
+        3.150584743895757
+      ],
+      "inertia_com_link_g_mm2": [
+        11690.009279510501,
+        11691.177351463128,
+        21638.326796286994,
+        2.5141937994371255,
+        -1.6200523296400013,
+        1.4595842622218742
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          80.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          139.6
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          26.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wheel_front_right",
+      "mass_g": 30.468607094565996,
+      "com_world_mm": [
+        79.99799724425796,
+        -142.750584591128,
+        26.250907550074675
+      ],
+      "inertia_com_world_g_mm2": [
+        11690.009631860106,
+        21638.32737978424,
+        11691.17764003056,
+        1.519939384081171,
+        3.9179256815051446,
+        1.4563101787599064
+      ],
+      "principal_moments_g_mm2": [
+        11686.632419667461,
+        11694.554406615374,
+        21638.327825392073
+      ],
+      "body_count": 2,
+      "com_link_mm": [
+        -0.002002755742040563,
+        -0.0009085796696408,
+        -3.1505845908312438
+      ],
+      "inertia_com_link_g_mm2": [
+        11690.009631860106,
+        11691.177639079793,
+        21638.327380735005,
+        -3.9179251847965015,
+        1.5199406644392075,
+        -1.4530595009895433
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          80.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          -139.6
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          26.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wheel_rear_left",
+      "mass_g": 30.46860603667431,
+      "com_world_mm": [
+        -79.99871728562017,
+        142.7505847435994,
+        26.250907343281014
+      ],
+      "inertia_com_world_g_mm2": [
+        11690.009279510501,
+        21638.32679723992,
+        11691.177350510221,
+        -1.6200515080142124,
+        -2.5141943288618243,
+        -1.456333584547892
+      ],
+      "principal_moments_g_mm2": [
+        11688.011702402879,
+        11693.17445069993,
+        21638.32727415784
+      ],
+      "body_count": 2,
+      "com_link_mm": [
+        0.0012827143798261886,
+        -0.0009063136859986826,
+        3.150584743895757
+      ],
+      "inertia_com_link_g_mm2": [
+        11690.009279510501,
+        11691.177351463128,
+        21638.32679628701,
+        2.514193799437125,
+        -1.6200523296400013,
+        1.4595842622218742
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -80.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          139.6
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          26.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "wheel_rear_right",
+      "mass_g": 30.468607094565996,
+      "com_world_mm": [
+        -80.00200275574205,
+        -142.750584591128,
+        26.250907550074675
+      ],
+      "inertia_com_world_g_mm2": [
+        11690.009631860106,
+        21638.32737978424,
+        11691.17764003056,
+        1.519939384081171,
+        3.9179256815051446,
+        1.4563101787599064
+      ],
+      "principal_moments_g_mm2": [
+        11686.632419667461,
+        11694.554406615374,
+        21638.327825392073
+      ],
+      "body_count": 2,
+      "com_link_mm": [
+        -0.0020027557420547737,
+        -0.0009085796696408,
+        -3.1505845908312438
+      ],
+      "inertia_com_link_g_mm2": [
+        11690.009631860106,
+        11691.177639079793,
+        21638.327380735005,
+        -3.9179251847965015,
+        1.5199406644392075,
+        -1.4530595009895433
+      ],
+      "link_frame_world_mm": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -80.0
+        ],
+        [
+          0.0,
+          3.2679489653813835e-07,
+          0.9999999999999466,
+          -139.6
+        ],
+        [
+          0.0,
+          -0.9999999999999466,
+          3.2679489653813835e-07,
+          26.25
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "joints": [
+    {
+      "name": "Wheel_Revolute_Front_Left",
+      "parent": "base_link",
+      "child": "wheel_front_left",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        80.0,
+        139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor",
+      "proposed_start_velocity_rad_per_s": 2.0,
+      "proposed_start_effort_N_mm": 500
+    },
+    {
+      "name": "Wheel_Revolute_Front_Right",
+      "parent": "base_link",
+      "child": "wheel_front_right",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        80.0,
+        -139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor",
+      "proposed_start_velocity_rad_per_s": 2.0,
+      "proposed_start_effort_N_mm": 500
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Left",
+      "parent": "base_link",
+      "child": "wheel_rear_left",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        -80.0,
+        139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor",
+      "proposed_start_velocity_rad_per_s": 2.0,
+      "proposed_start_effort_N_mm": 500
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Right",
+      "parent": "base_link",
+      "child": "wheel_rear_right",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        -80.0,
+        -139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor",
+      "proposed_start_velocity_rad_per_s": 2.0,
+      "proposed_start_effort_N_mm": 500
+    },
+    {
+      "name": "RMX52_Base_Yaw",
+      "parent": "base_link",
+      "child": "arm_link_1",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        87.0,
+        0.0,
+        152.35000000000002
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "axis_basis": "Corrected legacy URDF sign to match positive Fusion joint values; native pose probes.",
+      "proposed_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "legacy_reference_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "limit_status": "Sign-only remap of previous stock reference into corrected native axis convention; zero correspondence and actual modified-arm limits remain unverified.",
+      "proposed_start_velocity_rad_per_s": 0.5,
+      "proposed_start_effort_N_mm": 1000
+    },
+    {
+      "name": "lidar_front_fixed",
+      "parent": "base_link",
+      "child": "lidar_front",
+      "current_type": "fixed",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": null,
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor"
+    },
+    {
+      "name": "lidar_rear_fixed",
+      "parent": "base_link",
+      "child": "lidar_rear",
+      "current_type": "fixed",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": null,
+      "proposed_limits_rad": null,
+      "limit_status": "wheel continuous or fixed sensor"
+    },
+    {
+      "name": "RMX52_Shoulder",
+      "parent": "arm_link_1",
+      "child": "arm_link_2",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        38.150000000000006
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "axis_basis": "Corrected legacy URDF sign to match positive Fusion joint values; native pose probes.",
+      "proposed_limits_rad": [
+        -1.5,
+        1.5
+      ],
+      "legacy_reference_limits_rad": [
+        -1.5,
+        1.5
+      ],
+      "limit_status": "Sign-only remap of previous stock reference into corrected native axis convention; zero correspondence and actual modified-arm limits remain unverified.",
+      "proposed_start_velocity_rad_per_s": 0.5,
+      "proposed_start_effort_N_mm": 2000
+    },
+    {
+      "name": "RMX52_Elbow",
+      "parent": "arm_link_2",
+      "child": "arm_link_3",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        24.0,
+        -128.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "axis_basis": "Corrected legacy URDF sign to match positive Fusion joint values; native pose probes.",
+      "proposed_limits_rad": [
+        -1.4,
+        1.5
+      ],
+      "legacy_reference_limits_rad": [
+        -1.5,
+        1.4
+      ],
+      "limit_status": "Sign-only remap of previous stock reference into corrected native axis convention; zero correspondence and actual modified-arm limits remain unverified.",
+      "proposed_start_velocity_rad_per_s": 0.5,
+      "proposed_start_effort_N_mm": 2000
+    },
+    {
+      "name": "RMX52_Wrist_Pitch",
+      "parent": "arm_link_3",
+      "child": "arm_link_4",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        124.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "axis_basis": "Corrected legacy URDF sign to match positive Fusion joint values; native pose probes.",
+      "proposed_limits_rad": [
+        -1.97,
+        1.7
+      ],
+      "legacy_reference_limits_rad": [
+        -1.7,
+        1.97
+      ],
+      "limit_status": "Sign-only remap of previous stock reference into corrected native axis convention; zero correspondence and actual modified-arm limits remain unverified.",
+      "proposed_start_velocity_rad_per_s": 0.5,
+      "proposed_start_effort_N_mm": 1000
+    },
+    {
+      "name": "RMX52_Wrist_Roll_Reversed",
+      "parent": "arm_link_4",
+      "child": "arm_link_5",
+      "current_type": "continuous",
+      "origin_parent_mm": [
+        68.4,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        -3.141593,
+        -1.570796,
+        0.0
+      ],
+      "axis_child": [
+        -0.0,
+        -0.0,
+        -1.0
+      ],
+      "axis_basis": "Corrected legacy URDF sign to match positive Fusion joint values; native pose probes.",
+      "proposed_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "legacy_reference_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "limit_status": "estimated cable-safe initial range; not physically validated",
+      "proposed_start_velocity_rad_per_s": 0.5,
+      "proposed_start_effort_N_mm": 500
+    },
+    {
+      "name": "gripper_left_joint",
+      "parent": "arm_link_5",
+      "child": "gripper_left_link",
+      "current_type": "prismatic",
+      "origin_parent_mm": [
+        16.113930368640567,
+        -2.5253804322127846e-05,
+        57.699994734047635
+      ],
+      "rpy_rad": [
+        0,
+        0,
+        0
+      ],
+      "axis_child": [
+        0.9999999999998932,
+        -3.2679478333303114e-07,
+        -3.267950097431889e-07
+      ],
+      "mimic": null,
+      "travel_limits_mm": [
+        -1.4138696828300006,
+        26.186130317169997
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "user aperture 16.8 to 72.0mm; intermediate motor-angle mapping and actuation force unverified"
+    },
+    {
+      "name": "gripper_right_joint",
+      "parent": "arm_link_5",
+      "child": "gripper_right_link",
+      "current_type": "prismatic",
+      "origin_parent_mm": [
+        -16.113808997015994,
+        -1.4721947218813588e-05,
+        57.70000526591204
+      ],
+      "rpy_rad": [
+        0,
+        0,
+        0
+      ],
+      "axis_child": [
+        0.9999999999998932,
+        -3.2679478333303114e-07,
+        -3.267950097431889e-07
+      ],
+      "mimic": {
+        "joint": "gripper_left_joint",
+        "multiplier": -1,
+        "offset_mm": 0
+      },
+      "travel_limits_mm": [
+        -26.186130317169997,
+        1.4138696828300006
+      ],
+      "proposed_limits_rad": null,
+      "limit_status": "user aperture 16.8 to 72.0mm; intermediate motor-angle mapping and actuation force unverified"
+    }
+  ],
+  "assumptions": [
+    "User approved arm mass 793.5 g excluding UC684 camera/bracket: stock 711.37 g + actual-position wrist motor 82 g + negligible custom wrist hardware 0.13 g. Hardware mass is an agreed simplification, not a measured printed mass.",
+    "PLA density 0.00124 g/mm^3, uniform 100% solid; slicer infill not modeled.",
+    "Tires rubber density 0.0011 g/mm^3; wheel hubs and both floors PLA.",
+    "All ten XM430 assemblies use 82g each; arm model W350 and wheel model W210 inferred from stock ROBOTIS hardware.",
+    "LDS assumed LDS01 from CAD size; 125g is a conservative use of the published upper bound.",
+    "All three unspecified 2020 slot5 profiles use estimated linear density 0.5 g/mm; CAD is an outer envelope, inertia is a uniform-envelope approximation.",
+    "Electronics and motor interior mass distribution is approximated uniformly over CAD solids/envelopes.",
+    "Wiring, connectors not modeled in CAD and payload are excluded unless explicitly modeled.",
+    "Raw computed inertia tensors use g*mm^2; exported URDF requires multiplication by 1e-9."
+  ],
+  "sources": {
+    "rmx52": "https://emanual.robotis.com/docs/en/platform/openmanipulator_x/specification/",
+    "xm430": "https://en.robotis.com/shop_en/item.php?it_id=902-0124-000",
+    "opencr": "https://emanual.robotis.com/docs/en/parts/controller/opencr10/",
+    "battery": "https://en.robotis.com/shop_en/item.php?it_id=903-0210-000",
+    "jetson": "https://forums.developer.nvidia.com/t/jetson-orin-nano-devkit-weight/302055/3",
+    "lds01": "https://e-shop.robotis.co.jp/product.php?id=11",
+    "d435": "https://support.realsenseai.com/hc/en-us/community/posts/19069743039891-Weight-of-Depth-Cameras",
+    "pla": "https://wiki.polymaker.com/polymaker-products/polymaker-filaments/technical-data-at-a-glance",
+    "profile_reference": "https://sg.misumi-ec.com/vona2/detail/110302683830/?HissuCode=KHFSY5-2020-4000"
+  },
+  "gripper": {
+    "status": "equivalent_parallel_finger_pair_not_internal_linkage_simulation",
+    "joints": [
+      "gripper_left_joint",
+      "gripper_right_joint"
+    ],
+    "origin_world_mm": [
+      [
+        361.1,
+        16.11386968283,
+        318.5
+      ],
+      [
+        361.1,
+        -16.11386968283,
+        318.5
+      ]
+    ],
+    "axis_world": [
+      0,
+      1,
+      0
+    ],
+    "mimic_multiplier": -1,
+    "tests": [
+      {
+        "name": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+        "delta_mm": [
+          0.0,
+          0.9999999999999765,
+          0.0
+        ]
+      },
+      {
+        "name": "gripper_left_link__RMX52_PR33_SPD-A01_1:1",
+        "delta_mm": [
+          0.0,
+          1.0000000000000009,
+          0.0
+        ]
+      },
+      {
+        "name": "gripper_left_link__RMX52_WBH_M3X10_3:1",
+        "delta_mm": [
+          0.0,
+          0.999999999999992,
+          -3.552713678800501e-14
+        ]
+      },
+      {
+        "name": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+        "delta_mm": [
+          0.0,
+          -1.0000000000000009,
+          0.0
+        ]
+      },
+      {
+        "name": "gripper_right_link__RMX52_PR33_SPD-A01_2:1",
+        "delta_mm": [
+          0.0,
+          -1.0000000000000009,
+          0.0
+        ]
+      },
+      {
+        "name": "gripper_right_link__RMX52_WBH_M3X10_4:1",
+        "delta_mm": [
+          0.0,
+          -1.0000000000000009,
+          0.0
+        ]
+      }
+    ],
+    "restoration_error": 7.105427357601002e-15,
+    "aperture_limits_mm": [
+      16.8,
+      72.0
+    ],
+    "aperture_at_home_mm": 19.627739365660002,
+    "slide_limits_mm": [
+      [
+        -1.4138696828300006,
+        26.186130317169997
+      ],
+      [
+        -26.186130317169997,
+        1.4138696828300006
+      ]
+    ],
+    "limits_status": "user-specified aperture bounds applied; servo-angle-to-aperture transmission remains unverified",
+    "motor": "RMX52_Motor_J6_Gripper_Open_Close",
+    "limitation": "Internal crank/linkage parts remain in the gripper body; only the two fingers, pads and end pivot screws articulate. This is an equivalent URDF-style parallel-gripper model, not a reconstructed closed-loop mechanism.",
+    "native_expected_translation_axis_world": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "native_motion_link_reversed": false,
+    "native_slide_limits_mm": [
+      [
+        -1.4138696828300006,
+        26.186130317169997
+      ],
+      [
+        -1.4138696828300006,
+        26.186130317169997
+      ]
+    ],
+    "axis_world_note": "The common +Y axis and -1 mimic are the review/URDF convention. Native Fusion uses opposite physical slide directions with equal signed linked displacements.",
+    "user_angular_reference": {
+      "assumed_closed_deg": 0,
+      "minimum_aperture_mm": 16.8,
+      "fully_open_deg": 180,
+      "fully_open_aperture_mm": 72.4,
+      "selected_aperture_cap_mm": 72.0,
+      "after_180": "closing branch",
+      "nonlinear_map_calibrated": false
+    }
+  },
+  "remaining_requirements": [
+    "regenerate simulation package with current equivalent finger joints; CAD body split and mimic joints already exist",
+    "collision simplification or convex decomposition",
+    "sensor scan/optical frames and calibration",
+    "actuator IDs and command direction",
+    "actual motor operating limits and drive gains",
+    "contact/friction tuning",
+    "measure actual printed puck mass; solid PLA estimate provided",
+    "self collision exclusions",
+    "ground contact and spawn height",
+    "simulation timestep/substeps/solver settings",
+    "ROS control and Isaac articulation mapping",
+    "revalidate changed-CAD motion and actual printed masses"
+  ],
+  "demo_motion_ranges": [
+    {
+      "joint": "RMX52_Base_Yaw",
+      "minimum_rad": -3.141592653589793,
+      "maximum_rad": -3.141592653589793,
+      "reference_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ]
+    },
+    {
+      "joint": "RMX52_Shoulder",
+      "minimum_rad": 0.4998911718252679,
+      "maximum_rad": 1.9122755806160554,
+      "reference_limits_rad": [
+        -1.5,
+        1.5
+      ]
+    },
+    {
+      "joint": "RMX52_Elbow",
+      "minimum_rad": -1.0621878790867854,
+      "maximum_rad": 0.9427094946093613,
+      "reference_limits_rad": [
+        -1.4,
+        1.5
+      ]
+    },
+    {
+      "joint": "RMX52_Wrist_Pitch",
+      "minimum_rad": -1.8315550080613057,
+      "maximum_rad": -0.6048023785776997,
+      "reference_limits_rad": [
+        -1.97,
+        1.7
+      ]
+    },
+    {
+      "joint": "RMX52_Wrist_Roll_Reversed",
+      "minimum_rad": 0,
+      "maximum_rad": 0,
+      "reference_limits_rad": [
+        -3.141592653589793,
+        3.141592653589793
+      ]
+    }
+  ],
+  "native_Fusion_active_joints": [
+    {
+      "name": "Wheel_Revolute_Front_Left",
+      "suppressed": false,
+      "one": "Motor_Front_Left:1",
+      "two": "Wheel_Front_Left:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "Wheel_Revolute_Front_Right",
+      "suppressed": false,
+      "one": "Motor_Front_Right:1",
+      "two": "Wheel_Front_Right:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Left",
+      "suppressed": false,
+      "one": "Motor_Rear_Left:1",
+      "two": "Wheel_Rear_Left:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Right",
+      "suppressed": false,
+      "one": "Motor_Rear_Right:1",
+      "two": "Wheel_Rear_Right:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "RMX52_Base_Fixed_To_Deck",
+      "suppressed": false,
+      "one": "Floor_3_Joined:1",
+      "two": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "type": "adsk::fusion::RigidJointMotion"
+    },
+    {
+      "name": "RMX52_Base_Yaw",
+      "suppressed": false,
+      "one": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+      "two": "arm_link_1__RMX52_FR12_S102_1:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "RMX52_Shoulder",
+      "suppressed": false,
+      "one": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+      "two": "arm_link_2__RMX52_FR12_H101_1:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "RMX52_Elbow",
+      "suppressed": false,
+      "one": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+      "two": "arm_link_3__RMX52_FR12_H101_2:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "RMX52_Wrist_Pitch",
+      "suppressed": false,
+      "one": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+      "two": "arm_link_4__RMX52_FR12_H104_1:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "RMX52_Wrist_Roll_Reversed",
+      "suppressed": false,
+      "one": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+      "two": "arm_link_5__RMX52_Wrist_Horn_Adapter_3mm:1",
+      "type": "adsk::fusion::RevoluteJointMotion"
+    },
+    {
+      "name": "LDS_Front_40mm_Adjustment",
+      "suppressed": false,
+      "one": "LDS_Front_Deck_Fixed_Slotted_Base:1",
+      "two": "LDS_Front_Sliding_Carrier:1",
+      "type": "adsk::fusion::SliderJointMotion"
+    },
+    {
+      "name": "LDS_Rear_40mm_Adjustment",
+      "suppressed": false,
+      "one": "LDS_Rear_Deck_Fixed_Slotted_Base:1",
+      "two": "LDS_Rear_Sliding_Carrier:1",
+      "type": "adsk::fusion::SliderJointMotion"
+    },
+    {
+      "name": "UC684_Camera_On_Gripper_Fixed_To_GripperMotor",
+      "suppressed": false,
+      "one": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "two": "UC684_Camera_On_Gripper:1",
+      "type": "adsk::fusion::RigidJointMotion"
+    },
+    {
+      "name": "UC684_Camera_Bracket_PLA_Fixed_To_GripperMotor",
+      "suppressed": false,
+      "one": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "two": "UC684_Camera_Bracket_PLA:1",
+      "type": "adsk::fusion::RigidJointMotion"
+    },
+    {
+      "name": "gripper_left_joint",
+      "suppressed": false,
+      "one": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "two": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+      "type": "adsk::fusion::SliderJointMotion"
+    },
+    {
+      "name": "gripper_right_joint",
+      "suppressed": false,
+      "one": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+      "two": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+      "type": "adsk::fusion::SliderJointMotion"
+    }
+  ],
+  "payload_estimate": {
+    "status": "PLA solid estimate requested by user; not weighed",
+    "units": {
+      "length": "mm",
+      "mass": "g",
+      "inertia": "g*mm^2"
+    },
+    "size_mm": [
+      30,
+      30,
+      60
+    ],
+    "height_axis": "Z",
+    "density_g_per_mm3": 0.00124,
+    "volume_mm3": 54000,
+    "mass_g": 66.96,
+    "com_centered_object_frame_mm": [
+      0,
+      0,
+      0
+    ],
+    "inertia_com_g_mm2": [
+      25110,
+      25110,
+      10044,
+      0,
+      0,
+      0
+    ],
+    "inertia_order": [
+      "Ixx",
+      "Iyy",
+      "Izz",
+      "Ixy",
+      "Ixz",
+      "Iyz"
+    ],
+    "infill": "100 percent homogeneous solid; actual infill and shell settings not provided",
+    "robot_without_payload_mass_g": 4891.194067702904,
+    "robot_plus_one_payload_mass_g": 4958.154067702904,
+    "note": "payload is separate from robot links; add it to a held object or storage load only in the corresponding simulation state",
+    "max_puck_count": 12,
+    "max_storage_payload_mass_g": 803.52,
+    "robot_fully_loaded_mass_g": 5694.714067702904
+  }
+}

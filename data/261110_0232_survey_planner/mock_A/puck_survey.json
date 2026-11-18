@@ -1,0 +1,388 @@
+{
+  "survey_id": "3f5ba912010740bda589ee0d2e5e2b28",
+  "stamp": "1794245715.823990583",
+  "frame": "map(mm, 발제 원점)",
+  "boxes": [
+    {
+      "box": 1,
+      "center_mm": [
+        1468.0,
+        950.0
+      ],
+      "yaw_deg": 0.1279218588302712,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 2,
+      "center_mm": [
+        3670.0,
+        3152.0
+      ],
+      "yaw_deg": 0.009804099211816143,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 3,
+      "center_mm": [
+        2936.0,
+        5354.0
+      ],
+      "yaw_deg": 0.007806604432521954,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 4,
+      "center_mm": [
+        734.0,
+        5354.0
+      ],
+      "yaw_deg": 0.5541600679460611,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 5,
+      "center_mm": [
+        2202.0,
+        5354.0
+      ],
+      "yaw_deg": -0.27486250299206905,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 6,
+      "center_mm": [
+        3670.0,
+        3886.0
+      ],
+      "yaw_deg": -0.6025108433380556,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    }
+  ],
+  "slots": [
+    {
+      "box": 1,
+      "side": -1,
+      "x_mm": 1428.8122046297565,
+      "y_mm": 949.0811629675562,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 11,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245704.824092627",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 1,
+      "side": 1,
+      "x_mm": 1508.1768206921859,
+      "y_mm": 949.2583572769378,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 10,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245704.824092627",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 2,
+      "side": -1,
+      "x_mm": 3630.318567953379,
+      "y_mm": 3151.9492925430136,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 9,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245707.024040461",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 2,
+      "side": 1,
+      "x_mm": 3709.946420930879,
+      "y_mm": 3151.962917968566,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 8,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245707.024040461",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 3,
+      "side": -1,
+      "x_mm": 2895.934442713032,
+      "y_mm": 5353.847775926825,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 7,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245709.224035501",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 3,
+      "side": 1,
+      "x_mm": 2974.812964813576,
+      "y_mm": 5353.858523200522,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 6,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245709.224035501",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 4,
+      "side": -1,
+      "x_mm": 693.7244124321962,
+      "y_mm": 5353.551303732848,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 5,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245711.424013138",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 4,
+      "side": 1,
+      "x_mm": 774.2148013377482,
+      "y_mm": 5354.329824431498,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 4,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245711.424013138",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 5,
+      "side": -1,
+      "x_mm": 2161.085696317472,
+      "y_mm": 5354.301931637091,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 3,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245713.624056101",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 5,
+      "side": 1,
+      "x_mm": 2242.2634186096343,
+      "y_mm": 5353.912498361318,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 2,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245713.624056101",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 6,
+      "side": -1,
+      "x_mm": 3630.1885022965785,
+      "y_mm": 3886.4121206609902,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 1,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245715.823990583",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    },
+    {
+      "box": 6,
+      "side": 1,
+      "x_mm": 3709.6585013271474,
+      "y_mm": 3885.5763993990327,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": 0.0,
+      "id": 0,
+      "conf": {
+        "color": 0.5,
+        "shape": 0.5,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 21,
+      "last_seen_stamp": "1794245715.823990583",
+      "revisits": 0,
+      "problems": [],
+      "status": "confirmed"
+    }
+  ],
+  "complete": true,
+  "revisit": [],
+  "unconfirmed": [],
+  "max_revisits": 2,
+  "errors": [],
+  "rejected": {},
+  "frozen": true
+}

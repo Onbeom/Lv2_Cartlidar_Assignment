@@ -1,0 +1,159 @@
+{
+ "run": "/home/pa4/git/lv2_next_module/261103_1913_jetson_load2/pc_fix/results/20261104_104516",
+ "live_pc_amcl": {
+  "n": 3480,
+  "hz": 10.0,
+  "rx_minus_stamp_s": {
+   "p50": 0.0167,
+   "p95": 0.0167,
+   "p99": 0.0167,
+   "mean": 0.0167,
+   "max": 0.0167
+  },
+  "pos_err_m": {
+   "rmse": 0.0191,
+   "p95": 0.0322,
+   "max": 0.044
+  }
+ },
+ "passes": {
+  "pass_1": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0168,
+     "p95": 0.0268,
+     "p99": 0.0274,
+     "mean": 0.017,
+     "max": 0.0373
+    },
+    "pos_err_m": {
+     "rmse": 0.0195,
+     "p95": 0.0317,
+     "max": 0.0507
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.608,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9429,
+     "max": 10.0,
+     "min": 8.0
+    },
+    "res_max": 0.0403,
+    "n_check_total": 3480,
+    "n_skip_total": 13,
+    "suspect": 2,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK",
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  }
+ },
+ "windows_s": [
+  351.4
+ ],
+ "proc_by_pass": {
+  "pass_1": {
+   "ALL": 3.8,
+   "amcl": 9.9,
+   "component_container": 24.1,
+   "ekf_node": 3.5,
+   "lifecycle_manager": 2.9,
+   "loc_monitor": 10.5,
+   "map_server": 2.3,
+   "scan_body_mask": 8.5,
+   "scan_merge": 9.5
+  }
+ },
+ "proc": {
+  "ALL": {
+   "cpu_pct": {
+    "p50": 3.9,
+    "p95": 6.025,
+    "mean": 3.7868,
+    "max": 8.0
+   },
+   "rss_mb_max": 0.0
+  },
+  "component_container": {
+   "cpu_pct": {
+    "p50": 28.25,
+    "p95": 42.35,
+    "mean": 24.0985,
+    "max": 97.4
+   },
+   "rss_mb_max": 985.0
+  },
+  "ekf_node": {
+   "cpu_pct": {
+    "p50": 4.0,
+    "p95": 4.9,
+    "mean": 3.5443,
+    "max": 5.0
+   },
+   "rss_mb_max": 42.5
+  },
+  "scan_body_mask": {
+   "cpu_pct": {
+    "p50": 8.9,
+    "p95": 9.9,
+    "mean": 8.5233,
+    "max": 9.9
+   },
+   "rss_mb_max": 82.3
+  },
+  "map_server": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 4.0,
+    "mean": 2.319,
+    "max": 4.0
+   },
+   "rss_mb_max": 100.2
+  },
+  "lifecycle_manager": {
+   "cpu_pct": {
+    "p50": 3.0,
+    "p95": 4.0,
+    "mean": 2.9454,
+    "max": 5.0
+   },
+   "rss_mb_max": 85.6
+  },
+  "scan_merge": {
+   "cpu_pct": {
+    "p50": 9.9,
+    "p95": 10.9,
+    "mean": 9.5089,
+    "max": 10.9
+   },
+   "rss_mb_max": 83.3
+  },
+  "amcl": {
+   "cpu_pct": {
+    "p50": 9.0,
+    "p95": 15.9,
+    "mean": 9.9069,
+    "max": 48.6
+   },
+   "rss_mb_max": 239.9
+  },
+  "loc_monitor": {
+   "cpu_pct": {
+    "p50": 10.9,
+    "p95": 11.9,
+    "mean": 10.5029,
+    "max": 11.9
+   },
+   "rss_mb_max": 189.4
+  }
+ }
+}

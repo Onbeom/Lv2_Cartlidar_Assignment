@@ -1,0 +1,252 @@
+{
+ "n_images": 500,
+ "synthetic_only": true,
+ "tag": {
+  "table": {
+   "all": {
+    "n": 726,
+    "output": 578,
+    "output_rate": 0.7961,
+    "orientation": 577,
+    "success": 571,
+    "success_rate": 0.7865,
+    "center_mm_p50_p95": [
+     1.875,
+     4.548
+    ],
+    "axis_deg_p50_p95": [
+     0.357,
+     1.705
+    ]
+   },
+   "tag_seen": {
+    "n": 681,
+    "output": 578,
+    "output_rate": 0.8488,
+    "orientation": 577,
+    "success": 571,
+    "success_rate": 0.8385,
+    "center_mm_p50_p95": [
+     1.875,
+     4.548
+    ],
+    "axis_deg_p50_p95": [
+     0.357,
+     1.705
+    ]
+   },
+   "tag_not_seen": {
+    "n": 45,
+    "output": 0,
+    "output_rate": 0.0,
+    "orientation": 0,
+    "success": 0,
+    "success_rate": 0.0,
+    "center_mm_p50_p95": null,
+    "axis_deg_p50_p95": null
+   },
+   "lying_no_up_tag": {
+    "n": 85,
+    "output": 1,
+    "output_rate": 0.0118,
+    "orientation": 1,
+    "success": 1,
+    "success_rate": 0.0118,
+    "center_mm_p50_p95": [
+     0.681,
+     0.681
+    ],
+    "axis_deg_p50_p95": [
+     0.124,
+     0.124
+    ]
+   },
+   "lying_tag_up": {
+    "n": 77,
+    "output": 63,
+    "output_rate": 0.8182,
+    "orientation": 62,
+    "success": 62,
+    "success_rate": 0.8052,
+    "center_mm_p50_p95": [
+     2.331,
+     5.294
+    ],
+    "axis_deg_p50_p95": [
+     0.349,
+     1.525
+    ]
+   },
+   "standing_cuboid": {
+    "n": 185,
+    "output": 167,
+    "output_rate": 0.9027,
+    "orientation": 167,
+    "success": 167,
+    "success_rate": 0.9027,
+    "center_mm_p50_p95": [
+     1.775,
+     4.296
+    ],
+    "axis_deg_p50_p95": [
+     0.37,
+     1.533
+    ]
+   },
+   "standing_cylinder": {
+    "n": 379,
+    "output": 347,
+    "output_rate": 0.9156,
+    "orientation": 347,
+    "success": 341,
+    "success_rate": 0.8997,
+    "center_mm_p50_p95": [
+     1.859,
+     4.747
+    ],
+    "axis_deg_p50_p95": [
+     0.348,
+     2.303
+    ]
+   }
+  },
+  "wrong_id": 0,
+  "ms_all_p50_p95": [
+   27.273,
+   124.301
+  ],
+  "ms_max": 137.915
+ },
+ "cp_e3_agnostic": {
+  "table": {
+   "all": {
+    "n": 726,
+    "output": 725,
+    "output_rate": 0.9986,
+    "orientation": 725,
+    "success": 711,
+    "success_rate": 0.9793,
+    "center_mm_p50_p95": [
+     1.384,
+     5.581
+    ],
+    "axis_deg_p50_p95": [
+     0.638,
+     3.149
+    ]
+   },
+   "tag_seen": {
+    "n": 681,
+    "output": 680,
+    "output_rate": 0.9985,
+    "orientation": 680,
+    "success": 669,
+    "success_rate": 0.9824,
+    "center_mm_p50_p95": [
+     1.345,
+     5.125
+    ],
+    "axis_deg_p50_p95": [
+     0.617,
+     2.798
+    ]
+   },
+   "tag_not_seen": {
+    "n": 45,
+    "output": 45,
+    "output_rate": 1.0,
+    "orientation": 45,
+    "success": 42,
+    "success_rate": 0.9333,
+    "center_mm_p50_p95": [
+     2.385,
+     10.244
+    ],
+    "axis_deg_p50_p95": [
+     1.799,
+     5.806
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 85,
+    "output": 85,
+    "output_rate": 1.0,
+    "orientation": 85,
+    "success": 84,
+    "success_rate": 0.9882,
+    "center_mm_p50_p95": [
+     1.814,
+     7.738
+    ],
+    "axis_deg_p50_p95": [
+     1.667,
+     5.012
+    ]
+   },
+   "lying_tag_up": {
+    "n": 77,
+    "output": 77,
+    "output_rate": 1.0,
+    "orientation": 77,
+    "success": 75,
+    "success_rate": 0.974,
+    "center_mm_p50_p95": [
+     2.08,
+     7.116
+    ],
+    "axis_deg_p50_p95": [
+     1.564,
+     6.437
+    ]
+   },
+   "standing_cuboid": {
+    "n": 185,
+    "output": 184,
+    "output_rate": 0.9946,
+    "orientation": 184,
+    "success": 180,
+    "success_rate": 0.973,
+    "center_mm_p50_p95": [
+     1.638,
+     6.026
+    ],
+    "axis_deg_p50_p95": [
+     0.637,
+     1.865
+    ]
+   },
+   "standing_cylinder": {
+    "n": 379,
+    "output": 379,
+    "output_rate": 1.0,
+    "orientation": 379,
+    "success": 372,
+    "success_rate": 0.9815,
+    "center_mm_p50_p95": [
+     1.046,
+     4.614
+    ],
+    "axis_deg_p50_p95": [
+     0.468,
+     1.734
+    ]
+   }
+  },
+  "false_outputs": 2,
+  "ms_all_p50_p95": [
+   8.459,
+   16.507
+  ],
+  "ms_det_p50_p95": [
+   3.605,
+   4.178
+  ],
+  "ms_pose_p50_p95": [
+   4.749,
+   12.781
+  ],
+  "ms_pose_per_det_p50": [
+   4.387
+  ]
+ }
+}

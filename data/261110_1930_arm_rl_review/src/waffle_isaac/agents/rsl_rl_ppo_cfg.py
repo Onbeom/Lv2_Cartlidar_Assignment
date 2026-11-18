@@ -1,0 +1,176 @@
+"""Waffle 주행 과제 RSL-RL PPO 설정 (작은 MLP, 8 GB GPU 용)."""
+
+from isaaclab.utils import configclass
+
+from isaaclab_rl.rsl_rl import RslRlMLPModelCfg, RslRlOnPolicyRunnerCfg, RslRlPpoAlgorithmCfg
+
+
+@configclass
+class WaffleDrivePPORunnerCfg(RslRlOnPolicyRunnerCfg):
+    num_steps_per_env = 32
+    max_iterations = 500
+    save_interval = 50
+    experiment_name = "waffle_drive"
+    actor = RslRlMLPModelCfg(
+        hidden_dims=[64, 64], activation="elu", obs_normalization=True,
+        distribution_cfg=RslRlMLPModelCfg.GaussianDistributionCfg(init_std=0.6),
+    )
+    critic = RslRlMLPModelCfg(hidden_dims=[64, 64], activation="elu", obs_normalization=True)
+    algorithm = RslRlPpoAlgorithmCfg(
+        value_loss_coef=1.0, use_clipped_value_loss=True, clip_param=0.2, entropy_coef=0.005, num_learning_epochs=5,
+        num_mini_batches=4, learning_rate=1.0e-3, schedule="adaptive", gamma=0.99, lam=0.95, desired_kl=0.01, max_grad_norm=1.0,
+    )
+
+
+@configclass
+class WafflePickPPORunnerCfg(RslRlOnPolicyRunnerCfg):
+    """주사위 2 집기 P2 (관측 32, 행동 6). 이전 로봇 퍽 잡기 (96 %) 와 같은 크기·학습률."""
+
+    num_steps_per_env = 24
+    max_iterations = 300  # G1: 150 ~ 250 반복에서 보상이 평평해짐 (1500 은 과함)
+    save_interval = 50
+    experiment_name = "waffle_pick"
+    actor = RslRlMLPModelCfg(
+        hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True,
+        distribution_cfg=RslRlMLPModelCfg.GaussianDistributionCfg(init_std=1.0),
+    )
+    critic = RslRlMLPModelCfg(hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True)
+    algorithm = RslRlPpoAlgorithmCfg(
+        value_loss_coef=1.0, use_clipped_value_loss=True, clip_param=0.2, entropy_coef=0.006, num_learning_epochs=5,
+        num_mini_batches=4, learning_rate=1.0e-4, schedule="adaptive", gamma=0.98, lam=0.95, desired_kl=0.01, max_grad_norm=1.0,
+    )
+
+
+@configclass
+class WafflePlacePPORunnerCfg(WafflePickPPORunnerCfg):
+    """주사위 2 놓기 P1 (관측 33, 행동 6). 집기와 같은 망·학습률."""
+
+    experiment_name = "waffle_place"
+
+
+@configclass
+class WaffleSidePickPPORunnerCfg(WafflePickPPORunnerCfg):
+    """정렬·집기 (옆에서 집기). 261028 N8 부터 직교 행동 (관측 33, 행동 4) 이라 넣기 전용과 같은 탐색 설정:
+    시작 표준편차 1.0 -> 0.5, entropy 0.006 -> 0.003, 학습률 1e-4 -> 3e-4 (N7 은 표준편차가 1.34 까지 커져 집게가 흔들리고 열고 닫기가 뒤섞여 한 번도 못 쥠)."""
+
+    experiment_name = "waffle_sidepick"
+    actor = RslRlMLPModelCfg(
+        hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True,
+        distribution_cfg=RslRlMLPModelCfg.GaussianDistributionCfg(init_std=0.5),
+    )
+    algorithm = RslRlPpoAlgorithmCfg(
+        value_loss_coef=1.0, use_clipped_value_loss=True, clip_param=0.2, entropy_coef=0.003, num_learning_epochs=5,
+        num_mini_batches=4, learning_rate=3.0e-4, schedule="adaptive", gamma=0.98, lam=0.95, desired_kl=0.01, max_grad_norm=1.0,
+    )
+
+
+@configclass
+class WaffleStorePPORunnerCfg(WafflePickPPORunnerCfg):
+    """스토리지 넣기 (관측 41, 행동 6). 에피소드 10 s (300 스텝) 로 길어 gamma 0.99. ST3 부터 entropy 0.006 -> 0.003 (ST2 행동 표준편차 0.93 이 커서 mm 맞춤 방해)."""
+
+    experiment_name = "waffle_store"
+    actor = RslRlMLPModelCfg(  # 261028: 시작 표준편차 1.0 -> 0.5 (정렬·집기 N7 -> N8 교훈: 큰 탐색은 새 팔에서 정밀 동작을 못 배움)
+        hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True,
+        distribution_cfg=RslRlMLPModelCfg.GaussianDistributionCfg(init_std=0.5),
+    )
+    algorithm = RslRlPpoAlgorithmCfg(
+        value_loss_coef=1.0, use_clipped_value_loss=True, clip_param=0.2, entropy_coef=0.003, num_learning_epochs=5,
+        num_mini_batches=4, learning_rate=3.0e-4, schedule="adaptive", gamma=0.99, lam=0.95, desired_kl=0.01, max_grad_norm=1.0,
+    )
+
+
+@configclass
+class WaffleInsertPPORunnerCfg(WafflePickPPORunnerCfg):
+    """넣기 전용 (정책 관측 35 = 실제 로봇에서 얻을 수 있는 것, 평가 critic 은 + 시뮬레이션 참값 12, 행동 4 = 잡는 점 위치 변화 + 집게).
+    탐색 시작 표준편차 0.5 (1 mm 틈), 에피소드 4 s."""
+
+    experiment_name = "waffle_insert"
+    max_iterations = 300
+    obs_groups = {"actor": ["policy"], "critic": ["policy", "critic"]}
+    actor = RslRlMLPModelCfg(
+        hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True,
+        distribution_cfg=RslRlMLPModelCfg.GaussianDistributionCfg(init_std=0.5),
+    )
+    critic = RslRlMLPModelCfg(hidden_dims=[256, 128, 64], activation="elu", obs_normalization=True)
+    algorithm = RslRlPpoAlgorithmCfg(
+        value_loss_coef=1.0, use_clipped_value_loss=True, clip_param=0.2, entropy_coef=0.003, num_learning_epochs=5,
+        num_mini_batches=4, learning_rate=3.0e-4, schedule="adaptive", gamma=0.99, lam=0.95, desired_kl=0.01, max_grad_norm=1.0,
+    )
+
+
+@configclass
+class WaffleLiePickPPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """누운 직사각형 퍽 집기·세우기 (관측 40, 행동 6 = 잡는 점 xyz + 집게 요·숙임 + 집게). 집기와 같은 탐색 설정."""
+
+    experiment_name = "waffle_liepick"
+
+
+@configclass
+class WaffleSidePick45PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """세운 퍽 45° 기울여 쥐기 (2026-11-03). 관측·행동은 SidePick 과 같아 U4 체크포인트에서 이어 학습 가능."""
+
+    experiment_name = "waffle_sidepick45"
+
+
+@configclass
+class WaffleSidePick45ChainPPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """2026-11-09 세운 퍽 45° 집기 다시 학습 (연결 기준, 원기둥 n5 에서 이어 학습)."""
+
+    experiment_name = "waffle_sidepick45chain"
+
+
+@configclass
+class WaffleUnload60PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """2026-11-10 스토리지에서 꺼내기 60° (L1 · L3 놓기용). 관측 · 행동 = 45° 집기와 같음."""
+
+    experiment_name = "waffle_unload60"
+
+
+@configclass
+class WaffleUnload45PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """2026-11-10 스토리지에서 꺼내기 45° (L2 놓기용)."""
+
+    experiment_name = "waffle_unload45"
+
+
+@configclass
+class WaffleLieEndPPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """누운 직육면체 안쪽 끝 수평 쥐기 (2026-11-04). 관측·행동은 SidePick 과 같아 U4 체크포인트에서 이어 학습."""
+
+    experiment_name = "waffle_lieend"
+
+
+@configclass
+class WaffleLieRoll45PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """누운 직육면체 45° 쥐기 (2026-11-04). 관측·행동은 45° 집기와 같아 SP-45c 체크포인트에서 이어 학습."""
+
+    experiment_name = "waffle_lieroll45"
+
+
+@configclass
+class WaffleSidePick45BoxPPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """세운 직육면체 45° 쥐기 (2026-11-04, A 다시 집기용). 45° 집기 체크포인트에서 이어 학습."""
+
+    experiment_name = "waffle_sidepick45box"
+
+
+@configclass
+class WaffleSidePickNear70PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """상자 앞 띠 세운 퍽 70° 쥐기 (2026-11-06). 45° 집기 체크포인트에서 이어 학습."""
+
+    experiment_name = "waffle_sidepicknear70"
+
+
+@configclass
+class WafflePlace60PPORunnerCfg(WaffleSidePickPPORunnerCfg):
+    """주사위 눈 놓기 (2026-11-07, 관측 46 · 행동 4). 관측이 집기와 달라 처음부터 학습. 에피소드 8 s."""
+
+    experiment_name = "waffle_place60"
+    max_iterations = 1500
+
+
+@configclass
+class WafflePlace45L2PPORunnerCfg(WafflePlace60PPORunnerCfg):
+    """L2 받침 주사위 눈 놓기 (45° 쥐기, 2026-11-08). 관측 · 행동은 Place60 과 같아 Place60 체크포인트에서 이어 학습 가능."""
+
+    experiment_name = "waffle_place45l2"

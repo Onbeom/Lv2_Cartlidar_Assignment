@@ -1,0 +1,192 @@
+[
+  {
+    "name": "Wheel_Revolute_Front_Left",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "Wheel_Revolute_Front_Right",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "Wheel_Revolute_Rear_Left",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "Wheel_Revolute_Rear_Right",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "RMX52_Base_Yaw",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "cast_axis": [
+      0.0,
+      0.0,
+      -1.0
+    ]
+  },
+  {
+    "name": "lidar_front_fixed",
+    "type": "adsk::fusion::RigidJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": null
+  },
+  {
+    "name": "lidar_rear_fixed",
+    "type": "adsk::fusion::RigidJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": null
+  },
+  {
+    "name": "RMX52_Shoulder",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "RMX52_Elbow",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "RMX52_Wrist_Pitch",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      -1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "RMX52_Wrist_Roll_Reversed",
+    "type": "adsk::fusion::RevoluteJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "cast_axis": [
+      -1.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "name": "gripper_left_joint",
+    "type": "adsk::fusion::SliderJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  },
+  {
+    "name": "gripper_right_joint",
+    "type": "adsk::fusion::SliderJointMotion",
+    "grounded": false,
+    "ground_to_parent": false,
+    "geometry_axis": [
+      0.0,
+      1.0,
+      0.0
+    ],
+    "cast_axis": [
+      0.0,
+      1.0,
+      0.0
+    ]
+  }
+]

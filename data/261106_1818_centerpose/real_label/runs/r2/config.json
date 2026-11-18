@@ -1,0 +1,14 @@
+{
+ "data": "data/train",
+ "val": "data/val",
+ "out": "runs/r2",
+ "resume": "runs/r2a/best.pt",
+ "epochs": "40",
+ "batch": "12",
+ "lr": "0.0001",
+ "rot": "25.0",
+ "dets": "data/train/e3_dets.json",
+ "sim_data": "data/sim_train",
+ "sim_n": "800",
+ "real_rep": "4"
+}

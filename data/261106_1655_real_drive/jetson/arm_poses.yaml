@@ -1,0 +1,51 @@
+source: Lv2_Cartlidar_Assignment dev b1ecee1 control/config/manipulator.yaml poses
+  (펌웨어 관절각 rad, joint_offsets 안 들어감)
+poses:
+  STOW:
+  - 1.554
+  - -2.088
+  - 1.549
+  - -1.868
+  - 0.043
+  DRIVE:
+  - -0.0245
+  - -1.6122
+  - 1.2901
+  - 1.1888
+  - 0.0
+  ALIGN:
+  - 0.0
+  - -1.37
+  - -0.01
+  - 1.85
+  - 0.0
+  READY:
+  - 0.0
+  - 0.6
+  - -1.2
+  - -0.9
+  - 0.0
+  PLACE:
+  - 1.57
+  - 0.4
+  - -0.8
+  - -1.1
+  - 0.0
+  TAG_VIEW:
+  - 0.0
+  - 0.9
+  - -1.4
+  - 0.2
+  - 0.0
+  BOX_VIEW:
+  - 0.0
+  - -0.65
+  - 0.0
+  - 1.95
+  - 0.0
+  TRANSIT_TILT:
+  - 0.0
+  - -1.32032
+  - 0.67766
+  - 1.42805
+  - 0.0

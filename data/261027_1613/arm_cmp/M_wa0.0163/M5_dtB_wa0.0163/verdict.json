@@ -1,0 +1,29 @@
+{
+  "test": "M5",
+  "dt_s": 0.002,
+  "mujoco_version": "3.16.0",
+  "results": {
+    "M5": {
+      "measured": {
+        "바퀴속도_위치차분_최대_rad_s": {
+          "Wheel_Revolute_Front_Left": 10.984663042806135,
+          "Wheel_Revolute_Front_Right": 10.984668963227692,
+          "Wheel_Revolute_Rear_Left": 10.984530366777395,
+          "Wheel_Revolute_Rear_Right": 10.984529797033806
+        },
+        "참고_보고속도_최대_rad_s": {
+          "Wheel_Revolute_Front_Left": 10.98466342571568,
+          "Wheel_Revolute_Front_Right": 10.984669327571979,
+          "Wheel_Revolute_Rear_Left": 10.984532767804273,
+          "Wheel_Revolute_Rear_Right": 10.984530152039506
+        },
+        "명령_최대_rad_s(제어기에서 자름)": 10.995574
+      },
+      "checks": {
+        "유한값·스텝 수": true,
+        "모든 스텝 |ω|(위치 차분) ≤ 11.1055 rad/s": true
+      },
+      "verdict": "성공"
+    }
+  }
+}

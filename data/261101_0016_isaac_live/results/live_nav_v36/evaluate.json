@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0157,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0054,
+ "G4_loc_max_m": 0.0183,
+ "G4_yaw_rmse_rad": 0.0092,
+ "G4_n_samples": 2837,
+ "G5_cmd": {
+  "n": 6682,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.0897226052221656,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 54.33,
+   "pos_err": 0.023,
+   "yaw_err": 0.043,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 39.38,
+   "pos_err": 0.0189,
+   "yaw_err": 0.0081,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 32.83,
+   "pos_err": 0.0232,
+   "yaw_err": 0.024,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 51.3,
+   "pos_err": 0.0175,
+   "yaw_err": 0.0014,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 52.7,
+   "pos_err": 0.0215,
+   "yaw_err": 0.0618,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 73.45,
+   "pos_err": 0.0241,
+   "yaw_err": 0.0329,
+   "error_code": 703,
+   "error_msg": "spin failed:Collision Ahead - Exiting Spin"
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 30.48,
+   "pos_err": 5.6233,
+   "yaw_err": 0.647,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (4.18, 5.48) [q: 0.00, 0.00, 0.95, -0.30] (yaw: -2.52) to (0.80, 0.95) [q: 0.00, 0.00, 1.00, 0.00] (yaw: 3.14): \"Start occupied\""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

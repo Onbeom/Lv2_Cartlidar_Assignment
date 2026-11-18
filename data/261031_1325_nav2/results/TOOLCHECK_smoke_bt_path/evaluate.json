@@ -1,0 +1,33 @@
+{
+ "n_goals": 1,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.1799,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0042,
+ "G4_loc_max_m": 0.0052,
+ "G4_yaw_rmse_rad": 0.0025,
+ "G4_n_samples": 29,
+ "G5_cmd": {
+  "n": 0,
+  "frames": [],
+  "vx_max": 0.0,
+  "vx_min": 0.0,
+  "wz_abs_max": 0.0
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": null,
+   "duration_s": -0.0,
+   "pos_err": 1.5251,
+   "yaw_err": 0.3554,
+   "error_code": null,
+   "error_msg": null
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": false,
+ "pass": false
+}

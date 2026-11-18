@@ -1,0 +1,16 @@
+{
+  "pc_only_not_jetson": true,
+  "onnx": "/home/pa4/git/lv2_next_module/261030_1325/prototype/yolo_models/yolo11n_task4_B.onnx",
+  "n_images": 203,
+  "same_classes_counts": 203,
+  "max_box_px": 6.100000001652006e-05,
+  "max_score": 2.891000000004862e-06,
+  "detections_ref": 375,
+  "detections_team": 375,
+  "criteria": {
+    "same_all": true,
+    "box_px_le": 0.5,
+    "score_le": 0.001
+  },
+  "pass": true
+}

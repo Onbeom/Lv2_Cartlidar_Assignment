@@ -1,0 +1,93 @@
+{
+ "simulation_only": true,
+ "rows": [
+  {
+   "label": "bright",
+   "kind": "lidar_only",
+   "variant": "c6",
+   "rx_rmse_m": 0.04690339588066763,
+   "rx_p95_m": 0.07478735585638606,
+   "rx_yaw_rmse_deg": 1.1953210506641372,
+   "rx_yaw_p95_deg": 2.1709522411279285,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 0.0
+  },
+  {
+   "label": "bright",
+   "kind": "lidar_only",
+   "variant": "V4_no_pose_extrapolator",
+   "rx_rmse_m": 0.05092267505118299,
+   "rx_p95_m": 0.08454959187527976,
+   "rx_yaw_rmse_deg": 2.3918391729650623,
+   "rx_yaw_p95_deg": 5.09539418134249,
+   "odom_base_rx_minus_stamp_ms_median": 100.00000000002274,
+   "map_odom_rx_minus_stamp_ms_median": 100.00000000002274
+  },
+  {
+   "label": "bright",
+   "kind": "lidar_tfodom_scaled",
+   "variant": "c6",
+   "rx_rmse_m": 0.049675716121712996,
+   "rx_p95_m": 0.08120339812594735,
+   "rx_yaw_rmse_deg": 1.992794777188205,
+   "rx_yaw_p95_deg": 4.119998487285896,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 0.0
+  },
+  {
+   "label": "bright",
+   "kind": "lidar_tfodom_scaled",
+   "variant": "V4_no_pose_extrapolator",
+   "rx_rmse_m": 0.04644893771795004,
+   "rx_p95_m": 0.07357504229370493,
+   "rx_yaw_rmse_deg": 0.6684598118161235,
+   "rx_yaw_p95_deg": 1.3295446356712863,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 100.00000000002274
+  },
+  {
+   "label": "dark",
+   "kind": "lidar_only",
+   "variant": "c6",
+   "rx_rmse_m": 0.009273234348232866,
+   "rx_p95_m": 0.018738593584254067,
+   "rx_yaw_rmse_deg": 1.0789765782774214,
+   "rx_yaw_p95_deg": 2.0376005552533143,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 0.0
+  },
+  {
+   "label": "dark",
+   "kind": "lidar_only",
+   "variant": "V4_no_pose_extrapolator",
+   "rx_rmse_m": 0.019890293456328843,
+   "rx_p95_m": 0.03615083435763447,
+   "rx_yaw_rmse_deg": 2.075162853581792,
+   "rx_yaw_p95_deg": 4.250247746654065,
+   "odom_base_rx_minus_stamp_ms_median": 100.00000000002274,
+   "map_odom_rx_minus_stamp_ms_median": 100.00000000002274
+  },
+  {
+   "label": "dark",
+   "kind": "lidar_tfodom_scaled",
+   "variant": "c6",
+   "rx_rmse_m": 0.01887214599950284,
+   "rx_p95_m": 0.0364755918706036,
+   "rx_yaw_rmse_deg": 2.0134445817977453,
+   "rx_yaw_p95_deg": 4.262636052350556,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 0.0
+  },
+  {
+   "label": "dark",
+   "kind": "lidar_tfodom_scaled",
+   "variant": "V4_no_pose_extrapolator",
+   "rx_rmse_m": 0.0071061951256148805,
+   "rx_p95_m": 0.012143493620391748,
+   "rx_yaw_rmse_deg": 0.5809227289509048,
+   "rx_yaw_p95_deg": 1.142871501926483,
+   "odom_base_rx_minus_stamp_ms_median": 0.0,
+   "map_odom_rx_minus_stamp_ms_median": 100.00000000002274
+  }
+ ]
+}

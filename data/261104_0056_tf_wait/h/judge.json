@@ -1,0 +1,172 @@
+{
+ "rows": [
+  {
+   "phase": "0.003",
+   "exact_on": 1.0,
+   "exact_off": 1.0,
+   "proc_on": 14.94,
+   "proc_off": 14.97,
+   "lat_on": {
+    "median": 33.7,
+    "p95": 35.1
+   },
+   "lat_off": {
+    "median": 33.7,
+    "p95": 35.1
+   },
+   "dlat_med": 0.0,
+   "picks_on": {
+    "newest": 451,
+    "older": 0,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  },
+  {
+   "phase": "0.0086",
+   "exact_on": 1.0,
+   "exact_off": 1.0,
+   "proc_on": 14.91,
+   "proc_off": 14.91,
+   "lat_on": {
+    "median": 28.1,
+    "p95": 30.1
+   },
+   "lat_off": {
+    "median": 28.1,
+    "p95": 30.1
+   },
+   "dlat_med": 0.0,
+   "picks_on": {
+    "newest": 452,
+    "older": 0,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  },
+  {
+   "phase": "0.0142",
+   "exact_on": 1.0,
+   "exact_off": 0.6726,
+   "proc_on": 14.94,
+   "proc_off": 14.97,
+   "lat_on": {
+    "median": 23.9,
+    "p95": 56.5
+   },
+   "lat_off": {
+    "median": 22.5,
+    "p95": 24.5
+   },
+   "dlat_med": 1.4,
+   "picks_on": {
+    "newest": 302,
+    "older": 150,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  },
+  {
+   "phase": "0.0198",
+   "exact_on": 1.0,
+   "exact_off": 0.677,
+   "proc_on": 14.94,
+   "proc_off": 14.86,
+   "lat_on": {
+    "median": 18.3,
+    "p95": 50.9
+   },
+   "lat_off": {
+    "median": 16.9,
+    "p95": 18.9
+   },
+   "dlat_med": 1.4,
+   "picks_on": {
+    "newest": 307,
+    "older": 145,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  },
+  {
+   "phase": "0.0254",
+   "exact_on": 1.0,
+   "exact_off": 0.3518,
+   "proc_on": 14.94,
+   "proc_off": 14.94,
+   "lat_on": {
+    "median": 43.4,
+    "p95": 46.0
+   },
+   "lat_off": {
+    "median": 11.3,
+    "p95": 13.3
+   },
+   "dlat_med": 32.1,
+   "picks_on": {
+    "newest": 159,
+    "older": 293,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  },
+  {
+   "phase": "0.031",
+   "exact_on": 1.0,
+   "exact_off": 0.0442,
+   "proc_on": 14.83,
+   "proc_off": 14.71,
+   "lat_on": {
+    "median": 39.1,
+    "p95": 41.1
+   },
+   "lat_off": {
+    "median": 5.7,
+    "p95": 7.9
+   },
+   "dlat_med": 33.4,
+   "picks_on": {
+    "newest": 47,
+    "older": 405,
+    "wait": 0,
+    "fallback": 0
+   },
+   "J1": true,
+   "J2": true,
+   "J3": true
+  }
+ ],
+ "stop_on": {
+  "proc_before": 15.0,
+  "proc_after": 14.95,
+  "result_before": 15.0,
+  "result_after": 14.95
+ },
+ "stop_off": {
+  "proc_before": 15.0,
+  "proc_after": 14.95,
+  "result_before": 15.0,
+  "result_after": 14.95
+ },
+ "pass": {
+  "J1": true,
+  "J2": true,
+  "J3": true,
+  "J4": true
+ }
+}

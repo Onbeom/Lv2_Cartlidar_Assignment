@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="103" failures="0" disabled="0" errors="0" time="36.087" timestamp="2026-10-28T21:19:23.618" name="AllTests">
+  <testsuite name="Tfmini" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.618">
+    <testcase name="ParsesValidFrame" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tfmini.cpp" line="20" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.618" classname="Tfmini" />
+    <testcase name="ResyncAfterNoiseAndBadChecksum" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tfmini.cpp" line="33" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.618" classname="Tfmini" />
+    <testcase name="ValidityRules" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tfmini.cpp" line="50" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.618" classname="Tfmini" />
+  </testsuite>
+  <testsuite name="ColorDetector" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0.012" timestamp="2026-10-28T21:19:23.618">
+    <testcase name="KeepsInputImage" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="16" status="run" result="completed" time="0.004" timestamp="2026-10-28T21:19:23.618" classname="ColorDetector" />
+    <testcase name="FindsColoredPucks" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="29" status="run" result="completed" time="0.002" timestamp="2026-10-28T21:19:23.623" classname="ColorDetector" />
+    <testcase name="IgnoresSmallAndGray" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="55" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:23.626" classname="ColorDetector" />
+    <testcase name="RejectsLowFillAndUsesConfiguredHsv" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="64" status="run" result="completed" time="0.003" timestamp="2026-10-28T21:19:23.628" classname="ColorDetector" />
+  </testsuite>
+  <testsuite name="Geometry" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.631">
+    <testcase name="SizePlausible" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="81" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+    <testcase name="DeprojectOptical" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="91" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+    <testcase name="DepthScaleForEncoding" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="106" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+    <testcase name="MedianDepthFloatMeters" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="113" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+    <testcase name="MedianDepthIgnoresHoles" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="124" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+    <testcase name="ImageOffset" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_vision.cpp" line="134" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Geometry" />
+  </testsuite>
+  <testsuite name="Tracker" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.631">
+    <testcase name="PicksClosestOutsideExcludeAboveConfidence" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="28" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Tracker" />
+    <testcase name="StaysOnSameObjectWithinGateAndReacquiresAfterTimeout" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="36" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Tracker" />
+    <testcase name="GateUsesOdomSoRobotMotionDoesNotBreakTracking" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="52" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.631" classname="Tracker" />
+  </testsuite>
+  <testsuite name="TagDetector" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.031" timestamp="2026-10-28T21:19:23.631">
+    <testcase name="DetectsAprilTag36h11WithPose" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="64" status="run" result="completed" time="0.024" timestamp="2026-10-28T21:19:23.631" classname="TagDetector" />
+    <testcase name="SmallTagFoundWithCornersInOriginalPixels" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="93" status="run" result="completed" time="0.005" timestamp="2026-10-28T21:19:23.655" classname="TagDetector" />
+    <testcase name="SameIdOnDifferentFacesIsPreserved" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="136" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:23.661" classname="TagDetector" />
+  </testsuite>
+  <testsuite name="TagDepth" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.663">
+    <testcase name="ScalesRangeToDepthInsideQuad" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tracker_tag.cpp" line="119" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="TagDepth" />
+  </testsuite>
+  <testsuite name="StampGate" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.663">
+    <testcase name="DropsDuplicateAndOlderFrames" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_inputs.cpp" line="10" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="StampGate" />
+    <testcase name="AcceptsClockRestart" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_inputs.cpp" line="19" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="StampGate" />
+  </testsuite>
+  <testsuite name="NearestCache" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.663">
+    <testcase name="PicksClosestWithinTolerance" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_inputs.cpp" line="29" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="NearestCache" />
+  </testsuite>
+  <testsuite name="ScanBinner" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.663">
+    <testcase name="BinsByAngleAndKeepsNearest" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="12" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ScanBinner" />
+    <testcase name="DropsSelfBoxAndOutOfRange" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="27" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ScanBinner" />
+    <testcase name="UpsideDownLidarMirrorsAngle" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="41" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ScanBinner" />
+  </testsuite>
+  <testsuite name="ObstacleStop" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:23.663">
+    <testcase name="StartsStoppedAndReleasesAfterCount" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="53" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ObstacleStop" />
+    <testcase name="StopsAndHysteresis" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="64" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ObstacleStop" />
+    <testcase name="InvalidAfterNearMeansTooClose" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="82" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ObstacleStop" />
+    <testcase name="InvalidWhenFarMeansClear" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="93" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ObstacleStop" />
+    <testcase name="StaleInputStops" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_lidar.cpp" line="102" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="ObstacleStop" />
+  </testsuite>
+  <testsuite name="Puck" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="0.155" timestamp="2026-10-28T21:19:23.663">
+    <testcase name="ClassifyHsv" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="68" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:23.663" classname="Puck" />
+    <testcase name="SideFaceLongAxisVertical" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="77" status="run" result="completed" time="0.027" timestamp="2026-10-28T21:19:23.663" classname="Puck" />
+    <testcase name="SideFaceLongAxisHorizontal" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="90" status="run" result="completed" time="0.016" timestamp="2026-10-28T21:19:23.691" classname="Puck" />
+    <testcase name="EndFace" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="100" status="run" result="completed" time="0.009" timestamp="2026-10-28T21:19:23.708" classname="Puck" />
+    <testcase name="WhiteFaceIsCylinderCap" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="111" status="run" result="completed" time="0.01" timestamp="2026-10-28T21:19:23.717" classname="Puck" />
+    <testcase name="WhiteDiscOnGrayIsCylinderCap" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="122" status="run" result="completed" time="0.014" timestamp="2026-10-28T21:19:23.728" classname="Puck" />
+    <testcase name="NoColorNoCapMeansNoOrientation" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="136" status="run" result="completed" time="0.027" timestamp="2026-10-28T21:19:23.742" classname="Puck" />
+    <testcase name="TopFaceCuboidAndCylinder" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="195" status="run" result="completed" time="0.04" timestamp="2026-10-28T21:19:23.769" classname="Puck" />
+    <testcase name="TopFaceCylinderNextToSameColor" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="209" status="run" result="completed" time="0.01" timestamp="2026-10-28T21:19:23.809" classname="Puck" />
+  </testsuite>
+  <testsuite name="Marker" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.001" timestamp="2026-10-28T21:19:23.819">
+    <testcase name="DetectsAruco4x4" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck.cpp" line="146" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:23.819" classname="Marker" />
+  </testsuite>
+  <testsuite name="SignalSequence" tests="8" failures="0" disabled="0" skipped="0" errors="0" time="8.818" timestamp="2026-10-28T21:19:23.821">
+    <testcase name="U1_Random1000" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="86" status="run" result="completed" time="5.234" timestamp="2026-10-28T21:19:23.821" classname="SignalSequence">
+      <properties>
+        <property name="ok" value="1000"/>
+        <property name="wrong" value="0"/>
+        <property name="late" value="0"/>
+      </properties>
+    </testcase>
+    <testcase name="U2_SameColorRuns" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="115" status="run" result="completed" time="0.007" timestamp="2026-10-28T21:19:29.055" classname="SignalSequence" />
+    <testcase name="U2_StartInsideOnAndInsideTerm" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="126" status="run" result="completed" time="0.004" timestamp="2026-10-28T21:19:29.062" classname="SignalSequence" />
+    <testcase name="U2_DifferentCyclesDoNotConfirm" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="144" status="run" result="completed" time="0.005" timestamp="2026-10-28T21:19:29.067" classname="SignalSequence" />
+    <testcase name="U2_LostFramesKeepsCompletedCycles" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="167" status="run" result="completed" time="0.003" timestamp="2026-10-28T21:19:29.073" classname="SignalSequence" />
+    <testcase name="U2_NothingSeen" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="184" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:29.077" classname="SignalSequence" />
+    <testcase name="U2_MeasuredTimesAndCounts" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="193" status="run" result="completed" time="0.005" timestamp="2026-10-28T21:19:29.077" classname="SignalSequence" />
+    <testcase name="U2_TermMeasuredAfterConfirm" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal.cpp" line="216" status="run" result="completed" time="3.556" timestamp="2026-10-28T21:19:29.082" classname="SignalSequence">
+      <properties>
+        <property name="within_3_frames" value="199"/>
+        <property name="within_0_5s" value="1"/>
+      </properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="DiceCheck" tests="8" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:32.639">
+    <testcase name="U3_CorrectPatternsPass" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="59" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.639" classname="DiceCheck" />
+    <testcase name="U3_WrongColor" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="80" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_YellowMixedShapes" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="92" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_MissingAndUnexpected" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="104" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_TwoPucksInOneCell" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="122" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_OffsetBeyondTolerance" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="137" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_UnknownAttributesFail" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="152" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+    <testcase name="U3_EmptyShelf" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_dice.cpp" line="165" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.640" classname="DiceCheck" />
+  </testsuite>
+  <testsuite name="SignalLight" tests="9" failures="0" disabled="0" skipped="0" errors="0" time="22.314" timestamp="2026-10-28T21:19:32.640">
+    <testcase name="BrightColorsAreBlobsDullAreNot" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="69" status="run" result="completed" time="0.006" timestamp="2026-10-28T21:19:32.640" classname="SignalLight" />
+    <testcase name="LocksOnBlinkingSiteNotOnSteadyPuck" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="88" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.646" classname="SignalLight" />
+    <testcase name="OneFrameDropoutIsNotABlink" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="114" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.646" classname="SignalLight" />
+    <testcase name="LockedSiteFeedsSequence" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="126" status="run" result="completed" time="0.006" timestamp="2026-10-28T21:19:32.646" classname="SignalLight" />
+    <testcase name="U5a_OccludedFrameIsUnknownNotOff" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="153" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.653" classname="SignalLight" />
+    <testcase name="U5a_OccludedSteadyObjectDoesNotLock" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="182" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.653" classname="SignalLight" />
+    <testcase name="U5a_SegmentsFillUnseenColors" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="201" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:32.653" classname="SignalLight" />
+    <testcase name="U5b_OcclusionRandom1000" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="227" status="run" result="completed" time="22.299" timestamp="2026-10-28T21:19:32.653" classname="SignalLight">
+      <properties>
+        <property name="occl_ok10" value="984"/>
+        <property name="occl_ok5" value="754"/>
+        <property name="occl_wrong" value="0"/>
+        <property name="occl_none" value="16"/>
+        <property name="old_ok10" value="989"/>
+        <property name="old_ok5" value="842"/>
+        <property name="old_wrong" value="0"/>
+        <property name="old_none" value="11"/>
+      </properties>
+    </testcase>
+    <testcase name="BlobDepthUsesOwnPixelsWhenPartlyHidden" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="295" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:54.952" classname="SignalLight" />
+  </testsuite>
+  <testsuite name="SignalLightHistory" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:54.954">
+    <testcase name="ReplayOnlyLockedCandidateAndReset" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_signal_light.cpp" line="317" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.954" classname="SignalLightHistory" />
+  </testsuite>
+  <testsuite name="DepthSplit" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.009" timestamp="2026-10-28T21:19:54.954">
+    <testcase name="TouchingSameColorAtDifferentDepths" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_depth_split.cpp" line="33" status="run" result="completed" time="0.002" timestamp="2026-10-28T21:19:54.954" classname="DepthSplit" />
+    <testcase name="SlopedSingleFaceStaysWhole" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_depth_split.cpp" line="54" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:54.957" classname="DepthSplit" />
+    <testcase name="NoDepthNoPiece" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_depth_split.cpp" line="67" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:54.959" classname="DepthSplit" />
+    <testcase name="DropsSmallPieceAndKeepsImage" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_depth_split.cpp" line="76" status="run" result="completed" time="0.002" timestamp="2026-10-28T21:19:54.960" classname="DepthSplit" />
+    <testcase name="OverlappingBoxesNoDuplicate" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_depth_split.cpp" line="91" status="run" result="completed" time="0.001" timestamp="2026-10-28T21:19:54.962" classname="DepthSplit" />
+  </testsuite>
+  <testsuite name="TagUpright" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:54.964">
+    <testcase name="AxisDeviation" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tag_upright.cpp" line="30" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="TagUpright" />
+    <testcase name="PrefersVerticalWhenErrorsClose" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tag_upright.cpp" line="40" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="TagUpright" />
+    <testcase name="PrefersHorizontalInBaseFrame" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tag_upright.cpp" line="50" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="TagUpright" />
+    <testcase name="KeepsBestOtherwise" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_tag_upright.cpp" line="59" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="TagUpright" />
+  </testsuite>
+  <testsuite name="NumpyCompat" tests="2" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:54.964">
+    <testcase name="RngMatchesNumpy" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="86" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="NumpyCompat" />
+    <testcase name="Float32TrigAndReductions" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="99" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:54.964" classname="NumpyCompat" />
+  </testsuite>
+  <testsuite name="BarcodeLocator" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="3.834" timestamp="2026-10-28T21:19:54.964">
+    <testcase name="TemplatesBuilt" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="116" status="run" result="completed" time="0.003" timestamp="2026-10-28T21:19:54.964" classname="BarcodeLocator" />
+    <testcase name="FindsLabelOnWall" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="128" status="run" result="completed" time="0.612" timestamp="2026-10-28T21:19:54.967" classname="BarcodeLocator" />
+    <testcase name="FindsLabelOnTop" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="141" status="run" result="completed" time="0.543" timestamp="2026-10-28T21:19:55.580" classname="BarcodeLocator" />
+    <testcase name="NothingOnBlankPlanesOrLowWall" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="153" status="run" result="completed" time="1.331" timestamp="2026-10-28T21:19:56.123" classname="BarcodeLocator" />
+    <testcase name="ContrastLimit" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="170" status="run" result="completed" time="1.008" timestamp="2026-10-28T21:19:57.454" classname="BarcodeLocator" />
+    <testcase name="SurfacesSplitWallAndTop" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="184" status="run" result="completed" time="0.336" timestamp="2026-10-28T21:19:58.462" classname="BarcodeLocator" />
+  </testsuite>
+  <testsuite name="BarcodeReader" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0.875" timestamp="2026-10-28T21:19:58.799">
+    <testcase name="ReadsLabelPicture" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="199" status="run" result="completed" time="0.323" timestamp="2026-10-28T21:19:58.799" classname="BarcodeReader" />
+    <testcase name="TwoDifferentStringsIsUnread" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="214" status="run" result="completed" time="0.306" timestamp="2026-10-28T21:19:59.123" classname="BarcodeReader" />
+    <testcase name="QualityFilterAndGamma" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="236" status="run" result="completed" time="0.178" timestamp="2026-10-28T21:19:59.429" classname="BarcodeReader" />
+    <testcase name="Decide" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="249" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.607" classname="BarcodeReader" />
+    <testcase name="RotatedJpegKeepsChecksumAndDecision" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="257" status="run" result="completed" time="0.067" timestamp="2026-10-28T21:19:59.607" classname="BarcodeReader" />
+  </testsuite>
+  <testsuite name="PuckMerge" tests="6" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:59.675">
+    <testcase name="NeighborDifferentPuckStays" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="19" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+    <testcase name="SamePuckKeepsTag" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="25" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+    <testcase name="DifferentColorNotMerged" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="31" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+    <testcase name="FrontRearDuplicateKeepsHigherConfidence" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="38" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+    <testcase name="TagFrontRearSamePuck" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="45" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+    <testcase name="UnknownColorMatchesAny" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_puck_merge.cpp" line="52" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="PuckMerge" />
+  </testsuite>
+  <testsuite name="ReadTag" tests="3" failures="0" disabled="0" skipped="0" errors="0" time="0.03" timestamp="2026-10-28T21:19:59.675">
+    <testcase name="LargestOfBothLists" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_read_tag.cpp" line="45" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="ReadTag" />
+    <testcase name="KeepIdsEmptyKeepsAll" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_read_tag.cpp" line="54" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.675" classname="ReadTag" />
+    <testcase name="PlaceTagReadWithItsOwnSize" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_read_tag.cpp" line="66" status="run" result="completed" time="0.03" timestamp="2026-10-28T21:19:59.675" classname="ReadTag" />
+  </testsuite>
+  <testsuite name="ArmLock" tests="5" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-28T21:19:59.706">
+    <testcase name="KeepsTargetWhenScoresSwap" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_arm_lock.cpp" line="15" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.706" classname="ArmLock" />
+    <testcase name="LostTargetDoesNotSwitchAndReacquires" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_arm_lock.cpp" line="24" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.706" classname="ArmLock" />
+    <testcase name="SeedPicksProjectedTarget" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_arm_lock.cpp" line="37" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.706" classname="ArmLock" />
+    <testcase name="DifferentClassNotTaken" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_arm_lock.cpp" line="47" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.706" classname="ArmLock" />
+    <testcase name="SizeJumpNotTaken" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_arm_lock.cpp" line="55" status="run" result="completed" time="0." timestamp="2026-10-28T21:19:59.706" classname="ArmLock" />
+  </testsuite>
+</testsuites>

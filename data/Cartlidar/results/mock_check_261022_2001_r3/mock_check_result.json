@@ -1,0 +1,112 @@
+{
+ "M1": {
+  "set_mode": [
+   true,
+   "모드 0 → 1"
+  ],
+  "expected_base_m": [
+   0.75262,
+   0.04366,
+   -0.09802
+  ],
+  "16UC1": {
+   "results": 37,
+   "found": 37,
+   "rate_hz": 15.08,
+   "max_axis_err_m": 0.0,
+   "last_pos": [
+    0.75262,
+    0.04366,
+    -0.09802
+   ],
+   "frame_id": "base_link",
+   "pass": true
+  },
+  "32FC1": {
+   "results": 27,
+   "found": 27,
+   "rate_hz": 10.78,
+   "max_axis_err_m": 0.0,
+   "last_pos": [
+    0.75262,
+    0.04366,
+    -0.09802
+   ],
+   "frame_id": "base_link",
+   "pass": false
+  },
+  "pass": false
+ },
+ "M2": {
+  "results_after_stop_s": [
+   0.065
+  ],
+  "last_after_stop_s": 0.065,
+  "pass": true
+ },
+ "M3": {
+  "first_result": 1,
+  "new_results_on_duplicate": 0,
+  "restart_warnings": 1,
+  "results_after_restart": 29,
+  "found_after_restart": 0,
+  "pass": true
+ },
+ "M4": {
+  "expected": {
+   "front_out": {
+    "base_xy": [
+     1.06308,
+     -0.42943
+    ],
+    "range": 1.14654,
+    "bin": 158
+   },
+   "rear_out": {
+    "base_xy": [
+     -0.6855,
+     -0.05
+    ],
+    "range": 0.68732,
+    "bin": 4
+   },
+   "front_in": {
+    "base_xy": [
+     0.0855,
+     0.05
+    ],
+    "range": 0.09905,
+    "bin": 210
+   }
+  },
+  "scans_received": 15,
+  "finite_bins": {},
+  "frame_id": "base_link",
+  "pass": false
+ },
+ "M5": {
+  "state_changes": [
+   true,
+   false,
+   true,
+   false,
+   true
+  ],
+  "reasons_seen": [
+   "stale",
+   "clear",
+   "obstacle"
+  ],
+  "pass": true
+ },
+ "warnings": [
+  "perception_node: TF base_link→odom 없음: base_link 기준으로 추적",
+  "perception_node: CAMERA_STALL: 모드 0x01 에 쓸 수 있는 영상 없음",
+  "perception_node: CAMERA_STALL: 모드 0x01 에 쓸 수 있는 영상 없음",
+  "perception_node: front 영상 시각이 1 s 넘게 뒤로 감(시각 재시작): 추적 상태를 초기화",
+  "perception_node: TF top_camera_front_color_optical_frame→base_link 없음: Static cache is empty, when looking up transform from frame [top_camera_front_color_optical_frame] to frame [base_link]",
+  "scan_merger: TF lidar_front_scan→base_link 없음: Static cache is empty, when looking up transform from frame [lidar_front_scan] to frame [base_link]",
+  "scan_merger: 라이다 1/2대만 합침 (나머지는 없거나 0.15 s 넘게 차이)"
+ ],
+ "all_pass": false
+}

@@ -1,0 +1,900 @@
+[
+ {
+  "image": "r08_1539__157_20261027_153939_859793.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/157_20261027_153939_859793.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__158_20261027_153941_086695.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/158_20261027_153941_086695.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__159_20261027_153941_533436.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/159_20261027_153941_533436.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__160_20261027_153941_821934.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/160_20261027_153941_821934.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__161_20261027_153944_608048.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/161_20261027_153944_608048.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__162_20261027_153944_955584.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/162_20261027_153944_955584.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__163_20261027_153945_257287.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/163_20261027_153945_257287.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__164_20261027_153953_063452.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/164_20261027_153953_063452.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__165_20261027_153953_294716.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/165_20261027_153953_294716.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__166_20261027_153953_465749.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/166_20261027_153953_465749.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__167_20261027_153955_045517.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/167_20261027_153955_045517.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__168_20261027_153955_231642.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/168_20261027_153955_231642.png",
+  "batch": "r08_1539",
+  "dets": 1,
+  "conf": [
+   0.332
+  ],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__169_20261027_153955_378544.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/169_20261027_153955_378544.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__170_20261027_153955_535439.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/170_20261027_153955_535439.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__171_20261027_153958_296535.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/171_20261027_153958_296535.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__172_20261027_153958_464928.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/172_20261027_153958_464928.png",
+  "batch": "r08_1539",
+  "dets": 1,
+  "conf": [
+   0.105
+  ],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__173_20261027_153958_611141.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/173_20261027_153958_611141.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__174_20261027_153958_766763.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/174_20261027_153958_766763.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__175_20261027_154001_216877.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/175_20261027_154001_216877.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__176_20261027_154001_391003.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/176_20261027_154001_391003.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__177_20261027_154001_538496.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/177_20261027_154001_538496.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__178_20261027_154001_701791.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/178_20261027_154001_701791.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__179_20261027_154007_340439.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/179_20261027_154007_340439.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__180_20261027_154007_539361.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/180_20261027_154007_539361.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__181_20261027_154007_672678.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/181_20261027_154007_672678.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r08_1539__182_20261027_154007_872530.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r08_1539/182_20261027_154007_872530.png",
+  "batch": "r08_1539",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__183_20261027_154024_117684.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/183_20261027_154024_117684.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__184_20261027_154024_297001.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/184_20261027_154024_297001.png",
+  "batch": "r09_1540",
+  "dets": 1,
+  "conf": [
+   0.101
+  ],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__185_20261027_154025_401637.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/185_20261027_154025_401637.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__186_20261027_154034_273235.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/186_20261027_154034_273235.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__187_20261027_154034_540065.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/187_20261027_154034_540065.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__188_20261027_154037_199100.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/188_20261027_154037_199100.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__189_20261027_154037_495444.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/189_20261027_154037_495444.png",
+  "batch": "r09_1540",
+  "dets": 1,
+  "conf": [
+   0.163
+  ],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__190_20261027_154037_737677.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/190_20261027_154037_737677.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__191_20261027_154040_489286.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/191_20261027_154040_489286.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__192_20261027_154040_711199.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/192_20261027_154040_711199.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__193_20261027_154040_943201.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/193_20261027_154040_943201.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__194_20261027_154046_548665.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/194_20261027_154046_548665.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__195_20261027_154046_734319.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/195_20261027_154046_734319.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r09_1540__196_20261027_154046_936098.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r09_1540/196_20261027_154046_936098.png",
+  "batch": "r09_1540",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__197_20261027_154111_697928.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/197_20261027_154111_697928.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__198_20261027_154111_889739.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/198_20261027_154111_889739.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__199_20261027_154112_091524.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/199_20261027_154112_091524.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__200_20261027_154112_777209.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/200_20261027_154112_777209.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__201_20261027_154113_006075.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/201_20261027_154113_006075.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__202_20261027_154113_157838.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/202_20261027_154113_157838.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__203_20261027_154123_500392.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/203_20261027_154123_500392.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__204_20261027_154123_779169.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/204_20261027_154123_779169.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__205_20261027_154124_372206.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/205_20261027_154124_372206.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__206_20261027_154124_785780.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/206_20261027_154124_785780.png",
+  "batch": "r10_1541",
+  "dets": 1,
+  "conf": [
+   0.196
+  ],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__207_20261027_154126_094007.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/207_20261027_154126_094007.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__208_20261027_154126_373296.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/208_20261027_154126_373296.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__209_20261027_154126_592674.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/209_20261027_154126_592674.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__210_20261027_154127_231018.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/210_20261027_154127_231018.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__211_20261027_154127_667529.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/211_20261027_154127_667529.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__212_20261027_154128_065913.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/212_20261027_154128_065913.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__213_20261027_154129_045053.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/213_20261027_154129_045053.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__214_20261027_154130_198859.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/214_20261027_154130_198859.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__215_20261027_154130_732568.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/215_20261027_154130_732568.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__216_20261027_154130_919876.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/216_20261027_154130_919876.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__217_20261027_154139_117455.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/217_20261027_154139_117455.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__218_20261027_154139_308486.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/218_20261027_154139_308486.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__219_20261027_154139_502624.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/219_20261027_154139_502624.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__220_20261027_154139_651026.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/220_20261027_154139_651026.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__221_20261027_154147_347374.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/221_20261027_154147_347374.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__222_20261027_154147_544309.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/222_20261027_154147_544309.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__223_20261027_154147_744203.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/223_20261027_154147_744203.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__224_20261027_154147_891887.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/224_20261027_154147_891887.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__225_20261027_154153_416287.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/225_20261027_154153_416287.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__226_20261027_154153_627267.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/226_20261027_154153_627267.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__227_20261027_154153_850531.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/227_20261027_154153_850531.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__228_20261027_154154_027390.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/228_20261027_154154_027390.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__229_20261027_154156_521102.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/229_20261027_154156_521102.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__230_20261027_154156_717176.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/230_20261027_154156_717176.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__231_20261027_154156_917826.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/231_20261027_154156_917826.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__232_20261027_154157_082810.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/232_20261027_154157_082810.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__233_20261027_154205_938236.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/233_20261027_154205_938236.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__234_20261027_154206_225995.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/234_20261027_154206_225995.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r10_1541__235_20261027_154206_610601.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r10_1541/235_20261027_154206_610601.png",
+  "batch": "r10_1541",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__245_20261027_154353_422196.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/245_20261027_154353_422196.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__246_20261027_154353_638158.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/246_20261027_154353_638158.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__247_20261027_154356_218024.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/247_20261027_154356_218024.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__248_20261027_154356_417765.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/248_20261027_154356_417765.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__249_20261027_154356_607166.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/249_20261027_154356_607166.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__250_20261027_154358_790654.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/250_20261027_154358_790654.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__251_20261027_154358_974831.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/251_20261027_154358_974831.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__252_20261027_154359_153111.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/252_20261027_154359_153111.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__253_20261027_154401_873043.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/253_20261027_154401_873043.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__254_20261027_154402_107102.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/254_20261027_154402_107102.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__255_20261027_154402_342463.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/255_20261027_154402_342463.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__256_20261027_154403_311739.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/256_20261027_154403_311739.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__257_20261027_154403_496467.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/257_20261027_154403_496467.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__258_20261027_154403_673472.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/258_20261027_154403_673472.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__259_20261027_154405_336042.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/259_20261027_154405_336042.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__260_20261027_154405_525413.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/260_20261027_154405_525413.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__261_20261027_154405_689914.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/261_20261027_154405_689914.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__262_20261027_154407_877759.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/262_20261027_154407_877759.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__263_20261027_154408_078389.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/263_20261027_154408_078389.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__264_20261027_154408_250160.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/264_20261027_154408_250160.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__265_20261027_154411_499387.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/265_20261027_154411_499387.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__266_20261027_154411_731599.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/266_20261027_154411_731599.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__267_20261027_154411_950196.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/267_20261027_154411_950196.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__268_20261027_154418_566501.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/268_20261027_154418_566501.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__269_20261027_154418_791311.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/269_20261027_154418_791311.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__270_20261027_154418_986240.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/270_20261027_154418_986240.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__271_20261027_154422_588258.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/271_20261027_154422_588258.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__272_20261027_154422_792308.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/272_20261027_154422_792308.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__273_20261027_154422_992916.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/273_20261027_154422_992916.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__274_20261027_154426_472431.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/274_20261027_154426_472431.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__275_20261027_154426_726616.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/275_20261027_154426_726616.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ },
+ {
+  "image": "r12_1543__276_20261027_154428_008147.png",
+  "source": "/tmp/claude-1000/-home-pa4-git-lv2-next-module/9c7bbff5-4e6d-466d-a2d5-a8b9e28228d1/scratchpad/stage/r12_1543/276_20261027_154428_008147.png",
+  "batch": "r12_1543",
+  "dets": 0,
+  "conf": [],
+  "checked": false
+ }
+]

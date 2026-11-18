@@ -1,0 +1,100 @@
+{
+  "2": {
+    "ok": true,
+    "details": [
+      "성공 Usd.Stage.Open 성공 (261027_1711/usd/waffle_4wd_261027_1711/waffle_4wd/waffle_4wd.usda)",
+      "성공 합성 오류 0개",
+      "성공 찾지 못한 참조 파일 0개 []",
+      "참고 파일에 저장된 Physics variant 선택: \"\" (선택지 ['mujoco', 'none', 'physics', 'physx']), 이 상태의 물리 관절 수 0",
+      "참고 판정용 variant: \"physx\" (세션 레이어에만 설정, 저장 안 함)",
+      "성공 URDF 링크 29개 중 USD prim 없음 0개 []"
+    ]
+  },
+  "3": {
+    "ok": true,
+    "details": [
+      "성공 metersPerUnit = 1.0",
+      "성공 upAxis = Z",
+      "참고 kilogramsPerUnit = 1.0"
+    ]
+  },
+  "4": {
+    "ok": true,
+    "details": [
+      "성공 질량 있는 링크: USD 14개, URDF 14개, 기대 14개",
+      "성공 총질량 USD 4.2206918 kg, URDF 4.2206917 kg, 기대 4.220692 kg",
+      "성공 링크 질량 최대 상대오차 3.87e-08 (허용 1e-06)",
+      "성공 CoM 최대 오차 5.41e-09 m (허용 1e-06)",
+      "성공 주관성 모멘트 최대 상대오차 5.45e-08 (허용 1e-05)",
+      "참고 링크 좌표계 관성 텐서(주축 회전 포함) 최대 오차 / 최대 주관성 = 5.47e-08"
+    ]
+  },
+  "5": {
+    "ok": true,
+    "details": [
+      "성공 가동 관절: USD 11개, URDF 11개, 기대 11개",
+      "성공 물리 고정 관절: USD ['lidar_front_fixed', 'lidar_rear_fixed'], URDF(양쪽 질량 있음) ['lidar_front_fixed', 'lidar_rear_fixed']",
+      "참고 질량 없는 프레임으로 이어진 URDF 고정 관절 15개는 물리 관절 없이 Xform 계층: ['base_footprint_to_base_link', 'camera_link_fixed', 'camera_optical_frame_fixed', 'lidar_front_scan_fixed', 'lidar_rear_scan_fixed', 'top_camera_front_color_optical_frame_fixed', 'top_camera_front_infra1_optical_frame_fixed', 'top_camera_front_infra2_optical_frame_fixed', 'top_camera_front_link_fixed', 'top_camera_front_optical_frame_fixed', 'top_camera_rear_color_optical_frame_fixed', 'top_camera_rear_infra1_optical_frame_fixed', 'top_camera_rear_infra2_optical_frame_fixed', 'top_camera_rear_link_fixed', 'top_camera_rear_optical_frame_fixed']",
+      "성공 Wheel_Revolute_Front_Left: continuous, 축 내적 1.00000000, 한계 없음(USD None~None), effort 1.7999999523162842, 속도 newton 630.0 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 Wheel_Revolute_Front_Right: continuous, 축 내적 1.00000000, 한계 없음(USD None~None), effort 1.7999999523162842, 속도 newton 630.0 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 Wheel_Revolute_Rear_Left: continuous, 축 내적 1.00000000, 한계 없음(USD None~None), effort 1.7999999523162842, 속도 newton 630.0 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 Wheel_Revolute_Rear_Right: continuous, 축 내적 1.00000000, 한계 없음(USD None~None), effort 1.7999999523162842, 속도 newton 630.0 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 RMX52_Base_Yaw: revolute, 축 내적 1.00000000, 한계 -180.0000~180.0000° (오차 0.0e+00°), effort 3.799999952316284, 속도 newton 257.9999694824219 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 RMX52_Shoulder: revolute, 축 내적 1.00000000, 한계 -85.9437~85.9437° (오차 2.9e-06°), effort 3.799999952316284, 속도 newton 257.9999694824219 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 RMX52_Elbow: revolute, 축 내적 1.00000000, 한계 -80.2141~85.9437° (오차 2.9e-06°), effort 3.799999952316284, 속도 newton 257.9999694824219 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 RMX52_Wrist_Pitch: revolute, 축 내적 1.00000000, 한계 -112.8727~97.4028° (오차 2.7e-06°), effort 3.799999952316284, 속도 newton 257.9999694824219 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 RMX52_Wrist_Roll_Reversed: revolute, 축 내적 1.00000000, 한계 -180.0000~180.0000° (오차 0.0e+00°), effort 3.799999952316284, 속도 newton 257.9999694824219 (deg/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 gripper_left_joint: prismatic, 축 내적 1.00000000, 한계 -0.0014139~0.0261861 m (오차 6.2e-10 m), effort 10.0, 속도 newton 0.009999999776482582 (m/s), physxJoint:maxJointVelocity None, drive force",
+      "성공 gripper_right_joint: prismatic, 축 내적 1.00000000, 한계 -0.0261861~0.0014139 m (오차 6.2e-10 m), effort 10.0, 속도 newton 0.009999999776482582 (m/s), physxJoint:maxJointVelocity None, drive force",
+      "참고 PhysX 관절 속도 한계(physxJoint:maxJointVelocity)가 적힌 관절 0개 / 11개",
+      "조건 속도 한계는 newton:velocityLimit으로만 판정했다. PhysX가 이 값을 적용하는지는 동작 시험에서 확인한다"
+    ],
+    "conditions": [
+      "속도 한계는 newton:velocityLimit으로만 판정했다. PhysX가 이 값을 적용하는지는 동작 시험에서 확인한다"
+    ]
+  },
+  "6": {
+    "ok": true,
+    "details": [
+      "성공 gripper_right_joint: 대상 ['/waffle_4wd/Physics/gripper_left_joint'], 계수 -1.0, 오프셋 None (URDF 대상 gripper_left_joint, 계수 -1.0, 오프셋 0.0)",
+      "참고 gripper_right_joint 적용 스키마 ['PhysxJointAPI', 'NewtonJointAPI', 'NewtonMimicAPI', 'PhysicsDriveAPI:linear', 'PhysicsJointStateAPI:linear', 'IsaacJointAPI']. PhysX mimic(PhysxMimicJointAPI) 적용 여부: False"
+    ]
+  },
+  "7": {
+    "ok": true,
+    "details": [
+      "성공 camera_optical_frame: 위치 [0.336416, 0.0, 0.374404] m, 위치 오차 3.9e-09 m, 회전 오차 4.4e-06°",
+      "성공 top_camera_rear_optical_frame: 위치 [-0.22041, 4e-06, 0.490373] m, 위치 오차 0.0e+00 m, 회전 오차 0.0e+00°",
+      "성공 top_camera_front_optical_frame: 위치 [-0.06059, 4e-06, 0.490373] m, 위치 오차 0.0e+00 m, 회전 오차 1.2e-06°",
+      "성공 lidar_front_scan: 위치 [0.1855, 0.05, 0.0676] m, 위치 오차 0.0e+00 m, 회전 오차 0.0e+00°",
+      "성공 lidar_rear_scan: 위치 [-0.1855, -0.05, 0.0676] m, 위치 오차 0.0e+00 m, 회전 오차 0.0e+00°",
+      "참고 링크 29개 전체 최대 오차: 위치 3.9e-09 m, 회전 2.2e-04°"
+    ]
+  },
+  "8": {
+    "ok": true,
+    "details": [
+      "성공 USD 충돌 형상 {'Cylinder': 4, 'Mesh(convexHull)': 489, 'Cube': 56} 합계 549, 기대 {'Cube': 56, 'Cylinder': 4, 'Mesh': 489}, URDF {'mesh': 489, 'box': 56, 'cylinder': 4}",
+      "성공 convexHull 근사 메시 489개"
+    ]
+  },
+  "9": {
+    "ok": true,
+    "details": [
+      "성공 표시 메시 묶음 USD 14개, URDF visual 14개, 기대 14개",
+      "참고 표시용 Mesh prim(guide 제외, 하위 메시 포함) 14개"
+    ]
+  },
+  "10": {
+    "ok": true,
+    "details": [
+      "성공 ArticulationRootAPI prim 1개 ['/waffle_4wd/Geometry/base_footprint/base_link']",
+      "성공 base_link: newton:selfCollisionEnabled = True, physxArticulation:enabledSelfCollisions = None (PhysxArticulationAPI 적용 False)",
+      "조건 자기충돌은 newton:selfCollisionEnabled로만 판정했다. PhysX가 이 값을 적용하는지는 동작 시험에서 확인한다",
+      "참고 FilteredPairsAPI(충돌 제외 쌍) prim 0개"
+    ],
+    "conditions": [
+      "자기충돌은 newton:selfCollisionEnabled로만 판정했다. PhysX가 이 값을 적용하는지는 동작 시험에서 확인한다"
+    ]
+  }
+}

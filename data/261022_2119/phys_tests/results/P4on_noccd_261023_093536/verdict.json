@@ -1,0 +1,165 @@
+{
+  "measured": {
+    "self_collision_newton_now": true,
+    "base_arm_contacts_보고": {
+      "arm_link_5|base_link": {
+        "first_t": 1.2083333963528275,
+        "steps": 9,
+        "min_sep_m": -0.005565483123064041,
+        "steps_sep_le_0": 2,
+        "first_t_sep_le_0": 1.2083333963528275
+      },
+      "base_link|gripper_right_link": {
+        "first_t": 1.308333401568234,
+        "steps": 679,
+        "min_sep_m": -0.004227623343467712,
+        "steps_sep_le_0": 611,
+        "first_t_sep_le_0": 1.325000069104135
+      },
+      "base_link|gripper_left_link": {
+        "first_t": 1.3166667353361845,
+        "steps": 678,
+        "min_sep_m": -0.003787120571359992,
+        "steps_sep_le_0": 38,
+        "first_t_sep_le_0": 1.3500000704079866
+      }
+    },
+    "base_arm_실제접촉_separation≤0": {
+      "arm_link_5|base_link": {
+        "first_t": 1.2083333963528275,
+        "steps": 9,
+        "min_sep_m": -0.005565483123064041,
+        "steps_sep_le_0": 2,
+        "first_t_sep_le_0": 1.2083333963528275
+      },
+      "base_link|gripper_right_link": {
+        "first_t": 1.308333401568234,
+        "steps": 679,
+        "min_sep_m": -0.004227623343467712,
+        "steps_sep_le_0": 611,
+        "first_t_sep_le_0": 1.325000069104135
+      },
+      "base_link|gripper_left_link": {
+        "first_t": 1.3166667353361845,
+        "steps": 678,
+        "min_sep_m": -0.003787120571359992,
+        "steps_sep_le_0": 38,
+        "first_t_sep_le_0": 1.3500000704079866
+      }
+    },
+    "all_contact_pairs": {
+      "CollisionPlane|base_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -2.68593430519104e-06,
+        "steps_sep_le_0": 18,
+        "first_t_sep_le_0": 1.3833334054797888
+      },
+      "CollisionPlane|wheel_front_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 802,
+        "min_sep_m": -6.996958836680278e-05,
+        "steps_sep_le_0": 639,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_front_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 802,
+        "min_sep_m": -6.978332385187969e-05,
+        "steps_sep_le_0": 244,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -0.00014197245764080435,
+        "steps_sep_le_0": 247,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -0.00014168933557812124,
+        "steps_sep_le_0": 704,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "gripper_left_link|gripper_right_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 839,
+        "min_sep_m": -0.0029445188120007515,
+        "steps_sep_le_0": 39,
+        "first_t_sep_le_0": 1.3833334054797888
+      },
+      "arm_link_5|base_link": {
+        "first_t": 1.2083333963528275,
+        "steps": 9,
+        "min_sep_m": -0.005565483123064041,
+        "steps_sep_le_0": 2,
+        "first_t_sep_le_0": 1.2083333963528275
+      },
+      "base_link|gripper_right_link": {
+        "first_t": 1.308333401568234,
+        "steps": 679,
+        "min_sep_m": -0.004227623343467712,
+        "steps_sep_le_0": 611,
+        "first_t_sep_le_0": 1.325000069104135
+      },
+      "base_link|gripper_left_link": {
+        "first_t": 1.3166667353361845,
+        "steps": 678,
+        "min_sep_m": -0.003787120571359992,
+        "steps_sep_le_0": 38,
+        "first_t_sep_le_0": 1.3500000704079866
+      }
+    },
+    "reach_err_end_rad": {
+      "RMX52_Base_Yaw": 0.0012490246,
+      "RMX52_Shoulder": 1.25950742,
+      "RMX52_Elbow": 0.11448189999999991,
+      "RMX52_Wrist_Pitch": 0.011674699999999927,
+      "RMX52_Wrist_Roll_Reversed": 0.00066298305
+    },
+    "reach_err_max_rad": 1.25950742,
+    "참고_관절속도_위치차분_최대": {
+      "RMX52_Base_Yaw": 0.10440565555482073,
+      "RMX52_Shoulder": 4.391985170940123,
+      "RMX52_Elbow": 4.627029158681624,
+      "RMX52_Wrist_Pitch": 4.403569470335955,
+      "RMX52_Wrist_Roll_Reversed": 1.1375095236742552,
+      "gripper_left_joint": 0.01245055148465314,
+      "gripper_right_joint": 0.013192743580944804
+    },
+    "침투(참고, D5)": {
+      "pairs": {
+        "arm_link_5|base_link": {
+          "max_mm": 5.565,
+          "last2s_max_mm": 0.0,
+          "steps": 2
+        },
+        "base_link|gripper_right_link": {
+          "max_mm": 4.228,
+          "last2s_max_mm": 0.004,
+          "steps": 610
+        },
+        "base_link|gripper_left_link": {
+          "max_mm": 3.787,
+          "last2s_max_mm": 0.0,
+          "steps": 37
+        }
+      },
+      "arm_force_abs_max_Nm": {
+        "RMX52_Base_Yaw": 2.0876231,
+        "RMX52_Shoulder": 4.2828064,
+        "RMX52_Elbow": 3.8086064,
+        "RMX52_Wrist_Pitch": 3.8082721,
+        "RMX52_Wrist_Roll_Reversed": 0.71174324
+      }
+    }
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base_link–팔·집게 링크 실제 접촉(separation ≤ 0)": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s (최대 4.627)": true
+  },
+  "verdict": "성공"
+}

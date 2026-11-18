@@ -1,0 +1,14 @@
+{
+  "measured": {
+    "left_end_m": 0.020000005,
+    "right_end_m": -0.019999979,
+    "sum_end_m": 2.6000000000192536e-08,
+    "sum_abs_max_m": 0.0002278117999999999,
+    "sum_abs_max_after_cmd_m": 0.0002278117999999999
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "끝에서 |오른쪽 + 왼쪽| ≤ 1 mm": true
+  },
+  "verdict": "성공"
+}

@@ -1,0 +1,577 @@
+{
+ "summary": {
+  "C1_500mm": {
+   "n": 40,
+   "output": 38,
+   "success": 29,
+   "rate": 72.5,
+   "ci95": [
+    57.2,
+    83.9
+   ],
+   "center_mm_p50_p95": [
+    4.98,
+    34.92
+   ],
+   "axis_deg_p50_p95": [
+    1.85,
+    20.44
+   ]
+  },
+  "C3_500mm_no_tag": {
+   "n": 15,
+   "output": 14,
+   "success": 5,
+   "rate": 33.3,
+   "ci95": [
+    15.2,
+    58.3
+   ],
+   "center_mm_p50_p95": [
+    16.18,
+    39.93
+   ],
+   "axis_deg_p50_p95": [
+    4.24,
+    57.95
+   ]
+  },
+  "ref_tag": {
+   "n": 25,
+   "output": 24,
+   "success": 24,
+   "rate": 96.0,
+   "ci95": [
+    80.5,
+    99.3
+   ],
+   "center_mm_p50_p95": [
+    4.05,
+    7.39
+   ],
+   "axis_deg_p50_p95": [
+    1.55,
+    3.57
+   ]
+  },
+  "ref_300mm": {
+   "n": 35,
+   "output": 33,
+   "success": 28,
+   "rate": 80.0,
+   "ci95": [
+    64.1,
+    90.0
+   ],
+   "center_mm_p50_p95": [
+    4.39,
+    19.23
+   ],
+   "axis_deg_p50_p95": [
+    1.68,
+    9.3
+   ]
+  },
+  "ref_300_500": {
+   "n": 5,
+   "output": 5,
+   "success": 1,
+   "rate": 20.0,
+   "ci95": [
+    3.6,
+    62.4
+   ],
+   "center_mm_p50_p95": [
+    19.72,
+    43.03
+   ],
+   "axis_deg_p50_p95": [
+    6.35,
+    62.62
+   ]
+  },
+  "ref_cyl": {
+   "n": 17,
+   "output": 16,
+   "success": 11,
+   "rate": 64.7,
+   "ci95": [
+    41.3,
+    82.7
+   ],
+   "center_mm_p50_p95": [
+    4.65,
+    39.23
+   ],
+   "axis_deg_p50_p95": [
+    2.48,
+    30.15
+   ]
+  },
+  "ref_box": {
+   "n": 23,
+   "output": 22,
+   "success": 18,
+   "rate": 78.3,
+   "ci95": [
+    58.1,
+    90.3
+   ],
+   "center_mm_p50_p95": [
+    5.07,
+    17.19
+   ],
+   "axis_deg_p50_p95": [
+    1.58,
+    13.99
+   ]
+  },
+  "ref_over_500": {
+   "n": 0
+  },
+  "ref_false_out": 0,
+  "ms_all_p50_p95": [
+   11.8,
+   19.9
+  ],
+  "n_frames": 34
+ },
+ "rows": [
+  {
+   "img": "train3_arm_v1__001_000000",
+   "d": 0.3219999241013522,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 15.449586373536794,
+   "a": 4.8054960143642065,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__004_000093",
+   "d": 0.27073719956724734,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 5.110575095024077,
+   "a": 3.035798010691914,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__005_000123",
+   "d": 0.21215928937753367,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 2.961112258225011,
+   "a": 0.38995620780653933,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__006_000154",
+   "d": 0.18806218305775776,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 5.3406655032788946,
+   "a": 0.6998849614294488,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__007_000184",
+   "d": 0.15932420173893702,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 5.639161669881974,
+   "a": 1.344357462215005,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__008_000215",
+   "d": 0.12591503026584625,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 9.36891792035942,
+   "a": 0.9415507398602797,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__009_000245",
+   "d": 0.0830262972505112,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": false,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__010_000276",
+   "d": 0.10629771147681888,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 0.9479202081851292,
+   "a": 2.0092514531835803,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__011_000306",
+   "d": 0.18943069674240906,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 6.966150791485804,
+   "a": 1.4910752836747625,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__013_000367",
+   "d": 0.4240435142088396,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 44.41480182814644,
+   "a": 15.38713665346978,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__016_000459",
+   "d": 0.2979150897233676,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 22.26029018532007,
+   "a": 5.895279103253661,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__016_000459",
+   "d": 0.37481409663858695,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 19.723817915455662,
+   "a": 6.354407376626119,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__018_000520",
+   "d": 0.1889028041148933,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 2.902753025995806,
+   "a": 1.5714431256307224,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__019_000551",
+   "d": 0.21168876683566262,
+   "tag": true,
+   "cyl": true,
+   "human": false,
+   "out": true,
+   "e": 1.4393602722398118,
+   "a": 2.470471895511641,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__019_000551",
+   "d": 0.14375305240704225,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 0.5585037581151915,
+   "a": 1.6873554785663782,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__020_000581",
+   "d": 0.11317222061591026,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 0.31053649156763463,
+   "a": 1.5291084678150775,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__021_000612",
+   "d": 0.1795478287100343,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 34.46290168813905,
+   "a": 3.667057739555863,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__021_000612",
+   "d": 0.09702795343460922,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 5.539599427637406,
+   "a": 2.8402127144819933,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__022_000642",
+   "d": 0.09587262406171297,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 4.935156118552272,
+   "a": 1.8206057276555314,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__023_000673",
+   "d": 0.12916962238247967,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 3.1168446496679545,
+   "a": 1.2408080408931754,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__024_000704",
+   "d": 0.2477265679580099,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 5.026061631385948,
+   "a": 1.5931241342286449,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__026_000765",
+   "d": 0.30856812965328845,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 7.098176412247587,
+   "a": 1.8794365713082135,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__026_000765",
+   "d": 0.2959285067903701,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 12.35945504643722,
+   "a": 14.415445611001896,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__027_000795",
+   "d": 0.16800480971160672,
+   "tag": true,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 2.7647791153397696,
+   "a": 1.6823122908215258,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__027_000795",
+   "d": 0.1478181376164375,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 16.915530879253485,
+   "a": 1.9336130237741953,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__029_000856",
+   "d": 0.07415807057020085,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": false,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__031_000917",
+   "d": 0.1393892030048925,
+   "tag": true,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 2.733536071142955,
+   "a": 3.6986176131209425,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__032_000948",
+   "d": 0.2901646176810099,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 17.20573848664185,
+   "a": 49.0739082267415,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__035_001040",
+   "d": 0.2207658524763038,
+   "tag": true,
+   "cyl": true,
+   "human": false,
+   "out": true,
+   "e": 4.174992177022837,
+   "a": 4.54377262867717,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__036_001070",
+   "d": 0.14363097735997973,
+   "tag": true,
+   "cyl": true,
+   "human": false,
+   "out": true,
+   "e": 3.916076936446311,
+   "a": 2.0609385141539818,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__037_001101",
+   "d": 0.10005821192594144,
+   "tag": true,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 4.218191559190646,
+   "a": 0.6087014265420758,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__038_001131",
+   "d": 0.08713387980576101,
+   "tag": true,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 5.475599902800166,
+   "a": 0.4705990988160664,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__039_001162",
+   "d": 0.09651612209240655,
+   "tag": true,
+   "cyl": true,
+   "human": false,
+   "out": true,
+   "e": 4.9150220110530825,
+   "a": 1.4628103004123634,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__040_001192",
+   "d": 0.1757538976179424,
+   "tag": true,
+   "cyl": true,
+   "human": false,
+   "out": true,
+   "e": 4.3902811461248294,
+   "a": 2.482322626714029,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__041_001223",
+   "d": 0.27396944755995006,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 0.8766868089334434,
+   "a": 1.666466731435117,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__041_001223",
+   "d": 0.2347244006863991,
+   "tag": false,
+   "cyl": false,
+   "human": true,
+   "out": true,
+   "e": 2.2842482319661355,
+   "a": 1.87225164846117,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__042_001253",
+   "d": 0.3762873191053517,
+   "tag": false,
+   "cyl": true,
+   "human": true,
+   "out": true,
+   "e": 37.50781548837475,
+   "a": 74.42896946585711,
+   "ok": false
+  },
+  {
+   "img": "train3_arm_v1__043_001284",
+   "d": 0.235814647059731,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 7.46353136927222,
+   "a": 1.5712270580405434,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__044_001314",
+   "d": 0.14541405428365597,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 3.8842528184618965,
+   "a": 1.403884638141429,
+   "ok": true
+  },
+  {
+   "img": "train3_arm_v1__045_001345",
+   "d": 0.11922702686546763,
+   "tag": true,
+   "cyl": false,
+   "human": false,
+   "out": true,
+   "e": 2.1736808300950643,
+   "a": 1.1579655926312378,
+   "ok": true
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "lidar_only",
+  "light": "bright",
+  "simulation_only": true,
+  "old_model": "261027_1711",
+  "truth_as_input": false,
+  "diagnostic_only": true,
+  "play_exit": 0,
+  "error": "Command '['ros2', 'service', 'call', '/finish_trajectory', 'cartographer_ros_msgs/srv/FinishTrajectory', '{trajectory_id: 0}']' timed out after 29.99997785600135 seconds",
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1238922,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1238923,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1239088,
+      "exit": 0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "kind": "truth_odom",
+  "light": "dark",
+  "simulation_only": true,
+  "old_model": "261027_1711",
+  "truth_as_input": true,
+  "diagnostic_only": true,
+  "play_exit": 0,
+  "finish_exit": 0,
+  "write_exit": 0,
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1262973,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1262974,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1263149,
+      "exit": 0
+    }
+  ],
+  "to_map_exit": 0
+}

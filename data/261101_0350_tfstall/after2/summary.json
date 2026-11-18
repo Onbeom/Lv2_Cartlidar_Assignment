@@ -1,0 +1,25 @@
+{
+  "physical_hardware_used": false,
+  "install": "/home/pa4/git/lv2_next_module/261101_0350_tfstall/build_branch/install",
+  "startup_stopped": true,
+  "far_clear": true,
+  "stall_stops": true,
+  "stall_stop_delay_s": 0.29,
+  "range_msgs_during_stall": 0,
+  "recovery_clear": true,
+  "reason_values": [
+    "clear",
+    "stale"
+  ],
+  "pass": true,
+  "processes": [
+    {
+      "name": "driver",
+      "exit": 0
+    },
+    {
+      "name": "stop",
+      "exit": 0
+    }
+  ]
+}

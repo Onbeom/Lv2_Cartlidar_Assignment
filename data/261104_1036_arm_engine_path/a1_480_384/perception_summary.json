@@ -1,0 +1,98 @@
+{
+  "P1": {
+    "ok": 12,
+    "n": 12,
+    "rate": 1.0
+  },
+  "P2": {
+    "ok": 204,
+    "n": 212,
+    "rate": 0.9622641509433962
+  },
+  "P3_other_frames": 0,
+  "P3_hidden": {
+    "ok": 40,
+    "n": 40,
+    "rate": 1.0
+  },
+  "P4": {
+    "ok": 10,
+    "n": 10,
+    "rate": 1.0
+  },
+  "planned_selected_mismatch": [
+    {
+      "scene": "w5_out00_L0",
+      "planned": "puck_04",
+      "selected": "puck_06"
+    },
+    {
+      "scene": "w5_out00_L1",
+      "planned": "puck_04",
+      "selected": "puck_06"
+    }
+  ],
+  "missing_initial_target": [],
+  "unassessed_frames": 0,
+  "failures": [
+    {
+      "scene": "w1_out00_L0",
+      "k": 15,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 15,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 16,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L1",
+      "k": 16,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.05952654869887887
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 14,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.05899440651451627
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06110008183300568
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 14,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.05952654869887887
+    }
+  ],
+  "pass_observed_checks": true,
+  "P4_exercised": true,
+  "note": "인지범위 보조 판정. 초기 목표 없으면 P1 실패로 포함하고 P2~P4는 평가 불가 행 수를 명시. 기존 J 및 계획/선택 불일치 보존. P4없음은 미시험."
+}

@@ -1,0 +1,212 @@
+{
+  "pitch": 1.5,
+  "grid": [
+    168,
+    36,
+    107
+  ],
+  "lo": [
+    -156.0,
+    90.0,
+    12.0
+  ],
+  "elements": 118731,
+  "design_vars": 3843,
+  "V_orig_cm3": 163.43775,
+  "V_fixed_cm3": 131.182875,
+  "V_designable_cm3": 32.254875,
+  "bolt_holes_fixed": [
+    [
+      "bflange",
+      [
+        -106.0,
+        113.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        -100.0,
+        119.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        -100.0,
+        125.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        -28.0,
+        125.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        -22.0,
+        113.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        -22.0,
+        119.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        22.0,
+        113.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        28.0,
+        119.0
+      ]
+    ],
+    [
+      "bflange",
+      [
+        28.0,
+        125.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -103.0,
+        112.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -103.0,
+        118.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -103.0,
+        124.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -25.0,
+        112.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -25.0,
+        118.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        -25.0,
+        124.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        25.0,
+        112.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        25.0,
+        118.0
+      ]
+    ],
+    [
+      "tflange",
+      [
+        25.0,
+        124.0
+      ]
+    ]
+  ],
+  "args": {
+    "pitch": "1.5",
+    "out": "results/eval_v3_A",
+    "vol_frac_total": "0.66",
+    "iters": "60",
+    "rfilter": "3.0",
+    "cg_tol": "1e-05",
+    "eval_only": "",
+    "opt_lcs": "LC1,LC3x,LC3y,LC4,LC5",
+    "lc_weight": "",
+    "init": "",
+    "main_stl": "placed_v3/A_flipped_Left_Main_assembled_mm.stl",
+    "carr_stl": "results/to_belt/cad/Floor_Bracket_Left_Profile_Carrier_TO_assembled_mm.stl",
+    "bolts_from": "results/eval_v3_orig/eval_mesh.json",
+    "layout": "belt"
+  },
+  "evaluated_mesh": {
+    "volume_cm3": 163.43775,
+    "volume_frac": 1.0,
+    "lc": {
+      "LC1": {
+        "compliance": 2.2892919917187795,
+        "cg_iters": 9937,
+        "max_disp_mm": 0.06097170763789758,
+        "vm_max_MPa": 1.7426472330536202,
+        "vm_p999_MPa": 1.1105139255523682
+      },
+      "LC2": {
+        "compliance": 0.4144180063769163,
+        "cg_iters": 10054,
+        "max_disp_mm": 0.01821538732612349,
+        "vm_max_MPa": 0.8745684437468918,
+        "vm_p999_MPa": 0.5810678005218506
+      },
+      "LC3x": {
+        "compliance": 4.92745465598309,
+        "cg_iters": 10038,
+        "max_disp_mm": 0.4671206442263639,
+        "vm_max_MPa": 4.018225256837735,
+        "vm_p999_MPa": 1.7323368787765503
+      },
+      "LC3y": {
+        "compliance": 11.190423021792636,
+        "cg_iters": 9941,
+        "max_disp_mm": 0.5243210863223962,
+        "vm_max_MPa": 6.131433231024349,
+        "vm_p999_MPa": 2.887510061264038
+      },
+      "LC4": {
+        "compliance": 2.3023009607120333,
+        "cg_iters": 9934,
+        "max_disp_mm": 0.06119047802421054,
+        "vm_max_MPa": 1.7585984755943018,
+        "vm_p999_MPa": 1.1212612390518188
+      },
+      "LC5": {
+        "compliance": 0.706325171230409,
+        "cg_iters": 10073,
+        "max_disp_mm": 0.022586315030120846,
+        "vm_max_MPa": 1.0478359841229734,
+        "vm_p999_MPa": 0.7697127461433411
+      }
+    }
+  },
+  "main_stl": "placed_v3/A_flipped_Left_Main_assembled_mm.stl",
+  "carr_stl": "results/to_belt/cad/Floor_Bracket_Left_Profile_Carrier_TO_assembled_mm.stl"
+}

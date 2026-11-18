@@ -1,0 +1,17 @@
+{
+  "pc_only_not_jetson": true,
+  "onnx": "/home/pa4/git/lv2_next_module/261102_1304_yolo_C/yolo_export/yolo11n_task4_C.onnx",
+  "engine": "/home/pa4/git/lv2_next_module/261102_1304_yolo_C/trt_results/yolo11n_task4_C_fp32_notf32.engine",
+  "n_images": 203,
+  "same_classes_counts": 203,
+  "max_box_px": 0.000519000000053893,
+  "max_score": 1.132000000070299e-06,
+  "raw_max_abs": 0.0066986083984375,
+  "detections_onnx": 368,
+  "criteria": {
+    "same_all": true,
+    "box_px_le": 0.5,
+    "score_le": 0.001
+  },
+  "pass": true
+}

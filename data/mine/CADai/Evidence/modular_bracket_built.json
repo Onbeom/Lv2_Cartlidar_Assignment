@@ -1,0 +1,589 @@
+{
+  "design": "Floor_Bracket_Modular_261021_R2",
+  "parts": [
+    {
+      "name": "Floor_Bracket_Right_Main",
+      "side": "Right",
+      "role": "Main",
+      "bounds_input_mm": {
+        "min": [
+          10.700024999999997,
+          -249.949947,
+          0.0
+        ],
+        "max": [
+          52.700023,
+          -32.30000000000004,
+          90.0
+        ],
+        "size": [
+          41.999998000000005,
+          217.64994699999994,
+          90.0
+        ]
+      },
+      "volume_mm3": 141977.23783818766,
+      "mass_g": 176.05177491935268,
+      "solid": true,
+      "faces": 92,
+      "holes": [
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            19.700020944978604,
+            -179.6999460566423
+          ],
+          "radius_mm": 1.9999995227353224
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            18.700031280518004,
+            -182.699927706055
+          ],
+          "radius_mm": 1.9999995227353224,
+          "target_world_xy_mm": [
+            28.000000000000004,
+            -125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            19.700020944975137,
+            -129.69994105666274
+          ],
+          "radius_mm": 1.9999986894058819
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            18.700031280518004,
+            -126.699927706055
+          ],
+          "radius_mm": 1.9999986894058819,
+          "target_world_xy_mm": [
+            -28.000000000000004,
+            -125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            19.700020944983205,
+            -51.699940833302875
+          ],
+          "radius_mm": 2.0000003707814016
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            18.700031280518004,
+            -54.69992770605501
+          ],
+          "radius_mm": 2.0000003707814016,
+          "target_world_xy_mm": [
+            -100.0,
+            -125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            25.70001833332736,
+            -179.69994605663607
+          ],
+          "radius_mm": 2.0000003337590617
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            24.700031280518004,
+            -182.699927706055
+          ],
+          "radius_mm": 2.0000003337590617,
+          "target_world_xy_mm": [
+            28.000000000000004,
+            -119.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            25.700018333331066,
+            -129.69994105665057
+          ],
+          "radius_mm": 1.9999995004290498
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            24.700031280518004,
+            -132.699927706055
+          ],
+          "radius_mm": 1.9999995004290498,
+          "target_world_xy_mm": [
+            -22.0,
+            -119.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            25.70001833332038,
+            -51.699940833298854
+          ],
+          "radius_mm": 2.0000011818025234
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            24.700031280518004,
+            -54.69992770605501
+          ],
+          "radius_mm": 2.0000011818025234,
+          "target_world_xy_mm": [
+            -100.0,
+            -119.0
+          ]
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.10002988184664,
+            -162.69994823152237
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.10002969415622,
+            -146.69994466724296
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.100028906613172,
+            -242.69994595024298
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.10002948248334,
+            -66.6999440915638
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.100029432237363,
+            -226.6999472742823
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            22.100029447066248,
+            -82.69994301921881
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            31.70002083334055,
+            -179.69994605663254
+          ],
+          "radius_mm": 1.999999605995033
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            30.700031280518004,
+            -176.699927706055
+          ],
+          "radius_mm": 1.999999605995033,
+          "target_world_xy_mm": [
+            22.0,
+            -113.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            31.700020833340265,
+            -129.6999410566702
+          ],
+          "radius_mm": 1.9999987726583512
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            30.700031280518004,
+            -132.699927706055
+          ],
+          "radius_mm": 1.9999987726583512,
+          "target_world_xy_mm": [
+            -22.0,
+            -113.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            31.700020833333856,
+            -51.69994083331394
+          ],
+          "radius_mm": 2.000000454033005
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            30.700031280518004,
+            -48.69992770605499
+          ],
+          "radius_mm": 2.000000454033005,
+          "target_world_xy_mm": [
+            -106.00000000000001,
+            -113.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Floor_Bracket_Right_Profile_Carrier",
+      "side": "Right",
+      "role": "Profile_Carrier",
+      "bounds_input_mm": {
+        "min": [
+          0.0,
+          -58.0,
+          0.0
+        ],
+        "max": [
+          52.700023,
+          0.0,
+          110.0
+        ],
+        "size": [
+          52.700023,
+          58.0,
+          110.0
+        ]
+      },
+      "volume_mm3": 66408.73701558955,
+      "mass_g": 82.34683389933105,
+      "solid": true,
+      "faces": 52
+    },
+    {
+      "name": "Floor_Bracket_Left_Main",
+      "side": "Left",
+      "role": "Main",
+      "bounds_input_mm": {
+        "min": [
+          72.700023,
+          -249.949947,
+          0.0
+        ],
+        "max": [
+          114.700021,
+          -32.30000000000004,
+          90.0
+        ],
+        "size": [
+          41.999998000000005,
+          217.64994699999994,
+          90.0
+        ]
+      },
+      "volume_mm3": 141977.23783818766,
+      "mass_g": 176.05177491935274,
+      "solid": true,
+      "faces": 92,
+      "holes": [
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            105.7000250550214,
+            -179.6999460566423
+          ],
+          "radius_mm": 1.9999995227353224
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            106.700031280518,
+            -182.699927706055
+          ],
+          "radius_mm": 1.9999995227353224,
+          "target_world_xy_mm": [
+            28.000000000000004,
+            125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            105.70002505502487,
+            -129.69994105666274
+          ],
+          "radius_mm": 1.9999986894058819
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            106.700031280518,
+            -126.699927706055
+          ],
+          "radius_mm": 1.9999986894058819,
+          "target_world_xy_mm": [
+            -28.000000000000004,
+            125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            105.7000250550168,
+            -51.699940833302875
+          ],
+          "radius_mm": 2.0000003707814016
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            106.700031280518,
+            -54.69992770605501
+          ],
+          "radius_mm": 2.0000003707814016,
+          "target_world_xy_mm": [
+            -100.0,
+            125.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            99.70002766667264,
+            -179.69994605663607
+          ],
+          "radius_mm": 2.0000003337590617
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            100.700031280518,
+            -182.699927706055
+          ],
+          "radius_mm": 2.0000003337590617,
+          "target_world_xy_mm": [
+            28.000000000000004,
+            119.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            99.70002766666894,
+            -129.69994105665057
+          ],
+          "radius_mm": 1.9999995004290498
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            100.700031280518,
+            -132.699927706055
+          ],
+          "radius_mm": 1.9999995004290498,
+          "target_world_xy_mm": [
+            -22.0,
+            119.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            99.70002766667963,
+            -51.699940833298854
+          ],
+          "radius_mm": 2.0000011818025234
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            100.700031280518,
+            -54.69992770605501
+          ],
+          "radius_mm": 2.0000011818025234,
+          "target_world_xy_mm": [
+            -100.0,
+            119.0
+          ]
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001611815337,
+            -162.69994823152237
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001630584378,
+            -146.69994466724296
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001709338683,
+            -242.69994595024298
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001651751667,
+            -66.6999440915638
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001656776264,
+            -226.6999472742823
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "motor",
+          "center_input_mm": [
+            103.30001655293376,
+            -82.69994301921881
+          ],
+          "radius_mm": 1.4
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            93.70002516665946,
+            -179.69994605663254
+          ],
+          "radius_mm": 1.999999605995033
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            94.700031280518,
+            -176.699927706055
+          ],
+          "radius_mm": 1.999999605995033,
+          "target_world_xy_mm": [
+            22.0,
+            113.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            93.70002516665974,
+            -129.6999410566702
+          ],
+          "radius_mm": 1.9999987726583512
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            94.700031280518,
+            -132.699927706055
+          ],
+          "radius_mm": 1.9999987726583512,
+          "target_world_xy_mm": [
+            -22.0,
+            113.0
+          ]
+        },
+        {
+          "kind": "panel_lower",
+          "center_input_mm": [
+            93.70002516666615,
+            -51.69994083331394
+          ],
+          "radius_mm": 2.000000454033005
+        },
+        {
+          "kind": "panel_upper",
+          "center_input_mm": [
+            94.700031280518,
+            -48.69992770605499
+          ],
+          "radius_mm": 2.000000454033005,
+          "target_world_xy_mm": [
+            -106.00000000000001,
+            113.0
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Floor_Bracket_Left_Profile_Carrier",
+      "side": "Left",
+      "role": "Profile_Carrier",
+      "bounds_input_mm": {
+        "min": [
+          72.700023,
+          -58.0,
+          0.0
+        ],
+        "max": [
+          125.400046,
+          0.0,
+          110.0
+        ],
+        "size": [
+          52.700023,
+          58.0,
+          110.0
+        ]
+      },
+      "volume_mm3": 66408.73701558958,
+      "mass_g": 82.34683389933107,
+      "solid": true,
+      "faces": 52
+    }
+  ],
+  "assembly_shift_mm": [
+    -12.5,
+    0,
+    0
+  ],
+  "floor_hole_width_offset_mm": 5,
+  "joint_clearance_per_face_mm": 0.3,
+  "joint_bolt": "M5 x 20 button head, washers both sides, nut; four per side",
+  "source_preserved": true,
+  "joint_overlap_mm3": {
+    "Right": 0,
+    "Left": 0
+  },
+  "total_bracket_mass_g": 516.7972176373676,
+  "exports": [
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Floor_Bracket_Modular_261021.f3d",
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Floor_Bracket_Modular_261021.step"
+  ],
+  "motor_relief_applied": true,
+  "profile_lower_stop_thickness_mm": 7
+}

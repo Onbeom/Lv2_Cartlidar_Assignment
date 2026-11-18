@@ -1,0 +1,42 @@
+[
+  {
+    "file": "CMakeLists.txt",
+    "status": "병합"
+  },
+  {
+    "file": "config/perception.yaml",
+    "status": "병합"
+  },
+  {
+    "file": "src/perception_node.cpp",
+    "status": "병합"
+  },
+  {
+    "file": "src/color_detector.cpp",
+    "status": "병합"
+  },
+  {
+    "file": "include/perception/arm_target_lock.hpp",
+    "status": "병합"
+  },
+  {
+    "file": "include/perception/depth_split.hpp",
+    "status": "병합"
+  },
+  {
+    "file": "include/perception/detector.hpp",
+    "status": "병합"
+  },
+  {
+    "file": "test/test_arm_lock.cpp",
+    "status": "병합"
+  },
+  {
+    "file": "test/test_depth_split.cpp",
+    "status": "병합"
+  },
+  {
+    "file": "test/test_arm_detect.cpp",
+    "status": "추가"
+  }
+]

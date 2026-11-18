@@ -1,0 +1,2321 @@
+{
+ "version": 1.0,
+ "date_generated": "2026-11-01",
+ "lattice_metadata": {
+  "motion_model": "diff",
+  "turning_radius": 0.1,
+  "grid_resolution": 0.025,
+  "stopping_threshold": 5,
+  "num_of_headings": 16,
+  "trajectory_distinctness_ratio": 0.9,
+  "heading_angles": [
+   0.0,
+   0.46365,
+   0.7854,
+   1.10715,
+   1.5708,
+   2.03444,
+   2.35619,
+   2.67795,
+   3.14159,
+   3.60524,
+   3.92699,
+   4.24874,
+   4.71239,
+   5.17604,
+   5.49779,
+   5.81954
+  ],
+  "number_of_trajectories": 64
+ },
+ "primitives": [
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 0,
+   "end_angle_index": 0,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.025,
+   "arc_length": 0.0,
+   "straight_length": 0.025,
+   "poses": [
+    [
+     0.025,
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 0,
+   "end_angle_index": 0,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1,
+   "arc_length": 0.0,
+   "straight_length": 0.1,
+   "poses": [
+    [
+     0.025,
+     0.0,
+     0.0
+    ],
+    [
+     0.05,
+     0.0,
+     0.0
+    ],
+    [
+     0.075,
+     0.0,
+     0.0
+    ],
+    [
+     0.1,
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 0,
+   "end_angle_index": 1,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.07727
+    ],
+    [
+     0.0,
+     0.0,
+     0.15455
+    ],
+    [
+     0.0,
+     0.0,
+     0.23182
+    ],
+    [
+     0.0,
+     0.0,
+     0.3091
+    ],
+    [
+     0.0,
+     0.0,
+     0.38637
+    ],
+    [
+     0.0,
+     0.0,
+     0.46365
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 0,
+   "end_angle_index": 15,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     6.20591
+    ],
+    [
+     0.0,
+     0.0,
+     6.12864
+    ],
+    [
+     0.0,
+     0.0,
+     6.05136
+    ],
+    [
+     0.0,
+     0.0,
+     5.97409
+    ],
+    [
+     0.0,
+     0.0,
+     5.89681
+    ],
+    [
+     0.0,
+     0.0,
+     5.81954
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 1,
+   "end_angle_index": 1,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     0.01667,
+     0.00833,
+     0.46365
+    ],
+    [
+     0.03333,
+     0.01667,
+     0.46365
+    ],
+    [
+     0.05,
+     0.025,
+     0.46365
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 1,
+   "end_angle_index": 1,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     0.02,
+     0.01,
+     0.46365
+    ],
+    [
+     0.04,
+     0.02,
+     0.46365
+    ],
+    [
+     0.06,
+     0.03,
+     0.46365
+    ],
+    [
+     0.08,
+     0.04,
+     0.46365
+    ],
+    [
+     0.1,
+     0.05,
+     0.46365
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 1,
+   "end_angle_index": 2,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.46365
+    ],
+    [
+     0.0,
+     0.0,
+     0.54409
+    ],
+    [
+     0.0,
+     0.0,
+     0.62452
+    ],
+    [
+     0.0,
+     0.0,
+     0.70496
+    ],
+    [
+     0.0,
+     0.0,
+     0.7854
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 1,
+   "end_angle_index": 0,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.46365
+    ],
+    [
+     0.0,
+     0.0,
+     0.38637
+    ],
+    [
+     0.0,
+     0.0,
+     0.3091
+    ],
+    [
+     0.0,
+     0.0,
+     0.23182
+    ],
+    [
+     0.0,
+     0.0,
+     0.15455
+    ],
+    [
+     0.0,
+     0.0,
+     0.07727
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 2,
+   "end_angle_index": 2,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.03536,
+   "arc_length": 0.0,
+   "straight_length": 0.03536,
+   "poses": [
+    [
+     0.0125,
+     0.0125,
+     0.7854
+    ],
+    [
+     0.025,
+     0.025,
+     0.7854
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 2,
+   "end_angle_index": 2,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.10607,
+   "arc_length": 0.0,
+   "straight_length": 0.10607,
+   "poses": [
+    [
+     0.015,
+     0.015,
+     0.7854
+    ],
+    [
+     0.03,
+     0.03,
+     0.7854
+    ],
+    [
+     0.045,
+     0.045,
+     0.7854
+    ],
+    [
+     0.06,
+     0.06,
+     0.7854
+    ],
+    [
+     0.075,
+     0.075,
+     0.7854
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 2,
+   "end_angle_index": 3,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.7854
+    ],
+    [
+     0.0,
+     0.0,
+     0.86584
+    ],
+    [
+     0.0,
+     0.0,
+     0.94627
+    ],
+    [
+     0.0,
+     0.0,
+     1.02671
+    ],
+    [
+     0.0,
+     0.0,
+     1.10715
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 2,
+   "end_angle_index": 1,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     0.7854
+    ],
+    [
+     0.0,
+     0.0,
+     0.70496
+    ],
+    [
+     0.0,
+     0.0,
+     0.62452
+    ],
+    [
+     0.0,
+     0.0,
+     0.54409
+    ],
+    [
+     0.0,
+     0.0,
+     0.46365
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 3,
+   "end_angle_index": 3,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     0.00833,
+     0.01667,
+     1.10715
+    ],
+    [
+     0.01667,
+     0.03333,
+     1.10715
+    ],
+    [
+     0.025,
+     0.05,
+     1.10715
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 3,
+   "end_angle_index": 3,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     0.01,
+     0.02,
+     1.10715
+    ],
+    [
+     0.02,
+     0.04,
+     1.10715
+    ],
+    [
+     0.03,
+     0.06,
+     1.10715
+    ],
+    [
+     0.04,
+     0.08,
+     1.10715
+    ],
+    [
+     0.05,
+     0.1,
+     1.10715
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 3,
+   "end_angle_index": 4,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     1.10715
+    ],
+    [
+     0.0,
+     0.0,
+     1.18442
+    ],
+    [
+     0.0,
+     0.0,
+     1.2617
+    ],
+    [
+     0.0,
+     0.0,
+     1.33897
+    ],
+    [
+     0.0,
+     0.0,
+     1.41625
+    ],
+    [
+     0.0,
+     0.0,
+     1.49352
+    ],
+    [
+     0.0,
+     0.0,
+     1.5708
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 3,
+   "end_angle_index": 2,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     1.10715
+    ],
+    [
+     0.0,
+     0.0,
+     1.02671
+    ],
+    [
+     0.0,
+     0.0,
+     0.94627
+    ],
+    [
+     0.0,
+     0.0,
+     0.86584
+    ],
+    [
+     0.0,
+     0.0,
+     0.7854
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 4,
+   "end_angle_index": 4,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.025,
+   "arc_length": 0.0,
+   "straight_length": 0.025,
+   "poses": [
+    [
+     0.0,
+     0.025,
+     1.5708
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 4,
+   "end_angle_index": 4,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1,
+   "arc_length": 0.0,
+   "straight_length": 0.1,
+   "poses": [
+    [
+     0.0,
+     0.025,
+     1.5708
+    ],
+    [
+     0.0,
+     0.05,
+     1.5708
+    ],
+    [
+     0.0,
+     0.075,
+     1.5708
+    ],
+    [
+     0.0,
+     0.1,
+     1.5708
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 4,
+   "end_angle_index": 5,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     1.5708
+    ],
+    [
+     0.0,
+     0.0,
+     1.64807
+    ],
+    [
+     0.0,
+     0.0,
+     1.72535
+    ],
+    [
+     0.0,
+     0.0,
+     1.80262
+    ],
+    [
+     0.0,
+     0.0,
+     1.87989
+    ],
+    [
+     0.0,
+     0.0,
+     1.95717
+    ],
+    [
+     0.0,
+     0.0,
+     2.03444
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 4,
+   "end_angle_index": 3,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     1.5708
+    ],
+    [
+     0.0,
+     0.0,
+     1.49352
+    ],
+    [
+     0.0,
+     0.0,
+     1.41625
+    ],
+    [
+     0.0,
+     0.0,
+     1.33897
+    ],
+    [
+     0.0,
+     0.0,
+     1.2617
+    ],
+    [
+     0.0,
+     0.0,
+     1.18442
+    ],
+    [
+     0.0,
+     0.0,
+     1.10715
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 5,
+   "end_angle_index": 5,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     -0.00833,
+     0.01667,
+     2.03444
+    ],
+    [
+     -0.01667,
+     0.03333,
+     2.03444
+    ],
+    [
+     -0.025,
+     0.05,
+     2.03444
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 5,
+   "end_angle_index": 5,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     -0.01,
+     0.02,
+     2.03444
+    ],
+    [
+     -0.02,
+     0.04,
+     2.03444
+    ],
+    [
+     -0.03,
+     0.06,
+     2.03444
+    ],
+    [
+     -0.04,
+     0.08,
+     2.03444
+    ],
+    [
+     -0.05,
+     0.1,
+     2.03444
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 5,
+   "end_angle_index": 6,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.03444
+    ],
+    [
+     0.0,
+     0.0,
+     2.11488
+    ],
+    [
+     0.0,
+     0.0,
+     2.19532
+    ],
+    [
+     0.0,
+     0.0,
+     2.27576
+    ],
+    [
+     0.0,
+     0.0,
+     2.35619
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 5,
+   "end_angle_index": 4,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.03444
+    ],
+    [
+     0.0,
+     0.0,
+     1.95717
+    ],
+    [
+     0.0,
+     0.0,
+     1.87989
+    ],
+    [
+     0.0,
+     0.0,
+     1.80262
+    ],
+    [
+     0.0,
+     0.0,
+     1.72535
+    ],
+    [
+     0.0,
+     0.0,
+     1.64807
+    ],
+    [
+     0.0,
+     0.0,
+     1.5708
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 6,
+   "end_angle_index": 6,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.03536,
+   "arc_length": 0.0,
+   "straight_length": 0.03536,
+   "poses": [
+    [
+     -0.0125,
+     0.0125,
+     2.35619
+    ],
+    [
+     -0.025,
+     0.025,
+     2.35619
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 6,
+   "end_angle_index": 6,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.10607,
+   "arc_length": 0.0,
+   "straight_length": 0.10607,
+   "poses": [
+    [
+     -0.015,
+     0.015,
+     2.35619
+    ],
+    [
+     -0.03,
+     0.03,
+     2.35619
+    ],
+    [
+     -0.045,
+     0.045,
+     2.35619
+    ],
+    [
+     -0.06,
+     0.06,
+     2.35619
+    ],
+    [
+     -0.075,
+     0.075,
+     2.35619
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 6,
+   "end_angle_index": 7,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.35619
+    ],
+    [
+     0.0,
+     0.0,
+     2.43663
+    ],
+    [
+     0.0,
+     0.0,
+     2.51707
+    ],
+    [
+     0.0,
+     0.0,
+     2.59751
+    ],
+    [
+     0.0,
+     0.0,
+     2.67795
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 6,
+   "end_angle_index": 5,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.35619
+    ],
+    [
+     0.0,
+     0.0,
+     2.27576
+    ],
+    [
+     0.0,
+     0.0,
+     2.19532
+    ],
+    [
+     0.0,
+     0.0,
+     2.11488
+    ],
+    [
+     0.0,
+     0.0,
+     2.03444
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 7,
+   "end_angle_index": 7,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     -0.01667,
+     0.00833,
+     2.67795
+    ],
+    [
+     -0.03333,
+     0.01667,
+     2.67795
+    ],
+    [
+     -0.05,
+     0.025,
+     2.67795
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 7,
+   "end_angle_index": 7,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     -0.02,
+     0.01,
+     2.67795
+    ],
+    [
+     -0.04,
+     0.02,
+     2.67795
+    ],
+    [
+     -0.06,
+     0.03,
+     2.67795
+    ],
+    [
+     -0.08,
+     0.04,
+     2.67795
+    ],
+    [
+     -0.1,
+     0.05,
+     2.67795
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 7,
+   "end_angle_index": 8,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.67795
+    ],
+    [
+     0.0,
+     0.0,
+     2.75522
+    ],
+    [
+     0.0,
+     0.0,
+     2.83249
+    ],
+    [
+     0.0,
+     0.0,
+     2.90977
+    ],
+    [
+     0.0,
+     0.0,
+     2.98704
+    ],
+    [
+     0.0,
+     0.0,
+     3.06432
+    ],
+    [
+     0.0,
+     0.0,
+     3.14159
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 7,
+   "end_angle_index": 6,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     2.67795
+    ],
+    [
+     0.0,
+     0.0,
+     2.59751
+    ],
+    [
+     0.0,
+     0.0,
+     2.51707
+    ],
+    [
+     0.0,
+     0.0,
+     2.43663
+    ],
+    [
+     0.0,
+     0.0,
+     2.35619
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 8,
+   "end_angle_index": 8,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.025,
+   "arc_length": 0.0,
+   "straight_length": 0.025,
+   "poses": [
+    [
+     -0.025,
+     0.0,
+     3.14159
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 8,
+   "end_angle_index": 8,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1,
+   "arc_length": 0.0,
+   "straight_length": 0.1,
+   "poses": [
+    [
+     -0.025,
+     0.0,
+     3.14159
+    ],
+    [
+     -0.05,
+     0.0,
+     3.14159
+    ],
+    [
+     -0.075,
+     0.0,
+     3.14159
+    ],
+    [
+     -0.1,
+     0.0,
+     3.14159
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 8,
+   "end_angle_index": 9,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.14159
+    ],
+    [
+     0.0,
+     0.0,
+     3.21887
+    ],
+    [
+     0.0,
+     0.0,
+     3.29614
+    ],
+    [
+     0.0,
+     0.0,
+     3.37342
+    ],
+    [
+     0.0,
+     0.0,
+     3.45069
+    ],
+    [
+     0.0,
+     0.0,
+     3.52797
+    ],
+    [
+     0.0,
+     0.0,
+     3.60524
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 8,
+   "end_angle_index": 7,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.14159
+    ],
+    [
+     0.0,
+     0.0,
+     3.06432
+    ],
+    [
+     0.0,
+     0.0,
+     2.98704
+    ],
+    [
+     0.0,
+     0.0,
+     2.90977
+    ],
+    [
+     0.0,
+     0.0,
+     2.83249
+    ],
+    [
+     0.0,
+     0.0,
+     2.75522
+    ],
+    [
+     0.0,
+     0.0,
+     2.67795
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 9,
+   "end_angle_index": 9,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     -0.01667,
+     -0.00833,
+     3.60524
+    ],
+    [
+     -0.03333,
+     -0.01667,
+     3.60524
+    ],
+    [
+     -0.05,
+     -0.025,
+     3.60524
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 9,
+   "end_angle_index": 9,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     -0.02,
+     -0.01,
+     3.60524
+    ],
+    [
+     -0.04,
+     -0.02,
+     3.60524
+    ],
+    [
+     -0.06,
+     -0.03,
+     3.60524
+    ],
+    [
+     -0.08,
+     -0.04,
+     3.60524
+    ],
+    [
+     -0.1,
+     -0.05,
+     3.60524
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 9,
+   "end_angle_index": 10,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.60524
+    ],
+    [
+     0.0,
+     0.0,
+     3.68568
+    ],
+    [
+     0.0,
+     0.0,
+     3.76612
+    ],
+    [
+     0.0,
+     0.0,
+     3.84655
+    ],
+    [
+     0.0,
+     0.0,
+     3.92699
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 9,
+   "end_angle_index": 8,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.60524
+    ],
+    [
+     0.0,
+     0.0,
+     3.52797
+    ],
+    [
+     0.0,
+     0.0,
+     3.45069
+    ],
+    [
+     0.0,
+     0.0,
+     3.37342
+    ],
+    [
+     0.0,
+     0.0,
+     3.29614
+    ],
+    [
+     0.0,
+     0.0,
+     3.21887
+    ],
+    [
+     0.0,
+     0.0,
+     3.14159
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 10,
+   "end_angle_index": 10,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.03536,
+   "arc_length": 0.0,
+   "straight_length": 0.03536,
+   "poses": [
+    [
+     -0.0125,
+     -0.0125,
+     3.92699
+    ],
+    [
+     -0.025,
+     -0.025,
+     3.92699
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 10,
+   "end_angle_index": 10,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.10607,
+   "arc_length": 0.0,
+   "straight_length": 0.10607,
+   "poses": [
+    [
+     -0.015,
+     -0.015,
+     3.92699
+    ],
+    [
+     -0.03,
+     -0.03,
+     3.92699
+    ],
+    [
+     -0.045,
+     -0.045,
+     3.92699
+    ],
+    [
+     -0.06,
+     -0.06,
+     3.92699
+    ],
+    [
+     -0.075,
+     -0.075,
+     3.92699
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 10,
+   "end_angle_index": 11,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.92699
+    ],
+    [
+     0.0,
+     0.0,
+     4.00743
+    ],
+    [
+     0.0,
+     0.0,
+     4.08787
+    ],
+    [
+     0.0,
+     0.0,
+     4.1683
+    ],
+    [
+     0.0,
+     0.0,
+     4.24874
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 10,
+   "end_angle_index": 9,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     3.92699
+    ],
+    [
+     0.0,
+     0.0,
+     3.84655
+    ],
+    [
+     0.0,
+     0.0,
+     3.76612
+    ],
+    [
+     0.0,
+     0.0,
+     3.68568
+    ],
+    [
+     0.0,
+     0.0,
+     3.60524
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 11,
+   "end_angle_index": 11,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     -0.00833,
+     -0.01667,
+     4.24874
+    ],
+    [
+     -0.01667,
+     -0.03333,
+     4.24874
+    ],
+    [
+     -0.025,
+     -0.05,
+     4.24874
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 11,
+   "end_angle_index": 11,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     -0.01,
+     -0.02,
+     4.24874
+    ],
+    [
+     -0.02,
+     -0.04,
+     4.24874
+    ],
+    [
+     -0.03,
+     -0.06,
+     4.24874
+    ],
+    [
+     -0.04,
+     -0.08,
+     4.24874
+    ],
+    [
+     -0.05,
+     -0.1,
+     4.24874
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 11,
+   "end_angle_index": 12,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     4.24874
+    ],
+    [
+     0.0,
+     0.0,
+     4.32602
+    ],
+    [
+     0.0,
+     0.0,
+     4.40329
+    ],
+    [
+     0.0,
+     0.0,
+     4.48057
+    ],
+    [
+     0.0,
+     0.0,
+     4.55784
+    ],
+    [
+     0.0,
+     0.0,
+     4.63511
+    ],
+    [
+     0.0,
+     0.0,
+     4.71239
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 11,
+   "end_angle_index": 10,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     4.24874
+    ],
+    [
+     0.0,
+     0.0,
+     4.1683
+    ],
+    [
+     0.0,
+     0.0,
+     4.08787
+    ],
+    [
+     0.0,
+     0.0,
+     4.00743
+    ],
+    [
+     0.0,
+     0.0,
+     3.92699
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 12,
+   "end_angle_index": 12,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.025,
+   "arc_length": 0.0,
+   "straight_length": 0.025,
+   "poses": [
+    [
+     0.0,
+     -0.025,
+     4.71239
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 12,
+   "end_angle_index": 12,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1,
+   "arc_length": 0.0,
+   "straight_length": 0.1,
+   "poses": [
+    [
+     0.0,
+     -0.025,
+     4.71239
+    ],
+    [
+     0.0,
+     -0.05,
+     4.71239
+    ],
+    [
+     0.0,
+     -0.075,
+     4.71239
+    ],
+    [
+     0.0,
+     -0.1,
+     4.71239
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 12,
+   "end_angle_index": 13,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     4.71239
+    ],
+    [
+     0.0,
+     0.0,
+     4.78966
+    ],
+    [
+     0.0,
+     0.0,
+     4.86694
+    ],
+    [
+     0.0,
+     0.0,
+     4.94421
+    ],
+    [
+     0.0,
+     0.0,
+     5.02149
+    ],
+    [
+     0.0,
+     0.0,
+     5.09876
+    ],
+    [
+     0.0,
+     0.0,
+     5.17604
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 12,
+   "end_angle_index": 11,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     4.71239
+    ],
+    [
+     0.0,
+     0.0,
+     4.63511
+    ],
+    [
+     0.0,
+     0.0,
+     4.55784
+    ],
+    [
+     0.0,
+     0.0,
+     4.48057
+    ],
+    [
+     0.0,
+     0.0,
+     4.40329
+    ],
+    [
+     0.0,
+     0.0,
+     4.32602
+    ],
+    [
+     0.0,
+     0.0,
+     4.24874
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 13,
+   "end_angle_index": 13,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     0.00833,
+     -0.01667,
+     5.17604
+    ],
+    [
+     0.01667,
+     -0.03333,
+     5.17604
+    ],
+    [
+     0.025,
+     -0.05,
+     5.17604
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 13,
+   "end_angle_index": 13,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     0.01,
+     -0.02,
+     5.17604
+    ],
+    [
+     0.02,
+     -0.04,
+     5.17604
+    ],
+    [
+     0.03,
+     -0.06,
+     5.17604
+    ],
+    [
+     0.04,
+     -0.08,
+     5.17604
+    ],
+    [
+     0.05,
+     -0.1,
+     5.17604
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 13,
+   "end_angle_index": 14,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.17604
+    ],
+    [
+     0.0,
+     0.0,
+     5.25647
+    ],
+    [
+     0.0,
+     0.0,
+     5.33691
+    ],
+    [
+     0.0,
+     0.0,
+     5.41735
+    ],
+    [
+     0.0,
+     0.0,
+     5.49779
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 13,
+   "end_angle_index": 12,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.17604
+    ],
+    [
+     0.0,
+     0.0,
+     5.09876
+    ],
+    [
+     0.0,
+     0.0,
+     5.02149
+    ],
+    [
+     0.0,
+     0.0,
+     4.94421
+    ],
+    [
+     0.0,
+     0.0,
+     4.86694
+    ],
+    [
+     0.0,
+     0.0,
+     4.78966
+    ],
+    [
+     0.0,
+     0.0,
+     4.71239
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 14,
+   "end_angle_index": 14,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.03536,
+   "arc_length": 0.0,
+   "straight_length": 0.03536,
+   "poses": [
+    [
+     0.0125,
+     -0.0125,
+     5.49779
+    ],
+    [
+     0.025,
+     -0.025,
+     5.49779
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 14,
+   "end_angle_index": 14,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.10607,
+   "arc_length": 0.0,
+   "straight_length": 0.10607,
+   "poses": [
+    [
+     0.015,
+     -0.015,
+     5.49779
+    ],
+    [
+     0.03,
+     -0.03,
+     5.49779
+    ],
+    [
+     0.045,
+     -0.045,
+     5.49779
+    ],
+    [
+     0.06,
+     -0.06,
+     5.49779
+    ],
+    [
+     0.075,
+     -0.075,
+     5.49779
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 14,
+   "end_angle_index": 15,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.49779
+    ],
+    [
+     0.0,
+     0.0,
+     5.57822
+    ],
+    [
+     0.0,
+     0.0,
+     5.65866
+    ],
+    [
+     0.0,
+     0.0,
+     5.7391
+    ],
+    [
+     0.0,
+     0.0,
+     5.81954
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 14,
+   "end_angle_index": 13,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.49779
+    ],
+    [
+     0.0,
+     0.0,
+     5.41735
+    ],
+    [
+     0.0,
+     0.0,
+     5.33691
+    ],
+    [
+     0.0,
+     0.0,
+     5.25647
+    ],
+    [
+     0.0,
+     0.0,
+     5.17604
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 0,
+   "start_angle_index": 15,
+   "end_angle_index": 15,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0559,
+   "arc_length": 0.0,
+   "straight_length": 0.0559,
+   "poses": [
+    [
+     0.01667,
+     -0.00833,
+     5.81954
+    ],
+    [
+     0.03333,
+     -0.01667,
+     5.81954
+    ],
+    [
+     0.05,
+     -0.025,
+     5.81954
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 1,
+   "start_angle_index": 15,
+   "end_angle_index": 15,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.1118,
+   "arc_length": 0.0,
+   "straight_length": 0.1118,
+   "poses": [
+    [
+     0.02,
+     -0.01,
+     5.81954
+    ],
+    [
+     0.04,
+     -0.02,
+     5.81954
+    ],
+    [
+     0.06,
+     -0.03,
+     5.81954
+    ],
+    [
+     0.08,
+     -0.04,
+     5.81954
+    ],
+    [
+     0.1,
+     -0.05,
+     5.81954
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 2,
+   "start_angle_index": 15,
+   "end_angle_index": 0,
+   "left_turn": true,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.81954
+    ],
+    [
+     0.0,
+     0.0,
+     5.89681
+    ],
+    [
+     0.0,
+     0.0,
+     5.97409
+    ],
+    [
+     0.0,
+     0.0,
+     6.05136
+    ],
+    [
+     0.0,
+     0.0,
+     6.12864
+    ],
+    [
+     0.0,
+     0.0,
+     6.20591
+    ],
+    [
+     0.0,
+     0.0,
+     0.0
+    ]
+   ]
+  },
+  {
+   "trajectory_id": 3,
+   "start_angle_index": 15,
+   "end_angle_index": 14,
+   "left_turn": false,
+   "trajectory_radius": 0.0,
+   "trajectory_length": 0.0,
+   "arc_length": 0.0,
+   "straight_length": 0.0,
+   "poses": [
+    [
+     0.0,
+     0.0,
+     5.81954
+    ],
+    [
+     0.0,
+     0.0,
+     5.7391
+    ],
+    [
+     0.0,
+     0.0,
+     5.65866
+    ],
+    [
+     0.0,
+     0.0,
+     5.57822
+    ],
+    [
+     0.0,
+     0.0,
+     5.49779
+    ]
+   ]
+  }
+ ]
+}

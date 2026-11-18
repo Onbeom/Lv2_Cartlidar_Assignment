@@ -1,0 +1,2238 @@
+{
+  "cache_version": 1,
+  "config": {
+    "collision_auto_method": "visual_reuse",
+    "collision_format": "stl",
+    "export_collision_mesh": true,
+    "export_visual_mesh": true,
+    "frame_convention": "ros",
+    "frame_overrides_filename": "frame_overrides.csv",
+    "include_debug": true,
+    "include_docs": true,
+    "include_launch": true,
+    "include_readme": true,
+    "include_robot_data_yaml": true,
+    "include_ros2_control": false,
+    "include_rviz": true,
+    "include_screenshot": false,
+    "mesh_refinement": "medium",
+    "output_dir": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf",
+    "override_explicit_collision": false,
+    "package_name": "waffle_4wd_description_261021",
+    "robot_prefix": "",
+    "ros2_control_command_interfaces": [
+      "position",
+      "velocity"
+    ],
+    "ros2_control_hardware_plugin": "mock_components/GenericSystem",
+    "ros2_control_update_rate": 100,
+    "use_xacro": false,
+    "verbosity": "verbose",
+    "visual_format": "dae",
+    "zip_name": "",
+    "zip_output": false
+  },
+  "model": {
+    "assemblies": {
+      "main": {
+        "children_assemblies": [],
+        "depth": 0,
+        "global_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "global_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "joints": [],
+        "links": [
+          "arm_link_1",
+          "arm_link_2",
+          "arm_link_3",
+          "arm_link_4",
+          "arm_link_5",
+          "base_link",
+          "gripper_left_link",
+          "gripper_right_link",
+          "lidar_front",
+          "lidar_rear",
+          "wheel_front_left",
+          "wheel_front_right",
+          "wheel_rear_left",
+          "wheel_rear_right"
+        ],
+        "name": "main",
+        "parent_assembly": null
+      }
+    },
+    "closing_joints": {},
+    "errors": [],
+    "joints": {
+      "RMX52_Base_Yaw": {
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "child_link": "arm_link_1",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "RMX52_Base_Yaw",
+        "origin_global": [
+          0.087,
+          0.0,
+          0.15235000000000004
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.087,
+          0.0,
+          0.15235000000000004
+        ],
+        "parent_link": "base_link"
+      },
+      "RMX52_Elbow": {
+        "axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "child_link": "arm_link_3",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "RMX52_Elbow",
+        "origin_global": [
+          0.111,
+          -4.182974675688171e-08,
+          0.3184999999999932
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.024000000000000007,
+          -4.182974675688171e-08,
+          0.12799999999999315
+        ],
+        "parent_link": "arm_link_2"
+      },
+      "RMX52_Shoulder": {
+        "axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "child_link": "arm_link_2",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "RMX52_Shoulder",
+        "origin_global": [
+          0.087,
+          0.0,
+          0.19050000000000003
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.03814999999999999
+        ],
+        "parent_link": "arm_link_1"
+      },
+      "RMX52_Wrist_Pitch": {
+        "axis": [
+          0.0,
+          -1.0,
+          0.0
+        ],
+        "child_link": "arm_link_4",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "RMX52_Wrist_Pitch",
+        "origin_global": [
+          0.235,
+          -4.182974675688171e-08,
+          0.3184999999999932
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.12399999999999997,
+          0.0,
+          0.0
+        ],
+        "parent_link": "arm_link_3"
+      },
+      "RMX52_Wrist_Roll_Reversed": {
+        "axis": [
+          -1.0,
+          0.0,
+          0.0
+        ],
+        "child_link": "arm_link_5",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "RMX52_Wrist_Roll_Reversed",
+        "origin_global": [
+          0.30339999999999995,
+          -4.182974675688171e-08,
+          0.3184999999999932
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.06839999999999996,
+          0.0,
+          0.0
+        ],
+        "parent_link": "arm_link_4"
+      },
+      "Wheel_Revolute_Front_Left": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "wheel_front_left",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "Wheel_Revolute_Front_Left",
+        "origin_global": [
+          0.08,
+          0.1396,
+          0.02625
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.08,
+          0.1396,
+          0.02625
+        ],
+        "parent_link": "base_link"
+      },
+      "Wheel_Revolute_Front_Right": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "wheel_front_right",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "Wheel_Revolute_Front_Right",
+        "origin_global": [
+          0.08,
+          -0.1396,
+          0.02625
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.08,
+          -0.1396,
+          0.02625
+        ],
+        "parent_link": "base_link"
+      },
+      "Wheel_Revolute_Rear_Left": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "wheel_rear_left",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "Wheel_Revolute_Rear_Left",
+        "origin_global": [
+          -0.08,
+          0.1396,
+          0.02625
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          -0.08,
+          0.1396,
+          0.02625
+        ],
+        "parent_link": "base_link"
+      },
+      "Wheel_Revolute_Rear_Right": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "wheel_rear_right",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "continuous",
+        "limits": null,
+        "name": "Wheel_Revolute_Rear_Right",
+        "origin_global": [
+          -0.08,
+          -0.1396,
+          0.02625
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          -0.08,
+          -0.1396,
+          0.02625
+        ],
+        "parent_link": "base_link"
+      },
+      "gripper_left_joint": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "gripper_left_link",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": null,
+        "name": "gripper_left_joint",
+        "origin_global": [
+          0.3611,
+          0.01611386968283,
+          0.3185
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.05770000000000003,
+          0.016113911512576757,
+          6.827871601444713e-15
+        ],
+        "parent_link": "arm_link_5"
+      },
+      "gripper_right_joint": {
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "child_link": "gripper_right_link",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "prismatic",
+        "limits": null,
+        "name": "gripper_right_joint",
+        "origin_global": [
+          0.3611,
+          -0.01611386968283,
+          0.3185
+        ],
+        "origin_method": "joint_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.05770000000000003,
+          -0.016113827853083244,
+          6.827871601444713e-15
+        ],
+        "parent_link": "arm_link_5"
+      },
+      "lidar_front_fixed": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "lidar_front",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "lidar_front_fixed",
+        "origin_global": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parent_link": "base_link"
+      },
+      "lidar_rear_fixed": {
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "child_link": "lidar_rear",
+        "closing_source": "",
+        "fusion_source": "as_built",
+        "is_closing": false,
+        "is_mount": false,
+        "is_passive": false,
+        "joint_type": "fixed",
+        "limits": null,
+        "name": "lidar_rear_fixed",
+        "origin_global": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "origin_method": "child_minus_parent",
+        "origin_rpy": [
+          0.0,
+          -0.0,
+          0.0
+        ],
+        "origin_xyz": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "parent_link": "base_link"
+      }
+    },
+    "links": {
+      "arm_link_1": {
+        "area_m2": 0.015116678417841502,
+        "assembly": "main",
+        "bbox_max": [
+          0.10124999999819609,
+          0.023399999999549007,
+          0.20175000000000012
+        ],
+        "bbox_min": [
+          0.07274999999643511,
+          -0.01900000000023623,
+          0.15000000000000008
+        ],
+        "bbox_size": [
+          0.028500000001760978,
+          0.042399999999785234,
+          0.051750000000000046
+        ],
+        "body_count": 51,
+        "clean_name": "arm_link_1",
+        "collision": {
+          "mesh_path": "meshes/main/arm_link_1.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.10124999999819609,
+          0.023399999999549007,
+          0.20175000000000012
+        ],
+        "collision_bbox_min": [
+          0.07274999999643511,
+          -0.01900000000023623,
+          0.15000000000000008
+        ],
+        "collision_bbox_size": [
+          0.028500000001760978,
+          0.042399999999785234,
+          0.051750000000000046
+        ],
+        "collision_body_count": 51,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 4.4939131942640995e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.08700000000011186,
+          0.0005433991975074147,
+          0.17309217884013356
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          2.894819800536297e-17,
+          0.0,
+          0.0
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 4.0389528550222736e-05,
+          "ixy": -1.2632920425893757e-15,
+          "ixz": -7.697835424647081e-17,
+          "iyy": 3.447223359784139e-05,
+          "iyz": -3.588082481145876e-07,
+          "izz": 1.930472000401251e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.10578038612011822,
+        "material_name": "Waffle_Equivalent_Stock_arm_link_1_Aluminum_Arm_Frame_11445_545",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.08699999999999997,
+          0.0,
+          -0.15235000000000004
+        ],
+        "mesh_collision": "meshes/main/arm_link_1_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/arm_link_1.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "arm_link_1:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "arm_link_1",
+        "volume_m3": 4.4939131942640995e-05,
+        "wants_accurate_collision": false
+      },
+      "arm_link_2": {
+        "area_m2": 0.04006451082582652,
+        "assembly": "main",
+        "bbox_max": [
+          0.12224999999643434,
+          0.02339999999484588,
+          0.3327499999999985
+        ],
+        "bbox_min": [
+          0.07449999999613445,
+          -0.021000000002147544,
+          0.1880000000000001
+        ],
+        "bbox_size": [
+          0.047750000000299886,
+          0.04439999999699343,
+          0.14474999999999838
+        ],
+        "body_count": 65,
+        "clean_name": "arm_link_2",
+        "collision": {
+          "mesh_path": "meshes/main/arm_link_2.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.12224999999643434,
+          0.02339999999484588,
+          0.3327499999999985
+        ],
+        "collision_bbox_min": [
+          0.07449999999613445,
+          -0.021000000002147544,
+          0.1880000000000001
+        ],
+        "collision_bbox_size": [
+          0.047750000000299886,
+          0.04439999999699343,
+          0.14474999999999838
+        ],
+        "collision_body_count": 65,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 6.746840645997985e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.09522027006189064,
+          0.0003968275168559572,
+          0.2901834945673437
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          2.6922908347160045e-17,
+          0.0,
+          -9.298117831235687e-18
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.0002619793394619003,
+          "ixy": -2.6522396369245136e-07,
+          "ixz": -3.084791554561813e-05,
+          "iyy": 0.0002685235862838597,
+          "iyz": -1.627660389865842e-06,
+          "izz": 4.252545356381071e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.14485128784853335,
+        "material_name": "Waffle_Equivalent_Stock_arm_link_2_Aluminum_Arm_Frame_4436_486",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.08699999999999997,
+          0.0,
+          -0.19050000000000003
+        ],
+        "mesh_collision": "meshes/main/arm_link_2_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/arm_link_2.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "arm_link_2:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "arm_link_2",
+        "volume_m3": 6.746840645997985e-05,
+        "wants_accurate_collision": false
+      },
+      "arm_link_3": {
+        "area_m2": 0.03338156343306429,
+        "assembly": "main",
+        "bbox_max": [
+          0.24624999999643435,
+          0.02339999996821624,
+          0.3327499999999985
+        ],
+        "bbox_min": [
+          0.10849999999591889,
+          -0.02100000000461721,
+          0.30424999999999847
+        ],
+        "bbox_size": [
+          0.13775000000051546,
+          0.04439999997283345,
+          0.028500000000000025
+        ],
+        "body_count": 57,
+        "clean_name": "arm_link_3",
+        "collision": {
+          "mesh_path": "meshes/main/arm_link_3.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.24624999999643435,
+          0.02339999996821624,
+          0.3327499999999985
+        ],
+        "collision_bbox_min": [
+          0.10849999999591889,
+          -0.02100000000461721,
+          0.30424999999999847
+        ],
+        "collision_bbox_size": [
+          0.13775000000051546,
+          0.04439999997283345,
+          0.028500000000000025
+        ],
+        "collision_body_count": 57,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 6.141348722098176e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.19740674214332193,
+          0.0004200080047358267,
+          0.3185005641733242
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -8.881784197001253e-18,
+          0.0,
+          -5.814793091474258e-17
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 2.533341872336045e-05,
+          "ixy": -1.519086830201014e-06,
+          "ixz": 2.3477403684329934e-09,
+          "iyy": 0.00020318028504965127,
+          "iyz": 3.242107623018767e-11,
+          "izz": 0.0002127723691070088
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.1368568533297052,
+        "material_name": "Waffle_Equivalent_Stock_arm_link_3_Stock_Arm_Polymer_Estimate_1911_558",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.11100000000000002,
+          4.182974675688171e-08,
+          -0.31849999999999323
+        ],
+        "mesh_collision": "meshes/main/arm_link_3_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/arm_link_3.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "arm_link_3:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "arm_link_3",
+        "volume_m3": 6.141348722098176e-05,
+        "wants_accurate_collision": false
+      },
+      "arm_link_4": {
+        "area_m2": 0.027067525269983655,
+        "assembly": "main",
+        "bbox_max": [
+          0.30400000000000094,
+          0.02049999996263261,
+          0.3537499999999982
+        ],
+        "bbox_min": [
+          0.23250000000407967,
+          -0.020500000037367395,
+          0.30724999999999786
+        ],
+        "bbox_size": [
+          0.07149999999592127,
+          0.04100000000000001,
+          0.04650000000000032
+        ],
+        "body_count": 37,
+        "clean_name": "arm_link_4",
+        "collision": {
+          "mesh_path": "meshes/main/arm_link_4.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.30400000000000094,
+          0.02049999996263261,
+          0.3537499999999982
+        ],
+        "collision_bbox_min": [
+          0.23250000000407967,
+          -0.020500000037367395,
+          0.30724999999999786
+        ],
+        "collision_bbox_size": [
+          0.07149999999592127,
+          0.04100000000000001,
+          0.04650000000000032
+        ],
+        "collision_body_count": 37,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 5.865110142882335e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.27744105058058277,
+          -4.649992473775072e-11,
+          0.3297960446669549
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -5.939693181744588e-17,
+          0.0,
+          -5.578870698741411e-17
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 2.6162515075861884e-05,
+          "ixy": 7.368063538460323e-15,
+          "ixz": -1.1261143820513048e-06,
+          "iyy": 3.307951376714871e-05,
+          "iyz": 7.332894682391266e-16,
+          "izz": 2.4314944324477228e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.09637476312478593,
+        "material_name": "Waffle_Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame_3305_17",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.23500000000000004,
+          4.182974675688171e-08,
+          -0.31849999999999323
+        ],
+        "mesh_collision": "meshes/main/arm_link_4_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/arm_link_4.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "arm_link_4:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "arm_link_4",
+        "volume_m3": 5.865110142882335e-05,
+        "wants_accurate_collision": false
+      },
+      "arm_link_5": {
+        "area_m2": 0.08575312222473488,
+        "assembly": "main",
+        "bbox_max": [
+          0.36659999999999926,
+          0.06430000000000058,
+          0.40735712318276995
+        ],
+        "bbox_min": [
+          0.3044999999999992,
+          -0.06429999999999952,
+          0.2894999999999962
+        ],
+        "bbox_size": [
+          0.062100000000000044,
+          0.1286000000000001,
+          0.11785712318277375
+        ],
+        "body_count": 262,
+        "clean_name": "arm_link_5",
+        "collision": {
+          "mesh_path": "meshes/main/arm_link_5.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.36659999999999926,
+          0.06430000000000058,
+          0.40735712318276995
+        ],
+        "collision_bbox_min": [
+          0.3044999999999992,
+          -0.06429999999999952,
+          0.2894999999999962
+        ],
+        "collision_bbox_size": [
+          0.062100000000000044,
+          0.1286000000000001,
+          0.11785712318277375
+        ],
+        "collision_body_count": 262,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.00011849279182032506,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.3347601806201275,
+          1.906579190647988e-05,
+          0.3334107343563553
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -5.939693181744588e-17,
+          0.0,
+          -5.885916753989306e-17
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.00019930855922822496,
+          "ixy": 4.481022209725357e-08,
+          "ixz": 1.7432436677840973e-05,
+          "iyy": 0.00016390341622058574,
+          "iyz": 4.263480056532387e-07,
+          "izz": 0.00011467370346670419
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.2072211900240782,
+        "material_name": "Waffle_Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate_1285_344",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.3034,
+          4.182974675688171e-08,
+          -0.31849999999999323
+        ],
+        "mesh_collision": "meshes/main/arm_link_5_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/arm_link_5.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "arm_link_5:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "arm_link_5",
+        "volume_m3": 0.00011849279182032506,
+        "wants_accurate_collision": false
+      },
+      "base_link": {
+        "area_m2": 1.2957264922009704,
+        "assembly": "main",
+        "bbox_max": [
+          0.145,
+          0.143700014719482,
+          0.5061419799381258
+        ],
+        "bbox_min": [
+          -0.2259904853827798,
+          -0.143700031280518,
+          0.002999999999989999
+        ],
+        "bbox_size": [
+          0.3709904853827798,
+          0.287400046,
+          0.5031419799381358
+        ],
+        "body_count": 127,
+        "clean_name": "base_link",
+        "collision": {
+          "mesh_path": "meshes/main/base_link.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.145,
+          0.143700014719482,
+          0.5061419799381258
+        ],
+        "collision_bbox_min": [
+          -0.2259904853827798,
+          -0.143700031280518,
+          0.002999999999989999
+        ],
+        "collision_bbox_size": [
+          0.3709904853827798,
+          0.287400046,
+          0.5031419799381358
+        ],
+        "collision_body_count": 127,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 0.002975721680201085,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -0.05354795497726213,
+          -2.2024527674414578e-05,
+          0.14667466607521043
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 0.11556446005675722,
+          "ixy": -0.00019271830883579034,
+          "ixz": 0.025205750274784895,
+          "iyy": 0.11477421538432625,
+          "iyz": 0.00010881493059680788,
+          "izz": 0.053620011255539016
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 3.72180302244741,
+        "material_name": "Waffle_Equivalent_XM430_82g_1881_229",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/main/base_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/base_link.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "base_link:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "base_link",
+        "volume_m3": 0.002975721680201085,
+        "wants_accurate_collision": false
+      },
+      "gripper_left_link": {
+        "area_m2": 0.020726582982297802,
+        "assembly": "main",
+        "bbox_max": [
+          0.42609999999999815,
+          0.03861386968282996,
+          0.34749999999999726
+        ],
+        "bbox_min": [
+          0.34659999999999813,
+          -0.0011361303171699944,
+          0.2894999999999972
+        ],
+        "bbox_size": [
+          0.07950000000000002,
+          0.03974999999999996,
+          0.05800000000000005
+        ],
+        "body_count": 7,
+        "clean_name": "gripper_left_link",
+        "collision": {
+          "mesh_path": "meshes/main/gripper_left_link.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.42609999999999815,
+          0.03861386968282996,
+          0.34749999999999726
+        ],
+        "collision_bbox_min": [
+          0.34659999999999813,
+          -0.0011361303171699944,
+          0.2894999999999972
+        ],
+        "collision_bbox_size": [
+          0.07950000000000002,
+          0.03974999999999996,
+          0.05800000000000005
+        ],
+        "collision_body_count": 7,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 1.8766862893058326e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.3795526668250976,
+          0.01722349516153943,
+          0.3185116247787115
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -5.939693181744588e-17,
+          0.0,
+          -5.885916753989306e-17
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 5.893864442646241e-06,
+          "ixy": 1.0135610363782286e-06,
+          "ixz": 4.911064928423553e-09,
+          "iyy": 1.586429092501583e-05,
+          "iyz": 1.8409240736092132e-10,
+          "izz": 1.280444392001744e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.025367290477609567,
+        "material_name": "Waffle_Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate_1285_344",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.36110000000000003,
+          -0.01611386968283,
+          -0.31850000000000006
+        ],
+        "mesh_collision": "meshes/main/gripper_left_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/gripper_left_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "gripper_left_link:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "gripper_left_link",
+        "volume_m3": 1.8766862893058326e-05,
+        "wants_accurate_collision": false
+      },
+      "gripper_right_link": {
+        "area_m2": 0.02072658298229782,
+        "assembly": "main",
+        "bbox_max": [
+          0.4260999999999981,
+          0.0011361303171699788,
+          0.34749999999999703
+        ],
+        "bbox_min": [
+          0.34659999999999813,
+          -0.03861386968283002,
+          0.28949999999999704
+        ],
+        "bbox_size": [
+          0.07949999999999996,
+          0.039749999999999994,
+          0.057999999999999996
+        ],
+        "body_count": 7,
+        "clean_name": "gripper_right_link",
+        "collision": {
+          "mesh_path": "meshes/main/gripper_right_link.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.4260999999999981,
+          0.0011361303171699788,
+          0.34749999999999703
+        ],
+        "collision_bbox_min": [
+          0.34659999999999813,
+          -0.03861386968283002,
+          0.28949999999999704
+        ],
+        "collision_bbox_size": [
+          0.07949999999999996,
+          0.039749999999999994,
+          0.057999999999999996
+        ],
+        "collision_body_count": 7,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 1.8766862915761083e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.37954257192168384,
+          -0.017223495140140165,
+          0.31848837523351364
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          -5.939693181744588e-17,
+          0.0,
+          -5.885916753989306e-17
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 5.893867632637915e-06,
+          "ixy": -1.0164775471811934e-06,
+          "ixz": -4.907970542998574e-09,
+          "iyy": 1.5876856962222276e-05,
+          "iyz": 1.8408709246634652e-10,
+          "izz": 1.2817006785268564e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.025367290506790412,
+        "material_name": "Waffle_Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate_1285_344",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.36110000000000003,
+          0.01611386968283,
+          -0.31850000000000006
+        ],
+        "mesh_collision": "meshes/main/gripper_right_link_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/gripper_right_link.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "gripper_right_link:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "gripper_right_link",
+        "volume_m3": 1.8766862915761083e-05,
+        "wants_accurate_collision": false
+      },
+      "lidar_front": {
+        "area_m2": 0.07617387015720237,
+        "assembly": "main",
+        "bbox_max": [
+          0.218500000000002,
+          0.08449999999999999,
+          0.099
+        ],
+        "bbox_min": [
+          0.092,
+          0.013000000000000003,
+          0.05478821212269917
+        ],
+        "bbox_size": [
+          0.126500000000002,
+          0.0715,
+          0.04421178787730083
+        ],
+        "body_count": 24,
+        "clean_name": "lidar_front",
+        "collision": {
+          "mesh_path": "meshes/main/lidar_front.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.218500000000002,
+          0.08449999999999999,
+          0.099
+        ],
+        "collision_bbox_min": [
+          0.092,
+          0.013000000000000003,
+          0.05478821212269917
+        ],
+        "collision_bbox_size": [
+          0.126500000000002,
+          0.0715,
+          0.04421178787730083
+        ],
+        "collision_body_count": 24,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.2618510373604977e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.17532326532785072,
+          0.048944145323181046,
+          0.07742267644453954
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 6.644717778530392e-05,
+          "ixy": -8.039281948408247e-07,
+          "ixz": 1.6794492547715385e-05,
+          "iyy": 9.672892491325701e-05,
+          "iyz": 1.5153981609507174e-06,
+          "izz": 0.00012742813779630015
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.15284877870286173,
+        "material_name": "material",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/main/lidar_front_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/lidar_front.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "lidar_front:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "lidar_front",
+        "volume_m3": 2.2618510373604977e-05,
+        "wants_accurate_collision": false
+      },
+      "lidar_rear": {
+        "area_m2": 0.07617387015720237,
+        "assembly": "main",
+        "bbox_max": [
+          -0.092,
+          -0.013000000000000006,
+          0.099
+        ],
+        "bbox_min": [
+          -0.218500000000002,
+          -0.08449999999999999,
+          0.05478821212269917
+        ],
+        "bbox_size": [
+          0.126500000000002,
+          0.07149999999999998,
+          0.04421178787730083
+        ],
+        "body_count": 24,
+        "clean_name": "lidar_rear",
+        "collision": {
+          "mesh_path": "meshes/main/lidar_rear.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          -0.092,
+          -0.013000000000000006,
+          0.099
+        ],
+        "collision_bbox_min": [
+          -0.218500000000002,
+          -0.08449999999999999,
+          0.05478821212269917
+        ],
+        "collision_bbox_size": [
+          0.126500000000002,
+          0.07149999999999998,
+          0.04421178787730083
+        ],
+        "collision_body_count": 24,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.2618510373605048e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -0.17532326532786155,
+          -0.0489441453231342,
+          0.07742267644453729
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 6.644717778526749e-05,
+          "ixy": -8.039281948275974e-07,
+          "ixz": -1.679449254773013e-05,
+          "iyy": 9.672892491334201e-05,
+          "iyz": -1.5153981608939052e-06,
+          "izz": 0.00012742813779634873
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.15284877870291536,
+        "material_name": "material",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_collision": "meshes/main/lidar_rear_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/lidar_rear.dae",
+        "needs_mesh_bake": false,
+        "occurrence_path": "lidar_rear:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "lidar_rear",
+        "volume_m3": 2.2618510373605048e-05,
+        "wants_accurate_collision": false
+      },
+      "wheel_front_left": {
+        "area_m2": 0.02722517354733444,
+        "assembly": "main",
+        "bbox_max": [
+          0.11299998133353999,
+          0.15260000000001,
+          0.05924998167177351
+        ],
+        "bbox_min": [
+          0.047000018744074376,
+          0.13439999999999003,
+          -0.006749981675400001
+        ],
+        "bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717351
+        ],
+        "body_count": 2,
+        "clean_name": "wheel_front_left",
+        "collision": {
+          "mesh_path": "meshes/main/wheel_front_left.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.11299998133353999,
+          0.15260000000001,
+          0.05924998167177351
+        ],
+        "collision_bbox_min": [
+          0.047000018744074376,
+          0.13439999999999003,
+          -0.006749981675400001
+        ],
+        "collision_bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717351
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.6094776594826536e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.08000040412999446,
+          0.14275059093638562,
+          0.026249510128430444
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          4.440892098500626e-18
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.168834825844762e-05,
+          "ixy": -5.4370672094346956e-09,
+          "ixz": -4.206758503474744e-09,
+          "iyy": 2.163948373911658e-05,
+          "iyz": -7.545618075353346e-09,
+          "izz": 1.1693887422536292e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.030468606036579988,
+        "material_name": "Waffle_Rubber_Tire_1100_1100_0",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.08,
+          -0.1396,
+          -0.026249999999999996
+        ],
+        "mesh_collision": "meshes/main/wheel_front_left_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/wheel_front_left.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_front_left:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "wheel_front_left",
+        "volume_m3": 2.6094776594826536e-05,
+        "wants_accurate_collision": false
+      },
+      "wheel_front_right": {
+        "area_m2": 0.027225172636358604,
+        "assembly": "main",
+        "bbox_max": [
+          0.11299998125592561,
+          -0.13439999999999003,
+          0.05924998167177351
+        ],
+        "bbox_min": [
+          0.04700001866645999,
+          -0.15260000000001,
+          -0.006749981675400001
+        ],
+        "bbox_size": [
+          0.06599996258946562,
+          0.018200000000019978,
+          0.06599996334717351
+        ],
+        "body_count": 2,
+        "clean_name": "wheel_front_right",
+        "collision": {
+          "mesh_path": "meshes/main/wheel_front_right.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          0.11299998125592561,
+          -0.13439999999999003,
+          0.05924998167177351
+        ],
+        "collision_bbox_min": [
+          0.04700001866645999,
+          -0.15260000000001,
+          -0.006749981675400001
+        ],
+        "collision_bbox_size": [
+          0.06599996258946562,
+          0.018200000000019978,
+          0.06599996334717351
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.6094777447965168e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          0.07999711860885701,
+          -0.142750590783914,
+          0.02624951028404102
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          4.440892098500626e-18
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.1688348610813435e-05,
+          "ixy": 5.3369533928380834e-09,
+          "ixz": 2.2255257465738938e-09,
+          "iyy": 2.1639484145769184e-05,
+          "iyz": 7.545592347791446e-09,
+          "izz": 1.1693887536149078e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.030468607094471696,
+        "material_name": "Waffle_Rubber_Tire_1100_1100_0",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          -0.08,
+          0.1396,
+          -0.026249999999999996
+        ],
+        "mesh_collision": "meshes/main/wheel_front_right_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/wheel_front_right.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_front_right:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "wheel_front_right",
+        "volume_m3": 2.6094777447965168e-05,
+        "wants_accurate_collision": false
+      },
+      "wheel_rear_left": {
+        "area_m2": 0.027225173547334447,
+        "assembly": "main",
+        "bbox_max": [
+          -0.047000018666459954,
+          0.15260000000001,
+          0.05924998167177353
+        ],
+        "bbox_min": [
+          -0.11299998125592557,
+          0.13439999999999003,
+          -0.006749981675399983
+        ],
+        "bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717352
+        ],
+        "body_count": 2,
+        "clean_name": "wheel_rear_left",
+        "collision": {
+          "mesh_path": "meshes/main/wheel_rear_left.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          -0.047000018666459954,
+          0.15260000000001,
+          0.05924998167177353
+        ],
+        "collision_bbox_min": [
+          -0.11299998125592557,
+          0.13439999999999003,
+          -0.006749981675399983
+        ],
+        "collision_bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717352
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.6094776594826462e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -0.07999711875407006,
+          0.14275059093638567,
+          0.026249510128430534
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          4.440892098500626e-18
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.1688348258447187e-05,
+          "ixy": 5.336929368273194e-09,
+          "ixz": -2.2255959005937484e-09,
+          "iyy": 2.1639483491155045e-05,
+          "iyz": -7.545618075258478e-09,
+          "izz": 1.1693887174574267e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.030468606036579908,
+        "material_name": "Waffle_Rubber_Tire_1100_1100_0",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.08,
+          -0.1396,
+          -0.026249999999999996
+        ],
+        "mesh_collision": "meshes/main/wheel_rear_left_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/wheel_rear_left.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_rear_left:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "wheel_rear_left",
+        "volume_m3": 2.6094776594826462e-05,
+        "wants_accurate_collision": false
+      },
+      "wheel_rear_right": {
+        "area_m2": 0.027225172636358597,
+        "assembly": "main",
+        "bbox_max": [
+          -0.04700001874407434,
+          -0.13439999999999003,
+          0.05924998167177353
+        ],
+        "bbox_min": [
+          -0.11299998133353995,
+          -0.15260000000001,
+          -0.006749981675399983
+        ],
+        "bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717352
+        ],
+        "body_count": 2,
+        "clean_name": "wheel_rear_right",
+        "collision": {
+          "mesh_path": "meshes/main/wheel_rear_right.dae",
+          "origin_rpy": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "origin_xyz": null,
+          "primitive": null,
+          "source": "visual_reuse"
+        },
+        "collision_bbox_max": [
+          -0.04700001874407434,
+          -0.13439999999999003,
+          0.05924998167177353
+        ],
+        "collision_bbox_min": [
+          -0.11299998133353995,
+          -0.15260000000001,
+          -0.006749981675399983
+        ],
+        "collision_bbox_size": [
+          0.06599996258946561,
+          0.018200000000019978,
+          0.06599996334717352
+        ],
+        "collision_body_count": 2,
+        "collision_body_names": [],
+        "collision_excluded_body_names": [],
+        "collision_override": "",
+        "collision_volume_m3": 2.6094777447965243e-05,
+        "color_rgb": [
+          0.6274509803921569,
+          0.6274509803921569,
+          0.6274509803921569
+        ],
+        "com_link_local": [
+          -0.08000040427529344,
+          -0.14275059078391392,
+          0.026249510284040944
+        ],
+        "frame_rebase_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "frame_rule": "keep",
+        "global_position": [
+          0.0,
+          0.0,
+          4.440892098500626e-18
+        ],
+        "has_collision_exclusions": false,
+        "has_explicit_collision": false,
+        "has_visual_mesh": true,
+        "inertia_at_com": {
+          "ixx": 1.168834861081376e-05,
+          "ixy": -5.437043174407255e-09,
+          "ixz": 4.206688361340456e-09,
+          "iyy": 2.163948439375262e-05,
+          "iyz": 7.545592347872761e-09,
+          "izz": 1.1693887784132895e-05
+        },
+        "inertial_origin_xyz": null,
+        "is_empty": false,
+        "is_frame_only": false,
+        "is_merged": false,
+        "mass_kg": 0.03046860709447178,
+        "material_name": "Waffle_Rubber_Tire_1100_1100_0",
+        "merged_member_paths": [],
+        "mesh_bake_offset": [
+          0.08,
+          0.1396,
+          -0.026249999999999996
+        ],
+        "mesh_collision": "meshes/main/wheel_rear_right_collision.stl",
+        "mesh_collision_input": "",
+        "mesh_origin_rpy": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "mesh_visual": "meshes/main/wheel_rear_right.dae",
+        "needs_mesh_bake": true,
+        "occurrence_path": "wheel_rear_right:1",
+        "rigid_group_collision_offset": null,
+        "rigid_group_collision_path": null,
+        "rigid_group_name": null,
+        "source_world_rotation": [
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "urdf_name": "wheel_rear_right",
+        "volume_m3": 2.6094777447965243e-05,
+        "wants_accurate_collision": false
+      }
+    },
+    "name": "",
+    "root_link": "base_link",
+    "warnings": []
+  }
+}

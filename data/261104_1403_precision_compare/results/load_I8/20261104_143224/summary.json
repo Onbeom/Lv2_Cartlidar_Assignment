@@ -1,0 +1,24 @@
+{
+ "engine": "/home/cart11/fp16_check/int8/yolo11n_task4_D_int8_qdq.engine",
+ "engine_arm": null,
+ "seconds": 182.1,
+ "rate_target_hz": 15.0,
+ "cams": {
+  "front": {
+   "frames": 5449,
+   "gaps": 28
+  },
+  "rear": {
+   "frames": 5452,
+   "gaps": 23
+  },
+  "arm": {
+   "frames": 5553,
+   "gaps": 0,
+   "device": "/dev/video12"
+  }
+ },
+ "errors": [],
+ "tensorrt": "10.16.2.10",
+ "note": "결과 나이는 받은 뒤부터(노출 · USB 전송 제외)"
+}

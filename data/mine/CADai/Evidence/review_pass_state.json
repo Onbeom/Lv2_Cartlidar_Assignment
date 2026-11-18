@@ -1,0 +1,9 @@
+{
+  "canonical_cad": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket",
+  "last_pass": "2026-10-21T07:42:30.1215580+09:00",
+  "completed_passes": 3,
+  "total_passes": 3,
+  "next_pass": null,
+  "notes": "All 3 review passes completed. Four native F3Ds reopened successfully. Fixed material loss in Geometry Only and print layout; all 669 geometry signatures and masses match full assembly. Corrected review axis signs and corresponding provisional reference limit signs. Independent 402-frame COM and energy-gradient torque checks passed. Fold pose within sign-remapped provisional ranges collision checked, footprint 444.49 x 305.20 mm. Physical strength, actual printing, actuator limits, continuous/full-load grasp validation and final ROS/Isaac package remain unverified.",
+  "automation_id": "2-3"
+}

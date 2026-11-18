@@ -1,0 +1,285 @@
+{
+  "status": "PASS_CONVEX_STORAGE_COLUMN_CLEARANCE",
+  "scope": "Collision approximation only, not CAD modification or continuous grasp validation",
+  "basis": "12 native CAD payload placements had no solid intersections. Clear vertical 30.1 x30.1 x240.1mm corridor per channel from these placements.",
+  "changed_hulls": [
+    {
+      "original": "base_link_part022_hull03.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part022_hull03_free00.stl",
+        "base_link_part022_hull03_free01.stl",
+        "base_link_part022_hull03_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part022_hull05.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part022_hull05_free00.stl",
+        "base_link_part022_hull05_free01.stl",
+        "base_link_part022_hull05_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part022_hull12.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part022_hull12_free00.stl",
+        "base_link_part022_hull12_free01.stl",
+        "base_link_part022_hull12_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part022_hull14.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part022_hull14_free00.stl",
+        "base_link_part022_hull14_free01.stl",
+        "base_link_part022_hull14_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part025_hull06.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part025_hull06_free00.stl",
+        "base_link_part025_hull06_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part025_hull07.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part025_hull07_free00.stl",
+        "base_link_part025_hull07_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part025_hull09.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part025_hull09_free00.stl",
+        "base_link_part025_hull09_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part025_hull13.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part025_hull13_free00.stl",
+        "base_link_part025_hull13_free01.stl",
+        "base_link_part025_hull13_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part025_hull14.stl",
+      "channels": [
+        "B"
+      ],
+      "replacement": [
+        "base_link_part025_hull14_free00.stl",
+        "base_link_part025_hull14_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part026_hull05.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part026_hull05_free00.stl",
+        "base_link_part026_hull05_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part026_hull16.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part026_hull16_free00.stl",
+        "base_link_part026_hull16_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part026_hull17.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part026_hull17_free00.stl",
+        "base_link_part026_hull17_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part026_hull18.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part026_hull18_free00.stl",
+        "base_link_part026_hull18_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part029_hull00.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part029_hull00_free00.stl",
+        "base_link_part029_hull00_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part029_hull03.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part029_hull03_free00.stl",
+        "base_link_part029_hull03_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part029_hull05.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part029_hull05_free00.stl",
+        "base_link_part029_hull05_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part029_hull12.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part029_hull12_free00.stl",
+        "base_link_part029_hull12_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part029_hull14.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part029_hull14_free00.stl",
+        "base_link_part029_hull14_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part140_hull03.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part140_hull03_free00.stl",
+        "base_link_part140_hull03_free01.stl",
+        "base_link_part140_hull03_free02.stl",
+        "base_link_part140_hull03_free03.stl"
+      ]
+    },
+    {
+      "original": "base_link_part140_hull06.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part140_hull06_free00.stl",
+        "base_link_part140_hull06_free01.stl",
+        "base_link_part140_hull06_free02.stl",
+        "base_link_part140_hull06_free03.stl"
+      ]
+    },
+    {
+      "original": "base_link_part140_hull14.stl",
+      "channels": [
+        "G"
+      ],
+      "replacement": [
+        "base_link_part140_hull14_free00.stl",
+        "base_link_part140_hull14_free01.stl",
+        "base_link_part140_hull14_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part141_hull02.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part141_hull02_free00.stl",
+        "base_link_part141_hull02_free01.stl"
+      ]
+    },
+    {
+      "original": "base_link_part141_hull10.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part141_hull10_free00.stl",
+        "base_link_part141_hull10_free01.stl",
+        "base_link_part141_hull10_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part141_hull11.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part141_hull11_free00.stl",
+        "base_link_part141_hull11_free01.stl",
+        "base_link_part141_hull11_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part141_hull14.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part141_hull14_free00.stl",
+        "base_link_part141_hull14_free01.stl",
+        "base_link_part141_hull14_free02.stl"
+      ]
+    },
+    {
+      "original": "base_link_part141_hull24.stl",
+      "channels": [
+        "R"
+      ],
+      "replacement": [
+        "base_link_part141_hull24_free00.stl",
+        "base_link_part141_hull24_free01.stl",
+        "base_link_part141_hull24_free02.stl"
+      ]
+    }
+  ],
+  "clearance_xy_per_side_mm": 0.05,
+  "real_geometry_altered": false,
+  "post_STL_rounding_nominal_30x30x240_column_check": "PASS",
+  "base_hulls_checked": 424
+}

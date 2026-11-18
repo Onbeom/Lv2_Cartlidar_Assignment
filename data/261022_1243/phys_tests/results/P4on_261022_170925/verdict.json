@@ -1,0 +1,71 @@
+{
+  "measured": {
+    "self_collision_newton_now": true,
+    "base_arm34_contacts": {},
+    "참고_separation≤0_인_base_arm34_접촉": {},
+    "all_contact_pairs": {
+      "CollisionPlane|base_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": 0.009749770164489746,
+        "steps_sep_le_0": 0,
+        "first_t_sep_le_0": null
+      },
+      "CollisionPlane|wheel_front_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -6.759261168554076e-07,
+        "steps_sep_le_0": 610,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_front_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -7.765090117572981e-07,
+        "steps_sep_le_0": 552,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.9208067669751472e-07,
+        "steps_sep_le_0": 570,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.84669659120118e-07,
+        "steps_sep_le_0": 595,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "gripper_left_link|gripper_right_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": 0.00039782002568244934,
+        "steps_sep_le_0": 0,
+        "first_t_sep_le_0": null
+      },
+      "gripper_left_link|lidar_front": {
+        "first_t": 2.4833334628492594,
+        "steps": 543,
+        "min_sep_m": -1.8067657947540283e-07,
+        "steps_sep_le_0": 89,
+        "first_t_sep_le_0": 4.333333559334278
+      }
+    },
+    "reach_err_end_rad": {
+      "RMX52_Base_Yaw": 1.7513652e-05,
+      "RMX52_Shoulder": 0.00025999999999992696,
+      "RMX52_Elbow": 2.9,
+      "RMX52_Wrist_Pitch": 2.5467923,
+      "RMX52_Wrist_Roll_Reversed": 7.4968993e-06
+    },
+    "reach_err_max_rad": 2.9
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base_link–arm_link_3/4 접촉 보고": false
+  },
+  "verdict": "실패"
+}

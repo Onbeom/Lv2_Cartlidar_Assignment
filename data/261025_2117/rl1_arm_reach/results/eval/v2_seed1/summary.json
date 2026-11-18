@@ -1,0 +1,36 @@
+{
+ "checkpoint": "/home/pa4/git/lv2_next_module/261025_2117/rl1_arm_reach/logs/rsl_rl/rl1_arm_reach/2026-10-26_00-24-41_v2_seed1/model_999.pt",
+ "design": "v2",
+ "num_envs": 100,
+ "n_targets": 1000,
+ "eval_table": "/home/pa4/git/lv2_next_module/261025_2117/rl1_arm_reach/results/targets/targets_eval_seed2.npz",
+ "start_pose_seed": 0,
+ "wall_s": 65.7,
+ "step_dt": 0.03333333333333333,
+ "J1_ratio_err3s_le_10mm": 0.0,
+ "J1_err3s_mm": {
+  "median": 281.0214538574219,
+  "p95": 460.2531433105469,
+  "max": 605.21923828125
+ },
+ "J2_first_10mm_s": {
+  "median": Infinity,
+  "never_reached": 999
+ },
+ "J3_contact_segments": 2,
+ "J3_contact_steps": 4,
+ "J4_joint_vel_max_rad_s": 7.065618991851807,
+ "J4_torque_sat_time_ratio": 0.008129999972879887,
+ "J5_last1s_vel_rms_rad_s": {
+  "max": 0.07218777388334274,
+  "p95": 0.02241058275103569,
+  "median": 0.005167786963284016
+ },
+ "verdict": {
+  "J1": false,
+  "J2": false,
+  "J3": false,
+  "J4": false,
+  "J5": false
+ }
+}

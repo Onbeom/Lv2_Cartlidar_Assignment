@@ -1,0 +1,29 @@
+{
+ "S1": {
+  "links_with_inertial": 14,
+  "fails": [],
+  "verdict": "성공"
+ },
+ "S2": {
+  "movable_joints": 11,
+  "fails": [],
+  "verdict": "성공"
+ },
+ "S3": {
+  "counts": {
+   "mesh": 504,
+   "box": 48,
+   "cylinder": 4,
+   "sphere": 0
+  },
+  "fails": [],
+  "verdict": "성공"
+ },
+ "S5": {
+  "rigid_bodies": 14,
+  "movable_joints": 11,
+  "fails": [],
+  "verdict": "성공"
+ },
+ "전체": "성공"
+}

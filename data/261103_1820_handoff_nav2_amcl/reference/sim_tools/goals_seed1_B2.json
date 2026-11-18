@@ -1,0 +1,94 @@
+{
+ "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+ "rule": "261102 B2: goals_seed1_B.json 에서 L3 만 v26 자리로(B안 정면 자리는 흔든 출발 10 중 9 에서 계획 경로가 옆 상자와 겹침, k2d_cause/README 참고). v26 자리도 B안 회전 여유 규칙 통과(0.0638 ≥ 0.025, 법선 16.6° ≤ 25, 카메라 0.435 m).\n261102 B안 사본(261031_1325_nav2/tools/make_goals_v25.py): 바꾼 것 = 카메라 x 를 --cam_x 로(B안 위 D435 x +12.5 mm → −0.0481), 읽는 기준 목표 · geom 은 261031_1325_nav2, 저장은 이 폴더 config/.\n설계 25 목표(make_goals_v22.py 고침): 회전 여유를 '최종 자세의 회전 중심'을 축으로 계산한다.\nv22 의 sweep_rc 는 base_link 가 (x, y) 에 '도착 방향' y0 으로 있을 때의 회전 중심을 축으로 돌렸지만, 목표 파일의 (x, y, yaw) 는 '최종 자세'이고\nrun_goals --base_offset_x 가 최종 yaw 로 회전 중심 목표를 만듦 → 두 회전 중심이 |x_icr|·|e^{i·y0} − e^{i·yaw}| 만큼 어긋남\n(L1_via 0 → π/2: 0.111 m, L1 · L3 π/2 → 태그 약 0.09 m, 도착 허용 0.06 m 보다 큼). live_nav_v24 L1_via: 회전 중심이 (4.01, 0.40) 에서\n돌기만 하고 목표 회전 중심 (4.08, 0.33) 까지 9.8 cm 를 못 옮겨 'Failed to make progress'. 고침: 회전 중심 = 최종 자세 ∘ (x_icr, 0), 들어올 때 · 나갈 때 모두 그 점을 축으로.\n아래는 v22 설명(규칙 나머지는 같음).\n설계 22 목표: 좁은 자리(L1_via · L1 · L3 · 출발 복귀)를 '회전 중심(x_icr)을 축으로 실제로 도는 구간'의 footprint 여유로 다시 고른다.\n설계 8 · 9 규칙(make_goals_v8.py)은 base_link 를 축으로 돈다고 보고 계산했지만, Isaac 4륜 스키드는 base_link 뒤 0.0786 m 를 축으로 돎(설계 14)\n→ live_nav_v21 에서 L1 칸 안팎에서 돌 자리가 없어 진행 없음. 바뀐 것:\n  - 회전 여유 = 회전 중심 고정, base_link 가 그 둘레를 도는 꼴로 계산(sweep_rc).\n  - 회전 구간 여유 문턱 0.07 → 0.025 m(--sweep_clear): 0.07 은 AMCL 때 위치 추정 최대 오차 0.066 m 기준, Cartographer(설계 19~21)는 최대 0.021 m.\n    처음엔 0.04(약 2배)로 했으나 법선 ≤ 15° 안에서 L1 최대 0.028 · L3 0.036 m 뿐이라(0.04 이상은 법선 22~24°) 최대 오차 이상인 0.025 로 둠. 법선 15° 는 태그 읽기 조건이라 넓히지 않음.\n  - L1_via(yaw +y 고정): 들어올 때 0 → π/2 회전. 출발 복귀(yaw π 고정): π ± 45° 회전. 둘 다 원래 자리에서 가장 가까운 것.\n  - L1 · L3(태그 앞): 카메라 0.35~0.55 m · 법선 ≤ 15° · 정지 여유 ≥ 0.05 는 그대로, 들어올 때 π/2 → 태그 방향 · 나갈 때 태그 방향 → 3π/2(반시계) 구간 여유.\n나머지 목표는 --base 그대로. 사용: python3 make_goals_v22.py [--base goals_seed1_v9.json] [--out goals_seed1_v22.json]",
+ "goals": [
+  {
+   "name": "start_box_1",
+   "x": 2.2325,
+   "y": 0.6663,
+   "yaw": 2.78623,
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "x": 4.05,
+   "y": 0.41,
+   "yaw": 1.5708,
+   "rot_clearance": 0.082,
+   "clearance": 0.2044,
+   "sweep_rc": 0.0305,
+   "moved": 0.03
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "x": 4.133,
+   "y": 0.8,
+   "yaw": 2.7468,
+   "camera_dist": 0.438,
+   "off_normal_deg": 22.6,
+   "clearance": 0.088,
+   "sweep_in_rc": 0.0569,
+   "sweep_out_rc": 0.0569
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "x": 2.202,
+   "y": 2.6945,
+   "yaw": 1.5708,
+   "camera_dist": 0.451,
+   "off_normal_deg": 0.0,
+   "clearance": 0.1275,
+   "rot_clearance": 0.0768,
+   "bumper_to_face": 0.127
+  },
+  {
+   "name": "start_box_3",
+   "x": 2.5752,
+   "y": 4.6227,
+   "yaw": 1.11249,
+   "standoff": 0.45,
+   "clearance": 0.0864,
+   "face": [
+    2.8907,
+    5.2621
+   ],
+   "normal": [
+    -0.4424,
+    -0.8968
+   ],
+   "rot_clearance": 0.0842
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙, v26 자리)",
+   "x": 4.143,
+   "y": 5.464,
+   "yaw": -2.85262,
+   "camera_dist": 0.435,
+   "off_normal_deg": 16.6,
+   "clearance": 0.0943,
+   "sweep_in_rc": 0.0638,
+   "sweep_out_rc": 0.0638
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "x": 0.724,
+   "y": 0.95,
+   "yaw": 3.14159,
+   "shift_m": 0.01,
+   "rot_clearance": 0.0312,
+   "clearance": 0.1899,
+   "sweep_rc": 0.0952,
+   "moved": 0.0
+  }
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "name": "L2",
+ "distance_cm": "10",
+ "frames": 232,
+ "every": 3,
+ "device": "/dev/video12",
+ "width": 1280,
+ "height": 720,
+ "start": 1793785015.9591048,
+ "end": 1793785042.1762996,
+ "fps_measured": 26.74,
+ "auto_exposure": 3.0,
+ "exposure": 156.0
+}

@@ -1,0 +1,422 @@
+[
+ {
+  "part": "ballast_cup",
+  "kept_tris_inside": 46,
+  "kept_max_depth_mm": 1.48,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "ballast_steel",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_block_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_block_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_block_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_block_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_in_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_in_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_in_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_in_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_out_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_out_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_out_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "bearing_out_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "belt_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "belt_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "belt_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "belt_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "collar_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "collar_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "collar_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "collar_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "guard_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "guard_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "guard_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "guard_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_pulley_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_pulley_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_pulley_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_pulley_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_sled_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_sled_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_sled_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "motor_sled_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "shaft_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "shaft_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "shaft_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "shaft_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "spacer_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "spacer_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "spacer_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "spacer_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "wheel_pulley_FL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "wheel_pulley_FR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "wheel_pulley_RL",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "wheel_pulley_RR",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "housing_1",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "housing_2",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "housing_3",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "magazine_B",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "magazine_G",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "magazine_R",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "Floor_Bracket_Left_Main_TO_v3",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "Floor_Bracket_Left_Profile_Carrier_TO_v3",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "Floor_Bracket_Right_Main_TO_v3",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ },
+ {
+  "part": "Floor_Bracket_Right_Profile_Carrier_TO_v3",
+  "kept_tris_inside": 0,
+  "kept_max_depth_mm": 0.0,
+  "wheel_hits": [],
+  "part_hits": []
+ }
+]

@@ -1,0 +1,149 @@
+{
+ "R1_N32_eq_pt": true,
+ "R2_fp16": {
+  "same_images": 1473,
+  "n": 1478,
+  "pass": true
+ },
+ "R3_speed": {
+  "ms": {
+   "480_32": {
+    "trtexec_gpu_median": 8.06006,
+    "infer_median": 10.303
+   },
+   "480_16": {
+    "trtexec_gpu_median": 3.88599,
+    "infer_median": 5.406
+   },
+   "384_32": {
+    "trtexec_gpu_median": 7.43555,
+    "infer_median": 8.811
+   },
+   "384_16": {
+    "trtexec_gpu_median": 3.24805,
+    "infer_median": 4.705
+   },
+   "640_16": {
+    "trtexec_gpu_median": 4.27148,
+    "infer_median": 6.431
+   },
+   "640_32": {
+    "trtexec_gpu_median": 10.3887,
+    "infer_median": 13.239
+   }
+  },
+  "pass": true
+ },
+ "recall_precision@0.6": {
+  "all_D": {
+   "judge_front": [
+    0.683,
+    0.9252
+   ],
+   "judge_rear": [
+    0.6621,
+    0.9797
+   ],
+   "video_front": [
+    0.914,
+    0.9532
+   ],
+   "video_rear": [
+    0.8956,
+    0.9797
+   ],
+   "video_arm": [
+    0.9587,
+    0.9508
+   ]
+  },
+  "J32": {
+   "judge_front": [
+    0.6246,
+    0.9231
+   ],
+   "judge_rear": [
+    0.5953,
+    0.9774
+   ],
+   "video_front": [
+    0.8991,
+    0.9431
+   ],
+   "video_rear": [
+    0.8927,
+    0.9781
+   ],
+   "video_arm": [
+    0.9504,
+    0.9504
+   ]
+  },
+  "J16": {
+   "judge_front": [
+    0.6246,
+    0.9231
+   ],
+   "judge_rear": [
+    0.5953,
+    0.9774
+   ],
+   "video_front": [
+    0.8991,
+    0.9413
+   ],
+   "video_rear": [
+    0.8927,
+    0.9781
+   ],
+   "video_arm": [
+    0.9504,
+    0.9504
+   ]
+  },
+  "N32": {
+   "judge_front": [
+    0.683,
+    0.9252
+   ],
+   "judge_rear": [
+    0.6621,
+    0.9768
+   ],
+   "video_front": [
+    0.914,
+    0.9532
+   ],
+   "video_rear": [
+    0.8956,
+    0.9797
+   ],
+   "video_arm": [
+    0.9587,
+    0.9508
+   ]
+  },
+  "N16": {
+   "judge_front": [
+    0.683,
+    0.9272
+   ],
+   "judge_rear": [
+    0.6621,
+    0.9768
+   ],
+   "video_front": [
+    0.914,
+    0.9532
+   ],
+   "video_rear": [
+    0.897,
+    0.9812
+   ],
+   "video_arm": [
+    0.9587,
+    0.9508
+   ]
+  }
+ }
+}

@@ -1,0 +1,5 @@
+# 기존 ft1b용 클래스 순서. 엔진 경로는 대상 Jetson에서 생성한 뒤 지정.
+perception_node:
+  ros__parameters:
+    detector:
+      class_names: [red_cylinder, green_cylinder, blue_cylinder, red_cuboid, green_cuboid, blue_cuboid]

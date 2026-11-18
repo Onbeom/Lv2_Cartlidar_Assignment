@@ -1,0 +1,22 @@
+{
+ "test": "T2",
+ "num_envs": 4,
+ "startup_s": 6.3,
+ "q0_env0": [
+  -0.989326000213623,
+  1.1755809783935547,
+  -0.06432230025529861,
+  0.7395182847976685
+ ],
+ "max_joint_drift_rad": 0.003504157066345215,
+ "joint_drift_end_rad": 0.003504157066345215,
+ "max_tcp_drift_m": 0.0012995771830901504,
+ "tcp_drift_end_m": 0.0012995771830901504,
+ "last1s_max_joint_vel_rad_s": 0.00021139724412932992,
+ "episode_reset_in_window": false,
+ "contacts_end": {},
+ "gripper_left_right_end_m": [
+  0.026186130940914154,
+  -0.026186130940914154
+ ]
+}

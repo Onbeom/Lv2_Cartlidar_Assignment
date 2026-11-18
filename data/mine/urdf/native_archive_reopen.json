@@ -1,0 +1,109 @@
+{
+  "file": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\Waffle_URDF_Export_261021.f3d",
+  "links": 14,
+  "joints": 13,
+  "bodies": 669,
+  "mass_g": 4891.194067546911,
+  "axes": [
+    {
+      "joint": "Wheel_Revolute_Front_Left",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "Wheel_Revolute_Front_Right",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "Wheel_Revolute_Rear_Left",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "Wheel_Revolute_Rear_Right",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "RMX52_Base_Yaw",
+      "axis": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "RMX52_Shoulder",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "RMX52_Elbow",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "RMX52_Wrist_Pitch",
+      "axis": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "RMX52_Wrist_Roll_Reversed",
+      "axis": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "gripper_left_joint",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    },
+    {
+      "joint": "gripper_right_joint",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ground_to_parent": false
+    }
+  ],
+  "passed": true
+}

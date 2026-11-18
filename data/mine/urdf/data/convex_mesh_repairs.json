@@ -1,0 +1,192 @@
+[
+  {
+    "file": "base_link_part022_hull03_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part022_hull03_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.842877388000488e-05
+  },
+  {
+    "file": "base_link_part022_hull05_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part022_hull05_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.2351741790771484e-05
+  },
+  {
+    "file": "base_link_part022_hull12_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part022_hull12_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part022_hull14_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part025_hull06_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part025_hull06_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part025_hull07_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.9802322387695312e-05
+  },
+  {
+    "file": "base_link_part025_hull09_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.9802322387695312e-05
+  },
+  {
+    "file": "base_link_part025_hull13_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  },
+  {
+    "file": "base_link_part025_hull13_free01.stl",
+    "rounding_grid_mm": 0.001,
+    "bounds_change_mm": 0.0004917383193969727
+  },
+  {
+    "file": "base_link_part025_hull14_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 5.9604644775390625e-05
+  },
+  {
+    "file": "base_link_part026_hull16_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 5.9604644775390625e-05
+  },
+  {
+    "file": "base_link_part026_hull18_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.9802322387695312e-05
+  },
+  {
+    "file": "base_link_part029_hull00_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part029_hull03_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  },
+  {
+    "file": "base_link_part029_hull03_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part029_hull05_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 5.21540641784668e-05
+  },
+  {
+    "file": "base_link_part029_hull12_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  },
+  {
+    "file": "base_link_part029_hull12_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  },
+  {
+    "file": "base_link_part140_hull03_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.2351741790771484e-05
+  },
+  {
+    "file": "base_link_part140_hull03_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part140_hull03_free03.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 1.210719347000122e-05
+  },
+  {
+    "file": "base_link_part140_hull06_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part140_hull06_free03.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 9.313225746154785e-07
+  },
+  {
+    "file": "base_link_part140_hull14_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.421438694000244e-05
+  },
+  {
+    "file": "base_link_part141_hull02_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  },
+  {
+    "file": "base_link_part141_hull10_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.842877388000488e-05
+  },
+  {
+    "file": "base_link_part141_hull10_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part141_hull10_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 1.4901161193847656e-05
+  },
+  {
+    "file": "base_link_part141_hull11_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part141_hull14_free01.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part141_hull14_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 2.9802322387695312e-05
+  },
+  {
+    "file": "base_link_part141_hull20.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 5.21540641784668e-05
+  },
+  {
+    "file": "base_link_part141_hull24_free00.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 4.470348358154297e-05
+  },
+  {
+    "file": "base_link_part141_hull24_free02.stl",
+    "rounding_grid_mm": 9.999999999999999e-05,
+    "bounds_change_mm": 3.725290298461914e-05
+  }
+]

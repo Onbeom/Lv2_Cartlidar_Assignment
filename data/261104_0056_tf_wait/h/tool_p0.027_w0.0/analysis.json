@@ -1,0 +1,19 @@
+{
+ "tool_img_tf_lag_ms": {
+  "median": 13.7,
+  "max": 20.3
+ },
+ "picks_last": {
+  "newest": 11,
+  "older": 0,
+  "wait": 0,
+  "fallback": 441
+ },
+ "new_results": 523,
+ "rate_hz": 14.94,
+ "latency_ms": {
+  "median": 9.7,
+  "p95": 11.7
+ },
+ "exact_tf_ratio": 0.0243
+}

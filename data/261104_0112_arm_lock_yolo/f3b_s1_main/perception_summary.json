@@ -1,0 +1,72 @@
+{
+  "P1": {
+    "ok": 10,
+    "n": 12,
+    "rate": 0.8333333333333334
+  },
+  "P2": {
+    "ok": 178,
+    "n": 182,
+    "rate": 0.978021978021978
+  },
+  "P3_other_frames": 0,
+  "P3_hidden": {
+    "ok": 40,
+    "n": 40,
+    "rate": 1.0
+  },
+  "P4": {
+    "ok": 10,
+    "n": 10,
+    "rate": 1.0
+  },
+  "planned_selected_mismatch": [],
+  "missing_initial_target": [
+    "w4_out00_L0",
+    "w4_out00_L1"
+  ],
+  "unassessed_frames": 50,
+  "failures": [
+    {
+      "scene": "w2_out00_L0",
+      "k": 14,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06356988280624712
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 15,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L1",
+      "k": 14,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.05996532331272795
+    },
+    {
+      "scene": "w2_out00_L1",
+      "k": 15,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w4_out00_L0",
+      "check": "P1",
+      "reason": "시작 단계 실제 선택 목표 없음; 임의 정답 대체 금지"
+    },
+    {
+      "scene": "w4_out00_L1",
+      "check": "P1",
+      "reason": "시작 단계 실제 선택 목표 없음; 임의 정답 대체 금지"
+    }
+  ],
+  "pass_observed_checks": false,
+  "P4_exercised": true,
+  "note": "인지범위 보조 판정. 초기 목표 없으면 P1 실패로 포함하고 P2~P4는 평가 불가 행 수를 명시. 기존 J 및 계획/선택 불일치 보존. P4없음은 미시험."
+}

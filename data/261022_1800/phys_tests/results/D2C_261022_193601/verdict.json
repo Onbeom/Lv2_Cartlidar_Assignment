@@ -1,0 +1,31 @@
+{
+  "measured": {
+    "yaw_change_deg": 0.5146044531311811,
+    "바퀴_평균속도_위치차분_rad_s": {
+      "Wheel_Revolute_Front_Left": -0.29925957349049626,
+      "Wheel_Revolute_Front_Right": 0.29226299219662144,
+      "Wheel_Revolute_Rear_Left": -0.08918910836053189,
+      "Wheel_Revolute_Rear_Right": 0.1806416860485024
+    },
+    "conditions": {
+      "dt_s": 0.008333333333333333,
+      "gravity": 9.81,
+      "mu_static": 0.4,
+      "mu_dynamic": 0.3,
+      "restitution": 0.0,
+      "settle_s": 1.0,
+      "arm_kp_nm_per_rad": 200.0,
+      "arm_kd": 2.0,
+      "gl_kp": 1000.0,
+      "gl_kd": 10.0,
+      "gr_kp": 0.0,
+      "gr_kd": 0.0,
+      "wheel_kp": 0.0,
+      "wheel_kd": 1.0
+    }
+  },
+  "checks": {
+    "4 s 동안 yaw 변화 ≥ 1°": false
+  },
+  "verdict": "실패"
+}

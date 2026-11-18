@@ -1,0 +1,2073 @@
+{
+  "frames": 402,
+  "violating_frames": 159,
+  "examples": [
+    {
+      "frame": 202,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5105550097820948,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 203,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5231555984014138,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 204,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5350230233227635,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 205,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5461118813412482,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 206,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5563754720429999,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 207,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5657660028629605,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 208,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.57423482818899,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 209,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5817327198001712,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 210,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5882101644438795,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 211,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5936176827587012,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 212,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5979061620839339,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 213,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6010271940145255,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 214,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6029334059215152,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 215,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 216,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6050213524937456,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 217,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6091885550367673,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 218,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6158449371744865,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 219,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6247609327283294,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 220,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6357115180938568,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 221,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6484749737876232,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 222,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6628315821887751,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 223,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.678562160171162,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 224,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.695446375941832,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 225,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7132608430671206,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 226,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7317770236717447,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 227,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7507590091730032,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 228,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7699612820495672,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 229,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7891265963766365,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 230,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.807984147120611,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 231,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8262482258198327,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 232,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8436175790955769,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 233,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8597756911182532,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 234,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8743921960081869,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 235,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8871255861743501,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 236,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.897627314602322,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 237,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9055472926264816,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 238,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9105406623967194,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 239,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9122755806160554,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 240,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9118846490599957,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 241,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9107300655537505,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 242,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9088340316059371,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 243,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9062127224219738,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 244,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.902877225422876,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 245,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8988344235200016,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 246,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8940878333548565,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 247,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8886384075403155,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 248,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8824853086619608,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 249,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8756266614190178,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 250,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8680602877956614,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 251,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8597844285440313,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 252,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.850798452522533,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 253,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8411035535687712,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 254,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.830703432612685,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 255,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8196049606885776,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 256,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8078188164447324,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 257,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7953600897614894,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 258,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7822488412837343,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 259,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7685106061843405,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 260,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7541768294487623,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 261,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7392852195589015,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 262,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7238800077959815,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 263,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7080121015870433,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 264,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6917391224473413,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 265,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6751253221127413,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 266,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.658241374321169,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 267,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.641164044210659,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 268,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6239757421896477,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 269,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6067639740710624,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 270,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5896207038731407,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 271,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5726416496010809,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 272,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5559255351956178,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 273,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5395733234042117,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 274,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5236874544403873,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 275,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5083711139124598,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 317,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5083711139124598,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 318,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5236874544403873,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 319,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5395733234042117,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 320,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5559255351956178,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 321,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5726416496010809,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 322,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.5896207038731407,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 323,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6067639740710624,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 324,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6239757421896477,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 325,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.641164044210659,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 326,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.658241374321169,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 327,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6751253221127413,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 328,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6917391224473413,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 329,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7080121015870433,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 330,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7238800077959815,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 331,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7392852195589015,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 332,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7541768294487623,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 333,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7685106061843405,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 334,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7822488412837343,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 335,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7953600897614894,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 336,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8078188164447324,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 337,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8196049606885776,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 338,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.830703432612685,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 339,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8411035535687712,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 340,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8507984525225325,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 341,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8597844285440313,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 342,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8680602877956614,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 343,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8756266614190178,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 344,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8824853086619608,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 345,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8886384075403155,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 346,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8940878333548565,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 347,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8988344235200016,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 348,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.902877225422876,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 349,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9062127224219738,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 350,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9088340316059371,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 351,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9107300655537505,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 352,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9118846490599957,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 353,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9122755806160554,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 354,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9105406623967194,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 355,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.9055472926264816,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 356,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.897627314602322,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 357,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8871255861743501,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 358,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8743921960081869,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 359,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8597756911182532,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 360,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8436175790955769,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 361,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.8262482258198327,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 362,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.807984147120611,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 363,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7891265963766365,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 364,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7699612820495672,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 365,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7507590091730032,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 366,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7317770236717447,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 367,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.7132608430671206,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 368,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.695446375941832,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 369,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.678562160171162,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 370,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6628315821887751,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 371,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6484749737876232,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 372,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6357115180938568,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 373,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6247609327283294,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 374,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6158449371744865,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 375,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6091885550367673,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 376,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.6050213524937456,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 377,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 378,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 379,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 380,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 381,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 382,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 383,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 384,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 385,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 386,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 387,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 388,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 389,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 390,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 391,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 392,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 393,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 394,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 395,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 396,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 397,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 398,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 399,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 400,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    },
+    {
+      "frame": 401,
+      "violations": [
+        {
+          "joint": "RMX52_Shoulder",
+          "q_rad": 1.603578774122862,
+          "reference_limits_rad": [
+            -1.5,
+            1.5
+          ]
+        }
+      ]
+    }
+  ]
+}

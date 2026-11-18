@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0226,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0054,
+ "G4_loc_max_m": 0.0147,
+ "G4_yaw_rmse_rad": 0.0069,
+ "G4_n_samples": 2173,
+ "G5_cmd": {
+  "n": 4952,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.12,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.6966942148760331
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "SUCCEEDED",
+   "duration_s": 52.72,
+   "pos_err": 0.0213,
+   "yaw_err": 0.0558,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "SUCCEEDED",
+   "duration_s": 36.9,
+   "pos_err": 0.028,
+   "yaw_err": 0.0102,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 중심 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 18.48,
+   "pos_err": 0.0313,
+   "yaw_err": 0.0534,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "SUCCEEDED",
+   "duration_s": 50.38,
+   "pos_err": 0.0207,
+   "yaw_err": 0.0025,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 40.25,
+   "pos_err": 0.0167,
+   "yaw_err": 0.0021,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 중심 규칙)",
+   "status": "ABORTED",
+   "duration_s": 46.38,
+   "pos_err": 0.0524,
+   "yaw_err": 0.8465,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 0.03,
+   "pos_err": 5.6622,
+   "yaw_err": 0.5575,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (4.17, 5.44) [q: 0.00, 0.00, 0.96, 0.28] (yaw: 2.58) to (0.80, 0.95) [q: 0.00, 0.00, 1.00, 0.00] (yaw: 3.14): \"Start occupied\""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

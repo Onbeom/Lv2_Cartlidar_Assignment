@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="waffle_4wd">
+
+  
+  <xacro:arg name="prefix" default="" /><material name="Waffle_Equivalent_Stock_arm_link_1_Aluminum_Arm_Frame_11445_545">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Equivalent_Stock_arm_link_2_Aluminum_Arm_Frame_4436_486">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Equivalent_Stock_arm_link_3_Stock_Arm_Polymer_Estimate_1911_558">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame_3305_17">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate_1285_344">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Equivalent_XM430_82g_1881_229">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="material">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+  <material name="Waffle_Rubber_Tire_1100_1100_0">
+    <color rgba="0.627 0.627 0.627 1.0" />
+  </material>
+
+  
+  <xacro:include filename="$(find waffle_4wd_description_261021)/urdf/assemblies/main.urdf.xacro" />
+
+  
+  <xacro:main prefix="$(arg prefix)" />
+
+</robot>

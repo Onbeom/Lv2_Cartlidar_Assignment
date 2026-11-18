@@ -1,0 +1,40 @@
+{
+  "classes": [
+    "red_cylinder",
+    "red_prism",
+    "green_cylinder",
+    "green_prism"
+  ],
+  "samples": [
+    {
+      "image": "images/episode-00000-Overview.png",
+      "objects": 12,
+      "scene": "/home/seongmin/Projects/yolov8-ubuntu24-practice/work/mission-ready-solved/episode-00000/scene.usda",
+      "camera": "Overview",
+      "frame": 0
+    },
+    {
+      "image": "images/episode-00000-L1.png",
+      "objects": 3,
+      "scene": "/home/seongmin/Projects/yolov8-ubuntu24-practice/work/mission-ready-solved/episode-00000/scene.usda",
+      "camera": "L1",
+      "frame": 0
+    },
+    {
+      "image": "images/episode-00000-L2.png",
+      "objects": 4,
+      "scene": "/home/seongmin/Projects/yolov8-ubuntu24-practice/work/mission-ready-solved/episode-00000/scene.usda",
+      "camera": "L2",
+      "frame": 0
+    },
+    {
+      "image": "images/episode-00000-L3.png",
+      "objects": 5,
+      "scene": "/home/seongmin/Projects/yolov8-ubuntu24-practice/work/mission-ready-solved/episode-00000/scene.usda",
+      "camera": "L3",
+      "frame": 0
+    }
+  ],
+  "annotation": "RTX bounding_box_2d_tight",
+  "scope": "Synthetic images; no robot task execution"
+}

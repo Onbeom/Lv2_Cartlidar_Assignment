@@ -1,0 +1,257 @@
+{
+ "run": "/home/pa4/git/lv2_next_module/261103_1913_jetson_load2/pc_fix/results/20261104_102656",
+ "live_pc_amcl": {
+  "n": 3480,
+  "hz": 10.0,
+  "rx_minus_stamp_s": {
+   "p50": 0.0167,
+   "p95": 0.0167,
+   "p99": 0.0167,
+   "mean": 0.0167,
+   "max": 0.0167
+  },
+  "pos_err_m": {
+   "rmse": 0.0191,
+   "p95": 0.0322,
+   "max": 0.044
+  }
+ },
+ "passes": {
+  "pass_1": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0067,
+     "p95": 0.0268,
+     "p99": 0.0269,
+     "mean": 0.0098,
+     "max": 0.0567
+    },
+    "pos_err_m": {
+     "rmse": 0.0188,
+     "p95": 0.0311,
+     "max": 0.0419
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.534,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9057,
+     "max": 10.0,
+     "min": 6.7
+    },
+    "res_max": 0.0396,
+    "n_check_total": 3467,
+    "n_skip_total": 29,
+    "suspect": 1,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  },
+  "pass_2": {
+   "amcl": {
+    "n": 3477,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0067,
+     "p95": 0.0168,
+     "p99": 0.0268,
+     "mean": 0.0075,
+     "max": 0.0369
+    },
+    "pos_err_m": {
+     "rmse": 0.0194,
+     "p95": 0.0331,
+     "max": 0.0474
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.948,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.8971,
+     "max": 10.0,
+     "min": 6.4
+    },
+    "res_max": 0.0427,
+    "n_check_total": 3464,
+    "n_skip_total": 27,
+    "suspect": 2,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK",
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  },
+  "pass_3": {
+   "amcl": {
+    "n": 3480,
+    "hz": 10.0,
+    "rx_minus_stamp_s": {
+     "p50": 0.0169,
+     "p95": 0.0269,
+     "p99": 0.0369,
+     "mean": 0.0166,
+     "max": 0.0568
+    },
+    "pos_err_m": {
+     "rmse": 0.0192,
+     "p95": 0.0319,
+     "max": 0.0498
+    }
+   },
+   "scan_merged_hz": 10.0,
+   "ekf_hz": 49.597,
+   "loc_monitor": {
+    "check_hz": {
+     "p50": 10.0,
+     "mean": 9.9143,
+     "max": 10.0,
+     "min": 7.0
+    },
+    "res_max": 0.0411,
+    "n_check_total": 3470,
+    "n_skip_total": 26,
+    "suspect": 2,
+    "lost": 0,
+    "states": [
+     "SUSPECT",
+     "OK",
+     "SUSPECT",
+     "OK"
+    ]
+   }
+  }
+ },
+ "windows_s": [
+  351.5,
+  351.2,
+  352.1
+ ],
+ "proc_by_pass": {
+  "pass_1": {
+   "ALL": 1.6,
+   "amcl": 5.2,
+   "ekf_node": 1.8,
+   "lifecycle_manager": 1.3,
+   "loc_monitor": 5.3,
+   "map_server": 1.0,
+   "scan_body_mask": 4.3,
+   "scan_merge": 4.6
+  },
+  "pass_2": {
+   "ALL": 2.9,
+   "amcl": 6.2,
+   "ekf_node": 2.1,
+   "lifecycle_manager": 1.5,
+   "loc_monitor": 6.6,
+   "map_server": 1.2,
+   "scan_body_mask": 5.4,
+   "scan_merge": 5.7
+  },
+  "pass_3": {
+   "ALL": 6.6,
+   "amcl": 8.6,
+   "component_container": 2.9,
+   "ekf_node": 2.8,
+   "lifecycle_manager": 2.2,
+   "loc_monitor": 9.2,
+   "map_server": 1.8,
+   "scan_body_mask": 7.5,
+   "scan_merge": 10.5
+  }
+ },
+ "proc": {
+  "ALL": {
+   "cpu_pct": {
+    "p50": 2.1,
+    "p95": 7.1,
+    "mean": 3.7159,
+    "max": 99.8
+   },
+   "rss_mb_max": 0.0
+  },
+  "ekf_node": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 4.0,
+    "mean": 2.2361,
+    "max": 4.9
+   },
+   "rss_mb_max": 44.8
+  },
+  "scan_body_mask": {
+   "cpu_pct": {
+    "p50": 5.0,
+    "p95": 8.9,
+    "mean": 5.744,
+    "max": 10.8
+   },
+   "rss_mb_max": 84.7
+  },
+  "map_server": {
+   "cpu_pct": {
+    "p50": 1.0,
+    "p95": 3.0,
+    "mean": 1.3491,
+    "max": 4.0
+   },
+   "rss_mb_max": 103.7
+  },
+  "lifecycle_manager": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 3.0,
+    "mean": 1.6725,
+    "max": 5.0
+   },
+   "rss_mb_max": 89.8
+  },
+  "scan_merge": {
+   "cpu_pct": {
+    "p50": 5.0,
+    "p95": 9.9,
+    "mean": 6.9141,
+    "max": 109.7
+   },
+   "rss_mb_max": 884.2
+  },
+  "amcl": {
+   "cpu_pct": {
+    "p50": 6.0,
+    "p95": 12.9,
+    "mean": 6.6806,
+    "max": 35.7
+   },
+   "rss_mb_max": 245.5
+  },
+  "loc_monitor": {
+   "cpu_pct": {
+    "p50": 6.0,
+    "p95": 10.9,
+    "mean": 7.046,
+    "max": 12.8
+   },
+   "rss_mb_max": 191.7
+  },
+  "component_container": {
+   "cpu_pct": {
+    "p50": 2.0,
+    "p95": 4.0,
+    "mean": 2.9365,
+    "max": 74.6
+   },
+   "rss_mb_max": 935.6
+  }
+ }
+}

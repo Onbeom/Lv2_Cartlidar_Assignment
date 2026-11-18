@@ -1,0 +1,327 @@
+{
+ "scenes": 12,
+ "valid_scenes": 10,
+ "invalid": [
+  [
+   "w4_out00_L0",
+   "puck_11",
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   "puck_11",
+   null,
+   null
+  ]
+ ],
+ "frames": 250,
+ "unanswered": 0,
+ "J1_first_lock_target": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J1_fail": [],
+ "J2_full_frames": {
+  "ok": 144,
+  "n": 182,
+  "rate": 0.7912
+ },
+ "J2_tol": 0.05,
+ "J2_err_max": 0.0122,
+ "J2_fail": [
+  [
+   "w3_out00_L0",
+   0,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   1,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   2,
+   true,
+   0.067,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   3,
+   true,
+   0.067,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   4,
+   true,
+   0.0651,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   5,
+   true,
+   0.068,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   6,
+   true,
+   0.0719,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   7,
+   true,
+   0.0787,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   8,
+   true,
+   0.0839,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   17,
+   true,
+   0.0839,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   18,
+   true,
+   0.0787,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   19,
+   true,
+   0.0719,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   20,
+   true,
+   0.068,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   21,
+   true,
+   0.0681,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   22,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   23,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   24,
+   true,
+   0.067,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   25,
+   true,
+   0.067,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L0",
+   26,
+   true,
+   0.067,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   0,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   1,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   2,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   3,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   4,
+   true,
+   0.0651,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   5,
+   true,
+   0.0681,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   6,
+   true,
+   0.0692,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   7,
+   true,
+   0.0759,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   8,
+   true,
+   0.0867,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   17,
+   true,
+   0.0867,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   18,
+   true,
+   0.0759,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   19,
+   true,
+   0.0692,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   20,
+   true,
+   0.0681,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   21,
+   true,
+   0.0624,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   22,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   23,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   24,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   25,
+   true,
+   0.0642,
+   "puck_07"
+  ],
+  [
+   "w3_out00_L1",
+   26,
+   true,
+   0.0642,
+   "puck_07"
+  ]
+ ],
+ "J3_other_puck_frames": 0,
+ "J3_examples": [],
+ "not_puck_frames": 0,
+ "J4_out_frames_invalid": {
+  "ok": 40,
+  "n": 40,
+  "rate": 1.0
+ },
+ "J4_out_fail": [],
+ "J4_reacquire": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J4_reacquire_fail": [],
+ "partial_frames": 28,
+ "partial_pointing_target": 16,
+ "J1_pass": true,
+ "J2_pass": false,
+ "J3_pass": true,
+ "J4_pass": true,
+ "pass": false,
+ "d435_extrinsic_mode": "new_model_fk_exact_no_jitter",
+ "joint_state_delay_s": 0.0,
+ "front_depth_empty": false,
+ "render": "/home/pa4/git/lv2_next_module/261104_0112_arm_lock_yolo/judge_set"
+}

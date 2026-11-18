@@ -1,0 +1,114 @@
+{
+ "scenes": 12,
+ "valid_scenes": 7,
+ "invalid": [
+  [
+   "w3_out00_L0",
+   "puck_07",
+   "puck_02",
+   0.0033
+  ],
+  [
+   "w3_out00_L1",
+   "puck_07",
+   "puck_02",
+   0.0033
+  ],
+  [
+   "w4_out00_L0",
+   "puck_08",
+   "puck_03",
+   0.0039
+  ],
+  [
+   "w4_out00_L1",
+   "puck_08",
+   "puck_03",
+   0.0039
+  ],
+  [
+   "w5_out00_L1",
+   "puck_02",
+   null,
+   null
+  ]
+ ],
+ "frames": 169,
+ "unanswered": 0,
+ "J1_first_lock_target": {
+  "ok": 7,
+  "n": 7,
+  "rate": 1.0
+ },
+ "J1_fail": [],
+ "J2_full_frames": {
+  "ok": 120,
+  "n": 125,
+  "rate": 0.96
+ },
+ "J2_tol": 0.05,
+ "J2_err_max": 0.0419,
+ "J2_fail": [
+  [
+   "w2_out00_L0",
+   14,
+   true,
+   0.0603,
+   "puck_03"
+  ],
+  [
+   "w2_out00_L1",
+   14,
+   true,
+   0.0586,
+   "puck_03"
+  ],
+  [
+   "w2_out00_L1",
+   15,
+   false,
+   null,
+   null
+  ],
+  [
+   "w6_out00_L1",
+   8,
+   true,
+   0.0717,
+   "puck_05"
+  ],
+  [
+   "w6_out00_L1",
+   16,
+   false,
+   null,
+   null
+  ]
+ ],
+ "J3_other_puck_frames": 0,
+ "J3_examples": [],
+ "not_puck_frames": 0,
+ "J4_out_frames_invalid": {
+  "ok": 28,
+  "n": 28,
+  "rate": 1.0
+ },
+ "J4_out_fail": [],
+ "J4_reacquire": {
+  "ok": 7,
+  "n": 7,
+  "rate": 1.0
+ },
+ "J4_reacquire_fail": [],
+ "partial_frames": 16,
+ "partial_pointing_target": 4,
+ "J1_pass": true,
+ "J2_pass": true,
+ "J3_pass": true,
+ "J4_pass": true,
+ "pass": true,
+ "d435_extrinsic_mode": "new_model_fk_exact_no_jitter",
+ "joint_state_delay_s": 0.0,
+ "front_depth_empty": false,
+ "render": "/home/pa4/git/lv2_next_module/261104_0112_arm_lock_yolo/judge_set2"
+}

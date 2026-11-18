@@ -1,0 +1,196 @@
+{
+  "status": "independent_checks_and_native_reopens_completed",
+  "unit_conversion": {
+    "cm_to_mm": 10,
+    "kg_to_g": 1000,
+    "kg_cm2_to_g_mm2": 100000,
+    "api_output_order": [
+      "xx",
+      "yy",
+      "zz",
+      "xy",
+      "yz",
+      "xz"
+    ],
+    "stored_order": [
+      "xx",
+      "yy",
+      "zz",
+      "xy",
+      "xz",
+      "yz"
+    ]
+  },
+  "parts": [
+    {
+      "name": "Floor_Bracket_Right_Main",
+      "mesh_volume_mm3": 142001.4769229289,
+      "mesh_com_print_frame_mm": [
+        109.17591770029814,
+        45.722877854261256,
+        9.58012144648769
+      ],
+      "principal_inertia_per_mass_mm2": [
+        1260.558087286583,
+        4032.208386057981,
+        5020.45065775878
+      ],
+      "native_principal_inertia_per_mass_mm2": [
+        1260.5573172852144,
+        4031.998584646164,
+        5020.257539766691
+      ],
+      "max_relative_inertia_difference": 5.2034098577271485e-05,
+      "within_0p2_percent": true
+    },
+    {
+      "name": "Floor_Bracket_Right_Profile_Carrier",
+      "mesh_volume_mm3": 66419.57433049186,
+      "mesh_com_print_frame_mm": [
+        30.912308869766576,
+        48.79293061790619,
+        16.370549652549023
+      ],
+      "principal_inertia_per_mass_mm2": [
+        481.10855966740087,
+        1343.7187386466692,
+        1499.1329872352098
+      ],
+      "native_principal_inertia_per_mass_mm2": [
+        481.05575606652167,
+        1343.6893009433766,
+        1499.048248575182
+      ],
+      "max_relative_inertia_difference": 0.00010976607225524938,
+      "within_0p2_percent": true
+    },
+    {
+      "name": "Floor_Bracket_Left_Main",
+      "mesh_volume_mm3": 142001.47683270028,
+      "mesh_com_print_frame_mm": [
+        109.1759176908489,
+        44.27712214321167,
+        9.580121411958581
+      ],
+      "principal_inertia_per_mass_mm2": [
+        1260.5580862695542,
+        4032.208384492497,
+        5020.450658017099
+      ],
+      "native_principal_inertia_per_mass_mm2": [
+        1260.5573158273673,
+        4031.9985831721447,
+        5020.257539782318
+      ],
+      "max_relative_inertia_difference": 5.2034075911589e-05,
+      "within_0p2_percent": true
+    },
+    {
+      "name": "Floor_Bracket_Left_Profile_Carrier",
+      "mesh_volume_mm3": 66419.57440595506,
+      "mesh_com_print_frame_mm": [
+        21.787714690363874,
+        48.79293049431066,
+        16.370549696689913
+      ],
+      "principal_inertia_per_mass_mm2": [
+        481.10855887025224,
+        1343.7187412334065,
+        1499.132989236004
+      ],
+      "native_principal_inertia_per_mass_mm2": [
+        481.05575606650615,
+        1343.6893009434514,
+        1499.0482485751813
+      ],
+      "max_relative_inertia_difference": 0.00010976441520593699,
+      "within_0p2_percent": true
+    }
+  ],
+  "body_count": 669,
+  "total_mass_g": 4891.19406770291,
+  "total_com_world_mm": [
+    -6.934694931178764,
+    0.019304590950764745,
+    162.27661106090576
+  ],
+  "whole_robot_com_inertia_g_mm2": [
+    [
+      140636026.35687053,
+      -2847495.0761320945,
+      -3361452.330327118
+    ],
+    [
+      -2847495.0761320945,
+      202894637.29836032,
+      88336.17782364036
+    ],
+    [
+      -3361452.330327118,
+      88336.17782364036,
+      123601324.9560415
+    ]
+  ],
+  "link_mass_difference_g": 5.4569682106375694e-12,
+  "link_com_difference_mm": 4.831984481281035e-13,
+  "link_inertia_max_abs_difference_g_mm2": 6.556510925292969e-07,
+  "native_reopen": {
+    "status": "verified",
+    "files": [
+      {
+        "file": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Assembly_Modular_261021.f3d",
+        "body_count": 669,
+        "mass_g": 4891.194067702904,
+        "joints": 16,
+        "external_refs": [],
+        "layout_size_mm": null,
+        "bed_256_fits": null
+      },
+      {
+        "file": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Assembly_Modular_261021_Geometry_Only.f3d",
+        "body_count": 669,
+        "mass_g": 4891.194067546912,
+        "joints": 0,
+        "external_refs": [],
+        "layout_size_mm": null,
+        "bed_256_fits": null
+      },
+      {
+        "file": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Floor_Bracket_Modular_261021.f3d",
+        "body_count": 4,
+        "mass_g": 516.7972176373678,
+        "joints": 0,
+        "external_refs": [],
+        "layout_size_mm": null,
+        "bed_256_fits": null
+      },
+      {
+        "file": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Printable_Modular_261021/Floor_Bracket_Print_Layout_261021.f3d",
+        "body_count": 4,
+        "mass_g": 516.7972176373678,
+        "joints": 0,
+        "external_refs": [],
+        "layout_size_mm": [
+          226.00000000000003,
+          244.700023,
+          58.0
+        ],
+        "bed_256_fits": true
+      }
+    ]
+  },
+  "limitations": [
+    "Mesh inertia comparison applies to the four bracket parts, not electronic mass distributions.",
+    "No additional physical validation or actual print slicing."
+  ],
+  "review_joint_tree_vs_native_probe": [
+    {
+      "position_error_mm": 1.8474105626945727e-05,
+      "rotation_matrix_error": 1.532935962056392e-07
+    },
+    {
+      "position_error_mm": 9.872592080750474e-06,
+      "rotation_matrix_error": 7.562357251782417e-08
+    }
+  ]
+}

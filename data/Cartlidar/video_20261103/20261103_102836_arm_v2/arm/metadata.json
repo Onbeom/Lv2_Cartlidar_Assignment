@@ -1,0 +1,16 @@
+{
+ "started_at": "2026-11-03T10:28:36.705023+09:00",
+ "label": "arm_v2",
+ "device": "/dev/video0",
+ "fourcc": "MJPG",
+ "image_size": [
+  1280,
+  720
+ ],
+ "requested_fps": 30,
+ "jpeg_quality": 95,
+ "frames": 38,
+ "dropped": 0,
+ "seconds": 61.09,
+ "mean_fps": 0.62
+}

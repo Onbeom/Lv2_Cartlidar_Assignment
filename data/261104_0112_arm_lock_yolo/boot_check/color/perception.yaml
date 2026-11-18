@@ -1,0 +1,252 @@
+# perception_node 설정. ★ = 실물·현장에서 다시 확인할 값
+# 카메라 토픽: 실물은 realsense2_camera(camera_name 을 top_camera_front · top_camera_rear 로 실행)와 UVC 드라이버,
+#   시뮬레이션은 Isaac Sim 이 같은 이름으로 발행한다. frame_id 를 비우면 영상 header.frame_id 를 쓴다.
+#   realsense2_camera 의 컬러 header.frame_id 는 <camera_name>_color_optical_frame 이라 URDF(261027_1711) 이름과 같다.
+perception_node:
+  ros__parameters:
+    publish_rate: 15.0          # [Hz] 이 주기로 새 영상이 있는지 보고 결과를 낸다 (ARM_ALIGN 은 15 Hz 이상 필요)
+    frame_max_age_s: 0.3        # [s] 이보다 오래된 영상은 쓰지 않는다 (받는 쪽 300 ms 규칙과 같게)
+    tf_fallback_max_s: 0.1      # [s] 촬영 시각 TF 가 없을 때 가장 최근 TF 를 써도 되는 시각 차. 넘으면 그 영상 위치를 내지 않음
+                                #   (/joint_states 50 Hz 주기 20 ms 의 5 배. 팔 태그 퍽 · 팔 정렬은 이 값과 상관없이 촬영 시각 TF 만 씀)
+    image_qos: sensor_data      # sensor_data(best effort) | reliable. best effort 구독은 어느 발행자와도 연결된다
+    image_qos_depth: 2
+    cameras:
+      front:
+        color_topic: /top_camera_front/color/image_raw
+        depth_topic: /top_camera_front/aligned_depth_to_color/image_raw   # 컬러에 맞춘 깊이 (크기가 컬러와 같아야 함)
+        info_topic: /top_camera_front/color/camera_info
+        frame_id: ""            # 비우면 영상 header (top_camera_front_color_optical_frame)
+      rear:
+        color_topic: /top_camera_rear/color/image_raw
+        depth_topic: /top_camera_rear/aligned_depth_to_color/image_raw
+        info_topic: /top_camera_rear/color/camera_info
+        frame_id: ""
+      arm:
+        image_topic: /arm_camera/image_raw
+        info_topic: /arm_camera/camera_info     # 왜곡 보정·태그 자세에 쓴다. 없으면 보정 없이 태그 id 만
+        frame_id: ""            # 비우면 영상 header (UVC 드라이버 frame_id 를 URDF arm_camera_optical_frame 으로 발행해야 함)
+    depth:
+      min_m: 0.15               # [m] 이보다 가까운 깊이는 버림
+      max_m: 4.0
+      window: 3                 # 깊이 중앙값 창 반폭 (7×7 px)
+      sync_tol_s: 0.02          # [s] 컬러와 깊이 stamp 차이 허용 (이전 모듈 2026-10-06 Pi 실측: D435 640x480 30 Hz, 미리보기 끔에서 짝 놓침 0.4 %)
+    arm:
+      detector: color           # ARM_ALIGN 검출기: main(주 검출기, 엔진이면 YOLO, 엔진 없으면 색 · 라벨 검출) | color(엔진이 있어도 색 · 라벨 검출)
+                                #   근거(A1 렌더 모의, 시드 20261106 12 장면): main P2 96.2 % · 다른 퍽 0, color P2 94.8 % · 다른 퍽 3(같은 색 퍽이 줄지어 서면 하나로 합침)
+                                #   YOLO D 는 팔 카메라(Arducam) 실물 사진도 학습함
+      detect_width: 640         # ARM_ALIGN 검출 해상도 (줄여서 15 Hz 확보, 오차는 정규화 값이라 해상도와 무관)
+      engine_merge_iou: 0.7     # ★ detector main(YOLO)일 때: 같은 색 · 이 IoU 이상 겹친 박스는 점수 높은 하나만 (같은 퍽에 클래스만 다른 박스). 0 이면 끔
+      lock_gate: 0.25           # ★ ARM_ALIGN 목표 유지(arm_target_lock.hpp): 따라가기 문턱 상한. 거리는 x 단위(화면 반폭, 세로는 × 높이/폭)
+      lock_seed_gate: 0.10      # ★ 처음 잠글 때 · 놓친 뒤 다시 잡을 때 D435 목표 투영점에서 이 안만 (넘으면 그 장은 잡지 않음)
+      lock_follow_k: 0.6        # ★ 따라가기 문턱 = 이 값 × 직전 박스 폭 (맞닿은 이웃은 중심 사이 약 폭 하나 이상)
+                                # 근거(2026-10-27, A1 렌더 모의): 고정 0.25 로는 첫 장에 0.2 옆 퍽을 잠그고, 목표가 화면 밖으로 나간 동안 그 자리로 들어온 5 cm 옆 이웃을 잡음
+      lock_size_ratio: 1.3      # ★ 따라가는 동안 박스 폭이 직전 장의 1/배 ~ 배 안이어야 같은 퍽 (라벨이 잘려 이웃과 합쳐진 상자는 약 1.5 배)
+      lock_reacquire_size_ratio: 2.0   # ★ 놓친 뒤 다시 잡을 때 직전 폭 대비 배율
+      lock_bias_margin: 0.02    # ★ 다시 잡을 때 D435 투영점 근처 후보가 모호하면, 마지막으로 본 (박스 − 투영점) 치우침을 더한 점에서 이만큼 더 가까운 후보를 고름
+      lock_log: false           # 진단: true 면 팔 영상마다 ARM_LOCK 줄(고른 박스 · 빠진 이유 · 박스 목록)
+      # ★ 팔 끝(tool_link) → 퍽 거리 토픽이 둘이다. 이름이 비슷하니 헷갈리지 말 것 (하나로 합칠지 팀 결정 필요)
+      #   /arm_range            (아래 range)  : 퍽 **표면**까지. 태그 · D435 보유 점 · (둘 다 없으면) 평면 교차. manipulator 가 쓰는 것은 이것
+      #   /perception/arm_range (아래 plane)  : 퍽 **중심**까지. 팔 카메라 평면 교차만. 검증용 비교, 받는 노드 없음
+      #   두 값은 퍽 반지름(약 15 mm)만큼 차이가 나는 것이 정상. TFmini(/tfmini/range)는 박스 앞면 거리라 둘 다와 다름
+      range:                    # /arm_range (arm_range.hpp): 팔 끝 → 정렬 중인 퍽 표면 거리. manipulator 미세 보정 · 최종 접근이 씀
+        frame: tool_link        # 거리 기준 (x = 팔 접근 방향). manipulator.yaml range_frame 과 같게
+        tag_gate: 0.03          # ★ [m] 태그 퍽 중심이 팔 축 옆으로 이 안이어야 씀 (이웃 퍽 간격 40 mm 보다 작게)
+        seed_gate: 0.05         # ★ [m] D435 보유 점의 팔 축 옆 거리 상한 (D435 깊이 · odom 오차)
+        hold_s: 3.0             # ★ [s] D435 가 목표를 마지막으로 본 뒤 보유 점을 쓰는 시간 (정밀 거리에서 D435 시야 밖)
+        plane_gate: 0.05        # ★ [m] 태그 · 보유 점이 없을 때 쓰는 평면 교차 중심의 팔 축 옆 거리 상한 (A1 모의 중심 오차 p95 8 · 팔만 13 mm)
+        max_range: 1.0          # [m] 이보다 먼 값은 무효(+inf)
+      plane:                   # 팔 카메라 평면 교차 (arm_plane.hpp): 잠근 박스 중심 시선 ∩ 퍽 중심 높이 수평면 → /perception/arm_target · arm_range
+                                #   D435 추적 위치의 예비(D435 가 못 볼 때 · 놓쳤을 때). 둘을 비교해 검증에도 쓴다
+                                #   A1 렌더 모의 재생(2026-11-02, 카메라 0.39~0.55 m): 퍽 중심 수평 오차 중앙 3.6 · p95 8.0 mm,
+                                #   D435 를 끈 뒤 팔만 3.7 · 13.1 mm (같은 모의 D435 추적 2.5 · 3.0 mm, 모의 깊이는 잡음 없음)
+        enabled: true
+        frame: base_footprint     # 평면 높이 기준 (z = 바닥 위)
+        support_levels: [0.0, 0.07]   # ★ [m] 퍽을 받치는 면 높이: 바닥 · 출발 상자 바닥(A1 장면 값). 실물 출발 상자 · 다른 받침이 있으면 넣음
+        half_heights: [0.015, 0.03]   # [m] 퍽 중심 높이 = 받침 + 반높이 (누움 · 서 있음, 퍽 30 × 30 × 60 mm)
+        max_height_gap: 0.02      # [m] D435 목표 높이가 어느 조합과도 이보다 멀면 평면을 정하지 않음(목록에 없는 받침)
+        default_height: -1.0      # [m] D435 목표가 한 번도 없을 때 쓸 퍽 중심 높이. 음수 = 내지 않음
+        range_frame: tool_link    # /perception/arm_range 기준: 이 프레임 원점에서 +x 로 퍽 중심까지 (표면이 아니라 중심)
+        max_range: 1.0            # [m]
+        edge_margin_px: 2         # [px, 검출 해상도] 박스가 화면 가장자리에서 이 안이면 내지 않음 (잘린 박스는 중심이 밀림)
+      place_box:                # 장소 상자 윗면 찾기 (place_box.hpp): /perception/place_box/measure (Trigger) → 팔 영상 frames 장 → 중앙값
+                                #   → /perception/place_box (PoseStamped, odom, 윗면 중심 · 요) · /cells (PoseArray, 칸 9 개 행 우선) · /status (String JSON)
+                                #   놓기 칸을 발제 지도 좌표 대신 눈앞 상자 기준으로 (상자가 돌아가 있거나 밀려 있어도). 태그 위치에는 기대지 않음
+                                #   부르는 법: 최종 자리에서 팔을 내려다보는 자세 (B URDF: joint 0 · −0.65 · 0.00 · 1.95 · 0, 카메라 윗면 위 약 0.20 m) +
+                                #   READ_TAG (또는 ARM_ALIGN) 켜고 measure. 모의(Isaac 렌더 120 장, 요 ±30° · 옆 ±5 cm · 퍽 0 ~ 9 개): 중심 최대 0.68 mm · 요 0.37°
+        box: 0.205                # [m] 윗면 한 변 ★ 실물 상자
+        height: 0.07              # [m] 윗면 높이 (frame 기준) ★ 실물 상자
+        frame: base_footprint     # 높이 기준 프레임 (z = 바닥 위)
+        prior: [0.2553, 0.0]      # [m] 최종 자리에서 본 상자 중심 (앞 끝 0.1328 + 면 0.02 + 반 변 0.1025). 이 둘레 ±search 에서 찾음
+        prior_yaw: 0.0            # [rad] 이 ±45° 안의 요를 고름 (정사각형은 90° 마다 같음)
+        search: 0.08              # [m]
+        frames: 3                 # 모을 팔 영상 수 (중앙값)
+        max_spread_m: 0.003       # 장마다 중심이 이보다 흩어지면 내지 않음 (status ok false)
+        max_spread_deg: 1.0
+        cell_pitch: 0.06          # [m] 3 x 3 칸 간격 ★ 발제
+      label:                    # ARM_ALIGN 색 검출 라벨 인식 (detector.hpp label_aware). TensorRT 검출기면 쓰지 않음
+        # 근거(2026-10-27, A1 렌더 모의): 위에서 본 퍽은 가운데 흰 라벨이 색 덩어리의 구멍이 되어 채움이 하한 아래
+        #   (서 있는 원기둥 0/20 · 서 있는 직육면체 88/127 검출) → 라벨로 묶고 나누면 19/20 · 124/127
+        enabled: true
+        dark_v_max: 90          # ★ 태그 검은 칸 V · S 상한 (렌더 태그 검은 칸 V 23~30 · S 13~64)
+        dark_s_max: 90
+        dark_window: 31        # 상대 어둠 문턱 창(px), 어두운 선반을 태그로 잡지 않음
+        dark_c: 20.0           # 주변 V평균보다 이만큼 어두워야 태그
+        body_v_min: 15         # 팔 검출만: 그림자진 옆면 포함, D435·신호 HSV 유지
+        merge_same_id: true    # 원본에서 해독한 같은 퍽ID의 여러면을 한 물체로
+        tag_close: 5            # [px] 태그 무늬를 한 덩어리로 닫는 커널
+        tag_min_px: 30.0        # [px²] 태그 덩어리 최소 넓이 (0.4 m 의 16 mm 태그 약 11 × 11 px)
+        square_min: 0.5         # 태그 정사각형 판정 하한 (짧은 변 / 긴 변, 넓이 / 사각형)
+        scale: 1.25             # 라벨 / 태그 한 변 (20 / 16 mm)
+        ring_frac: 0.2          # 라벨 색을 보는 바깥 띠 폭 / 라벨 한 변
+        ring_min: 0.25          # 띠의 그 색 비율 하한
+    detector:
+      type: auto                # auto | tensorrt | color
+      engine_path: "/home/cart11/yolo_D/deploy/yolo11n_task4_D_fp32_notf32.engine"   # ★ TensorRT 엔진 (.engine). 비우면 색 검출기
+      #   YOLO 후보 D(2026-11-03 임시 고정): Jetson 엔진 sha256 dbbf4a0b…(L4T R39.2.1 · TensorRT 10.16.2 · FP32 --noTF32 전용).
+      #   같은 폴더에 ONNX(sha256 eeb0d6bc…) · SHA256SUMS. JetPack · TensorRT 를 바꾸면 같은 ONNX 로 다시 만든다
+      #   파일이 없거나 열 수 없으면(예: PC 모의) 색 검출기로 대신하고 WARN 을 남긴다(type: auto)
+      score_threshold: 0.3      # 색 검출 점수 = 0.5·채움 + 0.5·가로세로비. 퍽 끝면(태그 때문에 채움 약 0.44)도 0.7 이상
+      nms_threshold: 0.45       # TensorRT(YOLOv8) 겹침 제거(클래스마다), YOLOv8 기본값
+      engine_score_threshold: 0.25  # TensorRT 엔진 점수 하한(score_threshold 는 색 검출기만). YOLO 후보 B 실물 203장 평가 값
+      target_class: -1          # 이 클래스 번호만 씀(-1 = 전부). 번호의 뜻은 검출기마다 다름(색 검출기 0 빨강 · 1 초록 · 2 파랑, 엔진은 class_names 순서)
+      # class_names: 엔진 클래스 번호 순서의 이름. 이름의 red · green · blue → 색, cylinder · cuboid → 모양 (include/perception/puck_class.hpp)
+      #   TensorRT 엔진일 때만 쓴다(색 검출기로 대신하면 무시). 비우면 색 검출기 번호로 색만 정함. YOLO 후보 B · C · D 순서:
+      class_names: [red_cylinder, green_cylinder, red_cuboid, green_cuboid]
+      target_color: any
+      min_area_ratio: 0.0004    # 화면 넓이 대비 최소 영역 (640×480 에서 약 120 px). D435 로 2 m 의 퍽 30 × 60 mm 가 약 9 × 18 px
+      blur_ksize: 3             # 2 m 의 퍽 폭 약 9 px 이라 큰 블러·열림 연산은 퍽을 지운다
+      morph_kernel: 3
+      min_fill_ratio: 0.35      # 끝면은 가운데 태그(흰 여백 포함 22.5 mm)가 30 mm 면의 56 % 를 가려 채움 약 0.44
+      depth_split:              # 색 덩어리를 깊이가 끊긴 곳에서 나눠 조각마다 퍽 하나 (include/perception/depth_split.hpp). TensorRT 면 안 씀
+        enabled: true           # 근거: R4 렌더(2026-10-25) 선반 위 같은 색 퍽이 겹쳐 보이면 한 덩어리가 되어 284개 중 134개를 놓침
+        tol_m: 0.01             # ★ 이웃 화소 깊이 차 상한. 렌더 깊이(잡음 없음) 기준 — 실물 D435 깊이 잡음에서 다시 맞춤
+        min_face_ratio: 0.3     # 조각 화소 수 하한 = 그 깊이 30 × 30 mm 면 화소 수 × 이 값 (가려 남은 작은 조각을 버림)
+      hsv:                      # [H(0~179), S, V] ★ 현장 조명에서 다시 맞춤
+        # 근거(2026-10-23): 파란 퍽 실사진 3장(640×480) 퍽 화소 H 97~115 · S 1 % 값 82~87 · V 1 % 값 24~98.
+        #   현장 사진(휴대폰) 벽판 S 약 30, 카펫 S 37 이하 → S 하한 80 으로 뺀다. 파란 출력 기둥은 H 113 · S 87~190 으로
+        #   퍽 파랑과 겹친다(크기 · 선반 높이 · 태그로 거름). 빨강 · 초록은 실물 사진이 없어 가상 월드 색 기준이고,
+        #   합성 영상 어두움(0.625)에서 빛 반대쪽 면 V 약 54 → V 하한 35
+        red:   {lower: [0, 80, 35],    upper: [10, 255, 255]}
+        red2:  {lower: [170, 80, 35],  upper: [179, 255, 255]}
+        green: {lower: [40, 80, 35],   upper: [85, 255, 255]}
+        # 파랑 끔(사용자 2026-10-25): 과제 퍽은 빨강 · 초록뿐이고, 파란 기둥 받침이 파란 퍽으로 검출됨
+        #   (R4 렌더 120장에 163개, 신뢰도 0.5 이상 143개 → 집을 후보로 뽑힐 수 있음). 하한 > 상한이면 빈 범위.
+        #   파란 퍽을 다시 쓰면 lower [95, 80, 25] · upper [120, 255, 255] (위 근거)
+        blue:  {lower: [1, 0, 0],      upper: [0, 0, 0]}
+    target:                     # 물체 하나만 따라가기
+      exclude_min: [-0.30, -0.25, -0.10]   # ★ base_link 기준 버리는 상자: 차체(0.445 × 0.306 m) + 여유, 앞 0.35 m 는 집게에 든 퍽 자리(가정). 추적 · PuckArray 둘 다
+      exclude_max: [ 0.35,  0.25,  0.60]
+      min_confidence: 0.5
+      gate: 0.06                # [m] 고른 뒤 같은 물체로 보는 거리 (odom). 한 선반(0.2 m) 위 퍽 사이가 수 cm 라 퍽 폭 2개
+      lost_timeout: 1.0         # [s] 이만큼 안 보이면 다시 고름 (15 Hz 로 15 장)
+      size_min_m: 0.015         # 깊이로 본 짧은 변 하한 (퍽 30 mm 의 반, 일부 가림 허용. 0 = 끔)
+      size_max_m: 0.09          # 긴 변 상한 (퍽 60 mm, 누운 퍽 대각 67 mm + 여유)
+    tag:                        # 퍽 태그 (과제 자료 2026-10-23: tag36h11, 윗면 · 아랫면, 검은 사각형 16 mm)
+      family: tag36h11
+      size: 0.016               # 태그 한 변 [m] (검은 테두리 바깥)
+      ids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]   # 퍽 번호만. 같은 계열 장소 태그(12~14)를 퍽 크기로 계산하지 않게 (READ_TAG 는 장소 태그를 marker.* 크기로 따로 찾음)
+    puck:                       # 태그 → 퍽 (include/perception/puck_estimator.hpp). 퍽 30 × 30 × 60 mm
+      half_width: 0.015         # [m] 짧은 변 / 2 (원기둥 반지름)
+      half_length: 0.030        # [m] 긴 변 / 2
+      ring_in: 0.0125           # [m] 색을 보는 띠: 라벨 20 mm(태그 16 + 흰 여백, 반 0.010) 바깥 · 면(0.015) 안
+      ring_out: 0.0145
+      ring2_in: 0.016           # [m] 띠에 색이 없을 때(면 전체가 스티커) 한 번 더 보는 바깥 띠
+      ring2_out: 0.020
+      axis_probe: 0.022         # [m] 긴 축 확인 지점 (옆면 긴 축 방향은 면 안, 짧은 축 방향은 면 밖)
+      corner_probe: 0.0127      # [m] 끝면 모양 확인 지점(태그 축 성분, 대각 18 mm): 직육면체 면 안 · 원기둥 면 밖
+      min_votes: 6              # 색을 정할 최소 화소 수
+      merge_dist: 0.04          # [m] 다른 카메라의 퍽 관측이 같은 색(한쪽 모름 포함)이고 이보다 가까우면 같은 퍽으로 일대일로 묶는다 (puck_merge.hpp)
+      upright_gap_px: 1.0       # 태그 PnP 두 해의 재투영 오차 차가 이 이하면 법선이 수직 · 수평에 가까운 해를 씀 (tag_upright.hpp, 0 = 끔)
+                                # 근거: R6 렌더(2026-10-25) 0.14 m 의 16 mm 태그에서 오차 차 0.002~0.04 px 로 46° 기운 해를 골라 퍽 중심 23 mm 밀림
+    marker:                     # 장소 태그 L1~L3 (READ_MARKER, READ_TAG 의 팔 카메라 결과 후보). 과제 자료 2026-10-23: tag36h11 ID 12~14
+      family: tag36h11
+      size: 0.048               # ★ 검은 사각형 한 변 [m]. 인쇄물 축척이 틀려 다시 받을 예정, 그때까지 48 mm(사용자 결정)
+      ids: [12, 13, 14]         # 이 번호만 씀. 빼면 모든 번호 (빈 목록은 yaml 에서 타입을 알 수 없어 쓰지 않음)
+    signal:                     # 신호등 점멸 순서 (READ_SIGNAL). include/perception/signal_light.hpp · signal_sequence.hpp
+      # 켜진 등 후보: 밝기 · 채도 하한과 색상(H) 범위 ★ Isaac Sim 렌더(R1) · 실물 영상으로 다시 정함 (지금은 가정값)
+      # 3000 K 조명에서 카메라 AWB 뒤 켜진 등의 색상이 돈다(빨강 H 4→151 자홍, 노랑 30→59, 초록 74→90). 렌더 판정 R1 · R2 3000 · 6500 K 통과 값(2026-10-31, 모의)
+      v_min: 200
+      s_min: 75                 # AWB 뒤 노랑 등 가운데 S 약 86
+      red_h_max: 10
+      red2_h_min: 170
+      yellow_h_min: 15
+      yellow_h_max: 67          # AWB 뒤 노랑 H 59. 대가: 순수 초록(H 58~67)은 노랑으로 봄 — 실물 초록 LED H 확인 필요
+      green_h_min: 68
+      green_h_max: 97           # AWB 뒤 초록 H 90
+      red_v_min: 180            # 색별 밝기 하한 (-1 = v_min). 빨강 퍽 V ≤ 165
+      yellow_v_min: 218         # 가까운 초록 퍽 밝은 면 H 36~67 · V ≤ 211 을 노랑으로 보지 않게
+      green_v_min: -1
+      red_warm_h_min: 140       # > 0 이면 H [red_warm_h_min, red2_h_min) 도 빨강 — 따뜻한 조명 AWB 아래 자홍으로 보이는 빨강 LED. 0 = 끔
+      red_warm_v_min: 150       # 그 띠의 밝기 하한 (-1 = 빨강 하한). 장면의 자홍 화소 V ≤ 68
+      min_area_px: 4            # 3 m 의 등 한 칸이 D435 640 × 480(fx 약 606)에서 약 8 × 7 px
+      segment_width_m: 0.0396   # 등 한 칸: 원통 지름 39.6 mm × 길이 34.9 mm (사용자 실측 2026-10-23)
+      segment_height_m: 0.0349
+      area_ratio_min: 0.15      # 후보 화소 수 / 그 거리의 등 한 칸 화소 수. 가운데가 하얗게 날아가면 작아짐
+      area_ratio_max: 2.5       # 빛 번짐
+      height_min_m: 0.05        # base_link 높이: 등은 바닥 위 68.9~173.6 mm (실측), 여유 포함
+      height_max_m: 0.20
+      queue_frames: 30          # 처리 전에 쌓아 두는 카메라별 프레임 수 (30 fps 로 1 s)
+      lock_dist_m: 0.10         # 같은 자리로 보는 거리 (빨강 · 초록 칸 중심이 위아래 0.07 m, 어느 색을 먼저 봐도 한 자리)
+      lock_blinks: 3            # 같은 자리에서 켜졌다 꺼지기를 이만큼 보면 신호등으로 고정
+      min_off_frames: 2         # 꺼짐으로 세는 연속 프레임 수
+      forget_s: 10.0
+      occlusion_margin_m: 0.10  # 켜진 등이 없는 프레임에서 칸 중심 깊이가 그 칸보다 이만큼 넘게 가까우면 가려짐 → 꺼짐이 아니라 모름
+      # 점멸 세기 (판정 기준 v1 U1 · U2 통과 값, Cartlidar/results/unit_signal_dice_261023_1859_5p)
+      blinks_per_cycle: 12      # 과제: 한 묶음 12회
+      term_ratio: 2.0           # 텀 = 점멸 사이 꺼짐 중앙값의 이 배수와
+      term_margin_frames: 4.0   #      중앙값 + 이 프레임 수 중 긴 것보다 긴 꺼짐
+      on_ratio: 0.5             # 켜짐 중앙값의 이 배수보다 짧은 점멸은 잡음
+      merge_ratio: 0.5          # 같은 색 사이 꺼짐이 꺼짐 중앙값의 이 배수보다 짧으면 한 점멸
+      max_gap_s: 0.5            # 신호등이 이보다 오래 안 보이면 세던 묶음을 버림
+      confirm_cycles: 2
+    dice:                       # 주사위 확인 (/perception/check_dice)
+      tolerance_m: 0.015        # 요청 tolerance 가 0 일 때 칸 중심 허용 오차 (판정 기준 U3 값)
+      region_margin_m: 0.04     # 칸 범위 밖 이만큼까지의 퍽을 판정에 넣음 (그 밖은 다른 선반 · 바닥)
+      max_age_s: 1.0            # 이보다 오래된 퍽 목록으로는 판정하지 않음
+    barcode:                    # 바코드 라벨 (READ_BARCODE, /perception/barcode). include/perception/barcode_locator.hpp · barcode_reader.hpp
+      # 찾기 문턱은 barcode.<이름> 으로 덮어쓴다(이름 · 기본값은 BarcodeLocatorConfig = R3 설계 46차 locate_v2.py CFG2, sha256 앞 16자 26bd7a554d716a67).
+      # 근거 · 판정 결과: Cartlidar/sim_render/README.md R3 절 (모의). 예: thr: 0.65, white_ring_min: 0.98, max_blur: 20.0
+      template_path: ""         # 라벨 그림. 비우면 share/perception/data/barcode_P2-01.png (설계 · 판정 렌더에 쓴 그림과 같음)
+      camera: front             # 라벨을 찾는 D435 (front | rear)
+      base_frame: base_footprint  # 찾기의 높이 · 거리 규칙(min_z 0.06 m, wall_min_top 0.20 m, rng 1.2 m)의 기준 = 바닥
+      depth_frames: 5           # 멈춰서 평균하는 깊이 장수 (설계 전제: 판정은 '5장 평균' 모의 깊이로 함)
+      depth_min_valid: 0        # 평균에 넣을 화소의 최소 유효 장수. 0 = 모든 장에 값이 있어야 함
+      max_motion_m: 0.01        # ★ 평균 중 차체(odom)가 이만큼 넘게 움직이면 다시 모음 (설계값, 실물에서 다시 정함)
+      max_rotation_deg: 1.0     # ★ 위와 같음 (회전)
+      read_scale: 1.0           # 팔 카메라(640 × 480) 영상을 zbar 로 읽기 전 확대 배율. 1 = 원본
+      read_gamma: 2.0           # 읽기 전 감마 (흐려진 좁은 흰 칸을 살림, R3 설계 44차: 설계 자료 5 벌에서 1.5~2.5 같은 판정)
+      read_min_quality: 4       # zbar quality(읽은 스캔 수) 하한: 체크섬 상쇄 잘못 읽기(P2-0x → PF-&x)는 최대 3 (44차)
+    frames:
+      base: base_link
+      odom: odom
+
+# 후방 장애물 판독 (rear_obstacle_node.cpp · rear_obstacle.hpp). 뒤 D435 컬러에 맞춘 깊이 → 차체 뒤 통로의 가장 가까운 장애물.
+#   라이다(바닥 위 한 높이 평면)가 못 보는 누운 퍽 · 선반 끝 같은 것을 보려는 것이다. 후진을 막는 것은 제어 쪽이 이 토픽으로 한다.
+#   카메라가 아래로 35° 기울어 바닥 높이에서는 뒤 끝 가까이가 화면 밖이다(URDF 261027_1711 · D435 컬러 화각으로 계산, 뒤 끝에서 약 0.31 m) → 그 안은 라이다 몫.
+rear_obstacle:
+  ros__parameters:
+    depth_topic: /top_camera_rear/aligned_depth_to_color/image_raw
+    info_topic: /top_camera_rear/color/camera_info    # 컬러에 맞춘 깊이라 컬러 내부값을 쓴다
+    depth_scale: 0.001          # [m] CV_16U 깊이 한 단위 (realsense2_camera 기본 mm). 32FC1 이면 쓰지 않음
+    target_frame: base_footprint   # z = 바닥 위 높이
+    # 통로 (base_footprint). URDF 261027_1711 충돌 형상 외곽: 뒤 끝 x −0.2185, 반폭 0.1676 m
+    x_edge: -0.2285             # [m] 차체 뒤 끝 (lidar.yaml self_box x_min 과 같게, 1 cm 여유)
+    y_half: 0.2176              # [m] 차체 반폭 + 0.05
+    z_min: 0.02                 # [m] 바닥 위 높이 하한 ★ 실물 깊이 잡음(바닥이 떠 보이는 정도)을 보고 맞춤
+    z_max: 0.45                 # [m]
+    range_m: 1.0                # [m] 뒤 끝에서 이 거리까지만 (release_m 이상이어야 함)
+    depth_min_m: 0.10
+    depth_max_m: 3.0
+    stride: 2                   # 화소 건너뛰기 (2 = 1/4 만 봄)
+    min_points: 20              # 이보다 적은 점은 잡음으로 봄
+    # 정지 · 해제 (obstacle_stop.hpp 와 같은 규칙) — 가정으로 정한 값, 모의 판정 · 실물 시험으로 확인 ★
+    #   후진 0.10 m/s 가정: 반응 0.1 s(0.01 m) + 감속(0.005 m) ≪ 0.40 m. 0.40 m 는 바닥 높이 사각(약 0.31 m)에 들어가기 전에 멈추려는 값
+    stop_m: 0.40
+    release_m: 0.50
+    release_count: 3
+    near_m: 0.0                 # 0 = "점 없음"을 너무 가까움으로 보지 않음 (카메라는 점 없음 = 통로가 비었음)
+    stale_s: 0.5                # [s] 깊이가 이만큼 없으면 정지
+    publish_rate: 10.0
+    stop_topic: /perception/rear_obstacle
+    reason_topic: /perception/rear_obstacle/reason
+    distance_topic: /perception/rear_obstacle/distance

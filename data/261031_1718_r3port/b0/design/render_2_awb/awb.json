@@ -1,0 +1,11 @@
+{
+ "source": "/home/pa4/git/lv2_next_module/261031_1718_r3port/b0/design/render_2",
+ "temp_k": 5313.4,
+ "gains_bgr": [
+  1.1358,
+  1.0199,
+  0.9072
+ ],
+ "images_changed": 72,
+ "tool": "Cartlidar/sim_render/awb.py"
+}

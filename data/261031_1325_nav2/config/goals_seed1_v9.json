@@ -1,0 +1,90 @@
+{
+ "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+ "rule": "설계 8 목표: L1 자세를 '실제로 도는 구간'의 footprint 여유로 다시 고른다(설계 7 반복 r3 실패 대응).\n설계 4 규칙(카메라 0.35~0.55 m, 법선 ≤ 15°, footprint 여유 ≥ 0.05)은 그대로, 360° 회전 여유 ≥ 0.03 대신\n들어올 때(+y → 태그 방향, 반시계) · 나갈 때(태그 방향 → −y, 반시계) 두 1/4 회전의 최소 footprint 여유 ≥ 0.07 m\n(= 반복 3회에서 본 위치 추정 최대 오차 0.066 m 이상, L1 상자는 라이다에 안 보여 추정 오차가 그대로 여유를 먹음).\n그중 |거리 − 0.45| + 각/90 최소. 나머지 목표는 --base 그대로.\n설계 9: 같은 규칙을 L3 에도(--place L3 --base goals_seed1_v8.json --out goals_seed1_v9.json, L3 도 +y 로 들어와 −y 로 나감 — v8 참값 경로로 확인).",
+ "goals": [
+  {
+   "name": "start_box_1",
+   "x": 2.2325,
+   "y": 0.6663,
+   "yaw": 2.78623,
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ],
+   "rot_clearance": 0.31
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "x": 4.08,
+   "y": 0.41,
+   "yaw": 1.5708,
+   "rot_clearance": 0.082,
+   "clearance": 0.2215
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 구간 규칙)",
+   "x": 4.158,
+   "y": 0.895,
+   "yaw": 2.9997,
+   "camera_dist": 0.45,
+   "off_normal_deg": 8.1,
+   "clearance": 0.1119,
+   "sweep_in": 0.0718,
+   "sweep_out": 0.0718
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "x": 2.202,
+   "y": 2.6945,
+   "yaw": 1.5708,
+   "camera_dist": 0.451,
+   "off_normal_deg": 0.0,
+   "clearance": 0.1275,
+   "rot_clearance": 0.0768,
+   "bumper_to_face": 0.127
+  },
+  {
+   "name": "start_box_3",
+   "x": 2.5752,
+   "y": 4.6227,
+   "yaw": 1.11249,
+   "standoff": 0.45,
+   "clearance": 0.0864,
+   "face": [
+    2.8907,
+    5.2621
+   ],
+   "normal": [
+    -0.4424,
+    -0.8968
+   ],
+   "rot_clearance": 0.0842
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 구간 규칙)",
+   "x": 4.163,
+   "y": 5.354,
+   "yaw": 3.14159,
+   "camera_dist": 0.451,
+   "off_normal_deg": 0.0,
+   "clearance": 0.1275,
+   "sweep_in": 0.0768,
+   "sweep_out": 0.0768
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "x": 0.724,
+   "y": 0.95,
+   "yaw": 3.14159,
+   "shift_m": 0.01,
+   "rot_clearance": 0.0312,
+   "clearance": 0.1899
+  }
+ ]
+}

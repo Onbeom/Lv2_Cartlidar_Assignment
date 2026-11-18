@@ -1,0 +1,139 @@
+{
+ "K1": {
+  "images": 1478,
+  "same": 1474,
+  "ratio": 0.9973,
+  "diff_images": [
+   "video_front/front_v2__146_000330.png",
+   "video_front/front_v2__148_000342.png",
+   "video_front/front_v2__177_000515.png",
+   "video_rear/rear_v1__234_000318.png"
+  ],
+  "score_diff_max": 0.0174,
+  "score_diff_median": 0.00029,
+  "pass": true
+ },
+ "K2": {
+  "recall_precision@0.6": {
+   "all_D": {
+    "judge_front": [
+     0.683,
+     0.9252
+    ],
+    "judge_rear": [
+     0.6621,
+     0.9797
+    ],
+    "video_front": [
+     0.914,
+     0.9532
+    ],
+    "video_rear": [
+     0.8956,
+     0.9797
+    ],
+    "video_arm": [
+     0.9587,
+     0.9508
+    ]
+   },
+   "J32": {
+    "judge_front": [
+     0.6246,
+     0.9231
+    ],
+    "judge_rear": [
+     0.5953,
+     0.9774
+    ],
+    "video_front": [
+     0.8991,
+     0.9431
+    ],
+    "video_rear": [
+     0.8927,
+     0.9781
+    ],
+    "video_arm": [
+     0.9504,
+     0.9504
+    ]
+   },
+   "J16": {
+    "judge_front": [
+     0.6246,
+     0.9231
+    ],
+    "judge_rear": [
+     0.5953,
+     0.9774
+    ],
+    "video_front": [
+     0.8991,
+     0.9413
+    ],
+    "video_rear": [
+     0.8927,
+     0.9781
+    ],
+    "video_arm": [
+     0.9504,
+     0.9504
+    ]
+   }
+  },
+  "J16_minus_J32": {
+   "judge_front": [
+    0.0,
+    0.0
+   ],
+   "judge_rear": [
+    0.0,
+    0.0
+   ],
+   "video_front": [
+    0.0,
+    -0.0018
+   ],
+   "video_rear": [
+    0.0,
+    0.0
+   ],
+   "video_arm": [
+    0.0,
+    0.0
+   ]
+  },
+  "eval203@0.6": {
+   "J32": {
+    "targets": 378,
+    "tp": 362,
+    "fp": 8
+   },
+   "J16": {
+    "targets": 378,
+    "tp": 362,
+    "fp": 8
+   }
+  },
+  "pass": true
+ },
+ "K3": {
+  "J32": {
+   "trtexec_median_ms": 10.3887,
+   "python_infer_median_ms": 13.239,
+   "python_total_median_ms": 17.508
+  },
+  "J16": {
+   "trtexec_median_ms": 4.27148,
+   "python_infer_median_ms": 6.431,
+   "python_total_median_ms": 10.467
+  },
+  "infer_ratio_J16_J32": 0.486,
+  "pass": true
+ },
+ "board": {
+  "nvpmodel": "NV Power Mode: 25W\n1",
+  "trtexec": "&&&& RUNNING TensorRT.trtexec [TensorRT v101602] [b10] # /usr/src/tensorrt/bin/trtexec --version\n[11/04/2026-09:48:13] [I] TF32 is enabled by default. Add --noTF32 flag to further improve accuracy with some performance cost."
+ }
+}

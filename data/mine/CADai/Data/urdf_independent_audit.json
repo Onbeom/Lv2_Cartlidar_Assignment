@@ -1,0 +1,309 @@
+{
+  "urdf": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021\\urdf\\waffle_4wd.urdf",
+  "links": 14,
+  "joints": 13,
+  "root": "base_link",
+  "mass_g": 4891.194067702902,
+  "link_checks": [
+    {
+      "link": "base_link",
+      "mass_g": 3721.80302244876,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 1.4901161193847656e-08,
+      "positive_inertia": true
+    },
+    {
+      "link": "wheel_front_left",
+      "mass_g": 30.46860603667431,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 2.220446049250313e-16,
+      "positive_inertia": true
+    },
+    {
+      "link": "wheel_front_right",
+      "mass_g": 30.468607094565996,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 2.220446049250313e-16,
+      "positive_inertia": true
+    },
+    {
+      "link": "wheel_rear_left",
+      "mass_g": 30.46860603667431,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 2.220446049250313e-16,
+      "positive_inertia": true
+    },
+    {
+      "link": "wheel_rear_right",
+      "mass_g": 30.468607094565996,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 2.220446049250313e-16,
+      "positive_inertia": true
+    },
+    {
+      "link": "arm_link_1",
+      "mass_g": 105.7803861201182,
+      "mass_error_g": 0.0,
+      "com_error_mm": 1.1102230246251565e-16,
+      "inertia_error_g_mm2": 7.275957614183426e-12,
+      "positive_inertia": true
+    },
+    {
+      "link": "lidar_front",
+      "mass_g": 152.84877869452652,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 1.4551915228366852e-11,
+      "positive_inertia": true
+    },
+    {
+      "link": "lidar_rear",
+      "mass_g": 152.84877869452652,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 1.4551915228366852e-11,
+      "positive_inertia": true
+    },
+    {
+      "link": "arm_link_2",
+      "mass_g": 144.85128784809828,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 1.7462298274040222e-10,
+      "positive_inertia": true
+    },
+    {
+      "link": "arm_link_3",
+      "mass_g": 136.85685332970507,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 5.820766091346741e-11,
+      "positive_inertia": true
+    },
+    {
+      "link": "arm_link_4",
+      "mass_g": 96.37476312542572,
+      "mass_error_g": 0.0,
+      "com_error_mm": 2.7396221887756277e-21,
+      "inertia_error_g_mm2": 1.4551915228366852e-11,
+      "positive_inertia": true
+    },
+    {
+      "link": "arm_link_5",
+      "mass_g": 207.22119016568175,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 5.820766091346741e-11,
+      "positive_inertia": true
+    },
+    {
+      "link": "gripper_left_link",
+      "mass_g": 25.36729050679057,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 5.4569682106375694e-12,
+      "positive_inertia": true
+    },
+    {
+      "link": "gripper_right_link",
+      "mass_g": 25.36729050679057,
+      "mass_error_g": 0.0,
+      "com_error_mm": 0.0,
+      "inertia_error_g_mm2": 7.275957614183426e-12,
+      "positive_inertia": true
+    }
+  ],
+  "joint_checks": [
+    {
+      "joint": "Wheel_Revolute_Front_Left",
+      "axis_world": [
+        0.0,
+        0.9999999999999466,
+        3.2679489653813835e-07
+      ],
+      "axis_error": 0.0,
+      "origin_error_mm": 0.0
+    },
+    {
+      "joint": "Wheel_Revolute_Front_Right",
+      "axis_world": [
+        0.0,
+        0.9999999999999466,
+        3.2679489653813835e-07
+      ],
+      "axis_error": 0.0,
+      "origin_error_mm": 0.0
+    },
+    {
+      "joint": "Wheel_Revolute_Rear_Left",
+      "axis_world": [
+        0.0,
+        0.9999999999999466,
+        3.2679489653813835e-07
+      ],
+      "axis_error": 0.0,
+      "origin_error_mm": 0.0
+    },
+    {
+      "joint": "Wheel_Revolute_Rear_Right",
+      "axis_world": [
+        0.0,
+        0.9999999999999466,
+        3.2679489653813835e-07
+      ],
+      "axis_error": 0.0,
+      "origin_error_mm": 0.0
+    },
+    {
+      "joint": "RMX52_Base_Yaw",
+      "axis_world": [
+        0.0,
+        3.464102066193935e-07,
+        -0.99999999999994
+      ],
+      "axis_error": 3.464102066193935e-07,
+      "origin_error_mm": 0.0
+    },
+    {
+      "joint": "RMX52_Shoulder",
+      "axis_world": [
+        0.0,
+        -0.9999999999997734,
+        -6.732051031574938e-07
+      ],
+      "axis_error": 3.464102066193554e-07,
+      "origin_error_mm": 1.3215549382529862e-05
+    },
+    {
+      "joint": "RMX52_Elbow",
+      "axis_world": [
+        0.0,
+        -0.9999999999997734,
+        -6.732051031574938e-07
+      ],
+      "axis_error": 3.464102066193554e-07,
+      "origin_error_mm": 5.755605582980736e-05
+    },
+    {
+      "joint": "RMX52_Wrist_Pitch",
+      "axis_world": [
+        0.0,
+        -0.9999999999997734,
+        -6.732051031574938e-07
+      ],
+      "axis_error": 3.464102066193554e-07,
+      "origin_error_mm": 5.755605582980736e-05
+    },
+    {
+      "joint": "RMX52_Wrist_Roll_Reversed",
+      "axis_world": [
+        -0.9999999999998866,
+        3.267951297431636e-07,
+        -3.4640998661932295e-07
+      ],
+      "axis_error": 1.1999997465373392e-13,
+      "origin_error_mm": 5.755605582980736e-05
+    },
+    {
+      "joint": "gripper_left_joint",
+      "axis_world": [
+        1.1320510725330486e-13,
+        0.99999999999994,
+        3.4641009341432543e-07
+      ],
+      "axis_error": 3.464100934143255e-07,
+      "origin_error_mm": 3.0835851930532954e-05
+    },
+    {
+      "joint": "gripper_right_joint",
+      "axis_world": [
+        1.1320510725330486e-13,
+        0.99999999999994,
+        3.4641009341432543e-07
+      ],
+      "axis_error": 3.464100934143255e-07,
+      "origin_error_mm": 0.0002485590470655552
+    }
+  ],
+  "mesh_checks": [
+    {
+      "link": "base_link",
+      "world_bounds_error_mm": 0.0009799381258517315,
+      "vertices": 489536
+    },
+    {
+      "link": "wheel_front_left",
+      "world_bounds_error_mm": 6.394516615415569e-05,
+      "vertices": 58673
+    },
+    {
+      "link": "wheel_front_right",
+      "world_bounds_error_mm": 6.394879545013055e-05,
+      "vertices": 58671
+    },
+    {
+      "link": "wheel_rear_left",
+      "world_bounds_error_mm": 6.394516615415569e-05,
+      "vertices": 58673
+    },
+    {
+      "link": "wheel_rear_right",
+      "world_bounds_error_mm": 6.394879545013055e-05,
+      "vertices": 58671
+    },
+    {
+      "link": "arm_link_1",
+      "world_bounds_error_mm": 8.582288790037751e-05,
+      "vertices": 13240
+    },
+    {
+      "link": "lidar_front",
+      "world_bounds_error_mm": 0.000999999999990564,
+      "vertices": 34498
+    },
+    {
+      "link": "lidar_rear",
+      "world_bounds_error_mm": 0.000999999999990564,
+      "vertices": 34498
+    },
+    {
+      "link": "arm_link_2",
+      "world_bounds_error_mm": 0.0002013648347194419,
+      "vertices": 18993
+    },
+    {
+      "link": "arm_link_3",
+      "world_bounds_error_mm": 0.00021346534942523476,
+      "vertices": 18544
+    },
+    {
+      "link": "arm_link_4",
+      "world_bounds_error_mm": 0.0002386825994413755,
+      "vertices": 13386
+    },
+    {
+      "link": "arm_link_5",
+      "world_bounds_error_mm": 0.00010914073075696251,
+      "vertices": 63696
+    },
+    {
+      "link": "gripper_left_link",
+      "world_bounds_error_mm": 3.689802537110154e-05,
+      "vertices": 1838
+    },
+    {
+      "link": "gripper_right_link",
+      "world_bounds_error_mm": 0.00025583365861336915,
+      "vertices": 1838
+    }
+  ],
+  "missing_meshes": [],
+  "xacro_mimic_present": true,
+  "ros_runtime_tested": false,
+  "passed": true
+}

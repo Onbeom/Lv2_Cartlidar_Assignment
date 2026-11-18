@@ -1,0 +1,42 @@
+{
+  "measured": {
+    "corner": "B",
+    "side": "L",
+    "radius_cmd_m": 0.1,
+    "min_clearance_mm": 156.39466061767016,
+    "min_clearance_t_s": 17.206000000001342,
+    "min_clearance_phase": "arc",
+    "min_clearance_pose": [
+      0.7576560987695019,
+      0.01944539598741976,
+      28.674115149437455
+    ],
+    "arc_time_s": 4.089999999997945,
+    "arc_time_nominal_s": 3.141592653589793,
+    "arc_radius_fit_m": 0.1293887388834371,
+    "arc_end_outward_mm": 36.203183595449715,
+    "arc_end_side_mm": 123.16753332798294,
+    "yaw_overshoot_deg": 0.22478893960947652,
+    "end_outward_mm": 33.67974593982193,
+    "end_along_mm": 22.983318656059517,
+    "end_heading_err_deg": 0.22478893960947652,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 4e-05,
+      "RMX52_Shoulder": 5e-05,
+      "RMX52_Elbow": 0.00185,
+      "RMX52_Wrist_Pitch": 0.0006,
+      "RMX52_Wrist_Roll_Reversed": 1e-05
+    }
+  },
+  "checks": {
+    "최소 간격 ≥ 30 mm": true,
+    "호 회전 90° 도달": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V4"
+}

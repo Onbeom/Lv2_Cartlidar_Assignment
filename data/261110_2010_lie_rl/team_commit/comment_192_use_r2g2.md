@@ -1,0 +1,1 @@
+실물 시험 기록 감사합니다. 이번 시험은 `lieupright_r2e.onnx` 로 하셨는데, dev 배포 모델은 PR #217 로 **r2g2** (`robot_policy/config/models/lieupright_r2g2.onnx`, `policies.yaml` `lie_upright.model`) 로 바뀌었습니다. r2g2 는 노드와 같은 관측(퍽 · 긴 축 · 옆 퍽은 시작 때 잰 값 고정, 쥠은 손가락만)과 노드 관절 속도 비례 축소 3.0 rad/s 로 학습한 판입니다. 다음 실물 시험은 r2g2 로 부탁드립니다.

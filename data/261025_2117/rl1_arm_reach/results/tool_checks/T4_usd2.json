@@ -1,0 +1,9 @@
+{
+ "test": "T4",
+ "num_envs": 64,
+ "startup_s": 6.2,
+ "n_compared": 1000,
+ "err_max_m": 1.1321511692585773e-06,
+ "err_mean_m": 3.2037968367149006e-07,
+ "pass_le_1mm": true
+}

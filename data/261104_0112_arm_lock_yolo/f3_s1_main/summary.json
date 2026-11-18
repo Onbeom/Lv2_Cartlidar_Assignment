@@ -1,0 +1,89 @@
+{
+ "scenes": 12,
+ "valid_scenes": 10,
+ "invalid": [
+  [
+   "w4_out00_L0",
+   "puck_11",
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   "puck_11",
+   null,
+   null
+  ]
+ ],
+ "frames": 250,
+ "unanswered": 0,
+ "J1_first_lock_target": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J1_fail": [],
+ "J2_full_frames": {
+  "ok": 178,
+  "n": 182,
+  "rate": 0.978
+ },
+ "J2_tol": 0.05,
+ "J2_err_max": 0.0485,
+ "J2_fail": [
+  [
+   "w2_out00_L0",
+   14,
+   true,
+   0.0636,
+   "puck_02"
+  ],
+  [
+   "w2_out00_L0",
+   15,
+   false,
+   null,
+   null
+  ],
+  [
+   "w2_out00_L1",
+   14,
+   true,
+   0.0599,
+   "puck_02"
+  ],
+  [
+   "w2_out00_L1",
+   15,
+   false,
+   null,
+   null
+  ]
+ ],
+ "J3_other_puck_frames": 0,
+ "J3_examples": [],
+ "not_puck_frames": 0,
+ "J4_out_frames_invalid": {
+  "ok": 40,
+  "n": 40,
+  "rate": 1.0
+ },
+ "J4_out_fail": [],
+ "J4_reacquire": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J4_reacquire_fail": [],
+ "partial_frames": 28,
+ "partial_pointing_target": 16,
+ "J1_pass": true,
+ "J2_pass": true,
+ "J3_pass": true,
+ "J4_pass": true,
+ "pass": true,
+ "d435_extrinsic_mode": "new_model_fk_exact_no_jitter",
+ "joint_state_delay_s": 0.0,
+ "front_depth_empty": false,
+ "render": "/home/pa4/git/lv2_next_module/261104_0112_arm_lock_yolo/judge_set"
+}

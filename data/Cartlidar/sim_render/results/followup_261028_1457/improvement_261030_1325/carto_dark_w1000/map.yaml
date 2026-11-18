@@ -1,0 +1,6 @@
+image: /home/pa4/git/lv2_next_module/Cartlidar/sim_render/results/followup_261028_1457/improvement_261030_1325/carto_dark_w1000/map.pgm
+resolution: 0.025000
+origin: [-4.453758, -2.914466, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

@@ -1,0 +1,86 @@
+{
+  "subs_created_at": {
+    "/clock": 1792908778.848309,
+    "/tf": 1792908778.87017,
+    "/odom": 1792908778.8712568,
+    "/scan": 1792908778.872045,
+    "/left/image_raw": 1792908778.872309,
+    "/right/image_raw": 1792908778.8725288,
+    "/left/camera_info": 1792908778.8729236,
+    "/right/camera_info": 1792908778.873244
+  },
+  "twist_sent": 138,
+  "twist_lin": [
+    0.25,
+    -0.125,
+    0.0625
+  ],
+  "twist_ang": [
+    0.5,
+    -0.75,
+    1.0
+  ],
+  "stamped_lin": [
+    0.375,
+    -0.0625,
+    0.03125
+  ],
+  "stamped_ang": [
+    -0.25,
+    0.125,
+    -1.5
+  ],
+  "stamped_frame": "base_footprint",
+  "publishers": {
+    "/clock": [
+      {
+        "node": "_BridgeCheck_PublishClock",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/tf": [
+      {
+        "node": "_BridgeCheck_PublishTF",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/odom": [
+      {
+        "node": "_BridgeCheck_PublishOdom",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/scan": [
+      {
+        "node": "_Render_PostProcess_SDGPipeline_rtx_sensor_8498840093670_NodeWriterWriter",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/left/image_raw": [
+      {
+        "node": "_Render_PostProcess_SDGPipeline_Replicator_01_NodeWriterWriter",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/right/image_raw": [
+      {
+        "node": "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter",
+        "reliability": "1",
+        "durability": "2",
+        "depth": 10
+      }
+    ],
+    "/left/camera_info": [],
+    "/right/camera_info": []
+  }
+}

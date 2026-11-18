@@ -1,0 +1,1149 @@
+<mujoco model="waffle_4wd">
+  <compiler angle="radian"/>
+
+  <option integrator="implicitfast"/>
+
+  <visual>
+    <quality shadowsize="8192"/>
+  </visual>
+
+  <asset>
+    <texture type="2d" colorspace="auto" name="grid" builtin="checker" rgb1="0.82 0.84 0.86" rgb2="0.55 0.58 0.62" width="512" height="512"/>
+    <material name="grid" texture="grid" texrepeat="4 4" texuniform="true"/>
+    <mesh name="base_link_part022_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull00.stl"/>
+    <mesh name="base_link_part022_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull01.stl"/>
+    <mesh name="base_link_part022_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull02.stl"/>
+    <mesh name="base_link_part022_hull03_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull03_free00.stl"/>
+    <mesh name="base_link_part022_hull03_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull03_free01.stl"/>
+    <mesh name="base_link_part022_hull03_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull03_free02.stl"/>
+    <mesh name="base_link_part022_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull04.stl"/>
+    <mesh name="base_link_part022_hull05_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull05_free00.stl"/>
+    <mesh name="base_link_part022_hull05_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull05_free01.stl"/>
+    <mesh name="base_link_part022_hull05_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull05_free02.stl"/>
+    <mesh name="base_link_part022_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull06.stl"/>
+    <mesh name="base_link_part022_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull07.stl"/>
+    <mesh name="base_link_part022_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull08.stl"/>
+    <mesh name="base_link_part022_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull09.stl"/>
+    <mesh name="base_link_part022_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull10.stl"/>
+    <mesh name="base_link_part022_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull11.stl"/>
+    <mesh name="base_link_part022_hull12_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull12_free00.stl"/>
+    <mesh name="base_link_part022_hull12_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull12_free01.stl"/>
+    <mesh name="base_link_part022_hull12_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull12_free02.stl"/>
+    <mesh name="base_link_part022_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull13.stl"/>
+    <mesh name="base_link_part022_hull14_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull14_free00.stl"/>
+    <mesh name="base_link_part022_hull14_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull14_free01.stl"/>
+    <mesh name="base_link_part022_hull14_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull14_free02.stl"/>
+    <mesh name="base_link_part022_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull15.stl"/>
+    <mesh name="base_link_part022_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull16.stl"/>
+    <mesh name="base_link_part022_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull17.stl"/>
+    <mesh name="base_link_part022_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull18.stl"/>
+    <mesh name="base_link_part022_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull19.stl"/>
+    <mesh name="base_link_part022_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull20.stl"/>
+    <mesh name="base_link_part022_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull21.stl"/>
+    <mesh name="base_link_part022_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull22.stl"/>
+    <mesh name="base_link_part022_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull23.stl"/>
+    <mesh name="base_link_part022_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull24.stl"/>
+    <mesh name="base_link_part022_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull25.stl"/>
+    <mesh name="base_link_part022_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull26.stl"/>
+    <mesh name="base_link_part022_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull27.stl"/>
+    <mesh name="base_link_part022_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull28.stl"/>
+    <mesh name="base_link_part022_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull29.stl"/>
+    <mesh name="base_link_part022_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull30.stl"/>
+    <mesh name="base_link_part022_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part022_hull31.stl"/>
+    <mesh name="base_link_part025_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull00.stl"/>
+    <mesh name="base_link_part025_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull01.stl"/>
+    <mesh name="base_link_part025_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull02.stl"/>
+    <mesh name="base_link_part025_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull03.stl"/>
+    <mesh name="base_link_part025_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull04.stl"/>
+    <mesh name="base_link_part025_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull05.stl"/>
+    <mesh name="base_link_part025_hull06_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull06_free00.stl"/>
+    <mesh name="base_link_part025_hull06_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull06_free01.stl"/>
+    <mesh name="base_link_part025_hull07_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull07_free00.stl"/>
+    <mesh name="base_link_part025_hull07_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull07_free01.stl"/>
+    <mesh name="base_link_part025_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull08.stl"/>
+    <mesh name="base_link_part025_hull09_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull09_free00.stl"/>
+    <mesh name="base_link_part025_hull09_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull09_free01.stl"/>
+    <mesh name="base_link_part025_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull10.stl"/>
+    <mesh name="base_link_part025_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull11.stl"/>
+    <mesh name="base_link_part025_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull12.stl"/>
+    <mesh name="base_link_part025_hull13_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull13_free00.stl"/>
+    <mesh name="base_link_part025_hull13_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull13_free01.stl"/>
+    <mesh name="base_link_part025_hull13_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull13_free02.stl"/>
+    <mesh name="base_link_part025_hull14_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull14_free00.stl"/>
+    <mesh name="base_link_part025_hull14_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull14_free01.stl"/>
+    <mesh name="base_link_part025_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull15.stl"/>
+    <mesh name="base_link_part025_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull16.stl"/>
+    <mesh name="base_link_part025_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull17.stl"/>
+    <mesh name="base_link_part025_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull18.stl"/>
+    <mesh name="base_link_part025_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull19.stl"/>
+    <mesh name="base_link_part025_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull20.stl"/>
+    <mesh name="base_link_part025_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull21.stl"/>
+    <mesh name="base_link_part025_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull22.stl"/>
+    <mesh name="base_link_part025_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull23.stl"/>
+    <mesh name="base_link_part025_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull24.stl"/>
+    <mesh name="base_link_part025_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull25.stl"/>
+    <mesh name="base_link_part025_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull26.stl"/>
+    <mesh name="base_link_part025_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull27.stl"/>
+    <mesh name="base_link_part025_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull28.stl"/>
+    <mesh name="base_link_part025_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull29.stl"/>
+    <mesh name="base_link_part025_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull30.stl"/>
+    <mesh name="base_link_part025_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part025_hull31.stl"/>
+    <mesh name="base_link_part026_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull00.stl"/>
+    <mesh name="base_link_part026_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull01.stl"/>
+    <mesh name="base_link_part026_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull02.stl"/>
+    <mesh name="base_link_part026_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull03.stl"/>
+    <mesh name="base_link_part026_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull04.stl"/>
+    <mesh name="base_link_part026_hull05_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull05_free00.stl"/>
+    <mesh name="base_link_part026_hull05_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull05_free01.stl"/>
+    <mesh name="base_link_part026_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull06.stl"/>
+    <mesh name="base_link_part026_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull07.stl"/>
+    <mesh name="base_link_part026_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull08.stl"/>
+    <mesh name="base_link_part026_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull09.stl"/>
+    <mesh name="base_link_part026_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull10.stl"/>
+    <mesh name="base_link_part026_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull11.stl"/>
+    <mesh name="base_link_part026_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull12.stl"/>
+    <mesh name="base_link_part026_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull13.stl"/>
+    <mesh name="base_link_part026_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull14.stl"/>
+    <mesh name="base_link_part026_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull15.stl"/>
+    <mesh name="base_link_part026_hull16_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull16_free00.stl"/>
+    <mesh name="base_link_part026_hull16_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull16_free01.stl"/>
+    <mesh name="base_link_part026_hull17_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull17_free00.stl"/>
+    <mesh name="base_link_part026_hull17_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull17_free01.stl"/>
+    <mesh name="base_link_part026_hull18_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull18_free00.stl"/>
+    <mesh name="base_link_part026_hull18_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull18_free01.stl"/>
+    <mesh name="base_link_part026_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull19.stl"/>
+    <mesh name="base_link_part026_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull20.stl"/>
+    <mesh name="base_link_part026_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull21.stl"/>
+    <mesh name="base_link_part026_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull22.stl"/>
+    <mesh name="base_link_part026_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull23.stl"/>
+    <mesh name="base_link_part026_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull24.stl"/>
+    <mesh name="base_link_part026_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull25.stl"/>
+    <mesh name="base_link_part026_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull26.stl"/>
+    <mesh name="base_link_part026_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull27.stl"/>
+    <mesh name="base_link_part026_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull28.stl"/>
+    <mesh name="base_link_part026_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull29.stl"/>
+    <mesh name="base_link_part026_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull30.stl"/>
+    <mesh name="base_link_part026_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part026_hull31.stl"/>
+    <mesh name="base_link_part029_hull00_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull00_free00.stl"/>
+    <mesh name="base_link_part029_hull00_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull00_free01.stl"/>
+    <mesh name="base_link_part029_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull01.stl"/>
+    <mesh name="base_link_part029_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull02.stl"/>
+    <mesh name="base_link_part029_hull03_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull03_free00.stl"/>
+    <mesh name="base_link_part029_hull03_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull03_free01.stl"/>
+    <mesh name="base_link_part029_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull04.stl"/>
+    <mesh name="base_link_part029_hull05_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull05_free00.stl"/>
+    <mesh name="base_link_part029_hull05_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull05_free01.stl"/>
+    <mesh name="base_link_part029_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull06.stl"/>
+    <mesh name="base_link_part029_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull07.stl"/>
+    <mesh name="base_link_part029_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull08.stl"/>
+    <mesh name="base_link_part029_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull09.stl"/>
+    <mesh name="base_link_part029_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull10.stl"/>
+    <mesh name="base_link_part029_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull11.stl"/>
+    <mesh name="base_link_part029_hull12_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull12_free00.stl"/>
+    <mesh name="base_link_part029_hull12_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull12_free01.stl"/>
+    <mesh name="base_link_part029_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull13.stl"/>
+    <mesh name="base_link_part029_hull14_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull14_free00.stl"/>
+    <mesh name="base_link_part029_hull14_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull14_free01.stl"/>
+    <mesh name="base_link_part029_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull15.stl"/>
+    <mesh name="base_link_part029_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull16.stl"/>
+    <mesh name="base_link_part029_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull17.stl"/>
+    <mesh name="base_link_part029_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull18.stl"/>
+    <mesh name="base_link_part029_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull19.stl"/>
+    <mesh name="base_link_part029_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull20.stl"/>
+    <mesh name="base_link_part029_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull21.stl"/>
+    <mesh name="base_link_part029_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull22.stl"/>
+    <mesh name="base_link_part029_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull23.stl"/>
+    <mesh name="base_link_part029_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull24.stl"/>
+    <mesh name="base_link_part029_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull25.stl"/>
+    <mesh name="base_link_part029_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull26.stl"/>
+    <mesh name="base_link_part029_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull27.stl"/>
+    <mesh name="base_link_part029_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull28.stl"/>
+    <mesh name="base_link_part029_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull29.stl"/>
+    <mesh name="base_link_part029_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull30.stl"/>
+    <mesh name="base_link_part029_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part029_hull31.stl"/>
+    <mesh name="base_link_part140_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull00.stl"/>
+    <mesh name="base_link_part140_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull01.stl"/>
+    <mesh name="base_link_part140_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull02.stl"/>
+    <mesh name="base_link_part140_hull03_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull03_free00.stl"/>
+    <mesh name="base_link_part140_hull03_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull03_free01.stl"/>
+    <mesh name="base_link_part140_hull03_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull03_free02.stl"/>
+    <mesh name="base_link_part140_hull03_free03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull03_free03.stl"/>
+    <mesh name="base_link_part140_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull04.stl"/>
+    <mesh name="base_link_part140_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull05.stl"/>
+    <mesh name="base_link_part140_hull06_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull06_free00.stl"/>
+    <mesh name="base_link_part140_hull06_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull06_free01.stl"/>
+    <mesh name="base_link_part140_hull06_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull06_free02.stl"/>
+    <mesh name="base_link_part140_hull06_free03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull06_free03.stl"/>
+    <mesh name="base_link_part140_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull07.stl"/>
+    <mesh name="base_link_part140_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull08.stl"/>
+    <mesh name="base_link_part140_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull09.stl"/>
+    <mesh name="base_link_part140_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull10.stl"/>
+    <mesh name="base_link_part140_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull11.stl"/>
+    <mesh name="base_link_part140_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull12.stl"/>
+    <mesh name="base_link_part140_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull13.stl"/>
+    <mesh name="base_link_part140_hull14_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull14_free00.stl"/>
+    <mesh name="base_link_part140_hull14_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull14_free01.stl"/>
+    <mesh name="base_link_part140_hull14_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull14_free02.stl"/>
+    <mesh name="base_link_part140_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull15.stl"/>
+    <mesh name="base_link_part140_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull16.stl"/>
+    <mesh name="base_link_part140_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull17.stl"/>
+    <mesh name="base_link_part140_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull18.stl"/>
+    <mesh name="base_link_part140_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull19.stl"/>
+    <mesh name="base_link_part140_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull20.stl"/>
+    <mesh name="base_link_part140_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull21.stl"/>
+    <mesh name="base_link_part140_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull22.stl"/>
+    <mesh name="base_link_part140_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull23.stl"/>
+    <mesh name="base_link_part140_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull24.stl"/>
+    <mesh name="base_link_part140_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull25.stl"/>
+    <mesh name="base_link_part140_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull26.stl"/>
+    <mesh name="base_link_part140_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull27.stl"/>
+    <mesh name="base_link_part140_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull28.stl"/>
+    <mesh name="base_link_part140_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull29.stl"/>
+    <mesh name="base_link_part140_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull30.stl"/>
+    <mesh name="base_link_part140_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part140_hull31.stl"/>
+    <mesh name="base_link_part141_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull00.stl"/>
+    <mesh name="base_link_part141_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull01.stl"/>
+    <mesh name="base_link_part141_hull02_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull02_free00.stl"/>
+    <mesh name="base_link_part141_hull02_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull02_free01.stl"/>
+    <mesh name="base_link_part141_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull03.stl"/>
+    <mesh name="base_link_part141_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull04.stl"/>
+    <mesh name="base_link_part141_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull05.stl"/>
+    <mesh name="base_link_part141_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull06.stl"/>
+    <mesh name="base_link_part141_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull07.stl"/>
+    <mesh name="base_link_part141_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull08.stl"/>
+    <mesh name="base_link_part141_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull09.stl"/>
+    <mesh name="base_link_part141_hull10_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull10_free00.stl"/>
+    <mesh name="base_link_part141_hull10_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull10_free01.stl"/>
+    <mesh name="base_link_part141_hull10_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull10_free02.stl"/>
+    <mesh name="base_link_part141_hull11_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull11_free00.stl"/>
+    <mesh name="base_link_part141_hull11_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull11_free01.stl"/>
+    <mesh name="base_link_part141_hull11_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull11_free02.stl"/>
+    <mesh name="base_link_part141_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull12.stl"/>
+    <mesh name="base_link_part141_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull13.stl"/>
+    <mesh name="base_link_part141_hull14_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull14_free00.stl"/>
+    <mesh name="base_link_part141_hull14_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull14_free01.stl"/>
+    <mesh name="base_link_part141_hull14_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull14_free02.stl"/>
+    <mesh name="base_link_part141_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull15.stl"/>
+    <mesh name="base_link_part141_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull16.stl"/>
+    <mesh name="base_link_part141_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull17.stl"/>
+    <mesh name="base_link_part141_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull18.stl"/>
+    <mesh name="base_link_part141_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull19.stl"/>
+    <mesh name="base_link_part141_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull20.stl"/>
+    <mesh name="base_link_part141_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull21.stl"/>
+    <mesh name="base_link_part141_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull22.stl"/>
+    <mesh name="base_link_part141_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull23.stl"/>
+    <mesh name="base_link_part141_hull24_free00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull24_free00.stl"/>
+    <mesh name="base_link_part141_hull24_free01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull24_free01.stl"/>
+    <mesh name="base_link_part141_hull24_free02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull24_free02.stl"/>
+    <mesh name="base_link_part141_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull25.stl"/>
+    <mesh name="base_link_part141_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull26.stl"/>
+    <mesh name="base_link_part141_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull27.stl"/>
+    <mesh name="base_link_part141_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull28.stl"/>
+    <mesh name="base_link_part141_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull29.stl"/>
+    <mesh name="base_link_part141_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull30.stl"/>
+    <mesh name="base_link_part141_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part141_hull31.stl"/>
+    <mesh name="base_link_part146_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull00.stl"/>
+    <mesh name="base_link_part146_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull01.stl"/>
+    <mesh name="base_link_part146_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull02.stl"/>
+    <mesh name="base_link_part146_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull03.stl"/>
+    <mesh name="base_link_part146_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull04.stl"/>
+    <mesh name="base_link_part146_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull05.stl"/>
+    <mesh name="base_link_part146_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull06.stl"/>
+    <mesh name="base_link_part146_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull07.stl"/>
+    <mesh name="base_link_part146_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull08.stl"/>
+    <mesh name="base_link_part146_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull09.stl"/>
+    <mesh name="base_link_part146_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull10.stl"/>
+    <mesh name="base_link_part146_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull11.stl"/>
+    <mesh name="base_link_part146_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull12.stl"/>
+    <mesh name="base_link_part146_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull13.stl"/>
+    <mesh name="base_link_part146_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull14.stl"/>
+    <mesh name="base_link_part146_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull15.stl"/>
+    <mesh name="base_link_part146_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull16.stl"/>
+    <mesh name="base_link_part146_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull17.stl"/>
+    <mesh name="base_link_part146_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull18.stl"/>
+    <mesh name="base_link_part146_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull19.stl"/>
+    <mesh name="base_link_part146_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull20.stl"/>
+    <mesh name="base_link_part146_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull21.stl"/>
+    <mesh name="base_link_part146_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull22.stl"/>
+    <mesh name="base_link_part146_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull23.stl"/>
+    <mesh name="base_link_part146_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull24.stl"/>
+    <mesh name="base_link_part146_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull25.stl"/>
+    <mesh name="base_link_part146_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull26.stl"/>
+    <mesh name="base_link_part146_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull27.stl"/>
+    <mesh name="base_link_part146_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull28.stl"/>
+    <mesh name="base_link_part146_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull29.stl"/>
+    <mesh name="base_link_part146_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull30.stl"/>
+    <mesh name="base_link_part146_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part146_hull31.stl"/>
+    <mesh name="base_link_part157_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull00.stl"/>
+    <mesh name="base_link_part157_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull01.stl"/>
+    <mesh name="base_link_part157_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull02.stl"/>
+    <mesh name="base_link_part157_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull03.stl"/>
+    <mesh name="base_link_part157_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull04.stl"/>
+    <mesh name="base_link_part157_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull05.stl"/>
+    <mesh name="base_link_part157_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull06.stl"/>
+    <mesh name="base_link_part157_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull07.stl"/>
+    <mesh name="base_link_part157_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull08.stl"/>
+    <mesh name="base_link_part157_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull09.stl"/>
+    <mesh name="base_link_part157_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull10.stl"/>
+    <mesh name="base_link_part157_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull11.stl"/>
+    <mesh name="base_link_part157_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull12.stl"/>
+    <mesh name="base_link_part157_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull13.stl"/>
+    <mesh name="base_link_part157_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull14.stl"/>
+    <mesh name="base_link_part157_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull15.stl"/>
+    <mesh name="base_link_part157_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull16.stl"/>
+    <mesh name="base_link_part157_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull17.stl"/>
+    <mesh name="base_link_part157_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull18.stl"/>
+    <mesh name="base_link_part157_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull19.stl"/>
+    <mesh name="base_link_part157_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull20.stl"/>
+    <mesh name="base_link_part157_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull21.stl"/>
+    <mesh name="base_link_part157_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull22.stl"/>
+    <mesh name="base_link_part157_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull23.stl"/>
+    <mesh name="base_link_part157_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull24.stl"/>
+    <mesh name="base_link_part157_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull25.stl"/>
+    <mesh name="base_link_part157_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull26.stl"/>
+    <mesh name="base_link_part157_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull27.stl"/>
+    <mesh name="base_link_part157_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull28.stl"/>
+    <mesh name="base_link_part157_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull29.stl"/>
+    <mesh name="base_link_part157_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull30.stl"/>
+    <mesh name="base_link_part157_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part157_hull31.stl"/>
+    <mesh name="base_link_part165_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull00.stl"/>
+    <mesh name="base_link_part165_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull01.stl"/>
+    <mesh name="base_link_part165_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull02.stl"/>
+    <mesh name="base_link_part165_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull03.stl"/>
+    <mesh name="base_link_part165_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull04.stl"/>
+    <mesh name="base_link_part165_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull05.stl"/>
+    <mesh name="base_link_part165_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull06.stl"/>
+    <mesh name="base_link_part165_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull07.stl"/>
+    <mesh name="base_link_part165_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull08.stl"/>
+    <mesh name="base_link_part165_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull09.stl"/>
+    <mesh name="base_link_part165_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull10.stl"/>
+    <mesh name="base_link_part165_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull11.stl"/>
+    <mesh name="base_link_part165_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull12.stl"/>
+    <mesh name="base_link_part165_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull13.stl"/>
+    <mesh name="base_link_part165_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull14.stl"/>
+    <mesh name="base_link_part165_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull15.stl"/>
+    <mesh name="base_link_part165_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull16.stl"/>
+    <mesh name="base_link_part165_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull17.stl"/>
+    <mesh name="base_link_part165_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull18.stl"/>
+    <mesh name="base_link_part165_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull19.stl"/>
+    <mesh name="base_link_part165_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull20.stl"/>
+    <mesh name="base_link_part165_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull21.stl"/>
+    <mesh name="base_link_part165_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull22.stl"/>
+    <mesh name="base_link_part165_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull23.stl"/>
+    <mesh name="base_link_part165_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull24.stl"/>
+    <mesh name="base_link_part165_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull25.stl"/>
+    <mesh name="base_link_part165_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull26.stl"/>
+    <mesh name="base_link_part165_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull27.stl"/>
+    <mesh name="base_link_part165_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull28.stl"/>
+    <mesh name="base_link_part165_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull29.stl"/>
+    <mesh name="base_link_part165_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull30.stl"/>
+    <mesh name="base_link_part165_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part165_hull31.stl"/>
+    <mesh name="base_link_part176_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull00.stl"/>
+    <mesh name="base_link_part176_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull01.stl"/>
+    <mesh name="base_link_part176_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull02.stl"/>
+    <mesh name="base_link_part176_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull03.stl"/>
+    <mesh name="base_link_part176_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull04.stl"/>
+    <mesh name="base_link_part176_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull05.stl"/>
+    <mesh name="base_link_part176_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull06.stl"/>
+    <mesh name="base_link_part176_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull07.stl"/>
+    <mesh name="base_link_part176_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull08.stl"/>
+    <mesh name="base_link_part176_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull09.stl"/>
+    <mesh name="base_link_part176_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull10.stl"/>
+    <mesh name="base_link_part176_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull11.stl"/>
+    <mesh name="base_link_part176_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull12.stl"/>
+    <mesh name="base_link_part176_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull13.stl"/>
+    <mesh name="base_link_part176_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull14.stl"/>
+    <mesh name="base_link_part176_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull15.stl"/>
+    <mesh name="base_link_part176_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull16.stl"/>
+    <mesh name="base_link_part176_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull17.stl"/>
+    <mesh name="base_link_part176_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull18.stl"/>
+    <mesh name="base_link_part176_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull19.stl"/>
+    <mesh name="base_link_part176_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull20.stl"/>
+    <mesh name="base_link_part176_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull21.stl"/>
+    <mesh name="base_link_part176_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull22.stl"/>
+    <mesh name="base_link_part176_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull23.stl"/>
+    <mesh name="base_link_part176_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull24.stl"/>
+    <mesh name="base_link_part176_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull25.stl"/>
+    <mesh name="base_link_part176_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull26.stl"/>
+    <mesh name="base_link_part176_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull27.stl"/>
+    <mesh name="base_link_part176_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull28.stl"/>
+    <mesh name="base_link_part176_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull29.stl"/>
+    <mesh name="base_link_part176_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull30.stl"/>
+    <mesh name="base_link_part176_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_part176_hull31.stl"/>
+    <mesh name="base_link_rail_hi_new_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull00.stl"/>
+    <mesh name="base_link_rail_hi_new_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull01.stl"/>
+    <mesh name="base_link_rail_hi_new_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull02.stl"/>
+    <mesh name="base_link_rail_hi_new_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull03.stl"/>
+    <mesh name="base_link_rail_hi_new_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull04.stl"/>
+    <mesh name="base_link_rail_hi_new_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull05.stl"/>
+    <mesh name="base_link_rail_hi_new_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull06.stl"/>
+    <mesh name="base_link_rail_hi_new_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull07.stl"/>
+    <mesh name="base_link_rail_hi_new_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull08.stl"/>
+    <mesh name="base_link_rail_hi_new_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull09.stl"/>
+    <mesh name="base_link_rail_hi_new_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull10.stl"/>
+    <mesh name="base_link_rail_hi_new_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull11.stl"/>
+    <mesh name="base_link_rail_hi_new_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull12.stl"/>
+    <mesh name="base_link_rail_hi_new_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull13.stl"/>
+    <mesh name="base_link_rail_hi_new_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull14.stl"/>
+    <mesh name="base_link_rail_hi_new_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull15.stl"/>
+    <mesh name="base_link_rail_hi_new_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull16.stl"/>
+    <mesh name="base_link_rail_hi_new_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull17.stl"/>
+    <mesh name="base_link_rail_hi_new_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull18.stl"/>
+    <mesh name="base_link_rail_hi_new_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull19.stl"/>
+    <mesh name="base_link_rail_hi_new_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull20.stl"/>
+    <mesh name="base_link_rail_hi_new_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull21.stl"/>
+    <mesh name="base_link_rail_hi_new_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull22.stl"/>
+    <mesh name="base_link_rail_hi_new_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull23.stl"/>
+    <mesh name="base_link_rail_hi_new_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull24.stl"/>
+    <mesh name="base_link_rail_hi_new_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull25.stl"/>
+    <mesh name="base_link_rail_hi_new_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull26.stl"/>
+    <mesh name="base_link_rail_hi_new_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull27.stl"/>
+    <mesh name="base_link_rail_hi_new_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull28.stl"/>
+    <mesh name="base_link_rail_hi_new_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull29.stl"/>
+    <mesh name="base_link_rail_hi_new_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_hi_new_hull30.stl"/>
+    <mesh name="base_link_rail_lo_new_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull00.stl"/>
+    <mesh name="base_link_rail_lo_new_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull01.stl"/>
+    <mesh name="base_link_rail_lo_new_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull02.stl"/>
+    <mesh name="base_link_rail_lo_new_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull03.stl"/>
+    <mesh name="base_link_rail_lo_new_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull04.stl"/>
+    <mesh name="base_link_rail_lo_new_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull05.stl"/>
+    <mesh name="base_link_rail_lo_new_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull06.stl"/>
+    <mesh name="base_link_rail_lo_new_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull07.stl"/>
+    <mesh name="base_link_rail_lo_new_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull08.stl"/>
+    <mesh name="base_link_rail_lo_new_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull09.stl"/>
+    <mesh name="base_link_rail_lo_new_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull10.stl"/>
+    <mesh name="base_link_rail_lo_new_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull11.stl"/>
+    <mesh name="base_link_rail_lo_new_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull12.stl"/>
+    <mesh name="base_link_rail_lo_new_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull13.stl"/>
+    <mesh name="base_link_rail_lo_new_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull14.stl"/>
+    <mesh name="base_link_rail_lo_new_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull15.stl"/>
+    <mesh name="base_link_rail_lo_new_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull16.stl"/>
+    <mesh name="base_link_rail_lo_new_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull17.stl"/>
+    <mesh name="base_link_rail_lo_new_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull18.stl"/>
+    <mesh name="base_link_rail_lo_new_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull19.stl"/>
+    <mesh name="base_link_rail_lo_new_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull20.stl"/>
+    <mesh name="base_link_rail_lo_new_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull21.stl"/>
+    <mesh name="base_link_rail_lo_new_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull22.stl"/>
+    <mesh name="base_link_rail_lo_new_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull23.stl"/>
+    <mesh name="base_link_rail_lo_new_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull24.stl"/>
+    <mesh name="base_link_rail_lo_new_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull25.stl"/>
+    <mesh name="base_link_rail_lo_new_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull26.stl"/>
+    <mesh name="base_link_rail_lo_new_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull27.stl"/>
+    <mesh name="base_link_rail_lo_new_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull28.stl"/>
+    <mesh name="base_link_rail_lo_new_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull29.stl"/>
+    <mesh name="base_link_rail_lo_new_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull30.stl"/>
+    <mesh name="base_link_rail_lo_new_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/base_link_rail_lo_new_hull31.stl"/>
+    <mesh name="gripper_left_link_part000_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull00.stl"/>
+    <mesh name="gripper_left_link_part000_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull01.stl"/>
+    <mesh name="gripper_left_link_part000_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull02.stl"/>
+    <mesh name="gripper_left_link_part000_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull03.stl"/>
+    <mesh name="gripper_left_link_part000_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull04.stl"/>
+    <mesh name="gripper_left_link_part000_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull05.stl"/>
+    <mesh name="gripper_left_link_part000_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull06.stl"/>
+    <mesh name="gripper_left_link_part000_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull07.stl"/>
+    <mesh name="gripper_left_link_part000_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull08.stl"/>
+    <mesh name="gripper_left_link_part000_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull09.stl"/>
+    <mesh name="gripper_left_link_part000_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull10.stl"/>
+    <mesh name="gripper_left_link_part000_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull11.stl"/>
+    <mesh name="gripper_left_link_part000_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull12.stl"/>
+    <mesh name="gripper_left_link_part000_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull13.stl"/>
+    <mesh name="gripper_left_link_part000_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull14.stl"/>
+    <mesh name="gripper_left_link_part000_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull15.stl"/>
+    <mesh name="gripper_left_link_part000_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull16.stl"/>
+    <mesh name="gripper_left_link_part000_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull17.stl"/>
+    <mesh name="gripper_left_link_part000_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull18.stl"/>
+    <mesh name="gripper_left_link_part000_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull19.stl"/>
+    <mesh name="gripper_left_link_part000_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull20.stl"/>
+    <mesh name="gripper_left_link_part000_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull21.stl"/>
+    <mesh name="gripper_left_link_part000_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull22.stl"/>
+    <mesh name="gripper_left_link_part000_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull23.stl"/>
+    <mesh name="gripper_left_link_part000_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull24.stl"/>
+    <mesh name="gripper_left_link_part000_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull25.stl"/>
+    <mesh name="gripper_left_link_part000_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull26.stl"/>
+    <mesh name="gripper_left_link_part000_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull27.stl"/>
+    <mesh name="gripper_left_link_part000_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull28.stl"/>
+    <mesh name="gripper_left_link_part000_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull29.stl"/>
+    <mesh name="gripper_left_link_part000_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull30.stl"/>
+    <mesh name="gripper_left_link_part000_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part000_hull31.stl"/>
+    <mesh name="gripper_left_link_part010_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_left_link_part010_hull00.stl"/>
+    <mesh name="gripper_right_link_part000_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull00.stl"/>
+    <mesh name="gripper_right_link_part000_hull01" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull01.stl"/>
+    <mesh name="gripper_right_link_part000_hull02" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull02.stl"/>
+    <mesh name="gripper_right_link_part000_hull03" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull03.stl"/>
+    <mesh name="gripper_right_link_part000_hull04" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull04.stl"/>
+    <mesh name="gripper_right_link_part000_hull05" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull05.stl"/>
+    <mesh name="gripper_right_link_part000_hull06" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull06.stl"/>
+    <mesh name="gripper_right_link_part000_hull07" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull07.stl"/>
+    <mesh name="gripper_right_link_part000_hull08" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull08.stl"/>
+    <mesh name="gripper_right_link_part000_hull09" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull09.stl"/>
+    <mesh name="gripper_right_link_part000_hull10" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull10.stl"/>
+    <mesh name="gripper_right_link_part000_hull11" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull11.stl"/>
+    <mesh name="gripper_right_link_part000_hull12" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull12.stl"/>
+    <mesh name="gripper_right_link_part000_hull13" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull13.stl"/>
+    <mesh name="gripper_right_link_part000_hull14" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull14.stl"/>
+    <mesh name="gripper_right_link_part000_hull15" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull15.stl"/>
+    <mesh name="gripper_right_link_part000_hull16" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull16.stl"/>
+    <mesh name="gripper_right_link_part000_hull17" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull17.stl"/>
+    <mesh name="gripper_right_link_part000_hull18" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull18.stl"/>
+    <mesh name="gripper_right_link_part000_hull19" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull19.stl"/>
+    <mesh name="gripper_right_link_part000_hull20" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull20.stl"/>
+    <mesh name="gripper_right_link_part000_hull21" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull21.stl"/>
+    <mesh name="gripper_right_link_part000_hull22" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull22.stl"/>
+    <mesh name="gripper_right_link_part000_hull23" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull23.stl"/>
+    <mesh name="gripper_right_link_part000_hull24" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull24.stl"/>
+    <mesh name="gripper_right_link_part000_hull25" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull25.stl"/>
+    <mesh name="gripper_right_link_part000_hull26" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull26.stl"/>
+    <mesh name="gripper_right_link_part000_hull27" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull27.stl"/>
+    <mesh name="gripper_right_link_part000_hull28" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull28.stl"/>
+    <mesh name="gripper_right_link_part000_hull29" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull29.stl"/>
+    <mesh name="gripper_right_link_part000_hull30" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull30.stl"/>
+    <mesh name="gripper_right_link_part000_hull31" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part000_hull31.stl"/>
+    <mesh name="gripper_right_link_part013_hull00" file="/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/meshes/collision/gripper_right_link_part013_hull00.stl"/>
+  </asset>
+
+  <worldbody>
+    <geom name="floor" size="5 5 0.1" type="plane" friction="0.4" material="grid"/>
+    <light name="sun" pos="0 0 3" dir="-0.282216 0.188144 -0.940721" diffuse="0.8 0.8 0.8" type="directional"/>
+    <body name="base_footprint">
+      <joint name="root" type="free"/>
+      <body name="base_link" pos="0 0 0.00674998">
+        <inertial pos="-0.0507475 0.00176588 0.131734" quat="0.986734 0.00776288 -0.162032 -0.00640228" mass="3.07987" diaginertia="0.118853 0.105469 0.0383743"/>
+        <geom name="convex_22_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull00"/>
+        <geom name="convex_22_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull01"/>
+        <geom name="convex_22_2" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull02"/>
+        <geom name="convex_22_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull03_free00"/>
+        <geom name="convex_22_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull03_free01"/>
+        <geom name="convex_22_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull03_free02"/>
+        <geom name="convex_22_6" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull04"/>
+        <geom name="convex_22_7" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull05_free00"/>
+        <geom name="convex_22_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull05_free01"/>
+        <geom name="convex_22_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull05_free02"/>
+        <geom name="convex_22_10" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull06"/>
+        <geom name="convex_22_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull07"/>
+        <geom name="convex_22_12" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull08"/>
+        <geom name="convex_22_13" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull09"/>
+        <geom name="convex_22_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull10"/>
+        <geom name="convex_22_15" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull11"/>
+        <geom name="convex_22_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull12_free00"/>
+        <geom name="convex_22_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull12_free01"/>
+        <geom name="convex_22_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull12_free02"/>
+        <geom name="convex_22_19" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull13"/>
+        <geom name="convex_22_20" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull14_free00"/>
+        <geom name="convex_22_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull14_free01"/>
+        <geom name="convex_22_22" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull14_free02"/>
+        <geom name="convex_22_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull15"/>
+        <geom name="convex_22_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull16"/>
+        <geom name="convex_22_25" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull17"/>
+        <geom name="convex_22_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull18"/>
+        <geom name="convex_22_27" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull19"/>
+        <geom name="convex_22_28" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull20"/>
+        <geom name="convex_22_29" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull21"/>
+        <geom name="convex_22_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull22"/>
+        <geom name="convex_22_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull23"/>
+        <geom name="convex_22_32" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull24"/>
+        <geom name="convex_22_33" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull25"/>
+        <geom name="convex_22_34" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull26"/>
+        <geom name="convex_22_35" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull27"/>
+        <geom name="convex_22_36" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull28"/>
+        <geom name="convex_22_37" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull29"/>
+        <geom name="convex_22_38" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull30"/>
+        <geom name="convex_22_39" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part022_hull31"/>
+        <geom name="convex_25_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull00"/>
+        <geom name="convex_25_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull01"/>
+        <geom name="convex_25_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull02"/>
+        <geom name="convex_25_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull03"/>
+        <geom name="convex_25_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull04"/>
+        <geom name="convex_25_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull05"/>
+        <geom name="convex_25_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull06_free00"/>
+        <geom name="convex_25_7" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull06_free01"/>
+        <geom name="convex_25_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull07_free00"/>
+        <geom name="convex_25_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull07_free01"/>
+        <geom name="convex_25_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull08"/>
+        <geom name="convex_25_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull09_free00"/>
+        <geom name="convex_25_12" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull09_free01"/>
+        <geom name="convex_25_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull10"/>
+        <geom name="convex_25_14" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull11"/>
+        <geom name="convex_25_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull12"/>
+        <geom name="convex_25_16" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull13_free00"/>
+        <geom name="convex_25_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull13_free01"/>
+        <geom name="convex_25_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull13_free02"/>
+        <geom name="convex_25_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull14_free00"/>
+        <geom name="convex_25_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull14_free01"/>
+        <geom name="convex_25_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull15"/>
+        <geom name="convex_25_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull16"/>
+        <geom name="convex_25_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull17"/>
+        <geom name="convex_25_24" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull18"/>
+        <geom name="convex_25_25" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull19"/>
+        <geom name="convex_25_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull20"/>
+        <geom name="convex_25_27" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull21"/>
+        <geom name="convex_25_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull22"/>
+        <geom name="convex_25_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull23"/>
+        <geom name="convex_25_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull24"/>
+        <geom name="convex_25_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull25"/>
+        <geom name="convex_25_32" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull26"/>
+        <geom name="convex_25_33" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull27"/>
+        <geom name="convex_25_34" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull28"/>
+        <geom name="convex_25_35" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull29"/>
+        <geom name="convex_25_36" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull30"/>
+        <geom name="convex_25_37" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part025_hull31"/>
+        <geom name="convex_26_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull00"/>
+        <geom name="convex_26_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull01"/>
+        <geom name="convex_26_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull02"/>
+        <geom name="convex_26_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull03"/>
+        <geom name="convex_26_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull04"/>
+        <geom name="convex_26_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull05_free00"/>
+        <geom name="convex_26_6" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull05_free01"/>
+        <geom name="convex_26_7" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull06"/>
+        <geom name="convex_26_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull07"/>
+        <geom name="convex_26_9" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull08"/>
+        <geom name="convex_26_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull09"/>
+        <geom name="convex_26_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull10"/>
+        <geom name="convex_26_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull11"/>
+        <geom name="convex_26_13" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull12"/>
+        <geom name="convex_26_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull13"/>
+        <geom name="convex_26_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull14"/>
+        <geom name="convex_26_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull15"/>
+        <geom name="convex_26_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull16_free00"/>
+        <geom name="convex_26_18" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull16_free01"/>
+        <geom name="convex_26_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull17_free00"/>
+        <geom name="convex_26_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull17_free01"/>
+        <geom name="convex_26_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull18_free00"/>
+        <geom name="convex_26_22" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull18_free01"/>
+        <geom name="convex_26_23" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull19"/>
+        <geom name="convex_26_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull20"/>
+        <geom name="convex_26_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull21"/>
+        <geom name="convex_26_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull22"/>
+        <geom name="convex_26_27" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull23"/>
+        <geom name="convex_26_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull24"/>
+        <geom name="convex_26_29" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull25"/>
+        <geom name="convex_26_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull26"/>
+        <geom name="convex_26_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull27"/>
+        <geom name="convex_26_32" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull28"/>
+        <geom name="convex_26_33" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull29"/>
+        <geom name="convex_26_34" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull30"/>
+        <geom name="convex_26_35" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part026_hull31"/>
+        <geom name="convex_29_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull00_free00"/>
+        <geom name="convex_29_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull00_free01"/>
+        <geom name="convex_29_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull01"/>
+        <geom name="convex_29_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull02"/>
+        <geom name="convex_29_4" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull03_free00"/>
+        <geom name="convex_29_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull03_free01"/>
+        <geom name="convex_29_6" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull04"/>
+        <geom name="convex_29_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull05_free00"/>
+        <geom name="convex_29_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull05_free01"/>
+        <geom name="convex_29_9" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull06"/>
+        <geom name="convex_29_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull07"/>
+        <geom name="convex_29_11" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull08"/>
+        <geom name="convex_29_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull09"/>
+        <geom name="convex_29_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull10"/>
+        <geom name="convex_29_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull11"/>
+        <geom name="convex_29_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull12_free00"/>
+        <geom name="convex_29_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull12_free01"/>
+        <geom name="convex_29_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull13"/>
+        <geom name="convex_29_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull14_free00"/>
+        <geom name="convex_29_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull14_free01"/>
+        <geom name="convex_29_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull15"/>
+        <geom name="convex_29_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull16"/>
+        <geom name="convex_29_22" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull17"/>
+        <geom name="convex_29_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull18"/>
+        <geom name="convex_29_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull19"/>
+        <geom name="convex_29_25" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull20"/>
+        <geom name="convex_29_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull21"/>
+        <geom name="convex_29_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull22"/>
+        <geom name="convex_29_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull23"/>
+        <geom name="convex_29_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull24"/>
+        <geom name="convex_29_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull25"/>
+        <geom name="convex_29_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull26"/>
+        <geom name="convex_29_32" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull27"/>
+        <geom name="convex_29_33" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull28"/>
+        <geom name="convex_29_34" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull29"/>
+        <geom name="convex_29_35" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull30"/>
+        <geom name="convex_29_36" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part029_hull31"/>
+        <geom name="convex_140_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull00"/>
+        <geom name="convex_140_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull01"/>
+        <geom name="convex_140_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull02"/>
+        <geom name="convex_140_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull03_free00"/>
+        <geom name="convex_140_4" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull03_free01"/>
+        <geom name="convex_140_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull03_free02"/>
+        <geom name="convex_140_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull03_free03"/>
+        <geom name="convex_140_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull04"/>
+        <geom name="convex_140_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull05"/>
+        <geom name="convex_140_9" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull06_free00"/>
+        <geom name="convex_140_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull06_free01"/>
+        <geom name="convex_140_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull06_free02"/>
+        <geom name="convex_140_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull06_free03"/>
+        <geom name="convex_140_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull07"/>
+        <geom name="convex_140_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull08"/>
+        <geom name="convex_140_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull09"/>
+        <geom name="convex_140_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull10"/>
+        <geom name="convex_140_17" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull11"/>
+        <geom name="convex_140_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull12"/>
+        <geom name="convex_140_19" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull13"/>
+        <geom name="convex_140_20" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull14_free00"/>
+        <geom name="convex_140_21" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull14_free01"/>
+        <geom name="convex_140_22" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull14_free02"/>
+        <geom name="convex_140_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull15"/>
+        <geom name="convex_140_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull16"/>
+        <geom name="convex_140_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull17"/>
+        <geom name="convex_140_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull18"/>
+        <geom name="convex_140_27" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull19"/>
+        <geom name="convex_140_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull20"/>
+        <geom name="convex_140_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull21"/>
+        <geom name="convex_140_30" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull22"/>
+        <geom name="convex_140_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull23"/>
+        <geom name="convex_140_32" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull24"/>
+        <geom name="convex_140_33" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull25"/>
+        <geom name="convex_140_34" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull26"/>
+        <geom name="convex_140_35" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull27"/>
+        <geom name="convex_140_36" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull28"/>
+        <geom name="convex_140_37" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull29"/>
+        <geom name="convex_140_38" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull30"/>
+        <geom name="convex_140_39" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part140_hull31"/>
+        <geom name="convex_141_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull00"/>
+        <geom name="convex_141_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull01"/>
+        <geom name="convex_141_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull02_free00"/>
+        <geom name="convex_141_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull02_free01"/>
+        <geom name="convex_141_4" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull03"/>
+        <geom name="convex_141_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull04"/>
+        <geom name="convex_141_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull05"/>
+        <geom name="convex_141_7" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull06"/>
+        <geom name="convex_141_8" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull07"/>
+        <geom name="convex_141_9" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull08"/>
+        <geom name="convex_141_10" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull09"/>
+        <geom name="convex_141_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull10_free00"/>
+        <geom name="convex_141_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull10_free01"/>
+        <geom name="convex_141_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull10_free02"/>
+        <geom name="convex_141_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull11_free00"/>
+        <geom name="convex_141_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull11_free01"/>
+        <geom name="convex_141_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull11_free02"/>
+        <geom name="convex_141_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull12"/>
+        <geom name="convex_141_18" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull13"/>
+        <geom name="convex_141_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull14_free00"/>
+        <geom name="convex_141_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull14_free01"/>
+        <geom name="convex_141_21" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull14_free02"/>
+        <geom name="convex_141_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull15"/>
+        <geom name="convex_141_23" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull16"/>
+        <geom name="convex_141_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull17"/>
+        <geom name="convex_141_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull18"/>
+        <geom name="convex_141_26" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull19"/>
+        <geom name="convex_141_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull20"/>
+        <geom name="convex_141_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull21"/>
+        <geom name="convex_141_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull22"/>
+        <geom name="convex_141_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull23"/>
+        <geom name="convex_141_31" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull24_free00"/>
+        <geom name="convex_141_32" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull24_free01"/>
+        <geom name="convex_141_33" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull24_free02"/>
+        <geom name="convex_141_34" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull25"/>
+        <geom name="convex_141_35" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull26"/>
+        <geom name="convex_141_36" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull27"/>
+        <geom name="convex_141_37" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull28"/>
+        <geom name="convex_141_38" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull29"/>
+        <geom name="convex_141_39" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull30"/>
+        <geom name="convex_141_40" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part141_hull31"/>
+        <geom name="convex_146_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull00"/>
+        <geom name="convex_146_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull01"/>
+        <geom name="convex_146_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull02"/>
+        <geom name="convex_146_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull03"/>
+        <geom name="convex_146_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull04"/>
+        <geom name="convex_146_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull05"/>
+        <geom name="convex_146_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull06"/>
+        <geom name="convex_146_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull07"/>
+        <geom name="convex_146_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull08"/>
+        <geom name="convex_146_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull09"/>
+        <geom name="convex_146_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull10"/>
+        <geom name="convex_146_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull11"/>
+        <geom name="convex_146_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull12"/>
+        <geom name="convex_146_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull13"/>
+        <geom name="convex_146_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull14"/>
+        <geom name="convex_146_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull15"/>
+        <geom name="convex_146_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull16"/>
+        <geom name="convex_146_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull17"/>
+        <geom name="convex_146_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull18"/>
+        <geom name="convex_146_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull19"/>
+        <geom name="convex_146_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull20"/>
+        <geom name="convex_146_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull21"/>
+        <geom name="convex_146_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull22"/>
+        <geom name="convex_146_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull23"/>
+        <geom name="convex_146_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull24"/>
+        <geom name="convex_146_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull25"/>
+        <geom name="convex_146_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull26"/>
+        <geom name="convex_146_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull27"/>
+        <geom name="convex_146_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull28"/>
+        <geom name="convex_146_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull29"/>
+        <geom name="convex_146_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull30"/>
+        <geom name="convex_146_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part146_hull31"/>
+        <geom name="convex_157_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull00"/>
+        <geom name="convex_157_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull01"/>
+        <geom name="convex_157_2" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull02"/>
+        <geom name="convex_157_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull03"/>
+        <geom name="convex_157_4" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull04"/>
+        <geom name="convex_157_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull05"/>
+        <geom name="convex_157_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull06"/>
+        <geom name="convex_157_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull07"/>
+        <geom name="convex_157_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull08"/>
+        <geom name="convex_157_9" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull09"/>
+        <geom name="convex_157_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull10"/>
+        <geom name="convex_157_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull11"/>
+        <geom name="convex_157_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull12"/>
+        <geom name="convex_157_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull13"/>
+        <geom name="convex_157_14" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull14"/>
+        <geom name="convex_157_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull15"/>
+        <geom name="convex_157_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull16"/>
+        <geom name="convex_157_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull17"/>
+        <geom name="convex_157_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull18"/>
+        <geom name="convex_157_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull19"/>
+        <geom name="convex_157_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull20"/>
+        <geom name="convex_157_21" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull21"/>
+        <geom name="convex_157_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull22"/>
+        <geom name="convex_157_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull23"/>
+        <geom name="convex_157_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull24"/>
+        <geom name="convex_157_25" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull25"/>
+        <geom name="convex_157_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull26"/>
+        <geom name="convex_157_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull27"/>
+        <geom name="convex_157_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull28"/>
+        <geom name="convex_157_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull29"/>
+        <geom name="convex_157_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull30"/>
+        <geom name="convex_157_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part157_hull31"/>
+        <geom name="convex_165_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull00"/>
+        <geom name="convex_165_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull01"/>
+        <geom name="convex_165_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull02"/>
+        <geom name="convex_165_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull03"/>
+        <geom name="convex_165_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull04"/>
+        <geom name="convex_165_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull05"/>
+        <geom name="convex_165_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull06"/>
+        <geom name="convex_165_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull07"/>
+        <geom name="convex_165_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull08"/>
+        <geom name="convex_165_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull09"/>
+        <geom name="convex_165_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull10"/>
+        <geom name="convex_165_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull11"/>
+        <geom name="convex_165_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull12"/>
+        <geom name="convex_165_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull13"/>
+        <geom name="convex_165_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull14"/>
+        <geom name="convex_165_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull15"/>
+        <geom name="convex_165_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull16"/>
+        <geom name="convex_165_17" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull17"/>
+        <geom name="convex_165_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull18"/>
+        <geom name="convex_165_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull19"/>
+        <geom name="convex_165_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull20"/>
+        <geom name="convex_165_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull21"/>
+        <geom name="convex_165_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull22"/>
+        <geom name="convex_165_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull23"/>
+        <geom name="convex_165_24" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull24"/>
+        <geom name="convex_165_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull25"/>
+        <geom name="convex_165_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull26"/>
+        <geom name="convex_165_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull27"/>
+        <geom name="convex_165_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull28"/>
+        <geom name="convex_165_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull29"/>
+        <geom name="convex_165_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull30"/>
+        <geom name="convex_165_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part165_hull31"/>
+        <geom name="convex_176_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull00"/>
+        <geom name="convex_176_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull01"/>
+        <geom name="convex_176_2" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull02"/>
+        <geom name="convex_176_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull03"/>
+        <geom name="convex_176_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull04"/>
+        <geom name="convex_176_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull05"/>
+        <geom name="convex_176_6" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull06"/>
+        <geom name="convex_176_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull07"/>
+        <geom name="convex_176_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull08"/>
+        <geom name="convex_176_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull09"/>
+        <geom name="convex_176_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull10"/>
+        <geom name="convex_176_11" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull11"/>
+        <geom name="convex_176_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull12"/>
+        <geom name="convex_176_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull13"/>
+        <geom name="convex_176_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull14"/>
+        <geom name="convex_176_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull15"/>
+        <geom name="convex_176_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull16"/>
+        <geom name="convex_176_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull17"/>
+        <geom name="convex_176_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull18"/>
+        <geom name="convex_176_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull19"/>
+        <geom name="convex_176_20" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull20"/>
+        <geom name="convex_176_21" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull21"/>
+        <geom name="convex_176_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull22"/>
+        <geom name="convex_176_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull23"/>
+        <geom name="convex_176_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull24"/>
+        <geom name="convex_176_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull25"/>
+        <geom name="convex_176_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull26"/>
+        <geom name="convex_176_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull27"/>
+        <geom name="convex_176_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull28"/>
+        <geom name="convex_176_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull29"/>
+        <geom name="convex_176_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull30"/>
+        <geom name="convex_176_31" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_part176_hull31"/>
+        <geom name="static_424" size="0.01425 0.0202 0.02325" pos="0.03454 0.1188 0.04425" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_425" size="0.01425 0.0202 0.02325" pos="0.03454 -0.1188 0.04425" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_426" size="0.132774 0.132774 0.0045" pos="0 0 0.0075" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_427" size="0.132774 0.132774 0.0045" pos="0 0 0.1065" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_428" size="0.01425 0.0202 0.02325" pos="-0.03454 0.1188 0.04425" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_429" size="0.01425 0.0202 0.02325" pos="-0.03454 -0.1188 0.04425" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_430" size="0.015213 0.009 0.00385" pos="0.050213 0.00173206 0.0806077" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_431" size="0.02125 0.009 0.0168" pos="0.075 0.024 0.1278" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_432" size="0.02125 0.009 0.0168" pos="0.075 -0.024 0.1278" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_433" size="0.01 0.01 0.225" pos="-0.1405 0.1295 0.244" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_434" size="0.01 0.01 0.225" pos="-0.1405 -0.1295 0.244" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_435" size="0.02325 0.01425 0.0202" pos="0.075 0 0.1342" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_436" size="0.0854905 0.0449523 0.019571" pos="-0.1405 -4.38345e-05 0.486571" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_437" size="0.01 0.1395 0.01" pos="-0.1405 0 0.479" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_438" size="0.05461 0.0375 0.0095" pos="0.058 0.041 0.0265" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_439" size="0.05461 0.0375 0.0095" pos="0.058 -0.041 0.0265" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_440" size="0.0515 0.04525 0.017385" pos="-0.06 0 0.030385" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_441" size="0.044 0.0175 0.013" pos="-0.06 0.067 0.026" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_442" size="0.044 0.0175 0.013" pos="-0.06 -0.067 0.026" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_443" size="0.0265 0.0395 0.0015" pos="0.1185 0.0455 0.1005" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="static_444" size="0.0265 0.0395 0.0015" pos="-0.1185 -0.0455 0.1005" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_bearing_block_FL" size="0.0125 0.02115 0.0419" pos="0.08 0.11735 0.0569" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_bearing_block_FR" size="0.0125 0.02115 0.0419" pos="0.08 -0.11735 0.0569" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_bearing_block_RL" size="0.0125 0.02115 0.0419" pos="-0.08 0.11735 0.0569" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_bearing_block_RR" size="0.0125 0.02115 0.0419" pos="-0.08 -0.11735 0.0569" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_guard_FL" size="0.044 0.00945 0.018375" pos="0.0505 0.14265 0.029375" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_guard_FR" size="0.044 0.00945 0.018375" pos="0.0505 -0.14265 0.029375" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_guard_RL" size="0.044 0.00945 0.018375" pos="-0.0505 0.14265 0.029375" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="belt_guard_RR" size="0.044 0.00945 0.018375" pos="-0.0505 -0.14265 0.029375" type="box" friction="0.4" rgba="0.627 0.627 0.627 1"/>
+        <geom name="rail_hi_new_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull00"/>
+        <geom name="rail_hi_new_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull01"/>
+        <geom name="rail_hi_new_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull02"/>
+        <geom name="rail_hi_new_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull03"/>
+        <geom name="rail_hi_new_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull04"/>
+        <geom name="rail_hi_new_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull05"/>
+        <geom name="rail_hi_new_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull06"/>
+        <geom name="rail_hi_new_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull07"/>
+        <geom name="rail_hi_new_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull08"/>
+        <geom name="rail_hi_new_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull09"/>
+        <geom name="rail_hi_new_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull10"/>
+        <geom name="rail_hi_new_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull11"/>
+        <geom name="rail_hi_new_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull12"/>
+        <geom name="rail_hi_new_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull13"/>
+        <geom name="rail_hi_new_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull14"/>
+        <geom name="rail_hi_new_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull15"/>
+        <geom name="rail_hi_new_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull16"/>
+        <geom name="rail_hi_new_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull17"/>
+        <geom name="rail_hi_new_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull18"/>
+        <geom name="rail_hi_new_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull19"/>
+        <geom name="rail_hi_new_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull20"/>
+        <geom name="rail_hi_new_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull21"/>
+        <geom name="rail_hi_new_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull22"/>
+        <geom name="rail_hi_new_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull23"/>
+        <geom name="rail_hi_new_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull24"/>
+        <geom name="rail_hi_new_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull25"/>
+        <geom name="rail_hi_new_26" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull26"/>
+        <geom name="rail_hi_new_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull27"/>
+        <geom name="rail_hi_new_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull28"/>
+        <geom name="rail_hi_new_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull29"/>
+        <geom name="rail_hi_new_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_hi_new_hull30"/>
+        <geom name="rail_lo_new_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull00"/>
+        <geom name="rail_lo_new_1" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull01"/>
+        <geom name="rail_lo_new_2" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull02"/>
+        <geom name="rail_lo_new_3" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull03"/>
+        <geom name="rail_lo_new_4" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull04"/>
+        <geom name="rail_lo_new_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull05"/>
+        <geom name="rail_lo_new_6" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull06"/>
+        <geom name="rail_lo_new_7" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull07"/>
+        <geom name="rail_lo_new_8" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull08"/>
+        <geom name="rail_lo_new_9" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull09"/>
+        <geom name="rail_lo_new_10" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull10"/>
+        <geom name="rail_lo_new_11" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull11"/>
+        <geom name="rail_lo_new_12" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull12"/>
+        <geom name="rail_lo_new_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull13"/>
+        <geom name="rail_lo_new_14" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull14"/>
+        <geom name="rail_lo_new_15" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull15"/>
+        <geom name="rail_lo_new_16" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull16"/>
+        <geom name="rail_lo_new_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull17"/>
+        <geom name="rail_lo_new_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull18"/>
+        <geom name="rail_lo_new_19" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull19"/>
+        <geom name="rail_lo_new_20" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull20"/>
+        <geom name="rail_lo_new_21" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull21"/>
+        <geom name="rail_lo_new_22" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull22"/>
+        <geom name="rail_lo_new_23" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull23"/>
+        <geom name="rail_lo_new_24" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull24"/>
+        <geom name="rail_lo_new_25" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull25"/>
+        <geom name="rail_lo_new_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull26"/>
+        <geom name="rail_lo_new_27" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull27"/>
+        <geom name="rail_lo_new_28" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull28"/>
+        <geom name="rail_lo_new_29" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull29"/>
+        <geom name="rail_lo_new_30" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull30"/>
+        <geom name="rail_lo_new_31" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.627 0.627 0.627 1" mesh="base_link_rail_lo_new_hull31"/>
+        <body name="wheel_front_left" pos="0.08 0.1546 0.02625" quat="0.707107 -0.707107 0 0">
+          <inertial pos="1.74711e-06 -1.08248e-06 0.00319957" quat="0.232706 0.667654 -0.232642 0.667805" mass="0.0284978" diaginertia="2.05888e-05 1.11308e-05 1.11256e-05"/>
+          <joint name="Wheel_Revolute_Front_Left" actuatorfrcrange="-1.8 1.8" armature="0.007244" damping="0.001"/>
+          <geom name="tire_cylinder" size="0.0330006 0.00910001" pos="0 4.67081e-08 0.00390001" type="cylinder" friction="0.4" rgba="0.12 0.12 0.13 1"/>
+        </body>
+        <body name="wheel_front_right" pos="0.08 -0.1546 0.02625" quat="0.707107 -0.707107 0 0">
+          <inertial pos="-2.51697e-06 -1.08479e-06 -0.00319957" quat="-0.24611 0.662956 0.245967 0.662887" mass="0.0284978" diaginertia="2.05888e-05 1.11322e-05 1.11242e-05"/>
+          <joint name="Wheel_Revolute_Front_Right" actuatorfrcrange="-1.8 1.8" armature="0.007244" damping="0.001"/>
+          <geom size="0.0330006 0.00909999" pos="0 -4.68967e-08 -0.00389999" type="cylinder" friction="0.4" rgba="0.12 0.12 0.13 1"/>
+        </body>
+        <body name="wheel_rear_left" pos="-0.08 0.1546 0.02625" quat="0.707107 -0.707107 0 0">
+          <inertial pos="1.74714e-06 -1.08248e-06 0.00319957" quat="0.232706 0.667654 -0.232641 0.667805" mass="0.0284978" diaginertia="2.05888e-05 1.11308e-05 1.11256e-05"/>
+          <joint name="Wheel_Revolute_Rear_Left" actuatorfrcrange="-1.8 1.8" armature="0.007244" damping="0.001"/>
+          <geom size="0.0330006 0.00910001" pos="0 4.67081e-08 0.00390001" type="cylinder" friction="0.4" rgba="0.12 0.12 0.13 1"/>
+        </body>
+        <body name="wheel_rear_right" pos="-0.08 -0.1546 0.02625" quat="0.707107 -0.707107 0 0">
+          <inertial pos="-2.51693e-06 -1.08478e-06 -0.00319957" quat="-0.246111 0.662956 0.245967 0.662887" mass="0.0284978" diaginertia="2.05888e-05 1.11322e-05 1.11242e-05"/>
+          <joint name="Wheel_Revolute_Rear_Right" actuatorfrcrange="-1.8 1.8" armature="0.007244" damping="0.001"/>
+          <geom size="0.0330006 0.00909999" pos="0 -4.68967e-08 -0.00389999" type="cylinder" friction="0.4" rgba="0.12 0.12 0.13 1"/>
+        </body>
+        <body name="arm_link_1" pos="0.087 0 0.15235" quat="-1.73205e-07 1 0 0">
+          <inertial pos="0 -0.000543406 -0.0207422" quat="0.99993 -0.0118193 0 1.06952e-10" mass="0.10578" diaginertia="4.03895e-05 3.44807e-05 1.92962e-05"/>
+          <joint name="RMX52_Base_Yaw" range="-3.14159 3.14159" actuatorfrcrange="-3.8 3.8" armature="0.045" damping="0.01"/>
+          <geom name="part_0" size="0.014 0.0185 0.00575001" pos="0 5.46462e-08 -0.0034" quat="1.73205e-07 1 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+          <geom name="part_13" size="0.01425 0.0212 0.02325" pos="0 -0.00219993 -0.02615" quat="1.73205e-07 1 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+          <body name="arm_link_2" pos="0 0 -0.03815" quat="0.707107 -0.707107 0 0">
+            <inertial pos="0.00822027 0.0996835 -0.000396908" quat="0.539031 0.46757 -0.527066 0.461547" mass="0.144851" diaginertia="0.000268536 0.000266232 3.82599e-05"/>
+            <joint name="RMX52_Shoulder" range="-1.5 1.5" actuatorfrcrange="-3.8 3.8" armature="0.045" damping="0.01"/>
+            <geom size="0.0125 0.021 0.0155" pos="0 0.013 6.55028e-08" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+            <geom name="part_5" size="0.0105 0.0185 0.0412" pos="0 0.0685 8.46399e-08" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+            <geom name="part_6" size="0.023 0.0185 0.00575002" pos="0.012 0.11425 1.00591e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+            <geom name="part_27" size="0.02325 0.0212 0.01425" pos="0.012 0.128 -0.00219989" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+            <body name="arm_link_3" pos="0.024 0.128 0">
+              <inertial pos="0.0864067 5.63891e-07 -0.000420107" quat="0.497864 0.502133 0.502128 0.497857" mass="0.136857" diaginertia="0.000212772 0.000203193 2.53204e-05"/>
+              <joint name="RMX52_Elbow" range="-1.4 1.5" actuatorfrcrange="-3.8 3.8" armature="0.045" damping="0.01"/>
+              <geom size="0.0287 0.0185 0.0105" pos="0.056 0 1.04084e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+              <geom name="part_1" size="0.0155 0.021 0.0125" pos="0.013 0 1.04084e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+              <geom size="0.00575 0.0185 0.014" pos="0.08925 0 1.04084e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+              <geom name="part_19" size="0.02325 0.0212 0.01425" pos="0.112 -1.48107e-09 -0.00219989" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+              <body name="arm_link_4" pos="0.124 0 0">
+                <inertial pos="0.0424411 0.011296 -1.06944e-07" quat="0.597422 0.378269 -0.597421 0.378269" mass="0.0963748" diaginertia="3.30795e-05 2.66953e-05 2.37822e-05"/>
+                <joint name="RMX52_Wrist_Pitch" range="-1.97 1.7" actuatorfrcrange="-3.8 3.8" armature="0.045" damping="0.01"/>
+                <geom size="0.01525 0.0205 0.02325" pos="0.01275 0.012 1.08006e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                <geom size="0.0202 0.01425 0.02325" pos="0.0482 0.012 1.08006e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                <geom name="part_61" size="0.0165 0.01685 0.02325" pos="0.0525 0.012 1.08006e-07" quat="0.707107 -0.707107 0 0" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                <body name="arm_link_5" pos="0.0684 0 0" quat="-1.22475e-07 -0.707107 -1.22474e-07 0.707107">
+                  <inertial pos="1.94433e-05 -0.0142873 -0.0315256" quat="0.54687 0.446436 -0.452703 0.544691" mass="0.204444" diaginertia="0.000195258 0.000156608 0.000110318"/>
+                  <joint name="RMX52_Wrist_Roll_Reversed" range="-3.14159 3.14159" actuatorfrcrange="-3.8 3.8" armature="0.045" damping="0.01"/>
+                  <geom size="0.0155 0.03275 0.0304" pos="0.0315502 -0.00739998 -0.0281" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_2" size="0.0155 0.03215 0.0304" pos="-0.0321498 -0.00740002 -0.0281" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_3" size="0.004 0.015217 0.016922" pos="2.17645e-07 -1.38562e-09 -0.0441" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_4" size="0.01155 0.01125 0.029" pos="0.0273642 1.11768e-08 -0.04615" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom size="0.00205 0.025163 0.011712" pos="0.00944722 -0.005712 -0.05015" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_32" size="0.0202 0.01425 0.02325" pos="2.15096e-07 -0.012 -0.0243" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_90" size="0.01155 0.01125 0.029" pos="-0.0273638 -1.45023e-08 -0.04615" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_91" size="0.00205 0.025163 0.011712" pos="-0.00944678 0.005712 -0.05015" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_177" size="0.0015 0.014 0.014" pos="2.04083e-07 0 -0.0026" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_327" size="0.0105825 0.006995 0.0103585" pos="2.35107e-07 -0.0542165 -0.0395105" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_330" size="0.0134075 0.019127 0.0152515" pos="2.33372e-07 -0.0647215 -0.0275015" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <geom name="part_332" size="0.018019 0.0205 0.0255235" pos="2.29686e-07 -0.0633335 -0.019619" quat="0.5 0.5 0.5 -0.5" type="box" friction="0.4" rgba="0.93 0.55 0.2 1"/>
+                  <body name="gripper_left_link" pos="0.016114 0 -0.0577" quat="0.5 0.5 0.5 -0.5">
+                    <inertial pos="0.0184527 0.00110961 1.1587e-05" quat="0.524201 0.524666 0.474418 0.474201" mass="0.0253673" diaginertia="1.59663e-05 1.28044e-05 5.79187e-06"/>
+                    <joint name="gripper_left_joint" type="slide" range="-0.00141387 0.0261861" actuatorfrcrange="-10 10" damping="0.001" axis="0 1 0"/>
+                    <geom name="convex_0_0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull00"/>
+                    <geom name="convex_0_1" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull01"/>
+                    <geom name="convex_0_2" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull02"/>
+                    <geom name="convex_0_3" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull03"/>
+                    <geom name="convex_0_4" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull04"/>
+                    <geom name="convex_0_5" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull05"/>
+                    <geom name="convex_0_6" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull06"/>
+                    <geom name="convex_0_7" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull07"/>
+                    <geom name="convex_0_8" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull08"/>
+                    <geom name="convex_0_9" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull09"/>
+                    <geom name="convex_0_10" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull10"/>
+                    <geom name="convex_0_11" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull11"/>
+                    <geom name="convex_0_12" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull12"/>
+                    <geom name="convex_0_13" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull13"/>
+                    <geom name="convex_0_14" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull14"/>
+                    <geom name="convex_0_15" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull15"/>
+                    <geom name="convex_0_16" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull16"/>
+                    <geom name="convex_0_17" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull17"/>
+                    <geom name="convex_0_18" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull18"/>
+                    <geom name="convex_0_19" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull19"/>
+                    <geom name="convex_0_20" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull20"/>
+                    <geom name="convex_0_21" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull21"/>
+                    <geom name="convex_0_22" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull22"/>
+                    <geom name="convex_0_23" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull23"/>
+                    <geom name="convex_0_24" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull24"/>
+                    <geom name="convex_0_25" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull25"/>
+                    <geom name="convex_0_26" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull26"/>
+                    <geom name="convex_0_27" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull27"/>
+                    <geom name="convex_0_28" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull28"/>
+                    <geom name="convex_0_29" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull29"/>
+                    <geom name="convex_0_30" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull30"/>
+                    <geom name="convex_0_31" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part000_hull31"/>
+                    <geom name="convex_10_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_left_link_part010_hull00"/>
+                  </body>
+                  <body name="gripper_right_link" pos="-0.016114 0 -0.0577" quat="0.5 0.5 0.5 -0.5">
+                    <inertial pos="0.0184426 -0.00110938 -1.16397e-05" quat="0.474376 0.47416 0.524239 0.524703" mass="0.0253673" diaginertia="1.59793e-05 1.2817e-05 5.79142e-06"/>
+                    <joint name="gripper_right_joint" type="slide" range="-0.0261861 0.00141387" actuatorfrcrange="-10 10" damping="0.001" axis="0 1 0"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull00"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull01"/>
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull02"/>
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull03"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull04"/>
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull05"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull06"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull07"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull08"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull09"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull10"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull11"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull12"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull13"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull14"/>
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull15"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull16"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull17"/>
+                    <geom type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull18"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull19"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull20"/>
+                    <geom type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull21"/>
+                    <geom pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull22"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull23"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull24"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull25"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull26"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull27"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull28"/>
+                    <geom type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull29"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull30"/>
+                    <geom quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part000_hull31"/>
+                    <geom name="convex_13_0" pos="0 0 0" quat="1 0 0 0" type="mesh" friction="0.4" rgba="0.93 0.55 0.2 1" mesh="gripper_right_link_part013_hull00"/>
+                  </body>
+                  <body name="camera_link" pos="1.43266e-07 -0.0491543 -0.0330161" quat="0.43046 0.560985 0.560986 -0.430459">
+                    <body name="camera_optical_frame" quat="0.5 -0.5 0.5 -0.5"/>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+        <body name="lidar_front">
+          <inertial pos="0.176848 0.0490495 0.0762632" quat="-0.00497397 0.785549 0.0239647 0.618315" mass="0.143895" diaginertia="0.000108269 7.52709e-05 5.58461e-05"/>
+          <geom name="lidar_carrier_envelope" size="0.06325 0.03575 0.0221059" pos="0.15525 0.04875 0.0768941" type="box" friction="0.4" rgba="0.25 0.45 0.8 1"/>
+          <body name="lidar_front_scan" pos="0.1855 0.05 0.06085" quat="0 1 0 0"/>
+        </body>
+        <body name="lidar_rear">
+          <inertial pos="-0.176848 -0.0490495 0.0762632" quat="-0.0239647 0.618315 0.00497397 0.785549" mass="0.143895" diaginertia="0.000108269 7.52709e-05 5.58461e-05"/>
+          <geom size="0.06325 0.03575 0.0221059" pos="-0.15525 -0.04875 0.0768941" type="box" friction="0.4" rgba="0.25 0.45 0.8 1"/>
+          <body name="lidar_rear_scan" pos="-0.1855 -0.05 0.06085" quat="0 0 1 0"/>
+        </body>
+        <body name="top_camera_rear_link" pos="-0.22041 3.79231e-06 0.483623" quat="9.33835e-07 -0.302396 2.96258e-07 0.953183">
+          <body name="top_camera_rear_optical_frame" quat="0.5 -0.5 0.5 -0.5">
+            <body name="top_camera_rear_infra1_optical_frame" pos="-0.0250206 0 0"/>
+            <body name="top_camera_rear_infra2_optical_frame" pos="0.0250206 0 0"/>
+            <body name="top_camera_rear_color_optical_frame" pos="-0.0401155 7.01553e-05 -0.000182516" quat="0.999992 -0.00320408 -0.00176309 0.00182497"/>
+          </body>
+        </body>
+        <body name="top_camera_front_link" pos="-0.0605903 3.79231e-06 0.483623" quat="0.953183 -2.96258e-07 0.302396 9.33835e-07">
+          <body name="top_camera_front_optical_frame" quat="0.5 -0.5 0.5 -0.5">
+            <body name="top_camera_front_infra1_optical_frame" pos="-0.0250206 0 0"/>
+            <body name="top_camera_front_infra2_optical_frame" pos="0.0250206 0 0"/>
+            <body name="top_camera_front_color_optical_frame" pos="-0.0401155 7.01553e-05 -0.000182516" quat="0.999992 -0.00320408 -0.00176309 0.00182497"/>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <equality>
+    <joint joint1="gripper_right_joint" joint2="gripper_left_joint" polycoef="0 -1 0 0 0"/>
+  </equality>
+
+  <actuator>
+    <general name="vel_Wheel_Revolute_Front_Left" joint="Wheel_Revolute_Front_Left" forcelimited="true" forcerange="-1.8 1.8" input="vel" biastype="affine" biasprm="0 0 -1"/>
+    <general name="vel_Wheel_Revolute_Front_Right" joint="Wheel_Revolute_Front_Right" forcelimited="true" forcerange="-1.8 1.8" input="vel" biastype="affine" biasprm="0 0 -1"/>
+    <general name="vel_Wheel_Revolute_Rear_Left" joint="Wheel_Revolute_Rear_Left" forcelimited="true" forcerange="-1.8 1.8" input="vel" biastype="affine" biasprm="0 0 -1"/>
+    <general name="vel_Wheel_Revolute_Rear_Right" joint="Wheel_Revolute_Rear_Right" forcelimited="true" forcerange="-1.8 1.8" input="vel" biastype="affine" biasprm="0 0 -1"/>
+    <general name="pos_RMX52_Base_Yaw" joint="RMX52_Base_Yaw" forcelimited="true" forcerange="-3.8 3.8" input="pos" biastype="affine" gainprm="400" biasprm="0 -400 -24"/>
+    <general name="pos_RMX52_Shoulder" joint="RMX52_Shoulder" forcelimited="true" forcerange="-3.8 3.8" input="pos" biastype="affine" gainprm="400" biasprm="0 -400 -24"/>
+    <general name="pos_RMX52_Elbow" joint="RMX52_Elbow" forcelimited="true" forcerange="-3.8 3.8" input="pos" biastype="affine" gainprm="400" biasprm="0 -400 -24"/>
+    <general name="pos_RMX52_Wrist_Pitch" joint="RMX52_Wrist_Pitch" forcelimited="true" forcerange="-3.8 3.8" input="pos" biastype="affine" gainprm="400" biasprm="0 -400 -24"/>
+    <general name="pos_RMX52_Wrist_Roll_Reversed" joint="RMX52_Wrist_Roll_Reversed" forcelimited="true" forcerange="-3.8 3.8" input="pos" biastype="affine" gainprm="400" biasprm="0 -400 -24"/>
+    <general name="pos_gripper_left_joint" joint="gripper_left_joint" forcelimited="true" forcerange="-10 10" input="pos" biastype="affine" gainprm="1000" biasprm="0 -1000 -10"/>
+  </actuator>
+</mujoco>

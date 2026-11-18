@@ -1,0 +1,110 @@
+{
+  "world": "/home/pa4/git/lv2_next_module/261027_0953/worlds_1711/seed_1",
+  "wheels": "/home/pa4/git/lv2_next_module/261027_1744/l2/config/wheels.yaml",
+  "wheel_armature": 0.007244,
+  "light_level": 1.0,
+  "dome": 600.0,
+  "rect": 20000.0,
+  "n_rect": 6,
+  "phys_dt": 0.008333333333333333,
+  "render_dt": 0.03333333333333333,
+  "ir_K": [
+    385.012817382812,
+    385.012817382812,
+    320.859619140625,
+    239.928024291992
+  ],
+  "ir_baseline_m": 0.050041150301694884,
+  "ir_topics": {
+    "infra1": [
+      "/top_camera_front/infra1/image_rect_raw",
+      "/top_camera_front/infra1/camera_info",
+      "top_camera_front_infra1_optical_frame"
+    ],
+    "infra2": [
+      "/top_camera_front/infra2/image_rect_raw",
+      "/top_camera_front/infra2/camera_info",
+      "top_camera_front_infra2_optical_frame"
+    ]
+  },
+  "lidar": {
+    "hz": 10.0,
+    "res_deg": 1.0,
+    "range": [
+      0.12,
+      8.0
+    ],
+    "topics": {
+      "/scan_front": "lidar_front_scan",
+      "/scan_rear": "lidar_rear_scan"
+    }
+  },
+  "odom": "바퀴 관절 속도(엔코더 방식), 30.0 Hz",
+  "route": {
+    "ids": [
+      "c00",
+      "c10",
+      "c20",
+      "c30",
+      "c40",
+      "c50",
+      "c40",
+      "c41",
+      "c42",
+      "c52",
+      "c53",
+      "c43",
+      "c33",
+      "c23",
+      "c13",
+      "c03",
+      "c13",
+      "c23",
+      "c22",
+      "c32",
+      "c31",
+      "c21",
+      "c11",
+      "c01",
+      "c02",
+      "c12",
+      "c02",
+      "c01",
+      "c11",
+      "c21",
+      "c31",
+      "c32",
+      "c22",
+      "c23",
+      "c33",
+      "c43",
+      "c53",
+      "c52",
+      "c51",
+      "c52",
+      "c42",
+      "c41",
+      "c40",
+      "c30",
+      "c20",
+      "c10",
+      "c00"
+    ],
+    "v": 0.2,
+    "w_max": 0.6
+  },
+  "dof_names": [
+    "Wheel_Revolute_Front_Left",
+    "Wheel_Revolute_Front_Right",
+    "Wheel_Revolute_Rear_Left",
+    "Wheel_Revolute_Rear_Right",
+    "RMX52_Base_Yaw",
+    "RMX52_Shoulder",
+    "RMX52_Elbow",
+    "RMX52_Wrist_Pitch",
+    "RMX52_Wrist_Roll_Reversed",
+    "gripper_left_joint",
+    "gripper_right_joint"
+  ],
+  "start_truth_yaw": -3.0957473968779405
+}

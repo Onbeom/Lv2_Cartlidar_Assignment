@@ -1,0 +1,89 @@
+{
+ "n_goals": 7,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": -0.001,
+ "G3_n_overlap_samples": 334,
+ "G4_loc_rmse_m": 0.0893,
+ "G4_loc_max_m": 0.1595,
+ "G4_yaw_rmse_rad": 0.1364,
+ "G4_n_samples": 6588,
+ "G5_cmd": {
+  "n": 12488,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.1939186006784439,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 106.03,
+   "pos_err": 1.4179,
+   "yaw_err": 2.3293,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "ABORTED",
+   "duration_s": 106.0,
+   "pos_err": 3.2616,
+   "yaw_err": 2.7326,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1(tag 12 +x, 회전 구간 규칙)",
+   "status": "ABORTED",
+   "duration_s": 106.0,
+   "pos_err": 3.3556,
+   "yaw_err": 2.1247,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L2(tag 13 -y)",
+   "status": "ABORTED",
+   "duration_s": 131.58,
+   "pos_err": 1.6876,
+   "yaw_err": 1.4322,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "start_box_3",
+   "status": "SUCCEEDED",
+   "duration_s": 59.78,
+   "pos_err": 0.078,
+   "yaw_err": 0.0252,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "L3(tag 14 +x, 회전 구간 규칙)",
+   "status": "SUCCEEDED",
+   "duration_s": 42.13,
+   "pos_err": 0.1397,
+   "yaw_err": 0.0424,
+   "error_code": 0,
+   "error_msg": ""
+  },
+  {
+   "name": "start(회전 여유 규칙)",
+   "status": "ABORTED",
+   "duration_s": 90.07,
+   "pos_err": 0.9981,
+   "yaw_err": 3.0001,
+   "error_code": 208,
+   "error_msg": "GridBasedplugin failed to plan from (0.53, 1.76) [q: 0.00, 0.00, 0.08, 1.00] (yaw: 0.17) to (0.72, 0.95) [q: 0.00, 0.00, 1.00, 0.00] (yaw: 3.14): \"Failed to create plan with tolerance of: 0.100000\""
+  }
+ ],
+ "G3_pass": false,
+ "G4_pass": false,
+ "G5_pass": true,
+ "pass": false
+}

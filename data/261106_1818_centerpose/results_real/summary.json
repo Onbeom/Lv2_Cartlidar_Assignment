@@ -1,0 +1,62 @@
+{
+ "final_arm": {
+  "images": 181,
+  "e3_boxes": 633,
+  "valid": 251,
+  "reproj_p50_p95": [
+   4.36,
+   9.29
+  ],
+  "score_p50": 0.64,
+  "tag_pucks": 53,
+  "compared": 8,
+  "center_diff_mm_p50_p95": [
+   15.67,
+   47.86
+  ],
+  "axis_diff_deg_p50_p95": [
+   21.79,
+   77.28
+  ]
+ },
+ "judge2_tag": {
+  "images": 13,
+  "e3_boxes": 13,
+  "valid": 0,
+  "reproj_p50_p95": [
+   null,
+   null
+  ],
+  "score_p50": null,
+  "tag_pucks": 13,
+  "compared": 0,
+  "center_diff_mm_p50_p95": [
+   null,
+   null
+  ],
+  "axis_diff_deg_p50_p95": [
+   null,
+   null
+  ]
+ },
+ "barcode_real_L": {
+  "images": 6,
+  "e3_boxes": 4,
+  "valid": 2,
+  "reproj_p50_p95": [
+   7.85,
+   9.11
+  ],
+  "score_p50": 0.56,
+  "tag_pucks": 2,
+  "compared": 0,
+  "center_diff_mm_p50_p95": [
+   null,
+   null
+  ],
+  "axis_diff_deg_p50_p95": [
+   null,
+   null
+  ]
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "engine": "/home/cart11/yolo_D/deploy/yolo11n_task4_D_480_fp16.engine",
+ "engine_arm": "/home/cart11/yolo_D/deploy/yolo11n_task4_D_384_fp16.engine",
+ "seconds": 182.1,
+ "rate_target_hz": 15.0,
+ "cams": {
+  "front": {
+   "frames": 5448,
+   "gaps": 29
+  },
+  "rear": {
+   "frames": 5452,
+   "gaps": 23
+  },
+  "arm": {
+   "frames": 5552,
+   "gaps": 0,
+   "device": "/dev/video12"
+  }
+ },
+ "errors": [],
+ "tensorrt": "10.16.2.10",
+ "note": "결과 나이는 받은 뒤부터(노출 · USB 전송 제외)"
+}

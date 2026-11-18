@@ -1,0 +1,71 @@
+{
+ "folder": "real_labels_far_dark_B",
+ "n_images": 111,
+ "n_flagged": 18,
+ "flags": {
+  "r08_1539__171_20261027_153958_296535.png": [
+   "줄2 green_cylinder 인데 빨강 화소 많음(806 vs 초록 0)",
+   "줄2 green_cylinder ↔ 이웃 172 같은 자리 red_cylinder",
+   "앞뒤 장 모두와 클래스별 개수 다름 Rcyl1 Gcyl2 Rcub3 Gcub1"
+  ],
+  "r08_1539__161_20261027_153944_608048.png": [
+   "줄2 red_cylinder ↔ 이웃 162 같은 자리 red_cuboid",
+   "줄7 red_cylinder ↔ 이웃 162 같은 자리 red_cuboid"
+  ],
+  "r08_1539__162_20261027_153944_955584.png": [
+   "줄3 red_cuboid ↔ 이웃 161 같은 자리 red_cylinder",
+   "줄7 red_cuboid ↔ 이웃 161 같은 자리 red_cylinder"
+  ],
+  "r08_1539__163_20261027_153945_257287.png": [
+   "줄5 red_cylinder ↔ 이웃 162 같은 자리 red_cuboid"
+  ],
+  "r08_1539__164_20261027_153953_063452.png": [
+   "줄1 green_cylinder ↔ 이웃 165 같은 자리 red_cuboid",
+   "줄2 green_cuboid ↔ 이웃 165 같은 자리 red_cuboid"
+  ],
+  "r08_1539__165_20261027_153953_294716.png": [
+   "줄3 red_cuboid ↔ 이웃 164 같은 자리 green_cuboid",
+   "줄7 red_cuboid ↔ 이웃 164 같은 자리 green_cylinder"
+  ],
+  "r08_1539__172_20261027_153958_464928.png": [
+   "줄7 red_cylinder ↔ 이웃 171 같은 자리 green_cylinder"
+  ],
+  "r08_1539__174_20261027_153958_766763.png": [
+   "줄1 red_cuboid ↔ 이웃 175 같은 자리 red_cylinder",
+   "줄5 red_cuboid ↔ 이웃 175 같은 자리 red_cylinder"
+  ],
+  "r08_1539__175_20261027_154001_216877.png": [
+   "줄4 red_cylinder ↔ 이웃 174 같은 자리 red_cuboid"
+  ],
+  "r08_1539__176_20261027_154001_391003.png": [
+   "줄1 green_cylinder ↔ 이웃 177 같은 자리 red_cuboid"
+  ],
+  "r08_1539__177_20261027_154001_538496.png": [
+   "줄4 red_cuboid ↔ 이웃 176 같은 자리 green_cylinder"
+  ],
+  "r09_1540__184_20261027_154024_297001.png": [
+   "줄5 red_cylinder ↔ 이웃 185 같은 자리 green_cylinder"
+  ],
+  "r09_1540__185_20261027_154025_401637.png": [
+   "줄2 green_cylinder ↔ 이웃 184 같은 자리 red_cylinder"
+  ],
+  "r09_1540__187_20261027_154034_540065.png": [
+   "줄5 red_cylinder ↔ 이웃 188 같은 자리 green_cylinder"
+  ],
+  "r09_1540__188_20261027_154037_199100.png": [
+   "줄1 green_cylinder ↔ 이웃 187 같은 자리 red_cylinder"
+  ],
+  "r10_1541__205_20261027_154124_372206.png": [
+   "앞뒤 장 모두와 클래스별 개수 다름 "
+  ],
+  "r10_1541__224_20261027_154147_891887.png": [
+   "줄4 red_cuboid ↔ 이웃 225 같은 자리 red_cylinder",
+   "줄5 red_cuboid ↔ 이웃 225 같은 자리 red_cylinder"
+  ],
+  "r10_1541__225_20261027_154153_416287.png": [
+   "줄2 red_cylinder ↔ 이웃 224 같은 자리 red_cuboid",
+   "줄4 red_cylinder ↔ 이웃 224 같은 자리 red_cuboid"
+  ]
+ },
+ "note": "도구 확인 · 판정 아님. 의심 장은 사용자가 사진을 보고 정함. 흔들린 퍽은 구분 안 되면 표시 안 함(사용자 규칙)"
+}

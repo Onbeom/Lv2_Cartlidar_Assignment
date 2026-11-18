@@ -1,0 +1,20 @@
+{
+  "base": "261028_1457 private R6v5",
+  "changed": [
+    "config/perception.yaml",
+    "include/perception/detector.hpp",
+    "include/perception/puck_classes.hpp",
+    "src/perception_node.cpp",
+    "src/trt_detector.cpp",
+    "test/test_tracker_tag.cpp"
+  ],
+  "sha256": {
+    "config/perception.yaml": "67053618c2e86b317ac483ec5f0a8a6809f1b504d3b6d692d5685cd0a9c032ef",
+    "include/perception/detector.hpp": "ee618b83906ea7e36d1386c6ecea3da2c47dab2923f755a272f51962ad48a226",
+    "include/perception/puck_classes.hpp": "81ec89c3532412fd2ef0eb78e0258dd666559f78d9a91161ba2b0182b58b37c3",
+    "src/perception_node.cpp": "9b8d53680e6db70d784620004ebb18f887c3b8fa73772fdd11d8269d006802af",
+    "src/trt_detector.cpp": "ea6b3bfb51db53eb83bc740b9a37a6015e0f50b7b1bd3496ac3f16f8da7f9c95",
+    "test/test_tracker_tag.cpp": "aba22b7f3187236fdf6c189cde78e9d34ecb0e1af6a06d294b1d2981a7fda970"
+  },
+  "team_applied": false
+}

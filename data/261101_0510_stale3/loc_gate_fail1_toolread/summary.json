@@ -1,0 +1,43 @@
+{
+ "no_status": {
+  "n_obs": 1,
+  "rejected": {}
+ },
+ "lost": {
+  "n_obs": 1,
+  "rejected": {
+   "localization_lost": 1
+  }
+ },
+ "confirm": {
+  "n_obs": 1,
+  "rejected": {
+   "localization_lost": 1,
+   "localization_confirm": 1
+  }
+ },
+ "ok": {
+  "n_obs": 1,
+  "rejected": {
+   "localization_lost": 1,
+   "localization_confirm": 1
+  }
+ },
+ "suspect": {
+  "n_obs": 2,
+  "rejected": {
+   "localization_lost": 1,
+   "localization_confirm": 1,
+   "localization_suspect": 1
+  }
+ },
+ "stale_after_suspect": {
+  "n_obs": 3,
+  "rejected": {
+   "localization_lost": 1,
+   "localization_confirm": 1,
+   "localization_suspect": 1
+  }
+ },
+ "pass": false
+}

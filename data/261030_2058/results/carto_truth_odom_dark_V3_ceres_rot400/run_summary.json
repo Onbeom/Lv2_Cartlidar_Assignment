@@ -1,0 +1,31 @@
+{
+  "kind": "truth_odom",
+  "light": "dark",
+  "simulation_only": true,
+  "model": "261029_1030/urdf_261028",
+  "maze": "maze.zip (261030_1943)",
+  "truth_as_input": true,
+  "diagnostic_only": true,
+  "variant_lua": "/home/pa4/git/lv2_next_module/261030_2058/variants/V3_ceres_rot400.lua",
+  "play_exit": 0,
+  "finish_exit": 0,
+  "write_exit": 0,
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1661533,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1661534,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1661723,
+      "exit": 0
+    }
+  ],
+  "to_map_exit": 0
+}

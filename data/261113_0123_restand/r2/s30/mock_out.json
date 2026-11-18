@@ -1,0 +1,2285 @@
+{
+ "final": {
+  "state": "DONE",
+  "reason": "",
+  "step": "wait 3"
+ },
+ "elapsed_s": 53.2,
+ "navigate": [
+  [
+   1.468,
+   0.3147,
+   1.5708
+  ],
+  [
+   1.8357,
+   0.4498,
+   2.0944
+  ],
+  [
+   3.67,
+   2.4667,
+   1.5708
+  ],
+  [
+   4.0627,
+   2.6085,
+   2.0944
+  ],
+  [
+   2.9847,
+   3.886,
+   -0.0
+  ],
+  [
+   2.936,
+   4.6687,
+   1.5708
+  ],
+  [
+   0.734,
+   4.6687,
+   1.5708
+  ],
+  [
+   2.202,
+   4.3853,
+   -1.5708
+  ],
+  [
+   0.734,
+   4.6687,
+   1.5708
+  ],
+  [
+   2.202,
+   5.9893,
+   -1.5708
+  ],
+  [
+   1.468,
+   0.3147,
+   1.5708
+  ],
+  [
+   2.9847,
+   0.95,
+   -0.0
+  ],
+  [
+   2.9847,
+   3.886,
+   -0.0
+  ],
+  [
+   2.936,
+   4.6687,
+   1.5708
+  ],
+  [
+   3.67,
+   4.6687,
+   1.5708
+  ],
+  [
+   2.202,
+   4.3853,
+   -1.5708
+  ],
+  [
+   2.9847,
+   0.95,
+   -0.0
+  ],
+  [
+   0.6936,
+   0.95,
+   3.1416
+  ]
+ ],
+ "align": [
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.13,
+  0.45,
+  0.13,
+  0.45,
+  0.13,
+  0.13,
+  0.13,
+  0.13
+ ],
+ "drive_skill": [
+  "turn_m17.1",
+  "turn_0",
+  "turn_p17.1",
+  "turn_0",
+  "turn_m30.0",
+  "turn_0",
+  "turn_m30.0",
+  "turn_0"
+ ],
+ "pose": [
+  "DRIVE",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "BOX_VIEW",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "BOX_VIEW",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "ALIGN",
+  "DRIVE",
+  "DRIVE",
+  "BOX_VIEW",
+  "DRIVE",
+  "DRIVE",
+  "DRIVE",
+  "DRIVE",
+  "DRIVE"
+ ],
+ "pick": [],
+ "skill": [
+  "barcode_look:map:0.0800:0.6500:0.4500",
+  "target_look:odom:1.4455:0.9839:0.1000",
+  "toppick_tilt",
+  "pallet_load_2_0_tilt",
+  "target_look:odom:3.9964:2.7701:0.1000",
+  "toppick_tilt",
+  "pallet_load_2_3_tilt",
+  "target_look:odom:3.9212:2.7428:0.1000",
+  "toppick_tilt",
+  "pallet_load_2_2_tilt",
+  "target_look:odom:4.0487:3.4656:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_1_tilt",
+  "target_look:odom:3.5807:5.0388:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_0_tilt",
+  "target_look:odom:1.4122:5.4211:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_3_tilt",
+  "pallet_unload_1_3_tilt",
+  "place_at:odom:2.5033:3.4426:0.0700",
+  "pallet_unload_1_0_tilt",
+  "place_at:odom:2.6228:3.4321:0.0700",
+  "pallet_unload_1_1_tilt",
+  "place_at:odom:2.5137:3.5622:0.0700",
+  "pallet_unload_2_2_tilt",
+  "place_at:odom:2.6333:3.5517:0.0700",
+  "target_look:odom:1.4874:5.4485:0.1000",
+  "toppick_tilt",
+  "pallet_load_2_2_tilt",
+  "target_look:odom:2.9331:5.1936:0.1000",
+  "toppick_tilt",
+  "pallet_load_2_1_tilt",
+  "target_look:odom:2.8579:5.1662:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_0_tilt",
+  "target_look:odom:1.3703:0.9566:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_2_tilt",
+  "pallet_unload_1_0_tilt",
+  "place_at:odom:3.5910:0.4690:0.0700",
+  "pallet_unload_1_2_tilt",
+  "place_at:odom:3.4819:0.5990:0.0700",
+  "target_look:odom:4.1238:3.4930:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_1_tilt",
+  "target_look:odom:3.6559:5.0661:0.1000",
+  "toppick_tilt",
+  "pallet_load_1_0_tilt",
+  "pallet_unload_1_0_tilt",
+  "place_at:odom:4.2467:4.9361:0.0700",
+  "pallet_unload_1_1_tilt",
+  "place_at:odom:4.3662:4.9256:0.0700",
+  "pallet_unload_2_2_tilt",
+  "place_at:odom:4.2414:4.8763:0.0700",
+  "pallet_unload_2_0_tilt",
+  "place_at:odom:4.3610:4.8659:0.0700",
+  "pallet_unload_2_3_tilt",
+  "place_at:odom:4.2362:4.8166:0.0700",
+  "pallet_unload_2_1_tilt",
+  "place_at:odom:4.3557:4.8061:0.0700",
+  "box_look:map:3.6700:5.3540:0.0700",
+  "box_look:map:2.2020:3.7000:0.0700",
+  "box_look:map:3.6700:0.9500:0.0700"
+ ],
+ "set_mode": [
+  96,
+  1,
+  1,
+  7,
+  0,
+  7,
+  7,
+  0,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  0,
+  7,
+  7,
+  0,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  1,
+  1,
+  7,
+  0,
+  7,
+  7,
+  0,
+  0,
+  4,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  1,
+  1,
+  7,
+  0,
+  7,
+  7,
+  0,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  7,
+  7,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  4,
+  0,
+  3,
+  0,
+  3,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  1,
+  1,
+  7,
+  7,
+  7,
+  0,
+  4,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  0,
+  3,
+  21,
+  21,
+  21,
+  0
+ ],
+ "check_dice": [
+  {
+   "frame": "odom",
+   "cells": [
+    [
+     4.247,
+     4.936,
+     0.07
+    ],
+    [
+     4.306,
+     4.931,
+     0.07
+    ],
+    [
+     4.366,
+     4.926,
+     0.07
+    ],
+    [
+     4.241,
+     4.876,
+     0.07
+    ],
+    [
+     4.301,
+     4.871,
+     0.07
+    ],
+    [
+     4.361,
+     4.866,
+     0.07
+    ],
+    [
+     4.236,
+     4.817,
+     0.07
+    ],
+    [
+     4.296,
+     4.811,
+     0.07
+    ],
+    [
+     4.356,
+     4.806,
+     0.07
+    ]
+   ],
+   "expect": "202202202",
+   "yellow_shape": 0
+  },
+  {
+   "frame": "odom",
+   "cells": [
+    [
+     2.514,
+     3.562,
+     0.07
+    ],
+    [
+     2.574,
+     3.557,
+     0.07
+    ],
+    [
+     2.633,
+     3.552,
+     0.07
+    ],
+    [
+     2.509,
+     3.502,
+     0.07
+    ],
+    [
+     2.568,
+     3.497,
+     0.07
+    ],
+    [
+     2.628,
+     3.492,
+     0.07
+    ],
+    [
+     2.503,
+     3.443,
+     0.07
+    ],
+    [
+     2.563,
+     3.437,
+     0.07
+    ],
+    [
+     2.623,
+     3.432,
+     0.07
+    ]
+   ],
+   "expect": "101000101",
+   "yellow_shape": 0
+  },
+  {
+   "frame": "odom",
+   "cells": [
+    [
+     3.482,
+     0.599,
+     0.07
+    ],
+    [
+     3.542,
+     0.594,
+     0.07
+    ],
+    [
+     3.601,
+     0.589,
+     0.07
+    ],
+    [
+     3.477,
+     0.539,
+     0.07
+    ],
+    [
+     3.536,
+     0.534,
+     0.07
+    ],
+    [
+     3.596,
+     0.529,
+     0.07
+    ],
+    [
+     3.471,
+     0.479,
+     0.07
+    ],
+    [
+     3.531,
+     0.474,
+     0.07
+    ],
+    [
+     3.591,
+     0.469,
+     0.07
+    ]
+   ],
+   "expect": "300000003",
+   "yellow_shape": 1
+  }
+ ],
+ "place_box": [
+  {
+   "place": "L2",
+   "map_center": [
+    2.222,
+    3.69
+   ],
+   "rot_deg": 5.0
+  },
+  {
+   "place": "L1",
+   "map_center": [
+    3.69,
+    0.94
+   ],
+   "rot_deg": 5.0
+  },
+  {
+   "place": "L3",
+   "map_center": [
+    3.69,
+    5.344
+   ],
+   "rot_deg": 5.0
+  }
+ ],
+ "start_box": [
+  {
+   "box": 1,
+   "nav": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "center": [
+    1.518,
+    1.0
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     1.483359,
+     0.98
+    ],
+    "1": [
+     1.552641,
+     1.02
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 2,
+   "nav": [
+    3.67,
+    2.4667,
+    1.5708
+   ],
+   "center": [
+    3.72,
+    3.202
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.182
+    ],
+    "1": [
+     3.754641,
+     3.222
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 6,
+   "nav": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "center": [
+    3.72,
+    3.936
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.916
+    ],
+    "1": [
+     3.754641,
+     3.956
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 3,
+   "nav": [
+    2.936,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    2.986,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.951359,
+     5.384
+    ],
+    "1": [
+     3.020641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 4,
+   "nav": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    0.784,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     0.749359,
+     5.384
+    ],
+    "1": [
+     0.818641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 4,
+   "nav": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    0.784,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     0.749359,
+     5.384
+    ],
+    "1": [
+     0.818641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 5,
+   "nav": [
+    2.202,
+    5.9893,
+    -1.5708
+   ],
+   "center": [
+    2.252,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.217359,
+     5.384
+    ],
+    "1": [
+     2.286641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 1,
+   "nav": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "center": [
+    1.518,
+    1.0
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     1.483359,
+     0.98
+    ],
+    "1": [
+     1.552641,
+     1.02
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 6,
+   "nav": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "center": [
+    3.72,
+    3.936
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.916
+    ],
+    "1": [
+     3.754641,
+     3.956
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "box": 3,
+   "nav": [
+    2.936,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    2.986,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.951359,
+     5.384
+    ],
+    "1": [
+     3.020641,
+     5.424
+    ]
+   },
+   "mode": 1
+  }
+ ],
+ "events": [
+  {
+   "kind": "skill",
+   "name": "barcode_look:map:0.0800:0.6500:0.4500",
+   "ok": true,
+   "before": null,
+   "after": null
+  },
+  {
+   "kind": "measure_front",
+   "box": 1,
+   "nav": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "center": [
+    1.518,
+    1.0
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     1.483359,
+     0.98
+    ],
+    "1": [
+     1.552641,
+     1.02
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "align",
+   "name": "fine_true_box",
+   "ok": true,
+   "after": [
+    1.69925,
+    0.686066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "align",
+   "name": "fine_true_box",
+   "ok": true,
+   "after": [
+    1.69925,
+    0.686066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_m17.1",
+   "ok": true,
+   "before": [
+    1.69925,
+    0.686066,
+    2.094399
+   ],
+   "after": [
+    1.714396,
+    0.692441,
+    1.844
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:1.4455:0.9839:0.1000",
+   "ok": true,
+   "before": [
+    1.714396,
+    0.692441,
+    1.844
+   ],
+   "after": [
+    1.714396,
+    0.692441,
+    1.844
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    1.714396,
+    0.692441,
+    1.844
+   ],
+   "after": [
+    1.714396,
+    0.692441,
+    1.844
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_2_0_tilt",
+   "ok": true,
+   "before": [
+    1.714396,
+    0.692441,
+    1.844
+   ],
+   "after": [
+    1.714396,
+    0.692441,
+    1.844
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_0",
+   "ok": true,
+   "before": [
+    1.714396,
+    0.692441,
+    1.844
+   ],
+   "after": [
+    1.69925,
+    0.686066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 2,
+   "nav": [
+    3.67,
+    2.4667,
+    1.5708
+   ],
+   "center": [
+    3.72,
+    3.202
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.182
+    ],
+    "1": [
+     3.754641,
+     3.222
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "align",
+   "name": "fine_true_box",
+   "ok": true,
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "align",
+   "name": "fine_true_box",
+   "ok": true,
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:3.9964:2.7701:0.1000",
+   "ok": true,
+   "before": [
+    3.90125,
+    2.888066,
+    2.094399
+   ],
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    3.90125,
+    2.888066,
+    2.094399
+   ],
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_2_3_tilt",
+   "ok": true,
+   "before": [
+    3.90125,
+    2.888066,
+    2.094399
+   ],
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_p17.1",
+   "ok": true,
+   "before": [
+    3.90125,
+    2.888066,
+    2.094399
+   ],
+   "after": [
+    3.888156,
+    2.878136,
+    2.344797
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:3.9212:2.7428:0.1000",
+   "ok": true,
+   "before": [
+    3.888156,
+    2.878136,
+    2.344797
+   ],
+   "after": [
+    3.888156,
+    2.878136,
+    2.344797
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    3.888156,
+    2.878136,
+    2.344797
+   ],
+   "after": [
+    3.888156,
+    2.878136,
+    2.344797
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_2_2_tilt",
+   "ok": true,
+   "before": [
+    3.888156,
+    2.878136,
+    2.344797
+   ],
+   "after": [
+    3.888156,
+    2.878136,
+    2.344797
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_0",
+   "ok": true,
+   "before": [
+    3.888156,
+    2.878136,
+    2.344797
+   ],
+   "after": [
+    3.90125,
+    2.888066,
+    2.094399
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 6,
+   "nav": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "center": [
+    3.72,
+    3.936
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.916
+    ],
+    "1": [
+     3.754641,
+     3.956
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:4.0487:3.4656:0.1000",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_1_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 3,
+   "nav": [
+    2.936,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    2.986,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.951359,
+     5.384
+    ],
+    "1": [
+     3.020641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:3.5807:5.0388:0.1000",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_0_tilt",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 4,
+   "nav": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    0.784,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     0.749359,
+     5.384
+    ],
+    "1": [
+     0.818641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_m30.0",
+   "ok": true,
+   "before": [
+    0.734,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:1.4122:5.4211:0.1000",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_3_tilt",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_0",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.734,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_3_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:2.5033:3.4426:0.0700",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_0_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:2.6228:3.4321:0.0700",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_1_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:2.5137:3.5622:0.0700",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_2_2_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:2.6333:3.5517:0.0700",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 4,
+   "nav": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    0.784,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     0.749359,
+     5.384
+    ],
+    "1": [
+     0.818641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_m30.0",
+   "ok": true,
+   "before": [
+    0.734,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:1.4874:5.4485:0.1000",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_2_2_tilt",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.761725,
+    4.985374,
+    1.135863
+   ]
+  },
+  {
+   "kind": "drive_skill",
+   "name": "turn_0",
+   "ok": true,
+   "before": [
+    0.761725,
+    4.985374,
+    1.135863
+   ],
+   "after": [
+    0.734,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 5,
+   "nav": [
+    2.202,
+    5.9893,
+    -1.5708
+   ],
+   "center": [
+    2.252,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.217359,
+     5.384
+    ],
+    "1": [
+     2.286641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:2.9331:5.1936:0.1000",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_2_1_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:2.8579:5.1662:0.1000",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_0_tilt",
+   "ok": true,
+   "before": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    5.7165,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 1,
+   "nav": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "center": [
+    1.518,
+    1.0
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     1.483359,
+     0.98
+    ],
+    "1": [
+     1.552641,
+     1.02
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:1.3703:0.9566:0.1000",
+   "ok": true,
+   "before": [
+    1.468,
+    0.5875,
+    1.5708
+   ],
+   "after": [
+    1.468,
+    0.5875,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    1.468,
+    0.5875,
+    1.5708
+   ],
+   "after": [
+    1.468,
+    0.5875,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_2_tilt",
+   "ok": true,
+   "before": [
+    1.468,
+    0.5875,
+    1.5708
+   ],
+   "after": [
+    1.468,
+    0.5875,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_0_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    0.95,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:3.5910:0.4690:0.0700",
+   "ok": true,
+   "before": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    0.95,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_2_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    0.95,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:3.4819:0.5990:0.0700",
+   "ok": true,
+   "before": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    0.95,
+    -0.0
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 6,
+   "nav": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "center": [
+    3.72,
+    3.936
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     3.685359,
+     3.916
+    ],
+    "1": [
+     3.754641,
+     3.956
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:4.1238:3.4930:0.1000",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_1_tilt",
+   "ok": true,
+   "before": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    3.886,
+    -0.0
+   ]
+  },
+  {
+   "kind": "measure_front",
+   "box": 3,
+   "nav": [
+    2.936,
+    4.6687,
+    1.5708
+   ],
+   "center": [
+    2.986,
+    5.404
+   ],
+   "rot_deg": 30.0,
+   "pucks": {
+    "-1": [
+     2.951359,
+     5.384
+    ],
+    "1": [
+     3.020641,
+     5.424
+    ]
+   },
+   "mode": 1
+  },
+  {
+   "kind": "skill",
+   "name": "target_look:odom:3.6559:5.0661:0.1000",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "toppick_tilt",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_load_1_0_tilt",
+   "ok": true,
+   "before": [
+    2.936,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    2.936,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_0_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.2467:4.9361:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_1_1_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.3662:4.9256:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_2_2_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.2414:4.8763:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_2_0_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.3610:4.8659:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_2_3_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.2362:4.8166:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "pallet_unload_2_1_tilt",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "place_at:odom:4.3557:4.8061:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "box_look:map:3.6700:5.3540:0.0700",
+   "ok": true,
+   "before": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "after": [
+    3.67,
+    4.9915,
+    1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "box_look:map:2.2020:3.7000:0.0700",
+   "ok": true,
+   "before": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "after": [
+    2.202,
+    4.0625,
+    -1.5708
+   ]
+  },
+  {
+   "kind": "skill",
+   "name": "box_look:map:3.6700:0.9500:0.0700",
+   "ok": true,
+   "before": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "after": [
+    3.3075,
+    0.95,
+    -0.0
+   ]
+  }
+ ],
+ "steps_seen": [
+  "[0] observe",
+  "[1] plan",
+  "[2] goto 1.468 0.3147 1.5708",
+  "[3] approach 0.13",
+  "[3] measure_start B1:S",
+  "[4] restand B1:S",
+  "[5] approach 0.13",
+  "[6] skill drive turn_m17 40 mode=OFF",
+  "[7] skill manipulator target_look:base_footprint:0.3565:0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[8] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[9] skill manipulator pallet_load_2_0_tilt 40 mode=OFF",
+  "[10] skill drive turn_0 40 mode=OFF",
+  "[11] goto 3.67 2.4667 1.5708",
+  "[12] approach 0.13",
+  "[12] measure_start B2:S",
+  "[13] restand B2:S",
+  "[14] approach 0.13",
+  "[15] skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[16] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[17] skill manipulator pallet_load_2_3_tilt 40 mode=OFF",
+  "[18] skill drive turn_p17 40 mode=OFF",
+  "[19] skill manipulator target_look:base_footprint:0.3565:-0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[20] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[21] skill manipulator pallet_load_2_2_tilt 40 mode=OFF",
+  "[22] skill drive turn_0 40 mode=OFF",
+  "[23] goto 2.9847 3.886 -0",
+  "[24] approach 0.13",
+  "[24] measure_start B6:W",
+  "[25] approach 0.13",
+  "[26] skill manipulator target_look:base_footprint:0.3225:0.0000:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[27] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[28] skill manipulator pallet_load_1_1_tilt 40 mode=OFF",
+  "[29] goto 2.936 4.6687 1.5708",
+  "[30] approach 0.13",
+  "[30] measure_start B3:S",
+  "[31] approach 0.13",
+  "[32] skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[33] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[34] skill manipulator pallet_load_1_0_tilt 40 mode=OFF",
+  "[35] goto 0.734 4.6687 1.5708",
+  "[36] approach 0.13",
+  "[36] measure_start B4:S",
+  "[37] approach 0.13",
+  "[38] skill drive turn_p17 40 mode=OFF",
+  "[39] skill manipulator target_look:base_footprint:0.3565:-0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[40] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[41] skill manipulator pallet_load_1_3_tilt 40 mode=OFF",
+  "[42] skill drive turn_0 40 mode=OFF",
+  "[43] goto 2.202 4.3853 -1.5708",
+  "[44] approach_box 0.13",
+  "[45] skill manipulator pallet_unload_1_3_tilt 40 mode=OFF",
+  "[45] measure_box L2",
+  "[46] skill manipulator pallet_unload_1_3_tilt 40 mode=OFF",
+  "[47] skill manipulator place_L2_m1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[48] skill manipulator pallet_unload_1_0_tilt 40 mode=OFF",
+  "[49] skill manipulator place_L2_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[50] skill manipulator pallet_unload_1_1_tilt 40 mode=OFF",
+  "[51] skill manipulator place_L2_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[52] skill manipulator pallet_unload_2_2_tilt 40 mode=OFF",
+  "[53] skill manipulator place_L2_p1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[54] goto 0.734 4.6687 1.5708",
+  "[55] approach 0.13",
+  "[55] measure_start B4:S",
+  "[56] approach 0.13",
+  "[57] skill drive turn_m17 40 mode=OFF",
+  "[58] skill manipulator target_look:base_footprint:0.3565:0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[59] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[60] skill manipulator pallet_load_2_2_tilt 40 mode=OFF",
+  "[61] skill drive turn_0 40 mode=OFF",
+  "[62] goto 2.202 5.9893 -1.5708",
+  "[63] approach 0.13",
+  "[63] measure_start B5:N",
+  "[64] approach 0.13",
+  "[65] skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[66] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[67] skill manipulator pallet_load_2_1_tilt 40 mode=OFF",
+  "[68] skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[69] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[70] skill manipulator pallet_load_1_0_tilt 40 mode=OFF",
+  "[71] goto 1.468 0.3147 1.5708",
+  "[72] approach 0.13",
+  "[72] measure_start B1:S",
+  "[73] approach 0.13",
+  "[74] skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[75] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[76] skill manipulator pallet_load_1_2_tilt 40 mode=OFF",
+  "[77] goto 2.9847 0.95 -0",
+  "[78] approach_box 0.13",
+  "[79] skill manipulator pallet_unload_1_0_tilt 40 mode=OFF",
+  "[79] measure_box L1",
+  "[80] skill manipulator pallet_unload_1_0_tilt 40 mode=OFF",
+  "[81] skill manipulator place_L1_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[82] skill manipulator pallet_unload_1_2_tilt 40 mode=OFF",
+  "[83] skill manipulator place_L1_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[84] goto 2.9847 3.886 -0",
+  "[85] approach 0.13",
+  "[85] measure_start B6:W",
+  "[86] approach 0.13",
+  "[87] skill manipulator target_look:base_footprint:0.4025:0.0000:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[88] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[89] skill manipulator pallet_load_1_1_tilt 40 mode=OFF",
+  "[90] goto 2.936 4.6687 1.5708",
+  "[91] approach 0.13",
+  "[91] measure_start B3:S",
+  "[92] approach 0.13",
+  "[93] skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[94] skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "[95] skill manipulator pallet_load_1_0_tilt 40 mode=OFF",
+  "[96] goto 3.67 4.6687 1.5708",
+  "[97] approach_box 0.13",
+  "[98] skill manipulator pallet_unload_1_0_tilt 40 mode=OFF",
+  "[98] measure_box L3",
+  "[99] skill manipulator pallet_unload_1_0_tilt 40 mode=OFF",
+  "[100] skill manipulator place_L3_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[101] skill manipulator pallet_unload_1_1_tilt 40 mode=OFF",
+  "[102] skill manipulator place_L3_p1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[103] skill manipulator pallet_unload_2_2_tilt 40 mode=OFF",
+  "[104] skill manipulator place_L3_m1_0_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[105] skill manipulator pallet_unload_2_0_tilt 40 mode=OFF",
+  "[106] skill manipulator place_L3_p1_0_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[107] skill manipulator pallet_unload_2_3_tilt 40 mode=OFF",
+  "[108] skill manipulator place_L3_m1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[109] skill manipulator pallet_unload_2_1_tilt 40 mode=OFF",
+  "[110] skill manipulator place_L3_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "[111] verify L3 3.67 5.354 0.07 202202202 0",
+  "[112] goto 2.202 4.3853 -1.5708",
+  "[113] approach_box 0.13",
+  "[114] verify L2 2.202 3.7 0.07 101000101 0",
+  "[115] goto 2.9847 0.95 -0",
+  "[116] approach_box 0.13",
+  "[117] verify L1 3.67 0.95 0.07 300000003 1",
+  "[118] goto 0.6936 0.95 3.1416",
+  "[119] wait 3"
+ ]
+}

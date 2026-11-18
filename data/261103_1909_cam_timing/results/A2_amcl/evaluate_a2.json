@@ -1,0 +1,120 @@
+{
+  "simulation_only": true,
+  "out": "/home/pa4/git/lv2_next_module/261103_1909_cam_timing/results/A2_amcl",
+  "eval_start_s": 1.6333333330000002,
+  "eval_end_s": 347.0,
+  "T1_bag_infra1_image_minus_ekf_s": {
+    "n": 10361,
+    "median": 0.008333332999995946,
+    "p95": 0.025000000000005684,
+    "p99": 0.025000000000034106,
+    "max": 0.025000000000034106,
+    "min": -0.01666666700000974,
+    "over_0.1s": 0
+  },
+  "bag_infra1_camera_info": {
+    "received": 10388,
+    "scene_sent": 10410,
+    "max_stamp_gap_s": 0.03333333400001948
+  },
+  "T1_bag_infra2_image_minus_ekf_s": {
+    "n": 10361,
+    "median": 0.008333332999995946,
+    "p95": 0.025000000000005684,
+    "p99": 0.025000000000034106,
+    "max": 0.025000000000034106,
+    "min": -0.01666666700000974,
+    "over_0.1s": 0
+  },
+  "bag_infra2_camera_info": {
+    "received": 10388,
+    "scene_sent": 10410,
+    "max_stamp_gap_s": 0.03333333400001948
+  },
+  "T1_probe_image_minus_ekf_s": {
+    "n": 10361,
+    "median": 0.0083,
+    "p95": 0.025,
+    "p99": 0.025,
+    "max": 0.025,
+    "min": 0.0,
+    "over_0.1s": 0
+  },
+  "probe_image": {
+    "rows": 10361,
+    "ekf_missing": 0,
+    "rx_minus_img_s": {
+      "n": 10361,
+      "median": 0.0,
+      "p95": 0.0,
+      "p99": 0.0,
+      "max": 0.0,
+      "min": 0.0,
+      "over_0.1s": 0
+    },
+    "max_stamp_gap_s": 0.03340000000002874,
+    "map_ok_ratio": 1.0,
+    "map_age_now_s": {
+      "n": 10361,
+      "median": 0.0083,
+      "p95": 0.025,
+      "p99": 0.025,
+      "max": 0.025,
+      "min": 0.0,
+      "over_0.1s": 0
+    },
+    "map_age_img_s": {
+      "n": 10361,
+      "median": 0.0083,
+      "p95": 0.025,
+      "p99": 0.025,
+      "max": 0.025,
+      "min": 0.0,
+      "over_0.1s": 0
+    },
+    "near_ok_ratio": 0.11051056847794614
+  },
+  "T1_pass": true,
+  "T2_probe_map_to_camera": {
+    "n": 3454,
+    "zero_ok_ratio": 1.0,
+    "zero_age_s": {
+      "n": 3454,
+      "median": 0.025,
+      "p95": 0.025,
+      "p99": 0.025,
+      "max": 0.025,
+      "min": 0.0,
+      "over_0.1s": 0
+    },
+    "now_ok_ratio": 0.011580775911986103
+  },
+  "D_probe_map_to_base_link": {
+    "n": 3454,
+    "zero_ok_ratio": 1.0,
+    "zero_age_s": {
+      "n": 3454,
+      "median": 0.025,
+      "p95": 0.025,
+      "p99": 0.025,
+      "max": 0.025,
+      "min": 0.0,
+      "over_0.1s": 0
+    },
+    "now_ok_ratio": 0.004053271569195136
+  },
+  "T2_pass": true,
+  "ekf_tf_period_s_median": 0.01666666700000974,
+  "map_odom_tf_period_s_median": 0.09999999999999432,
+  "map_odom_stamp_minus_rx_s_median": 0.28333333300000163,
+  "ekf_stamp_minus_rx_s": {
+    "n": 16600,
+    "median": -0.008333333000003051,
+    "p95": 0.0,
+    "p99": 0.00833333399998537,
+    "max": 0.01666666700000974,
+    "min": -0.01666666700003816,
+    "over_0.1s": 0
+  },
+  "pass": true
+}

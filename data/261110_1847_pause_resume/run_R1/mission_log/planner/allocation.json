@@ -1,0 +1,84 @@
+{
+ "groups": {
+  "L1": {
+   "group": "Y",
+   "count": 2
+  },
+  "L2": {
+   "group": "R",
+   "count": 4
+  },
+  "L3": {
+   "group": "G",
+   "count": 6
+  }
+ },
+ "allocation": {
+  "L1": {
+   "group": "Y",
+   "ids": [
+    9,
+    11
+   ],
+   "y_shape": "box",
+   "colors": [
+    "red",
+    "red"
+   ],
+   "shapes": [
+    "box",
+    "box"
+   ]
+  },
+  "L2": {
+   "group": "R",
+   "ids": [
+    7,
+    5,
+    3,
+    1
+   ],
+   "y_shape": null,
+   "colors": [
+    "red",
+    "red",
+    "red",
+    "red"
+   ],
+   "shapes": [
+    "box",
+    "box",
+    "box",
+    "box"
+   ]
+  },
+  "L3": {
+   "group": "G",
+   "ids": [
+    10,
+    8,
+    6,
+    4,
+    2,
+    0
+   ],
+   "y_shape": null,
+   "colors": [
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+   ],
+   "shapes": [
+    "cylinder",
+    "cylinder",
+    "box",
+    "box",
+    "box",
+    "box"
+   ]
+  }
+ }
+}

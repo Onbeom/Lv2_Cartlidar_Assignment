@@ -1,0 +1,44 @@
+{
+ "n_goals": 2,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.0183,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0086,
+ "G4_loc_max_m": 0.0185,
+ "G4_yaw_rmse_rad": 0.0131,
+ "G4_n_samples": 1469,
+ "G5_cmd": {
+  "n": 3128,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.08457043021917343,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 148.23,
+   "pos_err": 1.6444,
+   "yaw_err": 0.8326,
+   "error_code": 105,
+   "error_msg": "Failed to make progress"
+  },
+  {
+   "name": "L1_via(칸 입구, +y)",
+   "status": "ABORTED",
+   "duration_s": 10.52,
+   "pos_err": 3.2686,
+   "yaw_err": 1.3669,
+   "error_code": 205,
+   "error_msg": "GridBasedplugin failed to plan from (0.69, 0.26) [q: 0.00, 0.00, 0.10, 0.99] (yaw: 0.20) to (4.05, 0.31) [q: 0.00, 0.00, 0.71, 0.71] (yaw: 1.57): \"Start occupied\""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

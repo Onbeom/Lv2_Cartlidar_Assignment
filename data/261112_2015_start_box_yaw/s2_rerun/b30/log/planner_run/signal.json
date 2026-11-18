@@ -1,0 +1,28 @@
+{
+ "signal": {
+  "sequence": [
+   "R",
+   "G",
+   "R",
+   "R",
+   "G",
+   "R",
+   "G",
+   "G",
+   "Y",
+   "G",
+   "Y",
+   "G"
+  ],
+  "counts": {
+   "R": 4,
+   "Y": 2,
+   "G": 6
+  }
+ },
+ "barcode": {
+  "code": "P2-01",
+  "order": "asc"
+ },
+ "source": "perception (/perception/signal CONFIRMED, /perception/barcode READ)"
+}

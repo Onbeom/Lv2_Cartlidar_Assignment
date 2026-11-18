@@ -1,0 +1,95 @@
+{
+ "M1": {
+  "set_mode": [
+   true,
+   "모드 0 → 1"
+  ],
+  "expected_base_m": [
+   0.75262,
+   0.04366,
+   -0.09802
+  ],
+  "16UC1": {
+   "results": 37,
+   "found": 0,
+   "rate_hz": 15.12,
+   "max_axis_err_m": null,
+   "last_pos": null,
+   "frame_id": null,
+   "pass": false
+  },
+  "32FC1": {
+   "results": 37,
+   "found": 0,
+   "rate_hz": 15.12,
+   "max_axis_err_m": null,
+   "last_pos": null,
+   "frame_id": null,
+   "pass": false
+  },
+  "pass": false
+ },
+ "M2": {
+  "results_after_stop_s": [
+   0.013
+  ],
+  "last_after_stop_s": 0.013,
+  "pass": true
+ },
+ "M3": {
+  "first_result": 1,
+  "new_results_on_duplicate": 0,
+  "restart_warnings": 1,
+  "results_after_restart": 29,
+  "found_after_restart": 0,
+  "pass": true
+ },
+ "M4": {
+  "expected": {
+   "front_out": {
+    "base_xy": [
+     1.06308,
+     -0.42943
+    ],
+    "range": 1.14654,
+    "bin": 158
+   },
+   "rear_out": {
+    "base_xy": [
+     -0.6855,
+     -0.05
+    ],
+    "range": 0.68732,
+    "bin": 4
+   },
+   "front_in": {
+    "base_xy": [
+     0.0855,
+     0.05
+    ],
+    "range": 0.09905,
+    "bin": 210
+   }
+  },
+  "scans_received": 15,
+  "finite_bins": {},
+  "frame_id": "base_link",
+  "pass": false
+ },
+ "M5": {
+  "state_changes": [
+   true,
+   false,
+   true,
+   false,
+   true
+  ],
+  "reasons_seen": [
+   "stale",
+   "clear",
+   "obstacle"
+  ],
+  "pass": true
+ },
+ "all_pass": false
+}

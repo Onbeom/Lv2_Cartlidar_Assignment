@@ -1,0 +1,158 @@
+{
+  "simulation_only": true,
+  "live_isaac": true,
+  "out": "/home/pa4/git/lv2_next_module/261101_0016_isaac_live/results/smoke_wp4",
+  "eval_start_s": 0.7,
+  "eval_end_s": 29.150000000000002,
+  "truth_end_s": 31.141667,
+  "A_realtime_pos_m": {
+    "rmse": 0.007011065536740551,
+    "p95": 0.011363356673315792,
+    "max": 0.01681532092759878
+  },
+  "A_realtime_yaw_deg": {
+    "rmse": 1.2580382452269865,
+    "p95": 2.096615564902537,
+    "max": 2.541805794849807
+  },
+  "B_after_map_align_pos_m": {
+    "rmse": 0.00615513515223388,
+    "p95": 0.009845513084920736,
+    "max": 0.015304411008371164
+  },
+  "B_after_map_align_yaw_deg": {
+    "rmse": 0.8715218087078389,
+    "p95": 1.5995748580459783,
+    "max": 2.044765087993238
+  },
+  "S1": {
+    "clock_n": 1751,
+    "clock_first_s": 0.016666667,
+    "clock_last_s": 29.183333333,
+    "clock_backwards": 0,
+    "clock_repeats": 0,
+    "nodes": 10,
+    "nodes_not_sim_time": [],
+    "pass": true
+  },
+  "S2": {
+    "/scan_front": {
+      "received": 291,
+      "sent": 312,
+      "ratio": 0.9326923076923077,
+      "max_stamp_gap_s": 0.10000000000000142,
+      "period_s": 0.1,
+      "pass": false
+    },
+    "/scan_rear": {
+      "received": 291,
+      "sent": 312,
+      "ratio": 0.9326923076923077,
+      "max_stamp_gap_s": 0.10000000000000142,
+      "period_s": 0.1,
+      "pass": false
+    },
+    "/odom": {
+      "received": 1459,
+      "sent": 1558,
+      "ratio": 0.9364569961489089,
+      "max_stamp_gap_s": 0.02500000000000213,
+      "period_s": 0.02,
+      "pass": false
+    }
+  },
+  "S2_pass": false,
+  "S3_probe_mission_map_to_camera": {
+    "n": 284,
+    "zero_ok_ratio": 1.0,
+    "zero_age_s_median": 0.0333,
+    "zero_age_s_p95": 0.0333,
+    "zero_age_s_max": 0.0333,
+    "now_ok_ratio": 0.014084507042253521
+  },
+  "D_probe_map_to_base_link": {
+    "n": 284,
+    "zero_ok_ratio": 1.0,
+    "zero_age_s_median": 0.0333,
+    "zero_age_s_p95": 0.0333,
+    "zero_age_s_max": 0.0333,
+    "now_ok_ratio": 0.017605633802816902
+  },
+  "S3_pass": true,
+  "S4_image_minus_ekf_stamp_s": {
+    "n": 875,
+    "median": 0.01666666699999908,
+    "p95": 0.02500000000000213,
+    "max": 0.02500000000000213,
+    "over_0.1s": 0
+  },
+  "S4_pass": true,
+  "ekf_tf_period_s_median": 0.016666667000001745,
+  "relay_tf_period_s_median": 0.04999999999999982,
+  "relay_stamp_minus_rx_s_median": 0.09999999999999964,
+  "E_mask": {
+    "/scan_front": {
+      "scans": 300,
+      "mean_masked_bins": 161.8,
+      "deg": 145.62
+    },
+    "/scan_rear": {
+      "scans": 300,
+      "mean_masked_bins": 223.3,
+      "deg": 200.97000000000003
+    }
+  },
+  "scene_counts": {
+    "sim_s": 31.141666666666666,
+    "wall_s": 59.451963901519775,
+    "done_t": 28.133333333333333,
+    "wp_reached": 4,
+    "n_wp": 4,
+    "stuck": null,
+    "sent": {
+      "clock": 1869,
+      "js": 1558,
+      "odom": 1558,
+      "scan": {
+        "/scan_front": 312,
+        "/scan_rear": 312
+      },
+      "ir": {
+        "infra1": 934,
+        "infra2": 934
+      }
+    },
+    "cmd_received": 0
+  },
+  "map_align": {
+    "mission_from_carto_map": {
+      "x": 0.7340000000000002,
+      "y": 0.9550000000000002,
+      "yaw": 3.1503192998497647
+    },
+    "correction_from_start_guess": {
+      "dx_m": 2.5673907444456745e-16,
+      "dy_m": 0.005000000000000254,
+      "dyaw_deg": 0.5
+    },
+    "start_guess": {
+      "x": 0.734,
+      "y": 0.95,
+      "yaw": 3.141592653589793
+    },
+    "n_wall_cells": 448,
+    "wall_err_cm_before": 1.69186032892737,
+    "wall_err_cm_after": 1.4798067651489484,
+    "ghost_ratio_before": 0.08928571428571429,
+    "ghost_ratio_after": 0.08928571428571429,
+    "walls": "/home/pa4/git/lv2_next_module/261030_1943/maze_slice_z0.08.json",
+    "usd_offset": [
+      2.2345,
+      3.2136
+    ],
+    "unknown_value": 128,
+    "static_tf_example": "ros2 run tf2_ros static_transform_publisher --x 0.7340 --y 0.9550 --yaw 3.150319 --frame-id mission_map --child-frame-id map",
+    "note": "거리는 10 cm 에서 자름. map_mission.yaml 을 map_server 로 읽으면 map frame = 발제 좌표"
+  },
+  "stage1_pass": false
+}

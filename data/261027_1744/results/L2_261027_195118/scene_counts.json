@@ -1,0 +1,15 @@
+{
+  "sim_s": 600.0166666666667,
+  "wall_s": 493.8839199542999,
+  "js_sent": 30001,
+  "scan_sent": {
+    "/scan_front": 6001,
+    "/scan_rear": 6001
+  },
+  "info_sent": {
+    "front": 17996,
+    "rear": 17996,
+    "arm": 17996
+  },
+  "cmd_rx": 301
+}

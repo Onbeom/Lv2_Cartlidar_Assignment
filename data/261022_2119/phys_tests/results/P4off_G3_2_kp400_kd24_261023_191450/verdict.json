@@ -1,0 +1,85 @@
+{
+  "measured": {
+    "self_collision_newton_now": false,
+    "base_arm_contacts_보고": {},
+    "base_arm_실제접촉_separation≤0": {},
+    "all_contact_pairs": {
+      "CollisionPlane|base_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -1.6391277313232422e-07,
+        "steps_sep_le_0": 5,
+        "first_t_sep_le_0": 1.6750000873580575
+      },
+      "CollisionPlane|wheel_front_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 767,
+        "min_sep_m": -9.634132584324107e-05,
+        "steps_sep_le_0": 373,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_front_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 767,
+        "min_sep_m": -9.612525900593027e-05,
+        "steps_sep_le_0": 525,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -0.00010620633838698268,
+        "steps_sep_le_0": 556,
+        "first_t_sep_le_0": 0.01666666753590107
+      },
+      "CollisionPlane|wheel_rear_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -0.00010638515232130885,
+        "steps_sep_le_0": 282,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|lidar_rear": {
+        "first_t": 1.541666747070849,
+        "steps": 37,
+        "min_sep_m": 0.014313094317913055,
+        "steps_sep_le_0": 0,
+        "first_t_sep_le_0": null
+      }
+    },
+    "reach_err_end_rad": {
+      "RMX52_Base_Yaw": 1.5935446e-07,
+      "RMX52_Shoulder": 0.0,
+      "RMX52_Elbow": 1.0000000005838672e-07,
+      "RMX52_Wrist_Pitch": 8.959999999991197e-05,
+      "RMX52_Wrist_Roll_Reversed": 3.6844066e-09
+    },
+    "reach_err_max_rad": 8.959999999991197e-05,
+    "참고_관절속도_위치차분_최대": {
+      "RMX52_Base_Yaw": 0.00035483794149375925,
+      "RMX52_Shoulder": 6.00447318684232,
+      "RMX52_Elbow": 4.626363258716354,
+      "RMX52_Wrist_Pitch": 4.489864765835304,
+      "RMX52_Wrist_Roll_Reversed": 5.883505843151258e-06,
+      "gripper_left_joint": 7.235623812632811e-06,
+      "gripper_right_joint": 7.403774813863053e-06
+    },
+    "침투(참고, D5)": {
+      "pairs": {},
+      "arm_force_abs_max_Nm": {
+        "RMX52_Base_Yaw": 0.07046083,
+        "RMX52_Shoulder": 17.392502,
+        "RMX52_Elbow": 8.361502,
+        "RMX52_Wrist_Pitch": 0.9733999,
+        "RMX52_Wrist_Roll_Reversed": 0.0009255335
+      }
+    }
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base_link–팔·집게 링크 실제 접촉(separation ≤ 0) 없음": true,
+    "도달 오차 ≤ 0.05 rad": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s (최대 6.004)": false
+  },
+  "verdict": "실패"
+}

@@ -1,0 +1,49 @@
+{
+  "measured": {
+    "segments": {
+      "elbow=+0.1": {
+        "target_rad": 0.1,
+        "q_end_rad": 0.10000049,
+        "ok": true
+      },
+      "elbow back 0": {
+        "target_rad": 0.0,
+        "q_end_rad": 4.1089294e-07,
+        "ok": true
+      },
+      "elbow=-0.1": {
+        "target_rad": -0.1,
+        "q_end_rad": -0.100000106,
+        "ok": true
+      },
+      "elbow back 0 (2)": {
+        "target_rad": 0.0,
+        "q_end_rad": -2.2830193e-08,
+        "ok": true
+      }
+    },
+    "다른 팔 관절 |q| 최대": {
+      "RMX52_Base_Yaw": 8.118876e-06,
+      "RMX52_Shoulder": 0.019482082,
+      "RMX52_Wrist_Pitch": 0.0052494807,
+      "RMX52_Wrist_Roll_Reversed": 7.64017e-07
+    },
+    "max_velocities": {
+      "Wheel_Revolute_Front_Left": 1000.0,
+      "Wheel_Revolute_Front_Right": 1000.0,
+      "Wheel_Revolute_Rear_Left": 1000.0,
+      "Wheel_Revolute_Rear_Right": 1000.0,
+      "RMX52_Base_Yaw": 1000.0,
+      "RMX52_Shoulder": 1000.0,
+      "RMX52_Elbow": 1000.0,
+      "RMX52_Wrist_Pitch": 1000.0,
+      "RMX52_Wrist_Roll_Reversed": 1000.0,
+      "gripper_left_joint": 1000.0,
+      "gripper_right_joint": 1000.0
+    }
+  },
+  "checks": {
+    "구간 끝마다 부호 같고 오차 ≤ 0.01 rad": true
+  },
+  "verdict": "성공"
+}

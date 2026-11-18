@@ -1,0 +1,77 @@
+<!--
+  설계 37(261031_1325_nav2): navigate_to_pose_replan_after_failure.xml(설계 32~36)에서 경로 유효 검사(TruncatePathLocal + ValidatePath)를 뺀 것.
+  이유: 전역 costmap 이 정적 지도뿐(설계 33~)인데도 ValidatePath 가 Smac 경로를 1 s 마다 무효로 봐(설계 36 live_nav_v36 마지막 구간, 무효 자세 124~131)
+  다시 계획이 반복 → 경로 처리기가 매번 첫 구간부터 → 좁은 L3 칸에서 앞뒤로 떨다 'Start occupied'. 검사 방식 차이로 추정(확인 안 함).
+  다시 계획은 목표가 바뀔 때 · FollowPath 실패 뒤 · 복구 뒤만. 움직이는 장애물은 지역 costmap · 제어기 충돌 검사 · collision_monitor 가 봄. 트리 ID NavigateToPoseReplanOnlyAfterFailure.
+  (아래는 설계 32 사본의 설명)
+  설계 32(261031_1325_nav2): Nav2 설치본 navigate_to_pose_w_replanning_and_recovery.xml 사본 + 다시 계획 2곳.
+  - FollowPath 실패 → 지역 costmap 비우기 → 현재 자리에서 다시 계획(ReplanAfterFollowPathFailure) → FollowPath 다시.
+  - 바깥 복구 동작(비우기 · 회전 · 기다림 · 후진) 뒤 → 다시 계획(ReplanAfterRecovery).
+  이유: 원본은 목표가 4 m 안이고 경로가 유효하면 다시 계획하지 않아 실패 뒤 옛 경로를 그대로 다시 보냄. 경로 처리기(FeasiblePathHandler, 후진 · 제자리 회전 끊기)는
+  받은 경로의 첫 구간(이미 지나온 출발 쪽)부터 다시 시작하므로 'Resulting plan has 0 poses' 로 중단(설계 31 live_nav_v31 start_box_3).
+  - IsGoalNearby 4.0 → 20.0 m: 원본은 목표가 4 m 넘게 남으면 1 Hz 로 다시 계획하는데, 긴 구간은 Lattice 계획에 7 s 걸려 새 경로가 7 s 전 자리에서 시작함(같은 첫 구간 문제). 경로가 무효일 때 · 실패 뒤에만 다시 계획.
+  나머지(1 Hz 확인 · 복구 순서 · 횟수)는 원본과 같음. 트리 ID 는 설치본과 겹치지 않게 NavigateToPoseReplanAfterFailure.
+-->
+
+<!--
+  This Behavior Tree replans the global path periodically at 1 Hz and it also has
+  recovery actions specific to planning / control as well as general system issues.
+  This will be continuous if a kinematically valid planner is selected.
+-->
+<root BTCPP_format="4" main_tree_to_execute="NavigateToPoseReplanOnlyAfterFailure">
+  <BehaviorTree ID="NavigateToPoseReplanOnlyAfterFailure">
+    <RecoveryNode number_of_retries="6" name="NavigateRecovery">
+      <PipelineSequence name="NavigateWithReplanning">
+        <ProgressCheckerSelector selected_progress_checker="{selected_progress_checker}" default_progress_checker="progress_checker" topic_name="progress_checker_selector"/>
+        <GoalCheckerSelector selected_goal_checker="{selected_goal_checker}" default_goal_checker="general_goal_checker" topic_name="goal_checker_selector"/>
+        <PathHandlerSelector selected_path_handler="{selected_path_handler}" default_path_handler="PathHandler" topic_name="path_handler_selector"/>
+        <ControllerSelector selected_controller="{selected_controller}" default_controller="FollowPath" topic_name="controller_selector"/>
+        <PlannerSelector selected_planner="{selected_planner}" default_planner="GridBased" topic_name="planner_selector"/>
+        <RateController hz="1.0">
+          <RecoveryNode number_of_retries="1" name="ComputePathToPose">
+            <Fallback name="FallbackComputePathToPose">
+              <ReactiveSequence name="CheckIfNewPathNeeded">
+                <Inverter>
+                  <GlobalUpdatedGoal/>
+                </Inverter>
+                <IsGoalNearby path="{path}" proximity_threshold="20.0" max_robot_pose_search_dist="1.5"/>
+              </ReactiveSequence>
+              <ComputePathToPose goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" error_msg="{compute_path_error_msg}"/>
+            </Fallback>
+            <Sequence>
+              <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}"/>
+              <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap"/>
+            </Sequence>
+          </RecoveryNode>
+        </RateController>
+        <RecoveryNode number_of_retries="1" name="FollowPath">
+          <FollowPath path="{path}" controller_id="{selected_controller}" error_code_id="{follow_path_error_code}" error_msg="{follow_path_error_msg}" tracking_feedback="{tracking_feedback}"/>
+          <Sequence>
+            <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}"/>
+            <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/>
+            <ComputePathToPose name="ReplanAfterFollowPathFailure" goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" error_msg="{compute_path_error_msg}"/>
+          </Sequence>
+        </RecoveryNode>
+      </PipelineSequence>
+      <Sequence>
+        <Fallback>
+          <WouldAControllerRecoveryHelp error_code="{follow_path_error_code}"/>
+          <WouldAPlannerRecoveryHelp error_code="{compute_path_error_code}"/>
+        </Fallback>
+        <ReactiveFallback name="RecoveryFallback">
+          <GoalUpdated/>
+          <RoundRobin name="RecoveryActions">
+            <Sequence name="ClearingActions">
+              <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
+              <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
+            </Sequence>
+            <Spin spin_dist="1.57" error_code_id="{spin_error_code}" error_msg="{spin_error_msg}"/>
+            <Wait wait_duration="5.0" error_code_id="{wait_error_code}" error_msg="{wait_error_msg}"/>
+            <BackUp backup_dist="0.30" backup_speed="0.15" error_code_id="{backup_error_code}" error_msg="{backup_error_msg}"/>
+          </RoundRobin>
+        </ReactiveFallback>
+        <ComputePathToPose name="ReplanAfterRecovery" goal="{goal}" path="{path}" planner_id="{selected_planner}" error_code_id="{compute_path_error_code}" error_msg="{compute_path_error_msg}"/>
+      </Sequence>
+    </RecoveryNode>
+  </BehaviorTree>
+</root>

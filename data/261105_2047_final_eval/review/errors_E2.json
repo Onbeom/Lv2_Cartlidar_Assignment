@@ -1,0 +1,2846 @@
+{
+"final_front": {
+"miss": [
+{
+"img": "final_v1_f__001_000000.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.0,
+67.0,
+255.0,
+102.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 35,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 496
+},
+{
+"img": "final_v1_f__002_000006.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.8,
+23.1,
+371.9,
+49.9
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.398,
+"side": 27,
+"edge": false,
+"z": 1.75,
+"near": false,
+"sharp": 496
+},
+{
+"img": "final_v1_f__002_000006.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+238.5,
+68.5,
+256.5,
+101.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 33,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 496
+},
+{
+"img": "final_v1_f__004_000018.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.2,
+69.4,
+254.7,
+100.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.125,
+"side": 31,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 487
+},
+{
+"img": "final_v1_f__005_000024.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.5,
+72.0,
+253.5,
+102.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 30,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 495
+},
+{
+"img": "final_v1_f__006_000030.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+238.5,
+67.5,
+254.0,
+102.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 35,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 497
+},
+{
+"img": "final_v1_f__007_000036.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+236.0,
+70.0,
+257.0,
+101.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 32,
+"edge": false,
+"z": 1.42,
+"near": false,
+"sharp": 515
+},
+{
+"img": "final_v1_f__008_000042.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.9,
+22.9,
+371.6,
+49.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.517,
+"side": 27,
+"edge": false,
+"z": 1.75,
+"near": false,
+"sharp": 520
+},
+{
+"img": "final_v1_f__008_000042.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+240.0,
+69.0,
+252.5,
+101.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 32,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 520
+},
+{
+"img": "final_v1_f__009_000048.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.9,
+23.2,
+371.8,
+49.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.51,
+"side": 27,
+"edge": false,
+"z": 1.76,
+"near": false,
+"sharp": 518
+},
+{
+"img": "final_v1_f__009_000048.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.0,
+70.0,
+253.5,
+99.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 29,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 518
+},
+{
+"img": "final_v1_f__010_000054.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.7,
+23.2,
+371.6,
+50.3
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.572,
+"side": 27,
+"edge": false,
+"z": 1.75,
+"near": false,
+"sharp": 483
+},
+{
+"img": "final_v1_f__010_000054.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+237.5,
+68.0,
+255.5,
+100.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 32,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 483
+},
+{
+"img": "final_v1_f__011_000060.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.8,
+23.0,
+372.0,
+50.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.519,
+"side": 27,
+"edge": false,
+"z": 1.76,
+"near": false,
+"sharp": 478
+},
+{
+"img": "final_v1_f__011_000060.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+237.5,
+68.5,
+254.5,
+102.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 34,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 478
+},
+{
+"img": "final_v1_f__012_000066.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+241.0,
+70.0,
+255.0,
+102.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 32,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 500
+},
+{
+"img": "final_v1_f__013_000072.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.0,
+68.5,
+254.0,
+98.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 30,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 498
+},
+{
+"img": "final_v1_f__014_000078.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.1,
+69.2,
+254.6,
+100.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.26,
+"side": 31,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 497
+},
+{
+"img": "final_v1_f__015_000084.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+356.6,
+23.0,
+371.7,
+49.9
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.576,
+"side": 27,
+"edge": false,
+"z": 1.75,
+"near": false,
+"sharp": 492
+},
+{
+"img": "final_v1_f__015_000084.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.0,
+68.5,
+256.0,
+104.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 36,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 492
+},
+{
+"img": "final_v1_f__016_000090.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+237.5,
+66.0,
+255.0,
+100.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 34,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 390
+},
+{
+"img": "final_v1_f__019_000108.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+633.0,
+11.4,
+640.0,
+56.6
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.116,
+"side": 45,
+"edge": true,
+"z": 1.49,
+"near": false,
+"sharp": 484
+},
+{
+"img": "final_v1_f__020_000114.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+627.5,
+12.0,
+639.0,
+54.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 43,
+"edge": true,
+"z": 1.48,
+"near": false,
+"sharp": 468
+},
+{
+"img": "final_v1_f__042_000246.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+238.0,
+68.0,
+255.5,
+102.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 34,
+"edge": false,
+"z": 1.37,
+"near": false,
+"sharp": 470
+},
+{
+"img": "final_v1_f__061_000360.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+218.0,
+69.0,
+234.0,
+106.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 37,
+"edge": false,
+"z": 1.4,
+"near": false,
+"sharp": 473
+},
+{
+"img": "final_v1_f__065_000384.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+215.0,
+68.5,
+234.5,
+101.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 33,
+"edge": false,
+"z": 1.4,
+"near": false,
+"sharp": 451
+},
+{
+"img": "final_v1_f__066_000390.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+359.7,
+19.0,
+374.9,
+44.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.287,
+"side": 26,
+"edge": false,
+"z": 1.74,
+"near": false,
+"sharp": 434
+},
+{
+"img": "final_v1_f__066_000390.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+239.5,
+62.0,
+254.5,
+98.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 36,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 434
+},
+{
+"img": "final_v1_f__067_000396.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+261.3,
+67.4,
+275.9,
+99.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.293,
+"side": 32,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 445
+},
+{
+"img": "final_v1_f__068_000402.png",
+"batch": "final_v1_f",
+"c": 0,
+"b": [
+263.5,
+68.0,
+282.0,
+95.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 28,
+"edge": false,
+"z": 1.42,
+"near": false,
+"sharp": 503
+},
+{
+"img": "final_v1_f__077_000456.png",
+"batch": "final_v1_f",
+"c": 2,
+"b": [
+560.9,
+204.1,
+598.2,
+257.1
+],
+"kind": "클래스 틀림:모양",
+"best": 0.862,
+"side": 53,
+"edge": false,
+"z": 0.81,
+"near": true,
+"sharp": 449
+},
+{
+"img": "final_v1_f__077_000456.png",
+"batch": "final_v1_f",
+"c": 3,
+"b": [
+632.1,
+36.0,
+640.0,
+89.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.277,
+"side": 53,
+"edge": true,
+"z": 1.41,
+"near": false,
+"sharp": 449
+},
+{
+"img": "final_v1_f__089_000527.png",
+"batch": "final_v1_f",
+"c": 2,
+"b": [
+554.5,
+132.6,
+582.0,
+174.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.585,
+"side": 42,
+"edge": false,
+"z": 1.05,
+"near": false,
+"sharp": 483
+},
+{
+"img": "final_v2_f__113_000132.png",
+"batch": "final_v2_f",
+"c": 3,
+"b": [
+634.0,
+120.5,
+639.0,
+157.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 37,
+"edge": true,
+"z": 1.09,
+"near": false,
+"sharp": 314
+},
+{
+"img": "final_v2_f__115_000144.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+623.5,
+381.5,
+639.0,
+432.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 51,
+"edge": true,
+"z": 0.61,
+"near": true,
+"sharp": 366
+},
+{
+"img": "final_v2_f__124_000198.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+330.0,
+80.5,
+344.0,
+119.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 39,
+"edge": false,
+"z": 1.22,
+"near": false,
+"sharp": 594
+},
+{
+"img": "final_v2_f__127_000216.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+377.5,
+65.5,
+391.5,
+96.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 31,
+"edge": false,
+"z": 1.36,
+"near": false,
+"sharp": 450
+},
+{
+"img": "final_v2_f__128_000222.png",
+"batch": "final_v2_f",
+"c": 2,
+"b": [
+603.1,
+84.5,
+633.5,
+109.9
+],
+"kind": "상자 어긋남(IoU<0.5)",
+"best": 0,
+"side": 30,
+"edge": false,
+"z": 1.28,
+"near": false,
+"sharp": 436
+},
+{
+"img": "final_v2_f__128_000222.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+373.4,
+56.2,
+388.9,
+88.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.114,
+"side": 32,
+"edge": false,
+"z": 1.4,
+"near": false,
+"sharp": 436
+},
+{
+"img": "final_v2_f__129_000228.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+302.4,
+56.5,
+316.8,
+87.9
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.373,
+"side": 31,
+"edge": false,
+"z": 1.4,
+"near": false,
+"sharp": 515
+},
+{
+"img": "final_v2_f__130_000234.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+367.0,
+55.1,
+380.9,
+86.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.45,
+"side": 32,
+"edge": false,
+"z": 1.41,
+"near": false,
+"sharp": 358
+},
+{
+"img": "final_v2_f__130_000234.png",
+"batch": "final_v2_f",
+"c": 2,
+"b": [
+325.6,
+169.8,
+365.5,
+197.4
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.123,
+"side": 40,
+"edge": false,
+"z": 0.97,
+"near": true,
+"sharp": 358
+},
+{
+"img": "final_v2_f__131_000240.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+381.0,
+51.0,
+395.0,
+88.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 38,
+"edge": false,
+"z": 1.4,
+"near": false,
+"sharp": 422
+},
+{
+"img": "final_v2_f__133_000252.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+357.5,
+63.0,
+373.0,
+106.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 43,
+"edge": false,
+"z": 1.34,
+"near": false,
+"sharp": 529
+},
+{
+"img": "final_v2_f__137_000276.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+374.5,
+103.9,
+392.6,
+140.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.539,
+"side": 37,
+"edge": false,
+"z": 1.14,
+"near": false,
+"sharp": 523
+},
+{
+"img": "final_v2_f__143_000312.png",
+"batch": "final_v2_f",
+"c": 1,
+"b": [
+630.8,
+306.5,
+640.0,
+366.4
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.599,
+"side": 60,
+"edge": true,
+"z": 0.64,
+"near": true,
+"sharp": 452
+},
+{
+"img": "final_v2_f__146_000330.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+410.0,
+84.0,
+425.0,
+120.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 37,
+"edge": false,
+"z": 1.23,
+"near": false,
+"sharp": 535
+},
+{
+"img": "final_v2_f__149_000348.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+234.8,
+65.9,
+250.6,
+98.4
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.169,
+"side": 33,
+"edge": false,
+"z": 1.36,
+"near": false,
+"sharp": 513
+},
+{
+"img": "final_v2_f__151_000360.png",
+"batch": "final_v2_f",
+"c": 2,
+"b": [
+358.5,
+184.1,
+400.6,
+213.3
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.114,
+"side": 42,
+"edge": false,
+"z": 0.93,
+"near": true,
+"sharp": 465
+},
+{
+"img": "final_v2_f__152_000366.png",
+"batch": "final_v2_f",
+"c": 2,
+"b": [
+311.3,
+198.8,
+354.8,
+228.6
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.318,
+"side": 44,
+"edge": false,
+"z": 0.89,
+"near": true,
+"sharp": 476
+},
+{
+"img": "final_v2_f__169_000467.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+327.5,
+67.5,
+343.5,
+101.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 34,
+"edge": false,
+"z": 1.31,
+"near": false,
+"sharp": 515
+},
+{
+"img": "final_v2_f__170_000473.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+334.1,
+65.3,
+349.0,
+97.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.212,
+"side": 32,
+"edge": false,
+"z": 1.37,
+"near": false,
+"sharp": 526
+},
+{
+"img": "final_v2_f__172_000485.png",
+"batch": "final_v2_f",
+"c": 0,
+"b": [
+285.0,
+68.5,
+299.5,
+103.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 35,
+"edge": false,
+"z": 1.36,
+"near": false,
+"sharp": 356
+},
+{
+"img": "final_v3_f__207_000156.png",
+"batch": "final_v3_f",
+"c": 1,
+"b": [
+633.7,
+340.7,
+640.0,
+413.5
+],
+"kind": "점수 낮음(다른 클래스)",
+"best": 0.186,
+"side": 73,
+"edge": true,
+"z": 0.61,
+"near": true,
+"sharp": 448
+},
+{
+"img": "final_v3_f__208_000162.png",
+"batch": "final_v3_f",
+"c": 1,
+"b": [
+631.5,
+372.5,
+639.0,
+408.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 35,
+"edge": true,
+"z": 0.62,
+"near": true,
+"sharp": 451
+},
+{
+"img": "final_v3_f__237_000336.png",
+"batch": "final_v3_f",
+"c": 3,
+"b": [
+493.5,
+57.2,
+515.9,
+90.6
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.578,
+"side": 33,
+"edge": false,
+"z": 1.32,
+"near": false,
+"sharp": 479
+},
+{
+"img": "final_v3_f__252_000426.png",
+"batch": "final_v3_f",
+"c": 0,
+"b": [
+314.5,
+56.0,
+333.5,
+93.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 37,
+"edge": false,
+"z": 1.39,
+"near": false,
+"sharp": 397
+},
+{
+"img": "final_v3_f__253_000432.png",
+"batch": "final_v3_f",
+"c": 0,
+"b": [
+287.9,
+58.2,
+302.9,
+90.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.395,
+"side": 32,
+"edge": false,
+"z": 1.39,
+"near": false,
+"sharp": 503
+},
+{
+"img": "final_v3_f__254_000438.png",
+"batch": "final_v3_f",
+"c": 0,
+"b": [
+279.2,
+56.7,
+294.2,
+88.5
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.398,
+"side": 32,
+"edge": false,
+"z": 1.37,
+"near": false,
+"sharp": 499
+},
+{
+"img": "final_v3_f__255_000444.png",
+"batch": "final_v3_f",
+"c": 0,
+"b": [
+292.3,
+63.6,
+307.9,
+97.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.132,
+"side": 33,
+"edge": false,
+"z": 1.35,
+"near": false,
+"sharp": 469
+},
+{
+"img": "final_v3_f__266_000509.png",
+"batch": "final_v3_f",
+"c": 2,
+"b": [
+632.0,
+172.5,
+639.0,
+200.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 28,
+"edge": true,
+"z": 0.97,
+"near": true,
+"sharp": 309
+}
+],
+"fp": [
+{
+"img": "final_v1_f__007_000036.png",
+"batch": "final_v1_f",
+"c": 3,
+"s": 0.765,
+"b": [
+0.0,
+157.0,
+27.1,
+267.7
+],
+"kind": "배경",
+"iou": 0.0,
+"in_gt": 0,
+"gt": 0,
+"side": 111,
+"sharp": 515
+},
+{
+"img": "final_v1_f__008_000042.png",
+"batch": "final_v1_f",
+"c": 3,
+"s": 0.707,
+"b": [
+0.0,
+158.1,
+27.8,
+268.2
+],
+"kind": "배경",
+"iou": 0.0,
+"in_gt": 0,
+"gt": 0,
+"side": 110,
+"sharp": 520
+},
+{
+"img": "final_v1_f__009_000048.png",
+"batch": "final_v1_f",
+"c": 3,
+"s": 0.746,
+"b": [
+0.0,
+155.7,
+27.2,
+266.9
+],
+"kind": "배경",
+"iou": 0.0,
+"in_gt": 0,
+"gt": 0,
+"side": 111,
+"sharp": 518
+},
+{
+"img": "final_v1_f__077_000456.png",
+"batch": "final_v1_f",
+"c": 0,
+"s": 0.862,
+"b": [
+560.9,
+204.6,
+598.0,
+257.1
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.99,
+"in_gt": 1.0,
+"gt": 2,
+"side": 52,
+"sharp": 449
+},
+{
+"img": "final_v2_f__100_000054.png",
+"batch": "final_v2_f",
+"c": 1,
+"s": 0.637,
+"b": [
+516.8,
+47.6,
+538.9,
+79.0
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 31,
+"sharp": 499
+},
+{
+"img": "final_v2_f__128_000222.png",
+"batch": "final_v2_f",
+"c": 2,
+"s": 0.724,
+"b": [
+603.1,
+89.0,
+620.0,
+109.9
+],
+"kind": "상자 어긋남",
+"iou": 0.46,
+"in_gt": 1.0,
+"gt": 2,
+"side": 21,
+"sharp": 436
+},
+{
+"img": "final_v2_f__128_000222.png",
+"batch": "final_v2_f",
+"c": 2,
+"s": 0.624,
+"b": [
+619.4,
+85.2,
+636.8,
+107.3
+],
+"kind": "상자 어긋남",
+"iou": 0.37,
+"in_gt": 0.81,
+"gt": 2,
+"side": 22,
+"sharp": 436
+},
+{
+"img": "final_v2_f__142_000306.png",
+"batch": "final_v2_f",
+"c": 1,
+"s": 0.729,
+"b": [
+489.7,
+73.4,
+515.7,
+108.3
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.99,
+"in_gt": 1.0,
+"gt": 3,
+"side": 35,
+"sharp": 443
+},
+{
+"img": "final_v2_f__142_000306.png",
+"batch": "final_v2_f",
+"c": 2,
+"s": 0.686,
+"b": [
+327.0,
+152.6,
+347.4,
+195.4
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.98,
+"in_gt": 0.99,
+"gt": 0,
+"side": 43,
+"sharp": 443
+},
+{
+"img": "final_v3_f__208_000162.png",
+"batch": "final_v3_f",
+"c": 3,
+"s": 0.674,
+"b": [
+545.5,
+75.2,
+571.1,
+110.6
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 35,
+"sharp": 451
+}
+]
+},
+"final_rear": {
+"miss": [
+{
+"img": "final_v1_r__003_000012.png",
+"batch": "final_v1_r",
+"c": 3,
+"b": [
+577.8,
+57.5,
+601.5,
+88.5
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.596,
+"side": 31,
+"edge": false,
+"z": 1.42,
+"near": false,
+"sharp": 413
+},
+{
+"img": "final_v1_r__025_000144.png",
+"batch": "final_v1_r",
+"c": 3,
+"b": [
+628.1,
+102.5,
+639.9,
+143.5
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.448,
+"side": 41,
+"edge": true,
+"z": 1.16,
+"near": false,
+"sharp": 285
+},
+{
+"img": "final_v1_r__033_000192.png",
+"batch": "final_v1_r",
+"c": 1,
+"b": [
+634.3,
+310.6,
+640.0,
+374.3
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.303,
+"side": 64,
+"edge": true,
+"z": 0.67,
+"near": true,
+"sharp": 390
+},
+{
+"img": "final_v1_r__058_000342.png",
+"batch": "final_v1_r",
+"c": 2,
+"b": [
+631.1,
+178.7,
+640.0,
+225.3
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.257,
+"side": 47,
+"edge": true,
+"z": 0.96,
+"near": true,
+"sharp": 365
+},
+{
+"img": "final_v2_r__109_000108.png",
+"batch": "final_v2_r",
+"c": 2,
+"b": [
+632.0,
+129.6,
+640.0,
+182.0
+],
+"kind": "점수 낮음(다른 클래스)",
+"best": 0.21,
+"side": 52,
+"edge": true,
+"z": 1.14,
+"near": false,
+"sharp": 450
+},
+{
+"img": "final_v2_r__127_000216.png",
+"batch": "final_v2_r",
+"c": 2,
+"b": [
+630.5,
+204.8,
+640.0,
+269.5
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.371,
+"side": 65,
+"edge": true,
+"z": 0.88,
+"near": true,
+"sharp": 373
+},
+{
+"img": "final_v3_r__188_000042.png",
+"batch": "final_v3_r",
+"c": 3,
+"b": [
+448.8,
+26.3,
+466.4,
+52.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.599,
+"side": 26,
+"edge": false,
+"z": 1.67,
+"near": false,
+"sharp": 321
+},
+{
+"img": "final_v3_r__195_000084.png",
+"batch": "final_v3_r",
+"c": 3,
+"b": [
+451.1,
+40.6,
+468.8,
+68.5
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.545,
+"side": 28,
+"edge": false,
+"z": 1.64,
+"near": false,
+"sharp": 403
+},
+{
+"img": "final_v3_r__212_000186.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+263.0,
+68.8,
+278.9,
+100.4
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.175,
+"side": 32,
+"edge": false,
+"z": 1.39,
+"near": false,
+"sharp": 485
+},
+{
+"img": "final_v3_r__214_000198.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+209.2,
+57.5,
+225.2,
+88.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.502,
+"side": 31,
+"edge": false,
+"z": 1.47,
+"near": false,
+"sharp": 452
+},
+{
+"img": "final_v3_r__216_000210.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+183.7,
+53.4,
+200.8,
+83.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.248,
+"side": 30,
+"edge": false,
+"z": 1.51,
+"near": false,
+"sharp": 470
+},
+{
+"img": "final_v3_r__217_000216.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+181.5,
+60.5,
+199.0,
+100.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 40,
+"edge": false,
+"z": 1.48,
+"near": false,
+"sharp": 461
+},
+{
+"img": "final_v3_r__218_000222.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+205.4,
+69.9,
+222.2,
+100.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.149,
+"side": 31,
+"edge": false,
+"z": 1.43,
+"near": false,
+"sharp": 466
+},
+{
+"img": "final_v3_r__249_000407.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+201.6,
+56.2,
+217.0,
+86.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.593,
+"side": 30,
+"edge": false,
+"z": 1.52,
+"near": false,
+"sharp": 431
+},
+{
+"img": "final_v3_r__249_000407.png",
+"batch": "final_v3_r",
+"c": 3,
+"b": [
+277.7,
+30.0,
+293.3,
+56.1
+],
+"kind": "점수 낮음(다른 클래스)",
+"best": 0.586,
+"side": 26,
+"edge": false,
+"z": 1.72,
+"near": false,
+"sharp": 431
+},
+{
+"img": "final_v3_r__250_000413.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+147.5,
+58.0,
+167.0,
+94.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 36,
+"edge": false,
+"z": 1.5,
+"near": false,
+"sharp": 485
+},
+{
+"img": "final_v3_r__251_000419.png",
+"batch": "final_v3_r",
+"c": 3,
+"b": [
+272.9,
+29.7,
+289.3,
+56.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.554,
+"side": 27,
+"edge": false,
+"z": 1.72,
+"near": false,
+"sharp": 440
+},
+{
+"img": "final_v3_r__251_000419.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+197.5,
+57.2,
+214.4,
+85.9
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.27,
+"side": 29,
+"edge": false,
+"z": 1.52,
+"near": false,
+"sharp": 440
+},
+{
+"img": "final_v3_r__256_000448.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+238.0,
+65.5,
+257.0,
+101.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 35,
+"edge": false,
+"z": 1.43,
+"near": false,
+"sharp": 511
+},
+{
+"img": "final_v3_r__257_000454.png",
+"batch": "final_v3_r",
+"c": 0,
+"b": [
+238.0,
+70.0,
+253.0,
+101.5
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 32,
+"edge": false,
+"z": 1.39,
+"near": false,
+"sharp": 533
+}
+],
+"fp": [
+{
+"img": "final_v1_r__036_000210.png",
+"batch": "final_v1_r",
+"c": 2,
+"s": 0.614,
+"b": [
+297.9,
+122.4,
+315.8,
+159.1
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 0,
+"side": 37,
+"sharp": 415
+},
+{
+"img": "final_v1_r__079_000467.png",
+"batch": "final_v1_r",
+"c": 3,
+"s": 0.612,
+"b": [
+416.1,
+63.8,
+436.0,
+96.5
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.98,
+"in_gt": 0.99,
+"gt": 3,
+"side": 33,
+"sharp": 477
+},
+{
+"img": "final_v2_r__128_000222.png",
+"batch": "final_v2_r",
+"c": 3,
+"s": 0.625,
+"b": [
+0.0,
+446.5,
+40.1,
+479.9
+],
+"kind": "배경",
+"iou": 0.0,
+"in_gt": 0,
+"gt": 1,
+"side": 40,
+"sharp": 410
+},
+{
+"img": "final_v3_r__187_000036.png",
+"batch": "final_v3_r",
+"c": 3,
+"s": 0.685,
+"b": [
+481.5,
+42.0,
+501.5,
+70.1
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 28,
+"sharp": 358
+},
+{
+"img": "final_v3_r__201_000120.png",
+"batch": "final_v3_r",
+"c": 1,
+"s": 0.653,
+"b": [
+503.6,
+66.8,
+526.6,
+100.4
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.97,
+"in_gt": 1.0,
+"gt": 3,
+"side": 34,
+"sharp": 429
+},
+{
+"img": "final_v3_r__205_000144.png",
+"batch": "final_v3_r",
+"c": 3,
+"s": 0.807,
+"b": [
+165.1,
+64.6,
+187.6,
+98.5
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.98,
+"in_gt": 1.0,
+"gt": 3,
+"side": 34,
+"sharp": 486
+},
+{
+"img": "final_v3_r__207_000156.png",
+"batch": "final_v3_r",
+"c": 1,
+"s": 0.633,
+"b": [
+337.9,
+56.5,
+357.7,
+90.2
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 34,
+"sharp": 325
+},
+{
+"img": "final_v3_r__229_000288.png",
+"batch": "final_v3_r",
+"c": 3,
+"s": 0.783,
+"b": [
+164.7,
+65.7,
+187.5,
+98.2
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.99,
+"in_gt": 1.0,
+"gt": 3,
+"side": 33,
+"sharp": 495
+},
+{
+"img": "final_v3_r__237_000336.png",
+"batch": "final_v3_r",
+"c": 1,
+"s": 0.717,
+"b": [
+302.8,
+56.5,
+321.8,
+88.6
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 32,
+"sharp": 465
+},
+{
+"img": "final_v3_r__238_000342.png",
+"batch": "final_v3_r",
+"c": 3,
+"s": 0.623,
+"b": [
+301.7,
+54.6,
+319.7,
+85.6
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.98,
+"in_gt": 0.99,
+"gt": 3,
+"side": 31,
+"sharp": 493
+},
+{
+"img": "final_v3_r__266_000508.png",
+"batch": "final_v3_r",
+"c": 1,
+"s": 0.685,
+"b": [
+293.7,
+56.0,
+312.9,
+88.5
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 3,
+"side": 33,
+"sharp": 509
+}
+]
+},
+"final_arm": {
+"miss": [
+{
+"img": "final_arm_v1__030_000887.png",
+"batch": "final_arm_v1",
+"c": 2,
+"b": [
+798.2,
+47.4,
+1152.1,
+509.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.574,
+"side": 462,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 984
+},
+{
+"img": "final_arm_v1__044_001315.png",
+"batch": "final_arm_v1",
+"c": 2,
+"b": [
+490.1,
+101.0,
+1037.0,
+647.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.439,
+"side": 547,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 913
+},
+{
+"img": "final_arm_v1__048_001437.png",
+"batch": "final_arm_v1",
+"c": 1,
+"b": [
+492.0,
+182.8,
+895.3,
+564.1
+],
+"kind": "점수 낮음(다른 클래스)",
+"best": 0.192,
+"side": 403,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 237
+},
+{
+"img": "final_arm_v1__057_001712.png",
+"batch": "final_arm_v1",
+"c": 1,
+"b": [
+65.7,
+1.8,
+282.5,
+160.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.49,
+"side": 217,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 104
+},
+{
+"img": "final_arm_v1__057_001712.png",
+"batch": "final_arm_v1",
+"c": 2,
+"b": [
+309.8,
+-0.0,
+1023.0,
+511.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.306,
+"side": 713,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 104
+},
+{
+"img": "final_arm_v2__089_000827.png",
+"batch": "final_arm_v2",
+"c": 0,
+"b": [
+667.7,
+689.7,
+828.1,
+720.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.293,
+"side": 160,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 195
+},
+{
+"img": "final_arm_v2__090_000857.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+1242.3,
+506.2,
+1280.0,
+719.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.224,
+"side": 213,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 285
+},
+{
+"img": "final_arm_v2__090_000857.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+0.0,
+592.5,
+32.5,
+720.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.108,
+"side": 127,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 285
+},
+{
+"img": "final_arm_v2__091_000888.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+1257.8,
+501.1,
+1280.0,
+716.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.37,
+"side": 215,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 285
+},
+{
+"img": "final_arm_v2__094_000979.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+0.0,
+352.9,
+16.6,
+596.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.234,
+"side": 243,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 227
+},
+{
+"img": "final_arm_v2__095_001010.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+537.0,
+200.0,
+1007.0,
+639.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 470,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 1800
+},
+{
+"img": "final_arm_v2__096_001041.png",
+"batch": "final_arm_v2",
+"c": 0,
+"b": [
+0.0,
+169.5,
+32.1,
+400.3
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.303,
+"side": 231,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 2418
+},
+{
+"img": "final_arm_v2__096_001041.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+517.0,
+103.0,
+1197.0,
+719.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 680,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 2418
+},
+{
+"img": "final_arm_v2__097_001071.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+756.9,
+585.1,
+905.3,
+720.0
+],
+"kind": "클래스 틀림:모양",
+"best": 0.959,
+"side": 148,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 178
+},
+{
+"img": "final_arm_v2__099_001132.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+666.5,
+379.6,
+774.4,
+526.4
+],
+"kind": "클래스 틀림:모양",
+"best": 0.929,
+"side": 147,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 174
+},
+{
+"img": "final_arm_v2__100_001163.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+524.1,
+122.6,
+820.2,
+489.1
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.599,
+"side": 367,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 323
+},
+{
+"img": "final_arm_v2__100_001163.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+296.9,
+2.2,
+418.1,
+34.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.22,
+"side": 121,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 323
+},
+{
+"img": "final_arm_v2__101_001193.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+281.0,
+-0.0,
+962.0,
+660.0
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.38,
+"side": 681,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 3361
+},
+{
+"img": "final_arm_v2__102_001224.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+750.4,
+305.6,
+864.2,
+458.7
+],
+"kind": "클래스 틀림:모양",
+"best": 0.83,
+"side": 153,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 168
+},
+{
+"img": "final_arm_v2__103_001254.png",
+"batch": "final_arm_v2",
+"c": 2,
+"b": [
+821.9,
+388.8,
+911.4,
+512.3
+],
+"kind": "클래스 틀림:모양",
+"best": 0.926,
+"side": 124,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 175
+},
+{
+"img": "final_arm_v2__116_001651.png",
+"batch": "final_arm_v2",
+"c": 1,
+"b": [
+706.0,
+121.0,
+1087.0,
+607.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 486,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 548
+},
+{
+"img": "final_arm_v3__151_000888.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+511.0,
+101.0,
+921.4,
+584.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.585,
+"side": 484,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 1887
+},
+{
+"img": "final_arm_v3__153_000949.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+1081.4,
+388.6,
+1195.0,
+511.9
+],
+"kind": "클래스 틀림:모양",
+"best": 0.965,
+"side": 123,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 158
+},
+{
+"img": "final_arm_v3__156_001041.png",
+"batch": "final_arm_v3",
+"c": 0,
+"b": [
+516.6,
+189.3,
+850.4,
+547.8
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.118,
+"side": 358,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 577
+},
+{
+"img": "final_arm_v3__157_001071.png",
+"batch": "final_arm_v3",
+"c": 0,
+"b": [
+200.0,
+18.0,
+904.0,
+673.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 704,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 1820
+},
+{
+"img": "final_arm_v3__159_001132.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+990.6,
+348.8,
+1109.1,
+483.5
+],
+"kind": "클래스 틀림:모양",
+"best": 0.965,
+"side": 135,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 157
+},
+{
+"img": "final_arm_v3__160_001162.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+935.0,
+283.0,
+1069.0,
+414.0
+],
+"kind": "클래스 틀림:모양",
+"best": 0.956,
+"side": 134,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 137
+},
+{
+"img": "final_arm_v3__162_001224.png",
+"batch": "final_arm_v3",
+"c": 1,
+"b": [
+355.2,
+0.9,
+458.2,
+133.0
+],
+"kind": "클래스 틀림:모양",
+"best": 0.898,
+"side": 132,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 614
+},
+{
+"img": "final_arm_v3__163_001254.png",
+"batch": "final_arm_v3",
+"c": 0,
+"b": [
+0.0,
+0.0,
+24.0,
+209.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 209,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 742
+},
+{
+"img": "final_arm_v3__167_001376.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+772.1,
+376.1,
+910.8,
+535.7
+],
+"kind": "클래스 틀림:모양",
+"best": 0.959,
+"side": 160,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 416
+},
+{
+"img": "final_arm_v3__168_001407.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+0.0,
+342.8,
+24.7,
+487.8
+],
+"kind": "점수 낮음(다른 클래스)",
+"best": 0.507,
+"side": 145,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 128
+},
+{
+"img": "final_arm_v3__169_001438.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+434.1,
+144.4,
+874.0,
+647.6
+],
+"kind": "클래스 틀림:모양",
+"best": 0.748,
+"side": 503,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 686
+},
+{
+"img": "final_arm_v3__171_001499.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+793.5,
+402.4,
+1079.1,
+718.9
+],
+"kind": "클래스 틀림:모양",
+"best": 0.967,
+"side": 316,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 178
+},
+{
+"img": "final_arm_v3__171_001499.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+0.0,
+137.6,
+22.1,
+323.2
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.468,
+"side": 186,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 178
+},
+{
+"img": "final_arm_v3__172_001529.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+814.1,
+623.7,
+979.1,
+720.0
+],
+"kind": "클래스 틀림:모양",
+"best": 0.936,
+"side": 165,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 127
+},
+{
+"img": "final_arm_v3__173_001560.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+994.1,
+660.1,
+1129.5,
+719.5
+],
+"kind": "클래스 틀림:모양",
+"best": 0.849,
+"side": 135,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 255
+},
+{
+"img": "final_arm_v3__174_001590.png",
+"batch": "final_arm_v3",
+"c": 0,
+"b": [
+0.0,
+0.0,
+70.6,
+274.4
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.589,
+"side": 274,
+"edge": true,
+"z": 0,
+"near": true,
+"sharp": 1168
+},
+{
+"img": "final_arm_v3__174_001590.png",
+"batch": "final_arm_v3",
+"c": 1,
+"b": [
+461.0,
+82.0,
+916.0,
+538.0
+],
+"kind": "검출 없음",
+"best": 0,
+"side": 456,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 1168
+},
+{
+"img": "final_arm_v3__175_001621.png",
+"batch": "final_arm_v3",
+"c": 1,
+"b": [
+494.2,
+204.3,
+770.9,
+536.7
+],
+"kind": "점수 낮음(같은 클래스)",
+"best": 0.57,
+"side": 332,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 352
+},
+{
+"img": "final_arm_v3__177_001682.png",
+"batch": "final_arm_v3",
+"c": 2,
+"b": [
+818.7,
+472.5,
+939.7,
+628.0
+],
+"kind": "클래스 틀림:모양",
+"best": 0.969,
+"side": 156,
+"edge": false,
+"z": 0,
+"near": true,
+"sharp": 137
+}
+],
+"fp": [
+{
+"img": "final_arm_v2__097_001071.png",
+"batch": "final_arm_v2",
+"c": 0,
+"s": 0.959,
+"b": [
+756.9,
+585.1,
+905.3,
+720.0
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 148,
+"sharp": 178
+},
+{
+"img": "final_arm_v2__099_001132.png",
+"batch": "final_arm_v2",
+"c": 0,
+"s": 0.929,
+"b": [
+666.5,
+379.6,
+774.4,
+526.4
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 147,
+"sharp": 174
+},
+{
+"img": "final_arm_v2__102_001224.png",
+"batch": "final_arm_v2",
+"c": 0,
+"s": 0.83,
+"b": [
+750.4,
+305.6,
+864.2,
+458.7
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 153,
+"sharp": 168
+},
+{
+"img": "final_arm_v2__103_001254.png",
+"batch": "final_arm_v2",
+"c": 0,
+"s": 0.926,
+"b": [
+821.9,
+388.8,
+911.4,
+512.3
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 124,
+"sharp": 175
+},
+{
+"img": "final_arm_v3__147_000766.png",
+"batch": "final_arm_v3",
+"c": 3,
+"s": 0.677,
+"b": [
+0.0,
+525.6,
+40.4,
+650.1
+],
+"kind": "배경",
+"iou": 0.0,
+"in_gt": 0,
+"gt": 1,
+"side": 125,
+"sharp": 181
+},
+{
+"img": "final_arm_v3__153_000949.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.965,
+"b": [
+1081.4,
+388.6,
+1195.0,
+511.9
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 123,
+"sharp": 158
+},
+{
+"img": "final_arm_v3__159_001132.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.965,
+"b": [
+990.6,
+348.8,
+1109.1,
+483.5
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 135,
+"sharp": 157
+},
+{
+"img": "final_arm_v3__160_001162.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.956,
+"b": [
+951.9,
+287.7,
+1051.9,
+412.3
+],
+"kind": "클래스 틀림:모양",
+"iou": 0.71,
+"in_gt": 1.0,
+"gt": 2,
+"side": 125,
+"sharp": 137
+},
+{
+"img": "final_arm_v3__162_001224.png",
+"batch": "final_arm_v3",
+"c": 3,
+"s": 0.898,
+"b": [
+355.2,
+0.9,
+458.2,
+133.0
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 1,
+"side": 132,
+"sharp": 614
+},
+{
+"img": "final_arm_v3__167_001376.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.959,
+"b": [
+772.1,
+376.1,
+910.8,
+535.7
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 160,
+"sharp": 416
+},
+{
+"img": "final_arm_v3__169_001438.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.748,
+"b": [
+434.1,
+144.4,
+874.0,
+647.6
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 503,
+"sharp": 686
+},
+{
+"img": "final_arm_v3__171_001499.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.967,
+"b": [
+793.5,
+402.4,
+1079.1,
+718.9
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 316,
+"sharp": 178
+},
+{
+"img": "final_arm_v3__172_001529.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.936,
+"b": [
+814.1,
+623.7,
+979.1,
+720.0
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 165,
+"sharp": 127
+},
+{
+"img": "final_arm_v3__173_001560.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.849,
+"b": [
+994.1,
+660.1,
+1129.5,
+719.5
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 135,
+"sharp": 255
+},
+{
+"img": "final_arm_v3__177_001682.png",
+"batch": "final_arm_v3",
+"c": 0,
+"s": 0.969,
+"b": [
+818.7,
+472.5,
+939.7,
+628.0
+],
+"kind": "클래스 틀림:모양",
+"iou": 1.0,
+"in_gt": 1.0,
+"gt": 2,
+"side": 156,
+"sharp": 137
+}
+]
+}
+}

@@ -100,3 +100,10 @@ codex/
 # 예외: 최종 제출물 (project2) 의 결과 · 실물 경기 로그는 올림
 !project2/results/
 !project2/results/**
+
+# 사진 (photo/): 얼굴 · 사람 몸이 찍힌 것은 넣지 않음 (작업 규칙). 파일은 photo/ 에 그대로 있음
+photo/puck_blue_cuboid_*
+photo/review1026_depth_check_*
+photo/review1026_contact_*
+# RealSense 캡처 원본 (capture_*, 4,484 장 1.77 GB, 10-26 것은 사람 배경) — 이 컴퓨터에만. 넣으려면 이 줄을 지움
+photo/capture_*

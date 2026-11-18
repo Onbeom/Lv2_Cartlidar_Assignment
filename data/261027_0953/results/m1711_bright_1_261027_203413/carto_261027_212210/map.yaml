@@ -1,0 +1,6 @@
+image: /home/pa4/git/lv2_next_module/261027_0953/results/m1711_bright_1_261027_203413/carto_261027_212210/map.pgm
+resolution: 0.025000
+origin: [-4.366519, -2.927114, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

@@ -1,0 +1,32 @@
+{
+ "layout": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030/seed_1/layout.json",
+ "start": {
+  "name": "start",
+  "x": 0.734,
+  "y": 0.95,
+  "yaw": 3.14159
+ },
+ "min_clear": 0.05,
+ "goals": [
+  {
+   "name": "start_box_1",
+   "x": 2.2325,
+   "y": 0.6663,
+   "yaw": 2.78623,
+   "standoff": 0.45,
+   "clearance": 0.41,
+   "face": [
+    1.5641,
+    0.9143
+   ],
+   "normal": [
+    0.9375,
+    -0.3479
+   ]
+  }
+ ],
+ "notes": [
+  "L1(tag 12 +x): 범퍼-면 0.23 m < coarse_min 0.30 m (면 앞 칸이 차체 길이 0.418 m + 0.30 m 보다 좁음)",
+  "L3(tag 14 +x): 범퍼-면 0.24 m < coarse_min 0.30 m (면 앞 칸이 차체 길이 0.418 m + 0.30 m 보다 좁음)"
+ ]
+}

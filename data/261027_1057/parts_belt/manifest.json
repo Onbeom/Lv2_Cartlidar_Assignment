@@ -1,0 +1,1006 @@
+{
+ "MX_scad": 47.044279787907875,
+ "MZ": 32.25,
+ "parts": [
+  {
+   "name": "bearing_block",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "bearing_block_FL.stl",
+   "volume_mm3": 42058.319253013615,
+   "bounds_mm": [
+    [
+     67.5,
+     96.2,
+     15.0
+    ],
+    [
+     92.5,
+     138.5,
+     98.8
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_block",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "bearing_block_RL.stl",
+   "volume_mm3": 42058.319253013615,
+   "bounds_mm": [
+    [
+     -92.5,
+     96.2,
+     15.0
+    ],
+    [
+     -67.5,
+     138.5,
+     98.8
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_block",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "bearing_block_FR.stl",
+   "volume_mm3": 42058.319253013615,
+   "bounds_mm": [
+    [
+     67.5,
+     -138.5,
+     15.0
+    ],
+    [
+     92.5,
+     -96.2,
+     98.8
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_block",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "bearing_block_RR.stl",
+   "volume_mm3": 42058.319253013615,
+   "bounds_mm": [
+    [
+     -92.5,
+     -138.5,
+     15.0
+    ],
+    [
+     -67.5,
+     -96.2,
+     98.8
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_sled",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "motor_sled_FL.stl",
+   "volume_mm3": 22501.0030329732,
+   "bounds_mm": [
+    [
+     4.0,
+     99.3,
+     15.0
+    ],
+    [
+     57.5,
+     139.0,
+     78.0
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_sled",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "motor_sled_RL.stl",
+   "volume_mm3": 22501.0030329732,
+   "bounds_mm": [
+    [
+     -57.5,
+     99.3,
+     15.0
+    ],
+    [
+     -4.0,
+     139.0,
+     78.0
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_sled",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "motor_sled_FR.stl",
+   "volume_mm3": 22501.0030329732,
+   "bounds_mm": [
+    [
+     4.0,
+     -139.0,
+     15.0
+    ],
+    [
+     57.5,
+     -99.3,
+     78.0
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_sled",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "motor_sled_RR.stl",
+   "volume_mm3": 22501.0030329732,
+   "bounds_mm": [
+    [
+     -57.5,
+     -139.0,
+     15.0
+    ],
+    [
+     -4.0,
+     -99.3,
+     78.0
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "wheel_pulley",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "wheel_pulley_FL.stl",
+   "volume_mm3": 2375.525219382124,
+   "bounds_mm": [
+    [
+     70.3,
+     138.5,
+     16.55
+    ],
+    [
+     89.7,
+     154.0,
+     35.95
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "wheel_pulley",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "wheel_pulley_RL.stl",
+   "volume_mm3": 2375.525219382124,
+   "bounds_mm": [
+    [
+     -89.7,
+     138.5,
+     16.55
+    ],
+    [
+     -70.3,
+     154.0,
+     35.95
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "wheel_pulley",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "wheel_pulley_FR.stl",
+   "volume_mm3": 2375.525219382124,
+   "bounds_mm": [
+    [
+     70.3,
+     -154.0,
+     16.55
+    ],
+    [
+     89.7,
+     -138.5,
+     35.95
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "wheel_pulley",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "wheel_pulley_RR.stl",
+   "volume_mm3": 2375.525219382124,
+   "bounds_mm": [
+    [
+     -89.7,
+     -154.0,
+     16.55
+    ],
+    [
+     -70.3,
+     -138.5,
+     35.95
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_pulley",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "motor_pulley_FL.stl",
+   "volume_mm3": 3028.047007561831,
+   "bounds_mm": [
+    [
+     21.54,
+     139.0,
+     19.25
+    ],
+    [
+     47.54,
+     148.0,
+     45.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_pulley",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "motor_pulley_RL.stl",
+   "volume_mm3": 3028.047007561831,
+   "bounds_mm": [
+    [
+     -47.54,
+     139.0,
+     19.25
+    ],
+    [
+     -21.54,
+     148.0,
+     45.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_pulley",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "motor_pulley_FR.stl",
+   "volume_mm3": 3028.047007561831,
+   "bounds_mm": [
+    [
+     21.54,
+     -148.0,
+     19.25
+    ],
+    [
+     47.54,
+     -139.0,
+     45.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor_pulley",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "motor_pulley_RR.stl",
+   "volume_mm3": 3028.047007561831,
+   "bounds_mm": [
+    [
+     -47.54,
+     -148.0,
+     19.25
+    ],
+    [
+     -21.54,
+     -139.0,
+     45.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "spacer",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "spacer_FL.stl",
+   "volume_mm3": 64.92173858947358,
+   "bounds_mm": [
+    [
+     74.75,
+     105.0,
+     21.0
+    ],
+    [
+     85.25,
+     107.0,
+     31.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "spacer",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "spacer_RL.stl",
+   "volume_mm3": 64.92173858947358,
+   "bounds_mm": [
+    [
+     -85.25,
+     105.0,
+     21.0
+    ],
+    [
+     -74.75,
+     107.0,
+     31.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "spacer",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "spacer_FR.stl",
+   "volume_mm3": 64.92173858947358,
+   "bounds_mm": [
+    [
+     74.75,
+     -107.0,
+     21.0
+    ],
+    [
+     85.25,
+     -105.0,
+     31.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "spacer",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "spacer_RR.stl",
+   "volume_mm3": 64.92173858947358,
+   "bounds_mm": [
+    [
+     -85.25,
+     -107.0,
+     21.0
+    ],
+    [
+     -74.75,
+     -105.0,
+     31.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "collar",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "collar_FL.stl",
+   "volume_mm3": 1401.201535996748,
+   "bounds_mm": [
+    [
+     67.0,
+     97.0,
+     18.25
+    ],
+    [
+     88.0,
+     105.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "collar",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "collar_RL.stl",
+   "volume_mm3": 1401.201535996748,
+   "bounds_mm": [
+    [
+     -88.0,
+     97.0,
+     18.25
+    ],
+    [
+     -67.0,
+     105.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "collar",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "collar_FR.stl",
+   "volume_mm3": 1401.201535996748,
+   "bounds_mm": [
+    [
+     67.0,
+     -105.0,
+     18.25
+    ],
+    [
+     88.0,
+     -97.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "collar",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "collar_RR.stl",
+   "volume_mm3": 1401.201535996748,
+   "bounds_mm": [
+    [
+     -88.0,
+     -105.0,
+     18.25
+    ],
+    [
+     -67.0,
+     -97.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "guard",
+   "corner": "FL",
+   "material": "PLA",
+   "file": "guard_FL.stl",
+   "volume_mm3": 4970.263808187183,
+   "bounds_mm": [
+    [
+     6.5,
+     133.2,
+     11.0
+    ],
+    [
+     94.5,
+     152.1,
+     47.75
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "guard",
+   "corner": "RL",
+   "material": "PLA",
+   "file": "guard_RL.stl",
+   "volume_mm3": 4970.263808187183,
+   "bounds_mm": [
+    [
+     -94.5,
+     133.2,
+     11.0
+    ],
+    [
+     -6.5,
+     152.1,
+     47.75
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "guard",
+   "corner": "FR",
+   "material": "PLA",
+   "file": "guard_FR.stl",
+   "volume_mm3": 4970.263808187183,
+   "bounds_mm": [
+    [
+     6.5,
+     -152.1,
+     11.0
+    ],
+    [
+     94.5,
+     -133.2,
+     47.75
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "guard",
+   "corner": "RR",
+   "material": "PLA",
+   "file": "guard_RR.stl",
+   "volume_mm3": 4970.263808187183,
+   "bounds_mm": [
+    [
+     -94.5,
+     -152.1,
+     11.0
+    ],
+    [
+     -6.5,
+     -133.2,
+     47.75
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor",
+   "corner": "FL",
+   "material": "XM430",
+   "file": "motor_FL.stl",
+   "volume_mm3": 43564.64734442174,
+   "bounds_mm": [
+    [
+     20.29,
+     98.6,
+     21.0
+    ],
+    [
+     48.79,
+     139.0,
+     67.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor",
+   "corner": "RL",
+   "material": "XM430",
+   "file": "motor_RL.stl",
+   "volume_mm3": 43564.64734442174,
+   "bounds_mm": [
+    [
+     -48.79,
+     98.6,
+     21.0
+    ],
+    [
+     -20.29,
+     139.0,
+     67.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor",
+   "corner": "FR",
+   "material": "XM430",
+   "file": "motor_FR.stl",
+   "volume_mm3": 43564.64734442174,
+   "bounds_mm": [
+    [
+     20.29,
+     -139.0,
+     21.0
+    ],
+    [
+     48.79,
+     -98.6,
+     67.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "motor",
+   "corner": "RR",
+   "material": "XM430",
+   "file": "motor_RR.stl",
+   "volume_mm3": 43564.64734442174,
+   "bounds_mm": [
+    [
+     -48.79,
+     -139.0,
+     21.0
+    ],
+    [
+     -20.29,
+     -98.6,
+     67.5
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "shaft",
+   "corner": "FL",
+   "material": "steel",
+   "file": "shaft_FL.stl",
+   "volume_mm3": 2806.8352374999904,
+   "bounds_mm": [
+    [
+     76.0,
+     97.5,
+     22.25
+    ],
+    [
+     84.0,
+     153.5,
+     30.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "shaft",
+   "corner": "RL",
+   "material": "steel",
+   "file": "shaft_RL.stl",
+   "volume_mm3": 2806.83523749999,
+   "bounds_mm": [
+    [
+     -84.0,
+     97.5,
+     22.25
+    ],
+    [
+     -76.0,
+     153.5,
+     30.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "shaft",
+   "corner": "FR",
+   "material": "steel",
+   "file": "shaft_FR.stl",
+   "volume_mm3": 2806.83523749999,
+   "bounds_mm": [
+    [
+     76.0,
+     -153.5,
+     22.25
+    ],
+    [
+     84.0,
+     -97.5,
+     30.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "shaft",
+   "corner": "RR",
+   "material": "steel",
+   "file": "shaft_RR.stl",
+   "volume_mm3": 2806.8352374999904,
+   "bounds_mm": [
+    [
+     -84.0,
+     -153.5,
+     22.25
+    ],
+    [
+     -76.0,
+     -97.5,
+     30.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_in",
+   "corner": "FL",
+   "material": "bearing",
+   "file": "bearing_in_FL.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     72.0,
+     107.0,
+     18.25
+    ],
+    [
+     88.0,
+     112.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_in",
+   "corner": "RL",
+   "material": "bearing",
+   "file": "bearing_in_RL.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     -88.0,
+     107.0,
+     18.25
+    ],
+    [
+     -72.0,
+     112.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_in",
+   "corner": "FR",
+   "material": "bearing",
+   "file": "bearing_in_FR.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     72.0,
+     -112.0,
+     18.25
+    ],
+    [
+     88.0,
+     -107.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_in",
+   "corner": "RR",
+   "material": "bearing",
+   "file": "bearing_in_RR.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     -88.0,
+     -112.0,
+     18.25
+    ],
+    [
+     -72.0,
+     -107.0,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_out",
+   "corner": "FL",
+   "material": "bearing",
+   "file": "bearing_out_FL.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     72.0,
+     133.5,
+     18.25
+    ],
+    [
+     88.0,
+     138.5,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_out",
+   "corner": "RL",
+   "material": "bearing",
+   "file": "bearing_out_RL.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     -88.0,
+     133.5,
+     18.25
+    ],
+    [
+     -72.0,
+     138.5,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_out",
+   "corner": "FR",
+   "material": "bearing",
+   "file": "bearing_out_FR.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     72.0,
+     -138.5,
+     18.25
+    ],
+    [
+     88.0,
+     -133.5,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "bearing_out",
+   "corner": "RR",
+   "material": "bearing",
+   "file": "bearing_out_RR.stl",
+   "volume_mm3": 751.8308671874978,
+   "bounds_mm": [
+    [
+     -88.0,
+     -138.5,
+     18.25
+    ],
+    [
+     -72.0,
+     -133.5,
+     34.25
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "belt",
+   "corner": "FL",
+   "material": "rubber",
+   "file": "belt_FL.stl",
+   "volume_mm3": 738.7276481165545,
+   "bounds_mm": [
+    [
+     22.4,
+     140.75,
+     17.93
+    ],
+    [
+     88.33,
+     146.75,
+     44.41
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "belt",
+   "corner": "RL",
+   "material": "rubber",
+   "file": "belt_RL.stl",
+   "volume_mm3": 738.7276481165549,
+   "bounds_mm": [
+    [
+     -88.33,
+     140.75,
+     17.93
+    ],
+    [
+     -22.4,
+     146.75,
+     44.41
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "belt",
+   "corner": "FR",
+   "material": "rubber",
+   "file": "belt_FR.stl",
+   "volume_mm3": 738.7276481165549,
+   "bounds_mm": [
+    [
+     22.4,
+     -146.75,
+     17.93
+    ],
+    [
+     88.33,
+     -140.75,
+     44.41
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "belt",
+   "corner": "RR",
+   "material": "rubber",
+   "file": "belt_RR.stl",
+   "volume_mm3": 738.7276481165545,
+   "bounds_mm": [
+    [
+     -88.33,
+     -146.75,
+     17.93
+    ],
+    [
+     -22.4,
+     -140.75,
+     44.41
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "ballast_cup",
+   "corner": "-",
+   "material": "PLA",
+   "file": "ballast_cup.stl",
+   "volume_mm3": 19883.222846518504,
+   "bounds_mm": [
+    [
+     113.4,
+     -96.0,
+     54.7
+    ],
+    [
+     132.8,
+     15.4,
+     102.0
+    ]
+   ],
+   "watertight": true
+  },
+  {
+   "name": "ballast_steel",
+   "corner": "-",
+   "material": "steel_block",
+   "file": "ballast_steel.stl",
+   "volume_mm3": 64800.00000000008,
+   "bounds_mm": [
+    [
+     115.1,
+     -85.3,
+     56.9
+    ],
+    [
+     131.1,
+     4.7,
+     101.9
+    ]
+   ],
+   "watertight": true
+  }
+ ]
+}

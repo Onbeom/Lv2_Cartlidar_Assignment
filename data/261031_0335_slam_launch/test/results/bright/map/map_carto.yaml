@@ -1,0 +1,6 @@
+image: /home/pa4/git/lv2_next_module/261031_0335_slam_launch/test/results/bright/map/map_carto.pgm
+resolution: 0.025000
+origin: [-3.931710, -5.652641, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

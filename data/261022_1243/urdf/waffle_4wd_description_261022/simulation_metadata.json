@@ -1,0 +1,116 @@
+{
+  "status": "SIMULATION_INPUTS_ADDED_RUNTIME_VALIDATION_PENDING",
+  "motor_voltage_nominal_V": 11.1,
+  "power": {
+    "opencr_1": "one TurtleBot 11.1V nominal battery",
+    "opencr_2": "one separate TurtleBot 11.1V nominal battery",
+    "jetson": "separate 12V supply; does not define motor voltage"
+  },
+  "arm_model": "XM430-W350",
+  "wheel_model": "XM430-W210",
+  "arm_peak_effort_N_mm": 3800,
+  "wheel_peak_effort_N_mm": 2700,
+  "effort_basis": "Manufacturer 11.1V stall torque: peak envelope, NOT continuous/thermal safe rating.",
+  "finger_equivalent_effort_N": 10,
+  "finger_effort_basis": "Simulation assumption per finger, not derived motor torque or validated grip force.",
+  "limits_basis": "Previous sign-corrected reference intervals, not calibrated hardware stops.",
+  "ground_offset_mm": 6.749981675400001,
+  "root": "base_footprint",
+  "links": 23,
+  "joints": 22,
+  "sensor_frames": [
+    {
+      "frame": "camera_optical_frame",
+      "home_world_mm": [
+        336.4160854871357,
+        0.0,
+        367.65430607641963
+      ],
+      "forward_world": [
+        0.7566434194854301,
+        0.0,
+        -0.6538277569432146
+      ],
+      "basis": "UC684 CAD front lens face center and optical axis, not calibrated entrance pupil",
+      "calibration_verified": false
+    },
+    {
+      "frame": "top_camera_rear_optical_frame",
+      "home_world_mm": [
+        -220.40974009237,
+        0.0037923139024997887,
+        483.6225977941945
+      ],
+      "forward_world": [
+        -0.8171138195788078,
+        1.6010571904076195e-06,
+        -0.576476370591864
+      ],
+      "basis": "CAD stereo lens cylinder midpoint, not calibrated RGB optical center",
+      "calibration_verified": false
+    },
+    {
+      "frame": "top_camera_front_optical_frame",
+      "home_world_mm": [
+        -60.59025990763,
+        0.0037923139024997887,
+        483.6225977941945
+      ],
+      "forward_world": [
+        0.8171138195788078,
+        1.6010571904076195e-06,
+        -0.576476370591864
+      ],
+      "basis": "CAD stereo lens cylinder midpoint, not calibrated RGB optical center",
+      "calibration_verified": false
+    },
+    {
+      "frame": "lidar_front_scan",
+      "home_world_mm": [
+        185.5,
+        50,
+        60.85
+      ],
+      "basis": "CAD scan shaft XY; Z midpoint of earlier assumed scan band 54.7..67mm; yaw outward, uncalibrated",
+      "calibration_verified": false
+    },
+    {
+      "frame": "lidar_rear_scan",
+      "home_world_mm": [
+        -185.5,
+        -50,
+        60.85
+      ],
+      "basis": "CAD scan shaft XY; Z midpoint of earlier assumed scan band 54.7..67mm; yaw outward, uncalibrated",
+      "calibration_verified": false
+    }
+  ],
+  "collision": {
+    "primitives": 52,
+    "convex_meshes": 490,
+    "threshold_mm": 1,
+    "limitations": "Simplified approximate contacts; tiny fasteners/internal geometry omitted. Runtime collision filtering and grasp clearance require validation."
+  },
+  "sources": [
+    "https://emanual.robotis.com/docs/en/dxl/x/xm430-w350/",
+    "https://emanual.robotis.com/docs/en/dxl/x/xm430-w210/"
+  ],
+  "isaac_runtime_tested": false,
+  "ros_runtime_tested": false,
+  "revision": {
+    "name": "261022",
+    "date": "2026-10-22",
+    "base": "261021",
+    "package_name": "waffle_4wd_description_261022",
+    "changes": [
+      "arm_link_5 visual mesh: removed 4 gripper fastener sets (8 pieces, 4724 triangles)",
+      "arm_link_5 visual front end x max (base_footprint frame): 366.6 mm -> 361.1 mm"
+    ],
+    "unchanged": [
+      "joints",
+      "collision meshes",
+      "mass",
+      "inertia"
+    ]
+  }
+}

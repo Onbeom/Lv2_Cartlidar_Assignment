@@ -1,0 +1,23 @@
+{
+ "mode": "r1",
+ "frames": 160,
+ "by_dist": {
+  "0.654": {
+   "frames": 160,
+   "correct": 160,
+   "accuracy": 1.0,
+   "puck_as_light_off_frames": 0,
+   "position_far_frames": 0,
+   "max_pos_err_m": 0.022280259310057445,
+   "confusion": {
+    "yellow->yellow": 40,
+    "green->green": 40,
+    "off->off": 40,
+    "red->red": 40
+   }
+  }
+ },
+ "render": "/home/pa4/git/lv2_next_module/261031_0005/judge/signal/render_T6500_awb",
+ "seed": 20261024,
+ "emissive": 1.0
+}

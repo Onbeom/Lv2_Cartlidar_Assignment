@@ -1,0 +1,1345 @@
+{
+ "mode": "per_location",
+ "signal": {
+  "sequence": [
+   "R",
+   "G",
+   "R",
+   "R",
+   "G",
+   "R",
+   "G",
+   "G",
+   "Y",
+   "G",
+   "Y",
+   "G"
+  ],
+  "counts": {
+   "R": 4,
+   "Y": 2,
+   "G": 6
+  }
+ },
+ "barcode": {
+  "code": "P2-01",
+  "order": "asc"
+ },
+ "groups": {
+  "L1": {
+   "group": "Y",
+   "count": 2
+  },
+  "L2": {
+   "group": "R",
+   "count": 4
+  },
+  "L3": {
+   "group": "G",
+   "count": 6
+  }
+ },
+ "allocation": {
+  "L1": {
+   "group": "Y",
+   "ids": [
+    2,
+    10
+   ],
+   "y_shape": "box",
+   "colors": [
+    "red",
+    "red"
+   ],
+   "shapes": [
+    "box",
+    "box"
+   ]
+  },
+  "L2": {
+   "group": "R",
+   "ids": [
+    0,
+    4,
+    6,
+    8
+   ],
+   "y_shape": null,
+   "colors": [
+    "red",
+    "red",
+    "red",
+    "red"
+   ],
+   "shapes": [
+    "cylinder",
+    "cylinder",
+    "box",
+    "cylinder"
+   ]
+  },
+  "L3": {
+   "group": "G",
+   "ids": [
+    1,
+    3,
+    5,
+    7,
+    9,
+    11
+   ],
+   "y_shape": null,
+   "colors": [
+    "green",
+    "green",
+    "green",
+    "green",
+    "green",
+    "green"
+   ],
+   "shapes": [
+    "box",
+    "cylinder",
+    "cylinder",
+    "box",
+    "cylinder",
+    "box"
+   ]
+  }
+ },
+ "cost_m": 62.593,
+ "allocations_checked": 6,
+ "steps": [
+  {
+   "type": "observe",
+   "at": "HOME",
+   "note": "바코드 -> 12 회 점멸 -> 3 초 소등 확인 뒤 출발"
+  },
+  {
+   "type": "navigate",
+   "to": "B1:S",
+   "stage": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "final": [
+    1.468,
+    0.5875,
+    1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 1.158,
+   "waypoints": [
+    [
+     0.694,
+     0.95
+    ],
+    [
+     0.862,
+     0.488
+    ],
+    [
+     0.888,
+     0.438
+    ],
+    [
+     0.938,
+     0.387
+    ],
+    [
+     0.987,
+     0.363
+    ],
+    [
+     1.468,
+     0.315
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B1:S",
+   "puck": 0,
+   "color": "red",
+   "shape": "cylinder",
+   "box": 1,
+   "side": -1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    1
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B4:S",
+   "stage": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "final": [
+    0.734,
+    4.9915,
+    1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 5.037,
+   "waypoints": [
+    [
+     1.468,
+     0.315
+    ],
+    [
+     2.062,
+     1.213
+    ],
+    [
+     2.062,
+     2.163
+    ],
+    [
+     1.338,
+     4.362
+    ],
+    [
+     1.313,
+     4.412
+    ],
+    [
+     1.263,
+     4.462
+    ],
+    [
+     1.213,
+     4.487
+    ],
+    [
+     0.734,
+     4.669
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B4:S",
+   "puck": 6,
+   "color": "red",
+   "shape": "box",
+   "box": 4,
+   "side": -1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 17.06,
+   "slot": [
+    2,
+    2
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B3:N",
+   "stage": [
+    2.936,
+    5.9893,
+    -1.5708
+   ],
+   "final": [
+    2.936,
+    5.7165,
+    -1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 2.72,
+   "waypoints": [
+    [
+     0.734,
+     4.669
+    ],
+    [
+     1.213,
+     4.763
+    ],
+    [
+     1.888,
+     5.487
+    ],
+    [
+     1.888,
+     5.537
+    ],
+    [
+     2.013,
+     5.662
+    ],
+    [
+     2.463,
+     5.963
+    ],
+    [
+     2.936,
+     5.989
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B3:N",
+   "puck": 4,
+   "color": "red",
+   "shape": "cylinder",
+   "box": 3,
+   "side": -1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    0
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B5:N",
+   "stage": [
+    2.202,
+    5.9893,
+    -1.5708
+   ],
+   "final": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 0.734,
+   "waypoints": [
+    [
+     2.936,
+     5.989
+    ],
+    [
+     2.202,
+     5.989
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B5:N",
+   "puck": 8,
+   "color": "red",
+   "shape": "cylinder",
+   "box": 5,
+   "side": -1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    3
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "L2",
+   "stage": [
+    2.202,
+    4.3853,
+    -1.5708
+   ],
+   "final": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 2.06,
+   "waypoints": [
+    [
+     2.202,
+     5.989
+    ],
+    [
+     1.888,
+     5.537
+    ],
+    [
+     1.613,
+     5.088
+    ],
+    [
+     1.613,
+     4.888
+    ],
+    [
+     1.638,
+     4.838
+    ],
+    [
+     2.138,
+     4.412
+    ],
+    [
+     2.202,
+     4.385
+    ]
+   ]
+  },
+  {
+   "type": "place",
+   "at": "L2",
+   "puck": 8,
+   "from_slot": [
+    2,
+    3
+   ],
+   "cell": "-1,-1",
+   "x": 2.142,
+   "y": 3.64,
+   "j1_dist": 0.332,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L2",
+   "puck": 4,
+   "from_slot": [
+    2,
+    0
+   ],
+   "cell": "1,-1",
+   "x": 2.262,
+   "y": 3.64,
+   "j1_dist": 0.332,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L2",
+   "puck": 6,
+   "from_slot": [
+    2,
+    2
+   ],
+   "cell": "-1,1",
+   "x": 2.142,
+   "y": 3.76,
+   "j1_dist": 0.215,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L2",
+   "puck": 0,
+   "from_slot": [
+    2,
+    1
+   ],
+   "cell": "1,1",
+   "x": 2.262,
+   "y": 3.76,
+   "j1_dist": 0.215,
+   "mode": "tilt"
+  },
+  {
+   "type": "navigate",
+   "to": "B6:W",
+   "stage": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "final": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "standoff": 0.45,
+   "length_m": 0.928,
+   "waypoints": [
+    [
+     2.202,
+     4.385
+    ],
+    [
+     2.985,
+     3.886
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B6:W",
+   "puck": 10,
+   "color": "red",
+   "shape": "box",
+   "box": 6,
+   "side": -1,
+   "j1_dist": 0.2265,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    1
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B2:S",
+   "stage": [
+    3.67,
+    2.4667,
+    1.5708
+   ],
+   "final": [
+    3.67,
+    2.7895,
+    1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 3.919,
+   "waypoints": [
+    [
+     2.985,
+     3.886
+    ],
+    [
+     2.338,
+     2.138
+    ],
+    [
+     2.338,
+     1.938
+    ],
+    [
+     2.363,
+     1.888
+    ],
+    [
+     2.413,
+     1.838
+    ],
+    [
+     2.463,
+     1.813
+    ],
+    [
+     3.413,
+     1.813
+    ],
+    [
+     3.538,
+     1.938
+    ],
+    [
+     3.67,
+     2.467
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B2:S",
+   "puck": 2,
+   "color": "red",
+   "shape": "box",
+   "box": 2,
+   "side": -1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 17.06,
+   "slot": [
+    2,
+    2
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "L1",
+   "stage": [
+    2.9847,
+    0.95,
+    -0.0
+   ],
+   "final": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "standoff": 0.45,
+   "length_m": 2.878,
+   "waypoints": [
+    [
+     3.67,
+     2.467
+    ],
+    [
+     3.538,
+     1.938
+    ],
+    [
+     3.113,
+     1.538
+    ],
+    [
+     2.463,
+     1.538
+    ],
+    [
+     2.338,
+     1.413
+    ],
+    [
+     2.338,
+     1.213
+    ],
+    [
+     2.363,
+     1.163
+    ],
+    [
+     2.413,
+     1.113
+    ],
+    [
+     2.463,
+     1.088
+    ],
+    [
+     2.985,
+     0.95
+    ]
+   ]
+  },
+  {
+   "type": "place",
+   "at": "L1",
+   "puck": 2,
+   "from_slot": [
+    2,
+    2
+   ],
+   "cell": "1,-1",
+   "x": 3.73,
+   "y": 0.89,
+   "j1_dist": 0.332,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L1",
+   "puck": 10,
+   "from_slot": [
+    2,
+    1
+   ],
+   "cell": "-1,1",
+   "x": 3.61,
+   "y": 1.01,
+   "j1_dist": 0.215,
+   "mode": "tilt"
+  },
+  {
+   "type": "navigate",
+   "to": "B1:S",
+   "stage": [
+    1.468,
+    0.3147,
+    1.5708
+   ],
+   "final": [
+    1.468,
+    0.5875,
+    1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 1.644,
+   "waypoints": [
+    [
+     2.985,
+     0.95
+    ],
+    [
+     1.468,
+     0.315
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B1:S",
+   "puck": 1,
+   "color": "green",
+   "shape": "box",
+   "box": 1,
+   "side": 1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": -17.06,
+   "slot": [
+    2,
+    1
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B2:S",
+   "stage": [
+    3.67,
+    2.4667,
+    1.5708
+   ],
+   "final": [
+    3.67,
+    2.7895,
+    1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 3.31,
+   "waypoints": [
+    [
+     1.468,
+     0.315
+    ],
+    [
+     2.513,
+     1.613
+    ],
+    [
+     3.413,
+     1.813
+    ],
+    [
+     3.538,
+     1.938
+    ],
+    [
+     3.67,
+     2.467
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B2:S",
+   "puck": 3,
+   "color": "green",
+   "shape": "cylinder",
+   "box": 2,
+   "side": 1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    2
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B6:W",
+   "stage": [
+    2.9847,
+    3.886,
+    -0.0
+   ],
+   "final": [
+    3.3075,
+    3.886,
+    -0.0
+   ],
+   "standoff": 0.45,
+   "length_m": 3.943,
+   "waypoints": [
+    [
+     3.67,
+     2.467
+    ],
+    [
+     3.538,
+     1.913
+    ],
+    [
+     3.413,
+     1.813
+    ],
+    [
+     2.463,
+     1.813
+    ],
+    [
+     2.413,
+     1.838
+    ],
+    [
+     2.363,
+     1.888
+    ],
+    [
+     2.338,
+     1.938
+    ],
+    [
+     2.338,
+     2.363
+    ],
+    [
+     2.985,
+     3.886
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B6:W",
+   "puck": 11,
+   "color": "green",
+   "shape": "box",
+   "box": 6,
+   "side": 1,
+   "j1_dist": 0.3065,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    2,
+    0
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B4:S",
+   "stage": [
+    0.734,
+    4.6687,
+    1.5708
+   ],
+   "final": [
+    0.734,
+    4.9915,
+    1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 2.383,
+   "waypoints": [
+    [
+     2.985,
+     3.886
+    ],
+    [
+     0.734,
+     4.669
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B4:S",
+   "puck": 7,
+   "color": "green",
+   "shape": "box",
+   "box": 4,
+   "side": 1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": -17.06,
+   "slot": [
+    2,
+    3
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B5:N",
+   "stage": [
+    2.202,
+    5.9893,
+    -1.5708
+   ],
+   "final": [
+    2.202,
+    5.7165,
+    -1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 2.079,
+   "waypoints": [
+    [
+     0.734,
+     4.669
+    ],
+    [
+     1.213,
+     4.763
+    ],
+    [
+     1.888,
+     5.487
+    ],
+    [
+     1.888,
+     5.537
+    ],
+    [
+     2.202,
+     5.989
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B5:N",
+   "puck": 9,
+   "color": "green",
+   "shape": "cylinder",
+   "box": 5,
+   "side": 1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    1,
+    1
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "B3:N",
+   "stage": [
+    2.936,
+    5.9893,
+    -1.5708
+   ],
+   "final": [
+    2.936,
+    5.7165,
+    -1.5708
+   ],
+   "standoff": 0.4,
+   "length_m": 0.734,
+   "waypoints": [
+    [
+     2.202,
+     5.989
+    ],
+    [
+     2.936,
+     5.989
+    ]
+   ]
+  },
+  {
+   "type": "pick",
+   "at": "B3:N",
+   "puck": 5,
+   "color": "green",
+   "shape": "cylinder",
+   "box": 3,
+   "side": 1,
+   "j1_dist": 0.2695,
+   "tilt": true,
+   "turn_deg": 0.0,
+   "slot": [
+    1,
+    2
+   ]
+  },
+  {
+   "type": "navigate",
+   "to": "L3",
+   "stage": [
+    3.67,
+    4.6687,
+    1.5708
+   ],
+   "final": [
+    3.67,
+    4.9915,
+    1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 2.133,
+   "waypoints": [
+    [
+     2.936,
+     5.989
+    ],
+    [
+     3.413,
+     5.963
+    ],
+    [
+     3.663,
+     5.838
+    ],
+    [
+     3.938,
+     5.588
+    ],
+    [
+     3.962,
+     5.537
+    ],
+    [
+     3.962,
+     5.162
+    ],
+    [
+     3.67,
+     4.669
+    ]
+   ]
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 5,
+   "from_slot": [
+    1,
+    2
+   ],
+   "cell": "-1,1",
+   "x": 3.61,
+   "y": 5.414,
+   "j1_dist": 0.332,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 9,
+   "from_slot": [
+    1,
+    1
+   ],
+   "cell": "1,1",
+   "x": 3.73,
+   "y": 5.414,
+   "j1_dist": 0.332,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 7,
+   "from_slot": [
+    2,
+    3
+   ],
+   "cell": "-1,0",
+   "x": 3.61,
+   "y": 5.354,
+   "j1_dist": 0.2732,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 11,
+   "from_slot": [
+    2,
+    0
+   ],
+   "cell": "1,0",
+   "x": 3.73,
+   "y": 5.354,
+   "j1_dist": 0.2732,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 3,
+   "from_slot": [
+    2,
+    2
+   ],
+   "cell": "-1,-1",
+   "x": 3.61,
+   "y": 5.294,
+   "j1_dist": 0.215,
+   "mode": "tilt"
+  },
+  {
+   "type": "place",
+   "at": "L3",
+   "puck": 1,
+   "from_slot": [
+    2,
+    1
+   ],
+   "cell": "1,-1",
+   "x": 3.73,
+   "y": 5.294,
+   "j1_dist": 0.215,
+   "mode": "tilt"
+  },
+  {
+   "type": "verify",
+   "at": "L3",
+   "note": "새 카메라 관측으로 칸별 퍽 ID · 위치 기록 (목표 복사 금지)"
+  },
+  {
+   "type": "navigate",
+   "to": "L2",
+   "stage": [
+    2.202,
+    4.3853,
+    -1.5708
+   ],
+   "final": [
+    2.202,
+    4.0625,
+    -1.5708
+   ],
+   "standoff": 0.45,
+   "length_m": 1.495,
+   "waypoints": [
+    [
+     3.67,
+     4.669
+    ],
+    [
+     2.202,
+     4.385
+    ]
+   ]
+  },
+  {
+   "type": "verify",
+   "at": "L2",
+   "note": "새 카메라 관측으로 칸별 퍽 ID · 위치 기록 (목표 복사 금지)"
+  },
+  {
+   "type": "navigate",
+   "to": "L1",
+   "stage": [
+    2.9847,
+    0.95,
+    -0.0
+   ],
+   "final": [
+    3.3075,
+    0.95,
+    -0.0
+   ],
+   "standoff": 0.45,
+   "length_m": 4.05,
+   "waypoints": [
+    [
+     2.202,
+     4.385
+    ],
+    [
+     2.488,
+     3.938
+    ],
+    [
+     2.513,
+     3.888
+    ],
+    [
+     2.513,
+     2.363
+    ],
+    [
+     2.338,
+     2.163
+    ],
+    [
+     2.338,
+     1.213
+    ],
+    [
+     2.363,
+     1.163
+    ],
+    [
+     2.413,
+     1.113
+    ],
+    [
+     2.463,
+     1.088
+    ],
+    [
+     2.985,
+     0.95
+    ]
+   ]
+  },
+  {
+   "type": "verify",
+   "at": "L1",
+   "note": "새 카메라 관측으로 칸별 퍽 ID · 위치 기록 (목표 복사 금지)"
+  },
+  {
+   "type": "navigate",
+   "to": "HOME",
+   "stage": [
+    0.6936,
+    0.95,
+    3.1416
+   ],
+   "final": [
+    0.6936,
+    0.95,
+    3.1416
+   ],
+   "standoff": 0.0,
+   "length_m": 2.767,
+   "waypoints": [
+    [
+     2.985,
+     0.95
+    ],
+    [
+     1.188,
+     0.363
+    ],
+    [
+     0.987,
+     0.363
+    ],
+    [
+     0.938,
+     0.387
+    ],
+    [
+     0.888,
+     0.438
+    ],
+    [
+     0.713,
+     0.862
+    ],
+    [
+     0.694,
+     0.95
+    ]
+   ]
+  },
+  {
+   "type": "return",
+   "at": "HOME",
+   "note": "차체 전체가 출발 구역 안에서 3 초 정지"
+  }
+ ],
+ "warnings": [
+  "퍽 10: 박스 6 는 ±Y 면이 막혀 W 면 (두 퍽 앞뒤) 에서 집음, J1 거리 0.227",
+  "퍽 11: 박스 6 는 ±Y 면이 막혀 W 면 (두 퍽 앞뒤) 에서 집음, J1 거리 0.306"
+ ],
+ "mission_lines": [
+  "goto 1.468 0.3147 1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_1_tilt 40 mode=OFF",
+  "goto 0.734 4.6687 1.5708",
+  "approach 0.13",
+  "skill drive turn_p17 40 mode=OFF",
+  "skill manipulator target_look:base_footprint:0.3565:-0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_2_tilt 40 mode=OFF",
+  "skill drive turn_0 40 mode=OFF",
+  "goto 2.936 5.9893 -1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_0_tilt 40 mode=OFF",
+  "goto 2.202 5.9893 -1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_3_tilt 40 mode=OFF",
+  "goto 2.202 4.3853 -1.5708",
+  "approach 0.13",
+  "skill manipulator pallet_unload_2_3_tilt 40 mode=OFF",
+  "skill manipulator place_L2_m1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_0_tilt 40 mode=OFF",
+  "skill manipulator place_L2_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_2_tilt 40 mode=OFF",
+  "skill manipulator place_L2_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_1_tilt 40 mode=OFF",
+  "skill manipulator place_L2_p1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "goto 2.9847 3.886 -0",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3225:0.0000:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_1_tilt 40 mode=OFF",
+  "goto 3.67 2.4667 1.5708",
+  "approach 0.13",
+  "skill drive turn_p17 40 mode=OFF",
+  "skill manipulator target_look:base_footprint:0.3565:-0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_2_tilt 40 mode=OFF",
+  "skill drive turn_0 40 mode=OFF",
+  "goto 2.9847 0.95 -0",
+  "approach 0.13",
+  "skill manipulator pallet_unload_2_2_tilt 40 mode=OFF",
+  "skill manipulator place_L1_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_1_tilt 40 mode=OFF",
+  "skill manipulator place_L1_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "goto 1.468 0.3147 1.5708",
+  "approach 0.13",
+  "skill drive turn_m17 40 mode=OFF",
+  "skill manipulator target_look:base_footprint:0.3565:0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_1_tilt 40 mode=OFF",
+  "skill drive turn_0 40 mode=OFF",
+  "goto 3.67 2.4667 1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:-0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_2_tilt 40 mode=OFF",
+  "goto 2.9847 3.886 -0",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.4025:0.0000:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_0_tilt 40 mode=OFF",
+  "goto 0.734 4.6687 1.5708",
+  "approach 0.13",
+  "skill drive turn_m17 40 mode=OFF",
+  "skill manipulator target_look:base_footprint:0.3565:0.0799:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_2_3_tilt 40 mode=OFF",
+  "skill drive turn_0 40 mode=OFF",
+  "goto 2.202 5.9893 -1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_1_1_tilt 40 mode=OFF",
+  "goto 2.936 5.9893 -1.5708",
+  "approach 0.13",
+  "skill manipulator target_look:base_footprint:0.3625:0.0400:0.100 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator toppick_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN+READ_TAG",
+  "skill manipulator pallet_load_1_2_tilt 40 mode=OFF",
+  "goto 3.67 4.6687 1.5708",
+  "approach 0.13",
+  "skill manipulator pallet_unload_1_2_tilt 40 mode=OFF",
+  "skill manipulator place_L3_m1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_1_1_tilt 40 mode=OFF",
+  "skill manipulator place_L3_p1_p1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_3_tilt 40 mode=OFF",
+  "skill manipulator place_L3_m1_0_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_0_tilt 40 mode=OFF",
+  "skill manipulator place_L3_p1_0_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_2_tilt 40 mode=OFF",
+  "skill manipulator place_L3_m1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "skill manipulator pallet_unload_2_1_tilt 40 mode=OFF",
+  "skill manipulator place_L3_p1_m1_tilt 40 mode=SEARCH_FRONT+ARM_ALIGN",
+  "verify L3 3.67 5.354 0.07 202202202 0",
+  "goto 2.202 4.3853 -1.5708",
+  "verify L2 2.202 3.7 0.07 101000101 0",
+  "goto 2.9847 0.95 -0",
+  "verify L1 3.67 0.95 0.07 300000003 2",
+  "goto 0.6936 0.95 3.1416",
+  "wait 3"
+ ],
+ "notes": [
+  "approach FINE 0.13 m (TFmini 렌즈 -> 면) 자리 = 접근 자세표 final (앞 끝 -> 면 0.1272 m, #64 안 A)"
+ ]
+}

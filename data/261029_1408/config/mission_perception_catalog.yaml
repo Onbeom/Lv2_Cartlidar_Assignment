@@ -1,0 +1,27 @@
+# 발제/현재 코드의 통합 대응표 초안. 아직 mission 런타임에서 읽는 파일은 아니다.
+schema_version: 1
+units: {length: m, angle: rad}
+puck_tags:
+  family: tag36h11
+  black_border_size_m: 0.016
+  allowed_ids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+  identity_source: decoded_tag_id
+  color_shape_position_source: runtime_puck_survey
+  geometry_m: {short_width: 0.030, long_length: 0.060}
+  object_axis_z: long_axis
+  mounting_transform: geometry_inference_from_visible_face
+  mounting_transform_status: no_fixed_measured_per_face_table
+place_tags:
+  family: tag36h11
+  black_border_size_m: 0.048
+  size_status: measured_48mm_by_user_20261029
+  id_to_place: {12: L1, 13: L2, 14: L3}
+barcodes:
+  symbology: CODE128
+  text_to_order: {P2-01: ascending, P2-02: descending, P2-03: ascending, P2-04: descending}
+  equal_count_tiebreak: [R, Y, G]
+  object_attributes_encoded: false
+classes:
+  operational_four: [red_cylinder, green_cylinder, red_cuboid, green_cuboid]
+  legacy_ft1b_six: [red_cylinder, green_cylinder, blue_cylinder, red_cuboid, green_cuboid, blue_cuboid]
+  blue_is_pick_target: false

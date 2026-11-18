@@ -1,0 +1,16 @@
+{
+ "started_at": "2026-11-04T11:40:21.099214+09:00",
+ "label": "arena_arm_v2",
+ "device": "/dev/video0",
+ "fourcc": "MJPG",
+ "image_size": [
+  1280,
+  720
+ ],
+ "requested_fps": 30,
+ "jpeg_quality": 95,
+ "frames": 45,
+ "dropped": 0,
+ "seconds": 61.03,
+ "mean_fps": 0.74
+}

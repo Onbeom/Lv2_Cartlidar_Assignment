@@ -1,0 +1,53 @@
+{
+  "status": "independent_numerical_review_complete",
+  "links": 14,
+  "joints": 13,
+  "tree_connected": true,
+  "unique_parent_for_each_child": true,
+  "frames": 402,
+  "screw_FK_vs_review_tree_max_com_error_mm": 3.438929861929945e-06,
+  "screw_FK_full_12_minimum_margin_mm": 40.91422897806543,
+  "gravity_torque_finite_difference": [
+    {
+      "joint": "RMX52_Base_Yaw",
+      "finite_difference_N_mm": -0.0,
+      "cross_product_N_mm": 0.0,
+      "absolute_difference_N_mm": 0.0
+    },
+    {
+      "joint": "RMX52_Shoulder",
+      "finite_difference_N_mm": -301.98387130440096,
+      "cross_product_N_mm": -301.98387157559716,
+      "absolute_difference_N_mm": 2.711961997192702e-07
+    },
+    {
+      "joint": "RMX52_Elbow",
+      "finite_difference_N_mm": -1021.8660446298599,
+      "cross_product_N_mm": -1021.8660447210145,
+      "absolute_difference_N_mm": 9.115467491938034e-08
+    },
+    {
+      "joint": "RMX52_Wrist_Pitch",
+      "finite_difference_N_mm": -434.19165640443674,
+      "cross_product_N_mm": -434.1916565019536,
+      "absolute_difference_N_mm": 9.751687457537628e-08
+    },
+    {
+      "joint": "RMX52_Wrist_Roll_Reversed",
+      "finite_difference_N_mm": 0.03875766196870245,
+      "cross_product_N_mm": 0.03897359344161949,
+      "absolute_difference_N_mm": 0.0002159314729170414
+    }
+  ],
+  "scope": [
+    "402 discrete CAD frames for center-of-mass comparison",
+    "Five gravity-torque maxima checked by potential-energy finite differences",
+    "No continuous collision, physical stress, motor thermal or actual print validation"
+  ],
+  "geometry_only_transfer": {
+    "all_body_geometry_signatures_match": true,
+    "matched_bodies": 669,
+    "max_body_mass_difference_g": 1.376704048539068e-07
+  },
+  "print_layout_xy_bbox_overlaps": []
+}

@@ -1,0 +1,40 @@
+{
+  "status": "SIMULATION_INPUTS_ADDED_RUNTIME_VALIDATION_PENDING",
+  "engineering_units": {
+    "mass": "g",
+    "length": "mm",
+    "inertia": "g*mm^2",
+    "torque": "N*mm",
+    "angle": "rad"
+  },
+  "urdf_units": "ROS-required SI: m, kg, kg*m^2, rad. Engineering data is separately preserved in g/mm/g*mm^2.",
+  "source_cad": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Assembly_Modular_261021.f3d",
+  "total_empty_mass_g": 4891.194067702904,
+  "puck_count_max": 12,
+  "payload_estimate_g": 803.52,
+  "loaded_estimate_g": 5694.714067702904,
+  "scope": "Static/numeric simulation inputs configured; ROS and Isaac runtime pending. Physical parameters remain estimates.",
+  "gripper": "Equivalent opposite linear finger motion with right=-left mimic; internal crank linkage and motor-angle-to-gap mapping not simulated.",
+  "arm_limits": "Previous sign-corrected reference intervals, not calibrated hardware stops.",
+  "actuator_effort_velocity": "Manufacturer 11.1V stall torque: peak envelope, NOT continuous/thermal safe rating. Arm 3800N*mm, wheels2700N*mm; fingers10N provisional. Velocities/damping provisional.",
+  "collision": {
+    "primitives": 52,
+    "convex_meshes": 490,
+    "threshold_mm": 1,
+    "limitations": "Simplified approximate contacts; tiny fasteners/internal geometry omitted. Runtime collision filtering and grasp clearance require validation."
+  },
+  "scripts": "simulation_audit.py audits the current package. Baseline finalizer is guarded to prevent reverting simulation inputs.",
+  "pending": [
+    "ROS/xacro/RViz and Isaac import/runtime checks",
+    "Actual joint zero/sign/stops/cable calibration; provisional limits not certified safe",
+    "Continuous motor thermal/current/torque-speed limits, power wiring and controllers",
+    "Equivalent gripper force/calibration and mimic support in importer",
+    "Sensor optical and LDS scan calibration",
+    "Collision approximation/contact/filter tuning and continuous/self collision; historical motion exceeds provisional limits",
+    "Physical print, strength, dynamic stability and mass measurements"
+  ],
+  "links": 23,
+  "joints": 22,
+  "physical_links": 14,
+  "root": "base_footprint"
+}

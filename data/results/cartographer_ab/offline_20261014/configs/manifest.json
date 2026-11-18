@@ -1,0 +1,88 @@
+{
+  "source_lua": "/home/pa4/git/ros_test/waffle-lyrical-slam/src/waffle_slam_course/config/waffle_2d.lua",
+  "configs": [
+    {
+      "name": "c1_res0.05_w10-40_ang0.1",
+      "resolution": 0.05,
+      "translation_weight": 10.0,
+      "rotation_weight": 40.0,
+      "max_angle_deg": 0.1,
+      "changed": []
+    },
+    {
+      "name": "c2_res0.05_w10-40_ang1",
+      "resolution": 0.05,
+      "translation_weight": 10.0,
+      "rotation_weight": 40.0,
+      "max_angle_deg": 1.0,
+      "changed": [
+        "ang"
+      ]
+    },
+    {
+      "name": "c3_res0.05_w1-4_ang0.1",
+      "resolution": 0.05,
+      "translation_weight": 1.0,
+      "rotation_weight": 4.0,
+      "max_angle_deg": 0.1,
+      "changed": [
+        "w"
+      ]
+    },
+    {
+      "name": "c4_res0.05_w1-4_ang1",
+      "resolution": 0.05,
+      "translation_weight": 1.0,
+      "rotation_weight": 4.0,
+      "max_angle_deg": 1.0,
+      "changed": [
+        "w",
+        "ang"
+      ]
+    },
+    {
+      "name": "c5_res0.025_w10-40_ang0.1",
+      "resolution": 0.025,
+      "translation_weight": 10.0,
+      "rotation_weight": 40.0,
+      "max_angle_deg": 0.1,
+      "changed": [
+        "res"
+      ]
+    },
+    {
+      "name": "c6_res0.025_w10-40_ang1",
+      "resolution": 0.025,
+      "translation_weight": 10.0,
+      "rotation_weight": 40.0,
+      "max_angle_deg": 1.0,
+      "changed": [
+        "res",
+        "ang"
+      ]
+    },
+    {
+      "name": "c7_res0.025_w1-4_ang0.1",
+      "resolution": 0.025,
+      "translation_weight": 1.0,
+      "rotation_weight": 4.0,
+      "max_angle_deg": 0.1,
+      "changed": [
+        "res",
+        "w"
+      ]
+    },
+    {
+      "name": "c8_res0.025_w1-4_ang1",
+      "resolution": 0.025,
+      "translation_weight": 1.0,
+      "rotation_weight": 4.0,
+      "max_angle_deg": 1.0,
+      "changed": [
+        "res",
+        "w",
+        "ang"
+      ]
+    }
+  ]
+}

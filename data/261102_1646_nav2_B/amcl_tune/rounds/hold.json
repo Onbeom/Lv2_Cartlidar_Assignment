@@ -1,0 +1,58 @@
+{
+ "cands": {
+  "final": [
+   "laser_likelihood_max_dist=2.0",
+   "robot_model_type=nav2_amcl::OmniMotionModel",
+   "alpha5=0.1",
+   "update_min_d=0.0",
+   "update_min_a=0.0"
+  ],
+  "kanichong": []
+ },
+ "res": {
+  "final": {
+   "c_s2026": {
+    "n": 3018,
+    "miss": 0,
+    "rmse": 0.0154,
+    "max": 0.0273,
+    "p95": 0.0226,
+    "yaw_rmse": 0.0103,
+    "yaw_max": 0.0328
+   },
+   "k0": {
+    "n": 3257,
+    "miss": 0,
+    "rmse": 0.0157,
+    "max": 0.0283,
+    "p95": 0.0229,
+    "yaw_rmse": 0.01,
+    "yaw_max": 0.0254
+   },
+   "mean_rmse": 0.0155,
+   "max_max": 0.0283
+  },
+  "kanichong": {
+   "c_s2026": {
+    "n": 3018,
+    "miss": 0,
+    "rmse": 0.0313,
+    "max": 0.078,
+    "p95": 0.0636,
+    "yaw_rmse": 0.0178,
+    "yaw_max": 0.0808
+   },
+   "k0": {
+    "n": 3257,
+    "miss": 0,
+    "rmse": 0.0343,
+    "max": 0.0779,
+    "p95": 0.0671,
+    "yaw_rmse": 0.0193,
+    "yaw_max": 0.0723
+   },
+   "mean_rmse": 0.0328,
+   "max_max": 0.078
+  }
+ }
+}

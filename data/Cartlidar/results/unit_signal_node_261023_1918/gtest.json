@@ -1,0 +1,728 @@
+{
+  "tests": 56,
+  "failures": 0,
+  "disabled": 0,
+  "errors": 0,
+  "timestamp": "2026-10-23T19:18:08Z",
+  "time": "6.42s",
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "Tfmini",
+      "tests": 3,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "ParsesValidFrame",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tfmini.cpp",
+          "line": 20,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tfmini"
+        },
+        {
+          "name": "ResyncAfterNoiseAndBadChecksum",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tfmini.cpp",
+          "line": 33,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tfmini"
+        },
+        {
+          "name": "ValidityRules",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tfmini.cpp",
+          "line": 50,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tfmini"
+        }
+      ]
+    },
+    {
+      "name": "ColorDetector",
+      "tests": 3,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0.012s",
+      "testsuite": [
+        {
+          "name": "FindsColoredPucks",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 15,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.005s",
+          "classname": "ColorDetector"
+        },
+        {
+          "name": "IgnoresSmallAndGray",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 41,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.002s",
+          "classname": "ColorDetector"
+        },
+        {
+          "name": "RejectsLowFillAndUsesConfiguredHsv",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 50,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.004s",
+          "classname": "ColorDetector"
+        }
+      ]
+    },
+    {
+      "name": "Geometry",
+      "tests": 6,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "SizePlausible",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 67,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        },
+        {
+          "name": "DeprojectOptical",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 77,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        },
+        {
+          "name": "DepthScaleForEncoding",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 92,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        },
+        {
+          "name": "MedianDepthFloatMeters",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 99,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        },
+        {
+          "name": "MedianDepthIgnoresHoles",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 110,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        },
+        {
+          "name": "ImageOffset",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_vision.cpp",
+          "line": 120,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Geometry"
+        }
+      ]
+    },
+    {
+      "name": "Tracker",
+      "tests": 3,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "PicksClosestOutsideExcludeAboveConfidence",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tracker_tag.cpp",
+          "line": 27,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tracker"
+        },
+        {
+          "name": "StaysOnSameObjectWithinGateAndReacquiresAfterTimeout",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tracker_tag.cpp",
+          "line": 35,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tracker"
+        },
+        {
+          "name": "GateUsesOdomSoRobotMotionDoesNotBreakTracking",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tracker_tag.cpp",
+          "line": 51,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Tracker"
+        }
+      ]
+    },
+    {
+      "name": "TagDetector",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0.028s",
+      "testsuite": [
+        {
+          "name": "DetectsAprilTag36h11WithPose",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_tracker_tag.cpp",
+          "line": 63,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.028s",
+          "classname": "TagDetector"
+        }
+      ]
+    },
+    {
+      "name": "StampGate",
+      "tests": 2,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "DropsDuplicateAndOlderFrames",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_inputs.cpp",
+          "line": 10,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "StampGate"
+        },
+        {
+          "name": "AcceptsClockRestart",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_inputs.cpp",
+          "line": 19,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "StampGate"
+        }
+      ]
+    },
+    {
+      "name": "NearestCache",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "PicksClosestWithinTolerance",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_inputs.cpp",
+          "line": 29,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "NearestCache"
+        }
+      ]
+    },
+    {
+      "name": "ScanBinner",
+      "tests": 3,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "BinsByAngleAndKeepsNearest",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 12,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ScanBinner"
+        },
+        {
+          "name": "DropsSelfBoxAndOutOfRange",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 27,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ScanBinner"
+        },
+        {
+          "name": "UpsideDownLidarMirrorsAngle",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 41,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ScanBinner"
+        }
+      ]
+    },
+    {
+      "name": "ObstacleStop",
+      "tests": 5,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0s",
+      "testsuite": [
+        {
+          "name": "StartsStoppedAndReleasesAfterCount",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 53,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ObstacleStop"
+        },
+        {
+          "name": "StopsAndHysteresis",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 64,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ObstacleStop"
+        },
+        {
+          "name": "InvalidAfterNearMeansTooClose",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 82,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ObstacleStop"
+        },
+        {
+          "name": "InvalidWhenFarMeansClear",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 93,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ObstacleStop"
+        },
+        {
+          "name": "StaleInputStops",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_lidar.cpp",
+          "line": 102,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "ObstacleStop"
+        }
+      ]
+    },
+    {
+      "name": "Puck",
+      "tests": 9,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0.15s",
+      "testsuite": [
+        {
+          "name": "ClassifyHsv",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 68,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0s",
+          "classname": "Puck"
+        },
+        {
+          "name": "SideFaceLongAxisVertical",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 77,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.026s",
+          "classname": "Puck"
+        },
+        {
+          "name": "SideFaceLongAxisHorizontal",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 90,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.014s",
+          "classname": "Puck"
+        },
+        {
+          "name": "EndFace",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 100,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.009s",
+          "classname": "Puck"
+        },
+        {
+          "name": "WhiteFaceIsCylinderCap",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 111,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.01s",
+          "classname": "Puck"
+        },
+        {
+          "name": "WhiteDiscOnGrayIsCylinderCap",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 122,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.013s",
+          "classname": "Puck"
+        },
+        {
+          "name": "NoColorNoCapMeansNoOrientation",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 136,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.028s",
+          "classname": "Puck"
+        },
+        {
+          "name": "TopFaceCuboidAndCylinder",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 195,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.039s",
+          "classname": "Puck"
+        },
+        {
+          "name": "TopFaceCylinderNextToSameColor",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 209,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.009s",
+          "classname": "Puck"
+        }
+      ]
+    },
+    {
+      "name": "Marker",
+      "tests": 1,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "0.002s",
+      "testsuite": [
+        {
+          "name": "DetectsAruco4x4",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_puck.cpp",
+          "line": 146,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "0.002s",
+          "classname": "Marker"
+        }
+      ]
+    },
+    {
+      "name": "SignalSequence",
+      "tests": 7,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:08Z",
+      "time": "6.209s",
+      "testsuite": [
+        {
+          "name": "U1_Random1000",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 85,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:08Z",
+          "time": "6.175s",
+          "classname": "SignalSequence",
+          "ok": "1000",
+          "wrong": "0",
+          "late": "0"
+        },
+        {
+          "name": "U2_SameColorRuns",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 114,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.008s",
+          "classname": "SignalSequence"
+        },
+        {
+          "name": "U2_StartInsideOnAndInsideTerm",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 125,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.006s",
+          "classname": "SignalSequence"
+        },
+        {
+          "name": "U2_DifferentCyclesDoNotConfirm",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 143,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.007s",
+          "classname": "SignalSequence"
+        },
+        {
+          "name": "U2_LostFramesKeepsCompletedCycles",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 166,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.004s",
+          "classname": "SignalSequence"
+        },
+        {
+          "name": "U2_NothingSeen",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 183,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "SignalSequence"
+        },
+        {
+          "name": "U2_MeasuredTimesAndCounts",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal.cpp",
+          "line": 192,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.006s",
+          "classname": "SignalSequence"
+        }
+      ]
+    },
+    {
+      "name": "DiceCheck",
+      "tests": 8,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:14Z",
+      "time": "0.001s",
+      "testsuite": [
+        {
+          "name": "U3_CorrectPatternsPass",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 59,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.001s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_WrongColor",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 80,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_YellowMixedShapes",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 92,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_MissingAndUnexpected",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 104,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_TwoPucksInOneCell",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 122,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_OffsetBeyondTolerance",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 137,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_UnknownAttributesFail",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 152,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        },
+        {
+          "name": "U3_EmptyShelf",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_dice.cpp",
+          "line": 165,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "DiceCheck"
+        }
+      ]
+    },
+    {
+      "name": "SignalLight",
+      "tests": 4,
+      "failures": 0,
+      "disabled": 0,
+      "errors": 0,
+      "timestamp": "2026-10-23T19:18:14Z",
+      "time": "0.015s",
+      "testsuite": [
+        {
+          "name": "BrightColorsAreBlobsDullAreNot",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal_light.cpp",
+          "line": 28,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.006s",
+          "classname": "SignalLight"
+        },
+        {
+          "name": "LocksOnBlinkingSiteNotOnSteadyPuck",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal_light.cpp",
+          "line": 47,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "SignalLight"
+        },
+        {
+          "name": "OneFrameDropoutIsNotABlink",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal_light.cpp",
+          "line": 73,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0s",
+          "classname": "SignalLight"
+        },
+        {
+          "name": "LockedSiteFeedsSequence",
+          "file": "\/home\/pa4\/git\/Lv2_Cartlidar_Assignment\/workspace\/ros2_ws\/src\/perception\/test\/test_signal_light.cpp",
+          "line": 85,
+          "status": "RUN",
+          "result": "COMPLETED",
+          "timestamp": "2026-10-23T19:18:14Z",
+          "time": "0.008s",
+          "classname": "SignalLight"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "/clock": [
+    {
+      "node": "_BridgeCheck_PublishClock",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/tf": [
+    {
+      "node": "_BridgeCheck_PublishTF",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/odom": [
+    {
+      "node": "_BridgeCheck_PublishOdom",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/scan": [],
+  "/left/image_raw": [
+    {
+      "node": "_Render_PostProcess_SDGPipeline_Replicator_01_NodeWriterWriter_01",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/right/image_raw": [
+    {
+      "node": "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/left/camera_info": [
+    {
+      "node": "_Render_PostProcess_SDGPipeline_Replicator_01_NodeWriterWriter",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/right/camera_info": [
+    {
+      "node": "_Render_PostProcess_SDGPipeline_Replicator_NodeWriterWriter_01",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ]
+}

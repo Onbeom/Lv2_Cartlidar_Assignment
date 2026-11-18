@@ -1,0 +1,75 @@
+{
+ "scenes": 12,
+ "valid_scenes": 10,
+ "invalid": [
+  [
+   "w5_out00_L0",
+   "puck_01",
+   "puck_00",
+   0.0155
+  ],
+  [
+   "w5_out00_L1",
+   "puck_01",
+   "puck_00",
+   0.0155
+  ]
+ ],
+ "frames": 246,
+ "unanswered": 0,
+ "J1_first_lock_target": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J1_fail": [],
+ "J2_full_frames": {
+  "ok": 180,
+  "n": 182,
+  "rate": 0.989
+ },
+ "J2_tol": 0.05,
+ "J2_err_max": 0.0281,
+ "J2_fail": [
+  [
+   "w3_out00_L0",
+   16,
+   false,
+   null,
+   null
+  ],
+  [
+   "w3_out00_L1",
+   16,
+   false,
+   null,
+   null
+  ]
+ ],
+ "J3_other_puck_frames": 0,
+ "J3_examples": [],
+ "not_puck_frames": 0,
+ "J4_out_frames_invalid": {
+  "ok": 40,
+  "n": 40,
+  "rate": 1.0
+ },
+ "J4_out_fail": [],
+ "J4_reacquire": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J4_reacquire_fail": [],
+ "partial_frames": 24,
+ "partial_pointing_target": 10,
+ "J1_pass": true,
+ "J2_pass": true,
+ "J3_pass": true,
+ "J4_pass": true,
+ "pass": true,
+ "d435_extrinsic_mode": "new_model_fk_exact_no_jitter",
+ "joint_state_delay_s": 0.0,
+ "front_depth_empty": false,
+ "render": "/home/pa4/git/lv2_next_module/Cartlidar/sim_render/results/a1_new_model_261029/validation_v12"
+}

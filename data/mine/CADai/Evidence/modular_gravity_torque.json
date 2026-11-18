@@ -1,0 +1,48 @@
+{
+  "status": "estimated_quasistatic_gravity_only",
+  "units": "N*mm",
+  "g_mm_per_s2": 9810,
+  "maxima": [
+    {
+      "frame": 0,
+      "label": "INSERT_APPROACH",
+      "joint": "RMX52_Base_Yaw",
+      "gravity_torque_N_mm": 0.0,
+      "carrying_one_puck": true
+    },
+    {
+      "frame": 65,
+      "label": "INSERT",
+      "joint": "RMX52_Shoulder",
+      "gravity_torque_N_mm": -301.98387157559716,
+      "carrying_one_puck": true
+    },
+    {
+      "frame": 288,
+      "label": "GRASP",
+      "joint": "RMX52_Elbow",
+      "gravity_torque_N_mm": -1021.8660447210145,
+      "carrying_one_puck": true
+    },
+    {
+      "frame": 19,
+      "label": "INSERT",
+      "joint": "RMX52_Wrist_Pitch",
+      "gravity_torque_N_mm": -434.1916565019536,
+      "carrying_one_puck": true
+    },
+    {
+      "frame": 19,
+      "label": "INSERT",
+      "joint": "RMX52_Wrist_Roll_Reversed",
+      "gravity_torque_N_mm": 0.03897359344161949,
+      "carrying_one_puck": true
+    }
+  ],
+  "limitations": [
+    "Estimated masses and reference joint frames",
+    "Excludes acceleration, friction, cable forces, gear losses and impacts",
+    "Motor stall torque is not a continuous operating limit",
+    "Finger grasp normal force and internal crank mechanical advantage not calculated"
+  ]
+}

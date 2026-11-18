@@ -1,0 +1,33 @@
+{
+ "nvpmodel": "NV Power Mode: 25W\n1",
+ "engines": {
+  "480": {
+   "path": "/home/cart11/e3_check/results/yolo11n_task4_E3_480_fp16.engine",
+   "sha256": "d7cea24d68d94bd94ba27995f14deb3105d90dbac9b97f0a3fb3df1f2b58345f",
+   "trtexec_gpu_ms": {
+    "min": 3.2168,
+    "max": 3.52148,
+    "mean": 3.2474,
+    "median": 3.24707
+   },
+   "python_infer_ms": {
+    "median": 5.026,
+    "n": 1823
+   }
+  },
+  "384": {
+   "path": "/home/cart11/e3_check/results/yolo11n_task4_E3_384_fp16.engine",
+   "sha256": "5d09c3620eb9bc66370edba2c7bf6197088375f91a95b1caf27f60b4ad2bb0d3",
+   "trtexec_gpu_ms": {
+    "min": 2.93164,
+    "max": 3.4834,
+    "mean": 2.97825,
+    "median": 2.98242
+   },
+   "python_infer_ms": {
+    "median": 4.377,
+    "n": 341
+   }
+  }
+ }
+}

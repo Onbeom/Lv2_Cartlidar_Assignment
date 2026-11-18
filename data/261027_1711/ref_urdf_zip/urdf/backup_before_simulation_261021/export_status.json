@@ -1,0 +1,27 @@
+{
+  "stage": "complete",
+  "native_motion_passed": true,
+  "source_document": "assembly (~recovered)",
+  "derived_archive": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\Waffle_URDF_Export_261021.f3d",
+  "bodies": 669,
+  "mass_g": 4891.194067546911,
+  "links": 14,
+  "joints": 13,
+  "root": "base_link",
+  "errors": [],
+  "warnings": [],
+  "axis_errors": [],
+  "package": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021",
+  "mimic_patched_files": [
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021\\urdf\\waffle_4wd.urdf",
+    "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\submit\\urdf\\waffle_4wd_description_261021\\urdf\\assemblies\\main.urdf.xacro"
+  ],
+  "scope": "CAD/visualization export candidate. Actual joint limits, convex collision, ROS runtime and hardware control not validated. Original assembly unchanged.",
+  "native_probe_normalization": "Actual Fusion-applied increment; original test raw data retained.",
+  "postprocessing": [
+    "Nonempty robot and file names",
+    "Finger mimic in both URDF and xacro",
+    "Engineering-reference inertials at full precision",
+    "Effort=0 until hardware limits are configured"
+  ]
+}

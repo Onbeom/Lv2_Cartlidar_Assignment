@@ -1,0 +1,27 @@
+{
+  "measured": {
+    "바퀴속도_위치차분_최대_rad_s": {
+      "Wheel_Revolute_Front_Left": 7.33109976124505,
+      "Wheel_Revolute_Front_Right": 7.330141217703342,
+      "Wheel_Revolute_Rear_Left": 7.331275617644194,
+      "Wheel_Revolute_Rear_Right": 7.329960817712745
+    },
+    "참고_보고속도_최대_rad_s": {
+      "Wheel_Revolute_Front_Left": 7.3319783,
+      "Wheel_Revolute_Front_Right": 7.3322253,
+      "Wheel_Revolute_Rear_Left": 7.334774,
+      "Wheel_Revolute_Rear_Right": 7.3364096
+    },
+    "physx_max_velocities_readback": {
+      "Wheel_Revolute_Front_Left": 7.330382823944092,
+      "Wheel_Revolute_Front_Right": 7.330382823944092,
+      "Wheel_Revolute_Rear_Left": 7.330382823944092,
+      "Wheel_Revolute_Rear_Right": 7.330382823944092
+    }
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "모든 스텝 |ω|(위치 차분) ≤ 7.4037 rad/s": true
+  },
+  "verdict": "성공"
+}

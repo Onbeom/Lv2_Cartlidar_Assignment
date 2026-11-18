@@ -1,0 +1,82 @@
+# perception_node 설정. ★ = 실물·현장에서 다시 확인할 값
+# 카메라 토픽: 실물은 realsense2_camera(camera_name 을 top_camera_front · top_camera_rear 로 실행)와 UVC 드라이버,
+#   시뮬레이션은 Isaac Sim 이 같은 이름으로 발행한다. frame_id 를 비우면 영상 header.frame_id 를 쓴다.
+#   realsense2_camera 의 컬러 header.frame_id 는 <camera_name>_color_optical_frame 이라 URDF(261022_2119) 이름과 같다.
+perception_node:
+  ros__parameters:
+    publish_rate: 15.0          # [Hz] 이 주기로 새 영상이 있는지 보고 결과를 낸다 (ARM_ALIGN 은 15 Hz 이상 필요)
+    frame_max_age_s: 0.3        # [s] 이보다 오래된 영상은 쓰지 않는다 (받는 쪽 300 ms 규칙과 같게)
+    image_qos: sensor_data      # sensor_data(best effort) | reliable. best effort 구독은 어느 발행자와도 연결된다
+    image_qos_depth: 2
+    cameras:
+      front:
+        color_topic: /top_camera_front/color/image_raw
+        depth_topic: /top_camera_front/aligned_depth_to_color/image_raw   # 컬러에 맞춘 깊이 (크기가 컬러와 같아야 함)
+        info_topic: /top_camera_front/color/camera_info
+        frame_id: ""            # 비우면 영상 header (top_camera_front_color_optical_frame)
+      rear:
+        color_topic: /top_camera_rear/color/image_raw
+        depth_topic: /top_camera_rear/aligned_depth_to_color/image_raw
+        info_topic: /top_camera_rear/color/camera_info
+        frame_id: ""
+      arm:
+        image_topic: /arm_camera/image_raw
+        info_topic: /arm_camera/camera_info     # 왜곡 보정·태그 자세에 쓴다. 없으면 보정 없이 태그 id 만
+        frame_id: ""            # 비우면 영상 header (URDF camera_optical_frame 으로 발행해야 함)
+    depth:
+      min_m: 0.15               # [m] 이보다 가까운 깊이는 버림
+      max_m: 4.0
+      window: 3                 # 깊이 중앙값 창 반폭 (7×7 px)
+      sync_tol_s: 0.02          # [s] 컬러와 깊이 stamp 차이 허용 (이전 모듈 2026-10-06 Pi 실측: D435 640x480 30 Hz, 미리보기 끔에서 짝 놓침 0.4 %)
+    arm:
+      detect_width: 640         # ARM_ALIGN 검출 해상도 (줄여서 15 Hz 확보, 오차는 정규화 값이라 해상도와 무관)
+    detector:
+      type: auto                # auto | tensorrt | color
+      engine_path: ""           # ★ TensorRT 엔진 (.engine). 비우면 색 검출기
+      score_threshold: 0.3      # 색 검출 점수 = 0.5·채움 + 0.5·가로세로비. 퍽 끝면(태그 때문에 채움 약 0.44)도 0.7 이상
+      nms_threshold: 0.45       # TensorRT(YOLOv8) 겹침 제거, YOLOv8 기본값
+      target_class: -1
+      target_color: any
+      min_area_ratio: 0.0004    # 화면 넓이 대비 최소 영역 (640×480 에서 약 120 px). D435 로 2 m 의 퍽 30 × 60 mm 가 약 9 × 18 px
+      blur_ksize: 3             # 2 m 의 퍽 폭 약 9 px 이라 큰 블러·열림 연산은 퍽을 지운다
+      morph_kernel: 3
+      min_fill_ratio: 0.35      # 끝면은 가운데 태그(흰 여백 포함 22.5 mm)가 30 mm 면의 56 % 를 가려 채움 약 0.44
+      hsv:                      # [H(0~179), S, V] ★ 현장 조명에서 다시 맞춤
+        # 근거(2026-10-23): 파란 퍽 실사진 3장(640×480) 퍽 화소 H 97~115 · S 1 % 값 82~87 · V 1 % 값 24~98.
+        #   현장 사진(휴대폰) 벽판 S 약 30, 카펫 S 37 이하 → S 하한 80 으로 뺀다. 파란 출력 기둥은 H 113 · S 87~190 으로
+        #   퍽 파랑과 겹친다(크기 · 선반 높이 · 태그로 거름). 빨강 · 초록은 실물 사진이 없어 가상 월드 색 기준이고,
+        #   합성 영상 어두움(0.625)에서 빛 반대쪽 면 V 약 54 → V 하한 35
+        red:   {lower: [0, 80, 35],    upper: [10, 255, 255]}
+        red2:  {lower: [170, 80, 35],  upper: [179, 255, 255]}
+        green: {lower: [40, 80, 35],   upper: [85, 255, 255]}
+        blue:  {lower: [95, 80, 25],   upper: [120, 255, 255]}
+    target:                     # 물체 하나만 따라가기
+      exclude_min: [-0.30, -0.25, -0.10]   # ★ base_link 기준 버리는 상자: 차체(0.445 × 0.306 m) + 여유, 앞 0.35 m 는 집게에 든 퍽 자리(가정)
+      exclude_max: [ 0.35,  0.25,  0.60]
+      min_confidence: 0.5
+      gate: 0.06                # [m] 고른 뒤 같은 물체로 보는 거리 (odom). 한 선반(0.2 m) 위 퍽 사이가 수 cm 라 퍽 폭 2개
+      lost_timeout: 1.0         # [s] 이만큼 안 보이면 다시 고름 (15 Hz 로 15 장)
+      size_min_m: 0.015         # 깊이로 본 짧은 변 하한 (퍽 30 mm 의 반, 일부 가림 허용. 0 = 끔)
+      size_max_m: 0.09          # 긴 변 상한 (퍽 60 mm, 누운 퍽 대각 67 mm + 여유)
+    tag:                        # 퍽 태그 (과제 자료 2026-10-23: tag36h11, 윗면 · 아랫면, 검은 사각형 16 mm)
+      family: tag36h11
+      size: 0.016               # 태그 한 변 [m] (검은 테두리 바깥)
+      ids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]   # 퍽 번호만. 같은 계열 장소 태그(12~14)를 퍽 크기로 계산하지 않게
+    puck:                       # 태그 → 퍽 (include/perception/puck_estimator.hpp). 퍽 30 × 30 × 60 mm
+      half_width: 0.015         # [m] 짧은 변 / 2 (원기둥 반지름)
+      half_length: 0.030        # [m] 긴 변 / 2
+      ring_in: 0.0125           # [m] 색을 보는 띠: 라벨 20 mm(태그 16 + 흰 여백, 반 0.010) 바깥 · 면(0.015) 안
+      ring_out: 0.0145
+      ring2_in: 0.016           # [m] 띠에 색이 없을 때(면 전체가 스티커) 한 번 더 보는 바깥 띠
+      ring2_out: 0.020
+      axis_probe: 0.022         # [m] 긴 축 확인 지점 (옆면 긴 축 방향은 면 안, 짧은 축 방향은 면 밖)
+      corner_probe: 0.0127      # [m] 끝면 모양 확인 지점(태그 축 성분, 대각 18 mm): 직육면체 면 안 · 원기둥 면 밖
+      min_votes: 6              # 색을 정할 최소 화소 수
+      merge_dist: 0.04          # [m] D435 퍽이 태그 퍽과 이보다 가까우면 같은 퍽으로 보고 뺀다
+    marker:                     # 장소 태그 L1~L3 (READ_MARKER). 과제 자료 2026-10-23: tag36h11 ID 12~14
+      family: tag36h11
+      size: 0.048               # ★ 검은 사각형 한 변 [m]. 인쇄물 축척이 틀려 다시 받을 예정, 그때까지 48 mm(사용자 결정)
+      ids: [12, 13, 14]         # 이 번호만 씀. 빼면 모든 번호 (빈 목록은 yaml 에서 타입을 알 수 없어 쓰지 않음)
+    frames:
+      base: base_link
+      odom: odom

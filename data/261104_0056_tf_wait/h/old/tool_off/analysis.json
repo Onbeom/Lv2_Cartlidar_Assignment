@@ -1,0 +1,13 @@
+{
+ "tool_img_tf_lag_ms": {
+  "median": 13.3,
+  "max": 20.0
+ },
+ "picks_last": null,
+ "new_results": 221,
+ "rate_hz": 14.73,
+ "latency_ms": {
+  "median": 37.4,
+  "p95": 38.8
+ }
+}

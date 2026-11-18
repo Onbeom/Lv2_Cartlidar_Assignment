@@ -1,0 +1,17 @@
+{
+  "pc_only_not_jetson": true,
+  "onnx": "/home/pa4/git/lv2_next_module/Cartlidar/sim_render/results/followup_261028_1457/improvement_261030_1325/yolo_export/yolo11n_task4_B.onnx",
+  "engine": "/home/pa4/git/lv2_next_module/261031_0100_trt/results/yolo11n_task4_B_fp32_notf32.engine",
+  "n_images": 203,
+  "same_classes_counts": 203,
+  "max_box_px": 0.000549000000006572,
+  "max_score": 2.5040000000142726e-06,
+  "raw_max_abs": 0.0061798095703125,
+  "detections_onnx": 375,
+  "criteria": {
+    "same_all": true,
+    "box_px_le": 0.5,
+    "score_le": 0.001
+  },
+  "pass": true
+}

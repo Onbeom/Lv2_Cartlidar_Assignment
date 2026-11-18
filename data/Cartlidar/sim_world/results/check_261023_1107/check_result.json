@@ -1,0 +1,797 @@
+{
+ "seeds": [
+  1,
+  2,
+  3
+ ],
+ "task": "A",
+ "W": {
+  "W1": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "2": {
+     "pass": true,
+     "_seed": 2,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    },
+    "3": {
+     "pass": true,
+     "_seed": 3,
+     "build_rc": 0,
+     "reopen_rc": 0,
+     "composition_errors": [],
+     "unresolved_assets": [],
+     "robot_composed": true
+    }
+   }
+  },
+  "W2": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "2": {
+     "pass": true,
+     "_seed": 2,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    },
+    "3": {
+     "pass": true,
+     "_seed": 3,
+     "maze_colliders": 133,
+     "center_y_negative": [],
+     "panels": 43,
+     "panels_expected": 43,
+     "posts": 45,
+     "posts_expected": 45,
+     "min_y": -0.029999999329447746,
+     "max_y": 3.181999999329448
+    }
+   }
+  },
+  "W3": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cuboid",
+       "cylinder",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_03",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_02",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_00",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_05",
+       "shelf": "shelf_2",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 5,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      }
+     ]
+    },
+    "2": {
+     "pass": true,
+     "_seed": 2,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cuboid",
+       "cylinder",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cuboid",
+       "cuboid",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_05",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 5,
+       "tags": 6
+      },
+      {
+       "name": "puck_03",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_02",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_00",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 0,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      }
+     ]
+    },
+    "3": {
+     "pass": true,
+     "_seed": 3,
+     "fails": [],
+     "per_color": {
+      "red": [
+       "cuboid",
+       "cuboid",
+       "cylinder",
+       "cylinder"
+      ],
+      "green": [
+       "cuboid",
+       "cylinder",
+       "cylinder",
+       "cylinder"
+      ],
+      "blue": [
+       "cuboid",
+       "cylinder",
+       "cylinder",
+       "cylinder"
+      ]
+     },
+     "tag_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+     ],
+     "max_abs_dz_mm": 0.0,
+     "pucks": [
+      {
+       "name": "puck_00",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 0,
+       "tags": 6
+      },
+      {
+       "name": "puck_10",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 10,
+       "tags": 6
+      },
+      {
+       "name": "puck_07",
+       "shelf": "shelf_0",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 7,
+       "tags": 6
+      },
+      {
+       "name": "puck_06",
+       "shelf": "shelf_0",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 6,
+       "tags": 6
+      },
+      {
+       "name": "puck_02",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cylinder",
+       "tag_id": 2,
+       "tags": 6
+      },
+      {
+       "name": "puck_11",
+       "shelf": "shelf_1",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cuboid",
+       "tag_id": 11,
+       "tags": 6
+      },
+      {
+       "name": "puck_04",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 4,
+       "tags": 6
+      },
+      {
+       "name": "puck_09",
+       "shelf": "shelf_1",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "green",
+       "shape": "cuboid",
+       "tag_id": 9,
+       "tags": 6
+      },
+      {
+       "name": "puck_03",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 3,
+       "tags": 6
+      },
+      {
+       "name": "puck_01",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "red",
+       "shape": "cylinder",
+       "tag_id": 1,
+       "tags": 6
+      },
+      {
+       "name": "puck_08",
+       "shelf": "shelf_2",
+       "dz_mm": -0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cuboid",
+       "tag_id": 8,
+       "tags": 6
+      },
+      {
+       "name": "puck_05",
+       "shelf": "shelf_2",
+       "dz_mm": 0.0,
+       "inside_top": true,
+       "color": "blue",
+       "shape": "cylinder",
+       "tag_id": 5,
+       "tags": 6
+      }
+     ]
+    }
+   }
+  },
+  "W4": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "pairs": [],
+     "closest": {
+      "link": "base_link",
+      "object": "/World/Maze/post_40/head",
+      "gap_linf_mm": 151.39
+     },
+     "robot_xy_hull_bounds": [
+      [
+       -0.5992,
+       2.5797
+      ],
+      [
+       -0.1451,
+       2.9765
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": -2.3595849605761248,
+      "RMX52_Shoulder": 0.7007710265960548,
+      "RMX52_Elbow": -0.8553080062247913,
+      "RMX52_Wrist_Pitch": -0.5295550019552884,
+      "RMX52_Wrist_Roll_Reversed": -1.684523025879259,
+      "gripper_left_joint": 0.022028999403119087
+     },
+     "yaw_deg": -35.41096878051758
+    },
+    "2": {
+     "pass": true,
+     "_seed": 2,
+     "pairs": [],
+     "closest": {
+      "link": "base_link",
+      "object": "/World/Maze/post_08/head",
+      "gap_linf_mm": 106.216
+     },
+     "robot_xy_hull_bounds": [
+      [
+       1.5681,
+       0.2446
+      ],
+      [
+       2.0658,
+       0.582
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": -2.865210061977479,
+      "RMX52_Shoulder": 1.1480779601307447,
+      "RMX52_Elbow": 0.2221939879109543,
+      "RMX52_Wrist_Pitch": 0.6490549682297516,
+      "RMX52_Wrist_Roll_Reversed": -1.9314830137683778,
+      "gripper_left_joint": 0.014368000440299511
+     },
+     "yaw_deg": 170.81344604492188
+    },
+    "3": {
+     "pass": true,
+     "_seed": 3,
+     "pairs": [],
+     "closest": {
+      "link": "gripper_left_link",
+      "object": "/World/Maze/panel_41",
+      "gap_linf_mm": 24.698
+     },
+     "robot_xy_hull_bounds": [
+      [
+       0.8721,
+       2.6038
+      ],
+      [
+       1.3932,
+       3.1258
+      ]
+     ],
+     "q": {
+      "RMX52_Base_Yaw": -1.0501920095262829,
+      "RMX52_Shoulder": -0.9083439938063651,
+      "RMX52_Elbow": 1.302351952601836,
+      "RMX52_Wrist_Pitch": -1.074900019171711,
+      "RMX52_Wrist_Roll_Reversed": -2.2175600443807983,
+      "gripper_left_joint": 0.007329000160098076
+     },
+     "yaw_deg": 4.535076141357422
+    }
+   }
+  },
+  "W6": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.100001,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.392,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    },
+    "2": {
+     "pass": true,
+     "_seed": 2,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.1,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.365,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    },
+    "3": {
+     "pass": true,
+     "_seed": 3,
+     "fails": [],
+     "values": {
+      "id": 10,
+      "size_m": 0.100001,
+      "square": 0.133334,
+      "center_z_m": 0.15,
+      "offset_from_panel_center_m": 0.002,
+      "inside_panel": true,
+      "faces_start_cell": 0.392,
+      "tape_count": 4,
+      "tape_outer_m": [
+       0.6,
+       0.6
+      ],
+      "tape_width_m": [
+       0.03,
+       0.03,
+       0.03,
+       0.03
+      ],
+      "tape_on_floor": [
+       -0.0,
+       0.001
+      ],
+      "tape_center_vs_cell_m": 0.0,
+      "tape_no_collision": [
+       false,
+       false,
+       false,
+       false
+      ],
+      "tape_wall_overlap": []
+     }
+    }
+   }
+  },
+  "W5": {
+   "pass": true,
+   "by_seed": {
+    "1": {
+     "pass": true,
+     "_seed": 1,
+     "build_rc": 0,
+     "identical": {
+      "task_world.usda": true,
+      "layout.json": true
+     }
+    }
+   }
+  }
+ },
+ "all_pass": true
+}

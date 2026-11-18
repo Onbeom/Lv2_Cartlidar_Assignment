@@ -1,0 +1,26 @@
+{
+ "P32": {
+  "engine": "/home/cart11/yolo_D/deploy/yolo11n_task4_D_fp32_notf32.engine",
+  "sha256": "dbbf4a0babfc569a9acd493eecee908ff303c54a2c7b1ac560b4cb81fb1a181a",
+  "trtexec_gpu_median_ms": 9.53906,
+  "images": 2164
+ },
+ "P16": {
+  "engine": "/home/cart11/fp16_check/results/yolo11n_task4_D_fp16.engine",
+  "sha256": "ef52e0a72173cb3cae81f48ce6573e51ad4e2798003a677eb848d8c3b956fbfb",
+  "trtexec_gpu_median_ms": 3.90527,
+  "images": 2164
+ },
+ "I8": {
+  "engine": "/home/cart11/fp16_check/int8/yolo11n_task4_D_int8_qdq.engine",
+  "sha256": "363ab1694ae460182ac15eb72a728c2fdd66b90c0d02e6ec5060faaf0ed2b9b5",
+  "trtexec_gpu_median_ms": 4.7251,
+  "images": 2164
+ },
+ "I8F16": {
+  "engine": "/home/cart11/precision_check/results/yolo11n_task4_D_int8_qdq_fp16.engine",
+  "sha256": "cd39d935299a8c6abd42a095f67424e45aab60c6342ce80e8affffef9f1b804e",
+  "trtexec_gpu_median_ms": 4.57227,
+  "images": 2164
+ }
+}

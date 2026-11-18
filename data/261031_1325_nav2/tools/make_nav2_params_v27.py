@@ -1,0 +1,339 @@
+"""설계 27: config/nav2_params_v21.yaml(설계 21~26 그대로 쓴 것)에서 바꾼 값만 적용해 config/nav2_params_v27.yaml 과 nav2_params_v27_changes.md 를 만든다.
+--variant v28: CHANGES 뒤에 V28(설계 27 실시간 불통과 뒤)을 더 적용해 nav2_params_v28.yaml 과 nav2_params_v28_changes.md 로 쓴다.
+--variant v29: V28 뒤에 V29(설계 28 불통과 뒤, 지역 제어기 MPPI → RPP)를 더 적용.
+--variant v30: V29 뒤에 V30(설계 29 불통과 뒤, 계획기 Hybrid → Lattice '직선 + 제자리 회전')을 더 적용.
+--variant v31: V30 뒤에 V31(설계 30 불통과 뒤, 제자리 회전 자리를 실제로 돌게)을 더 적용.
+--variant v38: v37 + V38(RPP 자체 충돌 검사 끔, 안전은 collision_monitor).
+--variant v39: v38 + V39(경로 끝 해석 연장 호 끔).
+--variant v40: v39 + V40(끝 방향 탐색 · RPP 곡률 주시점 연장).
+--variant v41: v40 + V41(곡률 주시 거리 0.3 → 0.15).
+--variant v42: v41 + V42(끊는 점 도착 허용 0.03 → 0.015 · 전역 팽창 기울기 6 → 3).
+--variant v43: v41 + V42 의 첫 값만(끊는 점 도착 허용 0.015, 팽창 기울기는 6 그대로).
+--variant v44: v43 + V44(Lattice 에 호 원시 동작 · 회전 벌점 20 — 사용자 2026-10-24 결정 '제자리 회전 최소화'로 되돌림).
+--variant v45: v44 + V45(구간 끝 허용 xy 0.015 → 0.03 · yaw 0.2 → 0.28).
+--variant v37: v36 + V37(BT 에서 경로 유효 검사 뺌).
+--variant v36: v35 의 지역 제어기를 RPP 로(V29 를 V30 앞에 넣음 — 설계 29 · 30 의 RPP 값 그대로).
+--variant v35: v34 + V35(설계 34 불통과 뒤: 목표 xy 허용 · Spin 끝 감속).
+--variant v34: v33 + V34(설계 33 불통과 뒤: 회전 멈춤 지나침 줄이기).
+--variant v33: v32 + V28(전역 라이다 층 뺌 — 설계 32 에서 라이다 층 깜빡임으로 경로 무효 · 1 s 마다 다시 계획 · Start occupied).
+--variant v32: V31 뒤에 V32(설계 31 불통과 뒤: 도착 방향 · 실패 뒤 다시 계획 · 회전 끝 정밀)를 더 적용(turn_floor 전진 앞먹임은 launch 인자).
+v21 은 고치지 않는다. 사용: python3 make_nav2_params_v27.py [--variant v27|v28|v29|v30|v31|v32|v33|v34|v35|v36|v37|v38|v39|v40|v41|v42|v43|v44|v45]"""
+import argparse
+import copy
+from pathlib import Path
+
+import yaml
+
+HERE = Path(__file__).resolve().parent.parent
+ap = argparse.ArgumentParser()
+ap.add_argument('--variant', default='v27', choices=['v27', 'v28', 'v29', 'v30', 'v31', 'v32', 'v33', 'v34', 'v35', 'v36', 'v37', 'v38', 'v39', 'v40', 'v41', 'v42', 'v43', 'v44', 'v45'])
+a = ap.parse_args()
+SRC = HERE / 'config' / 'nav2_params_v21.yaml'
+OUT = HERE / 'config' / f'nav2_params_{a.variant}.yaml'
+MD = HERE / 'config' / f'nav2_params_{a.variant}_changes.md'
+src = yaml.safe_load(SRC.read_text())
+
+P = 'planner_server.ros__parameters.GridBased'
+C = 'controller_server.ros__parameters'
+CORNER = '출발 모퉁이는 차체로 지날 수 있지만 오른쪽 약 270° + 전진 · 후진이 필요(tools/corner_feasibility.json, 병목 0.052 m)'
+CHANGES = [
+    (P, {'plugin': 'nav2_smac_planner::SmacPlannerHybrid'},
+     'NavFn 은 점 로봇이라 차체 모양 · 방향을 모르고 안쪽 모서리를 깎음(설계 21~26 같은 기둥에 막힘). Hybrid-A* 는 자세마다 footprint 를 검사. ' + CORNER),
+    (P + '.motion_model_for_search', 'REEDS_SHEPP', '전진 · 후진 둘 다 허용(모퉁이에서 후진 필요)'),
+    (P + '.minimum_turning_radius', 0.10, '스키드라 실제로는 제자리 회전도 되지만 Hybrid 는 반경 0 이 없음 → 작게. 시작 0.10, 모퉁이 못 찾으면 줄임'),
+    (P + '.angle_quantization_bins', 72, '5° 칸(corner_feasibility 의 회전 칸과 같게)'),
+    (P + '.reverse_penalty', 2.0, '필요할 때만 후진(라이다 뒤 시야는 있지만 앞 카메라 쪽 주행을 우선)'),
+    (P + '.change_penalty', 0.0, '기본값(방향 바꿈 벌점 없음)'),
+    (P + '.non_straight_penalty', 1.2, '기본값'),
+    (P + '.cost_penalty', 2.0, '기본값. costmap 비용을 피함 = 벽에서 떨어지게'),
+    (P + '.retrospective_penalty', 0.015, '기본값'),
+    (P + '.analytic_expansion_ratio', 3.5, '기본값'),
+    (P + '.analytic_expansion_max_length', 1.0, '좁은 미로에서 긴 해석 경로(Reeds-Shepp 한 번에 잇기)가 벽 옆을 지나지 않게 기본 3.0 보다 짧게'),
+    (P + '.analytic_expansion_max_cost', 200.0, '기본값'),
+    (P + '.analytic_expansion_max_cost_override', False, '기본값'),
+    (P + '.tolerance', 0.05, '목표가 막혔을 때 가장 가까운 자세 허용 거리. 도착 허용 0.06 m 안'),
+    (P + '.downsample_costmap', False, 'costmap 0.025 m 그대로(통로 여유가 수 cm)'),
+    (P + '.allow_unknown', False, '모르는 칸으로 계획하지 않음(NavFn 설정과 같음)'),
+    (P + '.max_iterations', 1000000, '기본값'),
+    (P + '.max_on_approach_iterations', 1000, '기본값'),
+    (P + '.max_planning_time', 5.0, '좁은 모퉁이 탐색 시간(기본 5.0)'),
+    (P + '.terminal_checking_interval', 5000, '기본값'),
+    (P + '.cache_obstacle_heuristic', False, '출발 자세가 목표마다 바뀌어 캐시 이득이 적음(기본값)'),
+    (P + '.lookup_table_size', 6.0, '기본 20 m 는 0.025 m 칸에서 시작 때 표 계산 26 s(도구 확인 TOOLCHECK_plan_v27 첫 시도) → 6 m(경기장 칸 단위 구간 길이). 표 밖은 장애물 휴리스틱만'),
+    (P + '.smooth_path', True, 'Smac 내장 다듬기(후진 끊는 점은 유지)'),
+    (P + '.debug_visualizations', False, '기본값'),
+    (P + '.use_quadratic_cost_penalty', False, '기본값'),
+    (P + '.downsample_obstacle_heuristic', True, '기본값'),
+    (P + '.coarse_search_resolution', 1, '좁은 곳에서 자세를 건너뛰지 않음'),
+    ('global_costmap.global_costmap.ros__parameters.footprint_padding', 0.04,
+     'Smac 은 footprint 가 치명 칸에 닿는지만 봄 → 여백 없이는 경로 최소 여유 0.004~0.045 m(cost_penalty 2~8 · 회전 반경 0.05 바꿔도 같음). '
+     '전역 costmap 에만 여백을 줘 계획 경로가 벽에서 떨어지게(도구 확인 TOOLCHECK_plan_v27_variants: 0.02 → 최소 0.018, 0.03 → 0.023, 0.04 → 0.034~0.070 m, 7 구간 모두 경로 있음). '
+     '지역 costmap · MPPI · 충돌 감시는 여백 없음(실제 차체 그대로)'),
+    (C + '.PathHandler.enforce_path_inversion', True, '후진 구간이 있는 경로를 끊는 점마다 잘라서 따름(MPPI 가 앞 · 뒤 구간을 한꺼번에 보고 지름길로 깎지 않게)'),
+    (C + '.PathHandler.inversion_xy_tolerance', 0.06, '끊는 점 도착 허용. 기본 0.2 는 모퉁이 여유(0.05 m)보다 커서 미리 다음 구간으로 넘어감 → 도착 허용 0.06 과 같게'),
+    (C + '.PathHandler.inversion_yaw_tolerance', 0.3, '같은 이유로 기본 0.4 보다 좁게'),
+    (C + '.FollowPath.use_path_orientations', True,
+     'RotationShim 이 경로 앞점 방향(후진 구간이면 뒤쪽)으로 제자리 회전하지 않고 Smac 경로 자세 방향을 씀 → 후진 구간과 싸우지 않음. '
+     'Shim 을 빼는 것보다 단순(도착 방향 회전 rotate_to_goal_heading 은 그대로 씀)'),
+]
+V28 = [
+    ('global_costmap.global_costmap.ros__parameters.plugins', ['static_layer', 'objects_layer', 'inflation_layer'],
+     '설계 27(live_nav_v27): 라이다 장애물 층이 벽 · 기둥 점을 스캔마다 조금씩 다르게 찍어, 여백 경계에 붙은 Smac 경로가 계속 무효(Path validation failed, 로봇이 서 있어도) '
+     '→ 약 0.7 s 마다 다시 계획 → 끊는 점 · 앞 방향이 바뀌어 RotationShim 이 좌우로 제자리 회전만 반복. 전역은 정적 지도(SLAM 벽 + 도면 벽 · 기둥 · 물체, 일치 검사 통과)만 써서 '
+     '목표마다 한 번 계획한 경로를 유지. 움직이는 장애물은 지역 costmap(라이다) · MPPI · 충돌 감시가 그대로 봄. 도구 확인 plan_only 는 처음부터 이 구성'),
+]
+RPP = {
+    'plugin': 'nav2_regulated_pure_pursuit_controller::RegulatedPurePursuitController',
+    'desired_linear_vel': 0.12, 'max_linear_vel': 0.2, 'min_linear_vel': -0.1, 'max_angular_vel': 0.8,
+    'max_linear_accel': 0.5, 'max_linear_decel': 0.5, 'max_angular_accel': 1.5, 'max_angular_decel': 1.5,
+    'lookahead_dist': 0.2, 'min_lookahead_dist': 0.15, 'max_lookahead_dist': 0.4, 'lookahead_time': 1.5,
+    'use_velocity_scaled_lookahead_dist': False, 'use_fixed_curvature_lookahead': False, 'curvature_lookahead_dist': 0.3,
+    'min_approach_linear_velocity': 0.04, 'approach_velocity_scaling_dist': 0.3,
+    'use_regulated_linear_velocity_scaling': True, 'regulated_linear_scaling_min_radius': 0.4, 'regulated_linear_scaling_min_speed': 0.04,
+    'use_cost_regulated_linear_velocity_scaling': False,
+    'use_collision_detection': True, 'max_allowed_time_to_collision_up_to_carrot': 1.0, 'allow_obstacle_checking_beyond_goal': False,
+    'allow_reversing': True, 'use_rotate_to_heading': False, 'interpolate_curvature_after_goal': False, 'use_cancel_deceleration': False,
+}
+V29 = [
+    (C + '.FollowPath.primary_controller', RPP,
+     '설계 28(live_nav_v28): 경로는 안정됐는데(다시 계획 줄어듦) MPPI 가 끊는 점이 있는 Smac 경로를 따르지 않고 출발 방 서남쪽으로 0.4 m 들어가 멈춤(진행 실패). '
+     '전역 경로가 이미 차체 모양 · 여백 0.04 로 검사됐으므로 경로를 그대로 따르는 RPP 로 바꿈: allow_reversing(후진 구간을 뒤로), 전방 주시 0.15~0.4 m(회전 반경 0.10 경로), '
+     '곡률이 크면 속도를 0.04 까지 줄임(반경 0.4 기준), 충돌 검사는 지역 costmap footprint 로 1 s 앞까지. 속도 한계는 MPPI 와 같음(0.2 / −0.1 / 0.8). '
+     'use_rotate_to_heading 은 allow_reversing 과 함께 못 쓰므로 끄고, 제자리 회전(처음 방향 · 도착 방향)은 바깥 RotationShim 이 그대로 함'),
+]
+LATTICE = str(HERE / 'config' / 'lattice_straight_rot_0025.json')
+V30 = [
+    (P, {'plugin': 'nav2_smac_planner::SmacPlannerLattice'},
+     '설계 29(live_nav_v29): RPP 가 반경 0.10 호 경로를 따르다 통로 입구에서 30° 비스듬히 들어가 \'collision ahead\' 42회로 멈춤. '
+     'Isaac 4륜 스키드는 전진하며 도는 호를 정확히 못 따름(실제 회전 53~75 %, 0.35 미만 회전은 거의 안 돎). 차체가 잘하는 직선 + 회전 중심 제자리 회전만으로 경로를 만듦'),
+    (P + '.lattice_filepath', LATTICE, 'tools/make_lattice_straight_rot.py 로 만든 0.025 m 칸 원시 동작(16 방향, 직선 짧은 것 · 약 0.1 m, 이웃 방향 제자리 회전 5° 간격 자세)'),
+    (P + '.allow_reverse_expansion', True, '후진 직선 허용(좁은 곳 앞뒤 끊기)'),
+    (P + '.reverse_penalty', 2.0, 'v27 과 같음'),
+    (P + '.rotation_penalty', 5.0, '기본값(제자리 회전을 필요할 때만)'),
+    (P + '.change_penalty', 0.0, '기본값'),
+    (P + '.non_straight_penalty', 1.05, '기본값'),
+    (P + '.cost_penalty', 2.0, 'v27 과 같음'),
+    (P + '.retrospective_penalty', 0.015, '기본값'),
+    (P + '.analytic_expansion_ratio', 3.5, '기본값'),
+    (P + '.analytic_expansion_max_length', 0.05, '해석 연장은 호(반경 0.1)라 목표 바로 앞 0.05 m 안에서만 허용'),
+    (P + '.analytic_expansion_max_cost', 200.0, '기본값'),
+    (P + '.analytic_expansion_max_cost_override', False, '기본값'),
+    (P + '.tolerance', 0.05, 'v27 과 같음'),
+    (P + '.allow_unknown', False, 'v27 과 같음'),
+    (P + '.max_iterations', 1000000, '기본값'),
+    (P + '.max_on_approach_iterations', 1000, '기본값'),
+    (P + '.max_planning_time', 5.0, 'v27 과 같음'),
+    (P + '.terminal_checking_interval', 5000, '기본값'),
+    (P + '.cache_obstacle_heuristic', False, 'v27 과 같음'),
+    (P + '.lookup_table_size', 6.0, 'v27 과 같음(시작 시간)'),
+    (P + '.smooth_path', False, '다듬기는 제자리 회전 자리를 호로 바꿔 버림 → 끔'),
+    (P + '.debug_visualizations', False, '기본값'),
+    (P + '.use_quadratic_cost_penalty', False, '기본값'),
+    (P + '.downsample_obstacle_heuristic', True, '기본값'),
+    (P + '.coarse_search_resolution', 1, 'v27 과 같음'),
+    (C + '.PathHandler.enforce_path_rotation', True, '경로 안의 제자리 회전 자리에서 경로를 끊어, 다음 구간 시작에서 RotationShim 이 제자리로 돌게'),
+    (C + '.PathHandler.minimum_rotation_angle', 0.25, '원시 동작 한 칸 회전(18.4~26.6°)도 끊게 기본 0.785 보다 작게'),
+    (C + '.FollowPath.angular_dist_threshold', 0.25, '같은 이유로 Shim 이 0.25 rad 넘게 틀어진 구간 시작에서 제자리 회전(기본 0.785)'),
+    (C + '.FollowPath.primary_controller.desired_linear_vel', None, '이 버전에서 폐기 예정(경고) → max_linear_vel 로'),
+    (C + '.FollowPath.primary_controller.max_linear_vel', 0.12, 'v29 의 목표 속도 0.12 를 이 이름으로(실제로 0.12 로 달렸음)'),
+]
+
+LATTICE31 = str(HERE / 'config' / 'lattice_straight_rot_0025_nomid.json')
+V31 = [
+    (P + '.lattice_filepath', LATTICE31,
+     '설계 30(live_nav_v30): 출발 자리의 작은 제자리 회전을 Shim 이 하지 않고 RPP 가 호로 돎. 설치된 nav2_util::findFirstPathConstraint 를 v30 경로에 그대로 불러 보니'
+     '(test/probe_constraint, 판정 아님) 누적 회전이 0.25 rad 를 넘는 자세(회전 도중 약 14°)에서 끊어, 끊은 자세가 처음 방향과 13° 차이 → 허용 0.3 rad 안이라 회전 없이 다음 구간으로 넘어감. '
+     '중간 자세를 뺀 원시 동작(make_lattice_straight_rot.py --no_rot_mid)으로 회전 한 번 = 한 단계(18.4~26.6°)가 되어 회전 끝 자세에서 끊김. 회전 중 쓸림은 전역 여백 0.04 가 덮음'
+     '(바깥 모서리 반지름 0.382 m, 26.6° 회전의 끝 자세 밖 쓸림 ≈ 0.382 × (1 − cos 13.3°) = 0.010 m) — plan_only 쓸림 여유로 확인'),
+    (C + '.PathHandler.inversion_xy_tolerance', 0.03,
+     '끊는 점(회전 직전 자세)에서 0.06 m 앞에서 넘어가면 그만큼 일찍 돌아 좁은 곳(쓸림 여유 0.023~0.05 m)에서 벽 쪽으로 감. RPP 는 끝 0.3 m 에서 0.04 m/s 로 줄여 20 Hz 에 2 mm 씩 다가가므로 0.03 이면 닿음'),
+    (C + '.PathHandler.inversion_yaw_tolerance', 0.15,
+     '회전 자리 도착 허용을 가장 작은 회전(18.4° = 0.32 rad)보다 작게, Shim 해제 문턱(0.1)보다 크게 → 회전을 실제로 한 뒤에만 다음 구간'),
+    (C + '.FollowPath.forward_sampling_distance', 0.03,
+     'Shim 은 경로 첫 자세에서 이 거리 이상 떨어진 첫 자세의 방향을 봄. 0.5 면 0.1~0.3 m 짧은 직선 구간에서 끝(회전한) 자세를 미리 보고 직선 전에 돌아 버림 → 자세 간격(0.025)보다 조금 크게'),
+]
+
+BT32 = str(HERE / 'config' / 'bt' / 'navigate_to_pose_replan_after_failure.xml')
+V32 = [
+    (P + '.max_on_approach_iterations', 100000,
+     '설계 31: 허용(0.05 m) 안 노드가 나온 뒤 1000 번만 더 찾고 못 찾으면 방향 상관없이 가장 가까운 노드로 끝냄 → 경로 끝 방향이 목표와 최대 120° 다름(start_box_1 2.786 → 1.571), '
+     '제어기는 경로 끝을 목표로 봐서 그 방향에서 SUCCEEDED(G2 yaw 1.19 rad). 정확한 목표 칸 · 방향 칸까지 찾게 크게'),
+    ('bt_navigator.ros__parameters.default_nav_to_pose_bt_xml', BT32,
+     '설계 31: FollowPath 실패 뒤 원본 BT 가 옛 경로를 다시 보내 경로 처리기가 첫 구간(지나온 출발 쪽)부터 시작 → \'Resulting plan has 0 poses\'. 실패 · 복구 뒤 현재 자리에서 다시 계획하는 사본(config/bt/)'),
+    (P + '.analytic_expansion_max_length', 0.15,
+     '정확한 목표 xy 로 끝내기: 0.05 면 허용 안 칸 노드에서 끝나 목표와 0.004~0.015 m 다름. 0.15 면 7 구간 모두 xy 0.000, 끝 호 0.004~0.043 m(도구 확인 TOOLCHECK_plan_v32_a15, 0.30 은 호 0.04~0.10 m 로 길어짐). '
+     '방향은 목표 칸 방향(16 방향)으로 끝나므로 남은 방향은 도착 뒤 Spin(run_goals --final_spin_tol)'),
+    (P + '.max_planning_time', 10.0, '마지막 긴 구간(6.5 m)은 계획 7.3~7.8 s → 5 s 에서 끊겨 끝 방향이 45° 틀렸음(TOOLCHECK_plan_v32)'),
+    (C + '.PathHandler.inversion_yaw_tolerance', 0.2,
+     '다시 계획한 경로의 첫 자세 방향은 로봇 방향에 가장 가까운 칸(16 방향, 최대 11.25° = 0.196 rad 차이) → 첫 구간이 제자리 회전이면 허용 안에 들어야 넘어감. '
+     '가장 작은 회전 0.32 rad 보다는 작게(회전을 건너뛰지 않게)'),
+    (C + '.FollowPath.angular_disengage_threshold', 0.05,
+     '설계 31 start_box_3: 63 → 90° 회전이 78° 에서 끝남(해제 0.1 rad + 추정 방향이 회전 중 참보다 앞섬). 전진 중 작은 회전은 거의 안 들어 남은 오차가 옆 벗어남(0.18 m)이 됨 → 더 맞추고 끝냄'),
+]
+
+VS = 'velocity_smoother.ros__parameters'
+V34 = [
+    (VS + '.max_accel', [0.5, 0.0, 3.2], '각가속 1.5 → 3.2(behavior_server rotational_acc_lim 과 같게). 선속도는 그대로'),
+    (VS + '.max_decel', [-0.5, 0.0, -3.2],
+     '설계 33(live_nav_v33): 도착 뒤 Spin 이 0.8 rad/s 로 돌다 멈출 때 smoother 각감속 1.5 로 묶여 0.8²/(2·1.5) = 0.21 rad 더 돎(L3 관찰 0.216 rad 넘어감, '
+     'yaw 오차 0.22 → 반대쪽 0.23). Spin 자체 감속 곡선(3.2)을 따르게'),
+    ('behavior_server.ros__parameters.max_rotational_vel', 0.5,
+     'Spin(도착 뒤 방향 맞춤 · 복구 회전) 최대 0.8 → 0.5. 멈춤 거리 0.5²/(2·3.2) = 0.04 rad, 측정 곡선에서 명령 0.5 ≈ 실제 0.3'),
+]
+
+V35 = [
+    (C + '.general_goal_checker.xy_goal_tolerance', 0.025,
+     '설계 34(live_nav_v34): 도착 위치 오차가 모든 목표에서 0.049~0.068 m(허용 0.06 경계에 들어서자 멈춤). 좁은 L3 칸에서는 0.05 m 덜 간 자리에서 '
+     '여백 0.04 footprint 가 점유 → 다음 구간 \'Start occupied\'. 경로 끝은 목표 xy 와 같으므로(해석 연장 0.15) 더 가까이'),
+    ('behavior_server.ros__parameters.min_rotational_vel', 0.19,
+     '설계 34: 도착 뒤 Spin 이 0.104 → −0.087 → 0.092 처럼 매번 약 0.09 rad 지나침. 최소 0.35 로 끝까지 돌다 멈춤 + 차체 · 추정 지연. '
+     'turn_floor 제자리 바닥(turn_floor_w_min 0.19, turn_ff 로 실제 0.19)과 같게'),
+    ('behavior_server.ros__parameters.rotational_acc_lim', 1.0,
+     'Spin 감속 곡선 √(2·a·남은 각): 3.2 면 남은 0.04 rad 까지 최대 속도 → 1.0 이면 남은 0.1 rad 에서 0.45, 0.02 에서 0.2 로 미리 줄임. smoother 각감속 3.2 보다 작아 그대로 따라감'),
+]
+
+V37 = [
+    ('bt_navigator.ros__parameters.default_nav_to_pose_bt_xml', str(HERE / 'config' / 'bt' / 'navigate_to_pose_replan_only_after_failure.xml'),
+     '설계 36(live_nav_v36): 전역 costmap 이 정적 지도뿐인데 ValidatePath 가 Smac 경로를 1 s 마다 무효로 봐 다시 계획 반복 → 좁은 L3 칸에서 앞뒤로 떨다 \'Start occupied\'. '
+     '유효 검사를 뺀 BT 사본(목표 바뀜 · 실패 뒤 · 복구 뒤만 다시 계획)'),
+]
+
+V38 = [
+    (C + '.FollowPath.primary_controller.use_collision_detection', False,
+     '설계 37(live_nav_v37): 좁은 L3 칸(실제 여유 0.036~0.08 m)에서 RPP \'collision ahead\' 7 번씩 → \'Controller patience exceeded\' 두 번(설계 36 은 같은 RPP 로 지남 = 경계선). '
+     'RPP 검사는 지역 costmap(0.025 m 칸, 라이다 점)에 실제 차체를 대 보므로 여유 0.04 m 쯤이면 칸 반올림으로 닿음이 될 수 있음(추정). 경로는 이미 여백 0.04 로 검사됐고, '
+     '움직이는 장애물 안전은 바깥 collision_monitor(실제 차체 · 라이다 점 · 1.2 s 앞 접근 감속)가 맡음'),
+]
+
+V39 = [
+    ('planner_server.ros__parameters.GridBased.analytic_expansion_max_length', 0.01,
+     '설계 38(live_nav_v38): L3 마지막 구간 = 후진 0.07 m + 해석 연장 후진 호(0.04 m 에 0.94 rad, Reeds-Shepp 반경 0.1). 구간이 RPP 전방 주시(최소 0.15 m)보다 짧아 '
+     '끝점을 바로 겨눠 후진하며 0.48 rad/s 로 돌다 벽에 1 mm 닿음(G3). 해석 연장은 거리 √2 칸(0.035 m) 미만이면 시도하지 않으므로(analytic_expansion_impl.hpp) '
+     '0.01 이면 꺼짐 → 경로가 원시 동작(직선 + 제자리 회전)만으로 목표 칸 · 방향 칸에서 끝남. 남은 xy(≤ 칸 반 대각 0.018 m) · 방향은 목표 실행기 Spin'),
+]
+
+G = 'planner_server.ros__parameters.GridBased'
+V40 = [
+    (G + '.max_on_approach_iterations', 1000000,
+     '설계 39(live_nav_v39): 해석 연장을 끈 뒤 마지막 \'start\' 경로가 목표 방향 π 대신 −2.357 에서 끝남(허용 안 노드 뒤 100000 번 안에 정확한 방향 칸을 못 찾음, '
+     '회전 벌점 5.0) → 남은 0.785 rad 를 도착 뒤 Spin 이 맡다 \'Collision Ahead\' 로 3 번 멈춰 G2 yaw 0.596. 도구 확인 TOOLCHECK_plan_v39_approach1e6: 1000000 이면 −3.142 로 끝남(8.9 s)'),
+    (G + '.max_iterations', 5000000, '위 탐색 횟수가 전체 한도(1000000)에 먼저 걸리지 않게'),
+    (G + '.max_planning_time', 15.0, '마지막 구간 6.8 m 계획 8.9 s(도구 확인) — 10 s 한도에 가까워 여유'),
+    (C + '.FollowPath.primary_controller.use_fixed_curvature_lookahead', True,
+     '설계 39: L3 칸 0.07 m 후진 구간에서 전방 주시(최소 0.15 m)가 구간 끝에 붙어 곡률 2y/L² 이 부풀어 후진 −0.04 · 회전 0.72~0.8 rad/s 로 쓸려 벽 1 mm(G3, 설계 38 과 같은 자리). '
+     '곡률은 고정 거리 curvature_lookahead_dist(0.3 m) 주시점으로 계산'),
+    (C + '.FollowPath.primary_controller.interpolate_curvature_after_goal', True,
+     '구간 끝까지 0.3 m 가 안 남으면 곡률 주시점을 끝 두 자세의 직선 연장 위에 둠(옆 벗어남 y 에 곡률 2y/0.09 — y 0.01 m 면 w 0.009 rad/s). 끊어 따르는 짧은 구간 끝에서 곡률이 부풀지 않게'),
+]
+
+V41 = [
+    (C + '.FollowPath.primary_controller.curvature_lookahead_dist', 0.15,
+     '설계 40 반복 1(live_nav_v40_occfix_r1): L3 칸에서 회전 뒤 회전 중심이 0.09 m 후진 구간 선에서 옆으로 0.031 m → 곡률 2y/L² (L 0.3) 이 작아 '
+     '회전 w ≈ 0.03 rad/s 로 옆 오차를 못 고쳐 구간 끝 허용 0.03 에 못 들고 앞뒤로 떨다 진행 실패. 0.15(전방 주시 최소와 같게)면 y 0.03 에 w ≈ 0.11, '
+     '설계 38 · 39 처럼 주시점이 0.05 m 까지 붙어 0.5~0.8 rad/s 로 도는 일은 없음(구간 끝 너머 연장은 그대로)'),
+]
+
+V42 = [
+    (C + '.PathHandler.inversion_xy_tolerance', 0.015,
+     '설계 41 반복 1(live_nav_v41_s1) · 설계 40 반복 1(live_nav_v40_occfix_r1): Shim 제자리 회전이 경로의 회전 자리보다 진행 방향으로 중앙 0.022 · 최대 0.029~0.050 m 앞에서 시작'
+     '(참값 회전 중심과 가장 가까운 회전 자리, 76 번, 판정 아님) — 끊는 점 허용 0.03 에 들어서자마자 끊기 때문. L1 칸은 계획 쓸림 여유 0.0103 m 라 덜 간 자리에서 돌면 '
+     'Shim 회전 충돌 검사가 실패하고, 그 주기는 RPP(자체 충돌 검사 끔, V38) 명령(전진 0.04)이 나가 벽에 닿음(v41_s1 125~128 s: Shim 0.014 → 0.054 → 0.096 과 RPP 가 번갈아 나옴, '
+     'Nav2 RotationShim 은 회전 충돌이면 그 주기를 주 제어기로 넘김). RPP 는 구간 끝 0.3 m 안에서 0.04 m/s(20 Hz 에 2 mm)라 0.015 안까지 감. 옆 오차는 곡률 주시 0.15(V41)로 고침'),
+    ('global_costmap.global_costmap.ros__parameters.inflation_layer.cost_scaling_factor', 3.0,
+     '전역 costmap 팽창 비용을 벽에서 더 멀리까지 높게(6 → 3) → Smac 비용 벌점으로 열린 구간 경로가 벽에서 떨어짐. 도구 확인 TOOLCHECK_plan_v42_cs3(판정 아님): '
+     'L1 → L2 쓸림 여유 0.0089 → 0.058 m, 출발 · L2 → start_box_3 · start 구간도 0.039~0.049 → 0.049~0.055, 좁은 칸(L1_via → L1 0.0103 · L3 0.0268)은 그대로(칸에 다른 길 없음). '
+     '길이는 최대 6.81 m · 계획 8.8 s(한도 15 s). cost_penalty 5 · 10 은 거의 그대로(TOOLCHECK_plan_v42_cp5 · cp10). 지역 costmap 은 그대로'),
+]
+
+V43 = [V42[0]]   # 설계 42(live_nav_v42_s20261101) 출발 모퉁이 실패: 팽창 기울기 3 이 회전 자리 사이 0.010 m 후진 구간을 새로 만듦(test/short_segments.py) → 기울기는 되돌림
+
+V44 = [
+    (P + '.lattice_filepath', str(HERE / 'config' / 'lattice_straight_rot_arc25_0025.json'),
+     '사용자 결정(2026-10-24 · 2026-11-02 다시 확인): 제자리 회전 최소화가 기본, 모퉁이는 호 회전. 설계 30~43 은 직선 + 제자리 회전만이라 7 구간 제자리 회전 90 번 · 2033°(TOOLCHECK_plan_v43, test/path_stats.py), '
+     '좁은 L1 칸 제자리 회전이 남은 실패의 공통 원인(설계 40 r1 · 41 s1 · 43 s1: Shim 회전이 충돌 검사로 막혀 RPP 앞뒤 떨림). '
+     '원시 동작에 방향 ±1 · ±2 칸 호(반지름 0.25~0.34 m, 직선 + 호, make_lattice_straight_rot.py --no_rot_mid --arc_r_min 0.25 --arc_r_max 0.6)를 더함. '
+     '반지름 근거: TOOLCHECK_turn_moving 정상 상태 호 = 0.08~0.12 m/s 에서 base 반지름 0.23~0.32 m(명령 w 0.6~0.8). 설계 29 의 호 실패는 반지름 0.10 · 전진 앞먹임(move_ff) 없음'),
+    (P + '.rotation_penalty', 20.0,
+     '도구 확인 TOOLCHECK_plan_v44_rp{5,20,50}(판정 아님): 벌점 5 = 제자리 회전 19 번 432° · 최소 쓸림 0.0164, 20 = 4 번 90° · 0.0331(L1 구간 0.0103 → 0.0341, 출발 모퉁이 · L1 칸 제자리 회전 0), '
+     '50 = 4 번 90° · 0.0164. 7 구간 모두 경로 · 겹침 0 · 짧은 이동 구간 0'),
+]
+
+V45 = [
+    (C + '.PathHandler.inversion_xy_tolerance', 0.03,
+     '설계 44(live_nav_v44_s20261101): L1 칸 전진 ↔ 후진 끊는 점에서 앞뒤 오차 0 · 옆 0.016~0.021 m · 방향 0.196~0.215 rad 로 서서 구간이 안 넘어가고 RPP 가 ±0.04 m/s 앞뒤로 떨다 진행 실패(10 s). '
+     '호 추종은 끝점에 옆 1~2 cm 가 남고 앞뒤 오차가 0 이면 RPP 가 옆을 못 고침. 0.015 는 제자리 회전 시작 자리를 맞추려던 값(설계 42 · 43)인데 설계 44 는 좁은 칸 제자리 회전이 없음(경로 4 번 · 90°) → 설계 40 까지의 0.03'),
+    (C + '.PathHandler.inversion_yaw_tolerance', 0.28,
+     '같은 자리 방향 차 0.20 이 허용 0.2 경계. 가장 작은 제자리 회전 한 칸(18.4° = 0.321 rad)보다 작게 두어 회전을 건너뛰지 않음(V32 이유 그대로)'),
+]
+
+
+def put(d, path, value):
+    keys = path.split('.')
+    for k in keys[:-1]:
+        d = d.setdefault(k, {})
+    if isinstance(value, dict) and keys[-1] in d and isinstance(d[keys[-1]], dict) and 'plugin' in value:
+        d[keys[-1]] = dict(value)       # 플러그인 교체: 옛 플러그인 매개변수(NavFn use_astar, MPPI 비평가 등)는 지움
+    elif value is None:
+        d.pop(keys[-1], None)
+    else:
+        d[keys[-1]] = value
+
+
+def get(d, path):
+    for k in path.split('.'):
+        if not isinstance(d, dict) or k not in d:
+            return '(없음)'
+        d = d[k]
+    return d
+
+
+out = copy.deepcopy(src)
+rows = []
+# 판마다 적용 묶음(명시). v31 은 실행한 그대로 — 조건 실수로 V28(전역 라이다 층 뺌) · V29(RPP)가 빠졌음(MPPI · 전역 라이다 층 있음, 2026-11-01 발견).
+# v32 는 실제로 시험한 v31 구성 위에 V32.
+CHAINS = {'v27': [], 'v28': [V28], 'v29': [V28, V29], 'v30': [V28, V29, V30], 'v31': [V30, V31], 'v32': [V30, V31, V32], 'v33': [V28, V30, V31, V32], 'v34': [V28, V30, V31, V32, V34], 'v35': [V28, V30, V31, V32, V34, V35],
+          'v36': [V28, V29, V30, V31, V32, V34, V35], 'v37': [V28, V29, V30, V31, V32, V34, V35, V37],
+          'v38': [V28, V29, V30, V31, V32, V34, V35, V37, V38], 'v39': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39],
+          'v40': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40],
+          'v41': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40, V41],
+          'v42': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40, V41, V42],
+          'v43': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40, V41, V43],
+          'v44': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40, V41, V43, V44],
+          'v45': [V28, V29, V30, V31, V32, V34, V35, V37, V38, V39, V40, V41, V43, V44, V45]}
+for path, value, why in CHANGES + [c for grp in CHAINS[a.variant] for c in grp]:
+    before = get(src, path)
+    put(out, path, value)
+    shown = value['plugin'] if isinstance(value, dict) else value
+    bshown = before.get('plugin', before) if isinstance(before, dict) else before
+    rows.append(f'| `{path}` | {bshown} | {shown} | {why} |')
+
+
+class Dumper(yaml.SafeDumper):
+    def ignore_aliases(self, data):   # ROS params 파서는 YAML 별칭(&, *)을 못 읽음
+        return True
+
+
+OUT.write_text('# 생성 파일(tools/make_nav2_params_v27.py) — 직접 고치지 말고 그 스크립트를 고친 뒤 다시 만든다. 기본 = nav2_params_v21.yaml\n'
+               + yaml.dump(out, Dumper=Dumper, allow_unicode=True, sort_keys=False))
+MD.write_text(f'# 설계 {a.variant[1:]} = v21 에서 바꾼 값(설계 27 = 설계 26 불통과 뒤, 설계 28 = 설계 27 + 전역 라이다 층 뺌, 설계 29 = 설계 28 + RPP, 설계 30 = 설계 29 + Lattice 직선 · 제자리 회전, '
+              + ('설계 31 = 설계 27 + V30 + V31 — 생성 조건 실수로 V28 · V29 빠짐, 실행된 그대로: MPPI · 전역 라이다 층 있음 · 회전 자리에서 실제로 돌기, ' if a.variant in ('v31', 'v32', 'v33') else '')
+              + ('설계 32 = 설계 31 + 도착 방향 · 실패 뒤 다시 계획 · 회전 끝 정밀, ' if a.variant in ('v32', 'v33') else '')
+              + ('설계 33 = 설계 32 + V28(전역 라이다 층 뺌), ' if a.variant in ('v33', 'v34') else '')
+              + ('설계 34 = 설계 33 + 회전 멈춤 지나침 줄이기(smoother 각감속 · Spin 최대), ' if a.variant in ('v34', 'v35') else '')
+              + ('설계 35 = 설계 34 + 목표 xy 허용 0.025 · Spin 끝 감속, ' if a.variant in ('v35', 'v36') else '')
+              + ('설계 36 = 설계 35 + 지역 제어기 MPPI → RPP(V29), ' if a.variant in ('v36', 'v37') else '')
+              + ('설계 37 = 설계 36 + BT 경로 유효 검사 뺌, ' if a.variant in ('v37', 'v38') else '')
+              + ('설계 38 = 설계 37 + RPP 자체 충돌 검사 끔(안전은 collision_monitor), ' if a.variant in ('v38', 'v39', 'v40', 'v41', 'v42', 'v43', 'v44', 'v45') else '')
+              + ('설계 39 = 설계 38 + 경로 끝 해석 연장 호 끔, ' if a.variant in ('v39', 'v40', 'v41', 'v42', 'v43', 'v44', 'v45') else '')
+              + ('설계 40 = 설계 39 + 끝 방향 탐색 · RPP 곡률 주시점 연장, ' if a.variant in ('v40', 'v41', 'v42', 'v43', 'v44', 'v45') else '')
+              + ('설계 41 = 설계 40 + 곡률 주시 거리 0.15, ' if a.variant in ('v41', 'v42', 'v43', 'v44', 'v45') else '')
+              + ('설계 42 = 설계 41 + 끊는 점 도착 허용 0.015 · 전역 팽창 기울기 3, ' if a.variant == 'v42' else '')
+              + ('설계 43 = 설계 41 + 끊는 점 도착 허용 0.015(설계 42 의 팽창 기울기 3 은 뺌), ' if a.variant in ('v43', 'v44', 'v45') else '')
+              + ('설계 44 = 설계 43 + 호 원시 동작 · 회전 벌점 20(제자리 회전 최소화), ' if a.variant in ('v44', 'v45') else '')
+              + ('설계 45 = 설계 44 + 구간 끝 허용 xy 0.03 · yaw 0.28, ' if a.variant == 'v45' else '') + '기준 그대로)\n\n'
+              '설계 26: 물체 지도에 기둥을 넣어도 출발 통로 ㄱ자 모퉁이에서 같은 기둥(wall_d0 끝 (1.0705, 0.5305))에 닿음. '
+              '원인 = 전역 계획기 NavFn 이 점 로봇 경로를 내고, 이 모퉁이는 차체로 지나려면 전진 · 후진을 섞은 오른쪽 약 270° 동작이 필요(기하 계산).\n\n'
+              '| 항목 | v21 | v27 | 이유 |\n|---|---|---|---|\n' + '\n'.join(rows) + '\n\n'
+              '- 함께 바꾸는 것(launch 인자): `objects_map:=config/map_objects_fine_posts_walls.yaml`(도면 벽 · 기둥 포함, check_world_consistency 통과판).\n'
+              '- 그대로: global costmap footprint(회전 중심 기준 x −0.0764~0.3416 · y ±0.171, Smac 이 이 footprint 로 검사), 팽창 0.45 · 6.0, MPPI 비평가, 속도 한계.\n')
+print(OUT, MD)

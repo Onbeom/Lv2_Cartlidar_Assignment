@@ -1,0 +1,68 @@
+{
+  "measured": {
+    "self_collision_newton_now": false,
+    "base_arm_contacts_보고": {},
+    "base_arm_실제접촉_separation≤0": {},
+    "all_contact_pairs": {
+      "CollisionPlane|base_link": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": 1.862645149230957e-08,
+        "steps_sep_le_0": 0,
+        "first_t_sep_le_0": null
+      },
+      "CollisionPlane|wheel_front_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 801,
+        "min_sep_m": -6.663174281129614e-05,
+        "steps_sep_le_0": 610,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_front_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 801,
+        "min_sep_m": -6.65274346829392e-05,
+        "steps_sep_le_0": 627,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_left": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -6.726176798110828e-05,
+        "steps_sep_le_0": 282,
+        "first_t_sep_le_0": 0.008333333767950535
+      },
+      "CollisionPlane|wheel_rear_right": {
+        "first_t": 0.008333333767950535,
+        "steps": 840,
+        "min_sep_m": -6.735117494827136e-05,
+        "steps_sep_le_0": 274,
+        "first_t_sep_le_0": 0.008333333767950535
+      }
+    },
+    "reach_err_end_rad": {
+      "RMX52_Base_Yaw": 1.6730746e-07,
+      "RMX52_Shoulder": 0.00016119999999997248,
+      "RMX52_Elbow": 1.920000000010802e-05,
+      "RMX52_Wrist_Pitch": 0.00017239999999985045,
+      "RMX52_Wrist_Roll_Reversed": 6.040408e-10
+    },
+    "reach_err_max_rad": 0.00017239999999985045,
+    "참고_관절속도_위치차분_최대": {
+      "RMX52_Base_Yaw": 0.00012173186765118835,
+      "RMX52_Shoulder": 4.549482762725984,
+      "RMX52_Elbow": 4.438055768537354,
+      "RMX52_Wrist_Pitch": 4.43584316865275,
+      "RMX52_Wrist_Roll_Reversed": 4.106746285816491e-06,
+      "gripper_left_joint": 2.1730244266679444e-06,
+      "gripper_right_joint": 2.4701641311709013e-06
+    }
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "base_link–팔·집게 링크 실제 접촉(separation ≤ 0) 없음": true,
+    "도달 오차 ≤ 0.05 rad": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s (최대 4.549)": true
+  },
+  "verdict": "성공"
+}

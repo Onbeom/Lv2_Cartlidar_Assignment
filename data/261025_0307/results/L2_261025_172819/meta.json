@@ -1,0 +1,177 @@
+{
+  "phys_dt": 0.008333333333333333,
+  "render_dt": 0.03333333333333333,
+  "duration_s": 600.0,
+  "usd": "/home/pa4/git/lv2_next_module/261022_2119/phys_tests/usd_copy/waffle_4wd/waffle_4wd.usda",
+  "conditions": {
+    "mu": [
+      0.3,
+      0.225
+    ],
+    "arm_kp_kd": [
+      400.0,
+      36.0
+    ],
+    "wheel_kd": 1.0,
+    "armature_wheel_arm": [
+      0.0163,
+      0.045
+    ],
+    "arm_pose": [
+      0.0,
+      1.4,
+      -1.0,
+      -1.3,
+      0.0
+    ]
+  },
+  "cameras": {
+    "front": {
+      "frame": "top_camera_front_color_optical_frame",
+      "K": [
+        605.850769,
+        605.67987,
+        324.365814,
+        245.139175
+      ],
+      "width": 640,
+      "height": 480,
+      "topic": "/top_camera_front",
+      "depth": true
+    },
+    "rear": {
+      "frame": "top_camera_rear_color_optical_frame",
+      "K": [
+        605.850769,
+        605.67987,
+        324.365814,
+        245.139175
+      ],
+      "width": 640,
+      "height": 480,
+      "topic": "/top_camera_rear",
+      "depth": true
+    },
+    "arm": {
+      "frame": "camera_optical_frame",
+      "K": [
+        283.0,
+        283.0,
+        320.0,
+        240.0
+      ],
+      "width": 640,
+      "height": 480,
+      "topic": "/arm_camera",
+      "depth": false
+    }
+  },
+  "lidar": {
+    "hz": 10.0,
+    "res_deg": 1.0,
+    "range": [
+      0.12,
+      8.0
+    ],
+    "topics": {
+      "/scan_front": "lidar_front_scan",
+      "/scan_rear": "lidar_rear_scan"
+    },
+    "angle_min": -3.141592653589793,
+    "angle_increment": 0.017453292519943295,
+    "n": 360
+  },
+  "joint_state_hz": 50.0,
+  "objects": [
+    {
+      "name": "wall_front",
+      "center": [
+        1.55,
+        0.0,
+        0.3
+      ],
+      "size": [
+        0.1,
+        3.0,
+        0.6
+      ],
+      "collide": true
+    },
+    {
+      "name": "wall_rear",
+      "center": [
+        -1.05,
+        0.0,
+        0.3
+      ],
+      "size": [
+        0.1,
+        3.0,
+        0.6
+      ],
+      "collide": true
+    },
+    {
+      "name": "box_left",
+      "center": [
+        0.0,
+        0.65,
+        0.2
+      ],
+      "size": [
+        0.3,
+        0.1,
+        0.4
+      ],
+      "collide": true
+    },
+    {
+      "name": "marker_front_red",
+      "center": [
+        0.9,
+        0.3,
+        0.005
+      ],
+      "size": [
+        0.15,
+        0.15,
+        0.01
+      ],
+      "collide": false
+    },
+    {
+      "name": "marker_rear_green",
+      "center": [
+        -0.9,
+        0.2,
+        0.005
+      ],
+      "size": [
+        0.15,
+        0.15,
+        0.01
+      ],
+      "collide": false
+    }
+  ],
+  "wheels_config": "/home/pa4/git/lv2_next_module/261025_0307/l2/config/wheels.yaml",
+  "dof_names": [
+    "Wheel_Revolute_Front_Left",
+    "Wheel_Revolute_Front_Right",
+    "Wheel_Revolute_Rear_Left",
+    "Wheel_Revolute_Rear_Right",
+    "RMX52_Base_Yaw",
+    "RMX52_Shoulder",
+    "RMX52_Elbow",
+    "RMX52_Wrist_Pitch",
+    "RMX52_Wrist_Roll_Reversed",
+    "gripper_left_joint",
+    "gripper_right_joint"
+  ],
+  "wheel_joints": [
+    "Wheel_Revolute_Front_Left",
+    "Wheel_Revolute_Front_Right",
+    "Wheel_Revolute_Rear_Left",
+    "Wheel_Revolute_Rear_Right"
+  ]
+}

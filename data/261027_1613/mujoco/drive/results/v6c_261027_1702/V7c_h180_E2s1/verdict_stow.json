@@ -1,0 +1,67 @@
+{
+  "measured": {
+    "start_heading_deg": 180,
+    "loc_bias": [
+      0.0,
+      0.0
+    ],
+    "loc_noise": [
+      0.01,
+      1.0
+    ],
+    "seed": 1,
+    "norm_lat_rms_mm": 1.842798198830034,
+    "norm_head_rms_deg": 0.6046508777415975,
+    "norm_w_cmd_rms": 0.10748931542822313,
+    "align": {
+      "avg_head_err_deg": 0.4715299662810457,
+      "n_samples": 500,
+      "skipped": true,
+      "direction": -1,
+      "target_deg": 0.2715299662810457
+    },
+    "align_time_s": 0.0,
+    "align_turned_deg": -7.652715263418582e-05,
+    "align_lat_shift_mm": 2.8060287282768645e-06,
+    "align_along_shift_mm": 0.00011310713265988426,
+    "min_clearance_mm": 115.29127984920152,
+    "min_clearance_t_s": 9.82199999999995,
+    "min_clearance_phase": "spin",
+    "spin_time_s": 19.525999999998948,
+    "spin_deg_at_end": 180.01033340405402,
+    "spin_overshoot_deg": 1.8508001401429226,
+    "origin_after_spin_mm": [
+      89.78425516429886,
+      -0.5342999870923919
+    ],
+    "settle_along_m": 0.722000997072914,
+    "w_sat_fraction": 0.0,
+    "lat_at_normalize_start_mm": -0.5342999870923919,
+    "head_at_normalize_start_deg": 0.010333404054021129,
+    "end_lat_mm": -0.9154992191668525,
+    "end_heading_deg": 0.5312965713115391,
+    "end_along_err_mm": -0.5030583151575119,
+    "stop_time_s": 0.0,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 4e-05,
+      "RMX52_Shoulder": 5e-05,
+      "RMX52_Elbow": 0.00185,
+      "RMX52_Wrist_Pitch": 0.0006,
+      "RMX52_Wrist_Roll_Reversed": 1e-05
+    }
+  },
+  "checks": {
+    "최소 간격 ≥ 30 mm": true,
+    "옆 오차 ≤ 10 mm": true,
+    "헤딩 오차 ≤ 1°": true,
+    "정지 위치 앞뒤 ≤ 20 mm": true,
+    "정지 명령 뒤 0.5 s 안에 ≤ 0.005 m/s": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V7c"
+}

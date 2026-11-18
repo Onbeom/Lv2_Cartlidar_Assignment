@@ -1,0 +1,150 @@
+{
+  "revision": "Modular_261021",
+  "robot_mass_g": 4891.194067702904,
+  "max_puck_count": 12,
+  "puck_mass_g": 66.96,
+  "payload_mass_g": 803.52,
+  "full_mass_g": 5694.714067702904,
+  "rounded_67g_each_full_mass_g": 5695.194067702904,
+  "actual_12_payload_centers": [
+    {
+      "channel": "B",
+      "index": 1,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        230.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 2,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        290.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 3,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        350.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "B",
+      "index": 4,
+      "center_world_mm": [
+        -86.31076217643701,
+        65.36706876001907,
+        410.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 1,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        230.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 2,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        290.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 3,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        350.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "G",
+      "index": 4,
+      "center_world_mm": [
+        -82.8,
+        2.220446049250313e-15,
+        410.02000000000004
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 1,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        230.01999999999998
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 2,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        290.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 3,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        350.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    },
+    {
+      "channel": "R",
+      "index": 4,
+      "center_world_mm": [
+        -86.31076772675203,
+        -65.36721865729723,
+        410.02
+      ],
+      "mass_g": 66.96,
+      "hits": []
+    }
+  ],
+  "minimum_nominal_flat_ground_margin_mm": 40.91422897327782,
+  "limitations": [
+    "uses estimated CAD masses and URDF forward kinematics at sampled demo poses",
+    "one separate 66.96g object at the demo object center is included in an additional static projection; excludes other stored objects, slope, acceleration, braking, wheel lift and cable force",
+    "inside support polygon is not proof of dynamic stability, structural strength, actuator capacity or collision clearance",
+    "Twelve stored pucks assessed at CAD centers across all sampled arm poses; this scenario has no thirteenth held puck. Additional joining hardware and wiring not included."
+  ]
+}

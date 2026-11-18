@@ -1,0 +1,220 @@
+{
+  "measured": {
+    "RMX52_Base_Yaw=+0.1": {
+      "target": 0.1,
+      "q_end": 0.09999987483024597,
+      "abs_err": 1.2516975403387143e-07,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_1": 4.028395614103588e-05,
+        "gripper_left_link": 6.788593360633077e-05
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Base_Yaw=-0.1": {
+      "target": -0.1,
+      "q_end": -0.1000000536441803,
+      "abs_err": 5.364418029230045e-08,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_1": 5.024608248763136e-05,
+        "gripper_left_link": 0.0001865074021738948
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Shoulder=+0.1": {
+      "target": 0.1,
+      "q_end": 0.09517793357372284,
+      "abs_err": 0.004822066426277166,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_2": 8.001985538464938e-05,
+        "gripper_left_link": 0.00020422706062387535
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Shoulder=-0.1": {
+      "target": -0.1,
+      "q_end": -0.10554981231689453,
+      "abs_err": 0.005549812316894526,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_2": 0.00010313443411689412,
+        "gripper_left_link": 0.0001958208775204867
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Elbow=+0.1": {
+      "target": 0.1,
+      "q_end": 0.0951729565858841,
+      "abs_err": 0.004827043414115911,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_3": 0.00014878528180080753,
+        "gripper_left_link": 0.00023764234962167892
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Elbow=-0.1": {
+      "target": -0.1,
+      "q_end": -0.10489173978567123,
+      "abs_err": 0.004891739785671229,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_3": 0.00013810516509461668,
+        "gripper_left_link": 0.00017567199803486037
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Wrist_Pitch=+0.1": {
+      "target": 0.1,
+      "q_end": 0.09844759106636047,
+      "abs_err": 0.001552408933639532,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_4": 0.00017984498650091513,
+        "gripper_left_link": 0.00019981871705429053
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Wrist_Pitch=-0.1": {
+      "target": -0.1,
+      "q_end": -0.10158219933509827,
+      "abs_err": 0.001582199335098261,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_4": 0.00016229799462892463,
+        "gripper_left_link": 0.0001666472582017474
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Wrist_Roll_Reversed=+0.1": {
+      "target": 0.1,
+      "q_end": 0.10001487284898758,
+      "abs_err": 1.4872848987573795e-05,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_5": 0.00020936172554248718,
+        "gripper_left_link": 0.00022068716077147533
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "RMX52_Wrist_Roll_Reversed=-0.1": {
+      "target": -0.1,
+      "q_end": -0.10001449286937714,
+      "abs_err": 1.449286937713068e-05,
+      "tol": 0.01,
+      "fk_err_mm": {
+        "arm_link_5": 0.00019482298828542356,
+        "gripper_left_link": 0.0001829792669725861
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "gripper_left_joint=+0.005": {
+      "target": 0.005,
+      "q_end": 0.005000002216547728,
+      "abs_err": 2.2165477274807555e-09,
+      "tol": 0.001,
+      "fk_err_mm": {
+        "gripper_left_link": 0.0001371471820065174
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    },
+    "gripper_left_joint=+0.015": {
+      "target": 0.015,
+      "q_end": 0.015000002458691597,
+      "abs_err": 2.458691597539975e-09,
+      "tol": 0.001,
+      "fk_err_mm": {
+        "gripper_left_link": 0.00025646788586696704
+      },
+      "sign_same": true,
+      "checks": {
+        "|q−목표| ≤ 기준": true,
+        "FK 오차 ≤ 2 mm": true,
+        "부호 같음": true
+      },
+      "verdict": "성공"
+    }
+  },
+  "관절속도_위치차분_최대": {
+    "RMX52_Base_Yaw": 1.0747834779456735,
+    "RMX52_Shoulder": 1.141672120457159,
+    "RMX52_Elbow": 1.1098424951172032,
+    "RMX52_Wrist_Pitch": 1.0149583610657966,
+    "RMX52_Wrist_Roll_Reversed": 1.0000134864202326,
+    "gripper_left_joint": 0.010064997135069495,
+    "gripper_right_joint": 0.01006604697501474
+  },
+  "checks": {
+    "유한값·스텝 수": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s (최대 1.142)": true
+  },
+  "verdict": "성공"
+}

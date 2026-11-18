@@ -1,0 +1,44 @@
+{
+  "measured": {
+    "start_heading_deg": 180,
+    "min_clearance_mm": 106.30631781980033,
+    "min_clearance_t_s": 9.149999999999725,
+    "min_clearance_phase": "spin",
+    "spin_time_s": 18.013999999999786,
+    "spin_deg_at_end": 180.00122309994342,
+    "spin_overshoot_deg": 0.16621230416222943,
+    "origin_after_spin_mm": [
+      109.06918704942638,
+      -0.4719395452729868
+    ],
+    "settle_along_m": 0.10906918704942638,
+    "w_sat_fraction": 0.0,
+    "lat_at_normalize_start_mm": -0.4719395452729868,
+    "head_at_normalize_start_deg": 0.0012230999433852805,
+    "end_lat_mm": -0.004616063768301094,
+    "end_heading_deg": -0.00014026760245023934,
+    "end_along_err_mm": 1.0170400468509921,
+    "stop_time_s": 0.11200000000013688,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 2e-05,
+      "RMX52_Shoulder": 5e-05,
+      "RMX52_Elbow": 0.00187,
+      "RMX52_Wrist_Pitch": 0.0006,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "최소 간격 ≥ 30 mm": true,
+    "옆 오차 ≤ 10 mm": true,
+    "헤딩 오차 ≤ 1°": true,
+    "정지 위치 앞뒤 ≤ 20 mm": true,
+    "정지 명령 뒤 0.5 s 안에 ≤ 0.005 m/s": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V6"
+}

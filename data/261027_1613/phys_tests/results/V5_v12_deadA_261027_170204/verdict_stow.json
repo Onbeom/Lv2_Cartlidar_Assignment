@@ -1,0 +1,38 @@
+{
+  "measured": {
+    "deadend": "A",
+    "cell_len_m": 0.734,
+    "backward_m": 0.7339178348621079,
+    "side_max_mm": 0.015289142541458179,
+    "yaw_max_deg": 0.007717259941528178,
+    "stop_time_s": 0.10833333898335695,
+    "min_clearance_mm": 118.40250190507795,
+    "min_clearance_t_s": 0.22500001173466444,
+    "end_pose": [
+      -0.7339197943644095,
+      -1.2374989460889443e-05,
+      0.007710429742890056
+    ],
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 0.0,
+      "RMX52_Shoulder": 7e-05,
+      "RMX52_Elbow": 0.00179,
+      "RMX52_Wrist_Pitch": 0.00058,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "후진 거리 칸 길이 ± 10 %": true,
+    "옆 이탈 ≤ 10 mm": true,
+    "yaw 변화 ≤ 2°": true,
+    "정지 명령 뒤 0.5 s 안에 ≤ 0.005 m/s": true,
+    "최소 간격 ≥ 30 mm": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "Isaac Sim",
+  "test": "V5"
+}

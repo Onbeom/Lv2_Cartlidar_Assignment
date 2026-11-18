@@ -1,0 +1,33 @@
+{
+  "light": "dark",
+  "source_bag": "/home/pa4/git/lv2_next_module/261027_0953/results/m1711_dark_1_261027_203822/bag",
+  "old_model": "261027_1711",
+  "counts": {
+    "/tf_static": 1,
+    "/clock": 17358,
+    "/tf": 4822,
+    "/scan_front": 2894,
+    "/scan_rear": 2894
+  },
+  "tf_edges_kept": {
+    "base_link->arm_link_1": 4822,
+    "arm_link_2->arm_link_3": 4822,
+    "arm_link_1->arm_link_2": 4822,
+    "arm_link_3->arm_link_4": 4822,
+    "arm_link_4->arm_link_5": 4822,
+    "base_link->wheel_front_left": 4822,
+    "base_link->wheel_front_right": 4822,
+    "base_link->wheel_rear_left": 4822,
+    "base_link->wheel_rear_right": 4822,
+    "arm_link_5->gripper_left_link": 4822,
+    "arm_link_5->gripper_right_link": 4822
+  },
+  "truth_odom_messages": 14470,
+  "wheel_odom_excluded": true,
+  "map_odom_tf_excluded": true,
+  "truth_in_lidar_only": false,
+  "truth_in_truth_odom": "diagnostic_upper_bound_only",
+  "source_sha256": {
+    "0_bag_2026_10_27-20_38_23.mcap": "c48225de31e02cb0629e5a2902c55da6feeec1deca54570dfe8cbbae4bb57423"
+  }
+}

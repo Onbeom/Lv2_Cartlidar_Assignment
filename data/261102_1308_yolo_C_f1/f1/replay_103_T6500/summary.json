@@ -1,0 +1,26 @@
+{
+ "runs": 2,
+ "pass": 1,
+ "cells_ok": 23,
+ "cells": 24,
+ "wrong_complete": 0,
+ "finish_success": 1,
+ "unanswered_frames": 0,
+ "p4_slot_pose_wrong": 0,
+ "p4_slot_pose_missing": 0,
+ "p4_lying_cells": 6,
+ "p4_lying_ok": 6,
+ "p4_obs": {
+  "n": 128,
+  "wrong": 0,
+  "unknown": 42
+ },
+ "max_err_mm": 4.16,
+ "field_fail": {
+  "id": 0,
+  "color": 0,
+  "shape": 1,
+  "pose": 0
+ },
+ "all_pass": false
+}

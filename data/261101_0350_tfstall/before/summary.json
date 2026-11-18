@@ -1,0 +1,26 @@
+{
+  "physical_hardware_used": false,
+  "install": "/home/pa4/git/lv2_next_module/261101_0246_final/sb/build_branch/install",
+  "startup_stopped": false,
+  "far_clear": true,
+  "stall_stops": false,
+  "stall_stop_delay_s": null,
+  "range_msgs_during_stall": 41,
+  "recovery_clear": true,
+  "reason_values": [
+    "clear",
+    "no_return",
+    "stale"
+  ],
+  "pass": false,
+  "processes": [
+    {
+      "name": "driver",
+      "exit": 0
+    },
+    {
+      "name": "stop",
+      "exit": 0
+    }
+  ]
+}

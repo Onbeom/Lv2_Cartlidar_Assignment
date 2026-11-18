@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="1" failures="0" disabled="0" errors="0" time="0.093" timestamp="2026-10-28T21:03:54.070" name="AllTests">
+  <testsuite name="BarcodeReader" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0.093" timestamp="2026-10-28T21:03:54.070">
+    <testcase name="RotatedJpegKeepsChecksumAndDecision" file="/home/pa4/git/lv2_next_module/261028_1457/src/perception/test/test_barcode.cpp" line="257" status="run" result="completed" time="0.093" timestamp="2026-10-28T21:03:54.070" classname="BarcodeReader" />
+  </testsuite>
+</testsuites>

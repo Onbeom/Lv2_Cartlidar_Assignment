@@ -1,0 +1,102 @@
+{
+ "frames": 75,
+ "frames_no_output": 0,
+ "detect": {
+  "frames": 30,
+  "rate": 1.0,
+  "pass": true
+ },
+ "false": {
+  "frames": 45,
+  "rate": 0.0,
+  "pass": true
+ },
+ "dist_err": {
+  "n": 60,
+  "median_m": 0.0007500000000000007,
+  "p95_m": 0.007000000000000006,
+  "pass": true
+ },
+ "blind_in_zone": [],
+ "by_kind": {
+  "wall_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.00020000000000003348
+  },
+  "post_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.00030000000000002247
+  },
+  "puck_standing_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.0006999999999999784
+  },
+  "puck_lying_cyl_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.007000000000000006
+  },
+  "puck_lying_cuboid_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.0039000000000000146
+  },
+  "box_in": {
+   "frames": 5,
+   "stop": 5,
+   "visible": 5,
+   "err_median_m": 0.00029999999999996696
+  },
+  "wall_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": -0.00019999999999997797
+  },
+  "post_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": 0.000500000000000056
+  },
+  "puck_standing_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": 0.0009000000000000119
+  },
+  "puck_lying_cyl_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": 0.0043000000000000815
+  },
+  "puck_lying_cuboid_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": 0.00550000000000006
+  },
+  "box_out": {
+   "frames": 5,
+   "stop": 0,
+   "visible": 5,
+   "err_median_m": 0.0008000000000000229
+  },
+  "none_empty": {
+   "frames": 15,
+   "stop": 0,
+   "visible": 0,
+   "err_median_m": null
+  }
+ },
+ "pass": true
+}

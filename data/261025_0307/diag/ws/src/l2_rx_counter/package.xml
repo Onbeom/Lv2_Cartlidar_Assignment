@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>l2_rx_counter</name>
+  <version>0.0.1</version>
+  <description>영상 손실 진단용 최소 C++ 수신기 (stamp·받은 시각 기록)</description>
+  <maintainer email="dhsckdqja@gmail.com">pa4</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

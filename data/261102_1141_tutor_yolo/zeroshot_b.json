@@ -1,0 +1,242 @@
+{
+ "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/test": {
+  "images": 500,
+  "targets": 1811,
+  "tp": 1640,
+  "fp": 262,
+  "recall": 0.9056,
+  "precision": 0.8623,
+  "detected_any_class": 1683,
+  "shape_ratio": 0.959,
+  "color_ratio": 1.0,
+  "tp_conf": {
+   "min": 0.251,
+   "p5": 0.527,
+   "p50": 0.953
+  },
+  "fp_conf": {
+   "min": 0.25,
+   "p5": 0.277,
+   "p50": 0.563
+  },
+  "missed_box_height_px": {
+   "min": 51.0,
+   "p5": 119.5,
+   "p50": 178.0
+  },
+  "per_class": {
+   "red_cylinder": {
+    "targets": 452,
+    "tp": 402,
+    "fp": 53
+   },
+   "green_cylinder": {
+    "targets": 452,
+    "tp": 405,
+    "fp": 38
+   },
+   "red_cuboid": {
+    "targets": 453,
+    "tp": 420,
+    "fp": 90
+   },
+   "green_cuboid": {
+    "targets": 454,
+    "tp": 413,
+    "fp": 81
+   }
+  }
+ },
+ "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/val": {
+  "images": 300,
+  "targets": 1085,
+  "tp": 979,
+  "fp": 142,
+  "recall": 0.9023,
+  "precision": 0.8733,
+  "detected_any_class": 1009,
+  "shape_ratio": 0.9564,
+  "color_ratio": 1.0,
+  "tp_conf": {
+   "min": 0.258,
+   "p5": 0.549,
+   "p50": 0.954
+  },
+  "fp_conf": {
+   "min": 0.25,
+   "p5": 0.294,
+   "p50": 0.558
+  },
+  "missed_box_height_px": {
+   "min": 10.0,
+   "p5": 108.5,
+   "p50": 178.0
+  },
+  "per_class": {
+   "red_cylinder": {
+    "targets": 272,
+    "tp": 248,
+    "fp": 23
+   },
+   "green_cylinder": {
+    "targets": 272,
+    "tp": 234,
+    "fp": 15
+   },
+   "red_cuboid": {
+    "targets": 270,
+    "tp": 255,
+    "fp": 44
+   },
+   "green_cuboid": {
+    "targets": 271,
+    "tp": 242,
+    "fp": 60
+   }
+  }
+ },
+ "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/verification_ec886c9994fb/dataset/images/test": {
+  "images": 12,
+  "targets": 48,
+  "tp": 24,
+  "fp": 17,
+  "recall": 0.5,
+  "precision": 0.5854,
+  "detected_any_class": 38,
+  "shape_ratio": 0.5789,
+  "color_ratio": 1.0,
+  "tp_conf": {
+   "min": 0.376,
+   "p5": 0.477,
+   "p50": 0.909
+  },
+  "fp_conf": {
+   "min": 0.602,
+   "p5": 0.833,
+   "p50": 0.949
+  },
+  "missed_box_height_px": {
+   "min": 38.0,
+   "p5": 40.3,
+   "p50": 49.0
+  },
+  "per_class": {
+   "red_cylinder": {
+    "targets": 12,
+    "tp": 5,
+    "fp": 0
+   },
+   "green_cylinder": {
+    "targets": 12,
+    "tp": 5,
+    "fp": 0
+   },
+   "red_cuboid": {
+    "targets": 12,
+    "tp": 6,
+    "fp": 8
+   },
+   "green_cuboid": {
+    "targets": 12,
+    "tp": 8,
+    "fp": 9
+   }
+  }
+ },
+ "/tmp/claude-1000/-home-pa4-git-lv2-next-module/4e6c04cf-2b18-4fe3-8632-953555a00fd5/scratchpad/tutor_peek/yolov8-image-datasets/02_mission_verified/mission-batch-verified/images": {
+  "images": 4,
+  "targets": 4,
+  "tp": 2,
+  "fp": 4,
+  "recall": 0.5,
+  "precision": 0.3333,
+  "detected_any_class": 2,
+  "shape_ratio": 0.5,
+  "color_ratio": 1.0,
+  "tp_conf": {
+   "min": 0.613,
+   "p5": 0.625,
+   "p50": 0.731
+  },
+  "fp_conf": {
+   "min": 0.68,
+   "p5": 0.7,
+   "p50": 0.848
+  },
+  "missed_box_height_px": {
+   "min": 1063.0,
+   "p5": 1067.45,
+   "p50": 1107.5
+  },
+  "per_class": {
+   "red_cylinder": {
+    "targets": 1,
+    "tp": 0,
+    "fp": 0
+   },
+   "green_cylinder": {
+    "targets": 2,
+    "tp": 1,
+    "fp": 1
+   },
+   "red_cuboid": {
+    "targets": 1,
+    "tp": 1,
+    "fp": 1
+   },
+   "green_cuboid": {
+    "targets": 0,
+    "tp": 0,
+    "fp": 2
+   }
+  }
+ },
+ "/tmp/claude-1000/-home-pa4-git-lv2-next-module/4e6c04cf-2b18-4fe3-8632-953555a00fd5/scratchpad/tutor_peek/yolov8-image-datasets/02_mission_verified/mission-solved-verified/images": {
+  "images": 4,
+  "targets": 24,
+  "tp": 12,
+  "fp": 3,
+  "recall": 0.5,
+  "precision": 0.8,
+  "detected_any_class": 12,
+  "shape_ratio": 1.0,
+  "color_ratio": 1.0,
+  "tp_conf": {
+   "min": 0.938,
+   "p5": 0.939,
+   "p50": 0.953
+  },
+  "fp_conf": {
+   "min": 0.273,
+   "p5": 0.316,
+   "p50": 0.699
+  },
+  "missed_box_height_px": {
+   "min": 22.0,
+   "p5": 22.0,
+   "p50": 25.0
+  },
+  "per_class": {
+   "red_cylinder": {
+    "targets": 6,
+    "tp": 3,
+    "fp": 1
+   },
+   "green_cylinder": {
+    "targets": 2,
+    "tp": 1,
+    "fp": 0
+   },
+   "red_cuboid": {
+    "targets": 10,
+    "tp": 5,
+    "fp": 2
+   },
+   "green_cuboid": {
+    "targets": 6,
+    "tp": 3,
+    "fp": 0
+   }
+  }
+ }
+}

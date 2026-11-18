@@ -1,0 +1,6 @@
+image: /home/pa4/git/lv2_next_module/261030_2058/results/carto_truth_odom_dark_r2/map.pgm
+resolution: 0.025000
+origin: [-3.937127, -5.686006, 0.0]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196

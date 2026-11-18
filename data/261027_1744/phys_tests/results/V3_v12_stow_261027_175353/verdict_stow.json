@@ -1,0 +1,23 @@
+{
+  "measured": {
+    "arm_speed_max_rad_s": {
+      "RMX52_Base_Yaw": 3.658376109200818e-05,
+      "RMX52_Shoulder": 4.257955777930301,
+      "RMX52_Elbow": 3.875770597862812,
+      "RMX52_Wrist_Pitch": 4.194908981218448,
+      "RMX52_Wrist_Roll_Reversed": 5.483330014022054e-07
+    },
+    "reach_err_stow_rad": 0.0017741000000000007,
+    "reach_err_zero_rad": 0.0024901403,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null
+  },
+  "checks": {
+    "팔–다른 형상 실제 접촉 없음": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s": true,
+    "도달 오차 ≤ 0.05 rad (4 s 접힘, 7 s 0 자세)": true
+  },
+  "verdict": "성공",
+  "engine": "Isaac Sim",
+  "test": "V3"
+}

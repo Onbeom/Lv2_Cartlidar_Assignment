@@ -1,0 +1,404 @@
+{
+ "note": "등록한 정책 목록 (register_policy.py 가 씀). latest = 평가 스크립트 기본값",
+ "policies": [
+  {
+   "name": "toppick_prev_20261105",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_prev_20261105.pt",
+   "sha256": "30687cbaf68c8575",
+   "registered": "2026-11-05 11:17",
+   "note": "register_policy.py 이전 latest 를 보관 (출처는 정책_학습기록.md)",
+   "latest": false
+  },
+  {
+   "name": "toppick_TP3",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP3.pt",
+   "onnx": "policies/toppick_TP3.onnx",
+   "sha256": "26b165a63ad62a5b",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-04_20-46-45/model_10500.pt",
+   "iteration": 10500,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": false,
+   "ros_model": "../../../ros2_ws/src/robot_policy/config/models/toppick_tilt.onnx",
+   "evals": [
+    {
+     "file": "toppick_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "all",
+     "num_envs": 256,
+     "success": {
+      "ok": 133,
+      "n": 256,
+      "pct": 52.0
+     }
+    },
+    {
+     "file": "chain_pallet_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 30,
+      "n": 192,
+      "pct": 15.6
+     },
+     "pick": {
+      "ok": 81,
+      "n": 192,
+      "pct": 42.2
+     },
+     "place_given_pick": {
+      "ok": 30,
+      "n": 81,
+      "pct": 37.0
+     }
+    }
+   ],
+   "note": "15000 회차 중 시드 1 최고 (후보 6000~14999), 표준편차 폭주 전",
+   "git": "20f02cc",
+   "registered": "2026-11-05 11:19"
+  },
+  {
+   "name": "toppick_TP5",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP5.pt",
+   "onnx": "policies/toppick_TP5.onnx",
+   "sha256": "748558b4ec0568cc",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-05_13-34-43/model_37000.pt",
+   "iteration": 37000,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": false,
+   "ros_model": "../../../ros2_ws/src/robot_policy/config/models/toppick_tilt.onnx",
+   "evals": [
+    {
+     "file": "toppick_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "all",
+     "num_envs": 256,
+     "success": {
+      "ok": 144,
+      "n": 256,
+      "pct": 56.2
+     }
+    },
+    {
+     "file": "chain_pallet_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 29,
+      "n": 192,
+      "pct": 15.1
+     },
+     "pick": {
+      "ok": 93,
+      "n": 192,
+      "pct": 48.4
+     },
+     "place_given_pick": {
+      "ok": 29,
+      "n": 93,
+      "pct": 31.2
+     }
+    }
+   ],
+   "note": "TP3 이어 50000 반복(2026-11-05_13-34-43) 중 37000. 이어평가 시드1 35/192(18.2%), 시드2 29~30/192(15.1~15.6%); TP3 시드1 17, 시드2 28. 물리 집기 49% (TP3 36~43%)",
+   "git": "a1dbebb",
+   "registered": "2026-11-06 09:51"
+  },
+  {
+   "name": "toppick_TP7",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP7.pt",
+   "onnx": "policies/toppick_TP7.onnx",
+   "sha256": "37e9290256e2cd38",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-07_18-26-18/model_43300.pt",
+   "iteration": 43300,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": false,
+   "ros_model": "../../../ros2_ws/src/robot_policy/config/models/toppick_tilt.onnx",
+   "evals": [
+    {
+     "file": "toppick_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "all",
+     "num_envs": 256,
+     "success": {
+      "ok": 138,
+      "n": 256,
+      "pct": 53.9
+     }
+    },
+    {
+     "file": "chain_pallet_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 35,
+      "n": 192,
+      "pct": 18.2
+     },
+     "pick": {
+      "ok": 112,
+      "n": 192,
+      "pct": 58.3
+     },
+     "place_given_pick": {
+      "ok": 35,
+      "n": 112,
+      "pct": 31.2
+     }
+    }
+   ],
+   "note": "실패, latest 아님 (2026-11-08 TP6 로 되돌림). 41750 에서 표준편차 상한 0.4 로 2000 반복 (2026-11-07_18-26-18) 중 43300. 이어평가 시드2 35 · 19/192 (평균 27, TP6 평균 47)",
+   "git": "8ef8d4f",
+   "registered": "2026-11-07 20:20"
+  },
+  {
+   "name": "toppick_TP6",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP6.pt",
+   "onnx": "policies/toppick_TP6.onnx",
+   "sha256": "752e3277963fc4a2",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-06_10-47-23/model_38500.pt",
+   "iteration": 38500,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": false,
+   "ros_model": "../../../ros2_ws/src/robot_policy/config/models/toppick_tilt.onnx",
+   "evals": [
+    {
+     "file": "toppick_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "all",
+     "num_envs": 256,
+     "success": {
+      "ok": 147,
+      "n": 256,
+      "pct": 57.4
+     }
+    },
+    {
+     "file": "../../../../../../../../tmp/claude-1000/-home-pa8-git-Lv2-Cartlidar-Assignment/42e4e7a7-1996-44bf-8fd8-4c80a8cac9a7/scratchpad/cand/rep_TP6.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 53,
+      "n": 192,
+      "pct": 27.6
+     },
+     "pick": {
+      "ok": 107,
+      "n": 192,
+      "pct": 55.7
+     },
+     "place_given_pick": {
+      "ok": 53,
+      "n": 107,
+      "pct": 49.5
+     }
+    }
+   ],
+   "note": "2026-11-08 latest 복원 (TP7 43300 이 이어평가 평균 27/192 로 나빠서). 이어평가 시드2 47 · 41 · 53/192 (같은 시드 반복 편차 ±15). 물리 집기 56 %",
+   "git": "8ef8d4f",
+   "registered": "2026-11-08 17:33"
+  },
+  {
+   "name": "toppick_TP8",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP8.pt",
+   "onnx": "policies/toppick_TP8.onnx",
+   "sha256": "201f9a1a921cdd5e",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-08_17-33-38/model_40300.pt",
+   "iteration": 40300,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": true,
+   "ros_model": "../../../ros2_ws/src/robot_policy/config/models/toppick_tilt.onnx",
+   "evals": [
+    {
+     "file": "toppick_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "all",
+     "num_envs": 256,
+     "success": {
+      "ok": 150,
+      "n": 256,
+      "pct": 58.6
+     }
+    },
+    {
+     "file": "chain_pallet_eval.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 57,
+      "n": 192,
+      "pct": 29.7
+     },
+     "pick": {
+      "ok": 120,
+      "n": 192,
+      "pct": 62.5
+     },
+     "place_given_pick": {
+      "ok": 57,
+      "n": 120,
+      "pct": 47.5
+     }
+    }
+   ],
+   "note": "손 안 반경 보상 (rew_radial 5, 목표 −3 ± 2 mm) 으로 TP6 38500 에서 3000 반복 (2026-11-08_17-33-38) 중 40300. 같은 날 나란히 이어평가 시드1 44 vs TP6 31, 시드2 57 vs 47/192. 반경 −7 ~ +1 mm 비율 46 -> 52 %. 집기 평가 시드2 150/256 (58.6 %, TP6 147)",
+   "git": "ed58996",
+   "registered": "2026-11-09 17:37"
+  },
+  {
+   "name": "toppick_TP9",
+   "task": "Waffle-TopPick-Direct",
+   "file": "policies/toppick_TP9.pt",
+   "onnx": "policies/toppick_TP9.onnx",
+   "sha256": "515ba2a47a9caf65",
+   "source": "logs/rsl_rl/waffle_toppick/2026-11-09_22-14-33/model_59250.pt",
+   "iteration": 59250,
+   "obs_dim": 36,
+   "action_dim": 4,
+   "hidden": [
+    256,
+    128,
+    64
+   ],
+   "activation": "elu",
+   "latest": false,
+   "ros_model": null,
+   "evals": [
+    {
+     "file": "policies/evals/2026-11-10_chain_TP9.json",
+     "seed": 2,
+     "layout": "mix",
+     "dr": "-friction",
+     "num_envs": 192,
+     "chain": {
+      "ok": 39,
+      "n": 192,
+      "pct": 20.3
+     },
+     "pick": {
+      "ok": 93,
+      "n": 192,
+      "pct": 48.4
+     },
+     "place_given_pick": {
+      "ok": 39,
+      "n": 93,
+      "pct": 41.9
+     }
+    }
+   ],
+   "note": "그리퍼 벌림 50 mm (gripper_open 0.0042) 로 TP8 40300 에서 20000 반복 (2026-11-09_22-14-33) 중 59250. 같은 날 이어평가 50 mm 시드2 39 vs TP8 23 (TP8 61.6 mm 57), 시드1 35 vs 후보 29~33. latest · ROS 아님 (미션은 고정 동작 집기 toppick_scripted)",
+   "git": "20e8f71",
+   "registered": "2026-11-10 20:46"
+  },
+  {
+   "name": "toppick_scripted",
+   "task": "Waffle-TopPick-Direct",
+   "kind": "scripted",
+   "file": null,
+   "onnx": null,
+   "params": {
+    "approach_mode": "top",
+    "approach_height": 0.05,
+    "approach_inward": 0.03,
+    "radial_offset": 0.002,
+    "gripper_open": 0.0042,
+    "grip_open_mm": 50
+   },
+   "ros": "ros2_ws/src/control/config/manipulator.yaml toppick.* (manipulator_node beginPick/finalApproach)",
+   "latest": false,
+   "evals": [
+    {
+     "file": "policies/evals/2026-11-10_chain_scripted_s0.json",
+     "seed": 2,
+     "noise_mm": 0,
+     "num_envs": 192,
+     "chain": {
+      "ok": 172,
+      "n": 192,
+      "pct": 89.6
+     },
+     "pick": {
+      "ok": 174,
+      "n": 192,
+      "pct": 90.6
+     }
+    },
+    {
+     "file": "policies/evals/2026-11-10_chain_scripted_s2.json",
+     "seed": 2,
+     "noise_mm": 2,
+     "num_envs": 192,
+     "chain": {
+      "ok": 146,
+      "n": 192,
+      "pct": 76.0
+     },
+     "pick": {
+      "ok": 173,
+      "n": 192,
+      "pct": 90.1
+     }
+    }
+   ],
+   "note": "미션에 쓰는 고정 동작 집기 (정책 없음, chain_pallet_eval.py --scripted_pick σ --grip_open 0.0042). 같은 날 이어평가 시드2: TP8 50 mm 23 · TP9 59250 39 / 192 (policies/evals/2026-11-10_chain_TP8_open42.json · _TP9.json)",
+   "git": "20e8f71",
+   "registered": "2026-11-10"
+  }
+ ]
+}

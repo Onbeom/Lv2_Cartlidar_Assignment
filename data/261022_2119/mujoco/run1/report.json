@@ -1,0 +1,21 @@
+{
+  "status": "PASS_LOAD_STEP_ONLY",
+  "source": "/home/pa4/git/lv2_next_module/261022_2119/mujoco/waffle_4wd_mujoco.urdf",
+  "mujoco_version": "3.16.0",
+  "steps": 500,
+  "nq": 11,
+  "nv": 11,
+  "nu": 0,
+  "gravity": [
+    0,
+    0,
+    0
+  ],
+  "command": "none",
+  "not_tested": [
+    "locomotion",
+    "gravity",
+    "ground contact",
+    "controller"
+  ]
+}

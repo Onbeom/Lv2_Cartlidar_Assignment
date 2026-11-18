@@ -1,0 +1,138 @@
+[INFO] [launch]: All log files can be found below /home/pa4/.ros/log/2026-10-27-17-45-19-344233-pa4-Legion-Pro-5-16IAX10-1387227
+[INFO] [launch]: Default logging verbosity is set to INFO
+WARNING:root:[33;20mtrajectory_execution: `Parameter file_path is undefined and no matches for /home/pa4/git/lv2_next_module/sim_ws/install/waffle_4wd_moveit_config/share/waffle_4wd_moveit_config/config/*_controllers.yaml[0m
+[INFO] [robot_state_publisher-1]: process started with pid [1387237]
+[INFO] [joint_state_publisher-2]: process started with pid [1387238]
+[INFO] [move_group-3]: process started with pid [1387239]
+[INFO] [rviz2-4]: process started with pid [1387240]
+[robot_state_publisher-1] [INFO] [1793090719.833520166] [robot_state_publisher]: Robot initialized
+[move_group-3] [INFO] [1793090719.855192768] [move_group.moveit.moveit.ros.rdf_loader]: Loaded robot model in 0.00386342 seconds
+[move_group-3] [INFO] [1793090719.855300393] [move_group.moveit.moveit.core.robot_model]: Loading robot model 'waffle_4wd'...
+[move_group-3] [INFO] [1793090719.884733046] [move_group.moveit.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'arm': 1 1 1 1 1
+[move_group-3] [INFO] [1793090719.944954724] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-3] [INFO] [1793090719.945091593] [move_group.moveit.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[move_group-3] [INFO] [1793090719.945696455] [move_group.moveit.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[move_group-3] [INFO] [1793090719.945906917] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[move_group-3] [INFO] [1793090719.945913622] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.
+[move_group-3] [INFO] [1793090719.946229565] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[move_group-3] [INFO] [1793090719.946346128] [move_group.moveit.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[move_group-3] [INFO] [1793090719.946394216] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[move_group-3] [INFO] [1793090719.946549795] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[move_group-3] [INFO] [1793090719.946555975] [move_group.moveit.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[move_group-3] [INFO] [1793090719.946715063] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[move_group-3] [INFO] [1793090719.946867467] [move_group.moveit.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[move_group-3] [WARN] [1793090719.947000641] [move_group.moveit.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[move_group-3] [ERROR] [1793090719.947008025] [move_group.moveit.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[move_group-3] [INFO] [1793090719.959550422] [move_group.moveit.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[move_group-3] [INFO] [1793090719.960074741] [move_group]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[move_group-3] [INFO] [1793090719.960515296] [move_group]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[move_group-3] [INFO] [1793090719.960519908] [move_group]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[move_group-3] [INFO] [1793090719.960582900] [move_group]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[move_group-3] [INFO] [1793090719.960585584] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[move_group-3] [INFO] [1793090719.960595323] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[move_group-3] [INFO] [1793090719.960597090] [move_group]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[move_group-3] [INFO] [1793090719.960602032] [move_group]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[move_group-3] [INFO] [1793090719.961059957] [move_group]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[move_group-3] [INFO] [1793090719.961970633] [move_group]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[move_group-3] [INFO] [1793090719.961976207] [move_group]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[move_group-3] [INFO] [1793090719.962933001] [move_group]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[move_group-3] [INFO] [1793090719.962942382] [move_group]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[move_group-3] [INFO] [1793090719.963136472] [move_group]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[move_group-3] [WARN] [1793090719.963688206] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Parameter '~moveit_controller_manager' is not specified but only one matching plugin was found: 'moveit_simple_controller_manager/MoveItSimpleControllerManager'. Using that one.
+[move_group-3] [ERROR] [1793090719.968957072] [move_group.moveit.moveit.plugins.simple_controller_manager]: No controller_names specified.
+[move_group-3] [INFO] [1793090719.969064158] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 0 controllers in list
+[move_group-3] [INFO] [1793090719.969073372] [move_group.moveit.moveit.plugins.simple_controller_manager]: Returned 0 controllers in list
+[move_group-3] [INFO] [1793090719.969400998] [move_group.moveit.moveit.ros.trajectory_execution_manager]: Trajectory execution is managing controllers
+[move_group-3] [INFO] [1793090719.969412744] [move_group]: MoveGroup debug mode is ON
+[move_group-3] [INFO] [1793090719.978777795] [move_group.moveit.moveit.ros.move_group.executable]: 
+[move_group-3] 
+[move_group-3] ********************************************************
+[move_group-3] * MoveGroup using: 
+[move_group-3] *     - apply_planning_scene_service
+[move_group-3] *     - clear_octomap_service
+[move_group-3] *     - get_group_urdf
+[move_group-3] *     - load_geometry_from_file
+[move_group-3] *     - CartesianPathService
+[move_group-3] *     - execute_trajectory_action
+[move_group-3] *     - get_planning_scene_service
+[move_group-3] *     - kinematics_service
+[move_group-3] *     - move_action
+[move_group-3] *     - motion_plan_service
+[move_group-3] *     - query_planners_service
+[move_group-3] *     - state_validation_service
+[move_group-3] *     - save_geometry_to_file
+[move_group-3] ********************************************************
+[move_group-3] 
+[move_group-3] [INFO] [1793090719.978809339] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context using pipeline ompl
+[move_group-3] [INFO] [1793090719.978815531] [move_group.moveit.moveit.ros.move_group.context]: MoveGroup context initialization complete
+[move_group-3] [96mLoading 'move_group/ApplyPlanningSceneService'...[0m
+[move_group-3] [96mLoading 'move_group/ClearOctomapService'...[0m
+[move_group-3] [96mLoading 'move_group/GetUrdfService'...[0m
+[move_group-3] [96mLoading 'move_group/LoadGeometryFromFileService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupCartesianPathService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupExecuteTrajectoryAction'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupGetPlanningSceneService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupKinematicsService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupMoveAction'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupPlanService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupQueryPlannersService'...[0m
+[move_group-3] [96mLoading 'move_group/MoveGroupStateValidationService'...[0m
+[move_group-3] [96mLoading 'move_group/SaveGeometryToFileService'...[0m
+[move_group-3] 
+[move_group-3] [92mYou can start planning now![0m
+[move_group-3] 
+[joint_state_publisher-2] [INFO] [1793090720.099781194] [joint_state_publisher]: Waiting for robot_description to be published on the robot_description topic...
+[joint_state_publisher-2] [INFO] [1793090720.269027756] [joint_state_publisher]: Got description, configuring robot
+[rviz2-4] [INFO] [1793090720.310668363] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] [INFO] [1793090720.310733521] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[rviz2-4] [INFO] [1793090720.380985374] [rviz2]: Stereo is NOT SUPPORTED
+[rviz2-4] Warning: class_loader.impl: SEVERE WARNING!!! A namespace collision has occurred with plugin factory for class rviz_default_plugins::displays::InteractiveMarkerDisplay. New factory will OVERWRITE existing one. This situation occurs when libraries containing plugins are directly linked against an executable (the one running right now generating this message). Please separate plugins out into their own library or just don't link against the library and use either class_loader::ClassLoader/MultiLibraryClassLoader to open.
+[rviz2-4]          at line 322 in /opt/ros/lyrical/include/class_loader/class_loader/class_loader_core.hpp
+[rviz2-4] qt.core.qobject.connect: QObject::connect: No such signal QComboBox::activated(QString)
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (sender name:   'start_state_combo_box')
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (receiver name: 'MotionPlanningUI')
+[rviz2-4] qt.core.qobject.connect: QObject::connect: No such signal QComboBox::activated(QString)
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (sender name:   'goal_state_combo_box')
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (receiver name: 'MotionPlanningUI')
+[rviz2-4] qt.core.qobject.connect: QObject::connect: No such signal QComboBox::currentIndexChanged(QString)
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (sender name:   'planning_group_combo_box')
+[rviz2-4] qt.core.qobject.connect: QObject::connect:  (receiver name: 'MotionPlanningUI')
+[rviz2-4] [ERROR] [1793090723.440574238] [moveit_1503240006.moveit.ros.motion_planning_frame]: Action server: /recognize_objects not available
+[rviz2-4] [INFO] [1793090723.450289044] [moveit_1503240006.moveit.ros.motion_planning_frame]: MoveGroup namespace changed: / -> . Reloading params.
+[rviz2-4] [INFO] [1793090723.502784905] [moveit_1503240006.moveit.ros.rdf_loader]: Loaded robot model in 0.00469669 seconds
+[rviz2-4] [INFO] [1793090723.502832231] [moveit_1503240006.moveit.core.robot_model]: Loading robot model 'waffle_4wd'...
+[rviz2-4] [INFO] [1793090723.536276414] [moveit_1503240006.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'arm': 1 1 1 1 1
+[rviz2-4] [INFO] [1793090723.616943775] [moveit_1503240006.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[rviz2-4] [INFO] [1793090723.617377337] [moveit_1503240006.moveit.ros.planning_scene_monitor]: Listening to '/monitored_planning_scene'
+[rviz2-4] [INFO] [1793090726.376366618] [interactive_marker_display_98380149303008]: Connected on namespace: /rviz_moveit_motion_planning_display/robot_interaction_interactive_marker_topic
+[rviz2-4] [INFO] [1793090726.391815129] [moveit_1503240006.moveit.ros.motion_planning_frame]: group arm
+[rviz2-4] [INFO] [1793090726.391837437] [moveit_1503240006.moveit.ros.motion_planning_frame]: Constructing new MoveGroup connection for group 'arm' in namespace ''
+[rviz2-4] [INFO] [1793090726.397924832] [moveit_1503240006.moveit.ros.move_group_interface]: Ready to take commands for planning group arm.
+[rviz2-4] [INFO] [1793090726.486775048] [interactive_marker_display_98380149303008]: Sending request for interactive markers
+[rviz2-4] [INFO] [1793090726.523801537] [interactive_marker_display_98380149303008]: Service response received for initialization
+[robot_state_publisher-1] [INFO] [1793090738.809728089] [rclcpp]: signal_handler(signum=2)
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 1387237]
+[move_group-3] [INFO] [1793090756.453747241] [rclcpp]: signal_handler(signum=2)
+[rviz2-4] [INFO] [1793090756.453769172] [rclcpp]: signal_handler(signum=2)
+[move_group-3] [INFO] [1793090756.463189425] [move_group.moveit.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+[move_group-3] [INFO] [1793090756.467775079] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[move_group-3] [INFO] [1793090756.467947536] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor
+[move_group-3] [INFO] [1793090756.468006993] [move_group.moveit.moveit.ros.planning_scene_monitor]: Stopping planning scene monitor
+[move_group-3] Stack trace (most recent call last):
+[move_group-3] #11   Object "", at 0xffffffffffffffff, in 
+[rviz2-4] [WARN] [1793090756.496260664] [interactive_marker_display_98380149303008]: Server not available while running, resetting
+[rviz2-4] [INFO] [1793090756.567064778] [moveit_1503240006.moveit.ros.planning_scene_monitor]: Stopping planning scene monitor
+[INFO] [rviz2-4]: process has finished cleanly [pid 1387240]
+[move_group-3] #10   Object "/opt/ros/lyrical/lib/moveit_ros_move_group/move_group", at 0x5b3edd99da44, in _start
+[move_group-3] #9    Source "../csu/libc-start.c", line 360, in __libc_start_main_impl [0x7aabcc42a28a]
+[move_group-3] #8    Source "../sysdeps/nptl/libc_start_call_main.h", line 58, in __libc_start_call_main [0x7aabcc42a1c9]
+[move_group-3] #7    Object "/opt/ros/lyrical/lib/moveit_ros_move_group/move_group", at 0x5b3edd99c404, in main
+[move_group-3] #6    Object "/opt/ros/lyrical/lib/moveit_ros_move_group/move_group", at 0x5b3edd99db51, in 
+[move_group-3] #5    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabccd31dc4, in rclcpp::Node::~Node()
+[move_group-3] #4    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabcccde075, in 
+[move_group-3] #3    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabccd2fef0, in 
+[move_group-3] #2    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabccd2fe33, in rclcpp::node_interfaces::NodeBase::~NodeBase()
+[move_group-3] #1    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabcccde139, in 
+[move_group-3] #0    Object "/opt/ros/lyrical/lib/librclcpp.so", at 0x7aabccce2269, in rclcpp::CallbackGroup::~CallbackGroup()
+[move_group-3] Segmentation fault (Address not mapped to object [0x7aabb8112b20])
+[ERROR] [move_group-3]: process has died [pid 1387239, exit code -11, cmd '/opt/ros/lyrical/lib/moveit_ros_move_group/move_group --ros-args --params-file /tmp/launch_params_utf3zp94 --params-file /tmp/launch_params_bektoq8w'].

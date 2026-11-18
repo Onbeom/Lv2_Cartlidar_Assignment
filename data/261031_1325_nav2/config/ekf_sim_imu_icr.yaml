@@ -1,0 +1,24 @@
+# 설계 15(Isaac 실시간): 설계 14(팀 ekf.yaml 과 같은 vx + IMU yaw rate)에 회전 중심 보정 odom(nodes/icr_odom.py → /odom_icr)의 vy 를 더함.
+# 이유: live_nav_v12~v14 제자리 회전 때 회전 중심이 base_link 뒤 0.0786 m(뒤 바퀴 축) → base_link 옆 이동을 바퀴 odom 이 못 봄(실행마다 1.6~2.0 m).
+# (아래 두 줄은 설계 14 설명)
+# 설계 14(Isaac 실시간): 팀 dev bringup/config/ekf.yaml 과 같은 입력 구성 — 바퀴 odom 은 vx 만, 회전 속도는 IMU(/imu/data) yaw rate 만.
+# 이유: Isaac 실시간 설계 13(261101_0016_isaac_live/results/live_nav_v13)에서 전진하며 돌 때 바퀴 odom 회전이 참값의 1.40 배(제자리 회전 배수 1.15 보정 뒤에도).
+# 다른 점(팀 파일 대비): 없음. 장면의 IMU 는 차체 각속도 + 잡음 σ 0.0017 rad/s 만(바이어스 없음, 가정) — 실물 IMU 보다 좋은 입력.
+ekf_filter_node:
+  ros__parameters:
+    frequency: 50.0
+    two_d_mode: true
+    publish_tf: true
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+    odom0: /odom_icr
+    odom0_config: [false, false, false,  false, false, false,
+                   true,  true,  false,  false, false, false,
+                   false, false, false]
+    imu0: /imu/data
+    imu0_config: [false, false, false,  false, false, false,
+                  false, false, false,  false, false, true,
+                  false, false, false]
+    imu0_remove_gravitational_acceleration: true

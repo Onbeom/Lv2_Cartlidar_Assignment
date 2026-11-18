@@ -1,0 +1,38 @@
+{
+  "measured": {
+    "deadend": "A",
+    "cell_len_m": 0.734,
+    "backward_m": 0.73322816672265,
+    "side_max_mm": 0.009648990426310749,
+    "yaw_max_deg": 0.00015583841087892715,
+    "stop_time_s": 0.10399999999994236,
+    "min_clearance_mm": 118.49999999999997,
+    "min_clearance_t_s": 0.002,
+    "end_pose": [
+      -0.7335118531440501,
+      1.934190886816964e-05,
+      -0.0006645067016096466
+    ],
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 0.0,
+      "RMX52_Shoulder": 5e-05,
+      "RMX52_Elbow": 0.00183,
+      "RMX52_Wrist_Pitch": 0.0006,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "후진 거리 칸 길이 ± 10 %": true,
+    "옆 이탈 ≤ 10 mm": true,
+    "yaw 변화 ≤ 2°": true,
+    "정지 명령 뒤 0.5 s 안에 ≤ 0.005 m/s": true,
+    "최소 간격 ≥ 30 mm": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V5"
+}

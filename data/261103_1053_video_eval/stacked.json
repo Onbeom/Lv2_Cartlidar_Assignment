@@ -1,0 +1,650 @@
+{
+ "judge_front/judge_v1_f__025_000143.png": [
+  4,
+  5
+ ],
+ "judge_front/judge_v1_f__026_000149.png": [
+  1,
+  3
+ ],
+ "judge_front/judge_v2_f__091_000000.png": [
+  4,
+  5
+ ],
+ "judge_front/judge_v2_f__092_000006.png": [
+  4,
+  5
+ ],
+ "judge_front/judge_v2_f__099_000048.png": [
+  2,
+  3
+ ],
+ "judge_rear/judge_v1_r__028_000161.png": [
+  2,
+  3
+ ],
+ "judge_rear/judge_v1_r__029_000167.png": [
+  2,
+  5
+ ],
+ "judge_rear/judge_v2_r__142_000306.png": [
+  1,
+  2
+ ],
+ "judge_rear/judge_v2_r__143_000312.png": [
+  2,
+  4
+ ],
+ "judge_rear/judge_v2_r__145_000324.png": [
+  0,
+  3
+ ],
+ "judge_rear/judge_v2_r__154_000378.png": [
+  1,
+  2
+ ],
+ "judge_rear/judge_v2_r__163_000432.png": [
+  2,
+  3
+ ],
+ "judge_rear/judge_v2_r__169_000467.png": [
+  3,
+  4
+ ],
+ "judge_rear/judge_v2_r__170_000473.png": [
+  4,
+  5
+ ],
+ "judge_rear/judge_v2_r__171_000479.png": [
+  4,
+  5
+ ],
+ "judge_rear/judge_v2_r__177_000515.png": [
+  4,
+  5
+ ],
+ "judge_rear/judge_v2_r__179_000527.png": [
+  0,
+  2
+ ],
+ "video_front/front_v1__001_000000.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__002_000015.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__003_000030.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__004_000045.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__005_000060.png": [
+  0,
+  3
+ ],
+ "video_front/front_v1__006_000075.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__007_000090.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__008_000105.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__009_000120.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__012_000164.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__013_000179.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__014_000194.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__015_000209.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__016_000224.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__017_000239.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__018_000254.png": [
+  0,
+  1
+ ],
+ "video_front/front_v1__019_000269.png": [
+  0,
+  2
+ ],
+ "video_front/front_v1__020_000284.png": [
+  0,
+  2
+ ],
+ "video_front/front_v1__021_000299.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__022_000314.png": [
+  0,
+  2
+ ],
+ "video_front/front_v1__023_000329.png": [
+  0,
+  1
+ ],
+ "video_front/front_v1__024_000344.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__025_000359.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__026_000374.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__030_000434.png": [
+  0,
+  1
+ ],
+ "video_front/front_v1__031_000449.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__041_000599.png": [
+  0,
+  1
+ ],
+ "video_front/front_v1__042_000614.png": [
+  0,
+  3
+ ],
+ "video_front/front_v1__046_000674.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__049_000719.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__050_000734.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__051_000749.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__059_000869.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__060_000884.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__061_000899.png": [
+  0,
+  2
+ ],
+ "video_front/front_v1__062_000914.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__063_000929.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__064_000944.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__065_000959.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__066_000974.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__067_000989.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__068_001004.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__069_001019.png": [
+  1,
+  3
+ ],
+ "video_front/front_v1__070_001034.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__071_001049.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__073_001079.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__074_001094.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__075_001109.png": [
+  0,
+  3
+ ],
+ "video_front/front_v1__077_001139.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__078_001154.png": [
+  1,
+  2
+ ],
+ "video_front/front_v1__079_001169.png": [
+  2,
+  3
+ ],
+ "video_front/front_v1__080_001184.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__091_000000.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__092_000006.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__093_000012.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__094_000018.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__095_000024.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__099_000048.png": [
+  0,
+  2
+ ],
+ "video_front/front_v2__100_000054.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__102_000066.png": [
+  0,
+  2
+ ],
+ "video_front/front_v2__103_000072.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__104_000078.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__105_000084.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__106_000090.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__108_000102.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__126_000210.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__127_000216.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__128_000222.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__130_000234.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__131_000240.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__136_000270.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__137_000276.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__138_000282.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__139_000288.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__140_000294.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__141_000300.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__142_000306.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__143_000312.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__144_000318.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__152_000366.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__154_000378.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__155_000384.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__156_000390.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__157_000396.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__158_000402.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__159_000408.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__160_000414.png": [
+  0,
+  2
+ ],
+ "video_front/front_v2__161_000420.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__162_000426.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__163_000432.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__164_000438.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__165_000444.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__166_000450.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__167_000456.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__169_000468.png": [
+  1,
+  3
+ ],
+ "video_front/front_v2__170_000474.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__171_000480.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__172_000486.png": [
+  0,
+  3
+ ],
+ "video_front/front_v2__173_000491.png": [
+  0,
+  1
+ ],
+ "video_front/front_v2__174_000497.png": [
+  2,
+  3
+ ],
+ "video_front/front_v2__176_000509.png": [
+  1,
+  2
+ ],
+ "video_front/front_v2__177_000515.png": [
+  1,
+  2
+ ],
+ "video_front/front_v3__255_000444.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v1__199_000108.png": [
+  1,
+  2,
+  3
+ ],
+ "video_rear/rear_v1__200_000114.png": [
+  1,
+  3
+ ],
+ "video_rear/rear_v1__201_000120.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__202_000126.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__204_000138.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__205_000144.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__206_000150.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__222_000246.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__223_000252.png": [
+  1,
+  2,
+  3
+ ],
+ "video_rear/rear_v1__224_000258.png": [
+  1,
+  2,
+  3
+ ],
+ "video_rear/rear_v1__225_000264.png": [
+  1,
+  3
+ ],
+ "video_rear/rear_v1__229_000288.png": [
+  1,
+  2,
+  3
+ ],
+ "video_rear/rear_v1__230_000294.png": [
+  0,
+  3
+ ],
+ "video_rear/rear_v1__231_000300.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v1__235_000324.png": [
+  1,
+  3
+ ],
+ "video_rear/rear_v1__237_000336.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v1__238_000342.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v1__239_000348.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__104_000078.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__114_000138.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__117_000156.png": [
+  1,
+  3
+ ],
+ "video_rear/rear_v2__119_000168.png": [
+  0,
+  3
+ ],
+ "video_rear/rear_v2__120_000174.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__127_000216.png": [
+  0,
+  2
+ ],
+ "video_rear/rear_v2__134_000258.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__135_000264.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__136_000270.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__137_000276.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__138_000282.png": [
+  0,
+  2
+ ],
+ "video_rear/rear_v2__139_000288.png": [
+  1,
+  2
+ ],
+ "video_rear/rear_v2__151_000360.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__152_000366.png": [
+  0,
+  2
+ ],
+ "video_rear/rear_v2__153_000372.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__155_000384.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__156_000390.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__157_000396.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__158_000402.png": [
+  0,
+  1
+ ],
+ "video_rear/rear_v2__171_000479.png": [
+  2,
+  3
+ ],
+ "video_rear/rear_v2__176_000509.png": [
+  0,
+  3
+ ],
+ "video_rear/rear_v2__177_000515.png": [
+  0,
+  3
+ ],
+ "video_rear/rear_v2__178_000521.png": [
+  0,
+  1
+ ]
+}

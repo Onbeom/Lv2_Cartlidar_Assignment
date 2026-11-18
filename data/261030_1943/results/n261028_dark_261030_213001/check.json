@@ -1,0 +1,66 @@
+{
+  "T1": {
+    "counts": {
+      "/clock": 30761,
+      "/tf_static": 1,
+      "/joint_states": 25634,
+      "/tf": 23924,
+      "/odom": 15380,
+      "/top_camera_front/infra1/image_rect_raw": 15380,
+      "/top_camera_front/infra1/camera_info": 15380,
+      "/top_camera_front/infra2/image_rect_raw": 15380,
+      "/top_camera_front/infra2/camera_info": 15380,
+      "/scan_front": 5126,
+      "/scan_rear": 5126
+    },
+    "ratio_scan": {
+      "/scan_front": 0.9998049541642285,
+      "/scan_rear": 0.9998049541642285
+    },
+    "ratio_ir": {
+      "infra1": 1.0,
+      "infra2": 1.0
+    },
+    "ratio_js": 0.9999609908328457,
+    "ratio_odom": 0.9999349847214095,
+    "ir_stamp_pairs_equal": 1.0,
+    "rcvbuf_increase": 0
+  },
+  "T2_lidar": {
+    "/scan_front": {
+      "n_compared": 171095,
+      "median_abs_cm": 0.20954128374945924,
+      "p95_abs_cm": 11.600545494955862,
+      "median_signed_cm": -0.029837947325628278,
+      "own_body_deg_median": 15.300000788615089
+    },
+    "/scan_rear": {
+      "n_compared": 175400,
+      "median_abs_cm": 0.19018024797032296,
+      "p95_abs_cm": 10.461760335005392,
+      "median_signed_cm": -0.02183933301909413,
+      "own_body_deg_median": 12.60000064944772
+    }
+  },
+  "T3_odom": {
+    "go_truth_m": 46.30263816683193,
+    "go_odom_m": 46.4249286016547,
+    "turn_truth_rad": 76.19436088903538,
+    "turn_odom_rad": 87.8073937809495,
+    "go_ratio": 1.0026411116010743,
+    "turn_ratio": 1.1524132856606881
+  },
+  "T4_tf": {
+    "multi_parent": {},
+    "odom_child": [
+      "base_link"
+    ],
+    "static_reach_from_base_link": {
+      "base_footprint": true,
+      "laser_front": true,
+      "laser_rear": true,
+      "top_camera_front_infra1_optical_frame": true,
+      "top_camera_front_infra2_optical_frame": true
+    }
+  }
+}

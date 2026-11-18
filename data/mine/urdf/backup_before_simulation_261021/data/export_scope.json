@@ -1,0 +1,31 @@
+{
+  "status": "STRUCTURE_AND_NUMERIC_EXPORT_VALIDATED_RUNTIME_PENDING",
+  "engineering_units": {
+    "mass": "g",
+    "length": "mm",
+    "inertia": "g*mm^2",
+    "torque": "N*mm",
+    "angle": "rad"
+  },
+  "urdf_units": "ROS-required SI: m, kg, kg*m^2, rad. Engineering data is separately preserved in g/mm/g*mm^2.",
+  "source_cad": "C:\\Users\\qjaqj\\OneDrive\\Desktop\\Project2\\261020\\braket\\Assembly_Modular_261021.f3d",
+  "total_empty_mass_g": 4891.194067702904,
+  "puck_count_max": 12,
+  "payload_estimate_g": 803.52,
+  "loaded_estimate_g": 5694.714067702904,
+  "scope": "RViz/kinematic visualization candidate. Mass/inertia are estimates based on CAD and agreed density assumptions, not measurements.",
+  "gripper": "Equivalent opposite linear finger motion with right=-left mimic; internal crank linkage and motor-angle-to-gap mapping not simulated.",
+  "arm_limits": "Unverified provisional references remain in ROBOT_REVIEW_PENDING.json. Continuous CAD joints do not assert unlimited real motion.",
+  "actuator_effort_velocity": "Effort=0 until configured from verified hardware data. Velocity entries are provisional visualization values, not verified hardware limits.",
+  "collision": "Visual mesh reuse, not convex decomposition validated for Isaac/PhysX dynamics.",
+  "scripts": "ModularURDFReady.py is a WaffleExport internal module requiring its original API context. finalize_urdf_261021.py and audit_urdf_261021.py run standalone with Python+NumPy on this bundle. Run finalize then audit after regenerating the generic export.",
+  "pending": [
+    "ROS runtime and check_urdf on Ubuntu",
+    "RViz mesh appearance and joint_state behavior",
+    "Isaac Sim importer, convex collision and articulation drives",
+    "Hardware zero/sign calibration, hard stops, cable limits, torque-speed-current-thermal limits",
+    "Sensor optical frames, intrinsics/extrinsics, ROS sensor plugins",
+    "Print infill/wall-aware mass measurements, wiring and added fastener mass",
+    "Real grasp/load/dynamic tipping tests"
+  ]
+}

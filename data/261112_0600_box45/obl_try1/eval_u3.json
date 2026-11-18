@@ -1,0 +1,819 @@
+[
+ {
+  "image": "scene_000_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 8.149
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 41.696
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 216.908
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.5306015454180474,
+  "pb_yaw_deg": 0.015149861254619187,
+  "pb_pass": true,
+  "pb_est": [
+   0.574913,
+   0.000363,
+   0.035171
+  ]
+ },
+ {
+  "image": "scene_000_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 6.761
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 46.496
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 168.174
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.5027643583230637,
+  "pb_yaw_deg": 0.023113974606937645,
+  "pb_pass": true,
+  "pb_est": [
+   0.574964,
+   0.000374,
+   0.03531
+  ]
+ },
+ {
+  "image": "scene_014_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 6,
+  "stand": [
+   11,
+   3,
+   6,
+   9,
+   10
+  ],
+  "stand_px": [
+   19.053438727535177,
+   23.2402996769066,
+   26.899225197954255,
+   19.233541261867174,
+   28.35752945332749
+  ],
+  "lie": [
+   2
+  ],
+  "w640": {
+   "read": [
+    3,
+    10
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 8.482
+  },
+  "w960": {
+   "read": [
+    3,
+    6,
+    9,
+    10,
+    11
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 31.971
+  },
+  "w1280": {
+   "read": [
+    3,
+    6,
+    9,
+    10,
+    11
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 28.353
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.43292609068990395,
+  "pb_yaw_deg": 0.00873273394915391,
+  "pb_pass": true,
+  "pb_est": [
+   0.595027,
+   0.000336,
+   0.035059
+  ]
+ },
+ {
+  "image": "scene_014_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 6,
+  "stand": [
+   11,
+   3,
+   6,
+   9,
+   10
+  ],
+  "stand_px": [
+   19.053438727535177,
+   23.2402996769066,
+   26.899225197954255,
+   19.233541261867174,
+   28.35752945332749
+  ],
+  "lie": [
+   2
+  ],
+  "w640": {
+   "read": [
+    3,
+    6,
+    10
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 5.758
+  },
+  "w960": {
+   "read": [
+    3,
+    10
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 26.828
+  },
+  "w1280": {
+   "read": [
+    3,
+    6,
+    9,
+    10
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 23.803
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.48487627287797663,
+  "pb_yaw_deg": 0.023973411299633148,
+  "pb_pass": true,
+  "pb_est": [
+   0.594989,
+   0.000372,
+   0.035325
+  ]
+ },
+ {
+  "image": "scene_028_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 12.325
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 11.457
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 96.749
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.46962325325734544,
+  "pb_yaw_deg": 0.007908373781403988,
+  "pb_pass": true,
+  "pb_est": [
+   0.594975,
+   0.000339,
+   0.296844
+  ]
+ },
+ {
+  "image": "scene_028_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 9.757
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 11.492
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 165.386
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.44026582878990395,
+  "pb_yaw_deg": 0.020456149494773614,
+  "pb_pass": true,
+  "pb_est": [
+   0.595003,
+   0.000325,
+   0.297063
+  ]
+ },
+ {
+  "image": "scene_042_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 6,
+  "stand": [
+   5,
+   1,
+   4
+  ],
+  "stand_px": [
+   24.219864563551056,
+   29.27830578783344,
+   23.93645563687535
+  ],
+  "lie": [
+   11
+  ],
+  "w640": {
+   "read": [
+    1,
+    4,
+    5
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 15.918
+  },
+  "w960": {
+   "read": [
+    1,
+    4,
+    5
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 15.822
+  },
+  "w1280": {
+   "read": [
+    1,
+    4,
+    5
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 19.291
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.4757856660304615,
+  "pb_yaw_deg": 0.0056262874540670355,
+  "pb_pass": true,
+  "pb_est": [
+   0.594996,
+   0.000366,
+   -0.226991
+  ]
+ },
+ {
+  "image": "scene_042_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 6,
+  "stand": [
+   5,
+   1,
+   4
+  ],
+  "stand_px": [
+   24.219864563551056,
+   29.27830578783344,
+   23.93645563687535
+  ],
+  "lie": [
+   11
+  ],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 12.84
+  },
+  "w960": {
+   "read": [
+    1,
+    4
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 11.658
+  },
+  "w1280": {
+   "read": [
+    1,
+    4,
+    5
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 26.637
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.450800399290036,
+  "pb_yaw_deg": 0.008010108070044292,
+  "pb_pass": true,
+  "pb_est": [
+   0.59503,
+   0.000361,
+   -0.226753
+  ]
+ },
+ {
+  "image": "scene_056_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 8.326
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 12.204
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 161.261
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.4406551940009897,
+  "pb_yaw_deg": 0.01978770697797184,
+  "pb_pass": true,
+  "pb_est": [
+   0.594996,
+   0.000319,
+   0.55816
+  ]
+ },
+ {
+  "image": "scene_056_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 4.726
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 34.978
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 107.294
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.43765283044902253,
+  "pb_yaw_deg": 0.03485649698991325,
+  "pb_pass": true,
+  "pb_est": [
+   0.595008,
+   0.000326,
+   0.557897
+  ]
+ },
+ {
+  "image": "scene_070_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 6,
+  "stand": [
+   0,
+   4,
+   6,
+   9
+  ],
+  "stand_px": [
+   23.36979604554534,
+   23.962496812805647,
+   21.987438180975857,
+   19.217956548290832
+  ],
+  "lie": [
+   1,
+   11
+  ],
+  "w640": {
+   "read": [
+    4
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 7.157
+  },
+  "w960": {
+   "read": [
+    0,
+    4,
+    6,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    1
+   ],
+   "ms": 48.119
+  },
+  "w1280": {
+   "read": [
+    0,
+    4,
+    6,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    1
+   ],
+   "ms": 20.958
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.5737848028660121,
+  "pb_yaw_deg": 0.062234134743983094,
+  "pb_pass": true,
+  "pb_est": [
+   0.575015,
+   0.000498,
+   -0.487606
+  ]
+ },
+ {
+  "image": "scene_070_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 6,
+  "stand": [
+   0,
+   4,
+   6,
+   9
+  ],
+  "stand_px": [
+   23.36979604554534,
+   23.962496812805647,
+   21.987438180975857,
+   19.217956548290832
+  ],
+  "lie": [
+   1,
+   11
+  ],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [
+    1
+   ],
+   "ms": 6.179
+  },
+  "w960": {
+   "read": [
+    4,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    1
+   ],
+   "ms": 20.086
+  },
+  "w1280": {
+   "read": [
+    0,
+    4,
+    6,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    1
+   ],
+   "ms": 25.056
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.5229196879063198,
+  "pb_yaw_deg": 0.08137092510135582,
+  "pb_pass": true,
+  "pb_est": [
+   0.575027,
+   0.000446,
+   -0.487272
+  ]
+ },
+ {
+  "image": "scene_084_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 4.581
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 11.913
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 158.919
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.49851078223046863,
+  "pb_yaw_deg": 0.009143166389911568,
+  "pb_pass": true,
+  "pb_est": [
+   0.569947,
+   0.000352,
+   -0.750332
+  ]
+ },
+ {
+  "image": "scene_084_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 0,
+  "stand": [],
+  "stand_px": [],
+  "lie": [],
+  "w640": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 4.658
+  },
+  "w960": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 11.542
+  },
+  "w1280": {
+   "read": [],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 95.741
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.4971005934416602,
+  "pb_yaw_deg": 0.014586265443651882,
+  "pb_pass": true,
+  "pb_est": [
+   0.56995,
+   0.000353,
+   -0.750237
+  ]
+ },
+ {
+  "image": "scene_098_L0.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 0,
+  "n_pucks": 6,
+  "stand": [
+   2,
+   9,
+   1,
+   4,
+   7
+  ],
+  "stand_px": [
+   20.918425091932054,
+   18.48822732839523,
+   28.749057550956863,
+   25.477219714210072,
+   19.91431846931806
+  ],
+  "lie": [
+   3
+  ],
+  "w640": {
+   "read": [
+    1,
+    2,
+    4
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 6.36
+  },
+  "w960": {
+   "read": [
+    1,
+    2,
+    4,
+    7
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 14.223
+  },
+  "w1280": {
+   "read": [
+    1,
+    2,
+    4,
+    7,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    3
+   ],
+   "ms": 27.449
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.5071380482669433,
+  "pb_yaw_deg": 0.001981193950780247,
+  "pb_pass": true,
+  "pb_est": [
+   0.569933,
+   0.00035,
+   -0.750457
+  ]
+ },
+ {
+  "image": "scene_098_L1.png",
+  "kind": "judge",
+  "cam_dz": 0.0,
+  "corner": true,
+  "light": 1,
+  "n_pucks": 6,
+  "stand": [
+   2,
+   9,
+   1,
+   4,
+   7
+  ],
+  "stand_px": [
+   20.918425091932054,
+   18.48822732839523,
+   28.749057550956863,
+   25.477219714210072,
+   19.91431846931806
+  ],
+  "lie": [
+   3
+  ],
+  "w640": {
+   "read": [
+    1,
+    4
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 6.669
+  },
+  "w960": {
+   "read": [
+    1,
+    2,
+    4
+   ],
+   "wrong": [],
+   "lie_read": [],
+   "ms": 13.229
+  },
+  "w1280": {
+   "read": [
+    1,
+    2,
+    4,
+    9
+   ],
+   "wrong": [],
+   "lie_read": [
+    3
+   ],
+   "ms": 47.237
+  },
+  "pb_ok": true,
+  "pb_center_mm": 0.49774893269604714,
+  "pb_yaw_deg": 0.0002623205653892391,
+  "pb_pass": true,
+  "pb_est": [
+   0.569923,
+   0.000325,
+   -0.750487
+  ]
+ }
+]

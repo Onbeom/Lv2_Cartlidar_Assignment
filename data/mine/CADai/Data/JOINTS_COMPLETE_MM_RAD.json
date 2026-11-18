@@ -1,0 +1,501 @@
+{
+  "links": 23,
+  "joints": [
+    {
+      "name": "Wheel_Revolute_Front_Left",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_front_left",
+      "origin_parent_mm": [
+        80.0,
+        139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "limit_unit": "rad",
+      "effort": 2700.0,
+      "effort_unit": "N*mm",
+      "velocity": 2.0,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "Wheel_Revolute_Front_Right",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_front_right",
+      "origin_parent_mm": [
+        80.0,
+        -139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "limit_unit": "rad",
+      "effort": 2700.0,
+      "effort_unit": "N*mm",
+      "velocity": 2.0,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Left",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_rear_left",
+      "origin_parent_mm": [
+        -80.0,
+        139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "limit_unit": "rad",
+      "effort": 2700.0,
+      "effort_unit": "N*mm",
+      "velocity": 2.0,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Right",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_rear_right",
+      "origin_parent_mm": [
+        -80.0,
+        -139.6,
+        26.25
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": 0.0,
+      "upper": 0.0,
+      "limit_unit": "rad",
+      "effort": 2700.0,
+      "effort_unit": "N*mm",
+      "velocity": 2.0,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "RMX52_Base_Yaw",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "arm_link_1",
+      "origin_parent_mm": [
+        87.0,
+        0.0,
+        152.35000000000002
+      ],
+      "rpy_rad": [
+        3.141593,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": -3.141592653589793,
+      "upper": 3.141592653589793,
+      "limit_unit": "rad",
+      "effort": 3800.0,
+      "effort_unit": "N*mm",
+      "velocity": 0.5,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "lidar_front_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "lidar_front",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "lidar_rear_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "lidar_rear",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "RMX52_Shoulder",
+      "type": "revolute",
+      "parent": "arm_link_1",
+      "child": "arm_link_2",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        -38.150000000000006
+      ],
+      "rpy_rad": [
+        -1.570796,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": -1.5,
+      "upper": 1.5,
+      "limit_unit": "rad",
+      "effort": 3800.0,
+      "effort_unit": "N*mm",
+      "velocity": 0.5,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "RMX52_Elbow",
+      "type": "revolute",
+      "parent": "arm_link_2",
+      "child": "arm_link_3",
+      "origin_parent_mm": [
+        24.0,
+        128.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": -1.4,
+      "upper": 1.5,
+      "limit_unit": "rad",
+      "effort": 3800.0,
+      "effort_unit": "N*mm",
+      "velocity": 0.5,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "RMX52_Wrist_Pitch",
+      "type": "revolute",
+      "parent": "arm_link_3",
+      "child": "arm_link_4",
+      "origin_parent_mm": [
+        124.0,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": -1.97,
+      "upper": 1.7,
+      "limit_unit": "rad",
+      "effort": 3800.0,
+      "effort_unit": "N*mm",
+      "velocity": 0.5,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "RMX52_Wrist_Roll_Reversed",
+      "type": "revolute",
+      "parent": "arm_link_4",
+      "child": "arm_link_5",
+      "origin_parent_mm": [
+        68.4,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        -3.141593,
+        1.570796,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "lower": -3.141592653589793,
+      "upper": 3.141592653589793,
+      "limit_unit": "rad",
+      "effort": 3800.0,
+      "effort_unit": "N*mm",
+      "velocity": 0.5,
+      "velocity_unit": "rad/s"
+    },
+    {
+      "name": "gripper_left_joint",
+      "type": "prismatic",
+      "parent": "arm_link_5",
+      "child": "gripper_left_link",
+      "origin_parent_mm": [
+        16.114,
+        0.0,
+        -57.7
+      ],
+      "rpy_rad": [
+        1.570796,
+        1.570796,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": -1.4138696828300006,
+      "upper": 26.186130317169997,
+      "limit_unit": "mm",
+      "effort": 10.0,
+      "effort_unit": "N",
+      "velocity": 10.0,
+      "velocity_unit": "mm/s"
+    },
+    {
+      "name": "gripper_right_joint",
+      "type": "prismatic",
+      "parent": "arm_link_5",
+      "child": "gripper_right_link",
+      "origin_parent_mm": [
+        -16.114,
+        0.0,
+        -57.7
+      ],
+      "rpy_rad": [
+        1.570796,
+        1.570796,
+        0.0
+      ],
+      "axis_child": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "lower": -26.186130317169997,
+      "upper": 1.4138696828300006,
+      "limit_unit": "mm",
+      "effort": 10.0,
+      "effort_unit": "N",
+      "velocity": 10.0,
+      "velocity_unit": "mm/s"
+    },
+    {
+      "name": "camera_link_fixed",
+      "type": "fixed",
+      "parent": "arm_link_5",
+      "child": "camera_link",
+      "origin_parent_mm": [
+        0.00014326622052035447,
+        -49.15429463926091,
+        -33.01610251464193
+      ],
+      "rpy_rad": [
+        3.1415921537716143,
+        0.858163666456628,
+        1.5707966218158638
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "camera_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "camera_link",
+      "child": "camera_optical_frame",
+      "origin_parent_mm": [
+        3.642919299551295e-14,
+        0.0,
+        0.0
+      ],
+      "rpy_rad": [
+        -1.5707963267948966,
+        -0.0,
+        -1.5707963267948966
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "top_camera_rear_link_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "top_camera_rear_link",
+      "origin_parent_mm": [
+        -220.40974009237,
+        0.0037923139024997887,
+        483.6225977941945
+      ],
+      "rpy_rad": [
+        0.0,
+        0.6144098103468598,
+        3.1415906941844423
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "top_camera_rear_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_rear_link",
+      "child": "top_camera_rear_optical_frame",
+      "origin_parent_mm": [
+        1.3877787807814457e-14,
+        4.2351647362715017e-19,
+        -1.1102230246251565e-13
+      ],
+      "rpy_rad": [
+        -1.5707963267948966,
+        6.574231875722419e-23,
+        -1.5707963267948966
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "top_camera_front_link_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "top_camera_front_link",
+      "origin_parent_mm": [
+        -60.59025990763,
+        0.0037923139024997887,
+        483.6225977941945
+      ],
+      "rpy_rad": [
+        0.0,
+        0.6144098103468598,
+        1.9594053509349003e-06
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "top_camera_front_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_front_link",
+      "child": "top_camera_front_optical_frame",
+      "origin_parent_mm": [
+        -5.551115123125783e-14,
+        0.0,
+        -5.551115123125783e-14
+      ],
+      "rpy_rad": [
+        -1.5707963267948966,
+        -6.574231875722419e-23,
+        -1.5707963267948966
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "lidar_front_scan_fixed",
+      "type": "fixed",
+      "parent": "lidar_front",
+      "child": "lidar_front_scan",
+      "origin_parent_mm": [
+        185.5,
+        50.0,
+        60.85
+      ],
+      "rpy_rad": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "lidar_rear_scan_fixed",
+      "type": "fixed",
+      "parent": "lidar_rear",
+      "child": "lidar_rear_scan",
+      "origin_parent_mm": [
+        -185.5,
+        -50.0,
+        60.85
+      ],
+      "rpy_rad": [
+        0.0,
+        -0.0,
+        3.141592653589793
+      ],
+      "axis_child": null
+    },
+    {
+      "name": "base_footprint_to_base_link",
+      "type": "fixed",
+      "parent": "base_footprint",
+      "child": "base_link",
+      "origin_parent_mm": [
+        0.0,
+        0.0,
+        6.749981675400001
+      ],
+      "rpy_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "axis_child": null
+    }
+  ],
+  "warning": "Continuous wheel lower/upper fields are unused. Arm bounded references and finger force are provisional."
+}

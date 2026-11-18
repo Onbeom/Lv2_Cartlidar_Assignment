@@ -1,0 +1,103 @@
+{
+  "test": "M7",
+  "engine": "MuJoCo",
+  "mujoco_version": "3.16.0",
+  "urdf": "/home/pa4/git/lv2_next_module/261022_2119/mujoco/drive/waffle_4wd_mujoco_drive.urdf",
+  "steps_recorded": 600,
+  "expected_steps": 600,
+  "nonfinite_first_t": null,
+  "wall_time_s": 0.44010114669799805,
+  "video": true,
+  "viewer": false,
+  "schedule": [
+    [
+      1.0,
+      5.0,
+      {
+        "Wheel_Revolute_Front_Left": -1.0,
+        "Wheel_Revolute_Front_Right": 1.0,
+        "Wheel_Revolute_Rear_Left": -1.0,
+        "Wheel_Revolute_Rear_Right": 1.0
+      },
+      "spin CCW"
+    ]
+  ],
+  "model": {
+    "nq": 18,
+    "nv": 17,
+    "nu": 10,
+    "neq": 1,
+    "ngeom": 543,
+    "total_mass_kg": 4.891194067702903,
+    "weight_N": 47.98261380416548,
+    "wheels": [
+      "Wheel_Revolute_Front_Left",
+      "Wheel_Revolute_Front_Right",
+      "Wheel_Revolute_Rear_Left",
+      "Wheel_Revolute_Rear_Right"
+    ],
+    "arm": [
+      "RMX52_Base_Yaw",
+      "RMX52_Shoulder",
+      "RMX52_Elbow",
+      "RMX52_Wrist_Pitch",
+      "RMX52_Wrist_Roll_Reversed"
+    ],
+    "wheel_tire_radius_m": {
+      "Wheel_Revolute_Front_Left": 0.03300062166262079,
+      "Wheel_Revolute_Front_Right": 0.03300062152920693,
+      "Wheel_Revolute_Rear_Left": 0.03300062166262079,
+      "Wheel_Revolute_Rear_Right": 0.03300062152920693
+    },
+    "wheel_xy_at_start_m": {
+      "Wheel_Revolute_Front_Left": [
+        0.08,
+        0.1396
+      ],
+      "Wheel_Revolute_Front_Right": [
+        0.08,
+        -0.1396
+      ],
+      "Wheel_Revolute_Rear_Left": [
+        -0.08,
+        0.1396
+      ],
+      "Wheel_Revolute_Rear_Right": [
+        -0.08,
+        -0.1396
+      ]
+    }
+  },
+  "conditions": {
+    "dt_s": 0.008333333333333333,
+    "wheel_armature_kgm2": 0.0163,
+    "arm_armature_kgm2": 0.045,
+    "gravity": 9.81,
+    "mu_slide": 0.3,
+    "mu_torsion": 0.005,
+    "mu_roll": 0.0001,
+    "condim": 3,
+    "cone": "pyramidal",
+    "integrator": "implicitfast",
+    "solref_default": [
+      0.02,
+      1.0
+    ],
+    "solimp_default": [
+      0.9,
+      0.95,
+      0.001,
+      0.5,
+      2.0
+    ],
+    "wheel_kv": 1.0,
+    "wheel_torque_Nm": 2.7,
+    "wheel_rate_limit_rad_s": 7.330382858376184,
+    "arm_kp": 400.0,
+    "arm_kv": 24.0,
+    "arm_torque_Nm": 3.8,
+    "gripper_left_kp": 1000.0,
+    "gripper_left_kv": 10.0,
+    "settle_s": 1.0
+  }
+}

@@ -1,0 +1,109 @@
+{
+ "turn_rot_scale_median": 1.1551,
+ "x_icr_median": -0.07869999999999999,
+ "straight_scale_median": 1.0,
+ "segments": [
+  {
+   "cmd_v": 0.0,
+   "cmd_w": 0.3,
+   "window_s": 4.17,
+   "true_w": 0.1434,
+   "odom_w": 0.1766,
+   "rot_scale_odom_over_true": 1.2315,
+   "true_over_cmd": 0.478,
+   "x_icr": -0.0771,
+   "base_circle_radius": 0.0121
+  },
+  {
+   "cmd_v": 0.0,
+   "cmd_w": -0.3,
+   "window_s": 4.18,
+   "true_w": -0.146,
+   "odom_w": -0.1769,
+   "rot_scale_odom_over_true": 1.212,
+   "true_over_cmd": 0.4865,
+   "x_icr": -0.0772,
+   "base_circle_radius": 0.0121
+  },
+  {
+   "cmd_v": 0.0,
+   "cmd_w": 0.5,
+   "window_s": 4.18,
+   "true_w": 0.3223,
+   "odom_w": 0.3742,
+   "rot_scale_odom_over_true": 1.161,
+   "true_over_cmd": 0.6447,
+   "x_icr": -0.0786,
+   "base_circle_radius": 0.0265
+  },
+  {
+   "cmd_v": 0.0,
+   "cmd_w": -0.5,
+   "window_s": 4.18,
+   "true_w": -0.3245,
+   "odom_w": -0.373,
+   "rot_scale_odom_over_true": 1.1492,
+   "true_over_cmd": 0.6491,
+   "x_icr": -0.0788,
+   "base_circle_radius": 0.0265
+  },
+  {
+   "cmd_v": 0.0,
+   "cmd_w": 0.8,
+   "window_s": 4.18,
+   "true_w": 0.6002,
+   "odom_w": 0.6736,
+   "rot_scale_odom_over_true": 1.1224,
+   "true_over_cmd": 0.7502,
+   "x_icr": -0.0788,
+   "base_circle_radius": 0.0467
+  },
+  {
+   "cmd_v": 0.0,
+   "cmd_w": -0.8,
+   "window_s": 4.18,
+   "true_w": -0.6003,
+   "odom_w": -0.6763,
+   "rot_scale_odom_over_true": 1.1265,
+   "true_over_cmd": 0.7504,
+   "x_icr": -0.0789,
+   "base_circle_radius": 0.0469
+  },
+  {
+   "cmd_v": 0.1,
+   "cmd_w": 0.0,
+   "window_s": 3.2,
+   "true_v": 0.1,
+   "odom_over_true": 1.0019,
+   "true_over_cmd": 0.9998,
+   "yaw_drift_rad": -0.0001
+  },
+  {
+   "cmd_v": -0.1,
+   "cmd_w": 0.0,
+   "window_s": 3.16,
+   "true_v": 0.1,
+   "odom_over_true": 0.9985,
+   "true_over_cmd": 0.9998,
+   "yaw_drift_rad": -0.0001
+  },
+  {
+   "cmd_v": 0.2,
+   "cmd_w": 0.0,
+   "window_s": 3.16,
+   "true_v": 0.2,
+   "odom_over_true": 1.0008,
+   "true_over_cmd": 1.0001,
+   "yaw_drift_rad": -0.0001
+  },
+  {
+   "cmd_v": -0.2,
+   "cmd_w": 0.0,
+   "window_s": 3.2,
+   "true_v": 0.2,
+   "odom_over_true": 0.9992,
+   "true_over_cmd": 0.9999,
+   "yaw_drift_rad": -0.0001
+  }
+ ]
+}

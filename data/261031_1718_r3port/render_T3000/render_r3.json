@@ -1,0 +1,7780 @@
+{
+ "image_codec": "png",
+ "jpeg_quality": null,
+ "mission": true,
+ "urdf": "/home/pa4/git/lv2_next_module/261029_1030/urdf_261028/isaac/urdf/waffle_4wd_light.urdf",
+ "robot_usd": "/home/pa4/git/lv2_next_module/261029_1030/urdf_261028/isaac/usd/light/waffle_4wd_light/waffle_4wd_light.usda",
+ "unreachable": [],
+ "width": 640,
+ "height": 480,
+ "lights": [
+  0.0,
+  1.0
+ ],
+ "seed": 20261027,
+ "arm_q": {
+  "joint1": 0.0,
+  "joint2": -1.35,
+  "joint3": 1.1497,
+  "joint4": 0.8094,
+  "joint5": 0.0,
+  "gripper_roll": 0.0,
+  "gripper_left_joint": 0.0,
+  "gripper_right_joint": 0.0
+ },
+ "d435": {
+  "frame": "top_camera_front_color_optical_frame",
+  "K": {
+   "fx": 605.850769,
+   "fy": 605.67987,
+   "cx": 324.365814,
+   "cy": 245.139175,
+   "w": 640,
+   "h": 480
+  }
+ },
+ "arm": {
+  "frame": "arm_camera_optical_frame",
+  "K": {
+   "fx": 636.0,
+   "fy": 636.0,
+   "cx": 960.0,
+   "cy": 540.0,
+   "w": 1920,
+   "h": 1080
+  }
+ },
+ "labels": [
+  {
+   "text": "P2-01",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000"
+  },
+  {
+   "text": "P2-02",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000"
+  },
+  {
+   "text": "P2-03",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000"
+  },
+  {
+   "text": "P2-04",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000"
+  },
+  {
+   "text": "P2-02",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000"
+  },
+  {
+   "text": "P2-04",
+   "where": "wall",
+   "center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "normal": [
+    1.0,
+    0.0,
+    0.0
+   ],
+   "u": [
+    0.0,
+    1.0,
+    0.0
+   ],
+   "size": [
+    0.0648,
+    0.0177
+   ],
+   "prim": "/World/Barcodes/barcode_0",
+   "source": "world",
+   "hide_pucks": [],
+   "id": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000"
+  }
+ ],
+ "poses": [
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e00_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 152.61,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     8.900834944647143e-11,
+     -9.793077081193939e-10,
+     -1.0000000000000002,
+     0.09390400000587844
+    ],
+    [
+     -0.8878600258483611,
+     0.4601136538949348,
+     -5.296197836705857e-10,
+     0.6836770483298142
+    ],
+    [
+     0.46011365389493475,
+     0.887860025848361,
+     -8.285341893500153e-10,
+     0.10754751355386827
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.449355,
+    "joint3": 0.470991,
+    "joint4": -0.68849,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.44163729746406455
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.7768519045616133
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    949.0,
+    540.0
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.4473,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      34.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e02_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 152.61,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     8.887869217289449e-11,
+     -9.79502335808675e-10,
+     -1.0000000000000002,
+     0.1139040000059256
+    ],
+    [
+     -0.8878600258470756,
+     0.4601136538974152,
+     -5.295942662366752e-10,
+     0.6836770483294545
+    ],
+    [
+     0.46011365389741526,
+     0.8878600258470758,
+     -8.28766588898708e-10,
+     0.10754751355390983
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.449355,
+    "joint3": 0.470991,
+    "joint4": -0.68849,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.46163729746406457
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.7768519045616133
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    951.0,
+    540.0
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.4668,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      36.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e04_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 122.06,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     1.32475601477492e-10,
+     -2.6815369368288474e-09,
+     -0.9999999999999999,
+     0.13390400013896492
+    ],
+    [
+     -0.5308091216155331,
+     0.8474914019680354,
+     -2.342898773142401e-09,
+     0.6836770484319868
+    ],
+    [
+     0.8474914019680354,
+     0.5308091216155331,
+     -1.3111123020979643e-09,
+     0.10754751359612401
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.300311,
+    "joint2": 0.60505,
+    "joint3": 0.966586,
+    "joint4": -1.433823,
+    "joint5": -2.114877,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     0.4999999999999997,
+     0.0,
+     0.4110321292110204
+    ],
+    [
+     -0.4999999999999997,
+     -0.8660254037844388,
+     0.0,
+     0.8436770483247058
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    953.5,
+    543.8
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.4369,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      40.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e00_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": -114.63,
+   "module_px": 4.292,
+   "T_world_cam": [
+    [
+     0.18236587852762925,
+     0.18365724010916312,
+     -0.9659258276411968,
+     0.086007695379299
+    ],
+    [
+     -0.40982895372599576,
+     -0.8787928510817372,
+     -0.24446544454275634,
+     0.7069685507746675
+    ],
+    [
+     -0.8937465608530764,
+     0.44044652688279545,
+     -0.08499377577317874,
+     0.11195975742004627
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.27067,
+    "joint2": 0.63667,
+    "joint3": 0.610152,
+    "joint4": -1.049454,
+    "joint5": 1.994819,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     -0.2588190451025208,
+     0.0,
+     0.43374099269863536
+    ],
+    [
+     0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.6137936946564676
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    949.5,
+    554.4
+   ],
+   "cam_dist_m": 0.0851,
+   "base_hdist_m": 0.4357,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      37.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e02_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": -153.96,
+   "module_px": 3.467,
+   "T_world_cam": [
+    [
+     0.2570884855848512,
+     0.029900995357657598,
+     -0.965925173632155,
+     0.10532621155915654
+    ],
+    [
+     -0.8683113447741092,
+     -0.431590985206892,
+     -0.24446805522342238,
+     0.7118578766764887
+    ],
+    [
+     -0.4241944355083711,
+     0.901573708558965,
+     -0.0849936992898219,
+     0.11365966135283885
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.131513,
+    "joint2": 0.402972,
+    "joint3": 0.360401,
+    "joint4": -0.442461,
+    "joint5": 2.678167,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.46532621176035216
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7118578599022494
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    960.6,
+    554.4
+   ],
+   "cam_dist_m": 0.1051,
+   "base_hdist_m": 0.4622,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      35.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e04_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": 120.97,
+   "module_px": 2.909,
+   "T_world_cam": [
+    [
+     0.05472935266264214,
+     -0.2529663935671253,
+     -0.9659258261806496,
+     0.12464472829152222
+    ],
+    [
+     -0.5138901265572456,
+     0.8222855837118175,
+     -0.2444654508242289,
+     0.7167471689224088
+    ],
+    [
+     0.8561084252500415,
+     0.5097591809328772,
+     -0.08499377430456947,
+     0.1153595083270808
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.307853,
+    "joint2": 0.452932,
+    "joint3": 0.967511,
+    "joint4": -1.204747,
+    "joint5": -2.073222,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.3509188982658288
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9430213388908187
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w101_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    972.1,
+    540.7
+   ],
+   "cam_dist_m": 0.1251,
+   "base_hdist_m": 0.4324,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      40.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e00_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 152.61,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     8.900834944647143e-11,
+     -9.793077081193939e-10,
+     -1.0000000000000002,
+     0.09390400000587844
+    ],
+    [
+     -0.8878600258483611,
+     0.4601136538949348,
+     -5.296197836705857e-10,
+     0.6836770483298142
+    ],
+    [
+     0.46011365389493475,
+     0.887860025848361,
+     -8.285341893500153e-10,
+     0.10754751355386827
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.449355,
+    "joint3": 0.470991,
+    "joint4": -0.68849,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.44163729746406455
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.7768519045616133
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    949.0,
+    540.0
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.4473,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      70.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e02_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 152.61,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     8.887869217289449e-11,
+     -9.79502335808675e-10,
+     -1.0000000000000002,
+     0.1139040000059256
+    ],
+    [
+     -0.8878600258470756,
+     0.4601136538974152,
+     -5.295942662366752e-10,
+     0.6836770483294545
+    ],
+    [
+     0.46011365389741526,
+     0.8878600258470758,
+     -8.28766588898708e-10,
+     0.10754751355390983
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.449355,
+    "joint3": 0.470991,
+    "joint4": -0.68849,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.46163729746406457
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.7768519045616133
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    951.0,
+    540.0
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.4668,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      73.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e04_t00",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 88.32,
+   "roll_deg": 2.14,
+   "flip": false,
+   "roll_actual_deg": 122.06,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     1.32475601477492e-10,
+     -2.6815369368288474e-09,
+     -0.9999999999999999,
+     0.13390400013896492
+    ],
+    [
+     -0.5308091216155331,
+     0.8474914019680354,
+     -2.342898773142401e-09,
+     0.6836770484319868
+    ],
+    [
+     0.8474914019680354,
+     0.5308091216155331,
+     -1.3111123020979643e-09,
+     0.10754751359612401
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.300311,
+    "joint2": 0.60505,
+    "joint3": 0.966586,
+    "joint4": -1.433823,
+    "joint5": -2.114877,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     0.4999999999999997,
+     0.0,
+     0.4110321292110204
+    ],
+    [
+     -0.4999999999999997,
+     -0.8660254037844388,
+     0.0,
+     0.8436770483247058
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    953.5,
+    543.8
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.4369,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      78.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e00_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": -114.63,
+   "module_px": 4.292,
+   "T_world_cam": [
+    [
+     0.18236587852762925,
+     0.18365724010916312,
+     -0.9659258276411968,
+     0.086007695379299
+    ],
+    [
+     -0.40982895372599576,
+     -0.8787928510817372,
+     -0.24446544454275634,
+     0.7069685507746675
+    ],
+    [
+     -0.8937465608530764,
+     0.44044652688279545,
+     -0.08499377577317874,
+     0.11195975742004627
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.27067,
+    "joint2": 0.63667,
+    "joint3": 0.610152,
+    "joint4": -1.049454,
+    "joint5": 1.994819,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     -0.2588190451025208,
+     0.0,
+     0.43374099269863536
+    ],
+    [
+     0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.6137936946564676
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    949.5,
+    554.4
+   ],
+   "cam_dist_m": 0.0851,
+   "base_hdist_m": 0.4357,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      81.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e02_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": -153.96,
+   "module_px": 3.467,
+   "T_world_cam": [
+    [
+     0.2570884855848512,
+     0.029900995357657598,
+     -0.965925173632155,
+     0.10532621155915654
+    ],
+    [
+     -0.8683113447741092,
+     -0.431590985206892,
+     -0.24446805522342238,
+     0.7118578766764887
+    ],
+    [
+     -0.4241944355083711,
+     0.901573708558965,
+     -0.0849936992898219,
+     0.11365966135283885
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.131513,
+    "joint2": 0.402972,
+    "joint3": 0.360401,
+    "joint4": -0.442461,
+    "joint5": 2.678167,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.46532621176035216
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7118578599022494
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    960.6,
+    554.4
+   ],
+   "cam_dist_m": 0.1051,
+   "base_hdist_m": 0.4622,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      74.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w101_b0_wall_a_e04_t15",
+   "label": "w101_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_101_T3000",
+   "seed": 101,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 19.17,
+   "roll_deg": -0.65,
+   "flip": false,
+   "roll_actual_deg": 120.97,
+   "module_px": 2.909,
+   "T_world_cam": [
+    [
+     0.05472935266264214,
+     -0.2529663935671253,
+     -0.9659258261806496,
+     0.12464472829152222
+    ],
+    [
+     -0.5138901265572456,
+     0.8222855837118175,
+     -0.2444654508242289,
+     0.7167471689224088
+    ],
+    [
+     0.8561084252500415,
+     0.5097591809328772,
+     -0.08499377430456947,
+     0.1153595083270808
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.307853,
+    "joint2": 0.452932,
+    "joint3": 0.967511,
+    "joint4": -1.204747,
+    "joint5": -2.073222,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.3509188982658288
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9430213388908187
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w101_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w101_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-01",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.68505,
+    0.106829
+   ],
+   "label_px": [
+    972.1,
+    540.7
+   ],
+   "cam_dist_m": 0.1251,
+   "base_hdist_m": 0.4324,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      78.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e00_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     -3.8151336167968104e-16,
+     2.2449444907510286e-09,
+     -1.0,
+     0.09390400006644942
+    ],
+    [
+     0.9999999999998365,
+     5.716784482362559e-07,
+     9.018731462399115e-16,
+     0.7115037170426253
+    ],
+    [
+     5.716784482362558e-07,
+     -0.9999999999998367,
+     -2.2449444571579397e-09,
+     0.1996219022397973
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.273868,
+    "joint3": 0.04644,
+    "joint4": -1.582096,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    953.9,
+    522.7
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      47.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e02_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -3.8973164591085625e-16,
+     2.2448344535715477e-09,
+     -1.0,
+     0.11390400006641072
+    ],
+    [
+     0.9999999999998365,
+     5.716771924632824e-07,
+     8.935891567517942e-16,
+     0.7115037170428149
+    ],
+    [
+     5.716771924632824e-07,
+     -0.9999999999998366,
+     -2.244834404372866e-09,
+     0.19962190223982695
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.273868,
+    "joint3": 0.04644,
+    "joint4": -1.582096,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.473904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    955.0,
+    525.9
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.47,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      46.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e04_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     -1.4635501429774836e-14,
+     7.219169497228396e-08,
+     -0.9999999999999973,
+     0.13390400282119574
+    ],
+    [
+     0.9999999999998637,
+     5.221585404754586e-07,
+     2.3060008720076204e-14,
+     0.7115037170402481
+    ],
+    [
+     5.221585404754589e-07,
+     -0.9999999999998611,
+     -7.219169501234363e-08,
+     0.19962190383046152
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.246344,
+    "joint3": 0.395602,
+    "joint4": -1.903734,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    955.8,
+    528.0
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e00_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.075,
+   "d_min": 0.075,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": -153.99,
+   "module_px": 4.956,
+   "T_world_cam": [
+    [
+     0.14394033794972846,
+     0.21510258787518524,
+     -0.9659254918472318,
+     0.07634843839093788
+    ],
+    [
+     -0.8893819280024804,
+     -0.3998761278709773,
+     -0.22158264485628112,
+     0.726297689604647
+    ],
+    [
+     -0.4339135458285544,
+     0.8909713570302428,
+     0.13375004933897794,
+     0.1932875062752697
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.111345,
+    "joint2": 0.318168,
+    "joint3": -0.026186,
+    "joint4": -0.19041,
+    "joint5": 2.690264,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.47634843697168017
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.726297682513785
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    957.3,
+    527.2
+   ],
+   "cam_dist_m": 0.0746,
+   "base_hdist_m": 0.4727,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      36.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e02_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.095,
+   "d_min": 0.075,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": -155.91,
+   "module_px": 3.892,
+   "T_world_cam": [
+    [
+     0.15112892869975109,
+     0.21011270143073016,
+     -0.9659258251064347,
+     0.09566695349321398
+    ],
+    [
+     -0.9023927857571803,
+     -0.3695795308849214,
+     -0.22158120534981612,
+     0.7307293065556564
+    ],
+    [
+     -0.4035434389547939,
+     0.9051318263371156,
+     0.13375002739504854,
+     0.19061249351236093
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.119324,
+    "joint2": 0.035084,
+    "joint3": 0.378639,
+    "joint4": -0.308467,
+    "joint5": 2.72375,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4556669534974615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7307293065174212
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    957.5,
+    530.0
+   ],
+   "cam_dist_m": 0.0946,
+   "base_hdist_m": 0.4522,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      37.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e04_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.115,
+   "d_min": 0.075,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": 111.58,
+   "module_px": 3.206,
+   "T_world_cam": [
+    [
+     0.2084463268064528,
+     -0.153419345207455,
+     -0.9659257908126346,
+     0.11498549104454941
+    ],
+    [
+     -0.35968254465366023,
+     0.9063830033811325,
+     -0.22158140322072617,
+     0.7351609547396982
+    ],
+    [
+     0.9094935931123239,
+     0.39361447597606736,
+     0.133749947251282,
+     0.18793750773592927
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.32,
+    "joint2": -0.000832,
+    "joint3": 1.069788,
+    "joint4": -1.096282,
+    "joint5": -1.998711,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.34125964000293807
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9614351005007524
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w102_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    951.8,
+    542.1
+   ],
+   "cam_dist_m": 0.1146,
+   "base_hdist_m": 0.4204,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e00_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     -3.8151336167968104e-16,
+     2.2449444907510286e-09,
+     -1.0,
+     0.09390400006644942
+    ],
+    [
+     0.9999999999998365,
+     5.716784482362559e-07,
+     9.018731462399115e-16,
+     0.7115037170426253
+    ],
+    [
+     5.716784482362558e-07,
+     -0.9999999999998367,
+     -2.2449444571579397e-09,
+     0.1996219022397973
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.273868,
+    "joint3": 0.04644,
+    "joint4": -1.582096,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    953.9,
+    522.7
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e02_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -3.8973164591085625e-16,
+     2.2448344535715477e-09,
+     -1.0,
+     0.11390400006641072
+    ],
+    [
+     0.9999999999998365,
+     5.716771924632824e-07,
+     8.935891567517942e-16,
+     0.7115037170428149
+    ],
+    [
+     5.716771924632824e-07,
+     -0.9999999999998366,
+     -2.244834404372866e-09,
+     0.19962190223982695
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.273868,
+    "joint3": 0.04644,
+    "joint4": -1.582096,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.473904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    955.0,
+    525.9
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.47,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e04_t00",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 0.53,
+   "roll_deg": 4.62,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     -1.4635501429774836e-14,
+     7.219169497228396e-08,
+     -0.9999999999999973,
+     0.13390400282119574
+    ],
+    [
+     0.9999999999998637,
+     5.221585404754586e-07,
+     2.3060008720076204e-14,
+     0.7115037170402481
+    ],
+    [
+     5.221585404754589e-07,
+     -0.9999999999998611,
+     -7.219169501234363e-08,
+     0.19962190383046152
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.246344,
+    "joint3": 0.395602,
+    "joint4": -1.903734,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7115037170425094
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    955.8,
+    528.0
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      82.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e00_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.075,
+   "d_min": 0.075,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": -153.99,
+   "module_px": 4.956,
+   "T_world_cam": [
+    [
+     0.14394033794972846,
+     0.21510258787518524,
+     -0.9659254918472318,
+     0.07634843839093788
+    ],
+    [
+     -0.8893819280024804,
+     -0.3998761278709773,
+     -0.22158264485628112,
+     0.726297689604647
+    ],
+    [
+     -0.4339135458285544,
+     0.8909713570302428,
+     0.13375004933897794,
+     0.1932875062752697
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.111345,
+    "joint2": 0.318168,
+    "joint3": -0.026186,
+    "joint4": -0.19041,
+    "joint5": 2.690264,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.47634843697168017
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.726297682513785
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    957.3,
+    527.2
+   ],
+   "cam_dist_m": 0.0746,
+   "base_hdist_m": 0.4727,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      76.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e02_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.095,
+   "d_min": 0.075,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": -155.91,
+   "module_px": 3.892,
+   "T_world_cam": [
+    [
+     0.15112892869975109,
+     0.21011270143073016,
+     -0.9659258251064347,
+     0.09566695349321398
+    ],
+    [
+     -0.9023927857571803,
+     -0.3695795308849214,
+     -0.22158120534981612,
+     0.7307293065556564
+    ],
+    [
+     -0.4035434389547939,
+     0.9051318263371156,
+     0.13375002739504854,
+     0.19061249351236093
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.119324,
+    "joint2": 0.035084,
+    "joint3": 0.378639,
+    "joint4": -0.308467,
+    "joint5": 2.72375,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4556669534974615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7307293065174212
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    957.5,
+    530.0
+   ],
+   "cam_dist_m": 0.0946,
+   "base_hdist_m": 0.4522,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      75.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w102_b0_wall_a_e04_t15",
+   "label": "w102_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_102_T3000",
+   "seed": 102,
+   "dist_nominal": 0.115,
+   "d_min": 0.075,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 328.88,
+   "roll_deg": -7.92,
+   "flip": false,
+   "roll_actual_deg": 111.58,
+   "module_px": 3.206,
+   "T_world_cam": [
+    [
+     0.2084463268064528,
+     -0.153419345207455,
+     -0.9659257908126346,
+     0.11498549104454941
+    ],
+    [
+     -0.35968254465366023,
+     0.9063830033811325,
+     -0.22158140322072617,
+     0.7351609547396982
+    ],
+    [
+     0.9094935931123239,
+     0.39361447597606736,
+     0.133749947251282,
+     0.18793750773592927
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.32,
+    "joint2": -0.000832,
+    "joint3": 1.069788,
+    "joint4": -1.096282,
+    "joint5": -1.998711,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.34125964000293807
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9614351005007524
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w102_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w102_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.710643,
+    0.202067
+   ],
+   "label_px": [
+    951.8,
+    542.1
+   ],
+   "cam_dist_m": 0.1146,
+   "base_hdist_m": 0.4204,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      80.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e00_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": -111.05,
+   "module_px": 4.408,
+   "T_world_cam": [
+    [
+     1.9662865383012624e-08,
+     8.063579267281886e-08,
+     -0.9999999999999966,
+     0.08890400766557796
+    ],
+    [
+     -0.3591425487709222,
+     -0.933282716898968,
+     -8.231776331626394e-08,
+     0.642142260310345
+    ],
+    [
+     -0.9332827168989712,
+     0.35914254877092255,
+     1.0608731777068935e-08,
+     0.23952492356579344
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.278563,
+    "joint2": -0.074154,
+    "joint3": 0.474817,
+    "joint4": -0.30758,
+    "joint5": 1.926675,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     -0.4999999999999998,
+     0.0,
+     0.40067314536239784
+    ],
+    [
+     0.4999999999999998,
+     -0.8660254037844388,
+     0.0,
+     0.4621422657343789
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    952.0,
+    536.8
+   ],
+   "cam_dist_m": 0.085,
+   "base_hdist_m": 0.436,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e02_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.568,
+   "T_world_cam": [
+    [
+     -2.2314966230057318e-13,
+     5.815586231543572e-07,
+     -0.999999999999831,
+     0.10890404099922148
+    ],
+    [
+     0.9999999999998366,
+     5.71669178186507e-07,
+     1.0930947792366942e-13,
+     0.6421422657359003
+    ],
+    [
+     5.716691781864737e-07,
+     -0.9999999999996676,
+     -5.81558623202636e-07,
+     0.23952491529875863
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 0.979186,
+    "joint3": 0.258662,
+    "joint4": -1.499635,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.468904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.642142265734379
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    964.7,
+    534.9
+   ],
+   "cam_dist_m": 0.105,
+   "base_hdist_m": 0.465,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      48.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e04_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.997,
+   "T_world_cam": [
+    [
+     -9.578643425080685e-15,
+     4.2242479265507314e-08,
+     -0.9999999999999992,
+     0.1289040018108621
+    ],
+    [
+     0.9999999999998637,
+     5.221446989675739e-07,
+     1.2478043334763956e-14,
+     0.642142265734057
+    ],
+    [
+     5.221446989675739e-07,
+     -0.9999999999998629,
+     -4.224247922515505e-08,
+     0.23952491923426372
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 0.921982,
+    "joint3": 0.619253,
+    "joint4": -1.803022,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.44890399999999997
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.642142265734379
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    964.0,
+    535.7
+   ],
+   "cam_dist_m": 0.125,
+   "base_hdist_m": 0.445,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      48.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e00_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 166.75,
+   "module_px": 5.424,
+   "T_world_cam": [
+    [
+     -0.06157734599625413,
+     0.2513876570173938,
+     -0.9659257095446643,
+     0.07151884103340397
+    ],
+    [
+     -0.9715226434020596,
+     0.20675417469563637,
+     0.11574309743134073,
+     0.6376926375602812
+    ],
+    [
+     0.22880555897340463,
+     0.9455458514240498,
+     0.23149742771278548,
+     0.2264416831207295
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 3.083257,
+    "joint2": -1.814096,
+    "joint3": -0.144009,
+    "joint4": -1.204593,
+    "joint5": 0.230903,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6376926362861041
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    980.9,
+    514.7
+   ],
+   "cam_dist_m": 0.0692,
+   "base_hdist_m": 0.4676,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      37.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e02_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 167.67,
+   "module_px": 4.198,
+   "T_world_cam": [
+    [
+     -0.06575912134958355,
+     0.25032590523117815,
+     -0.9659258145062293,
+     0.0908373243765627
+    ],
+    [
+     -0.9748342274874285,
+     0.19053041118945102,
+     0.11574278090216658,
+     0.6353777826377959
+    ],
+    [
+     0.213011659019686,
+     0.949228688769029,
+     0.23149714801593363,
+     0.22181173346640623
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 3.079048,
+    "joint2": -1.915603,
+    "joint3": 0.277419,
+    "joint4": -1.525469,
+    "joint5": 0.214709,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6353777820107366
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    976.5,
+    520.6
+   ],
+   "cam_dist_m": 0.0892,
+   "base_hdist_m": 0.447,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      38.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e04_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 10.98,
+   "module_px": 3.424,
+   "T_world_cam": [
+    [
+     0.16114915759793086,
+     -0.20252960866951616,
+     -0.9659258287351312,
+     0.11015584124332735
+    ],
+    [
+     0.9688601134943401,
+     0.2188919903246453,
+     0.1157427192157249,
+     0.6330629276654983
+    ],
+    [
+     0.18799209952870885,
+     -0.9544988497551415,
+     0.2314971194872626,
+     0.21718179062150383
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.062545,
+    "joint2": 1.358063,
+    "joint3": -0.25359,
+    "joint4": -1.594491,
+    "joint5": -0.21471,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6330629277353692
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w103_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    941.3,
+    549.0
+   ],
+   "cam_dist_m": 0.1092,
+   "base_hdist_m": 0.4664,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      48.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e00_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": -111.05,
+   "module_px": 4.408,
+   "T_world_cam": [
+    [
+     1.9662865383012624e-08,
+     8.063579267281886e-08,
+     -0.9999999999999966,
+     0.08890400766557796
+    ],
+    [
+     -0.3591425487709222,
+     -0.933282716898968,
+     -8.231776331626394e-08,
+     0.642142260310345
+    ],
+    [
+     -0.9332827168989712,
+     0.35914254877092255,
+     1.0608731777068935e-08,
+     0.23952492356579344
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.278563,
+    "joint2": -0.074154,
+    "joint3": 0.474817,
+    "joint4": -0.30758,
+    "joint5": 1.926675,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     -0.4999999999999998,
+     0.0,
+     0.40067314536239784
+    ],
+    [
+     0.4999999999999998,
+     -0.8660254037844388,
+     0.0,
+     0.4621422657343789
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    952.0,
+    536.8
+   ],
+   "cam_dist_m": 0.085,
+   "base_hdist_m": 0.436,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e02_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.568,
+   "T_world_cam": [
+    [
+     -2.2314966230057318e-13,
+     5.815586231543572e-07,
+     -0.999999999999831,
+     0.10890404099922148
+    ],
+    [
+     0.9999999999998366,
+     5.71669178186507e-07,
+     1.0930947792366942e-13,
+     0.6421422657359003
+    ],
+    [
+     5.716691781864737e-07,
+     -0.9999999999996676,
+     -5.81558623202636e-07,
+     0.23952491529875863
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 0.979186,
+    "joint3": 0.258662,
+    "joint4": -1.499635,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.468904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.642142265734379
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    964.7,
+    534.9
+   ],
+   "cam_dist_m": 0.105,
+   "base_hdist_m": 0.465,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      85.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e04_t00",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 154.74,
+   "roll_deg": 1.51,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.997,
+   "T_world_cam": [
+    [
+     -9.578643425080685e-15,
+     4.2242479265507314e-08,
+     -0.9999999999999992,
+     0.1289040018108621
+    ],
+    [
+     0.9999999999998637,
+     5.221446989675739e-07,
+     1.2478043334763956e-14,
+     0.642142265734057
+    ],
+    [
+     5.221446989675739e-07,
+     -0.9999999999998629,
+     -4.224247922515505e-08,
+     0.23952491923426372
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 0.921982,
+    "joint3": 0.619253,
+    "joint4": -1.803022,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.44890399999999997
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.642142265734379
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    964.0,
+    535.7
+   ],
+   "cam_dist_m": 0.125,
+   "base_hdist_m": 0.445,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e00_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 166.75,
+   "module_px": 5.424,
+   "T_world_cam": [
+    [
+     -0.06157734599625413,
+     0.2513876570173938,
+     -0.9659257095446643,
+     0.07151884103340397
+    ],
+    [
+     -0.9715226434020596,
+     0.20675417469563637,
+     0.11574309743134073,
+     0.6376926375602812
+    ],
+    [
+     0.22880555897340463,
+     0.9455458514240498,
+     0.23149742771278548,
+     0.2264416831207295
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 3.083257,
+    "joint2": -1.814096,
+    "joint3": -0.144009,
+    "joint4": -1.204593,
+    "joint5": 0.230903,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6376926362861041
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    980.9,
+    514.7
+   ],
+   "cam_dist_m": 0.0692,
+   "base_hdist_m": 0.4676,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      76.4
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e02_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 167.67,
+   "module_px": 4.198,
+   "T_world_cam": [
+    [
+     -0.06575912134958355,
+     0.25032590523117815,
+     -0.9659258145062293,
+     0.0908373243765627
+    ],
+    [
+     -0.9748342274874285,
+     0.19053041118945102,
+     0.11574278090216658,
+     0.6353777826377959
+    ],
+    [
+     0.213011659019686,
+     0.949228688769029,
+     0.23149714801593363,
+     0.22181173346640623
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 3.079048,
+    "joint2": -1.915603,
+    "joint3": 0.277419,
+    "joint4": -1.525469,
+    "joint5": 0.214709,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6353777820107366
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    976.5,
+    520.6
+   ],
+   "cam_dist_m": 0.0892,
+   "base_hdist_m": 0.447,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      77.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w103_b0_wall_a_e04_t15",
+   "label": "w103_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_103_T3000",
+   "seed": 103,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 243.44,
+   "roll_deg": -2.32,
+   "flip": true,
+   "roll_actual_deg": 10.98,
+   "module_px": 3.424,
+   "T_world_cam": [
+    [
+     0.16114915759793086,
+     -0.20252960866951616,
+     -0.9659258287351312,
+     0.11015584124332735
+    ],
+    [
+     0.9688601134943401,
+     0.2188919903246453,
+     0.1157427192157249,
+     0.6330629276654983
+    ],
+    [
+     0.18799209952870885,
+     -0.9544988497551415,
+     0.2314971194872626,
+     0.21718179062150383
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.062545,
+    "joint2": 1.358063,
+    "joint3": -0.25359,
+    "joint4": -1.594491,
+    "joint5": -0.21471,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6330629277353692
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w103_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w103_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-03",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.642924,
+    0.240365
+   ],
+   "label_px": [
+    941.3,
+    549.0
+   ],
+   "cam_dist_m": 0.1092,
+   "base_hdist_m": 0.4664,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e00_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": -111.05,
+   "module_px": 4.408,
+   "T_world_cam": [
+    [
+     -8.423731497976131e-09,
+     -1.2228375255105506e-07,
+     -0.9999999999999925,
+     0.08890402148529734
+    ],
+    [
+     -0.3591437095089039,
+     -0.9332822702270575,
+     1.1715058839528321e-07,
+     0.6320938885710968
+    ],
+    [
+     -0.9332822702270646,
+     0.3591437095089022,
+     -3.6055721373178407e-08,
+     0.18146994227476967
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.278563,
+    "joint2": 0.217908,
+    "joint3": 0.677488,
+    "joint4": -0.802312,
+    "joint5": 1.926677,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     -0.4999999999999998,
+     0.0,
+     0.40067314536239784
+    ],
+    [
+     0.4999999999999998,
+     -0.8660254037844388,
+     0.0,
+     0.4520939078452296
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    979.9,
+    548.7
+   ],
+   "cam_dist_m": 0.085,
+   "base_hdist_m": 0.4349,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      42.1
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e02_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.568,
+   "T_world_cam": [
+    [
+     -3.493295507553676e-16,
+     1.9383661875796277e-09,
+     -1.0000000000000002,
+     0.10890400004604382
+    ],
+    [
+     0.9999999999998365,
+     5.716784199015497e-07,
+     7.587927595207187e-16,
+     0.63209390784535
+    ],
+    [
+     5.716784199015496e-07,
+     -0.9999999999998367,
+     -1.938366179830626e-09,
+     0.18146992742305484
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.412004,
+    "joint3": -0.085342,
+    "joint4": -1.58845,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.468904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6320939078452298
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    947.7,
+    552.5
+   ],
+   "cam_dist_m": 0.105,
+   "base_hdist_m": 0.465,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e04_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.997,
+   "T_world_cam": [
+    [
+     -2.1978315816791706e-17,
+     1.7138252936787908e-10,
+     -1.0000000000000004,
+     0.12890400000199442
+    ],
+    [
+     0.9999999999998637,
+     5.221422803404368e-07,
+     6.750797548525833e-17,
+     0.6320939078452453
+    ],
+    [
+     5.221422803404367e-07,
+     -0.9999999999998638,
+     -1.7138252187335162e-10,
+     0.18146992738451956
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.386914,
+    "joint3": 0.265206,
+    "joint4": -1.913907,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.44890399999999997
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6320939078452298
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    949.6,
+    550.5
+   ],
+   "cam_dist_m": 0.125,
+   "base_hdist_m": 0.445,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e00_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.27,
+   "module_px": 5.301,
+   "T_world_cam": [
+    [
+     -0.00566510523331178,
+     0.2587570843467377,
+     -0.9659258138610184,
+     0.07151881220524134
+    ],
+    [
+     0.9997369104898042,
+     -0.020004271766110734,
+     -0.01122225090651631,
+     0.627985979810985
+    ],
+    [
+     -0.02222647941075519,
+     -0.9657352641441042,
+     -0.25857568176748646,
+     0.20034628678112645
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.005662,
+    "joint2": 1.085205,
+    "joint3": 0.058641,
+    "joint4": -1.144021,
+    "joint5": 0.022228,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6279859797674685
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    986.2,
+    564.2
+   ],
+   "cam_dist_m": 0.0708,
+   "base_hdist_m": 0.4676,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e02_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.19,
+   "module_px": 4.132,
+   "T_world_cam": [
+    [
+     -0.006074641913538689,
+     0.2587478534156648,
+     -0.9659257979153515,
+     0.0908373300970714
+    ],
+    [
+     0.9997673197200395,
+     -0.018421929095220033,
+     -0.011222252368365982,
+     0.6282104248429303
+    ],
+    [
+     -0.020697950271243992,
+     -0.9657692171948723,
+     -0.25857574127008276,
+     0.2055177998321766
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.006072,
+    "joint2": 0.960985,
+    "joint3": 0.471635,
+    "joint4": -1.432803,
+    "joint5": 0.020699,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6282104247603577
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    980.4,
+    558.9
+   ],
+   "cam_dist_m": 0.0908,
+   "base_hdist_m": 0.4469,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e04_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.19,
+   "module_px": 3.385,
+   "T_world_cam": [
+    [
+     -0.006074642329350682,
+     0.25874779883533977,
+     -0.9659258125334662,
+     0.11015584238543971
+    ],
+    [
+     0.9997673197786745,
+     -0.018421926768008214,
+     -0.011222250964932567,
+     0.6284348697801703
+    ],
+    [
+     -0.020697947316974417,
+     -0.965769231862364,
+     -0.258575686724106,
+     0.21068931350579745
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.006072,
+    "joint2": 0.919899,
+    "joint3": 0.493943,
+    "joint4": -1.414025,
+    "joint5": 0.020699,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.628434869753247
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w104_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    976.7,
+    555.5
+   ],
+   "cam_dist_m": 0.1108,
+   "base_hdist_m": 0.4663,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.1
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e00_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.085,
+   "d_min": 0.085,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": -111.05,
+   "module_px": 4.408,
+   "T_world_cam": [
+    [
+     -8.423731497976131e-09,
+     -1.2228375255105506e-07,
+     -0.9999999999999925,
+     0.08890402148529734
+    ],
+    [
+     -0.3591437095089039,
+     -0.9332822702270575,
+     1.1715058839528321e-07,
+     0.6320938885710968
+    ],
+    [
+     -0.9332822702270646,
+     0.3591437095089022,
+     -3.6055721373178407e-08,
+     0.18146994227476967
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.278563,
+    "joint2": 0.217908,
+    "joint3": 0.677488,
+    "joint4": -0.802312,
+    "joint5": 1.926677,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     -0.4999999999999998,
+     0.0,
+     0.40067314536239784
+    ],
+    [
+     0.4999999999999998,
+     -0.8660254037844388,
+     0.0,
+     0.4520939078452296
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    979.9,
+    548.7
+   ],
+   "cam_dist_m": 0.085,
+   "base_hdist_m": 0.4349,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e02_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.105,
+   "d_min": 0.085,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.568,
+   "T_world_cam": [
+    [
+     -3.493295507553676e-16,
+     1.9383661875796277e-09,
+     -1.0000000000000002,
+     0.10890400004604382
+    ],
+    [
+     0.9999999999998365,
+     5.716784199015497e-07,
+     7.587927595207187e-16,
+     0.63209390784535
+    ],
+    [
+     5.716784199015496e-07,
+     -0.9999999999998367,
+     -1.938366179830626e-09,
+     0.18146992742305484
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.412004,
+    "joint3": -0.085342,
+    "joint4": -1.58845,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.468904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6320939078452298
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    947.7,
+    552.5
+   ],
+   "cam_dist_m": 0.105,
+   "base_hdist_m": 0.465,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e04_t00",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.125,
+   "d_min": 0.085,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 145.36,
+   "roll_deg": -1.16,
+   "flip": true,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.997,
+   "T_world_cam": [
+    [
+     -2.1978315816791706e-17,
+     1.7138252936787908e-10,
+     -1.0000000000000004,
+     0.12890400000199442
+    ],
+    [
+     0.9999999999998637,
+     5.221422803404368e-07,
+     6.750797548525833e-17,
+     0.6320939078452453
+    ],
+    [
+     5.221422803404367e-07,
+     -0.9999999999998638,
+     -1.7138252187335162e-10,
+     0.18146992738451956
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.386914,
+    "joint3": 0.265206,
+    "joint4": -1.913907,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.44890399999999997
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6320939078452298
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    949.6,
+    550.5
+   ],
+   "cam_dist_m": 0.125,
+   "base_hdist_m": 0.445,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      82.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e00_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.27,
+   "module_px": 5.301,
+   "T_world_cam": [
+    [
+     -0.00566510523331178,
+     0.2587570843467377,
+     -0.9659258138610184,
+     0.07151881220524134
+    ],
+    [
+     0.9997369104898042,
+     -0.020004271766110734,
+     -0.01122225090651631,
+     0.627985979810985
+    ],
+    [
+     -0.02222647941075519,
+     -0.9657352641441042,
+     -0.25857568176748646,
+     0.20034628678112645
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.005662,
+    "joint2": 1.085205,
+    "joint3": 0.058641,
+    "joint4": -1.144021,
+    "joint5": 0.022228,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6279859797674685
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    986.2,
+    564.2
+   ],
+   "cam_dist_m": 0.0708,
+   "base_hdist_m": 0.4676,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      86.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e02_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.19,
+   "module_px": 4.132,
+   "T_world_cam": [
+    [
+     -0.006074641913538689,
+     0.2587478534156648,
+     -0.9659257979153515,
+     0.0908373300970714
+    ],
+    [
+     0.9997673197200395,
+     -0.018421929095220033,
+     -0.011222252368365982,
+     0.6282104248429303
+    ],
+    [
+     -0.020697950271243992,
+     -0.9657692171948723,
+     -0.25857574127008276,
+     0.2055177998321766
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.006072,
+    "joint2": 0.960985,
+    "joint3": 0.471635,
+    "joint4": -1.432803,
+    "joint5": 0.020699,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6282104247603577
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    980.4,
+    558.9
+   ],
+   "cam_dist_m": 0.0908,
+   "base_hdist_m": 0.4469,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      85.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w104_b0_wall_a_e04_t15",
+   "label": "w104_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_104_T3000",
+   "seed": 104,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 87.51,
+   "roll_deg": 5.04,
+   "flip": false,
+   "roll_actual_deg": -1.19,
+   "module_px": 3.385,
+   "T_world_cam": [
+    [
+     -0.006074642329350682,
+     0.25874779883533977,
+     -0.9659258125334662,
+     0.11015584238543971
+    ],
+    [
+     0.9997673197786745,
+     -0.018421926768008214,
+     -0.011222250964932567,
+     0.6284348697801703
+    ],
+    [
+     -0.020697947316974417,
+     -0.965769231862364,
+     -0.258575686724106,
+     0.21068931350579745
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.006072,
+    "joint2": 0.919899,
+    "joint3": 0.493943,
+    "joint4": -1.414025,
+    "joint5": 0.020699,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.628434869753247
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w104_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w104_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.630055,
+    0.179405
+   ],
+   "label_px": [
+    976.7,
+    555.5
+   ],
+   "cam_dist_m": 0.1108,
+   "base_hdist_m": 0.4663,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.1
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e00_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 152.61,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     -1.6573033949691894e-08,
+     1.0212762080720811e-08,
+     -0.9999999999999998,
+     0.09390400006337508
+    ],
+    [
+     -0.8878600068425057,
+     0.46011369056965185,
+     1.9413565647172613e-08,
+     0.7323342786120856
+    ],
+    [
+     0.46011369056965196,
+     0.8878600068425058,
+     1.4420232061325958e-09,
+     0.12858714983345348
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.323608,
+    "joint3": 0.448378,
+    "joint4": -0.540129,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.44163729746406455
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.8255091349925908
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    959.1,
+    517.7
+   ],
+   "cam_dist_m": 0.0901,
+   "base_hdist_m": 0.4478,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      36.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e02_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 152.61,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -1.6573102997580423e-08,
+     1.0213243694531969e-08,
+     -0.9999999999999999,
+     0.1139040000635574
+    ],
+    [
+     -0.887860006842501,
+     0.4601136905696612,
+     1.9413848618232565e-08,
+     0.7323342786121875
+    ],
+    [
+     0.4601136905696613,
+     0.8878600068425012,
+     1.4424191979819277e-09,
+     0.1285871498334601
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.323608,
+    "joint3": 0.448378,
+    "joint4": -0.540129,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.46163729746406457
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.8255091349925908
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    959.3,
+    521.8
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.4674,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      37.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e04_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 122.06,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     3.0048813329943213e-11,
+     -1.3695608605912603e-10,
+     -1.0,
+     0.13390400000340813
+    ],
+    [
+     -0.530809114631199,
+     0.847491406342532,
+     -1.320193516155894e-10,
+     0.7323342787593211
+    ],
+    [
+     0.847491406342532,
+     0.530809114631199,
+     -4.7231458767381706e-11,
+     0.1285871497116171
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.300311,
+    "joint2": 0.373274,
+    "joint3": 1.007531,
+    "joint4": -1.242991,
+    "joint5": -2.114877,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     0.4999999999999997,
+     0.0,
+     0.4110321292110204
+    ],
+    [
+     -0.4999999999999997,
+     -0.8660254037844388,
+     0.0,
+     0.8923342787556834
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    951.6,
+    527.0
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.4379,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      40.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e00_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.075,
+   "d_min": 0.075,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": -104.06,
+   "module_px": 4.946,
+   "T_world_cam": [
+    [
+     -0.038647889724485525,
+     0.2559172428731788,
+     -0.9659258281151999,
+     0.07634843745467244
+    ],
+    [
+     -0.24281350584550343,
+     -0.9400803677226787,
+     -0.239354347362669,
+     0.7470978005827067
+    ],
+    [
+     -0.969302812334133,
+     0.2252892962894241,
+     0.0984722853322517,
+     0.1158160874489252
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.24969,
+    "joint2": 1.005428,
+    "joint3": 0.195972,
+    "joint4": -1.238218,
+    "joint5": 1.816525,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     -0.2588190451025208,
+     0.0,
+     0.4627187674873075
+    ],
+    [
+     0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.6435701828693092
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    935.3,
+    530.0
+   ],
+   "cam_dist_m": 0.0749,
+   "base_hdist_m": 0.4671,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      40.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e02_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.095,
+   "d_min": 0.075,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": -153.86,
+   "module_px": 3.882,
+   "T_world_cam": [
+    [
+     0.17482082356317802,
+     0.19085324135069914,
+     -0.9659258356181514,
+     0.0956669579482115
+    ],
+    [
+     -0.8839299896813545,
+     -0.40171790716766875,
+     -0.23935433232500453,
+     0.7518848881181088
+    ],
+    [
+     -0.43371125531926497,
+     0.8956549354113781,
+     0.09847224828664856,
+     0.11384664722397647
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.128793,
+    "joint2": 0.431915,
+    "joint3": 0.54974,
+    "joint4": -0.844541,
+    "joint5": 2.68842,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4556669534974615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7518848879953705
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    941.7,
+    550.2
+   ],
+   "cam_dist_m": 0.0949,
+   "base_hdist_m": 0.4522,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      35.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e04_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.115,
+   "d_min": 0.075,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": 115.71,
+   "module_px": 3.196,
+   "T_world_cam": [
+    [
+     0.1955050554992086,
+     -0.1696026914662627,
+     -0.9659258254760824,
+     0.11498547009186139
+    ],
+    [
+     -0.4254436634001588,
+     0.8727583745370352,
+     -0.23935435853170622,
+     0.7566719752095561
+    ],
+    [
+     0.8836149967870077,
+     0.45774200891208566,
+     0.09847228407132844,
+     0.11187719601495397
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.310553,
+    "joint2": 0.759748,
+    "joint3": 0.970179,
+    "joint4": -1.706576,
+    "joint5": -2.05755,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.34125964000293807
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9829461450601185
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w105_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    968.0,
+    555.4
+   ],
+   "cam_dist_m": 0.1148,
+   "base_hdist_m": 0.4211,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      41.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e00_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 152.61,
+   "module_px": 4.163,
+   "T_world_cam": [
+    [
+     -1.6573033949691894e-08,
+     1.0212762080720811e-08,
+     -0.9999999999999998,
+     0.09390400006337508
+    ],
+    [
+     -0.8878600068425057,
+     0.46011369056965185,
+     1.9413565647172613e-08,
+     0.7323342786120856
+    ],
+    [
+     0.46011369056965196,
+     0.8878600068425058,
+     1.4420232061325958e-09,
+     0.12858714983345348
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.323608,
+    "joint3": 0.448378,
+    "joint4": -0.540129,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.44163729746406455
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.8255091349925908
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    959.1,
+    517.7
+   ],
+   "cam_dist_m": 0.0901,
+   "base_hdist_m": 0.4478,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      71.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e02_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 152.61,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -1.6573102997580423e-08,
+     1.0213243694531969e-08,
+     -0.9999999999999999,
+     0.1139040000635574
+    ],
+    [
+     -0.887860006842501,
+     0.4601136905696612,
+     1.9413848618232565e-08,
+     0.7323342786121875
+    ],
+    [
+     0.4601136905696613,
+     0.8878600068425012,
+     1.4424191979819277e-09,
+     0.1285871498334601
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.139137,
+    "joint2": 0.323608,
+    "joint3": 0.448378,
+    "joint4": -0.540129,
+    "joint5": -2.649168,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     0.2588190451025208,
+     0.0,
+     0.46163729746406457
+    ],
+    [
+     -0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.8255091349925908
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    959.3,
+    521.8
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.4674,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      73.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e04_t00",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 308.19,
+   "roll_deg": 7.08,
+   "flip": true,
+   "roll_actual_deg": 122.06,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     3.0048813329943213e-11,
+     -1.3695608605912603e-10,
+     -1.0,
+     0.13390400000340813
+    ],
+    [
+     -0.530809114631199,
+     0.847491406342532,
+     -1.320193516155894e-10,
+     0.7323342787593211
+    ],
+    [
+     0.847491406342532,
+     0.530809114631199,
+     -4.7231458767381706e-11,
+     0.1285871497116171
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.300311,
+    "joint2": 0.373274,
+    "joint3": 1.007531,
+    "joint4": -1.242991,
+    "joint5": -2.114877,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.8660254037844388,
+     0.4999999999999997,
+     0.0,
+     0.4110321292110204
+    ],
+    [
+     -0.4999999999999997,
+     -0.8660254037844388,
+     0.0,
+     0.8923342787556834
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    951.6,
+    527.0
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.4379,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      78.9
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e00_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.075,
+   "d_min": 0.075,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": -104.06,
+   "module_px": 4.946,
+   "T_world_cam": [
+    [
+     -0.038647889724485525,
+     0.2559172428731788,
+     -0.9659258281151999,
+     0.07634843745467244
+    ],
+    [
+     -0.24281350584550343,
+     -0.9400803677226787,
+     -0.239354347362669,
+     0.7470978005827067
+    ],
+    [
+     -0.969302812334133,
+     0.2252892962894241,
+     0.0984722853322517,
+     0.1158160874489252
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.24969,
+    "joint2": 1.005428,
+    "joint3": 0.195972,
+    "joint4": -1.238218,
+    "joint5": 1.816525,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.9659258262890683,
+     -0.2588190451025208,
+     0.0,
+     0.4627187674873075
+    ],
+    [
+     0.2588190451025208,
+     -0.9659258262890683,
+     0.0,
+     0.6435701828693092
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    935.3,
+    530.0
+   ],
+   "cam_dist_m": 0.0749,
+   "base_hdist_m": 0.4671,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      82.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e02_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.095,
+   "d_min": 0.075,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": -153.86,
+   "module_px": 3.882,
+   "T_world_cam": [
+    [
+     0.17482082356317802,
+     0.19085324135069914,
+     -0.9659258356181514,
+     0.0956669579482115
+    ],
+    [
+     -0.8839299896813545,
+     -0.40171790716766875,
+     -0.23935433232500453,
+     0.7518848881181088
+    ],
+    [
+     -0.43371125531926497,
+     0.8956549354113781,
+     0.09847224828664856,
+     0.11384664722397647
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": 0.128793,
+    "joint2": 0.431915,
+    "joint3": 0.54974,
+    "joint4": -0.844541,
+    "joint5": 2.68842,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4556669534974615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.7518848879953705
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    941.7,
+    550.2
+   ],
+   "cam_dist_m": 0.0949,
+   "base_hdist_m": 0.4522,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      74.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w105_b0_wall_a_e04_t15",
+   "label": "w105_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_105_T3000",
+   "seed": 105,
+   "dist_nominal": 0.115,
+   "d_min": 0.075,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 337.64,
+   "roll_deg": -8.24,
+   "flip": false,
+   "roll_actual_deg": 115.71,
+   "module_px": 3.196,
+   "T_world_cam": [
+    [
+     0.1955050554992086,
+     -0.1696026914662627,
+     -0.9659258254760824,
+     0.11498547009186139
+    ],
+    [
+     -0.4254436634001588,
+     0.8727583745370352,
+     -0.23935435853170622,
+     0.7566719752095561
+    ],
+    [
+     0.8836149967870077,
+     0.45774200891208566,
+     0.09847228407132844,
+     0.11187719601495397
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.310553,
+    "joint2": 0.759748,
+    "joint3": 0.970179,
+    "joint4": -1.706576,
+    "joint5": -2.05755,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -0.7071067811865477,
+     0.7071067811865475,
+     0.0,
+     0.34125964000293807
+    ],
+    [
+     -0.7071067811865475,
+     -0.7071067811865477,
+     0.0,
+     0.9829461450601185
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w105_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w105_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-02",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.730999,
+    0.125731
+   ],
+   "label_px": [
+    968.0,
+    555.4
+   ],
+   "cam_dist_m": 0.1148,
+   "base_hdist_m": 0.4211,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      78.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e00_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 4.162,
+   "T_world_cam": [
+    [
+     -5.184714154030887e-10,
+     0.0034903084775488665,
+     -0.9999939088548148,
+     0.09392175927361883
+    ],
+    [
+     0.9999999999998354,
+     5.737351230284015e-07,
+     1.4840501879358228e-09,
+     0.6828767934280031
+    ],
+    [
+     5.737368081174213e-07,
+     -0.9999939088546503,
+     -0.00349030847754863,
+     0.15750127742390133
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.599993,
+    "joint3": -0.294546,
+    "joint4": -1.563744,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e00_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e00_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    966.6,
+    526.3
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e02_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -4.965783993150151e-10,
+     0.003490308446655662,
+     -0.9999939088549227,
+     0.1139217592735894
+    ],
+    [
+     0.9999999999998352,
+     5.737955980030784e-07,
+     1.5061543972541524e-09,
+     0.6828767934247089
+    ],
+    [
+     5.737973598742609e-07,
+     -0.999993908854758,
+     -0.0034903084466553548,
+     0.15750127742490072
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.599993,
+    "joint3": -0.294546,
+    "joint4": -1.563744,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.473904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e02_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e02_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    965.4,
+    528.4
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.47,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e04_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     -4.931910726634047e-15,
+     3.301420008286766e-08,
+     -0.9999999999999996,
+     0.13390400004982672
+    ],
+    [
+     0.9999999999998637,
+     5.221473637453019e-07,
+     1.2306366875820075e-14,
+     0.6828767934404567
+    ],
+    [
+     5.22147363745302e-07,
+     -0.9999999999998632,
+     -3.301420006581421e-08,
+     0.15743589698231317
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.571285,
+    "joint3": 0.062705,
+    "joint4": -1.895778,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e04_t00_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e04_t00_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    964.6,
+    531.7
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e00_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 12.22,
+   "module_px": 5.359,
+   "T_world_cam": [
+    [
+     0.05637798403187126,
+     0.25260407960232184,
+     -0.9659258262852103,
+     0.07151880784104411
+    ],
+    [
+     0.9757938514223613,
+     0.19081047213784202,
+     0.10685374700425117,
+     0.6747038159189491
+    ],
+    [
+     0.21130045537768433,
+     -0.9485686810615234,
+     -0.23573199796884933,
+     0.17280373887904696
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.053865,
+    "joint2": 1.290675,
+    "joint3": -0.108841,
+    "joint4": -1.199631,
+    "joint5": -0.21294,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6747038159189962
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e00_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e00_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    980.0,
+    518.3
+   ],
+   "cam_dist_m": 0.0696,
+   "base_hdist_m": 0.4677,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      45.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e02_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 11.37,
+   "module_px": 4.16,
+   "T_world_cam": [
+    [
+     0.060246444142392636,
+     0.25170978845433006,
+     -0.9659257468172561,
+     0.09083734306503084
+    ],
+    [
+     0.978606146162868,
+     0.17581885387023025,
+     0.10685383154579962,
+     0.6725667389908548
+    ],
+    [
+     0.196724113063084,
+     -0.9516984359659497,
+     -0.2357322852718905,
+     0.1775183784817415
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.057752,
+    "joint2": 1.187335,
+    "joint3": 0.310367,
+    "joint4": -1.516309,
+    "joint5": -0.19805,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6725667409789992
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e02_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e02_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    975.3,
+    522.9
+   ],
+   "cam_dist_m": 0.0896,
+   "base_hdist_m": 0.4471,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.5
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e04_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 11.37,
+   "module_px": 3.4,
+   "T_world_cam": [
+    [
+     0.0602464574388774,
+     0.2517094803190802,
+     -0.9659258262845881,
+     0.11015584089250421
+    ],
+    [
+     0.9786061796797811,
+     0.17581871869540722,
+     0.10685374700425349,
+     0.6704296660388842
+    ],
+    [
+     0.19672394226074588,
+     -0.9516985424354731,
+     -0.23573199797139738,
+     0.18223301879732592
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.057752,
+    "joint2": 1.150887,
+    "joint3": 0.338574,
+    "joint4": -1.508068,
+    "joint5": -0.19805,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6704296660390021
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e04_t15_L0",
+   "light_level": 0.0,
+   "images": {
+    "color": "w106_b0_wall_a_e04_t15_L0/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    972.5,
+    526.0
+   ],
+   "cam_dist_m": 0.1096,
+   "base_hdist_m": 0.4664,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      44.6
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e00_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.09,
+   "d_min": 0.09,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 4.162,
+   "T_world_cam": [
+    [
+     -5.184714154030887e-10,
+     0.0034903084775488665,
+     -0.9999939088548148,
+     0.09392175927361883
+    ],
+    [
+     0.9999999999998354,
+     5.737351230284015e-07,
+     1.4840501879358228e-09,
+     0.6828767934280031
+    ],
+    [
+     5.737368081174213e-07,
+     -0.9999939088546503,
+     -0.00349030847754863,
+     0.15750127742390133
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.599993,
+    "joint3": -0.294546,
+    "joint4": -1.563744,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e00_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e00_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    966.6,
+    526.3
+   ],
+   "cam_dist_m": 0.09,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.1
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e02_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.11,
+   "d_min": 0.09,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 3.406,
+   "T_world_cam": [
+    [
+     -4.965783993150151e-10,
+     0.003490308446655662,
+     -0.9999939088549227,
+     0.1139217592735894
+    ],
+    [
+     0.9999999999998352,
+     5.737955980030784e-07,
+     1.5061543972541524e-09,
+     0.6828767934247089
+    ],
+    [
+     5.737973598742609e-07,
+     -0.999993908854758,
+     -0.0034903084466553548,
+     0.15750127742490072
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.599993,
+    "joint3": -0.294546,
+    "joint4": -1.563744,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.473904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e02_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e02_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    965.4,
+    528.4
+   ],
+   "cam_dist_m": 0.11,
+   "base_hdist_m": 0.47,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.2
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e04_t00",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.13,
+   "d_min": 0.09,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 0.0,
+   "azimuth_deg": 337.37,
+   "roll_deg": 5.12,
+   "flip": false,
+   "roll_actual_deg": 0.0,
+   "module_px": 2.882,
+   "T_world_cam": [
+    [
+     -4.931910726634047e-15,
+     3.301420008286766e-08,
+     -0.9999999999999996,
+     0.13390400004982672
+    ],
+    [
+     0.9999999999998637,
+     5.221473637453019e-07,
+     1.2306366875820075e-14,
+     0.6828767934404567
+    ],
+    [
+     5.22147363745302e-07,
+     -0.9999999999998632,
+     -3.301420006581421e-08,
+     0.15743589698231317
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.0,
+    "joint2": 1.571285,
+    "joint3": 0.062705,
+    "joint4": -1.895778,
+    "joint5": -1e-06,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.453904
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6828767934411518
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e04_t00_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e04_t00_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    964.6,
+    531.7
+   ],
+   "cam_dist_m": 0.13,
+   "base_hdist_m": 0.45,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      82.3
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e00_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.07,
+   "d_min": 0.07,
+   "extra_m": 0.0,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 12.22,
+   "module_px": 5.359,
+   "T_world_cam": [
+    [
+     0.05637798403187126,
+     0.25260407960232184,
+     -0.9659258262852103,
+     0.07151880784104411
+    ],
+    [
+     0.9757938514223613,
+     0.19081047213784202,
+     0.10685374700425117,
+     0.6747038159189491
+    ],
+    [
+     0.21130045537768433,
+     -0.9485686810615234,
+     -0.23573199796884933,
+     0.17280373887904696
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.053865,
+    "joint2": 1.290675,
+    "joint3": -0.108841,
+    "joint4": -1.199631,
+    "joint5": -0.21294,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4715188078402348
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6747038159189962
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e00_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e00_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    980.0,
+    518.3
+   ],
+   "cam_dist_m": 0.0696,
+   "base_hdist_m": 0.4677,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      86.0
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e02_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.09,
+   "d_min": 0.07,
+   "extra_m": 0.02,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 11.37,
+   "module_px": 4.16,
+   "T_world_cam": [
+    [
+     0.060246444142392636,
+     0.25170978845433006,
+     -0.9659257468172561,
+     0.09083734306503084
+    ],
+    [
+     0.978606146162868,
+     0.17581885387023025,
+     0.10685383154579962,
+     0.6725667389908548
+    ],
+    [
+     0.196724113063084,
+     -0.9516984359659497,
+     -0.2357322852718905,
+     0.1775183784817415
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.057752,
+    "joint2": 1.187335,
+    "joint3": 0.310367,
+    "joint4": -1.516309,
+    "joint5": -0.19805,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.45083732436601615
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6725667409789992
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e02_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e02_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    975.3,
+    522.9
+   ],
+   "cam_dist_m": 0.0896,
+   "base_hdist_m": 0.4471,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      84.8
+     ]
+    ]
+   }
+  },
+  {
+   "kind": "arm",
+   "id": "w106_b0_wall_a_e04_t15",
+   "label": "w106_b0_wall",
+   "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/dice_mission_maze261030_judge/seed_106_T3000",
+   "seed": 106,
+   "dist_nominal": 0.11,
+   "d_min": 0.07,
+   "extra_m": 0.04,
+   "backoff_m": 0.0,
+   "tilt_deg": 15.0,
+   "azimuth_deg": 114.38,
+   "roll_deg": -9.16,
+   "flip": false,
+   "roll_actual_deg": 11.37,
+   "module_px": 3.4,
+   "T_world_cam": [
+    [
+     0.0602464574388774,
+     0.2517094803190802,
+     -0.9659258262845881,
+     0.11015584089250421
+    ],
+    [
+     0.9786061796797811,
+     0.17581871869540722,
+     0.10685374700425349,
+     0.6704296660388842
+    ],
+    [
+     0.19672394226074588,
+     -0.9516985424354731,
+     -0.23573199797139738,
+     0.18223301879732592
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "arm_q": {
+    "joint1": -0.057752,
+    "joint2": 1.150887,
+    "joint3": 0.338574,
+    "joint4": -1.508068,
+    "joint5": -0.19805,
+    "gripper_left_joint": 0.0,
+    "gripper_right_joint": 0.0
+   },
+   "T_world_base_footprint": [
+    [
+     -1.0,
+     -1.2246467991473532e-16,
+     0.0,
+     0.4701558408917975
+    ],
+    [
+     1.2246467991473532e-16,
+     -1.0,
+     0.0,
+     0.6704296660390021
+    ],
+    [
+     0.0,
+     0.0,
+     1.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ]
+   ],
+   "name": "w106_b0_wall_a_e04_t15_L1",
+   "light_level": 1.0,
+   "images": {
+    "color": "w106_b0_wall_a_e04_t15_L1/frame.png"
+   },
+   "text": "P2-04",
+   "where": "wall",
+   "label_center": [
+    0.003904,
+    0.683811,
+    0.159129
+   ],
+   "label_px": [
+    972.5,
+    526.0
+   ],
+   "cam_dist_m": 0.1096,
+   "base_hdist_m": 0.4664,
+   "label_visible": 1.0,
+   "render_check": {
+    "tries": [
+     [
+      1.0,
+      83.8
+     ]
+    ]
+   }
+  }
+ ],
+ "total_s": 78.6
+}

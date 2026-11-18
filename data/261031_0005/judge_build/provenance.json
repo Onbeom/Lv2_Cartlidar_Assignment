@@ -1,0 +1,19 @@
+{
+ "worktree": "/home/pa4/git/Lv2_Cartlidar_Assignment_judge261031",
+ "merge_head": "91e774cec710a6f31018bb321eb0b715809d344a",
+ "parents": [
+  "fa86c151db763f01a8475bd7e6accc62c8555118",
+  "a9654426da919ad3dd406446db25ac8ff38573be",
+  "e23f84895a3bbdde3711b0d525b97e74c09a9a05",
+  "2ca1d922479b9d87aef8e912a9a2c6858e21a205"
+ ],
+ "branches": {
+  "dev": "d04599b7483ba92b21589cb9e4bacae2e5db34aa",
+  "fix/perception-puck-survey": "847da66410e3a0fdb022a68e607a2873c77be601",
+  "fix/perception-yolo-class-map": "fa86c151db763f01a8475bd7e6accc62c8555118",
+  "fix/perception-tf-fallback-age": "a9654426da919ad3dd406446db25ac8ff38573be",
+  "fix/perception-survey-launch": "e23f84895a3bbdde3711b0d525b97e74c09a9a05",
+  "fix/perception-camera-info-check": "2ca1d922479b9d87aef8e912a9a2c6858e21a205"
+ },
+ "uncommitted": "judge_uncommitted.patch = fix/perception-signal-history + fix/perception-barcode-rotation (\ucee4\ubc0b \uc804)"
+}

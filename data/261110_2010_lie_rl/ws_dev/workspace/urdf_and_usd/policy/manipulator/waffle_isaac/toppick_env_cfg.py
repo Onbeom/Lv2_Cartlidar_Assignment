@@ -1,0 +1,257 @@
+"""위에서 집기 `Waffle-TopPick-Direct` (Direct RL): 상자 위 퍽을 **위에서** (집게 아래 방향) 집어 세운 채 들기. B안 팔레트 (2026-11-02).
+
+B안 상판 팔레트 v3 는 위에서 쥔 퍽을 칸에 내려 놓는 설계 (손가락 홈 = 칸 접선 방향). 팀 팔로 옆에서 쥐면 3열 4칸만 들어가고,
+위에서 쥐면 12칸 모두 들어감 (`pallet_traj.py` IK). 놓기는 고정 궤적 (`pallet_place_traj.json`, `pallet_place_check.py`) 이고 이 과제는 집기만.
+
+배치: 로봇 제자리. **위에서 수직으로 집을 수 있는 거리는 J1 축에서 약 0.23 m 까지** -> 상자 205 x 205 x 70 을 로봇 앞 끝 (상판 x 0.1328) 에서
+gap 0.5 ~ 4 cm (주행이 상자 앞에 바짝 세움), 가로 ±4 cm, 요 무작위. 퍽 2 개 = 상자 중심 ± 0.04 (상자 x 축). 집을 퍽 = J1 축에 가까운 쪽, 다른 퍽은 옆 장애물.
+
+행동 4 = 잡는 점 (TCP) 변위 x · y · z (base 좌표, x 5 mm) + 집게 (> 0 벌림 61.6 mm, ≤ 0 닫기). 변위 -> 감쇠 최소제곱 IK 로 관절 목표.
+  IK 의 집게 자세 목표 = 집게 방향 아래, 손가락 닫는 축 = J1 축에서 본 접선 방향 (상자 퍽이면 인식한 면 방향 중 접선에 가까운 쪽) -> 손목 롤 (joint5) 로 맞춤.
+  쥔 뒤 놓기 궤적은 joint5 = 0 (닫는 축 = 칸 접선) 이라, 상자 퍽은 면이 칸 방향과 맞음.
+관측 35 = 팔 위치 (시작 자세 기준) 5 · 속도 5, 왼손가락 1, 인식 퍽 좌표 3 (참값 + 에피소드마다 ±4 mm 치우침 + 스텝마다 ±1 mm),
+          잡는 점 3, 퍽 − 잡는 점 3, 집게 방향 3, 손가락 닫는 축 3, 옆 퍽 − 퍽 (x, y) 2, 상자 모양 퍽 여부 1,
+          닫는 축 − 목표 닫는 방향 (cos, sin) 2, 이전 행동 4. 위치 · 방향은 base_link 좌표.
+상자 접촉: 팔 링크 · 손가락 vs 상자 (벌점), 차체 · 바퀴 vs 상자 (종료 + 큰 벌점).
+
+**기울여 집기 (2026-11-02)**: 팔레트 기둥 옆 4칸 (2 · 3열 0 · 3) 에 넣을 퍽은 집게를 45° 기울여 쥐어야 함 (놓기 궤적 pallet_traj.py TILT_SLOTS,
+수직이면 집게 몸이 뒤 프로파일 기둥에 닿음). 에피소드마다 tilt_prob 로 기울임 모드 -> IK 집게 방향 목표 = 아래에서 손가락 닫는 축 둘레로 45°
+(집게 윗부분이 J1 쪽, 손끝이 J1 에서 먼 쪽), 퍽은 세운 채. 5 축 팔이라 기울인 집게 방향은 팔 평면 안 -> 닫는 축 = J1 접선 그대로.
+  상자 퍽은 면이 접선과 맞아야 함 -> 기울임 모드 상자 퍽은 상자 요를 접선 ±tilt_box_align 로 둠 (주행이 상자 퍽 면에 맞춰 차체를 돌려 세운다고 가정).
+  관측 36 = 위 35 + 기울임 모드 (0 / 1). 시작 자세도 기울인 판 (READY_TILT, 잡는 점 자리는 READY_POSE 와 같음).
+
+**다시 학습 (2026-11-04, #71 · #78 · #82)**: 모든 집기 · 놓기 45° (tilt_prob 1.0). 관측 36 · 행동 4 형식은 그대로.
+  실제 배치 (layout_prob): mission_planner 접근 자세표 그대로 A 원기둥 퍽 (박스 ±Y 면, 간격 = FINE 자리 0.1272 #64, 옆 퍽 접선 방향) ·
+  B 상자 퍽 (A 를 drive turn_* 로 돈 뒤, 회전 중심 x = turn_icr_range) · C inline (박스 6, 가까운 퍽 또는 옆 퍽 없는 먼 퍽). 흔들기 간격 · 요 · 가로.
+  무작위 배치의 기울임 상자 퍽은 상자 x 축을 반경 또는 접선 (옆 퍽이 뒤 또는 옆).
+  인식: 치우침 ±perc_bias, perc_latch_prob 비율은 시작 좌표를 에피소드 내내 고정 (관찰 자세에서 재고, 45° 집는 동안 팔 카메라가 퍽을 못 봄 #82).
+  옆 퍽 없음 = 관측 옆 퍽 − 퍽 (26 · 27) 을 NB_ABSENT 로 (배포도 같은 값).
+  성공 = 1 s 세워 들기 + 옆 퍽이 서 있고 success_nb_move 안 (#71).
+
+**손 안 가운데 쥐기 (2026-11-05, TP4)**: 이어 평가 (chain_pallet_eval.py, TP3) 에서 쥔 퍽이 기대 자리 (잡는 점 − 15 mm) 에서 집게 축 4.4 · 옆 5.9 mm
+  (중앙값, 인식 치우침 0 이어도 같음) 벗어나 칸 넣기가 37 % -> 4 mm 안이면 78 %. 이전 판정은 잡기 2 cm · 들기 3 cm · 퍽 기울기 18° 까지 성공이었음.
+  -> 쥔 동안 가운데 보상 (rew_center, tanh 폭 center_tol) · 퍽 기울기 벌점 (rew_hand_tilt, rad), 성공에 center_tol · success_upright 추가.
+  쥔 동안 = 손가락이 쥔 범위 + 잡는 점 - 목표 near_dist 안. 관측 36 · 행동 4 그대로 (TP3 에서 이어 학습).
+  결과 (TP4, 2000 반복): 손 안 어긋남이 줄지 않음 (물리 판정 이어 평가 TP3 14.6 % · TP4 15.1 %) -> 기본은 이전 성공 기준 · 보상 0 으로 되돌림
+  (strict_success = False, rew_center · rew_hand_tilt = 0). 표준편차 상한 (agents ClampedGaussianCfg) 은 남김. 다시 쓰려면 셋을 켬.
+"""
+
+from __future__ import annotations
+
+from isaaclab_physx.physics import PhysxCfg
+
+import isaaclab.sim as sim_utils
+from isaaclab.assets import ArticulationCfg, AssetBaseCfg, RigidObjectCfg
+import isaaclab.envs.mdp as mdp
+from isaaclab.envs import DirectRLEnvCfg, ViewerCfg
+from isaaclab.managers import EventTermCfg as EventTerm
+from isaaclab.managers import SceneEntityCfg
+from isaaclab.scene import InteractiveSceneCfg
+from isaaclab.sensors import ContactSensorCfg
+from isaaclab.sim import SimulationCfg
+from isaaclab.utils import configclass
+
+from .dice2_cfg import box_cfg, puck_cfg
+from .robot_cfg import ARM_JOINTS, BODY_LINK, FINGER_CLOSE, FINGER_GRASP_RANGE, FINGER_LINKS_REGEX, FLOOR_MATERIAL, WAFFLE_CFG
+
+READY_POSE = {"joint1": 0.0, "joint2": 0.48, "joint3": -0.76, "joint4": 1.84, "joint5": 0.0}
+"""시작 자세 = TCP 가 J1 축 앞 0.20 m (base x 0.296), 상자 위 퍽의 잡는 높이보다 5 cm 위, 집게 아래 (pallet_traj.Arm IK, 2026-11-02). 학습 때 잡음."""
+READY_TILT = {"joint1": 0.0, "joint2": -0.462, "joint3": 0.771, "joint4": 0.476, "joint5": 0.0}
+"""기울임 모드 시작 자세: 잡는 점은 READY_POSE 와 같은 자리, 집게 45° (pallet_traj.Arm.ik_down(tilt=45°), 오차 0)."""
+NB_ABSENT = (0.0, 0.5)
+"""옆 퍽이 없을 때 관측 옆 퍽 − 퍽 (base x, y) [m]. 실기 관측 조립 (#69) 도 같은 값."""
+
+_robot = WAFFLE_CFG.replace(
+    prim_path="{ENV_REGEX_NS}/Robot",
+    spawn=WAFFLE_CFG.spawn.replace(
+        activate_contact_sensors=True,
+        articulation_props=WAFFLE_CFG.spawn.articulation_props.replace(enabled_self_collisions=True),
+    ),
+    init_state=WAFFLE_CFG.init_state.replace(joint_pos={**WAFFLE_CFG.init_state.joint_pos, **READY_POSE, "gripper_left_joint": 0.010,
+                                                        "gripper_right_joint": 0.010}),
+)
+RED, GREEN = (0.9, 0.1, 0.1), (0.1, 0.7, 0.3)
+
+
+@configclass
+class TopPickSceneCfg(InteractiveSceneCfg):
+    ground = AssetBaseCfg(prim_path="/World/ground", spawn=sim_utils.GroundPlaneCfg(physics_material=FLOOR_MATERIAL))
+    robot: ArticulationCfg = _robot
+    boxA: RigidObjectCfg = box_cfg("A", (0.30, 0.0))
+    puckT_cyl: RigidObjectCfg = puck_cfg("T_cyl", "cyl", RED)  # 집을 퍽: 원기둥 · 상자 중 하나만 상자 위
+    puckT_box: RigidObjectCfg = puck_cfg("T_box", "box", RED)
+    puckN: RigidObjectCfg = puck_cfg("N", "cyl", GREEN, (0.34, 0.0))
+    arm_box_contact = ContactSensorCfg(
+        prim_path="{ENV_REGEX_NS}/Robot/" + "(link[2-5]|gripper_roll_link|gripper_left_link|gripper_right_link)",
+        filter_prim_paths_expr=["{ENV_REGEX_NS}/BoxA"], update_period=0.0, history_length=1,
+    )
+    body_box_contact = ContactSensorCfg(
+        prim_path="{ENV_REGEX_NS}/Robot/(" + BODY_LINK + "|wheel_.*)",
+        filter_prim_paths_expr=["{ENV_REGEX_NS}/BoxA"], update_period=0.0, history_length=1,
+    )
+    light = AssetBaseCfg(prim_path="/World/Light", spawn=sim_utils.DomeLightCfg(intensity=2000.0, color=(0.85, 0.85, 0.85)))
+
+
+def _friction(asset, **kw):
+    """퍽 · 손가락 마찰 (학습 시작 때 한 번, 환경마다 다른 값 64 통). PhysX 는 두 재질의 평균을 쓰므로 양쪽을 같은 범위로."""
+    return EventTerm(func=mdp.randomize_rigid_body_material, mode="startup", params={
+        "asset_cfg": SceneEntityCfg(asset, **kw), "static_friction_range": DR_FRICTION, "dynamic_friction_range": DR_FRICTION,
+        "restitution_range": (0.0, 0.0), "num_buckets": 64, "make_consistent": True})
+
+
+def _mass(asset):
+    return EventTerm(func=mdp.randomize_rigid_body_mass, mode="startup", params={
+        "asset_cfg": SceneEntityCfg(asset), "mass_distribution_params": DR_PUCK_MASS, "operation": "scale"})
+
+
+DR_FRICTION = (0.3, 1.0)  # ★ 퍽 (PLA) · 손가락 정지 마찰. 실측 (경사판 미끄럼 각) 뒤 중심을 옮길 것. 지금 팀 값 1.0, 놓기 확인 0.5 가정
+DR_GAIN = (0.8, 1.25)     # ★ 팔 강성 · 감쇠 배율 (팀 18.88 = 펌웨어 P 800 환산). 처짐 6 ~ 13 mm 가 약 −20 ~ +25 % 변함. 처짐 실측 뒤 좁힐 것
+DR_PUCK_MASS = (0.8, 1.2)  # 3D 프린팅 채움 편차
+
+
+@configclass
+class TopPickEventCfg:
+    """물리 무작위화 (도메인 랜덤화 자료 6 · 10 ~ 14 쪽, #71 4번). Isaac Lab 6.1 의 재질 · 구동 이득 · 질량 함수는 CPU 텐서라
+    학습 시작 때 한 번 (환경 256 개가 서로 다른 값). 지연 · 관절 관측 잡음은 toppick_env.py (리셋마다 · 스텝마다).
+    끄기: set_dr(cfg, "none" | "all" | "-friction,-gains,-mass,-delay,-obs_noise") — toppick_eval.py --dr, 절제 실험."""
+    friction_puck_cyl = _friction("puckT_cyl")
+    friction_puck_box = _friction("puckT_box")
+    friction_puck_nb = _friction("puckN")
+    friction_fingers = _friction("robot", body_names=FINGER_LINKS_REGEX)
+    arm_gains = EventTerm(func=mdp.randomize_actuator_gains, mode="startup", params={
+        "asset_cfg": SceneEntityCfg("robot", joint_names=ARM_JOINTS), "stiffness_distribution_params": DR_GAIN,
+        "damping_distribution_params": DR_GAIN, "operation": "scale", "distribution": "uniform"})
+    mass_puck_cyl = _mass("puckT_cyl")
+    mass_puck_box = _mass("puckT_box")
+    mass_puck_nb = _mass("puckN")
+
+
+DR_TERMS = {"friction": ("friction_puck_cyl", "friction_puck_box", "friction_puck_nb", "friction_fingers"),
+            "gains": ("arm_gains",), "mass": ("mass_puck_cyl", "mass_puck_box", "mass_puck_nb")}
+
+
+def set_dr(cfg, spec: str = "all"):
+    """무작위화 켜고 끄기. "all" · "none" · 뺄 것만 "-friction,-delay" (friction · gains · mass · delay · obs_noise)."""
+    off = set(DR_TERMS) | {"delay", "obs_noise"} if spec == "none" else {
+        x.strip().lstrip("-") for x in spec.split(",") if x.strip().startswith("-")}
+    bad = off - set(DR_TERMS) - {"delay", "obs_noise"}
+    if bad:
+        raise ValueError(f"모르는 무작위화: {bad}")
+    for k, names in DR_TERMS.items():
+        if k in off:
+            for n in names:
+                setattr(cfg.events, n, None)
+    cfg.dr_delay = "delay" not in off
+    cfg.dr_obs_noise = "obs_noise" not in off
+    return cfg
+
+
+@configclass
+class WaffleTopPickEnvCfg(DirectRLEnvCfg):
+    decimation = 4  # 30 Hz
+    episode_length_s = 6.0
+    action_space = 4  # 직교: 잡는 점 x, y, z 변위 + 집게
+    observation_space = 36
+    state_space = 0
+    viewer: ViewerCfg = ViewerCfg(eye=(0.75, -0.6, 0.55), lookat=(0.28, 0.0, 0.12), origin_type="env", env_index=0)
+    sim: SimulationCfg = SimulationCfg(dt=1 / 120, render_interval=decimation, physics=PhysxCfg(), physics_material=FLOOR_MATERIAL)
+    scene: TopPickSceneCfg = TopPickSceneCfg(num_envs=256, env_spacing=1.5, replicate_physics=True, clone_in_fabric=True)
+    events: TopPickEventCfg = TopPickEventCfg()
+
+    # 무작위화 (events 밖: toppick_env.py). set_dr 로 끔
+    dr_delay = True
+    dr_delay_max_steps = 4  # ★ 물리 스텝 (120 Hz) → 0 ~ 33 ms. 새 팔 목표를 리셋 때 뽑은 스텝 수만큼 늦게 적용. 실기 왕복 지연 실측 뒤
+    dr_obs_noise = True
+    obs_noise_joint_pos = 0.005  # [rad] 가우스 σ, 관절 관측 (Dynamixel 측정). IK 는 참값
+    obs_noise_joint_vel = 0.05   # [rad/s]
+
+    cart_scale = 0.005  # [m / 스텝] 잡는 점 변위 최대 (30 Hz -> 15 cm/s)
+    rot_hold_weight = 0.3
+    ik_damping = 1e-4
+    target_lead_max = 0.25
+    gripper_open = 0.010  # 61.6 mm (퍽 양옆 15.8 mm 씩). 옆 퍽 (중심 8 cm) 과는 안 닿음
+    gripper_closed = -0.0075  # 팀 FINGER_CLOSE −0.011 이면 한쪽 손가락만 힘 한계 (13 N) 라 퍽이 닫는 축으로 3 ~ 5 mm 치우침 -> 30 mm 퍽에서 2 mm 더 (약 12 N, 두 손가락 같음). 팔레트 놓기 확인과 같음 (2026-11-02)
+
+    # 배치 무작위
+    robot_front = 0.1328  # B안 판 차체 앞 끝 (상판, isaac/tools/make_maze_scene.py BODY_X)
+    gap_range = (0.03, 0.15)  # 무작위 배치. 실제 집기 자세 = FINE 자리 0.1272 (#64 안 A, 이전 0.005 ~ 0.04)
+    lat_range = (-0.04, 0.04)
+    joint1_x = 0.096
+    reach_max = 0.23  # [m] 참고: 집게 수직으로 잡는 높이에 닿는 J1 축 거리 한계 (pallet_traj IK)
+    ready_noise = 0.12
+    near_start_prob = 0.3  # 역방향 커리큘럼: 퍽을 시작 자세 잡는 점 바로 아래에 둠
+    near_dxy_max = 0.02
+    near_noise = 0.03
+    near_grasp_x = 0.296  # [m] 시작 자세 잡는 점 x (base_link, J1 축 0.20 m)
+    perc_bias = 0.010  # [m] 인식 좌표 에피소드 치우침 (인지 모의 p95 8 mm · 팔 카메라만 13 mm, #71. 이전 0.004)
+    perc_jitter = 0.001  # [m] 스텝마다 (고정하지 않는 에피소드만)
+    perc_latch_prob = 0.7  # 인식 좌표를 시작 값으로 고정하는 비율 (#82: 45° 자세에서는 퍽이 팔 카메라 화면 밖)
+    perc_yaw_bias = 0.05  # [rad] 상자 퍽 면 방향 인식 치우침 (약 3°)
+    box_shape_prob = 0.5
+    tilt_prob = 1.0  # 모든 집기 · 놓기 45° (#75 · #78, 이전 0.5). 수직 모드 코드는 남김
+    tilt_box_tangent_prob = 0.5  # 무작위 배치 기울임 상자 퍽: 상자 x 축을 접선으로 (옆 퍽이 옆, 실제 배치 B) 하는 비율, 나머지는 반경 (옆 퍽이 뒤)
+
+    # 실제 배치 (#78 표, mission_planner poses.py · approach_poses.yaml). 나머지 에피소드는 위 무작위 배치
+    layout_prob = 0.5
+    layout_weights = (0.4, 0.4, 0.2)  # A 원기둥 퍽 · B 상자 퍽 (회전 뒤) · C inline
+    box_gap = 0.1272  # [m] 박스 ±Y 면 접근: 앞 끝 - 박스 면 = drive FINE 자리 (poses.BOX_GAP = FINE_GAP, #64)
+    inline_gap = 0.1272  # [m] 박스 6 inline (poses.GAP_INLINE = FINE_GAP)
+    puck_dx = 0.04  # [m] 두 퍽 = 상자 중심 ± 이 값
+    turn_icr_range = (-0.070, -0.035)  # [m] 상자 퍽 회전 (drive turn_*) 의 실제 회전 중심 x (drive turn.icr_x, 모의 -0.0658 · 계획 -0.04035)
+    inline_far_prob = 0.5  # C: 먼 퍽 (가까운 퍽은 이미 집어 없음 -> 옆 퍽 없음)
+    layout_gap_jit = 0.02  # [m] 간격 흔들기 (B 는 회전 뒤 모서리 여유 min_corner_gap 이상으로 밈)
+    layout_yaw_jit = 0.05  # [rad] 정렬 · 회전 오차 (약 3°)
+    layout_lat_jit = 0.01  # [m] 가로
+    min_corner_gap = 0.005  # [m] 차체 앞 끝 - 상자 가장 가까운 모서리
+    tilt_deg = 45.0
+    tilt_box_align = 0.05  # [rad] 기울임 모드 상자 퍽 면 - 접선 (약 3°, 주행 정렬 오차)
+    grasp_dz = 0.015  # 잡는 점 = 퍽 중심 + 15 mm (= 퍽 윗면 − 15 mm, 팔레트 설계 grip_depth). 손가락 끝은 TCP 아래 20 mm -> 상자 위 25 mm
+    approach_height = 0.04  # [m] 수평으로 멀면 목표를 이만큼 위로 (위에서 내려오게)
+    approach_lat = 0.02  # [m] 이 수평 거리 안에서 목표가 잡는 높이로 내려옴
+
+    # 판정
+    near_dist = 0.03
+    hold_dist = 0.015  # 들기 · 높이 보상과 성공을 손 안 15 mm 안에서만 (이어 평가 물리 판정과 같은 양: 퍽 중심 + 잡는 높이 - TCP). 0.03 = TP5 까지와 같음
+    grasp_dist = 0.02
+    grasp_finger_range = FINGER_GRASP_RANGE
+    grasp_tilt_max = 0.05
+    lift_min = 0.02
+    lift_goal = 0.05
+    success_lift = 0.03
+    success_hold_s = 1.0
+    tilt_ok_cos = 0.95  # 기울임 모드 성공: 집게 방향 · 목표 방향 (약 18° 안)
+    strict_success = False  # True: 성공에 center_tol · success_upright 추가 (TP4)
+    center_tol = 0.004  # [m] 성공: 쥔 퍽 중심 - 기대 자리 (= 잡는 점 − 15 mm, 칸 넣기 78 % 구간). 보상 tanh 폭도 이 값 (TP4)
+    radial_goal = -0.003  # [m] 손 안 반경 목표 (TP8). r = (집게 축 + 옆)/√2, + = J1 에서 먼 쪽. 43300 이어평가: −6 ~ −1 mm 넣기 26/36, ≥ +4 0/30, ≤ −10 0/17 (미끄럼)
+    radial_band = 0.002  # [m] 목표 ± 이 안은 보상 최대 (−5 ~ −1 mm)
+    radial_scale = 0.006  # [m] 띠 밖 tanh 폭 (TP4 는 4 mm 폭에 평균 12 mm 라 기울기 0)
+    success_upright = 0.996  # 성공: 퍽 축 기울기 5° 안 (칸 넣기 판정과 같음, TP4. upright_min 0.95 는 들기 · 넘어짐 판정용 그대로)
+    upright_min = 0.95
+    topple_cos = 0.7
+    fall_drop = 0.02
+    success_nb_move = 0.005  # [m] 성공: 옆 퍽 이동 (시작 자리에서, #71)
+    contact_force = 1.0  # [N]
+    base_move_max = 0.01
+
+    # 보상
+    rew_reach = 1.0
+    rew_reach_fine = 1.0
+    rew_down = 0.5  # 집게 아래 (12 cm 안)
+    rew_roll = 0.3  # 닫는 축 = 목표 방향 (12 cm 안)
+    rew_grasp = 3.0
+    rew_lifted = 6.0
+    rew_lift_height = 10.0
+    rew_puck_tilt = -2.0
+    rew_center = 0.0  # TP4 4.0. 쥔 동안 (1 − tanh(쥔 자리 오차 / center_tol)) (TP4)
+    rew_hand_tilt = 0.0  # TP4 -4.0. 쥔 동안 퍽 축 기울기 [rad] (5° = −0.35, TP4)
+    rew_radial = 5.0  # TP8. 쥔 동안 (1 − tanh(max(|r − radial_goal| − band, 0) / scale))
+    rew_arm_box = -2.0
+    rew_body_box = -20.0
+    rew_base_move = -10.0
+    rew_action_rate = -0.02
+    rew_joint_vel = -1e-3
+    rew_neighbor_moved = -50.0  # × 스텝당 이동 [m] (#71, 이전 -20)
+    rew_neighbor_toppled = -2.0  # 옆 퍽 넘어져 있는 동안 스텝마다 (큰 종료 벌점은 두지 않음, 부록 B)
+    rew_toppled = -2.0
+    rew_base_tilt = -8.0
+    rew_fall = -5.0

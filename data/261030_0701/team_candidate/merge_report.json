@@ -1,0 +1,70 @@
+{
+  "base_commit": "0e2438a61f119a12b19f3f67a12c965613fcb2a4",
+  "target_dev": "619bd6e90348515fe64cdc0a2b519d495329dde4",
+  "files": [
+    {
+      "path": "workspace/ros2_ws/src/perception/CMakeLists.txt",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/config/perception.yaml",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/arm_target_lock.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/depth_split.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/detector.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/puck_merge.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/read_tag.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/include/perception/tag_detector.hpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/src/color_detector.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/src/perception_node.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/src/tag_detector.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/test/test_arm_detect.cpp",
+      "status": "추가"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/test/test_arm_lock.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/test/test_depth_split.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/test/test_puck_merge.cpp",
+      "status": "병합"
+    },
+    {
+      "path": "workspace/ros2_ws/src/perception/test/test_read_tag.cpp",
+      "status": "병합"
+    }
+  ]
+}

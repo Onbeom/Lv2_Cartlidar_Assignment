@@ -1,0 +1,38 @@
+{
+  "recording": "/home/pa4/git/lv2_next_module/261030_1943/results/n261028_bright_261030_211830",
+  "light": "bright",
+  "counts": {
+    "/tf_static": 1,
+    "/clock": 30761,
+    "/tf": 8544,
+    "/scan_front": 5126,
+    "/scan_rear": 5126
+  },
+  "wheel_msgs": 30760,
+  "truth_odom_msgs": 25635,
+  "body_mask_bins": {
+    "/scan_front": 157,
+    "/scan_rear": 321
+  },
+  "body_mask_deg": {
+    "/scan_front": 141.3,
+    "/scan_rear": 288.90000000000003
+  },
+  "body_mask_rule": "정지 (0.5, 1.9) s 스캔에서 거리 < 0.32 m 칸",
+  "qos_copied": {
+    "/tf_static": 1,
+    "/clock": 1,
+    "/odom": 1,
+    "/tf": 2,
+    "/scan_front": 1,
+    "/scan_rear": 1
+  },
+  "truth_in": {
+    "lidar_only": false,
+    "wheel_odom": false,
+    "truth_odom": "diagnostic_upper_bound_only"
+  },
+  "source_sha256": {
+    "0_bag_2026_10_30-21_18_30.mcap": "3eff9681a8acac737dd61798b06e545483597f722a608128649e772435547e24"
+  }
+}

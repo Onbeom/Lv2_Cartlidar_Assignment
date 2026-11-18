@@ -1,0 +1,31 @@
+{
+  "measured": {
+    "yaw_deg": 36.58711301149838,
+    "pivot_mm": [
+      -34.50287949514038,
+      5.120902436347397
+    ],
+    "pivot_fit_rms_mm": 0.2421418786725101,
+    "R_pivot_mm": 265.16315385598426,
+    "R_full_mm": 300.04398433948575,
+    "center_move_max_mm": 22.211755933530817,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 1e-05,
+      "RMX52_Shoulder": 4e-05,
+      "RMX52_Elbow": 0.00177,
+      "RMX52_Wrist_Pitch": 0.00055,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "회전 ≥ 1°": true,
+    "R_full ≤ 307 mm": true,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "성공",
+  "engine": "Isaac Sim",
+  "test": "V1"
+}

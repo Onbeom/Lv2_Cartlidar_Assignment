@@ -1,0 +1,43 @@
+{
+  "measured": {
+    "pivot_offset_mm": 79.5,
+    "move_mm": 79.56512021571362,
+    "move_side_mm": 0.008850488679825835,
+    "move_yaw_max_deg": 0.0034714036209820207,
+    "t_spin_s": 4.59,
+    "yaw_deg": 43.12317963566632,
+    "pivot_mm": [
+      -79.57141625593847,
+      0.2578808827845651
+    ],
+    "pivot_fit_rms_mm": 0.02940412278972648,
+    "pivot_world_minus_O_mm": [
+      -0.006302030943503955,
+      0.26487354551600656
+    ],
+    "e_mm": 0.26494850576712614,
+    "R_pivot_mm": 309.7471611204533,
+    "R_cell_mm": 310.0121096262204,
+    "center_move_max_mm": 79.76263649541723,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null,
+    "arm_dev_max_rad": {
+      "RMX52_Base_Yaw": 1e-05,
+      "RMX52_Shoulder": 0.00291,
+      "RMX52_Elbow": 0.00177,
+      "RMX52_Wrist_Pitch": 0.00224,
+      "RMX52_Wrist_Roll_Reversed": 0.0
+    }
+  },
+  "checks": {
+    "이동 거리 d ± 2 mm": true,
+    "이동 중 yaw 변화 ≤ 0.5°": true,
+    "회전 ≥ 1°": true,
+    "R_cell ≤ 307 mm": false,
+    "팔 이탈 ≤ 0.02 rad (2 s 이후)": true,
+    "팔–다른 형상 실제 접촉 없음": true
+  },
+  "verdict": "실패",
+  "engine": "Isaac Sim",
+  "test": "V1b"
+}

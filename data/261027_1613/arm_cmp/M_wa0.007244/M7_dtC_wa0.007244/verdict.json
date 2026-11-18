@@ -1,0 +1,21 @@
+{
+  "test": "M7",
+  "dt_s": 0.001,
+  "mujoco_version": "3.16.0",
+  "results": {
+    "M7": {
+      "measured": {
+        "yaw_change_deg(기록만)": 35.33038297508083,
+        "center_move_max_m": 0.015597843903570307,
+        "ideal_no_slip_deg(참고)": 48.92099194706711,
+        "track_m": 0.3092
+      },
+      "checks": {
+        "유한값·스텝 수": true,
+        "yaw가 + 방향(반시계)으로 1° 이상 증가": true,
+        "중심 이동 ≤ 30 mm": true
+      },
+      "verdict": "성공"
+    }
+  }
+}

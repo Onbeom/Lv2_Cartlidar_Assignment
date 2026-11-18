@@ -1,0 +1,10 @@
+{
+  "source": "/home/pa4/git/lv2_next_module/261030_2058/results/bag_wheel_odom_dark",
+  "scale_S": 1.15,
+  "odom_msgs": 15380,
+  "tf_odom_msgs": 15380,
+  "tf_stamp_without_odom": 0,
+  "final_yaw_raw_deg": 175.24345321152342,
+  "final_yaw_fixed_deg": 465.42908974915184,
+  "note": "모의 · 진단. 실물 배수는 제자리 회전 실측으로 정함"
+}

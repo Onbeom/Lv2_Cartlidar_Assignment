@@ -1,0 +1,163 @@
+{
+ "scenes": 12,
+ "valid_scenes": 10,
+ "invalid": [
+  [
+   "w5_out00_L0",
+   "puck_04",
+   "puck_06",
+   0.0169
+  ],
+  [
+   "w5_out00_L1",
+   "puck_04",
+   "puck_06",
+   0.0169
+  ]
+ ],
+ "frames": 238,
+ "unanswered": 0,
+ "J1_first_lock_target": {
+  "ok": 9,
+  "n": 10,
+  "rate": 0.9
+ },
+ "J1_fail": [
+  [
+   "w4_out00_L1",
+   0,
+   "puck_04"
+  ]
+ ],
+ "J2_full_frames": {
+  "ok": 167,
+  "n": 178,
+  "rate": 0.9382
+ },
+ "J2_tol": 0.05,
+ "J2_err_max": 0.0098,
+ "J2_fail": [
+  [
+   "w2_out00_L0",
+   16,
+   false,
+   null,
+   null
+  ],
+  [
+   "w2_out00_L1",
+   16,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L0",
+   4,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L0",
+   17,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   0,
+   true,
+   0.095,
+   "puck_04"
+  ],
+  [
+   "w4_out00_L1",
+   1,
+   true,
+   0.095,
+   "puck_04"
+  ],
+  [
+   "w4_out00_L1",
+   2,
+   true,
+   0.095,
+   "puck_04"
+  ],
+  [
+   "w4_out00_L1",
+   3,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   14,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   18,
+   false,
+   null,
+   null
+  ],
+  [
+   "w4_out00_L1",
+   21,
+   false,
+   null,
+   null
+  ]
+ ],
+ "J3_other_puck_frames": 3,
+ "J3_examples": [
+  [
+   "w4_out00_L1",
+   0,
+   "visible",
+   "puck_04"
+  ],
+  [
+   "w4_out00_L1",
+   1,
+   "visible",
+   "puck_04"
+  ],
+  [
+   "w4_out00_L1",
+   2,
+   "visible",
+   "puck_04"
+  ]
+ ],
+ "not_puck_frames": 0,
+ "J4_out_frames_invalid": {
+  "ok": 40,
+  "n": 40,
+  "rate": 1.0
+ },
+ "J4_out_fail": [],
+ "J4_reacquire": {
+  "ok": 10,
+  "n": 10,
+  "rate": 1.0
+ },
+ "J4_reacquire_fail": [],
+ "partial_frames": 20,
+ "partial_pointing_target": 14,
+ "J1_pass": false,
+ "J2_pass": false,
+ "J3_pass": false,
+ "J4_pass": true,
+ "pass": false,
+ "d435_extrinsic_mode": "new_model_fk_exact_no_jitter",
+ "joint_state_delay_s": 0.0,
+ "front_depth_empty": false,
+ "render": "/home/pa4/git/lv2_next_module/261104_0112_arm_lock_yolo/judge_set3"
+}

@@ -1,0 +1,50 @@
+[
+ {
+  "image": "scene_000_L0.png",
+  "n": 5,
+  "n_ok": 5,
+  "truth_deg": -4.855,
+  "est_deg": -4.646,
+  "err_deg": 0.208,
+  "rel_j1_deg": 2.063,
+  "shapes": [
+   2
+  ]
+ },
+ {
+  "image": "scene_000_L1.png",
+  "n": 6,
+  "n_ok": 6,
+  "truth_deg": -4.855,
+  "est_deg": -5.184,
+  "err_deg": -0.329,
+  "rel_j1_deg": 2.063,
+  "shapes": [
+   2
+  ]
+ },
+ {
+  "image": "scene_001_L0.png",
+  "n": 5,
+  "n_ok": 5,
+  "truth_deg": -9.205,
+  "est_deg": -8.763,
+  "err_deg": 0.442,
+  "rel_j1_deg": -8.697,
+  "shapes": [
+   2
+  ]
+ },
+ {
+  "image": "scene_001_L1.png",
+  "n": 5,
+  "n_ok": 5,
+  "truth_deg": -9.205,
+  "est_deg": -9.155,
+  "err_deg": 0.05,
+  "rel_j1_deg": -8.697,
+  "shapes": [
+   2
+  ]
+ }
+]

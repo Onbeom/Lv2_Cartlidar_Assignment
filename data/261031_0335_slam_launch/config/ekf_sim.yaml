@@ -1,0 +1,15 @@
+# 모의 확인용 EKF(robot_localization) 설정. 팀 dev bringup/config/ekf.yaml 과 같은 틀(50 Hz, 2D, odom→base_link 만 발행, child base_link)이고
+# 다른 점: 녹화에 IMU 가 없어 회전 속도를 IMU 대신 회전 배수 보정한 바퀴 odom(vyaw)에서 받음. 실물은 팀 ekf.yaml(vx + IMU yaw rate)을 씀.
+ekf_filter_node:
+  ros__parameters:
+    frequency: 50.0
+    two_d_mode: true
+    publish_tf: true
+    map_frame: map
+    odom_frame: odom
+    base_link_frame: base_link
+    world_frame: odom
+    odom0: /odom
+    odom0_config: [false, false, false,  false, false, false,
+                   true,  false, false,  false, false, true,
+                   false, false, false]

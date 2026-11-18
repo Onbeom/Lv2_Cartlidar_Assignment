@@ -1,0 +1,12 @@
+{
+  "camera": "UC-684_B0201",
+  "camera_plate_to_motor_top_plane_deg": 49.16917606727103,
+  "optical_axis_down_from_forward_horizontal_deg": 40.83082393272897,
+  "reference": "straight baseline CAD arm pose; changes relative to ground with arm motion",
+  "calibration_verified": false,
+  "motor_hole_spacing_mm": 16,
+  "camera_mount_pattern_mm": [
+    28,
+    28
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "P1": {
+    "ok": 12,
+    "n": 12,
+    "rate": 1.0
+  },
+  "P2": {
+    "ok": 190,
+    "n": 212,
+    "rate": 0.8962264150943396
+  },
+  "P3_other_frames": 0,
+  "P3_hidden": {
+    "ok": 52,
+    "n": 52,
+    "rate": 1.0
+  },
+  "P4": {
+    "ok": 12,
+    "n": 12,
+    "rate": 1.0
+  },
+  "planned_selected_mismatch": [
+    {
+      "scene": "w5_out00_L0",
+      "planned": "puck_01",
+      "selected": "puck_00"
+    },
+    {
+      "scene": "w5_out00_L1",
+      "planned": "puck_01",
+      "selected": "puck_00"
+    }
+  ],
+  "missing_initial_target": [],
+  "unassessed_frames": 0,
+  "failures": [
+    {
+      "scene": "w1_out00_L0",
+      "k": 1,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L0",
+      "k": 20,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L0",
+      "k": 22,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 0,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 2,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 5,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 6,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 19,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 23,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w1_out00_L1",
+      "k": 24,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 3,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 9,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06301571232637146
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 16,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06385209471896755
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 21,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 22,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L0",
+      "k": 23,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w2_out00_L1",
+      "k": 0,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w4_out00_L1",
+      "k": 18,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w6_out00_L0",
+      "k": 6,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w6_out00_L0",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w6_out00_L1",
+      "k": 0,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    }
+  ],
+  "pass_observed_checks": false,
+  "P4_exercised": true,
+  "note": "인지범위 보조 판정. 초기 목표 없으면 P1 실패로 포함하고 P2~P4는 평가 불가 행 수를 명시. 기존 J 및 계획/선택 불일치 보존. P4없음은 미시험."
+}

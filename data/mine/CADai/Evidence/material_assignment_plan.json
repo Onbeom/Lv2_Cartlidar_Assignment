@@ -1,0 +1,3179 @@
+[
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDdKtUhKSk7UNTRJMtY1MTJM0k0yTjPUtTQxMUi2MLc0NbRMAqsFmsGABsD2GSiArQNZb2xuBgCx2P1niAAAAA==",
+    "path": "Motor_Front_Left:1+Motor_Left (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 38.76000000011442,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.2292252807947,
+    "expected_body_mass_g": 0.07291644477209885
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDdKtUhKSk7UNTRJMtY1MTJM0k0yTjPUtTQxMUi2MLc0NbRMAqsFmsGABsD2GSiArQNZb2xhCADdUQF+iAAAAA==",
+    "path": "Motor_Front_Left:1+Motor_Left (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 43549.76121689762,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.2292252807947,
+    "expected_body_mass_g": 81.92708355522791
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDAwTjJNtUjUNbcwMtQ1MTJP1gUyLHRNEw3MjIwSU5JNjFPBaoFmMKABsH0GCmDrQNabmpgDAN9a/t6IAAAA",
+    "path": "Motor_Front_Right:1+Motor_Right (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 43549.761216897634,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.229225280794,
+    "expected_body_mass_g": 81.92708355522791
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDAwTjJNtUjUNbcwMtQ1MTJP1gUyLHRNEw3MjIwSU5JNjFPBaoFmMKABsH0GCmDrQNabmhoCAKvOhi6IAAAA",
+    "path": "Motor_Front_Right:1+Motor_Right (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 38.76000000011441,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.229225280794,
+    "expected_body_mass_g": 0.07291644477209881
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDRNs7AwSDXWtTRPTtY1MTYy1E00NTTWNTJMS0kzNTM3sExNAasFmsGABsD2GSiArQNZb25oBgClLv46iAAAAA==",
+    "path": "Wheel_Front_Left:1+Wheel_Left (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 13492.263864320856,
+    "name": "Rubber_Tire_1100",
+    "density_kg_per_m3": 1100.0,
+    "expected_body_mass_g": 14.841490250752942
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDRNs7AwSDXWtTRPTtY1MTYy1E00NTTWNTJMS0kzNTM3sExNAasFmsGABsD2GSiArQNZb25kAABT2LD4iAAAAA==",
+    "path": "Wheel_Front_Left:1+Wheel_Left (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 12602.512730581746,
+    "name": "PLA_Wheel_Hub_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 15.627115785921365
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDQ1SzMyNDPTTTJLNNU1SUoGspLTUnWNUtMsLYyTUpOSjE3BaoFmMKABsH0GCmDrQNZbWJgCABIXpCmIAAAA",
+    "path": "Wheel_Front_Right:1+Wheel_Right (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 13492.263864322278,
+    "name": "Rubber_Tire_1100",
+    "density_kg_per_m3": 1100.0,
+    "expected_body_mass_g": 14.841490250754507
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDQ1SzMyNDPTTTJLNNU1SUoGspLTUnWNUtMsLYyTUpOSjE3BaoFmMKABsH0GCmDrQNZbWFgCADlbEiCIAAAA",
+    "path": "Wheel_Front_Right:1+Wheel_Right (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 12602.513583718945,
+    "name": "PLA_Wheel_Hub_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 15.627116843811491
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsLRISjQzSzbUTTZKS9I1SU0x0LVMTEnTtTA3MDAyMExKSzI2BqsFmsGABsD2GSiArQNZb2hgagIAWQWEVYkAAAA=",
+    "path": "Floor_1_Joined:1+Floor_1_Joined (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 373024.1956291092,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 462.55000258009545
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZPNbIwNLHQTUxNTNE1MTVP1U00MTbRNUoxsUhONE42MTJPA6sFmsGABsD2GSiArbMAW2loAAC9Ar4RiQAAAA==",
+    "path": "Floor_3_Joined:1+Floor_3_Joined (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 373025.53540417925,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 462.5516639011823
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjS2MAMAkNYbVokAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체6",
+    "volume_mm3": 2.042820623044913,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959577008
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjS2NAAA5EJjpokAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체7",
+    "volume_mm3": 0.06568045622472281,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 0.051371330481921315
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjS2NAEA/YYOoYkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체8",
+    "volume_mm3": 10.917669262510223,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.539148903865486
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjS2tAAA1sq4qIkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체9",
+    "volume_mm3": 1.0178760197698735,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 0.7961218360346662
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMAIABI7gnIkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체10",
+    "volume_mm3": 11.633952387604912,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.099382788538353
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMAMAHUqNm4kAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체11",
+    "volume_mm3": 17.319187893179155,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 13.546034483909398
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxNAAAad71a4kAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체12",
+    "volume_mm3": 17.319187893030072,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 13.546034483792795
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxNAEAcBqYbIkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체13",
+    "volume_mm3": 1.511106066420532,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.1818969232754124
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxtAAAW1YuZYkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체14",
+    "volume_mm3": 2.0428206230449155,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959577028
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMgIAhuzWrokAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체15",
+    "volume_mm3": 11.380416976574077,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.901082530933987
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMgMAnyi7qYkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체16",
+    "volume_mm3": 12.39500320789508,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.694631290907118
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxNgAA67zDWYkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체17",
+    "volume_mm3": 11.633952387604936,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.099382788538371
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxNgEA8niuXokAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체18",
+    "volume_mm3": 1.5111060664206204,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.1818969232754815
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxtgAA2TQYV4kAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체19",
+    "volume_mm3": 12.395003207895105,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.694631290907138
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMQIAAEuM+IkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체20",
+    "volume_mm3": 1.8382032064768141,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.4377327722839883
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxMQMAGY/h/4kAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체21",
+    "volume_mm3": 10.917669262544544,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.53914890389233
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMgSaAwBtG5kPiQAAAA==",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체22",
+    "volume_mm3": 31.833401845142827,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 24.89818586149045
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE0xSk02MTXQNU8zNdM1STRL1rU0TjLUtTBKTUszNjY2N0y1AKsFmsGABsD2GSiArQMpMjQxNQEAdN/0CIkAAAA=",
+    "path": "LDS_Front_Underside:1+LDS_Complete (1):1",
+    "body_name": "본체23",
+    "volume_mm3": 2.04282062304491,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959576988
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDJPSzQzS0zWtTBKNdU1MU8DspLMLHQNUg1N0xJNE03NEo3AaoFmMKABsH0GCmDrQNYbWhhYAgBFzFWdiQAAAA==",
+    "path": "housing:1+Open CASCADE STEP translator 8.0 1:1",
+    "body_name": "본체1",
+    "volume_mm3": 38504.32910185113,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 47.7453680862954
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDRKSzE1STTVNTdNStI1STVO0k0yMEvTTTU3TDYwNDM3SUpOBqsFmsGABsD2GSiArQNZb2hpZgoAwj3QPokAAAA=",
+    "path": "magazine_B:1+Open CASCADE STEP translator 8.0 1 (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 45620.06460642154,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 56.568880111962706
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME40N7cwTkrRTTRNTdI1MUs10000Sk7VTbYwszQ0NjJISTRNAasFmsGABsD2GSiArQNZb2RoZAgAaDbVf4kAAAA=",
+    "path": "magazine_G:1+Open CASCADE STEP translator 8.0 1 (2):1",
+    "body_name": "본체1",
+    "volume_mm3": 45612.87666726215,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 56.55996706740507
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDQ2MDExNE/RtTS0NNEFsgx0LRITTXTNk5LNUlNTUowMU43BaoFmMKABsH0GCmDrQNYbGZmbAwA6lwBPiQAAAA==",
+    "path": "magazine_R:1+Open CASCADE STEP translator 8.0 1 (3):1",
+    "body_name": "본체1",
+    "volume_mm3": 45619.35398678004,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 56.56799894360725
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDROSzJINUrRNbQwNtQ1MbdM1rU0tDDVTTYwMUlNNklMNU81A6sFmsGABsD2GSiArQNZb2RqYQkAYLRFJokAAAA=",
+    "path": "rail_hi:1+Open CASCADE STEP translator 8.0 1 (5):1",
+    "body_name": "본체1",
+    "volume_mm3": 79663.34135679775,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 98.78254328242922
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEoxTks0T0rVNUpJNtA1STRM07W0ME/TNTE3sTBJSUkxMkpNAasFmsGABsD2GSiArQNZb2RuYgoATn0HVokAAAA=",
+    "path": "rail_lo:1+Open CASCADE STEP translator 8.0 1 (6):1",
+    "body_name": "본체1",
+    "volume_mm3": 79663.13415900245,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 98.78228635716304
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLFISjRPTDLStTBIsdQ1SbU01k1MTTPTTTQ1NTUwSDRMMTQ0BqsFmsGABsD2GSiArQNZb2xoaA4AK2zBn4kAAAA=",
+    "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 38.76000000011442,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.2292252807947,
+    "expected_body_mass_g": 0.07291644477209885
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLFISjRPTDLStTBIsdQ1SbU01k1MTTPTTTQ1NTUwSDRMMTQ0BqsFmsGABsD2GSiArQNZb2xoZAgA3ZqPXYkAAAA=",
+    "path": "Motor_Rear_Left:1+Motor_Left (1) (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 43549.76121689762,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.2292252807947,
+    "expected_body_mass_g": 81.92708355522791
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE5JsTQwNkvWNTJKS9Y1STRK07UwNbTUtTQyMDSzNEs0TLOwAKsFmsGABsD2GSiArQMpMjYyNwcA3QlUX4kAAAA=",
+    "path": "Wheel_Rear_Left:1+Wheel_Left (1) (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 13492.263864320856,
+    "name": "Rubber_Tire_1100",
+    "density_kg_per_m3": 1100.0,
+    "expected_body_mass_g": 14.841490250752942
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE5JsTQwNkvWNTJKS9Y1STRK07UwNbTUtTQyMDSzNEs0TLOwAKsFmsGABsD2GSiArQMpMjayMAQAJ7CvMYkAAAA=",
+    "path": "Wheel_Rear_Left:1+Wheel_Left (1) (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 12602.512730581746,
+    "name": "PLA_Wheel_Hub_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 15.627115785921365
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEw1tky0TEzVTUkxMtU1STRN1k1KNDfSNUhMsUhLTTSyMEgzAKsFmsGABsD2GSiArQNZb2xibA4AefPoPIkAAAA=",
+    "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 43549.761216897634,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.229225280794,
+    "expected_body_mass_g": 81.92708355522791
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEw1tky0TEzVTUkxMtU1STRN1k1KNDfSNUhMsUhLTTSyMEgzAKsFmsGABsD2GSiArQNZb2xiYggAi8DKmokAAAA=",
+    "path": "Motor_Rear_Right:1+Motor_Right (1) (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 38.76000000011441,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1881.229225280794,
+    "expected_body_mass_g": 0.07291644477209881
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUyTDM1MjDVTUqxNNQ1SbUw0000NzLQTUlMNEwyMjA0NUq0BKsFmsGABsD2GSiArQNZb2xqaQ4AvtzX54kAAAA=",
+    "path": "Wheel_Rear_Right:1+Wheel_Right (1) (1):1",
+    "body_name": "본체1",
+    "volume_mm3": 13492.263864322278,
+    "name": "Rubber_Tire_1100",
+    "density_kg_per_m3": 1100.0,
+    "expected_body_mass_g": 14.841490250754507
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUyTDM1MjDVTUqxNNQ1SbUw0000NzLQTUlMNEwyMjA0NUq0BKsFmsGABsD2GSiArQNZb2xmYAgAm3ww3YkAAAA=",
+    "path": "Wheel_Rear_Right:1+Wheel_Right (1) (1):1",
+    "body_name": "본체2",
+    "volume_mm3": 12602.513583718945,
+    "name": "PLA_Wheel_Hub_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 15.627116843811491
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMjY3twQAFreboIkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체6",
+    "volume_mm3": 2.042820623044913,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959577008
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMja3MAYAx0LWx4kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체7",
+    "volume_mm3": 0.06568045622472281,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 0.051371330481921315
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMja3MAcA3oa7wIkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체8",
+    "volume_mm3": 10.917669262510223,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.539148903865486
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMja3NAQAqhLDMIkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체9",
+    "volume_mm3": 1.0178760197698735,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 0.7961218360346662
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMja3NAUAs9auN4kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체10",
+    "volume_mm3": 11.633952387604912,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.099382788538353
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMja3tAQAmJoYPokAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체11",
+    "volume_mm3": 17.319187893179155,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 13.546034483909398
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMAYA8o9TBIkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체12",
+    "volume_mm3": 17.319187893030072,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 13.546034483792795
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMAcA60s+A4kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체13",
+    "volume_mm3": 1.511106066420532,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.1818969232754124
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwNAQAn99G84kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체14",
+    "volume_mm3": 2.0428206230449155,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959577028
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwNAUAhhsr9IkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체15",
+    "volume_mm3": 11.380416976574077,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.901082530933987
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwtAQArVed/YkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체16",
+    "volume_mm3": 12.39500320789508,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.694631290907118
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMgYAcO1lNokAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체17",
+    "volume_mm3": 11.633952387604936,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.099382788538371
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMgcAaSkIMYkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체18",
+    "volume_mm3": 1.5111060664206204,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.1818969232754815
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwNgQAHb1wwYkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체19",
+    "volume_mm3": 12.395003207895105,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 9.694631290907138
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwNgUABHkdxokAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체20",
+    "volume_mm3": 1.8382032064768141,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.4377327722839883
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwtgQALzWrz4kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체21",
+    "volume_mm3": 10.917669262544544,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 8.53914890389233
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMQYA9ko/YIkAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체22",
+    "volume_mm3": 31.833401845142827,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 24.89818586149045
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxSEu0NLHUNTW1sNA1SbU00LUwsUjTNUw0MUsxMUxJsTSxAKsFmsGABsD2GSiArQMpMrYwMQcA745SZ4kAAAA=",
+    "path": "LDS_Rear_Underside:1+LDS_Complete (1) (1):1",
+    "body_name": "본체23",
+    "volume_mm3": 2.04282062304491,
+    "name": "Equivalent_LDS01_125g",
+    "density_kg_per_m3": 782140.2809102993,
+    "expected_body_mass_g": 1.5977722959576988
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsLQ0Nk4zMDPRNUo2TtQ1STE11LU0MjDXNUoxMTQxtbBIMU42AKsFmsGABsD2GSiArQNZD9RgZmYKAH5idMuLAAAA",
+    "path": "USB2LSD:1",
+    "body_name": "본체1",
+    "volume_mm3": 1251.079919571737,
+    "name": "Equivalent_USB2LDS_8g",
+    "density_kg_per_m3": 6394.475584532215,
+    "expected_body_mass_g": 8.0
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDJPSzQzS0zWtTBKNdU1MU8DspLMLHQNUg1N0xJNE03NEo3AaoFmMKABsH0GCmDrQNYbWhhYAgBFzFWdiQAAAA==",
+    "path": "housing:2+Open CASCADE STEP translator 8.0 1:1",
+    "body_name": "본체1",
+    "volume_mm3": 38504.32910185113,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 47.7453680862954
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDJPSzQzS0zWtTBKNdU1MU8DspLMLHQNUg1N0xJNE03NEo3AaoFmMKABsH0GCmDrQNYbWhhYAgBFzFWdiQAAAA==",
+    "path": "Open CASCADE STEP translator 8.0 1:2",
+    "body_name": "본체1",
+    "volume_mm3": 38504.32910185113,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 47.7453680862954
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEs2NEqyTEnSNTE0M9A1SUlJ1rVMsTTUNTI2NTY0NjFISksyBasFmsGABsD2GSiArQNZb2Jpag4ArhHEcokAAAA=",
+    "path": "Manipulator_Support_Cyan:1",
+    "body_name": "본체1",
+    "volume_mm3": 6625.555028699162,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 8.215688235586962
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEpNNLG0SDPUTTMxN9A1MUkz0k00SUvVNU80TzMxM09KSjRIAqsFmsGABsD2GSiArQNZb2pgbAEAq0Z354kAAAA=",
+    "path": "Manipulator_Support_Coral:1",
+    "body_name": "본체1",
+    "volume_mm3": 6625.552526721646,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 8.21568513313484
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDCzTE5LTrbQNTBMTtM1MU4x17U0SDLSNTYzNU4zsEi0NDM2AqsFmsGABsD2GSiArQNZb2poZAgA3GRMNYkAAAA=",
+    "path": "Profile_2020_450mm_Rear_Left_Envelope:1",
+    "body_name": "Profile_2020_450mm_Rear_Left_Envelope",
+    "volume_mm3": 180000.0,
+    "name": "Equivalent_Hollow2020_0p5g_per_mm",
+    "density_kg_per_m3": 1250.0000000000002,
+    "expected_body_mass_g": 225.00000000000006
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDQ3TjNMSTHXNTM2MNE1SUmx0LW0MLTQTU02MEkzsTA3MjFJBqsFmsGABsD2GSiArQNZb2pkYAoASTB80IkAAAA=",
+    "path": "Profile_2020_450mm_Rear_Right_Envelope:1",
+    "body_name": "Profile_2020_450mm_Rear_Right_Envelope",
+    "volume_mm3": 180000.0,
+    "name": "Equivalent_Hollow2020_0p5g_per_mm",
+    "density_kg_per_m3": 1250.0000000000002,
+    "expected_body_mass_g": 225.00000000000006
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZOMjBLNUrTNbcwS9Y1sbA00LU0STPRTTW3NDJONTY2NjI3AKsFmsGABsD2GSiArQNZb2hsYm4OANLgN0qKAAAA",
+    "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+    "body_name": "본체1",
+    "volume_mm3": 42412.85243440014,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 81.92513075905158
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZOMjBLNUrTNbcwS9Y1sbA00LU0STPRTTW3NDJONTY2NjI3AKsFmsGABsD2GSiArQNZb2hsYmEIAChZzCSKAAAA",
+    "path": "base_link__RMX52_Motor_J1_Base_Yaw:1",
+    "body_name": "본체2",
+    "volume_mm3": 38.76000000000028,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 0.07486924094841944
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDM2TEw1SzLStUhNstQ1STRK0rVINDXStbQ0TjMxS00zTLUwA6sFmsGABsD2GSiArQNZb2hsaWwCADUpi62KAAAA",
+    "path": "arm_link_1__RMX52_FR12_S102_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 2077.698007511409,
+    "name": "Equivalent_Stock_arm_link_1_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 11445.545037895801,
+    "expected_body_mass_g": 23.780386120118198
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEs2tzROSTPQTTI2SdU1MUsy101KNDbWNTAxNE01TDEysDRNAqsFmsGABsD2GSiArQNZb2hiaGAGAMA8GZ2KAAAA",
+    "path": "arm_link_1__RMX52_Motor_J2_Shoulder:1",
+    "body_name": "본체1",
+    "volume_mm3": 42861.4339351296,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1913.1417797198824,
+    "expected_body_mass_g": 82.0
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEgzM0o1MzTWNTQ2M9E1MTE00bUwTEvUNUwxTDK1SLE0SEtKAasFmsGABsD2GSiArQNZb2hiZmIAAFWNekiKAAAA",
+    "path": "arm_link_2__RMX52_FR12_H101_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 4378.465079160492,
+    "name": "Equivalent_Stock_arm_link_2_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 4436.485696039759,
+    "expected_body_mass_g": 19.424997694305116
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSExJSTExMTHXNTVJSdI1MUsx0k2yTDTVtUw2MUs0tDBINUw1AqsFmsGABsD2GSiArQNZb2hibmYBADDtKZ2KAAAA",
+    "path": "arm_link_2__RMX52_ILA-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 17083.740788114923,
+    "name": "Equivalent_Stock_arm_link_2_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1725.2999929043508,
+    "expected_body_mass_g": 29.474577860514444
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEwzTzEyMrLUTbZINdY1MTRJ1bVMS7HUNUozNUgxSkm1NE1KAqsFmsGABsD2GSiArQNZb2hiYWoIANI5Hc+KAAAA",
+    "path": "arm_link_2__RMX52_FR12_S101_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 3144.766657476831,
+    "name": "Equivalent_Stock_arm_link_2_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 4436.485696039759,
+    "expected_body_mass_g": 13.951712293278726
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLdMSU5LsrTQNTFIMtQ1MUw11bVIMjPXNTIyTjQxsTQzM0lOAasFmsGABsD2GSiArQNZb2hqaGgIAKZyX5eKAAAA",
+    "path": "arm_link_3__RMX52_ILA-A02_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 12095.890199180252,
+    "name": "Equivalent_Stock_arm_link_3_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1911.558298727367,
+    "expected_body_mass_g": 23.12199929073803
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEo1M0k1NEjVNbYwNtY1MbC00LVMS0nRNUsyNrJINEm0TDJMAqsFmsGABsD2GSiArQNZb2hqaGkCAHo6ZwyKAAAA",
+    "path": "arm_link_4__RMX52_FR12_H104_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 4314.6137186151855,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 3305.169923765299,
+    "expected_body_mass_g": 14.260531495432064
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDC3MDYzSDTWtTBJStY1MUk107WwNEvUNTI0trCwTDU3sDBNBKsFmsGABsD2GSiArQNZb2hqZG4OABmvGAiKAAAA",
+    "path": "arm_link_5__RMX52_IRB-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 16721.02810705654,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 21.492270797619017
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDS1SDI2SzTSNTdLTtM1MbM01LVIsjTSTU42tEiyMDFINLWwBKsFmsGABsD2GSiArQNZb2hqbGYAAJtGMk+KAAAA",
+    "path": "arm_link_5__RMX52_IRB-A02_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 16572.108353195476,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 21.30085770647386
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMExNNUqySEzUNTc2T9M1MU820LVMSrTUNbFIMjI3SzFOtDC1BKsFmsGABsD2GSiArQNZb2hqYmIMAJpoTMuKAAAA",
+    "path": "arm_link_5__RMX52_ICA-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 2429.4131675724893,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 3.1226312965011016
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLc0NUwEqtVNSQQSJimGFroWBmamukbGBoZmpqlpxibmFmC1QDMY0ADYPgMFsHUgRYampkZmAG+K/nqKAAAA",
+    "path": "arm_link_5__RMX52_IBL-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 8788.204855826807,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 11.295865145198242
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME41MDY1NjTVTU5MttA1STIx101MM7TUNUs1NDFLsUwyT001AasFmsGABsD2GSiArQNZb2hqZmAJALajlRiKAAAA",
+    "path": "arm_link_5__RMX52_ILR-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 1349.4543711222375,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 1.7345128892493242
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDVMM0mxNDXXTU01N9I1MU5K0U1MTU3TtTBJMk6xTEtJNTRJA6sFmsGABsD2GSiArQNZb2hqZmkEAJDePSyKAAAA",
+    "path": "arm_link_5__RMX52_PR33_IFB-A01_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 327.3029501030741,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 0.4206968370267968
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDFJMzMyszDQNUq0TNM1MU5L0k1MNLfUTTQxMzM2STIyMzE0BasFmsGABsD2GSiArQNZb2hqbm4KAAS4msqKAAAA",
+    "path": "gripper_left_link__RMX52_IGP-A01_OPEN_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 16406.22543136889,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 21.08764111155093
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEyyMEkyNU/VNTU0NdE1MTe11LUwMDbUNU5KMTIxTUq1MDQzB6sFmsGABsD2GSiArQNZb2hqYWkEAHbaDdqKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M3X10_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 133.23748439229357,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 1.280342344493601
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDUxMjdJNDHStUi1MNM1MU+y0E00NUnTNTVLtDSwSDM2NbM0BKsFmsGABsD2GSiArQNZb2hqaWEGALL7lbyKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X10_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 84.14600131136831,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.8085989396313635
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDROSzMxNUrTTUpMTNQ1STMz1E00MzXXNUm2NDBLS01KNkixAKsFmsGABsD2GSiArQMpMjQzsDAAAO7jlZaKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsLRINjYxSjHUtbBMMdU1sUhL1rUwM0rUNU41TU1LMTEzNTFKA6sFmsGABsD2GSiArQNZb2hmaG4CAA3faUWKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEo0T05JTDbUNbBINdM1MUiz0E1KTDPVNU00sDAwMzZJtEhKBasFmsGABsD2GSiArQNZb2hmZGYBAMnbzNWKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2X4_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 33.0825813179218,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.31790625528305255
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDZINDZPNbXQtTA3TtQ1STQ21U00ME3STTEwSzSyTLMwSzZJAasFmsGABsD2GSiArQNZb2hmbGYEAMEqWwCKAAAA",
+    "path": "gripper_left_link__RMX52_PR33_SPD-A01_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 2227.4,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Rubber_Finger_Pad",
+    "density_kg_per_m3": 1346.5507096821586,
+    "expected_body_mass_g": 2.9993070507460406
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEizMDa1NE7RNUu1MNQ1MTNP1LU0MDLRTUs1N7BMMTNJNDIxAasFmsGABsD2GSiArQNZb2hmYmIKAMWrZd6KAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDK0TLJIMzTRNbMwTNI1MUwy17U0NDLUNbM0TTJOtrA0MjJJA6sFmsGABsD2GSiArQNZb2hmamIAALlnCEqKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M3_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 49.63496018357261,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.47696593477531607
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDJLTDNMMzLSTUs0SNM1MU1K07UwSknVTbRITUqyTE1KTjZMBqsFmsGABsD2GSiArQNZb2hmZmwKAFTXwm2KAAAA",
+    "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_1:1",
+    "body_name": "본체1",
+    "volume_mm3": 27.338878365665092,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 3305.169923765299,
+    "expected_body_mass_g": 0.09035963852367405
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLU0NDMxMzXSNTexTNM1MTYx07VMNDHQtUgFQiNDM2NDy0SwWqAZDGgAbJ+BAtg6kPWGZuaGFgBPgsyaigAAAA==",
+    "path": "arm_link_2__RMX52_Motor_J3_Elbow:1",
+    "body_name": "본체1",
+    "volume_mm3": 42861.4339351296,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1913.1417797198824,
+    "expected_body_mass_g": 82.0
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDRONbZINU3VNTQwTtQ1MTdJ1rUwNzDUNTc2NUhNszBLNDVLBasFmsGABsD2GSiArQNZb2huZGoEAMkkcumKAAAA",
+    "path": "arm_link_3__RMX52_FR12_H101_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 4378.465079160492,
+    "name": "Equivalent_Stock_arm_link_3_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 4915.435625298944,
+    "expected_body_mass_g": 21.52206323423284
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDY0s0hNM7bQTUkzNdA1STEz17U0Tk7WNUxJsjA3tEg1MDRPBqsFmsGABsD2GSiArQNZb2hubGEAAL7XtQ6KAAAA",
+    "path": "arm_link_3__RMX52_FR12_S102_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 2077.698007511409,
+    "name": "Equivalent_Stock_arm_link_3_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 4915.435625298944,
+    "expected_body_mass_g": 10.212790804734212
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZITjJJTEvUTTJPMdE1STU2001MTjPRTUoxNUlJSjYxTDY1AasFmsGABsD2GSiArQNZb2huamoEAGjrdXqKAAAA",
+    "path": "arm_link_3__RMX52_Motor_J4_Wrist_Pitch:1",
+    "body_name": "본체1",
+    "volume_mm3": 42861.4339351296,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1913.1417797198824,
+    "expected_body_mass_g": 82.0
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDAzTzO1TDXSNUoysdA1sTC30LU0SzXXNUmzMEtNNTBOSUtNA6sFmsGABsD2GSiArQNZb2hhYGEGAH7YSoiKAAAA",
+    "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+    "body_name": "본체1",
+    "volume_mm3": 42412.85243440014,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 81.92513075905158
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDAzTzO1TDXSNUoysdA1sTC30LU0SzXXNUmzMEtNNTBOSUtNA6sFmsGABsD2GSiArQNZb2hhYGkAAApMMniKAAAA",
+    "path": "arm_link_5__RMX52_Motor_J6_Gripper_Open_Close:1",
+    "body_name": "본체2",
+    "volume_mm3": 38.76000000000028,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 0.07486924094841944
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEiyNEtLNDTVNTO1MNY1sUxJ001MSzTStUxNM042MDMxSDG3BKsFmsGABsD2GSiArQNZb2hhamIMAP8R3nOKAAAA",
+    "path": "arm_link_5__RMX52_PR33_IFB-A01_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 327.3029501030741,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 0.4206968370267968
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEkzsbRMtkzWTTVMNdY1STMz1E00T07WNTE0sEw1NDEzTzY1A6sFmsGABsD2GSiArQNZb2hhZmQGABE8EzuKAAAA",
+    "path": "arm_link_5__RMX52_IBL-A01_OPEN_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 8788.204855826807,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 11.295865145198242
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME0xT01JtjDTTUu0MNI1STYz0LUws0zUTTWySDRLTrE0TjRLAasFmsGABsD2GSiArQNZb2hhbmAJAIbvyCKKAAAA",
+    "path": "arm_link_5__RMX52_ILR-A01_OPEN_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 1349.4543711222375,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 1.7345128892493242
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEhLMTMwNzfSTUw1sNQ1MU0y1k1KTknUNU2yNDA2MU0zNTW2AKsFmsGABsD2GSiArQMpMrQwtzQCAMIFgkiKAAAA",
+    "path": "arm_link_5__RMX52_PR33_IFB-A01_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 327.3029501030741,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 0.4206968370267968
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDSzMLMwTLHQNUkySNY1SU200E1KNE/STbQ0Mkk0NE81tDA1BasFmsGABsD2GSiArQNZb2hhYW4KAORqOEuKAAAA",
+    "path": "arm_link_5__RMX52_PR33_IFB-A01_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 327.3029501030741,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 0.4206968370267968
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDVLtUhNSzLXNTIzSNY1MbU007VIMUrVNTZPtTBPMTI0MklKBasFmsGABsD2GSiArQNZb2hhaWoBABEiukOKAAAA",
+    "path": "gripper_right_link__RMX52_IGP-A01_OPEN_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 16406.22543136889,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Stock_Arm_Polymer_Estimate",
+    "density_kg_per_m3": 1285.3438592420605,
+    "expected_body_mass_g": 21.08764111155093
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLdMTk41NzLQNTe2TNI1SUoz1rVMTEnWTUlKSjZIS0xLtLQwBKsFmsGABsD2GSiArQNZb2hpYG4KAAg7tFmKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X10_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 84.14600131136831,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.8085989396313635
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDS3TDIyTLPQNUwyMdI1SbI01LU0NDLTTTFMMbVMTkxNSUo0BKsFmsGABsD2GSiArQNZb2hpaGYJAEB607+KAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X10_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 84.14600131136831,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.8085989396313635
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDI1TTRPSjLRNTA3T9M1MTFM1E0yskzVtTRMTLMwMAYyDVPAaoFmMKABsH0GCmDrQNYbWhqZGQMAyxhjrooAAAA=",
+    "path": "arm_link_5__RMX52_WBH_M2_5X10_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 84.14600131136831,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.8085989396313635
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDU2STROtDDSNU80NNM1SU420U00NUnWNU0ySkpOTjFKSjQ0AasFmsGABsD2GSiArQNZb2hpbGoOAH2pOg2KAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEk2sjA1NEvUTUw0StQ1STa11LU0ME3RTU4zTbSwMEw1NTAwBKsFmsGABsD2GSiArQNZb2hpYmoIANKpP7GKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDa2NE82TEzSNTNMNNc1MU9J001MMzfWtTAzMTdNTLUwSDQ3BqsFmsGABsD2GSiArQNZb2hpamIKAHawFmuKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME5NtjQzN0nTNU5NTdI1MU6x1LUwSkvVtTRJSjFOMzNNNk1KAasFmsGABsD2GSiArQNZb2hpZmwJAGvMS6CKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_5:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsEg0TjI0ME/SNUxNMtM1MTBN1U0ySjTSTTZLNkoxNzROSUkyB6sFmsGABsD2GSiArQNZb2hpbmwMAP++TxKKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X5_6:1",
+    "body_name": "본체1",
+    "volume_mm3": 59.602308705196975,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.5727469263841571
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDFMSTNPTE3RTUlJsdA1MUxM0rU0ME7WNTdITE41NTdPNLE0BqsFmsGABsD2GSiArQNZb2hpYWQOALGEqOmKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE1ONk6zMLLUTbYwMdU1MTA217U0Nk7UNTJNSzEyS00zNTJJBqsFmsGABsD2GSiArQNZb2hpaWQIAJwg9NqKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M3X10_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 133.23748439229357,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 1.280342344493601
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsDRMSTVLMjbTNTe1sNA1SUw00k1KM7XUNUu2ME82SrU0NLc0BqsFmsGABsD2GSiArQNZb2RgYGgKAD9axa+KAAAA",
+    "path": "gripper_left_link__RMX52_WBH_M3X10_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 133.23748439229357,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 1.280342344493601
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDWyNDc3STTQTTZKNdc1sTRN0bU0NzHUTTUzM7ZMSjNPTDS3BKsFmsGABsD2GSiArQNZb2RgaGAJAEsFNcKKAAAA",
+    "path": "gripper_right_link__RMX52_WBH_M3X10_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 133.23748439229357,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 1.280342344493601
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZMs7SwNDDQTU1LNtc1MTYy101MS03WNUpMsrBMSzNPsrRIA6sFmsGABsD2GSiArQNZb2RgZGAMAP7hVDiKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2X4_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 33.0825813179218,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.31790625528305255
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLEwt0gyMEvRNU9NNNM1SbJM1bVINDQEck0MLU2NkxKNzC3AaoFmMKABsH0GCmDrwIoMjCzNAWMVLleKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2X4_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 33.0825813179218,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.31790625528305255
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDVKS0syMzHUTbRMNtQ1MU5M0rU0N03TNbEwMTI1NTI3MjVPAasFmsGABsD2GSiArQNZb2RgbGkIAPhDa3mKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2X4_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 33.0825813179218,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.31790625528305255
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDU1M0y1sDDWTUsxtdQ1MUky1E1KTjbRNU9NS7NMszA1NzMzAKsFmsGABsD2GSiArQNZb2RgYmEKAEhtE5iKAAAA",
+    "path": "gripper_right_link__RMX52_PR33_SPD-A01_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 2227.4,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Rubber_Finger_Pad",
+    "density_kg_per_m3": 1346.5507096821586,
+    "expected_body_mass_g": 2.9993070507460406
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEs1TTI3N0nVNTNJSdI1sbRM07VMszDUTUtMSzY3MbE0NzZMAasFmsGABsD2GSiArQNZb2RgamYBAAuizsOKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDE1NTZOSTPQNTEyT9Y1sTQx07U0NknVNU81NkpNMzFLtki2AKsFmsGABsD2GSiArQMrMjAzMwIARsKVH4oAAAA=",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDAwNU8xN0zRNTZMTdQ1MTdM1rUwSUrVtbBMNjYwM0wxMksyBKsFmsGABsD2GSiArQNZb2RgbmoGACi8ogGKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_5:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE5LM7O0NDTTtTC3SNE1sTBN1k0yTrLUNTYzsbAwNzYxS7ZMBasFmsGABsD2GSiArQNZb2RgYWoAANqc6WCKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_6:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEtMMkhKtDDTTTNNNtU1MbVI0k1KNjbRTUu2TEw2NrdISUu1AKsFmsGABsD2GSiArQMrMrA0MQEATMxeY4oAAAA=",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_7:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE42MTFKNEvTTTJKstA1STZM1k1KMTXVtTAyTjU0NzcwTDE2B6sFmsGABsD2GSiArQNZb2RoYGwBALjlgyKKAAAA",
+    "path": "arm_link_5__RMX52_WBH_M2_5X8_8:1",
+    "body_name": "본체1",
+    "volume_mm3": 74.32852426889978,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.7142581343324812
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDNLNEtLMrTUTUk1MdU1STO11LVItUzTTTZKM0k0SDM2MzVLBKsFmsGABsD2GSiArQNZb2RoaGwEAEdRZJGKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLU0NrIwNzXVTTRPtdA1SUtL1rUwNE7RTTZNMTY3tEhLNjMyAasFmsGABsD2GSiArQNZb2RoZGQOAJgPOpiKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDdPNjC1MDDTTU0zN9M1SUw10E0ySjHUtUi1ME0xt0y1MDGyAKsFmsGABsD2GSiArQMrMjQ2MgIA6NDOWIoAAAA=",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDVMSjUxtzDUTU1LSdU1STYy1k2ysDDXTU1Os7AwTjJNNTYzA6sFmsGABsD2GSiArQNZb2RoYmgOADJVQdyKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_5:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDc1MTA0NU/UTTIxNdA1sTAy0E00T0vRTUyxMEhKtEg1T0k1B6sFmsGABsD2GSiArQNZb2RoamgEALao6gOKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_6:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMElLTUyytDTUTTVISdI1sUxJ0bWwTE7UTbU0NTA2NzJOSzRJBqsFmsGABsD2GSiArQNZb2RoZmAOACZMjSiKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_7:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDWzsDBOSkzSNU0zTNQ1STW21E1MNjfWtUhNTjNJSjRMMzU3BqsFmsGABsD2GSiArQNZb2RobmAEANlR8CuKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M2_5_8:1",
+    "body_name": "본체1",
+    "volume_mm3": 35.64844115604352,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.3425628225829132
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDVJMzBLMkzStbC0SNY1MUsz0bU0TUnStTRPNjQ1TDE1Mjc1AKsFmsGABsD2GSiArQNZb2RobmkOABOOgMuKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M3_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 49.63496018357261,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.47696593477531607
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDUxMzSwME/TNUhMMtQ1MTE00bU0N0/WTTZPNjUyNLYwTzVLA6sFmsGABsD2GSiArQNZb2RoYWkEAK+CgHmKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M3_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 49.63496018357261,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.47696593477531607
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDZOM0gyS0rSTTRNTNE1sTQx101KNUjRNTM1TDNJMUhLMjExBKsFmsGABsD2GSiArQNZb2RoaWEOAP4iXAyKAAAA",
+    "path": "arm_link_5__RMX52_NUT2_M3_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 49.63496018357261,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Steel_Fastener",
+    "density_kg_per_m3": 9609.475519095406,
+    "expected_body_mass_g": 0.47696593477531607
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME2xsDS2SDTTNU0zN9A1STMx0LUwMzTQNTCwMDMyTjW2TDE2AqsFmsGABsD2GSiArQNZb2RkYGEEAIIo3M2KAAAA",
+    "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_2:1",
+    "body_name": "본체1",
+    "volume_mm3": 27.338878365665092,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 3305.169923765299,
+    "expected_body_mass_g": 0.09035963852367405
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDMxN09NMTfTNTFNSgYSqSm6limmxrqpxokWxkZGyalppmZgtUAzGNAA2D4DBbB1IOuNjAzNTAHs62P3igAAAA==",
+    "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_3:1",
+    "body_name": "본체1",
+    "volume_mm3": 27.338878365665092,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 3305.169923765299,
+    "expected_body_mass_g": 0.09035963852367405
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDOxNLZINU/VNbBMMdM1MTS01E1KszTRTTFJSk1LTTQzNEk2AqsFmsGABsD2GSiArQNZb2RkZGIBAJhuUYeKAAAA",
+    "path": "arm_link_5__RMX52_DC12_A01_SPACER_RING_4:1",
+    "body_name": "본체1",
+    "volume_mm3": 27.338878365665092,
+    "name": "Equivalent_Stock_stock_wrist_gripper_Aluminum_Arm_Frame",
+    "density_kg_per_m3": 3305.169923765299,
+    "expected_body_mass_g": 0.09035963852367405
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME80MEo1TDbUNTY3MtU1sbBI1rUwN7fUtTA2s7A0TzIyNbMwBKsFmsGABsD2GSiArQNZb2RkbGwIAEZ1yymKAAAA",
+    "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+    "body_name": "본체1",
+    "volume_mm3": 42412.85243440014,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 81.92513075905158
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTME80MEo1TDbUNTY3MtU1sbBI1rUwN7fUtTA2s7A0TzIyNbMwBKsFmsGABsD2GSiArQNZb2RkbGwKAF+xpi6KAAAA",
+    "path": "arm_link_4__RMX52_Motor_J5_Wrist_Roll:1",
+    "body_name": "본체2",
+    "volume_mm3": 38.76000000000028,
+    "name": "Equivalent_XM430_82g",
+    "density_kg_per_m3": 1931.610963581499,
+    "expected_body_mass_g": 0.07486924094841944
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLZMSTU3TU7TNTQ3M9E1MTYx17U0TTTQNTdPTko2TkxNMjYxAasFmsGABsD2GSiArQNZb2xmbmICAEbXkdiKAAAA",
+    "path": "arm_link_4__RMX52_RW01_Reversed_Motor_Mount:1",
+    "body_name": "본체1",
+    "volume_mm3": 11884.875276001616,
+    "name": "Equivalent_Negligible_Custom_Wrist_Hardware",
+    "density_kg_per_m3": 9.611512728645,
+    "expected_body_mass_g": 0.11423162999364778
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLJMM0hLTjLTTTYyNtM1STFM0bWwNLXQNTNPSjEwNk22SLEwB6sFmsGABsD2GSiArQNZb2xmYWwOAAYICN2KAAAA",
+    "path": "arm_link_5__RMX52_Wrist_Horn_Adapter_3mm:1",
+    "body_name": "본체1",
+    "volume_mm3": 1640.5710996311807,
+    "name": "Equivalent_Negligible_Custom_Wrist_Hardware",
+    "density_kg_per_m3": 9.611512728645,
+    "expected_body_mass_g": 0.015768370006352218
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDS2TDY3skzWTUuzNNM1MTYx0rUwNUnWNTJINkpKMzUyNzMxA6sFmsGABsD2GSiArQNZb2xuZGIAACvXOWaKAAAA",
+    "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+bracket_v5:1",
+    "body_name": "본체1",
+    "volume_mm3": 50031.8146118419,
+    "name": "PLA_D435_Bracket_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 62.03945011868396
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE5KNTMwMkjTTTQ3SdI1MTE21LUwM0nVTTOzMLZMsTBMSUw1BKsFmsGABsD2GSiArQNZb2xuZGkKAIj7vlCKAAAA",
+    "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435:1",
+    "body_name": "본체1",
+    "volume_mm3": 45691.034839440865,
+    "name": "Equivalent_Two_D435_150g",
+    "density_kg_per_m3": 1638.607674841535,
+    "expected_body_mass_g": 74.86968035935978
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDQ1NTWxtEjRTTEyMdQ1STI10E0yMzLQNU80STFOszQ2MLQwBasFmsGABsD2GSiArQNZb2xuYG4KANukh+aKAAAA",
+    "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435_cover:1",
+    "body_name": "본체1",
+    "volume_mm3": 79.52446422542269,
+    "name": "Equivalent_Two_D435_150g",
+    "density_kg_per_m3": 1638.607674841535,
+    "expected_body_mass_g": 0.13030939741743872
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMLA0NDMzt0jUNUhJTdY1STNO000yMzbRTUs1MbFIMk5MNE4zBasFmsGABsD2GSiArQNZb2xuaGwAAG2PCMyKAAAA",
+    "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435(미러):1",
+    "body_name": "본체1",
+    "volume_mm3": 45691.04734179391,
+    "name": "Equivalent_Two_D435_150g",
+    "density_kg_per_m3": 1638.607674841535,
+    "expected_body_mass_g": 74.86970084581142
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDQ3Mk81M0/UNTNLTdU1MUpM0U0yNEzUNUo2SU1KSUsxNzMwAasFmsGABsD2GSiArQNZb2xuaGEKACbuGwqKAAAA",
+    "path": "Camera_D435_Pair_Source:1+cam_bracket_v5_with_D435`:1+D435_cover(미러):1",
+    "body_name": "본체1",
+    "volume_mm3": 79.52446422171633,
+    "name": "Equivalent_Two_D435_150g",
+    "density_kg_per_m3": 1638.607674841535,
+    "expected_body_mass_g": 0.13030939741136544
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTsLBMNTBNSjTWNUk1S9E1MUw11E00MbPUTUszSU4xtzQ0N7C0AKsFmsGABsD2GSiArQMpMrYwMDAFAPJO8BeKAAAA",
+    "path": "Camera_Top_Crossbar_2020_261mm:1",
+    "body_name": "2020_261mm_Outer_Envelope",
+    "volume_mm3": 111600.00000000001,
+    "name": "Equivalent_Hollow2020_0p5g_per_mm",
+    "density_kg_per_m3": 1249.9999999999998,
+    "expected_body_mass_g": 139.5
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQAAJ9pbjeKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체1",
+    "volume_mm3": 24540.170441224545,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 58.50626056001156
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQCAIatAzCKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체2",
+    "volume_mm3": 2.9491200000921767,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595495
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQBAK3htTmKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체3",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmwEAPI5e8CKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체4",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmwGAOv9FseKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체5",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmIAABnONGGKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체6",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmICAAAKWWaKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체7",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmIBACtG72+KAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체8",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmoEAHSeIZaKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체9",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmoGAG1aTJGKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체10",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYAAJusAlOKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체11",
+    "volume_mm3": 532.1615114554194,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 1.2687271314512814
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYCAIJob1SKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체12",
+    "volume_mm3": 2.9491200000921767,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595495
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYBAKkk2V2KAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체13",
+    "volume_mm3": 1.452424158688624,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0034627268166460196
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZm4EAPb8F6SKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체14",
+    "volume_mm3": 2.949120000184345,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824815234
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZm4GAO84eqOKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체15",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmEAABWBgc2KAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체16",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmECAAxF7MqKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체17",
+    "volume_mm3": 2.4224800780980007,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.005775438723626343
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmEBACcJWsOKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체18",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmkEAHjRlDqKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체19",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmkGAGEV+T2KAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체20",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmAAACphmgSKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체21",
+    "volume_mm3": 2.949120000000004,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375747
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmACADOl9wOKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체22",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmABABjpQQqKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체23",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmgEAEcxj/OKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체24",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmgGAF714vSKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체25",
+    "volume_mm3": 2.9491200000921727,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmQAAKgDrDaKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체26",
+    "volume_mm3": 2.9491200000962734,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824605262
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmQCALHHwTGKAAAA",
+    "path": "OpenCR_Floor1_A:1+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체27",
+    "volume_mm3": 25.624789593592133,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.06109210285840884
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQAAJ9pbjeKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체1",
+    "volume_mm3": 24540.170441224545,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 58.50626056001156
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQCAIatAzCKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체2",
+    "volume_mm3": 2.9491200000921767,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595495
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmQBAK3htTmKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체3",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmwEAPI5e8CKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체4",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmwGAOv9FseKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체5",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmIAABnONGGKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체6",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmICAAAKWWaKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체7",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmIBACtG72+KAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체8",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmoEAHSeIZaKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체9",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmoGAG1aTJGKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체10",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYAAJusAlOKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체11",
+    "volume_mm3": 532.1615114554194,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 1.2687271314512814
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYCAIJob1SKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체12",
+    "volume_mm3": 2.9491200000921767,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595495
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmYBAKkk2V2KAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체13",
+    "volume_mm3": 1.452424158688624,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0034627268166460196
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZm4EAPb8F6SKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체14",
+    "volume_mm3": 2.949120000184345,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824815234
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZm4GAO84eqOKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체15",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmEAABWBgc2KAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체16",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmECAAxF7MqKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체17",
+    "volume_mm3": 2.4224800780980007,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.005775438723626343
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmEBACcJWsOKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체18",
+    "volume_mm3": 2.949120000000009,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375758
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmkEAHjRlDqKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체19",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhZmkGAGEV+T2KAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체20",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmAAACphmgSKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체21",
+    "volume_mm3": 2.949120000000004,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375747
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmACADOl9wOKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체22",
+    "volume_mm3": 2.9491200000000086,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824375757
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmABABjpQQqKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체23",
+    "volume_mm3": 2.949120000000005,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.0070310018243757485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmgEAEcxj/OKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체24",
+    "volume_mm3": 2.949120000092177,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595496
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmgGAF714vSKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체25",
+    "volume_mm3": 2.9491200000921727,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824595485
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmQAAKgDrDaKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체26",
+    "volume_mm3": 2.9491200000962734,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.007031001824605262
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBISrMwTzPQNbdMMdY1sbAw1E0yN0jVtTQyTzK2NLK0MDJNBqsFmsGABsD2GSiArQNZb2xhbmQCALHHwTGKAAAA",
+    "path": "OpenCR_Floor1_A:2+FL2 <1>:1+OPENCR_NEW_ASM <1>:1+MANIFOLD_SOLID_BREP_33115:1",
+    "body_name": "본체27",
+    "volume_mm3": 25.624789593592133,
+    "name": "Equivalent_OpenCR_60g",
+    "density_kg_per_m3": 2384.1016385822672,
+    "expected_body_mass_g": 0.06109210285840884
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDBMTklKM7XUNTFNSdE1MTFN0rU0MUrWNbE0szQzSLJMM0xLBqsFmsGABsD2GSiArQNZb2JgaGgMAAk3FcSKAAAA",
+    "path": "Jetson_Orin_Nano_DevKit_Envelope:1",
+    "body_name": "Jetson_Orin_Nano_DevKit_Envelope",
+    "volume_mm3": 324108.5550000001,
+    "name": "Equivalent_OrinNanoDevKit_174g",
+    "density_kg_per_m3": 536.8571650322527,
+    "expected_body_mass_g": 174.0
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDI0MTQ1SjbQTUpMSdQ1MU0x1E1MSrbQTU4zTk1KTk1LSTMzAqsFmsGABsD2GSiArQNZb2JgaGkBALLrfcqKAAAA",
+    "path": "ROBOTIS_LB012_Battery_Left_Envelope:1",
+    "body_name": "ROBOTIS_LB012_Battery_Left_Envelope",
+    "volume_mm3": 80080.0,
+    "name": "Equivalent_LB012_106g",
+    "density_kg_per_m3": 1323.6763236763238,
+    "expected_body_mass_g": 106.00000000000001
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSE21MEs0MrTQTU40T9Y1MbdM0U00szDSNUtJtDRNtTRJNAIqMoCYwYAGwPYZKICtA1lvYmBkYQwALFIT3YoAAAA=",
+    "path": "ROBOTIS_LB012_Battery_Right_Envelope:1",
+    "body_name": "ROBOTIS_LB012_Battery_Right_Envelope",
+    "volume_mm3": 80080.0,
+    "name": "Equivalent_LB012_106g",
+    "density_kg_per_m3": 1323.6763236763238,
+    "expected_body_mass_g": 106.00000000000001
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDYwsUg2ME3WTbKwTNM1sTSx0E1KsbDUNTE3NLI0T7M0BkqD1QLNYEADYPsMFMDWgaw3MTQwNQIAqlseF4oAAAA=",
+    "path": "LDS_Front_Deck_Fixed_Slotted_Base:1",
+    "body_name": "LDS_Front_Deck_Fixed_Slotted_Base",
+    "volume_mm3": 11062.715653732075,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 13.717767410627774
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSEo1tkgyS7XQTTNJstQ1SUxJ0U1KTjLQNTRPNksxSku2NDA1B6sFmsGABsD2GSiArQNZb2JoaGwOAARJ1qWKAAAA",
+    "path": "LDS_Front_Sliding_Carrier:1",
+    "body_name": "LDS_Front_Sliding_Carrier",
+    "volume_mm3": 22458.692495585892,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 27.848778694526505
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDO3SEpLNU/TNU8yTNM1MUhL1k2yTLHQTUqySDNPS0pOMk4zBqsFmsGABsD2GSiArQNZb2JobGQBAHvRlAyKAAAA",
+    "path": "LDS_Rear_Deck_Fixed_Slotted_Base:1",
+    "body_name": "LDS_Rear_Deck_Fixed_Slotted_Base",
+    "volume_mm3": 11062.715653732075,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 13.717767410627774
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMDMwsTAwSknRTU00TtI1SbUw0k2ytDTVTTEwMjY0Tkw0MjVNBKsFmsGABsD2GSiArQNZb2JoYmgMAFhtk0CKAAAA",
+    "path": "LDS_Rear_Sliding_Carrier:1",
+    "body_name": "LDS_Rear_Sliding_Carrier",
+    "volume_mm3": 22458.692495585892,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 27.848778694526505
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25iaWkMAERXzFyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체1",
+    "volume_mm3": 0.06375000000000178,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500136
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25iaWkJAFq+GbyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체2",
+    "volume_mm3": 0.06374999999999896,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499266
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGACAEQlB6SKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체3",
+    "volume_mm3": 0.2401000000000098,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809009
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGAJAPlZttqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체4",
+    "volume_mm3": 0.12971183083824822,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007972045
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGgCAAUUHL2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체5",
+    "volume_mm3": 0.06375000000000727,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501827
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGgJALhorcOKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체6",
+    "volume_mm3": 0.06374999999999986,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499545
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGQCAMZHMZaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체7",
+    "volume_mm3": 0.2401000000000153,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809179
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGQJAHs7gOiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체8",
+    "volume_mm3": 0.06375000000000043,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499721
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGwCAId2Ko+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체9",
+    "volume_mm3": 0.06375000000000577,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501367
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGwJADoKm/GKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체10",
+    "volume_mm3": 0.24010000000000412,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808834
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGICAEDga8CKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체11",
+    "volume_mm3": 0.12971183083822427,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007971307
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGIJAP2c2r6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체12",
+    "volume_mm3": 0.12971183083809365,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007967282
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGoCAAHRcNmKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체13",
+    "volume_mm3": 31.53148633769942,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.09715462308466828
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGoJALytwaeKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체14",
+    "volume_mm3": 5.859005155799663,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650752
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGYCAMKCXfKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체15",
+    "volume_mm3": 5.859005155799651,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650718
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGYJAH/+7IyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체16",
+    "volume_mm3": 5.859005155799531,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650346
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYG4CAIOzRuuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체17",
+    "volume_mm3": 5.859005155799637,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650672
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYG4JAD7P95WKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체18",
+    "volume_mm3": 5.859005155799546,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650395
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGECAEyv3myKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체19",
+    "volume_mm3": 5.859005155799531,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.018052730894650346
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGEJAPHTbxKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체20",
+    "volume_mm3": 0.12971183083824406,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079719166
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGkCAA2exXWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체21",
+    "volume_mm3": 0.12971183083826143,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007972452
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYGkJALDidAuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체22",
+    "volume_mm3": 0.12971183083821328,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079709685
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGACAHNPxaWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체23",
+    "volume_mm3": 0.1297118308380892,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079671456
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGAJAM4zdNuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체24",
+    "volume_mm3": 0.12971183083810447,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007967616
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGgCADJ+3ryKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체25",
+    "volume_mm3": 0.12971183083810442,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007967614
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGgJAI8Cb8KKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체26",
+    "volume_mm3": 0.12971183083821972,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007971167
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGQCAPEt85eKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체27",
+    "volume_mm3": 0.12971183083823057,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007971501
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGQJAExRQumKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체28",
+    "volume_mm3": 0.1297118308382387,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007971752
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGwCALAc6I6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체29",
+    "volume_mm3": 0.12971183083823568,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079716586
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGwJAA1gWfCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체30",
+    "volume_mm3": 0.06374999999999952,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649944
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGICAHeKqcGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체31",
+    "volume_mm3": 0.06375000000000236,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500315
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGIJAMr2GL+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체32",
+    "volume_mm3": 0.24009999999996118,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532807511
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGoCADa7stiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체33",
+    "volume_mm3": 0.06374999999999832,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649907
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGoJAIvHA6aKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체34",
+    "volume_mm3": 0.06375000000000425,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500895
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGYCAPXon/OKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체35",
+    "volume_mm3": 0.24009999999997797,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808028
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGYJAEiULo2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체36",
+    "volume_mm3": 0.06374999999998662,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056495466
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaG4CALTZhOqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체37",
+    "volume_mm3": 0.06374999999999348,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497577
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaG4JAAmlNZSKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체38",
+    "volume_mm3": 0.24010000000003043,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809645
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGECAHvFHG2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체39",
+    "volume_mm3": 0.06374999999998071,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056493644
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGEJAMa5rROKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체40",
+    "volume_mm3": 0.0637499999999866,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056495458
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGkCADr0B3SKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체41",
+    "volume_mm3": 0.2401000000000076,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808942
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qaGkJAIeItgqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체42",
+    "volume_mm3": 0.06374999999999394,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497718
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGACACrxg6eKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체43",
+    "volume_mm3": 0.06374999999999394,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497718
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGAJAJeNMtmKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체44",
+    "volume_mm3": 0.24010000000003348,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809739
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGgCAGvAmL6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체45",
+    "volume_mm3": 0.06374999999998653,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056495436
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGgJANa8KcCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체46",
+    "volume_mm3": 0.06374999999999338,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497548
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGQCAKiTtZWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체47",
+    "volume_mm3": 0.2401000000000071,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808927
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGQJABXvBOuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체48",
+    "volume_mm3": 0.06375000000000262,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500396
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGwCAOmiroyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체49",
+    "volume_mm3": 0.06375000000000533,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650123
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGwJAFTeH/KKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체50",
+    "volume_mm3": 0.2401000000000125,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809093
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGICAC4078OKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체51",
+    "volume_mm3": 0.06374999999999677,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649859
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGIJAJNIXr2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체52",
+    "volume_mm3": 0.063749999999999,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649928
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGoCAG8F9NqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체53",
+    "volume_mm3": 0.24009999999998172,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808144
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGoJANJ5RaSKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체54",
+    "volume_mm3": 1.1103563520934538,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0034212232091428117
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGYCAKxW2fGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체55",
+    "volume_mm3": 0.06375000000000464,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501017
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGYJABEqaI+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체56",
+    "volume_mm3": 0.06375000000000396,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500806
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZG4CAO1nwuiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체57",
+    "volume_mm3": 0.24009999999997694,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532807997
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZG4JAFAbc5aKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체58",
+    "volume_mm3": 0.0637500000000053,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650122
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGECACJ7Wm+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체59",
+    "volume_mm3": 0.06375000000000529,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501218
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGEJAJ8H6xGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체60",
+    "volume_mm3": 0.24009999999997633,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532807978
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGkCAGNKQXaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체61",
+    "volume_mm3": 0.0637500000000049,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501098
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZGkJAN428AiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체62",
+    "volume_mm3": 0.06374999999999839,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499093
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGACAB2bQaaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체63",
+    "volume_mm3": 0.24009999999999732,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808625
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGAJAKDn8NiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체64",
+    "volume_mm3": 0.06374999999999832,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649907
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGgCAFyqWr+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체65",
+    "volume_mm3": 0.06374999999999832,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649907
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGgJAOHW68GKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체66",
+    "volume_mm3": 0.24010000000000326,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808808
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGQCAJ/5d5SKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체67",
+    "volume_mm3": 0.06374999999999806,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649899
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGQJACKFxuqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체68",
+    "volume_mm3": 0.06374999999999806,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649899
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGwCAN7IbI2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체69",
+    "volume_mm3": 0.24010000000000326,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808808
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGwJAGO03fOKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체70",
+    "volume_mm3": 0.06374999999998023,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056493495
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGICABleLcKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체71",
+    "volume_mm3": 0.06374999999998086,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649369
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGIJAKQinLyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체72",
+    "volume_mm3": 0.2400999999999833,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808193
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGoCAFhvNtuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체73",
+    "volume_mm3": 0.06374999999999832,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649907
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGoJAOUTh6WKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체74",
+    "volume_mm3": 0.06374999999999806,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649899
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGYCAJs8G/CKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체75",
+    "volume_mm3": 0.24010000000000326,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808808
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGYJACZAqo6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체76",
+    "volume_mm3": 0.06375000000000043,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499721
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZbw40yAQA2g0A6YoAAAA=",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체77",
+    "volume_mm3": 0.06374999999999986,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499545
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZbw40yBIAZ3Gxl4oAAAA=",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체78",
+    "volume_mm3": 0.24010000000000212,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808773
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGECABURmG6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체79",
+    "volume_mm3": 0.06375000000000475,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650105
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGEJAKhtKRCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체80",
+    "volume_mm3": 0.06375000000000478,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501058
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGkCAFQgg3eKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체81",
+    "volume_mm3": 0.24010000000000328,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808809
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qbGkJAOlcMgmKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체82",
+    "volume_mm3": 0.06375000000000193,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500182
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmACAJiNDqOKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체83",
+    "volume_mm3": 0.06374999999999896,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499266
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmAJACXxv92KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체84",
+    "volume_mm3": 0.24009999999996118,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532807511
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmgCANm8FbqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체85",
+    "volume_mm3": 0.06374999999999506,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056498065
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmgJAGTApMSKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체86",
+    "volume_mm3": 0.06374999999999896,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499266
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmQCABrvOJGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체87",
+    "volume_mm3": 0.2401000000000098,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809009
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmQJAKeTie+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체88",
+    "volume_mm3": 0.06375000000000779,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501987
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmwCAFveI4iKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체89",
+    "volume_mm3": 0.06375000000000577,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501367
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmwJAOaikvaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체90",
+    "volume_mm3": 0.2401000000000199,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532809321
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmICAJxIYseKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체91",
+    "volume_mm3": 0.06374999999999259,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497304
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmIJACE007mKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체92",
+    "volume_mm3": 0.06375000000000525,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501204
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmoCAN15ed6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체93",
+    "volume_mm3": 0.2401000000000006,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808725
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmoJAGAFyKCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체94",
+    "volume_mm3": 0.06375000000000582,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650138
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmYCAB4qVPWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체95",
+    "volume_mm3": 0.06374999999998666,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649548
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmYJAKNW5YuKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체96",
+    "volume_mm3": 0.24010000000000076,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808731
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYm4CAF8bT+yKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체97",
+    "volume_mm3": 0.06375000000000779,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501987
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYm4JAOJn/pKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체98",
+    "volume_mm3": 0.06375000000000672,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501657
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmECAJAH12uKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체99",
+    "volume_mm3": 0.24009999999999357,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.000739794653280851
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmEJAC17ZhWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체100",
+    "volume_mm3": 0.06375000000000296,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.000196426110565005
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmkCANE2zHKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체101",
+    "volume_mm3": 0.06375000000000444,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500957
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qYmkJAGxKfQyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체102",
+    "volume_mm3": 0.24010000000000054,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808724
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamACAK/nzKKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체103",
+    "volume_mm3": 0.06375000000000433,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500922
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamAJABKbfdyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체104",
+    "volume_mm3": 0.06375000000000243,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056500337
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamgCAO7W17uKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체105",
+    "volume_mm3": 0.24009999999998297,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808182
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamgJAFOqZsWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체106",
+    "volume_mm3": 0.06374999999999259,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497304
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamQCAC2F+pCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체107",
+    "volume_mm3": 0.06375000000000637,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650155
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamQJAJD5S+6KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체108",
+    "volume_mm3": 0.24010000000000017,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808712
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamwCAGy04YmKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체109",
+    "volume_mm3": 0.06375000000000558,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056501307
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamwJANHIUPeKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체110",
+    "volume_mm3": 0.0637500000000082,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056502115
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamICAKsioMaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체111",
+    "volume_mm3": 0.24010000000000106,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808741
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamIJABZeEbiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체112",
+    "volume_mm3": 0.06374999999999965,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649948
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamoCAOoTu9+KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체113",
+    "volume_mm3": 0.06374999999999637,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056498466
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamoJAFdvCqGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체114",
+    "volume_mm3": 0.24010000000000112,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808742
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamYCAClAlvSKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체115",
+    "volume_mm3": 0.06374999999999373,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497656
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamYJAJQ8J4qKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체116",
+    "volume_mm3": 0.06374999999999556,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105649822
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qam4CAGhxje2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체117",
+    "volume_mm3": 0.24009999999998996,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808398
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qam4JANUNPJOKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체118",
+    "volume_mm3": 0.06375000000000827,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056502136
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamECAKdtFWqKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체119",
+    "volume_mm3": 0.06374999999999896,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056499266
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb24K1AUAGhGkFIoAAAA=",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체120",
+    "volume_mm3": 0.2401000000000038,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808825
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamkCAOZcDnOKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체121",
+    "volume_mm3": 0.06374999999999259,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497304
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qamkJAFsgvw2KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체122",
+    "volume_mm3": 0.06375000000000582,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0001964261105650138
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmACAPZZiqCKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체123",
+    "volume_mm3": 0.24010000000000065,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808728
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmAJAEslO96KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체124",
+    "volume_mm3": 0.06374999999999403,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497748
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmgCALdokbmKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체125",
+    "volume_mm3": 0.06374999999999403,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00019642611056497748
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmgJAAoUIMeKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체126",
+    "volume_mm3": 0.2400999999999849,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0007397946532808243
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmQCAHQ7vJKKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체127",
+    "volume_mm3": 0.12971183083826274,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079724923
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmQJAMlHDeyKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체128",
+    "volume_mm3": 0.1297118308382543,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007972232
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmwCADUKp4uKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체129",
+    "volume_mm3": 0.12971183083820545,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.0003996673007970727
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmwJAIh2FvWKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체130",
+    "volume_mm3": 0.12971183083821528,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.00039966730079710297
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmICAPKc5sSKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체131",
+    "volume_mm3": 79.3915990396327,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.24462090997475627
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmIJAE/gV7qKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체132",
+    "volume_mm3": 79.46888851252297,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.24485905382648104
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZbw40ygQAs6393YoAAAA=",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체133",
+    "volume_mm3": 773.606171881929,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 2.3836306110093015
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZbw40yhIADtFMo4oAAAA=",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체134",
+    "volume_mm3": 1945.335263199565,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 5.9939551293368325
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmYCAHD+0PaKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체135",
+    "volume_mm3": 152.31637734118777,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.4693162913957613
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZmYJAM2CYYiKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체136",
+    "volume_mm3": 31.194000000001488,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.09611476224258468
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZm4CADHPy++KAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체137",
+    "volume_mm3": 3029.336135525835,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 9.33397199522094
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSDY2NTM1Nk/UTTOxMNI1STY10k00sjTWNbWwNDA0Sk1KTEpOBasFmsGABsD2GSiArQNZb25qZm4JAIyzepGKAAAA",
+    "path": "UC684_Camera_On_Gripper:1",
+    "body_name": "본체138",
+    "volume_mm3": 317.4750000000059,
+    "name": "Equivalent_UC684_20g",
+    "density_kg_per_m3": 3081.1938912156215,
+    "expected_body_mass_g": 0.9782020306136976
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSLI0NTBPSknRTbK0NNE1sTAz0U1Ms7DQNTMyMTUxTEpKS0tJAqsFmsGABsD2GSiArQNZb25qbm4KALZeiL6KAAAA",
+    "path": "UC684_Camera_Bracket_PLA:1",
+    "body_name": "본체1",
+    "volume_mm3": 8321.823873072717,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 10.31906160261017
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSElMM7E0sUzRTTE3NdA1MQMSFmZJKbqmppZJKUYGlqamBpZgtUAzGNAA2D4DBbB1IOsNTYxNLCwBAumnNIsAAAA=",
+    "path": "Chassis_Bracket_Left_16mm:1",
+    "body_name": "Floor_Bracket_Left_Main",
+    "volume_mm3": 141977.23783818766,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 176.0517749193527
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTSElMM7E0sUzRTTE3NdA1MQMSFmZJKbqmppZJKUYGlqamBpZgtUAzGNAA2D4DBbB1IOsNTYyBZgEA/qQNU4sAAAA=",
+    "path": "Chassis_Bracket_Left_16mm:1",
+    "body_name": "Floor_Bracket_Left_Profile_Carrier",
+    "volume_mm3": 66408.73701558958,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 82.34683389933107
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEkzM0tJSTTStUhLNtE1SUxO1LUwMTYEEuZmKaYGBmYWSWZgtUAzGNAA2D4DBbB1IOsNTYxNDU0BSq/I4IsAAAA=",
+    "path": "Chassis_Bracket_Right_16mm:1",
+    "body_name": "Floor_Bracket_Right_Main",
+    "volume_mm3": 141977.23783818766,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 176.0517749193527
+  },
+  {
+    "entity_token": "/v4BAAAARlJLZXkAH4sIAAAAAAAA/zNQsFAwAEJDBSMgBrOMLIAsQwUTkIiZwo3YzHn2Fb6iM+q7jBfGz6oBqjBSMDZTMEkzM0tJSTTStUhLNtE1SUxO1LUwMTYEEuZmKaYGBmYWSWZgtUAzGNAA2D4DBbB1IOsNTYxNjQwABgiPu4sAAAA=",
+    "path": "Chassis_Bracket_Right_16mm:1",
+    "body_name": "Floor_Bracket_Right_Profile_Carrier",
+    "volume_mm3": 66408.73701558955,
+    "name": "PLA_Printed_1240",
+    "density_kg_per_m3": 1240.0,
+    "expected_body_mass_g": 82.34683389933105
+  }
+]

@@ -1,0 +1,136 @@
+{
+ "n_images": 300,
+ "synthetic_only": true,
+ "d3_e3": {
+  "table": {
+   "all": {
+    "n": 417,
+    "output": 417,
+    "output_rate": 1.0,
+    "orientation": 417,
+    "success": 411,
+    "success_rate": 0.9856,
+    "center_mm_p50_p95": [
+     1.508,
+     6.229
+    ],
+    "axis_deg_p50_p95": [
+     0.647,
+     3.081
+    ]
+   },
+   "tag_seen": {
+    "n": 392,
+    "output": 392,
+    "output_rate": 1.0,
+    "orientation": 392,
+    "success": 388,
+    "success_rate": 0.9898,
+    "center_mm_p50_p95": [
+     1.538,
+     5.947
+    ],
+    "axis_deg_p50_p95": [
+     0.632,
+     2.628
+    ]
+   },
+   "tag_not_seen": {
+    "n": 25,
+    "output": 25,
+    "output_rate": 1.0,
+    "orientation": 25,
+    "success": 23,
+    "success_rate": 0.92,
+    "center_mm_p50_p95": [
+     1.054,
+     11.503
+    ],
+    "axis_deg_p50_p95": [
+     1.403,
+     5.351
+    ]
+   },
+   "lying_no_up_tag": {
+    "n": 44,
+    "output": 44,
+    "output_rate": 1.0,
+    "orientation": 44,
+    "success": 43,
+    "success_rate": 0.9773,
+    "center_mm_p50_p95": [
+     1.462,
+     6.208
+    ],
+    "axis_deg_p50_p95": [
+     1.465,
+     4.776
+    ]
+   },
+   "lying_tag_up": {
+    "n": 46,
+    "output": 46,
+    "output_rate": 1.0,
+    "orientation": 46,
+    "success": 46,
+    "success_rate": 1.0,
+    "center_mm_p50_p95": [
+     2.702,
+     7.222
+    ],
+    "axis_deg_p50_p95": [
+     1.842,
+     4.309
+    ]
+   },
+   "standing_cuboid": {
+    "n": 119,
+    "output": 119,
+    "output_rate": 1.0,
+    "orientation": 119,
+    "success": 119,
+    "success_rate": 1.0,
+    "center_mm_p50_p95": [
+     1.495,
+     4.979
+    ],
+    "axis_deg_p50_p95": [
+     0.69,
+     1.904
+    ]
+   },
+   "standing_cylinder": {
+    "n": 208,
+    "output": 208,
+    "output_rate": 1.0,
+    "orientation": 208,
+    "success": 203,
+    "success_rate": 0.976,
+    "center_mm_p50_p95": [
+     1.471,
+     5.449
+    ],
+    "axis_deg_p50_p95": [
+     0.521,
+     1.489
+    ]
+   }
+  },
+  "false_outputs": 0,
+  "ms_all_p50_p95": [
+   8.252,
+   13.257
+  ],
+  "ms_det_p50_p95": [
+   3.516,
+   4.104
+  ],
+  "ms_pose_p50_p95": [
+   4.592,
+   9.686
+  ],
+  "ms_pose_per_det_p50": [
+   4.404
+  ]
+ }
+}

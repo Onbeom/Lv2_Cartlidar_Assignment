@@ -1,0 +1,221 @@
+{
+  "world": "/home/pa4/git/lv2_next_module/Cartlidar/sim_world/worlds/b_dice/seed_1",
+  "light": 0.6,
+  "K": {
+    "fx": 605.850769,
+    "fy": 605.67987,
+    "cx": 324.365814,
+    "cy": 245.139175
+  },
+  "tilts_deg": [
+    35.2,
+    30.0,
+    10.0
+  ],
+  "arm": "s0",
+  "arm_q": {
+    "RMX52_Base_Yaw": 0.0,
+    "RMX52_Shoulder": 1.4,
+    "RMX52_Elbow": -1.0,
+    "RMX52_Wrist_Pitch": -1.3,
+    "RMX52_Wrist_Roll_Reversed": 0.0,
+    "gripper_left_joint": 0.0
+  },
+  "scenes": [
+    {
+      "name": "A_shelf2_floorpuck_0.6m",
+      "camera": "front",
+      "tilt_deg": 35.2,
+      "base_footprint": [
+        0.902,
+        0.6405,
+        -90
+      ],
+      "cam_height_m": 0.4904204608477022,
+      "desc": "앞: 선반 2(퍽 5개)까지 0.6 m, 바닥 퍽 0.43 m",
+      "image": "A_shelf2_floorpuck_0.6m_tilt35.2_s0.png"
+    },
+    {
+      "name": "A_shelf2_floorpuck_0.6m",
+      "camera": "front",
+      "tilt_deg": 30.0,
+      "base_footprint": [
+        0.902,
+        0.6405,
+        -90
+      ],
+      "cam_height_m": 0.49040308146383327,
+      "desc": "앞: 선반 2(퍽 5개)까지 0.6 m, 바닥 퍽 0.43 m",
+      "image": "A_shelf2_floorpuck_0.6m_tilt30_s0.png"
+    },
+    {
+      "name": "A_shelf2_floorpuck_0.6m",
+      "camera": "front",
+      "tilt_deg": 10.0,
+      "base_footprint": [
+        0.902,
+        0.6405,
+        -90
+      ],
+      "cam_height_m": 0.4903351836644953,
+      "desc": "앞: 선반 2(퍽 5개)까지 0.6 m, 바닥 퍽 0.43 m",
+      "image": "A_shelf2_floorpuck_0.6m_tilt10_s0.png"
+    },
+    {
+      "name": "B_shelf2_0.9m",
+      "camera": "front",
+      "tilt_deg": 35.2,
+      "base_footprint": [
+        0.902,
+        0.9405,
+        -90
+      ],
+      "cam_height_m": 0.4904204608477022,
+      "desc": "앞: 선반 2까지 0.9 m",
+      "image": "B_shelf2_0.9m_tilt35.2_s0.png"
+    },
+    {
+      "name": "B_shelf2_0.9m",
+      "camera": "front",
+      "tilt_deg": 30.0,
+      "base_footprint": [
+        0.902,
+        0.9405,
+        -90
+      ],
+      "cam_height_m": 0.49040308146383327,
+      "desc": "앞: 선반 2까지 0.9 m",
+      "image": "B_shelf2_0.9m_tilt30_s0.png"
+    },
+    {
+      "name": "B_shelf2_0.9m",
+      "camera": "front",
+      "tilt_deg": 10.0,
+      "base_footprint": [
+        0.902,
+        0.9405,
+        -90
+      ],
+      "cam_height_m": 0.4903351836644953,
+      "desc": "앞: 선반 2까지 0.9 m",
+      "image": "B_shelf2_0.9m_tilt10_s0.png"
+    },
+    {
+      "name": "C_shelf0_0.5m",
+      "camera": "front",
+      "tilt_deg": 35.2,
+      "base_footprint": [
+        -2.0108,
+        1.8235,
+        90
+      ],
+      "cam_height_m": 0.4904204608477022,
+      "desc": "앞: 선반 0(퍽 4개)까지 0.5 m",
+      "image": "C_shelf0_0.5m_tilt35.2_s0.png"
+    },
+    {
+      "name": "C_shelf0_0.5m",
+      "camera": "front",
+      "tilt_deg": 30.0,
+      "base_footprint": [
+        -2.0108,
+        1.8235,
+        90
+      ],
+      "cam_height_m": 0.49040308146383327,
+      "desc": "앞: 선반 0(퍽 4개)까지 0.5 m",
+      "image": "C_shelf0_0.5m_tilt30_s0.png"
+    },
+    {
+      "name": "C_shelf0_0.5m",
+      "camera": "front",
+      "tilt_deg": 10.0,
+      "base_footprint": [
+        -2.0108,
+        1.8235,
+        90
+      ],
+      "cam_height_m": 0.4903351836644953,
+      "desc": "앞: 선반 0(퍽 4개)까지 0.5 m",
+      "image": "C_shelf0_0.5m_tilt10_s0.png"
+    },
+    {
+      "name": "D_signal_0.9m",
+      "camera": "front",
+      "tilt_deg": 35.2,
+      "base_footprint": [
+        -0.146,
+        0.969,
+        0
+      ],
+      "cam_height_m": 0.4904204608477022,
+      "desc": "앞: 신호등까지 0.9 m",
+      "image": "D_signal_0.9m_tilt35.2_s0.png"
+    },
+    {
+      "name": "D_signal_0.9m",
+      "camera": "front",
+      "tilt_deg": 30.0,
+      "base_footprint": [
+        -0.146,
+        0.969,
+        0
+      ],
+      "cam_height_m": 0.49040308146383327,
+      "desc": "앞: 신호등까지 0.9 m",
+      "image": "D_signal_0.9m_tilt30_s0.png"
+    },
+    {
+      "name": "D_signal_0.9m",
+      "camera": "front",
+      "tilt_deg": 10.0,
+      "base_footprint": [
+        -0.146,
+        0.969,
+        0
+      ],
+      "cam_height_m": 0.4903351836644953,
+      "desc": "앞: 신호등까지 0.9 m",
+      "image": "D_signal_0.9m_tilt10_s0.png"
+    },
+    {
+      "name": "E_rear_shelf0_0.5m",
+      "camera": "rear",
+      "tilt_deg": 35.2,
+      "base_footprint": [
+        -2.0108,
+        1.542,
+        -90
+      ],
+      "cam_height_m": 0.4904204608477021,
+      "desc": "뒤: 선반 0까지 0.5 m",
+      "image": "E_rear_shelf0_0.5m_tilt35.2_s0.png"
+    },
+    {
+      "name": "E_rear_shelf0_0.5m",
+      "camera": "rear",
+      "tilt_deg": 30.0,
+      "base_footprint": [
+        -2.0108,
+        1.542,
+        -90
+      ],
+      "cam_height_m": 0.49040308146383316,
+      "desc": "뒤: 선반 0까지 0.5 m",
+      "image": "E_rear_shelf0_0.5m_tilt30_s0.png"
+    },
+    {
+      "name": "E_rear_shelf0_0.5m",
+      "camera": "rear",
+      "tilt_deg": 10.0,
+      "base_footprint": [
+        -2.0108,
+        1.542,
+        -90
+      ],
+      "cam_height_m": 0.49033518366449524,
+      "desc": "뒤: 선반 0까지 0.5 m",
+      "image": "E_rear_shelf0_0.5m_tilt10_s0.png"
+    }
+  ]
+}

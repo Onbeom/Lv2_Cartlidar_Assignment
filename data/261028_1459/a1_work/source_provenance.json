@@ -1,0 +1,10 @@
+{
+  "lockgate": {
+    "sha": "0e2438a61f119a12b19f3f67a12c965613fcb2a4",
+    "branch": "fix/perception-arm-lock-gate"
+  },
+  "armdetect": {
+    "sha": "67af911ff076233da1165d3ba651adc0e223841b",
+    "branch": "fix/perception-arm-detect"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "/clock": [
+    {
+      "node": "_BridgeCheck_PublishClock",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/tf": [
+    {
+      "node": "_BridgeCheck_PublishTF",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/odom": [
+    {
+      "node": "_BridgeCheck_PublishOdom",
+      "reliability": "1",
+      "durability": "2",
+      "depth": 10
+    }
+  ],
+  "/scan": [],
+  "/left/image_raw": [],
+  "/right/image_raw": [],
+  "/left/camera_info": [],
+  "/right/camera_info": []
+}

@@ -1,0 +1,23 @@
+{
+ "n_goals": 0,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.1788,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": null,
+ "G4_loc_max_m": null,
+ "G4_yaw_rmse_rad": null,
+ "G4_n_samples": 0,
+ "G5_cmd": {
+  "n": 0,
+  "frames": [],
+  "vx_max": 0.0,
+  "vx_min": 0.0,
+  "wz_abs_max": 0.0
+ },
+ "goals": [],
+ "G3_pass": true,
+ "G4_pass": false,
+ "G5_pass": false,
+ "pass": false
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "lidar_tfodom_raw",
+  "light": "dark",
+  "simulation_only": true,
+  "model": "261029_1030/urdf_261028",
+  "maze": "maze.zip (261030_1943)",
+  "truth_as_input": false,
+  "diagnostic_only": true,
+  "variant_lua": null,
+  "play_exit": 0,
+  "finish_exit": 0,
+  "write_exit": 0,
+  "children": [
+    {
+      "name": "cartographer",
+      "pid": 1835910,
+      "exit": 0
+    },
+    {
+      "name": "record",
+      "pid": 1835911,
+      "exit": 0
+    },
+    {
+      "name": "play",
+      "pid": 1836080,
+      "exit": 0
+    }
+  ],
+  "to_map_exit": 0
+}

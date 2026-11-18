@@ -1,0 +1,26 @@
+# 바퀴 정의 (시뮬레이션·실물 공용). 기구학(wheel_kinematics.py)·물리 시험(phys_tests, mujoco)은 이 목록만 읽는다.
+# 값 출처: URDF 261027_1530 waffle_4wd.urdf 바퀴 관절 origin(y)·limit과 바퀴 반지름.
+#   축 방향: 모든 바퀴 관절 축이 base_link +y → 양의 각속도 = 앞으로 굴러감 → sign +1
+#   (물리 시험 P6 전진 = 모든 바퀴 +, P7 반시계 = 왼쪽 −·오른쪽 + 와 같음)
+radius_m: 0.0330006
+max_wheel_rate_radps: 10.995574   # XM430-W210 무부하 속도 70 rev/min (ROBOTIS e-Manual, 11.1 V) × 증속 벨트 1.5 (모터 36T → 바퀴 24T), URDF velocity와 같음
+max_wheel_torque_Nm: 1.8          # 모터 stall 2.7 N·m ÷ 1.5, URDF effort와 같음
+wheel_armature_kgm2: 0.007244     # 시뮬레이션 전용. 모터 출력축 0.0163 (XM430-W350 식별값 0.045 × (212.6/353.5)²) ÷ 1.5² (바퀴 축으로 옮긴 값)
+command_timeout_s: 0.5            # 마지막 명령 뒤 이 시간이 지나면 모든 바퀴 0
+wheels:
+  - name: front_left
+    joint: Wheel_Revolute_Front_Left
+    y_m: 0.1546
+    sign: 1
+  - name: front_right
+    joint: Wheel_Revolute_Front_Right
+    y_m: -0.1546
+    sign: 1
+  - name: rear_left
+    joint: Wheel_Revolute_Rear_Left
+    y_m: 0.1546
+    sign: 1
+  - name: rear_right
+    joint: Wheel_Revolute_Rear_Right
+    y_m: -0.1546
+    sign: 1

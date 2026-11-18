@@ -1,0 +1,45 @@
+{
+ "old_model": {
+  "fk_max_abs_diff": 0.0,
+  "arm_hits_same": "200/200",
+  "frame_same": true,
+  "frame_tcp_same": true,
+  "body_shapes_same": true
+ },
+ "new_model": {
+  "profile_joints": [
+   "joint1",
+   "joint2",
+   "joint3",
+   "joint4",
+   "joint5"
+  ],
+  "cam": "arm_camera_optical_frame",
+  "root": "base_link",
+  "arm_links": [
+   "link2",
+   "link3",
+   "link4",
+   "link5",
+   "gripper_roll_link",
+   "gripper_left_link",
+   "gripper_right_link"
+  ],
+  "fk_cam_max_abs_diff": 3.3306690738754696e-16,
+  "fk_tcp_max_abs_diff": 2.220446049250313e-16,
+  "T_bf_root_z": 0.00674998168
+ },
+ "pose_hits": {
+  "drive": [],
+  "zero": [],
+  "stow": [
+   [
+    "link3",
+    "base_link"
+   ]
+  ]
+ },
+ "drive_arm_min_z": 0.1554547127655295,
+ "body_min_z": -0.00028544945354268964,
+ "ik_wall": null
+}

@@ -1,0 +1,102 @@
+{
+ "camera": "top_camera_front",
+ "frame_id": "top_camera_front_color_optical_frame",
+ "n": 10,
+ "frames": [
+  {
+   "file": "000.png",
+   "stamp": 1794483460.5648053,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 86.86355902777778
+  },
+  {
+   "file": "001.png",
+   "stamp": 1794483460.6649303,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 86.96811631944445
+  },
+  {
+   "file": "002.png",
+   "stamp": 1794483460.7650588,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.0530078125
+  },
+  {
+   "file": "003.png",
+   "stamp": 1794483460.8651903,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.00996419270834
+  },
+  {
+   "file": "004.png",
+   "stamp": 1794483460.9653244,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.14877387152778
+  },
+  {
+   "file": "005.png",
+   "stamp": 1794483461.0654616,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 86.98651258680556
+  },
+  {
+   "file": "006.png",
+   "stamp": 1794483461.1655784,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 86.97127604166667
+  },
+  {
+   "file": "007.png",
+   "stamp": 1794483461.2656512,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.0018044704861
+  },
+  {
+   "file": "008.png",
+   "stamp": 1794483461.3657238,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.02503472222222
+  },
+  {
+   "file": "009.png",
+   "stamp": 1794483461.4657965,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 87.0741015625
+  }
+ ],
+ "K": [
+  605.8507690429688,
+  0.0,
+  324.3658142089844,
+  0.0,
+  605.6798706054688,
+  245.13917541503906,
+  0.0,
+  0.0,
+  1.0
+ ],
+ "D": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "width": 640,
+ "height": 480,
+ "distortion_model": "plumb_bob",
+ "T_link_optical": {
+  "xyz": [
+   -0.00018251649453304708,
+   0.015094959177076817,
+   -7.015527808107436e-05
+  ],
+  "xyzw": [
+   -0.5015669274143875,
+   0.501628805650398,
+   -0.4965997555991635,
+   0.5001878220355139
+  ]
+ },
+ "time": "2026-11-12 20:37:41"
+}

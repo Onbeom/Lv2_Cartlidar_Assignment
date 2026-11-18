@@ -1,0 +1,26 @@
+[
+  {
+    "old": "RMX52_DC12_STD_1",
+    "new": "RMX52_Motor_J1_Base_Yaw"
+  },
+  {
+    "old": "RMX52_DC12_W-IDLE_ALT1_1",
+    "new": "RMX52_Motor_J2_Shoulder"
+  },
+  {
+    "old": "RMX52_DC12_W-IDLE_ALT1_2",
+    "new": "RMX52_Motor_J3_Elbow"
+  },
+  {
+    "old": "RMX52_DC12_W-IDLE_ALT1_3",
+    "new": "RMX52_Motor_J4_Wrist_Pitch"
+  },
+  {
+    "old": "RMX52_DC12_STD_2",
+    "new": "RMX52_Motor_J6_Gripper_Open_Close"
+  },
+  {
+    "old": "RMX52_DYNAMIXEL_Wrist_Roll",
+    "new": "RMX52_Motor_J5_Wrist_Roll"
+  }
+]

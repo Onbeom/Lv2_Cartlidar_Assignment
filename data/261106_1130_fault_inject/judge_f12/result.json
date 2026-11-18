@@ -1,0 +1,70 @@
+{
+ "mode_ok": true,
+ "boot_line": [
+  "[component_container_mt-1] [INFO] [1793933179.981810312] [perception_node]: 검출기: tensorrt TensorRT /home/pa4/git/lv2_next_module/261105_2015_yolo_e3/trt/yolo11n_task4_E3_480_fp16.engine (입력 640×480, 클래스 4) · 팔 tensorrt TensorRT /home/pa4/git/lv2_next_module/26"
+ ],
+ "F12": {
+  "cases": {
+   "empty": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 13.0,
+    "found": 39,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933184.251358560] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933184.251553056] [perception_node]: 검출기: color(any) 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "half": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 14.0,
+    "found": 42,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933195.511526492] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933195.511735252] [perception_node]: 검출기: color(any) 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "random": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 1,
+    "hz": 14.67,
+    "found": 44,
+    "line": [
+     "[component_container_mt-1] [WARN] [1793933206.784920654] [perception_node]: detector.engine_path 를 쓰지 못해 색 검출기로 대신함: 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용"
+    ],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933206.785126196] [perception_node]: 검출기: color(any) 엔진 역직렬화 실패 (TensorRT 버전 · GPU 가 엔진을 만든 환경과 같은지 확인) → ColorDetector 사용 · 팔 color+label(any) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": true
+   },
+   "flip": {
+    "alive": true,
+    "mode_ok": true,
+    "warn": 0,
+    "hz": 15.0,
+    "found": 0,
+    "line": [],
+    "boot_line": [
+     "[component_container_mt-1] [INFO] [1793933218.214323501] [perception_node]: 검출기: tensorrt TensorRT judge_f12/bad_engines/flip.engine (입력 640×480, 클래스 4) · 팔 tensorrt TensorRT judge_f12/bad_engines/flip.engine (입력 640×480, 클래스 4) · 태그 사용 가능 · 마커 사용 가능"
+    ],
+    "boot_s": 5.0,
+    "pass": false
+   }
+  },
+  "pass": false,
+  "took_s": 47.0
+ }
+}

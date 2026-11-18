@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Floor_Bracket_Right_Main",
+    "triangles": 3832,
+    "size_mm": [
+      217.64994812011722,
+      90.0,
+      41.999996185302734
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "volume_mm3": 142001.4769229289,
+    "cad_volume_difference_percent": 0.01707251465823045,
+    "bed_256_xy_fits": true
+  },
+  {
+    "name": "Floor_Bracket_Right_Profile_Carrier",
+    "triangles": 1124,
+    "size_mm": [
+      52.70002365112305,
+      110.0,
+      58.0
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "volume_mm3": 66419.57433049187,
+    "cad_volume_difference_percent": 0.01631911008894467,
+    "bed_256_xy_fits": true
+  },
+  {
+    "name": "Floor_Bracket_Left_Main",
+    "triangles": 3832,
+    "size_mm": [
+      217.64994812011722,
+      90.0,
+      41.999996185302734
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "volume_mm3": 142001.47683270022,
+    "cad_volume_difference_percent": 0.01707245110667507,
+    "bed_256_xy_fits": true
+  },
+  {
+    "name": "Floor_Bracket_Left_Profile_Carrier",
+    "triangles": 1124,
+    "size_mm": [
+      52.700023651123054,
+      110.0,
+      58.0
+    ],
+    "boundary_edges": 0,
+    "nonmanifold_edges": 0,
+    "volume_mm3": 66419.57440595506,
+    "cad_volume_difference_percent": 0.016319223723310797,
+    "bed_256_xy_fits": true
+  }
+]

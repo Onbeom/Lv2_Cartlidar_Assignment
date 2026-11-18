@@ -1,0 +1,310 @@
+{
+  "P1": {
+    "ok": 10,
+    "n": 12,
+    "rate": 0.8333333333333334
+  },
+  "P2": {
+    "ok": 144,
+    "n": 182,
+    "rate": 0.7912087912087912
+  },
+  "P3_other_frames": 0,
+  "P3_hidden": {
+    "ok": 40,
+    "n": 40,
+    "rate": 1.0
+  },
+  "P4": {
+    "ok": 10,
+    "n": 10,
+    "rate": 1.0
+  },
+  "planned_selected_mismatch": [],
+  "missing_initial_target": [
+    "w4_out00_L0",
+    "w4_out00_L1"
+  ],
+  "unassessed_frames": 50,
+  "failures": [
+    {
+      "scene": "w3_out00_L0",
+      "k": 0,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 1,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 2,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06700119401921133
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 3,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06700119401921133
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 4,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06510929273152949
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 5,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.068000294117011
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 6,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.0719011126478582
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.07870311302610589
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 8,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.08390381397767327
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 17,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.08390381397767327
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 18,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.07870311302610589
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 19,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.0719011126478582
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 20,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.068000294117011
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 21,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06807363660037562
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 22,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 23,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 24,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06700119401921133
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 25,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06700119401921133
+    },
+    {
+      "scene": "w3_out00_L0",
+      "k": 26,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06700119401921133
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 0,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 1,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 2,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 3,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 4,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06510929273152949
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 5,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.0680124253353753
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 6,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06920115605970754
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 7,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.07590322786285181
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 8,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.08670369080956128
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 17,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.08670369080956128
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 18,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.07590322786285181
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 19,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06920115605970754
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 20,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.0680124253353753
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 21,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06240969475970856
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 22,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 23,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 24,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 25,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 26,
+      "check": "P2",
+      "offset_valid": true,
+      "error": 0.06420124609382596
+    },
+    {
+      "scene": "w4_out00_L0",
+      "check": "P1",
+      "reason": "시작 단계 실제 선택 목표 없음; 임의 정답 대체 금지"
+    },
+    {
+      "scene": "w4_out00_L1",
+      "check": "P1",
+      "reason": "시작 단계 실제 선택 목표 없음; 임의 정답 대체 금지"
+    }
+  ],
+  "pass_observed_checks": false,
+  "P4_exercised": true,
+  "note": "인지범위 보조 판정. 초기 목표 없으면 P1 실패로 포함하고 P2~P4는 평가 불가 행 수를 명시. 기존 J 및 계획/선택 불일치 보존. P4없음은 미시험."
+}

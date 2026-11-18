@@ -1,0 +1,224 @@
+{
+ "run": "run_r0",
+ "oblique": 1,
+ "rot": 0.0,
+ "shift": "0,0",
+ "checks": [
+  {
+   "check": "미션 DONE",
+   "ok": true,
+   "detail": "{\"state\": \"DONE\", \"reason\": \"\", \"step\": \"wait 3\"}"
+  },
+  {
+   "check": "measure_front 장소마다 1 번",
+   "ok": true,
+   "detail": "measure_front ['L2', 'L1', 'L3'], measure_box ['L2', 'L1', 'L3']"
+  },
+  {
+   "check": "사전값 (지도 칸, 5 s 안) 을 measure_front 전에 받음",
+   "ok": true,
+   "detail": "[{'frame': 'map', 'xy': [2.202, 3.7], 'age_s': 0.0}, {'frame': 'map', 'xy': [3.67, 0.95], 'age_s': 0.0}, {'frame': 'map', 'xy': [3.67, 5.354], 'age_s': 0.0}]"
+  },
+  {
+   "check": "oblique place 줄 = measure_front 수",
+   "ok": true,
+   "detail": "3 vs 3"
+  },
+  {
+   "check": "L2 공식 (beta · 회전 · R_look · 목표 · 방법)",
+   "ok": true,
+   "detail": "beta 0.00° → 보기 0.00°, 회전 0.00°, R_look 0.5853, 목표 0.3528, tfmini (기록 tfmini, 최대 차 1.05e-05)"
+  },
+  {
+   "check": "L2 mock 빔: 중심이 축 위 R_look",
+   "ok": true,
+   "detail": "접근 뒤 중심 base (0.5853, 0.0000), R_look 0.5853, 이동 +0.1000 m"
+  },
+  {
+   "check": "L2 놓기 box_look 0.44/50 · 잰 중심 조준",
+   "ok": true,
+   "detail": "['box_look:map:2.2020:3.7000:0.0700:0.440:50.0']"
+  },
+  {
+   "check": "L1 공식 (beta · 회전 · R_look · 목표 · 방법)",
+   "ok": true,
+   "detail": "beta 0.00° → 보기 0.00°, 회전 0.00°, R_look 0.5853, 목표 0.3528, tfmini (기록 tfmini, 최대 차 2.22e-16)"
+  },
+  {
+   "check": "L1 mock 빔: 중심이 축 위 R_look",
+   "ok": true,
+   "detail": "접근 뒤 중심 base (0.5853, 0.0000), R_look 0.5853, 이동 +0.1000 m"
+  },
+  {
+   "check": "L1 놓기 box_look 0.44/50 · 잰 중심 조준",
+   "ok": true,
+   "detail": "['box_look:map:3.6700:0.9500:0.0700:0.440:50.0']"
+  },
+  {
+   "check": "L3 공식 (beta · 회전 · R_look · 목표 · 방법)",
+   "ok": true,
+   "detail": "beta -0.00° → 보기 -0.00°, 회전 0.00°, R_look 0.5853, 목표 0.3528, tfmini (기록 tfmini, 최대 차 1.05e-05)"
+  },
+  {
+   "check": "L3 mock 빔: 중심이 축 위 R_look",
+   "ok": true,
+   "detail": "접근 뒤 중심 base (0.5853, -0.0000), R_look 0.5853, 이동 +0.1000 m"
+  },
+  {
+   "check": "L3 놓기 box_look 0.44/50 · 잰 중심 조준",
+   "ok": true,
+   "detail": "['box_look:map:3.6700:5.3540:0.0700:0.440:50.0']"
+  },
+  {
+   "check": "제자리 회전 (spin) 수 = 회전한 장소 수",
+   "ok": true,
+   "detail": "spin 0, 회전 0"
+  },
+  {
+   "check": "odom_fallback 경고 줄 수 = fallback 결정 수",
+   "ok": true,
+   "detail": "0 vs 0"
+  },
+  {
+   "check": "verify 앞 approach_view 수 = verify_approach 줄 수 (approach_box 0.13 없음)",
+   "ok": true,
+   "detail": "2 vs 2"
+  },
+  {
+   "check": "verify L2 접근 목표 (잰 요, 보기 자리)",
+   "ok": true,
+   "detail": "beta 0.00° 목표 0.3528 tfmini (기록 0.00° 0.3528 tfmini arm)"
+  },
+  {
+   "check": "verify L1 접근 목표 (잰 요, 보기 자리)",
+   "ok": true,
+   "detail": "beta 0.00° 목표 0.3528 tfmini (기록 0.00° 0.3528 tfmini arm)"
+  },
+  {
+   "check": "verify box_look 0.40/55 = verify 수, 잰 중심 조준",
+   "ok": true,
+   "detail": "['box_look:map:3.6700:5.3540:0.0700:0.400:55.0', 'box_look:map:2.2020:3.7000:0.0700:0.400:55.0', 'box_look:map:3.6700:0.9500:0.0700:0.400:55.0']"
+  },
+  {
+   "check": "5 칸 box_look 없음",
+   "ok": true,
+   "detail": "[]"
+  }
+ ],
+ "places": [
+  {
+   "place": "L2",
+   "expect": {
+    "center_base": [
+     0.6852999999953766,
+     2.5172474573234064e-06
+    ],
+    "beta_deg": 0.0002,
+    "beta_view_deg": 0.0002,
+    "phi_deg": 0.0002,
+    "turn_deg": 0.0,
+    "turned": false,
+    "range_now": 0.6853,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "logged": {
+    "beta_deg": 0.0002,
+    "beta_view_deg": 0.0002,
+    "turn_deg": 0.0,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "max_err": {
+    "center_base": 2.5172474573234064e-06,
+    "beta_deg": 1.045914971165566e-05,
+    "beta_view_deg": 1.045914971165566e-05,
+    "turn_deg": 0.0,
+    "R_look": 3.76502831578307e-07,
+    "align_target": 3.7650214013140726e-07
+   },
+   "geometry": "접근 뒤 중심 base (0.5853, 0.0000), R_look 0.5853, 이동 +0.1000 m",
+   "place_look": [
+    "box_look:map:2.2020:3.7000:0.0700:0.440:50.0"
+   ]
+  },
+  {
+   "place": "L1",
+   "expect": {
+    "center_base": [
+     0.6852999999999998,
+     0.0
+    ],
+    "beta_deg": 0.0,
+    "beta_view_deg": 0.0,
+    "phi_deg": 0.0,
+    "turn_deg": 0.0,
+    "turned": false,
+    "range_now": 0.6853,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "logged": {
+    "beta_deg": 0.0,
+    "beta_view_deg": 0.0,
+    "turn_deg": 0.0,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "max_err": {
+    "center_base": 2.220446049250313e-16,
+    "beta_deg": 0.0,
+    "beta_view_deg": 0.0,
+    "turn_deg": 0.0,
+    "R_look": 0.0,
+    "align_target": 5.551115123125783e-17
+   },
+   "geometry": "접근 뒤 중심 base (0.5853, 0.0000), R_look 0.5853, 이동 +0.1000 m",
+   "place_look": [
+    "box_look:map:3.6700:0.9500:0.0700:0.440:50.0"
+   ]
+  },
+  {
+   "place": "L3",
+   "expect": {
+    "center_base": [
+     0.6852999999953766,
+     -2.5172474573234064e-06
+    ],
+    "beta_deg": -0.0002,
+    "beta_view_deg": -0.0002,
+    "phi_deg": -0.0002,
+    "turn_deg": 0.0,
+    "turned": false,
+    "range_now": 0.6853,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "logged": {
+    "beta_deg": -0.0002,
+    "beta_view_deg": -0.0002,
+    "turn_deg": 0.0,
+    "R_look": 0.5853,
+    "align_target": 0.3528,
+    "method": "tfmini"
+   },
+   "max_err": {
+    "center_base": 2.5172474573234064e-06,
+    "beta_deg": 1.045914971165566e-05,
+    "beta_view_deg": 1.045914971165566e-05,
+    "turn_deg": 0.0,
+    "R_look": 3.76502831578307e-07,
+    "align_target": 3.7650214013140726e-07
+   },
+   "geometry": "접근 뒤 중심 base (0.5853, -0.0000), R_look 0.5853, 이동 +0.1000 m",
+   "place_look": [
+    "box_look:map:3.6700:5.3540:0.0700:0.440:50.0"
+   ]
+  }
+ ]
+}

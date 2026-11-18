@@ -1,0 +1,14 @@
+# mission_node 가 perception_survey 완료 파일 (survey_complete.json) 에서 만든 퍽 등록표
+pucks:
+  - {id: 0, color: red, shape: cylinder, box: 1, side: -1, pose: standing}
+  - {id: 1, color: green, shape: box, box: 1, side: 1, pose: standing}
+  - {id: 2, color: red, shape: box, box: 2, side: -1, pose: standing}
+  - {id: 3, color: green, shape: cylinder, box: 2, side: 1, pose: standing}
+  - {id: 4, color: red, shape: cylinder, box: 3, side: -1, pose: standing}
+  - {id: 5, color: green, shape: cylinder, box: 3, side: 1, pose: standing}
+  - {id: 6, color: red, shape: box, box: 4, side: -1, pose: standing}
+  - {id: 7, color: green, shape: box, box: 4, side: 1, pose: lying}
+  - {id: 8, color: red, shape: cylinder, box: 5, side: -1, pose: standing}
+  - {id: 9, color: green, shape: cylinder, box: 5, side: 1, pose: standing}
+  - {id: 10, color: red, shape: box, box: 6, side: -1, pose: standing}
+  - {id: 11, color: green, shape: box, box: 6, side: 1, pose: standing}

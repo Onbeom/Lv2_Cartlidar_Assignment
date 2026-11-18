@@ -1,0 +1,28 @@
+[
+  {
+    "side": "Front",
+    "scan_axis_xy_mm": [
+      185.5,
+      50
+    ],
+    "assumed_optical_z_band_mm": [
+      54.7,
+      67
+    ],
+    "outward_clear_degrees": 180,
+    "blockers": []
+  },
+  {
+    "side": "Rear",
+    "scan_axis_xy_mm": [
+      -185.5,
+      -50
+    ],
+    "assumed_optical_z_band_mm": [
+      54.7,
+      67
+    ],
+    "outward_clear_degrees": 180,
+    "blockers": []
+  }
+]

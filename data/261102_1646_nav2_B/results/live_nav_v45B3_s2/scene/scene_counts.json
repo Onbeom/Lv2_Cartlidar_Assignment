@@ -1,0 +1,23 @@
+{
+  "sim_s": 370.0,
+  "wall_s": 509.452036857605,
+  "done_t": null,
+  "wp_reached": 1,
+  "n_wp": 91,
+  "stuck": null,
+  "sent": {
+    "clock": 22201,
+    "js": 18501,
+    "odom": 18501,
+    "scan": {
+      "/scan_front": 3701,
+      "/scan_rear": 3701
+    },
+    "ir": {
+      "infra1": 11100,
+      "infra2": 11100
+    },
+    "imu": 37001
+  },
+  "cmd_received": 6777
+}

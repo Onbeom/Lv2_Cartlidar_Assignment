@@ -1,0 +1,194 @@
+[
+ {
+  "image": "scene_000_L0.png",
+  "case": "L",
+  "light": 0,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.3904391307098256,
+  "yaw_deg": 0.025314387195033313,
+  "score": 221.38,
+  "passed": true,
+  "est": [
+   0.349065,
+   -0.128298,
+   -0.308113
+  ]
+ },
+ {
+  "image": "scene_000_L1.png",
+  "case": "L",
+  "light": 1,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.39530345251834764,
+  "yaw_deg": 0.019011851448591136,
+  "score": 150.864,
+  "passed": true,
+  "est": [
+   0.349075,
+   -0.128288,
+   -0.308223
+  ]
+ },
+ {
+  "image": "scene_001_L0.png",
+  "case": "R",
+  "light": 0,
+  "neighbor": "stand_cuboid",
+  "ok": true,
+  "center_mm": 0.38418956953029004,
+  "yaw_deg": 0.016812044281744386,
+  "score": 219.138,
+  "passed": true,
+  "est": [
+   0.342475,
+   0.093165,
+   0.263424
+  ]
+ },
+ {
+  "image": "scene_001_L1.png",
+  "case": "R",
+  "light": 1,
+  "neighbor": "stand_cuboid",
+  "ok": true,
+  "center_mm": 0.3489620149322159,
+  "yaw_deg": 0.012629452377289964,
+  "score": 149.72,
+  "passed": true,
+  "est": [
+   0.34251,
+   0.093155,
+   0.263351
+  ]
+ },
+ {
+  "image": "scene_002_L0.png",
+  "case": "I",
+  "light": 0,
+  "neighbor": "lie_cylinder",
+  "ok": true,
+  "center_mm": 0.35711879536718094,
+  "yaw_deg": 0.0168897536111541,
+  "score": 224.376,
+  "passed": true,
+  "est": [
+   0.367904,
+   -0.010764,
+   -0.050624
+  ]
+ },
+ {
+  "image": "scene_002_L1.png",
+  "case": "I",
+  "light": 1,
+  "neighbor": "lie_cylinder",
+  "ok": true,
+  "center_mm": 0.3715413679373191,
+  "yaw_deg": 0.010243443187636264,
+  "score": 148.118,
+  "passed": true,
+  "est": [
+   0.367882,
+   -0.010763,
+   -0.05074
+  ]
+ },
+ {
+  "image": "scene_003_L0.png",
+  "case": "L",
+  "light": 0,
+  "neighbor": "stand_cuboid",
+  "ok": true,
+  "center_mm": 0.3797663817949818,
+  "yaw_deg": 0.02083802711095712,
+  "score": 214.091,
+  "passed": true,
+  "est": [
+   0.349311,
+   -0.099712,
+   -0.265459
+  ]
+ },
+ {
+  "image": "scene_003_L1.png",
+  "case": "L",
+  "light": 1,
+  "neighbor": "stand_cuboid",
+  "ok": true,
+  "center_mm": 0.364296103723187,
+  "yaw_deg": 0.0072589273663605245,
+  "score": 146.588,
+  "passed": true,
+  "est": [
+   0.34932,
+   -0.099725,
+   -0.265696
+  ]
+ },
+ {
+  "image": "scene_004_L0.png",
+  "case": "R",
+  "light": 0,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.3339598405003494,
+  "yaw_deg": 0.0023310999290264882,
+  "score": 221.184,
+  "passed": true,
+  "est": [
+   0.337164,
+   0.113767,
+   0.270193
+  ]
+ },
+ {
+  "image": "scene_004_L1.png",
+  "case": "R",
+  "light": 1,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.3468846363222974,
+  "yaw_deg": 0.0076956614857649945,
+  "score": 151.741,
+  "passed": true,
+  "est": [
+   0.337152,
+   0.113772,
+   0.270368
+  ]
+ },
+ {
+  "image": "scene_005_L0.png",
+  "case": "I",
+  "light": 0,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.37584693473082825,
+  "yaw_deg": 0.020405307386415456,
+  "score": 221.72,
+  "passed": true,
+  "est": [
+   0.365358,
+   0.018218,
+   0.029722
+  ]
+ },
+ {
+  "image": "scene_005_L1.png",
+  "case": "I",
+  "light": 1,
+  "neighbor": "lie_cuboid",
+  "ok": true,
+  "center_mm": 0.36628614132463094,
+  "yaw_deg": 0.045787337710709274,
+  "score": 148.555,
+  "passed": true,
+  "est": [
+   0.365373,
+   0.018218,
+   0.030165
+  ]
+ }
+]

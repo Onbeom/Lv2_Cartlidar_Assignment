@@ -1,0 +1,244 @@
+[
+  {
+    "name": "Wheel_Revolute_Front_Left",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      0.9999999999999466,
+      3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "Wheel_Revolute_Front_Right",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      0.9999999999999466,
+      3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "Wheel_Revolute_Rear_Left",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      0.9999999999999466,
+      3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "Wheel_Revolute_Rear_Right",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      0.9999999999999466,
+      3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "RMX52_Base_Yaw",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      0.0,
+      -0.9999999999998983
+    ],
+    "expected": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "error": 1.0169642905566434e-13,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      0.0,
+      -1.04719586480162
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "RMX52_Shoulder",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      -0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      -0.9999999999999466,
+      -3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      -1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "RMX52_Elbow",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      -0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      -0.9999999999999466,
+      -3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      -1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "RMX52_Wrist_Pitch",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      0.0,
+      -0.9999999999998983,
+      0.0
+    ],
+    "expected": [
+      0.0,
+      -0.9999999999999466,
+      -3.2679489653813835e-07
+    ],
+    "error": 3.2679489653813835e-07,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      -1.04719586480162,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "RMX52_Wrist_Roll_Reversed",
+    "value_before": 0.0,
+    "value_after_set": 0.010471975511965976,
+    "measured_world_axis": [
+      -0.9999999999998983,
+      0.0,
+      0.0
+    ],
+    "expected": [
+      -0.9999999999998866,
+      3.267950097431889e-07,
+      -3.464100998244706e-07
+    ],
+    "error": 3.464100998244706e-07,
+    "raw_axis_assuming_requested_increment": [
+      -1.04719586480162,
+      0.0,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "gripper_left_joint",
+    "value_before": 0.0,
+    "value_after_set": 0.001,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998899,
+      0.0
+    ],
+    "expected": [
+      1.7756539535379414e-23,
+      1.0,
+      -3.218659778384838e-23
+    ],
+    "error": 1.1013412404281553e-13,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      0.9999999999998899,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  },
+  {
+    "name": "gripper_right_joint",
+    "value_before": 0.0,
+    "value_after_set": 0.001,
+    "measured_world_axis": [
+      0.0,
+      0.9999999999998899,
+      0.0
+    ],
+    "expected": [
+      1.7756539535379414e-23,
+      1.0,
+      -3.218659778384838e-23
+    ],
+    "error": 1.1013412404281553e-13,
+    "raw_axis_assuming_requested_increment": [
+      0.0,
+      0.9999999999998899,
+      0.0
+    ],
+    "normalization": "Uses actual Fusion-applied increment; raw requested-increment result preserved."
+  }
+]

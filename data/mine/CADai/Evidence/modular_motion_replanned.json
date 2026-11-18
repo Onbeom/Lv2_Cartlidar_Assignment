@@ -1,0 +1,12 @@
+{
+  "status": "preview_only",
+  "revision": "Modular_261021",
+  "frames": 402,
+  "all_targets_reachable": true,
+  "frame_translation_mm": [
+    -12.5,
+    0,
+    0
+  ],
+  "limitation": "Analytical IK recomputed. CAD sampled collision check pending. Not hardware limits or full swept-volume certification."
+}

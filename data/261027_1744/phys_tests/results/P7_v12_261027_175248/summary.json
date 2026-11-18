@@ -1,0 +1,400 @@
+{
+  "test": "P7",
+  "started": "2026-10-27 17:52:48",
+  "usd": "/home/pa4/git/lv2_next_module/261027_1744/phys_tests/usd_copy/waffle_4wd/waffle_4wd.usda",
+  "urdf": "/home/pa4/git/lv2_next_module/261027_1711/urdf/waffle_4wd_description_261027_1711/urdf/waffle_4wd.urdf",
+  "conditions": {
+    "wheel_armature_kgm2": 0.007244,
+    "arm_armature_kgm2": 0.045,
+    "arm_velocity_feedforward_g3": false,
+    "controller_velocity_limit_v4": true,
+    "controller_rates": {
+      "Wheel_Revolute_Front_Left": 10.995573997497559,
+      "Wheel_Revolute_Front_Right": 10.995573997497559,
+      "Wheel_Revolute_Rear_Left": 10.995573997497559,
+      "Wheel_Revolute_Rear_Right": 10.995573997497559,
+      "RMX52_Base_Yaw": 4.502949237823486,
+      "RMX52_Shoulder": 4.502949237823486,
+      "RMX52_Elbow": 4.502949237823486,
+      "RMX52_Wrist_Pitch": 4.502949237823486,
+      "RMX52_Wrist_Roll_Reversed": 4.502949237823486,
+      "gripper_left_joint": 0.009999999776482582,
+      "gripper_right_joint": 0.009999999776482582
+    },
+    "dt_s": 0.008333333333333333,
+    "gravity": 9.81,
+    "mu_static": 0.3,
+    "mu_dynamic": 0.225,
+    "restitution": 0.0,
+    "settle_s": 1.0,
+    "arm_kp_nm_per_rad": 400.0,
+    "arm_kd": 36.0,
+    "gl_kp": 1000.0,
+    "gl_kd": 10.0,
+    "gr_kp": 0.0,
+    "gr_kd": 0.0,
+    "wheel_kp": 0.0,
+    "wheel_kd": 1.0,
+    "arm_maxforce": null,
+    "pos_iters": null,
+    "solver": null,
+    "ccd": "speculative",
+    "pivot_offset_m": null
+  },
+  "authored_usd_drive": {
+    "Wheel_Revolute_Front_Left": {
+      "si_kp": 0.0,
+      "si_kd": 1.0,
+      "usd_kp": 0.0,
+      "usd_kd": 0.01745329238474369,
+      "unit": "deg",
+      "target": "velocity"
+    },
+    "Wheel_Revolute_Front_Right": {
+      "si_kp": 0.0,
+      "si_kd": 1.0,
+      "usd_kp": 0.0,
+      "usd_kd": 0.01745329238474369,
+      "unit": "deg",
+      "target": "velocity"
+    },
+    "Wheel_Revolute_Rear_Left": {
+      "si_kp": 0.0,
+      "si_kd": 1.0,
+      "usd_kp": 0.0,
+      "usd_kd": 0.01745329238474369,
+      "unit": "deg",
+      "target": "velocity"
+    },
+    "Wheel_Revolute_Rear_Right": {
+      "si_kp": 0.0,
+      "si_kd": 1.0,
+      "usd_kp": 0.0,
+      "usd_kd": 0.01745329238474369,
+      "unit": "deg",
+      "target": "velocity"
+    },
+    "RMX52_Base_Yaw": {
+      "si_kp": 400.0,
+      "si_kd": 36.0,
+      "usd_kp": 6.981317043304443,
+      "usd_kd": 0.6283185482025146,
+      "unit": "deg",
+      "target": "position"
+    },
+    "RMX52_Shoulder": {
+      "si_kp": 400.0,
+      "si_kd": 36.0,
+      "usd_kp": 6.981317043304443,
+      "usd_kd": 0.6283185482025146,
+      "unit": "deg",
+      "target": "position"
+    },
+    "RMX52_Elbow": {
+      "si_kp": 400.0,
+      "si_kd": 36.0,
+      "usd_kp": 6.981317043304443,
+      "usd_kd": 0.6283185482025146,
+      "unit": "deg",
+      "target": "position"
+    },
+    "RMX52_Wrist_Pitch": {
+      "si_kp": 400.0,
+      "si_kd": 36.0,
+      "usd_kp": 6.981317043304443,
+      "usd_kd": 0.6283185482025146,
+      "unit": "deg",
+      "target": "position"
+    },
+    "RMX52_Wrist_Roll_Reversed": {
+      "si_kp": 400.0,
+      "si_kd": 36.0,
+      "usd_kp": 6.981317043304443,
+      "usd_kd": 0.6283185482025146,
+      "unit": "deg",
+      "target": "position"
+    },
+    "gripper_left_joint": {
+      "si_kp": 1000.0,
+      "si_kd": 10.0,
+      "usd_kp": 1000.0,
+      "usd_kd": 10.0,
+      "unit": "m",
+      "target": "position"
+    },
+    "gripper_right_joint": {
+      "si_kp": 0.0,
+      "si_kd": 0.0,
+      "usd_kp": 0.0,
+      "usd_kd": 0.0,
+      "unit": "m",
+      "target": "position"
+    }
+  },
+  "readback": {
+    "dof_names": [
+      "Wheel_Revolute_Front_Left",
+      "Wheel_Revolute_Front_Right",
+      "Wheel_Revolute_Rear_Left",
+      "Wheel_Revolute_Rear_Right",
+      "RMX52_Base_Yaw",
+      "RMX52_Shoulder",
+      "RMX52_Elbow",
+      "RMX52_Wrist_Pitch",
+      "RMX52_Wrist_Roll_Reversed",
+      "gripper_left_joint",
+      "gripper_right_joint"
+    ],
+    "gains_si": {
+      "Wheel_Revolute_Front_Left": [
+        0.0,
+        1.0
+      ],
+      "Wheel_Revolute_Front_Right": [
+        0.0,
+        1.0
+      ],
+      "Wheel_Revolute_Rear_Left": [
+        0.0,
+        1.0
+      ],
+      "Wheel_Revolute_Rear_Right": [
+        0.0,
+        1.0
+      ],
+      "RMX52_Base_Yaw": [
+        400.0,
+        36.0
+      ],
+      "RMX52_Shoulder": [
+        400.0,
+        36.0
+      ],
+      "RMX52_Elbow": [
+        400.0,
+        36.0
+      ],
+      "RMX52_Wrist_Pitch": [
+        400.0,
+        36.0
+      ],
+      "RMX52_Wrist_Roll_Reversed": [
+        400.0,
+        36.0
+      ],
+      "gripper_left_joint": [
+        1000.0,
+        10.0
+      ],
+      "gripper_right_joint": [
+        0.0,
+        0.0
+      ]
+    },
+    "max_velocities": {
+      "Wheel_Revolute_Front_Left": 10.995573997497559,
+      "Wheel_Revolute_Front_Right": 10.995573997497559,
+      "Wheel_Revolute_Rear_Left": 10.995573997497559,
+      "Wheel_Revolute_Rear_Right": 10.995573997497559,
+      "RMX52_Base_Yaw": 4.502948760986328,
+      "RMX52_Shoulder": 4.502948760986328,
+      "RMX52_Elbow": 4.502948760986328,
+      "RMX52_Wrist_Pitch": 4.502948760986328,
+      "RMX52_Wrist_Roll_Reversed": 4.502948760986328,
+      "gripper_left_joint": 0.009999999776482582,
+      "gripper_right_joint": 0.009999999776482582
+    },
+    "max_efforts": {
+      "Wheel_Revolute_Front_Left": 1.7999999523162842,
+      "Wheel_Revolute_Front_Right": 1.7999999523162842,
+      "Wheel_Revolute_Rear_Left": 1.7999999523162842,
+      "Wheel_Revolute_Rear_Right": 1.7999999523162842,
+      "RMX52_Base_Yaw": 3.799999952316284,
+      "RMX52_Shoulder": 3.799999952316284,
+      "RMX52_Elbow": 3.799999952316284,
+      "RMX52_Wrist_Pitch": 3.799999952316284,
+      "RMX52_Wrist_Roll_Reversed": 3.799999952316284,
+      "gripper_left_joint": 10.0,
+      "gripper_right_joint": 10.0
+    },
+    "armatures_before": {
+      "Wheel_Revolute_Front_Left": 0.0,
+      "Wheel_Revolute_Front_Right": 0.0,
+      "Wheel_Revolute_Rear_Left": 0.0,
+      "Wheel_Revolute_Rear_Right": 0.0,
+      "RMX52_Base_Yaw": 0.0,
+      "RMX52_Shoulder": 0.0,
+      "RMX52_Elbow": 0.0,
+      "RMX52_Wrist_Pitch": 0.0,
+      "RMX52_Wrist_Roll_Reversed": 0.0,
+      "gripper_left_joint": 0.0,
+      "gripper_right_joint": 0.0
+    },
+    "armatures": {
+      "Wheel_Revolute_Front_Left": 0.00724400021135807,
+      "Wheel_Revolute_Front_Right": 0.00724400021135807,
+      "Wheel_Revolute_Rear_Left": 0.00724400021135807,
+      "Wheel_Revolute_Rear_Right": 0.00724400021135807,
+      "RMX52_Base_Yaw": 0.04500000178813934,
+      "RMX52_Shoulder": 0.04500000178813934,
+      "RMX52_Elbow": 0.04500000178813934,
+      "RMX52_Wrist_Pitch": 0.04500000178813934,
+      "RMX52_Wrist_Roll_Reversed": 0.04500000178813934,
+      "gripper_left_joint": 0.0,
+      "gripper_right_joint": 0.0
+    },
+    "limits": {
+      "Wheel_Revolute_Front_Left": [
+        -3.4028234663852886e+38,
+        3.4028234663852886e+38
+      ],
+      "Wheel_Revolute_Front_Right": [
+        -3.4028234663852886e+38,
+        3.4028234663852886e+38
+      ],
+      "Wheel_Revolute_Rear_Left": [
+        -3.4028234663852886e+38,
+        3.4028234663852886e+38
+      ],
+      "Wheel_Revolute_Rear_Right": [
+        -3.4028234663852886e+38,
+        3.4028234663852886e+38
+      ],
+      "RMX52_Base_Yaw": [
+        -3.1415927410125732,
+        3.1415927410125732
+      ],
+      "RMX52_Shoulder": [
+        -1.5,
+        1.5
+      ],
+      "RMX52_Elbow": [
+        -1.399999976158142,
+        1.5
+      ],
+      "RMX52_Wrist_Pitch": [
+        -1.9700000286102295,
+        1.6999999284744263
+      ],
+      "RMX52_Wrist_Roll_Reversed": [
+        -3.1415927410125732,
+        3.1415927410125732
+      ],
+      "gripper_left_joint": [
+        -0.001413869671523571,
+        0.026186130940914154
+      ],
+      "gripper_right_joint": [
+        -0.026186130940914154,
+        0.001413869671523571
+      ]
+    },
+    "self_collision_newton_before": true,
+    "self_collision_newton_now": true,
+    "physics_device": "cpu",
+    "physics_dt": 0.008333333333333333,
+    "solver_type": "TGS",
+    "solver_iterations_usd(None=기본값)": {
+      "physxArticulation:solverPositionIterationCount": null,
+      "physxArticulation:solverVelocityIterationCount": null
+    },
+    "bodies": [
+      "base_link",
+      "wheel_front_left",
+      "wheel_front_right",
+      "wheel_rear_left",
+      "wheel_rear_right",
+      "arm_link_1",
+      "arm_link_2",
+      "arm_link_3",
+      "arm_link_4",
+      "arm_link_5",
+      "gripper_left_link",
+      "gripper_right_link",
+      "lidar_front",
+      "lidar_rear"
+    ],
+    "max_velocities_after_override": {
+      "Wheel_Revolute_Front_Left": 1000.0,
+      "Wheel_Revolute_Front_Right": 1000.0,
+      "Wheel_Revolute_Rear_Left": 1000.0,
+      "Wheel_Revolute_Rear_Right": 1000.0,
+      "RMX52_Base_Yaw": 1000.0,
+      "RMX52_Shoulder": 1000.0,
+      "RMX52_Elbow": 1000.0,
+      "RMX52_Wrist_Pitch": 1000.0,
+      "RMX52_Wrist_Roll_Reversed": 1000.0,
+      "gripper_left_joint": 1000.0,
+      "gripper_right_joint": 1000.0
+    }
+  },
+  "timing": {
+    "wall_s": 3.56496000289917,
+    "cpu_s": 8.865743275000002,
+    "gui": false,
+    "sim_s_per_wall_s": 1.4025403529644422
+  },
+  "steps_recorded": 600,
+  "expected_steps": 600,
+  "duration_s": 5.0,
+  "nonfinite_first_t": null,
+  "contacts": {
+    "CollisionPlane|base_link": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": 0.009750252589583397,
+      "steps_sep_le_0": 0,
+      "first_t_sep_le_0": null
+    },
+    "CollisionPlane|wheel_front_right": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": -2.549607245327934e-07,
+      "steps_sep_le_0": 147,
+      "first_t_sep_le_0": 0.008333333767950535
+    },
+    "CollisionPlane|wheel_front_left": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": -2.9221362751741253e-07,
+      "steps_sep_le_0": 209,
+      "first_t_sep_le_0": 0.008333333767950535
+    },
+    "CollisionPlane|wheel_rear_right": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": -1.175710053757939e-07,
+      "steps_sep_le_0": 65,
+      "first_t_sep_le_0": 0.01666666753590107
+    },
+    "CollisionPlane|wheel_rear_left": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": -1.6972505534340598e-07,
+      "steps_sep_le_0": 95,
+      "first_t_sep_le_0": 0.01666666753590107
+    },
+    "gripper_left_link|gripper_right_link": {
+      "first_t": 0.008333333767950535,
+      "steps": 600,
+      "min_sep_m": 0.0003978392924182117,
+      "steps_sep_le_0": 0,
+      "first_t_sep_le_0": null
+    }
+  },
+  "schedule": [
+    [
+      1.0,
+      5.0,
+      {
+        "Wheel_Revolute_Front_Left": -1.0,
+        "Wheel_Revolute_Rear_Left": -1.0,
+        "Wheel_Revolute_Front_Right": 1.0,
+        "Wheel_Revolute_Rear_Right": 1.0
+      },
+      "spin CCW"
+    ]
+  ],
+  "seg_end": {},
+  "urdf_fk": null
+}

@@ -1,0 +1,215 @@
+{
+ "real_203": {
+  "targets": 378,
+  "tp_all": 360,
+  "fp_all": 28,
+  "th0.5": {
+   "tp": 360,
+   "fp": 17
+  },
+  "th0.6": {
+   "tp": 359,
+   "fp": 17
+  },
+  "tp_scores_below_0.6": [
+   0.591
+  ],
+  "fp_scores_ge_0.5": [
+   {
+    "image": "r06_green_signal_scene__129_20261026_172545_118318_color_rep0.png",
+    "class": 1,
+    "score": 0.892
+   },
+   {
+    "image": "r06_green_signal_scene__130_20261026_172545_567735_color_rep0.png",
+    "class": 1,
+    "score": 0.881
+   },
+   {
+    "image": "r06_green_signal_scene__127_20261026_172542_180276_color_rep0.png",
+    "class": 1,
+    "score": 0.869
+   },
+   {
+    "image": "r06_green_signal_scene__128_20261026_172542_640336_color_rep0.png",
+    "class": 1,
+    "score": 0.869
+   },
+   {
+    "image": "r19_1627__463_20261027_162750_892538_rep0.png",
+    "class": 2,
+    "score": 0.843
+   },
+   {
+    "image": "r06_green_signal_scene__125_20261026_172539_290751_color_rep0.png",
+    "class": 1,
+    "score": 0.819
+   },
+   {
+    "image": "r19_1627__442_20261027_162742_463547_rep0.png",
+    "class": 3,
+    "score": 0.809
+   },
+   {
+    "image": "r19_1627__444_20261027_162743_042480_rep0.png",
+    "class": 3,
+    "score": 0.808
+   },
+   {
+    "image": "r19_1627__493_20261027_162807_259005_rep0.png",
+    "class": 1,
+    "score": 0.793
+   },
+   {
+    "image": "r19_1627__447_20261027_162744_089774_rep0.png",
+    "class": 3,
+    "score": 0.787
+   },
+   {
+    "image": "r19_1627__446_20261027_162743_809037_rep0.png",
+    "class": 3,
+    "score": 0.773
+   },
+   {
+    "image": "r19_1627__445_20261027_162743_389373_rep0.png",
+    "class": 3,
+    "score": 0.758
+   },
+   {
+    "image": "r19_1627__443_20261027_162742_741530_rep0.png",
+    "class": 3,
+    "score": 0.75
+   },
+   {
+    "image": "r06_green_signal_scene__131_20261026_172548_122356_color_rep0.png",
+    "class": 1,
+    "score": 0.744
+   },
+   {
+    "image": "r19_1627__461_20261027_162748_815305_rep0.png",
+    "class": 2,
+    "score": 0.74
+   },
+   {
+    "image": "r19_1627__493_20261027_162807_259005_rep0.png",
+    "class": 3,
+    "score": 0.735
+   },
+   {
+    "image": "r06_green_signal_scene__132_20261026_172548_551261_color_rep0.png",
+    "class": 1,
+    "score": 0.7
+   }
+  ]
+ },
+ "sim_240": {
+  "targets": 988,
+  "tp_all": 965,
+  "fp_all": 42,
+  "th0.5": {
+   "tp": 959,
+   "fp": 16
+  },
+  "th0.6": {
+   "tp": 952,
+   "fp": 12
+  },
+  "tp_scores_below_0.6": [
+   0.288,
+   0.299,
+   0.305,
+   0.423,
+   0.432,
+   0.491,
+   0.513,
+   0.532,
+   0.538,
+   0.56,
+   0.572,
+   0.584,
+   0.589
+  ],
+  "fp_scores_ge_0.5": [
+   {
+    "image": "sim_eval_w307_d010_L1.00.png",
+    "class": 2,
+    "score": 0.868
+   },
+   {
+    "image": "sim_eval_w306_d004_L1.00.png",
+    "class": 1,
+    "score": 0.842
+   },
+   {
+    "image": "sim_eval_w305_d000_L1.00.png",
+    "class": 3,
+    "score": 0.84
+   },
+   {
+    "image": "sim_eval_w303_d007_L1.00.png",
+    "class": 0,
+    "score": 0.808
+   },
+   {
+    "image": "sim_eval_w303_d001_L1.00.png",
+    "class": 0,
+    "score": 0.79
+   },
+   {
+    "image": "sim_eval_w306_d004_L0.00.png",
+    "class": 1,
+    "score": 0.779
+   },
+   {
+    "image": "sim_eval_w306_d000_L1.00.png",
+    "class": 2,
+    "score": 0.777
+   },
+   {
+    "image": "sim_eval_w305_d018_L1.00.png",
+    "class": 1,
+    "score": 0.741
+   },
+   {
+    "image": "sim_eval_w305_d018_L0.00.png",
+    "class": 1,
+    "score": 0.729
+   },
+   {
+    "image": "sim_eval_w305_d000_L0.00.png",
+    "class": 3,
+    "score": 0.641
+   },
+   {
+    "image": "sim_eval_w303_d016_L0.00.png",
+    "class": 1,
+    "score": 0.637
+   },
+   {
+    "image": "sim_eval_w303_d016_L1.00.png",
+    "class": 1,
+    "score": 0.63
+   },
+   {
+    "image": "sim_eval_w306_d000_L0.00.png",
+    "class": 0,
+    "score": 0.58
+   },
+   {
+    "image": "sim_eval_w302_d012_L0.00.png",
+    "class": 0,
+    "score": 0.564
+   },
+   {
+    "image": "sim_eval_w303_d019_L0.00.png",
+    "class": 0,
+    "score": 0.558
+   },
+   {
+    "image": "sim_eval_w302_d004_L1.00.png",
+    "class": 1,
+    "score": 0.523
+   }
+  ]
+ }
+}

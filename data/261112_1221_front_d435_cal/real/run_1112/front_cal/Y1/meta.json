@@ -1,0 +1,2202 @@
+{
+ "camera": "top_camera_front",
+ "frame_id": "top_camera_front_color_optical_frame",
+ "n": 360,
+ "frames": [
+  {
+   "file": "000.png",
+   "stamp": 1794482746.459014,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.86861328125
+  },
+  {
+   "file": "001.png",
+   "stamp": 1794482746.559021,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.75756184895833
+  },
+  {
+   "file": "002.png",
+   "stamp": 1794482746.6590257,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.13705186631944
+  },
+  {
+   "file": "003.png",
+   "stamp": 1794482746.7590275,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.69611436631945
+  },
+  {
+   "file": "004.png",
+   "stamp": 1794482746.859027,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.72112196180555
+  },
+  {
+   "file": "005.png",
+   "stamp": 1794482746.9590237,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.45030707465278
+  },
+  {
+   "file": "006.png",
+   "stamp": 1794482747.0590327,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.24180338541667
+  },
+  {
+   "file": "007.png",
+   "stamp": 1794482747.159067,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.30813585069444
+  },
+  {
+   "file": "008.png",
+   "stamp": 1794482747.2590995,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.25591579861111
+  },
+  {
+   "file": "009.png",
+   "stamp": 1794482747.3591301,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.22607421875
+  },
+  {
+   "file": "010.png",
+   "stamp": 1794482747.4591594,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.12026258680555
+  },
+  {
+   "file": "011.png",
+   "stamp": 1794482747.5591872,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.209697265625
+  },
+  {
+   "file": "012.png",
+   "stamp": 1794482747.6592133,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.33995442708333
+  },
+  {
+   "file": "013.png",
+   "stamp": 1794482747.759238,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.15443793402778
+  },
+  {
+   "file": "014.png",
+   "stamp": 1794482747.8926015,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.11489691840278
+  },
+  {
+   "file": "015.png",
+   "stamp": 1794482747.9926224,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.93082465277777
+  },
+  {
+   "file": "016.png",
+   "stamp": 1794482748.0926585,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.75164822048612
+  },
+  {
+   "file": "017.png",
+   "stamp": 1794482748.1927009,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.81549370659722
+  },
+  {
+   "file": "018.png",
+   "stamp": 1794482748.2927425,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.83931749131945
+  },
+  {
+   "file": "019.png",
+   "stamp": 1794482748.3927827,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.77085720486112
+  },
+  {
+   "file": "020.png",
+   "stamp": 1794482748.4928217,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.634033203125
+  },
+  {
+   "file": "021.png",
+   "stamp": 1794482748.5928602,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.83677625868056
+  },
+  {
+   "file": "022.png",
+   "stamp": 1794482748.692897,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.85689453125
+  },
+  {
+   "file": "023.png",
+   "stamp": 1794482748.792933,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.88639756944444
+  },
+  {
+   "file": "024.png",
+   "stamp": 1794482748.892968,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.9372439236111
+  },
+  {
+   "file": "025.png",
+   "stamp": 1794482748.9930017,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.69609592013889
+  },
+  {
+   "file": "026.png",
+   "stamp": 1794482749.0930462,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.7612771267361
+  },
+  {
+   "file": "027.png",
+   "stamp": 1794482749.1930952,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.70193901909722
+  },
+  {
+   "file": "028.png",
+   "stamp": 1794482749.2931433,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.691298828125
+  },
+  {
+   "file": "029.png",
+   "stamp": 1794482749.3931906,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.68557508680556
+  },
+  {
+   "file": "030.png",
+   "stamp": 1794482749.4932373,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.85616427951389
+  },
+  {
+   "file": "031.png",
+   "stamp": 1794482749.5932832,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.88389322916667
+  },
+  {
+   "file": "032.png",
+   "stamp": 1794482749.6933284,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.03798068576388
+  },
+  {
+   "file": "033.png",
+   "stamp": 1794482749.7933726,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.62357530381945
+  },
+  {
+   "file": "034.png",
+   "stamp": 1794482749.8934162,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.72803168402778
+  },
+  {
+   "file": "035.png",
+   "stamp": 1794482749.993459,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.820380859375
+  },
+  {
+   "file": "036.png",
+   "stamp": 1794482750.093509,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.6502951388889
+  },
+  {
+   "file": "037.png",
+   "stamp": 1794482750.193562,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.72083441840277
+  },
+  {
+   "file": "038.png",
+   "stamp": 1794482750.2936144,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.62515299479166
+  },
+  {
+   "file": "039.png",
+   "stamp": 1794482750.3936663,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.84081922743056
+  },
+  {
+   "file": "040.png",
+   "stamp": 1794482750.4937174,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.38544053819444
+  },
+  {
+   "file": "041.png",
+   "stamp": 1794482750.5937681,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.46236762152778
+  },
+  {
+   "file": "042.png",
+   "stamp": 1794482750.6938183,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.53132703993056
+  },
+  {
+   "file": "043.png",
+   "stamp": 1794482750.7938676,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.91324110243056
+  },
+  {
+   "file": "044.png",
+   "stamp": 1794482750.8939168,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.26091145833334
+  },
+  {
+   "file": "045.png",
+   "stamp": 1794482750.9939651,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.25703884548611
+  },
+  {
+   "file": "046.png",
+   "stamp": 1794482751.094019,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.06078125
+  },
+  {
+   "file": "047.png",
+   "stamp": 1794482751.194075,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.91617621527777
+  },
+  {
+   "file": "048.png",
+   "stamp": 1794482751.2941308,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.8322265625
+  },
+  {
+   "file": "049.png",
+   "stamp": 1794482751.394186,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.91417751736111
+  },
+  {
+   "file": "050.png",
+   "stamp": 1794482751.4942408,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.83252712673611
+  },
+  {
+   "file": "051.png",
+   "stamp": 1794482751.5942953,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.012705078125
+  },
+  {
+   "file": "052.png",
+   "stamp": 1794482751.694349,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.10025607638889
+  },
+  {
+   "file": "053.png",
+   "stamp": 1794482751.7944024,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.13266710069445
+  },
+  {
+   "file": "054.png",
+   "stamp": 1794482751.8944554,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.0704318576389
+  },
+  {
+   "file": "055.png",
+   "stamp": 1794482751.994508,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.89414171006945
+  },
+  {
+   "file": "056.png",
+   "stamp": 1794482752.0945642,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.94123155381945
+  },
+  {
+   "file": "057.png",
+   "stamp": 1794482752.194622,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.16668294270833
+  },
+  {
+   "file": "058.png",
+   "stamp": 1794482752.2946792,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.43706380208333
+  },
+  {
+   "file": "059.png",
+   "stamp": 1794482752.3947363,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.81172200520834
+  },
+  {
+   "file": "060.png",
+   "stamp": 1794482752.4947927,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.99546115451389
+  },
+  {
+   "file": "061.png",
+   "stamp": 1794482752.5948489,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.37321180555556
+  },
+  {
+   "file": "062.png",
+   "stamp": 1794482752.6949048,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.67011501736111
+  },
+  {
+   "file": "063.png",
+   "stamp": 1794482752.7949603,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.36936414930555
+  },
+  {
+   "file": "064.png",
+   "stamp": 1794482752.8950152,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.91137478298612
+  },
+  {
+   "file": "065.png",
+   "stamp": 1794482752.9950697,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.13623046875
+  },
+  {
+   "file": "066.png",
+   "stamp": 1794482753.095127,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.28631401909722
+  },
+  {
+   "file": "067.png",
+   "stamp": 1794482753.195186,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.35552191840277
+  },
+  {
+   "file": "068.png",
+   "stamp": 1794482753.295244,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.49920789930556
+  },
+  {
+   "file": "069.png",
+   "stamp": 1794482753.3953018,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.54739583333334
+  },
+  {
+   "file": "070.png",
+   "stamp": 1794482753.4953594,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.65384331597222
+  },
+  {
+   "file": "071.png",
+   "stamp": 1794482753.5954165,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.7392404513889
+  },
+  {
+   "file": "072.png",
+   "stamp": 1794482753.6954732,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.29576171875
+  },
+  {
+   "file": "073.png",
+   "stamp": 1794482753.7955296,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.34901150173611
+  },
+  {
+   "file": "074.png",
+   "stamp": 1794482753.8955858,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.99216037326389
+  },
+  {
+   "file": "075.png",
+   "stamp": 1794482753.9956415,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.02362738715277
+  },
+  {
+   "file": "076.png",
+   "stamp": 1794482754.095699,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.52838975694445
+  },
+  {
+   "file": "077.png",
+   "stamp": 1794482754.1957572,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.582431640625
+  },
+  {
+   "file": "078.png",
+   "stamp": 1794482754.295815,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.11595703125
+  },
+  {
+   "file": "079.png",
+   "stamp": 1794482754.3958724,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.18028754340278
+  },
+  {
+   "file": "080.png",
+   "stamp": 1794482754.4959292,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.542197265625
+  },
+  {
+   "file": "081.png",
+   "stamp": 1794482754.595986,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.59827039930556
+  },
+  {
+   "file": "082.png",
+   "stamp": 1794482754.7293942,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.66104383680556
+  },
+  {
+   "file": "083.png",
+   "stamp": 1794482754.8294501,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.72245334201389
+  },
+  {
+   "file": "084.png",
+   "stamp": 1794482754.9295056,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.82659396701389
+  },
+  {
+   "file": "085.png",
+   "stamp": 1794482755.0295608,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.85685763888888
+  },
+  {
+   "file": "086.png",
+   "stamp": 1794482755.1296172,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.92817274305555
+  },
+  {
+   "file": "087.png",
+   "stamp": 1794482755.2296731,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.97726779513889
+  },
+  {
+   "file": "088.png",
+   "stamp": 1794482755.3297288,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.0707421875
+  },
+  {
+   "file": "089.png",
+   "stamp": 1794482755.4297838,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.35709309895833
+  },
+  {
+   "file": "090.png",
+   "stamp": 1794482755.5298386,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.53150390625
+  },
+  {
+   "file": "091.png",
+   "stamp": 1794482755.6298928,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.62769856770834
+  },
+  {
+   "file": "092.png",
+   "stamp": 1794482755.7299469,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.53411458333333
+  },
+  {
+   "file": "093.png",
+   "stamp": 1794482755.8300002,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.67668294270834
+  },
+  {
+   "file": "094.png",
+   "stamp": 1794482755.9300535,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.24976888020834
+  },
+  {
+   "file": "095.png",
+   "stamp": 1794482756.0301063,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.39047526041666
+  },
+  {
+   "file": "096.png",
+   "stamp": 1794482756.1301627,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.45918728298611
+  },
+  {
+   "file": "097.png",
+   "stamp": 1794482756.230219,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.55947265625
+  },
+  {
+   "file": "098.png",
+   "stamp": 1794482756.3636265,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.67455078125
+  },
+  {
+   "file": "099.png",
+   "stamp": 1794482756.4636817,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.75541015625
+  },
+  {
+   "file": "100.png",
+   "stamp": 1794482756.5637367,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.758681640625
+  },
+  {
+   "file": "101.png",
+   "stamp": 1794482756.663791,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.69921657986112
+  },
+  {
+   "file": "102.png",
+   "stamp": 1794482756.763845,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.62115885416667
+  },
+  {
+   "file": "103.png",
+   "stamp": 1794482756.8638985,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.71332790798611
+  },
+  {
+   "file": "104.png",
+   "stamp": 1794482756.9639516,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.69837131076389
+  },
+  {
+   "file": "105.png",
+   "stamp": 1794482757.0640059,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.70964301215278
+  },
+  {
+   "file": "106.png",
+   "stamp": 1794482757.1640623,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.5866579861111
+  },
+  {
+   "file": "107.png",
+   "stamp": 1794482757.2641182,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.4254296875
+  },
+  {
+   "file": "108.png",
+   "stamp": 1794482757.3641737,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.38501736111111
+  },
+  {
+   "file": "109.png",
+   "stamp": 1794482757.4642289,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.1942404513889
+  },
+  {
+   "file": "110.png",
+   "stamp": 1794482757.5642834,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.94219943576388
+  },
+  {
+   "file": "111.png",
+   "stamp": 1794482757.6643379,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.63970377604167
+  },
+  {
+   "file": "112.png",
+   "stamp": 1794482757.7643917,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.52597981770833
+  },
+  {
+   "file": "113.png",
+   "stamp": 1794482757.864445,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.17404405381944
+  },
+  {
+   "file": "114.png",
+   "stamp": 1794482757.964498,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.12540798611111
+  },
+  {
+   "file": "115.png",
+   "stamp": 1794482758.0979047,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.98046983506944
+  },
+  {
+   "file": "116.png",
+   "stamp": 1794482758.2313135,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.8562185329861
+  },
+  {
+   "file": "117.png",
+   "stamp": 1794482758.3647218,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.80886935763888
+  },
+  {
+   "file": "118.png",
+   "stamp": 1794482758.4647772,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.80267578125
+  },
+  {
+   "file": "119.png",
+   "stamp": 1794482758.5648324,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.65335069444444
+  },
+  {
+   "file": "120.png",
+   "stamp": 1794482758.6648872,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.483642578125
+  },
+  {
+   "file": "121.png",
+   "stamp": 1794482758.7649417,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.36290581597223
+  },
+  {
+   "file": "122.png",
+   "stamp": 1794482758.8649957,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.14086697048612
+  },
+  {
+   "file": "123.png",
+   "stamp": 1794482758.9650493,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.966953125
+  },
+  {
+   "file": "124.png",
+   "stamp": 1794482759.0651035,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.69132921006944
+  },
+  {
+   "file": "125.png",
+   "stamp": 1794482759.1651597,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.83007378472222
+  },
+  {
+   "file": "126.png",
+   "stamp": 1794482759.2652154,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.73000651041667
+  },
+  {
+   "file": "127.png",
+   "stamp": 1794482759.3652706,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.72793077256945
+  },
+  {
+   "file": "128.png",
+   "stamp": 1794482759.4653254,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.52367404513889
+  },
+  {
+   "file": "129.png",
+   "stamp": 1794482759.5653796,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.34161458333334
+  },
+  {
+   "file": "130.png",
+   "stamp": 1794482759.6654336,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.23904296875
+  },
+  {
+   "file": "131.png",
+   "stamp": 1794482759.7654872,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.43223741319444
+  },
+  {
+   "file": "132.png",
+   "stamp": 1794482759.8655403,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.17876519097223
+  },
+  {
+   "file": "133.png",
+   "stamp": 1794482759.965593,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.04245442708333
+  },
+  {
+   "file": "134.png",
+   "stamp": 1794482760.0656757,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.09299696180555
+  },
+  {
+   "file": "135.png",
+   "stamp": 1794482760.1658213,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.04306640625
+  },
+  {
+   "file": "136.png",
+   "stamp": 1794482760.2659698,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.12704427083334
+  },
+  {
+   "file": "137.png",
+   "stamp": 1794482760.3661213,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.94188693576389
+  },
+  {
+   "file": "138.png",
+   "stamp": 1794482760.466276,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.98989366319445
+  },
+  {
+   "file": "139.png",
+   "stamp": 1794482760.5664337,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.80050564236112
+  },
+  {
+   "file": "140.png",
+   "stamp": 1794482760.6665945,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.85024197048611
+  },
+  {
+   "file": "141.png",
+   "stamp": 1794482760.766758,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.89104709201389
+  },
+  {
+   "file": "142.png",
+   "stamp": 1794482760.866925,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.85906141493055
+  },
+  {
+   "file": "143.png",
+   "stamp": 1794482760.967095,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.52664171006944
+  },
+  {
+   "file": "144.png",
+   "stamp": 1794482761.067233,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.59054144965278
+  },
+  {
+   "file": "145.png",
+   "stamp": 1794482761.1673055,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.48413194444444
+  },
+  {
+   "file": "146.png",
+   "stamp": 1794482761.2673776,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.996328125
+  },
+  {
+   "file": "147.png",
+   "stamp": 1794482761.36745,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.69372504340278
+  },
+  {
+   "file": "148.png",
+   "stamp": 1794482761.4675221,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.404658203125
+  },
+  {
+   "file": "149.png",
+   "stamp": 1794482761.5675945,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.12251844618055
+  },
+  {
+   "file": "150.png",
+   "stamp": 1794482761.6676667,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.68938151041667
+  },
+  {
+   "file": "151.png",
+   "stamp": 1794482761.767739,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.47720269097222
+  },
+  {
+   "file": "152.png",
+   "stamp": 1794482761.867811,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.21583658854166
+  },
+  {
+   "file": "153.png",
+   "stamp": 1794482761.9678833,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.17388888888888
+  },
+  {
+   "file": "154.png",
+   "stamp": 1794482762.0679555,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.13490776909723
+  },
+  {
+   "file": "155.png",
+   "stamp": 1794482762.1680274,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.91836588541666
+  },
+  {
+   "file": "156.png",
+   "stamp": 1794482762.268099,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.90379014756944
+  },
+  {
+   "file": "157.png",
+   "stamp": 1794482762.368171,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.90106228298612
+  },
+  {
+   "file": "158.png",
+   "stamp": 1794482762.4682426,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.19322591145833
+  },
+  {
+   "file": "159.png",
+   "stamp": 1794482762.5683146,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.05400933159723
+  },
+  {
+   "file": "160.png",
+   "stamp": 1794482762.6683862,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.00879557291667
+  },
+  {
+   "file": "161.png",
+   "stamp": 1794482762.768458,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.31608832465278
+  },
+  {
+   "file": "162.png",
+   "stamp": 1794482762.8685298,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.36258138020834
+  },
+  {
+   "file": "163.png",
+   "stamp": 1794482762.9686015,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.40126627604167
+  },
+  {
+   "file": "164.png",
+   "stamp": 1794482763.0686734,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.45727430555556
+  },
+  {
+   "file": "165.png",
+   "stamp": 1794482763.1687458,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.08794813368056
+  },
+  {
+   "file": "166.png",
+   "stamp": 1794482763.2688181,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.99260959201389
+  },
+  {
+   "file": "167.png",
+   "stamp": 1794482763.3688903,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.66108832465278
+  },
+  {
+   "file": "168.png",
+   "stamp": 1794482763.4689627,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.67072048611111
+  },
+  {
+   "file": "169.png",
+   "stamp": 1794482763.569035,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.29991753472223
+  },
+  {
+   "file": "170.png",
+   "stamp": 1794482763.6691074,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.3742209201389
+  },
+  {
+   "file": "171.png",
+   "stamp": 1794482763.7691796,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.07813802083334
+  },
+  {
+   "file": "172.png",
+   "stamp": 1794482763.8692522,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.94451822916666
+  },
+  {
+   "file": "173.png",
+   "stamp": 1794482763.9693244,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.85391167534722
+  },
+  {
+   "file": "174.png",
+   "stamp": 1794482764.0693967,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.98009440104167
+  },
+  {
+   "file": "175.png",
+   "stamp": 1794482764.1694686,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.64761935763889
+  },
+  {
+   "file": "176.png",
+   "stamp": 1794482764.2695408,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.75267795138889
+  },
+  {
+   "file": "177.png",
+   "stamp": 1794482764.369613,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.39716579861111
+  },
+  {
+   "file": "178.png",
+   "stamp": 1794482764.469685,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.42568793402778
+  },
+  {
+   "file": "179.png",
+   "stamp": 1794482764.569757,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.001826171875
+  },
+  {
+   "file": "180.png",
+   "stamp": 1794482764.6698291,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.92605794270834
+  },
+  {
+   "file": "181.png",
+   "stamp": 1794482764.769901,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.05763563368056
+  },
+  {
+   "file": "182.png",
+   "stamp": 1794482764.8699732,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.09905490451389
+  },
+  {
+   "file": "183.png",
+   "stamp": 1794482764.970045,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.18883463541667
+  },
+  {
+   "file": "184.png",
+   "stamp": 1794482765.0701172,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.14886393229166
+  },
+  {
+   "file": "185.png",
+   "stamp": 1794482765.1701891,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.23215386284723
+  },
+  {
+   "file": "186.png",
+   "stamp": 1794482765.2702615,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.17987955729167
+  },
+  {
+   "file": "187.png",
+   "stamp": 1794482765.3703334,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.16942925347222
+  },
+  {
+   "file": "188.png",
+   "stamp": 1794482765.4704058,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.03102864583333
+  },
+  {
+   "file": "189.png",
+   "stamp": 1794482765.5704777,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.13172092013889
+  },
+  {
+   "file": "190.png",
+   "stamp": 1794482765.67055,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.19333224826389
+  },
+  {
+   "file": "191.png",
+   "stamp": 1794482765.770622,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.204150390625
+  },
+  {
+   "file": "192.png",
+   "stamp": 1794482765.8706944,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.32121744791667
+  },
+  {
+   "file": "193.png",
+   "stamp": 1794482765.9707663,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.5662890625
+  },
+  {
+   "file": "194.png",
+   "stamp": 1794482766.0708385,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.946064453125
+  },
+  {
+   "file": "195.png",
+   "stamp": 1794482766.1709101,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.12365342881944
+  },
+  {
+   "file": "196.png",
+   "stamp": 1794482766.2709823,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.18170572916667
+  },
+  {
+   "file": "197.png",
+   "stamp": 1794482766.371054,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.26002387152778
+  },
+  {
+   "file": "198.png",
+   "stamp": 1794482766.4711258,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.24146809895834
+  },
+  {
+   "file": "199.png",
+   "stamp": 1794482766.5711975,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.2615993923611
+  },
+  {
+   "file": "200.png",
+   "stamp": 1794482766.6712692,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.27354383680556
+  },
+  {
+   "file": "201.png",
+   "stamp": 1794482766.7713413,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.31894205729166
+  },
+  {
+   "file": "202.png",
+   "stamp": 1794482766.871413,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.29488064236111
+  },
+  {
+   "file": "203.png",
+   "stamp": 1794482766.971485,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.23860243055556
+  },
+  {
+   "file": "204.png",
+   "stamp": 1794482767.0715566,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.3737912326389
+  },
+  {
+   "file": "205.png",
+   "stamp": 1794482767.171629,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.276689453125
+  },
+  {
+   "file": "206.png",
+   "stamp": 1794482767.271701,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.18626627604166
+  },
+  {
+   "file": "207.png",
+   "stamp": 1794482767.3717735,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.28308810763889
+  },
+  {
+   "file": "208.png",
+   "stamp": 1794482767.4718456,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.15472330729166
+  },
+  {
+   "file": "209.png",
+   "stamp": 1794482767.571918,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.0344921875
+  },
+  {
+   "file": "210.png",
+   "stamp": 1794482767.6719902,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.99875325520833
+  },
+  {
+   "file": "211.png",
+   "stamp": 1794482767.7720625,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.89070963541667
+  },
+  {
+   "file": "212.png",
+   "stamp": 1794482767.8721347,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.66255533854167
+  },
+  {
+   "file": "213.png",
+   "stamp": 1794482767.972207,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.49128689236112
+  },
+  {
+   "file": "214.png",
+   "stamp": 1794482768.0722792,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.56735785590278
+  },
+  {
+   "file": "215.png",
+   "stamp": 1794482768.205709,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.56990776909723
+  },
+  {
+   "file": "216.png",
+   "stamp": 1794482768.3391387,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.36912000868055
+  },
+  {
+   "file": "217.png",
+   "stamp": 1794482768.439211,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.48542209201389
+  },
+  {
+   "file": "218.png",
+   "stamp": 1794482768.5392833,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.61697808159722
+  },
+  {
+   "file": "219.png",
+   "stamp": 1794482768.6393554,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.68616319444445
+  },
+  {
+   "file": "220.png",
+   "stamp": 1794482768.7394278,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.90867078993055
+  },
+  {
+   "file": "221.png",
+   "stamp": 1794482768.8395,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.08294813368056
+  },
+  {
+   "file": "222.png",
+   "stamp": 1794482768.9395723,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.10537977430556
+  },
+  {
+   "file": "223.png",
+   "stamp": 1794482769.0396445,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.37366861979167
+  },
+  {
+   "file": "224.png",
+   "stamp": 1794482769.1397169,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.41770290798611
+  },
+  {
+   "file": "225.png",
+   "stamp": 1794482769.239789,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.33749891493055
+  },
+  {
+   "file": "226.png",
+   "stamp": 1794482769.3732188,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.37064778645833
+  },
+  {
+   "file": "227.png",
+   "stamp": 1794482769.473291,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.51045030381944
+  },
+  {
+   "file": "228.png",
+   "stamp": 1794482769.5733635,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.35640733506945
+  },
+  {
+   "file": "229.png",
+   "stamp": 1794482769.6734357,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.31212890625
+  },
+  {
+   "file": "230.png",
+   "stamp": 1794482769.773508,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.25919813368056
+  },
+  {
+   "file": "231.png",
+   "stamp": 1794482769.8735802,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.13305230034722
+  },
+  {
+   "file": "232.png",
+   "stamp": 1794482769.9736528,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.99527235243056
+  },
+  {
+   "file": "233.png",
+   "stamp": 1794482770.0737262,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.96216254340278
+  },
+  {
+   "file": "234.png",
+   "stamp": 1794482770.173801,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.35370768229167
+  },
+  {
+   "file": "235.png",
+   "stamp": 1794482770.2738762,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.20816840277777
+  },
+  {
+   "file": "236.png",
+   "stamp": 1794482770.3739514,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.46623589409722
+  },
+  {
+   "file": "237.png",
+   "stamp": 1794482770.4740267,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.42878363715278
+  },
+  {
+   "file": "238.png",
+   "stamp": 1794482770.5741022,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.83905164930556
+  },
+  {
+   "file": "239.png",
+   "stamp": 1794482770.6741774,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.8795138888889
+  },
+  {
+   "file": "240.png",
+   "stamp": 1794482770.774253,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.15309787326389
+  },
+  {
+   "file": "241.png",
+   "stamp": 1794482770.8743284,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.06030381944444
+  },
+  {
+   "file": "242.png",
+   "stamp": 1794482770.974404,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.62113606770833
+  },
+  {
+   "file": "243.png",
+   "stamp": 1794482771.0744784,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.53118815104166
+  },
+  {
+   "file": "244.png",
+   "stamp": 1794482771.1745503,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.04464518229166
+  },
+  {
+   "file": "245.png",
+   "stamp": 1794482771.2746222,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.99962022569444
+  },
+  {
+   "file": "246.png",
+   "stamp": 1794482771.3746943,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.44646918402778
+  },
+  {
+   "file": "247.png",
+   "stamp": 1794482771.4747663,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.55648980034722
+  },
+  {
+   "file": "248.png",
+   "stamp": 1794482771.5748384,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.184677734375
+  },
+  {
+   "file": "249.png",
+   "stamp": 1794482771.67491,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 68.19408854166667
+  },
+  {
+   "file": "250.png",
+   "stamp": 1794482771.7749822,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.53354383680555
+  },
+  {
+   "file": "251.png",
+   "stamp": 1794482771.8750541,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.57713975694445
+  },
+  {
+   "file": "252.png",
+   "stamp": 1794482771.9751263,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.98957139756945
+  },
+  {
+   "file": "253.png",
+   "stamp": 1794482772.075198,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.0555447048611
+  },
+  {
+   "file": "254.png",
+   "stamp": 1794482772.1752698,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.47038411458334
+  },
+  {
+   "file": "255.png",
+   "stamp": 1794482772.2753415,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.59931640625
+  },
+  {
+   "file": "256.png",
+   "stamp": 1794482772.3754134,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.00191840277778
+  },
+  {
+   "file": "257.png",
+   "stamp": 1794482772.475485,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.05886610243056
+  },
+  {
+   "file": "258.png",
+   "stamp": 1794482772.5755568,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.1123166232639
+  },
+  {
+   "file": "259.png",
+   "stamp": 1794482772.6756284,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.02262803819444
+  },
+  {
+   "file": "260.png",
+   "stamp": 1794482772.7757,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.12985677083333
+  },
+  {
+   "file": "261.png",
+   "stamp": 1794482772.875772,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.1233376736111
+  },
+  {
+   "file": "262.png",
+   "stamp": 1794482772.9758434,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.1305078125
+  },
+  {
+   "file": "263.png",
+   "stamp": 1794482773.0759153,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.05529079861111
+  },
+  {
+   "file": "264.png",
+   "stamp": 1794482773.1759872,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.10708658854166
+  },
+  {
+   "file": "265.png",
+   "stamp": 1794482773.2760594,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.10220920138889
+  },
+  {
+   "file": "266.png",
+   "stamp": 1794482773.3761313,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.033974609375
+  },
+  {
+   "file": "267.png",
+   "stamp": 1794482773.4762034,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 66.06711697048611
+  },
+  {
+   "file": "268.png",
+   "stamp": 1794482773.5762753,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 65.98798177083333
+  },
+  {
+   "file": "269.png",
+   "stamp": 1794482773.6763473,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 65.974580078125
+  },
+  {
+   "file": "270.png",
+   "stamp": 1794482773.7764192,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 67.9009765625
+  },
+  {
+   "file": "271.png",
+   "stamp": 1794482773.8764913,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.59366102430556
+  },
+  {
+   "file": "272.png",
+   "stamp": 1794482774.0099204,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.94666124131945
+  },
+  {
+   "file": "273.png",
+   "stamp": 1794482774.1433713,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.75955512152778
+  },
+  {
+   "file": "274.png",
+   "stamp": 1794482774.2434764,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.63991970486111
+  },
+  {
+   "file": "275.png",
+   "stamp": 1794482774.3435817,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.42360243055556
+  },
+  {
+   "file": "276.png",
+   "stamp": 1794482774.443688,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.2823166232639
+  },
+  {
+   "file": "277.png",
+   "stamp": 1794482774.5437946,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.42296657986111
+  },
+  {
+   "file": "278.png",
+   "stamp": 1794482774.6439018,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.43898763020833
+  },
+  {
+   "file": "279.png",
+   "stamp": 1794482774.74401,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.50547200520833
+  },
+  {
+   "file": "280.png",
+   "stamp": 1794482774.8441184,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.63988389756945
+  },
+  {
+   "file": "281.png",
+   "stamp": 1794482774.9442277,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.61943901909723
+  },
+  {
+   "file": "282.png",
+   "stamp": 1794482775.0443377,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.75688910590277
+  },
+  {
+   "file": "283.png",
+   "stamp": 1794482775.1444197,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.83582356770833
+  },
+  {
+   "file": "284.png",
+   "stamp": 1794482775.277844,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.88834418402777
+  },
+  {
+   "file": "285.png",
+   "stamp": 1794482775.377912,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.87089735243056
+  },
+  {
+   "file": "286.png",
+   "stamp": 1794482775.4779801,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.02895399305555
+  },
+  {
+   "file": "287.png",
+   "stamp": 1794482775.578048,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.0172146267361
+  },
+  {
+   "file": "288.png",
+   "stamp": 1794482775.6781163,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.82166449652777
+  },
+  {
+   "file": "289.png",
+   "stamp": 1794482775.81154,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.96893446180556
+  },
+  {
+   "file": "290.png",
+   "stamp": 1794482775.9116075,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.97538628472222
+  },
+  {
+   "file": "291.png",
+   "stamp": 1794482776.0116751,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.03096788194445
+  },
+  {
+   "file": "292.png",
+   "stamp": 1794482776.111743,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.0314474826389
+  },
+  {
+   "file": "293.png",
+   "stamp": 1794482776.2118113,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.83842013888889
+  },
+  {
+   "file": "294.png",
+   "stamp": 1794482776.3118796,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.77363823784722
+  },
+  {
+   "file": "295.png",
+   "stamp": 1794482776.4119477,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.6097732204861
+  },
+  {
+   "file": "296.png",
+   "stamp": 1794482776.5120158,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.73548936631944
+  },
+  {
+   "file": "297.png",
+   "stamp": 1794482776.612084,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.62409830729166
+  },
+  {
+   "file": "298.png",
+   "stamp": 1794482776.7121518,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.45166341145833
+  },
+  {
+   "file": "299.png",
+   "stamp": 1794482776.8122196,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.39145724826389
+  },
+  {
+   "file": "300.png",
+   "stamp": 1794482776.9122877,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.38659830729166
+  },
+  {
+   "file": "301.png",
+   "stamp": 1794482777.0123553,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.12587782118055
+  },
+  {
+   "file": "302.png",
+   "stamp": 1794482777.1124234,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.206630859375
+  },
+  {
+   "file": "303.png",
+   "stamp": 1794482777.2124922,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.00812174479167
+  },
+  {
+   "file": "304.png",
+   "stamp": 1794482777.312561,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.12167426215278
+  },
+  {
+   "file": "305.png",
+   "stamp": 1794482777.4126296,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.07677300347223
+  },
+  {
+   "file": "306.png",
+   "stamp": 1794482777.5126982,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.935390625
+  },
+  {
+   "file": "307.png",
+   "stamp": 1794482777.6127667,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.77689670138889
+  },
+  {
+   "file": "308.png",
+   "stamp": 1794482777.7128353,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.842685546875
+  },
+  {
+   "file": "309.png",
+   "stamp": 1794482777.8129036,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.81677083333334
+  },
+  {
+   "file": "310.png",
+   "stamp": 1794482777.912972,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.61763237847222
+  },
+  {
+   "file": "311.png",
+   "stamp": 1794482778.01304,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.65597005208333
+  },
+  {
+   "file": "312.png",
+   "stamp": 1794482778.1131084,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.66402126736111
+  },
+  {
+   "file": "313.png",
+   "stamp": 1794482778.213177,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 70.82847005208333
+  },
+  {
+   "file": "314.png",
+   "stamp": 1794482778.313245,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.33268663194444
+  },
+  {
+   "file": "315.png",
+   "stamp": 1794482778.4133134,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.32648111979167
+  },
+  {
+   "file": "316.png",
+   "stamp": 1794482778.5133815,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.98053927951389
+  },
+  {
+   "file": "317.png",
+   "stamp": 1794482778.6134498,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.11095486111111
+  },
+  {
+   "file": "318.png",
+   "stamp": 1794482778.7135177,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.62241861979167
+  },
+  {
+   "file": "319.png",
+   "stamp": 1794482778.8135855,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.80403103298612
+  },
+  {
+   "file": "320.png",
+   "stamp": 1794482778.9136531,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.37868815104167
+  },
+  {
+   "file": "321.png",
+   "stamp": 1794482779.013721,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.438876953125
+  },
+  {
+   "file": "322.png",
+   "stamp": 1794482779.113789,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.85951714409723
+  },
+  {
+   "file": "323.png",
+   "stamp": 1794482779.213858,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 73.87722981770834
+  },
+  {
+   "file": "324.png",
+   "stamp": 1794482779.313927,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.54531032986111
+  },
+  {
+   "file": "325.png",
+   "stamp": 1794482779.4139957,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.49972981770833
+  },
+  {
+   "file": "326.png",
+   "stamp": 1794482779.5140648,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.09067491319445
+  },
+  {
+   "file": "327.png",
+   "stamp": 1794482779.6141334,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.18950303819445
+  },
+  {
+   "file": "328.png",
+   "stamp": 1794482779.714202,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.67659288194444
+  },
+  {
+   "file": "329.png",
+   "stamp": 1794482779.8142705,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.04255099826389
+  },
+  {
+   "file": "330.png",
+   "stamp": 1794482779.9143388,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.483603515625
+  },
+  {
+   "file": "331.png",
+   "stamp": 1794482780.0144072,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.74175564236111
+  },
+  {
+   "file": "332.png",
+   "stamp": 1794482780.1144755,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 77.24689344618055
+  },
+  {
+   "file": "333.png",
+   "stamp": 1794482780.2145443,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 77.33275499131945
+  },
+  {
+   "file": "334.png",
+   "stamp": 1794482780.3146129,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 78.020732421875
+  },
+  {
+   "file": "335.png",
+   "stamp": 1794482780.4146812,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 77.82960828993056
+  },
+  {
+   "file": "336.png",
+   "stamp": 1794482780.5147495,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 76.99298611111111
+  },
+  {
+   "file": "337.png",
+   "stamp": 1794482780.6148176,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 75.98495985243055
+  },
+  {
+   "file": "338.png",
+   "stamp": 1794482780.7148857,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.89926649305555
+  },
+  {
+   "file": "339.png",
+   "stamp": 1794482780.8149538,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.30131401909722
+  },
+  {
+   "file": "340.png",
+   "stamp": 1794482780.9150217,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.36938042534722
+  },
+  {
+   "file": "341.png",
+   "stamp": 1794482781.0150895,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.283212890625
+  },
+  {
+   "file": "342.png",
+   "stamp": 1794482781.1151576,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.43716254340278
+  },
+  {
+   "file": "343.png",
+   "stamp": 1794482781.2152264,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.47995225694444
+  },
+  {
+   "file": "344.png",
+   "stamp": 1794482781.3152947,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.57542643229166
+  },
+  {
+   "file": "345.png",
+   "stamp": 1794482781.415363,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.38400716145833
+  },
+  {
+   "file": "346.png",
+   "stamp": 1794482781.5154312,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.51865451388889
+  },
+  {
+   "file": "347.png",
+   "stamp": 1794482781.6154993,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.66532552083333
+  },
+  {
+   "file": "348.png",
+   "stamp": 1794482781.7155674,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 74.05902126736112
+  },
+  {
+   "file": "349.png",
+   "stamp": 1794482781.8156352,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 72.59274956597223
+  },
+  {
+   "file": "350.png",
+   "stamp": 1794482781.915703,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 71.0412771267361
+  },
+  {
+   "file": "351.png",
+   "stamp": 1794482782.015771,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.52257595486111
+  },
+  {
+   "file": "352.png",
+   "stamp": 1794482782.1825519,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.17287109375
+  },
+  {
+   "file": "353.png",
+   "stamp": 1794482782.2826207,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.31733832465278
+  },
+  {
+   "file": "354.png",
+   "stamp": 1794482782.3826892,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.30685980902778
+  },
+  {
+   "file": "355.png",
+   "stamp": 1794482782.4827578,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.25667209201389
+  },
+  {
+   "file": "356.png",
+   "stamp": 1794482782.5828264,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.32639756944444
+  },
+  {
+   "file": "357.png",
+   "stamp": 1794482782.6828947,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.26864149305555
+  },
+  {
+   "file": "358.png",
+   "stamp": 1794482782.782963,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.11067816840277
+  },
+  {
+   "file": "359.png",
+   "stamp": 1794482782.8830316,
+   "frame_id": "top_camera_front_color_optical_frame",
+   "mean": 69.22668402777778
+  }
+ ],
+ "K": [
+  605.8507690429688,
+  0.0,
+  324.3658142089844,
+  0.0,
+  605.6798706054688,
+  245.13917541503906,
+  0.0,
+  0.0,
+  1.0
+ ],
+ "D": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "width": 640,
+ "height": 480,
+ "distortion_model": "plumb_bob",
+ "T_link_optical": {
+  "xyz": [
+   -0.00018251649453304708,
+   0.015094959177076817,
+   -7.015527808107436e-05
+  ],
+  "xyzw": [
+   -0.5015669274143875,
+   0.501628805650398,
+   -0.4965997555991635,
+   0.5001878220355139
+  ]
+ },
+ "time": "2026-11-12 20:26:22"
+}

@@ -1,0 +1,457 @@
+{
+  "status": "REVIEW_REQUIRED",
+  "source": "/home/pa4/git/lv2_next_module/261022_2119/urdf/waffle_4wd_description_261022_2119/urdf/waffle_4wd.urdf",
+  "root_links": [
+    "base_footprint"
+  ],
+  "link_count": 29,
+  "joint_count": 28,
+  "errors": [],
+  "review": [
+    "camera_link: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "camera_link: no collision; document contact or frame-only intent",
+    "camera_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "camera_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_rear_link: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_rear_link: no collision; document contact or frame-only intent",
+    "top_camera_rear_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_rear_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_rear_infra1_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_rear_infra1_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_rear_infra2_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_rear_infra2_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_rear_color_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_rear_color_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_front_link: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_front_link: no collision; document contact or frame-only intent",
+    "top_camera_front_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_front_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_front_infra1_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_front_infra1_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_front_infra2_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_front_infra2_optical_frame: no collision; document contact or frame-only intent",
+    "top_camera_front_color_optical_frame: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "top_camera_front_color_optical_frame: no collision; document contact or frame-only intent",
+    "lidar_front_scan: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "lidar_front_scan: no collision; document contact or frame-only intent",
+    "lidar_rear_scan: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "lidar_rear_scan: no collision; document contact or frame-only intent",
+    "base_footprint: no inertial; decide frame-only or supply mass/inertia for dynamic body",
+    "base_footprint: no collision; document contact or frame-only intent",
+    "gripper_right_joint: mimic relation needs importer and runtime verification"
+  ],
+  "links": [
+    {
+      "name": "base_link",
+      "mass_kg": 3.72180302244876,
+      "visuals": 1,
+      "collisions": 445
+    },
+    {
+      "name": "wheel_front_left",
+      "mass_kg": 0.030468606036674308,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "wheel_front_right",
+      "mass_kg": 0.030468607094565996,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "wheel_rear_left",
+      "mass_kg": 0.030468606036674308,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "wheel_rear_right",
+      "mass_kg": 0.030468607094565996,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "arm_link_1",
+      "mass_kg": 0.1057803861201182,
+      "visuals": 1,
+      "collisions": 2
+    },
+    {
+      "name": "lidar_front",
+      "mass_kg": 0.1528487786945265,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "lidar_rear",
+      "mass_kg": 0.1528487786945265,
+      "visuals": 1,
+      "collisions": 1
+    },
+    {
+      "name": "arm_link_2",
+      "mass_kg": 0.14485128784809828,
+      "visuals": 1,
+      "collisions": 4
+    },
+    {
+      "name": "arm_link_3",
+      "mass_kg": 0.13685685332970507,
+      "visuals": 1,
+      "collisions": 4
+    },
+    {
+      "name": "arm_link_4",
+      "mass_kg": 0.09637476312542571,
+      "visuals": 1,
+      "collisions": 3
+    },
+    {
+      "name": "arm_link_5",
+      "mass_kg": 0.20722119016568175,
+      "visuals": 1,
+      "collisions": 12
+    },
+    {
+      "name": "gripper_left_link",
+      "mass_kg": 0.025367290506790572,
+      "visuals": 1,
+      "collisions": 33
+    },
+    {
+      "name": "gripper_right_link",
+      "mass_kg": 0.025367290506790572,
+      "visuals": 1,
+      "collisions": 33
+    },
+    {
+      "name": "camera_link",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "camera_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_rear_link",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_rear_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_rear_infra1_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_rear_infra2_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_rear_color_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_front_link",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_front_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_front_infra1_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_front_infra2_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "top_camera_front_color_optical_frame",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "lidar_front_scan",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "lidar_rear_scan",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    },
+    {
+      "name": "base_footprint",
+      "mass_kg": "",
+      "visuals": 0,
+      "collisions": 0
+    }
+  ],
+  "joints": [
+    {
+      "name": "Wheel_Revolute_Front_Left",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_front_left",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "Wheel_Revolute_Front_Right",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_front_right",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Left",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_rear_left",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "Wheel_Revolute_Rear_Right",
+      "type": "continuous",
+      "parent": "base_link",
+      "child": "wheel_rear_right",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "RMX52_Base_Yaw",
+      "type": "revolute",
+      "parent": "base_link",
+      "child": "arm_link_1",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "lidar_front_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "lidar_front",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "lidar_rear_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "lidar_rear",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "RMX52_Shoulder",
+      "type": "revolute",
+      "parent": "arm_link_1",
+      "child": "arm_link_2",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "RMX52_Elbow",
+      "type": "revolute",
+      "parent": "arm_link_2",
+      "child": "arm_link_3",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "RMX52_Wrist_Pitch",
+      "type": "revolute",
+      "parent": "arm_link_3",
+      "child": "arm_link_4",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "RMX52_Wrist_Roll_Reversed",
+      "type": "revolute",
+      "parent": "arm_link_4",
+      "child": "arm_link_5",
+      "axis": "0.000000 0.000000 1.000000",
+      "mimic": ""
+    },
+    {
+      "name": "gripper_left_joint",
+      "type": "prismatic",
+      "parent": "arm_link_5",
+      "child": "gripper_left_link",
+      "axis": "0.000000 1.000000 0.000000",
+      "mimic": ""
+    },
+    {
+      "name": "gripper_right_joint",
+      "type": "prismatic",
+      "parent": "arm_link_5",
+      "child": "gripper_right_link",
+      "axis": "0.000000 1.000000 0.000000",
+      "mimic": "gripper_left_joint"
+    },
+    {
+      "name": "camera_link_fixed",
+      "type": "fixed",
+      "parent": "arm_link_5",
+      "child": "camera_link",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "camera_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "camera_link",
+      "child": "camera_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_rear_link_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "top_camera_rear_link",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_rear_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_rear_link",
+      "child": "top_camera_rear_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_rear_infra1_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_rear_optical_frame",
+      "child": "top_camera_rear_infra1_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_rear_infra2_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_rear_optical_frame",
+      "child": "top_camera_rear_infra2_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_rear_color_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_rear_optical_frame",
+      "child": "top_camera_rear_color_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_front_link_fixed",
+      "type": "fixed",
+      "parent": "base_link",
+      "child": "top_camera_front_link",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_front_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_front_link",
+      "child": "top_camera_front_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_front_infra1_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_front_optical_frame",
+      "child": "top_camera_front_infra1_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_front_infra2_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_front_optical_frame",
+      "child": "top_camera_front_infra2_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "top_camera_front_color_optical_frame_fixed",
+      "type": "fixed",
+      "parent": "top_camera_front_optical_frame",
+      "child": "top_camera_front_color_optical_frame",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "lidar_front_scan_fixed",
+      "type": "fixed",
+      "parent": "lidar_front",
+      "child": "lidar_front_scan",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "lidar_rear_scan_fixed",
+      "type": "fixed",
+      "parent": "lidar_rear",
+      "child": "lidar_rear_scan",
+      "axis": "",
+      "mimic": ""
+    },
+    {
+      "name": "base_footprint_to_base_link",
+      "type": "fixed",
+      "parent": "base_footprint",
+      "child": "base_link",
+      "axis": "",
+      "mimic": ""
+    }
+  ],
+  "physics_runtime": "NOT_EXECUTED",
+  "not_checked": [
+    "mesh units/content",
+    "CAD fit",
+    "FK against CAD",
+    "inertia source accuracy",
+    "USD equivalence",
+    "mimic cycles",
+    "controller stability",
+    "contacts",
+    "strength"
+  ]
+}

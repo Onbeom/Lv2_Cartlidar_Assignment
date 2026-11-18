@@ -1,0 +1,14 @@
+{
+ "name": "tag07",
+ "distance_cm": "10",
+ "frames": 49,
+ "every": 3,
+ "device": "/dev/video12",
+ "width": 1280,
+ "height": 720,
+ "start": 1793784180.34267,
+ "end": 1793784185.8558993,
+ "fps_measured": 26.58,
+ "auto_exposure": 3.0,
+ "exposure": 156.0
+}

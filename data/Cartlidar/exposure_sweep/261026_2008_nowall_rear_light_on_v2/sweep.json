@@ -1,0 +1,31 @@
+{
+ "label": "nowall_rear_light_on_v2",
+ "started": "2026-10-26T20:08:02",
+ "device": {
+  "name": "RealSense D435",
+  "serial_number": "261822079801",
+  "firmware_version": "5.15.1.55"
+ },
+ "exposures": [
+  10.0,
+  20.0,
+  30.0,
+  50.0,
+  80.0,
+  120.0,
+  166.0,
+  250.0
+ ],
+ "gains": [
+  16.0,
+  32.0,
+  64.0,
+  96.0,
+  128.0
+ ],
+ "white_balance": 4600.0,
+ "repeats": 10,
+ "settle": 6,
+ "auto_exposure": 0,
+ "auto_white_balance": 0
+}

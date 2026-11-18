@@ -1,0 +1,30 @@
+{
+  "mission_from_carto_map": {
+    "x": 0.7340000000000002,
+    "y": 0.9550000000000002,
+    "yaw": 3.1503192998497647
+  },
+  "correction_from_start_guess": {
+    "dx_m": 2.5673907444456745e-16,
+    "dy_m": 0.005000000000000254,
+    "dyaw_deg": 0.5
+  },
+  "start_guess": {
+    "x": 0.734,
+    "y": 0.95,
+    "yaw": 3.141592653589793
+  },
+  "n_wall_cells": 448,
+  "wall_err_cm_before": 1.69186032892737,
+  "wall_err_cm_after": 1.4798067651489484,
+  "ghost_ratio_before": 0.08928571428571429,
+  "ghost_ratio_after": 0.08928571428571429,
+  "walls": "/home/pa4/git/lv2_next_module/261030_1943/maze_slice_z0.08.json",
+  "usd_offset": [
+    2.2345,
+    3.2136
+  ],
+  "unknown_value": 128,
+  "static_tf_example": "ros2 run tf2_ros static_transform_publisher --x 0.7340 --y 0.9550 --yaw 3.150319 --frame-id mission_map --child-frame-id map",
+  "note": "거리는 10 cm 에서 자름. map_mission.yaml 을 map_server 로 읽으면 map frame = 발제 좌표"
+}

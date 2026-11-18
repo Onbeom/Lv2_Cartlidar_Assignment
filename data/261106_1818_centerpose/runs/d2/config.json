@@ -1,0 +1,12 @@
+{
+ "data": "data/train",
+ "val": "data/val",
+ "out": "runs/d2",
+ "size": "256",
+ "epochs": "60",
+ "batch": "12",
+ "lr": "0.0003",
+ "limit": "0",
+ "resume": "runs/s256/best.pt",
+ "dets": "data/train/e3_dets.json"
+}

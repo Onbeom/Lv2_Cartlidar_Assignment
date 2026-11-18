@@ -1,0 +1,50 @@
+{
+ "cylinder": {
+  "eval": {
+   "n": 420,
+   "near_detected": 414,
+   "size_med": 45.988176672475866,
+   "center_px_med": 1.2391863636225473,
+   "disp_rms_med": 19.26599909709192,
+   "disp_rms_p95": 31.699902651828282,
+   "heat_rms_med": 14514.086491905538
+  },
+  "train120": {
+   "n": 244,
+   "near_detected": 244,
+   "size_med": 47.632565473253685,
+   "center_px_med": 1.303254588689059,
+   "disp_rms_med": 19.935025613723674,
+   "disp_rms_p95": 29.424402759145845,
+   "heat_rms_med": 14491.213942633483
+  },
+  "same_val80_loss_by_phase": {
+   "train": 4.137051320075988,
+   "val": 30.974752330780028
+  }
+ },
+ "cuboid": {
+  "eval": {
+   "n": 496,
+   "near_detected": 496,
+   "size_med": 47.19669235806156,
+   "center_px_med": 1.386199148058886,
+   "disp_rms_med": 18.446226082211076,
+   "disp_rms_p95": 34.75683291820835,
+   "heat_rms_med": 14504.953017014313
+  },
+  "train120": {
+   "n": 279,
+   "near_detected": 279,
+   "size_med": 50.05819589633458,
+   "center_px_med": 1.4670005880963528,
+   "disp_rms_med": 21.075071910817126,
+   "disp_rms_p95": 36.41378346789706,
+   "heat_rms_med": 14519.787910844594
+  },
+  "same_val80_loss_by_phase": {
+   "train": 4.118663895130157,
+   "val": 30.9159264087677
+  }
+ }
+}

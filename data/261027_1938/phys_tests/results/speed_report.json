@@ -1,0 +1,22 @@
+{
+ "P5_v12_ballast_261027_193947": {
+  "top_speed_mps": 0.3628548805952401,
+  "time_to_95pct_s": 0.30833340156823397,
+  "mean_accel_mps2": 1.117985060367174,
+  "pitch_change_max_deg": 3.752109599142427e-05,
+  "distance_m": 1.0600412057130977,
+  "speed_vs_limit": 0.9999844051679744,
+  "speed_vs_no_belt": 1.4999730609339794,
+  "wheel_torque_max_Nm": 0.14937732,
+  "wheel_torque_ge_99pct_of_1.8_frac": 0.0
+ },
+ "M5_ballast": {
+  "top_speed_mps": 0.3624670343224282,
+  "time_to_95pct_s": 0.20200000000000085,
+  "mean_accel_mps2": 1.7046716960708184,
+  "pitch_change_max_deg": 0.03248505315090743,
+  "distance_m": 1.0645840088621834,
+  "speed_vs_limit": 0.9989155474919299,
+  "speed_vs_no_belt": 1.4983697782110155
+ }
+}

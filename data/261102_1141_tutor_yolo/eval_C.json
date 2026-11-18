@@ -1,0 +1,281 @@
+{
+ "weights": "/home/pa4/git/lv2_next_module/261102_1141_tutor_yolo/runs/C_tutor/weights/last.pt",
+ "folders": {
+  "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/eval": {
+   "images": 203,
+   "targets": 378,
+   "tp": 366,
+   "fp": 3,
+   "recall": 0.9683,
+   "precision": 0.9919,
+   "detected_any_class": 366,
+   "shape_ratio": 1.0,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.538,
+    "p5": 0.75,
+    "p50": 0.863
+   },
+   "fp_conf": {
+    "min": 0.456,
+    "p5": 0.456,
+    "p50": 0.461
+   },
+   "missed_box_height_px": {
+    "min": 16.0,
+    "p5": 16.825,
+    "p50": 20.75
+   },
+   "per_class": {
+    "red_cylinder": {
+     "targets": 112,
+     "tp": 112,
+     "fp": 1
+    },
+    "green_cylinder": {
+     "targets": 77,
+     "tp": 65,
+     "fp": 2
+    },
+    "red_cuboid": {
+     "targets": 112,
+     "tp": 112,
+     "fp": 0
+    },
+    "green_cuboid": {
+     "targets": 77,
+     "tp": 77,
+     "fp": 0
+    }
+   }
+  },
+  "/home/pa4/git/lv2_next_module/261030_1325/B_negative/images/sim_eval": {
+   "images": 240,
+   "targets": 988,
+   "tp": 972,
+   "fp": 27,
+   "recall": 0.9838,
+   "precision": 0.973,
+   "detected_any_class": 976,
+   "shape_ratio": 0.9949,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.321,
+    "p5": 0.839,
+    "p50": 0.942
+   },
+   "fp_conf": {
+    "min": 0.251,
+    "p5": 0.272,
+    "p50": 0.436
+   },
+   "missed_box_height_px": {
+    "min": 6.0,
+    "p5": 7.5,
+    "p50": 26.0
+   },
+   "per_class": {
+    "red_cylinder": {
+     "targets": 204,
+     "tp": 201,
+     "fp": 5
+    },
+    "green_cylinder": {
+     "targets": 264,
+     "tp": 255,
+     "fp": 8
+    },
+    "red_cuboid": {
+     "targets": 326,
+     "tp": 322,
+     "fp": 11
+    },
+    "green_cuboid": {
+     "targets": 194,
+     "tp": 194,
+     "fp": 3
+    }
+   }
+  },
+  "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/tagged-practice-20261029-154225/images/test": {
+   "images": 500,
+   "targets": 1811,
+   "tp": 1810,
+   "fp": 2,
+   "recall": 0.9994,
+   "precision": 0.9989,
+   "detected_any_class": 1810,
+   "shape_ratio": 1.0,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.374,
+    "p5": 0.966,
+    "p50": 0.977
+   },
+   "fp_conf": {
+    "min": 0.346,
+    "p5": 0.361,
+    "p50": 0.504
+   },
+   "missed_box_height_px": {
+    "min": 89.0,
+    "p5": 89.0,
+    "p50": 89.0
+   },
+   "per_class": {
+    "red_cylinder": {
+     "targets": 452,
+     "tp": 451,
+     "fp": 1
+    },
+    "green_cylinder": {
+     "targets": 452,
+     "tp": 452,
+     "fp": 0
+    },
+    "red_cuboid": {
+     "targets": 453,
+     "tp": 453,
+     "fp": 1
+    },
+    "green_cuboid": {
+     "targets": 454,
+     "tp": 454,
+     "fp": 0
+    }
+   }
+  },
+  "/home/pa4/git/lv2_next_module/tutor's/yolov8-isaacsim-data/verification_ec886c9994fb/dataset/images/test": {
+   "images": 12,
+   "targets": 48,
+   "tp": 48,
+   "fp": 0,
+   "recall": 1.0,
+   "precision": 1.0,
+   "detected_any_class": 48,
+   "shape_ratio": 1.0,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.869,
+    "p5": 0.931,
+    "p50": 0.954
+   },
+   "fp_conf": {},
+   "missed_box_height_px": {},
+   "per_class": {
+    "red_cylinder": {
+     "targets": 12,
+     "tp": 12,
+     "fp": 0
+    },
+    "green_cylinder": {
+     "targets": 12,
+     "tp": 12,
+     "fp": 0
+    },
+    "red_cuboid": {
+     "targets": 12,
+     "tp": 12,
+     "fp": 0
+    },
+    "green_cuboid": {
+     "targets": 12,
+     "tp": 12,
+     "fp": 0
+    }
+   }
+  },
+  "/home/pa4/git/lv2_next_module/261102_1141_tutor_yolo/tutor_mission_verified/mission-batch-verified/images": {
+   "images": 4,
+   "targets": 4,
+   "tp": 4,
+   "fp": 6,
+   "recall": 1.0,
+   "precision": 0.4,
+   "detected_any_class": 4,
+   "shape_ratio": 1.0,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.962,
+    "p5": 0.963,
+    "p50": 0.972
+   },
+   "fp_conf": {
+    "min": 0.513,
+    "p5": 0.537,
+    "p50": 0.712
+   },
+   "missed_box_height_px": {},
+   "per_class": {
+    "red_cylinder": {
+     "targets": 1,
+     "tp": 1,
+     "fp": 2
+    },
+    "green_cylinder": {
+     "targets": 2,
+     "tp": 2,
+     "fp": 2
+    },
+    "red_cuboid": {
+     "targets": 1,
+     "tp": 1,
+     "fp": 2
+    },
+    "green_cuboid": {
+     "targets": 0,
+     "tp": 0,
+     "fp": 0
+    }
+   }
+  },
+  "/home/pa4/git/lv2_next_module/261102_1141_tutor_yolo/tutor_mission_verified/mission-solved-verified/images": {
+   "images": 4,
+   "targets": 24,
+   "tp": 12,
+   "fp": 10,
+   "recall": 0.5,
+   "precision": 0.5455,
+   "detected_any_class": 12,
+   "shape_ratio": 1.0,
+   "color_ratio": 1.0,
+   "tp_conf": {
+    "min": 0.941,
+    "p5": 0.943,
+    "p50": 0.966
+   },
+   "fp_conf": {
+    "min": 0.403,
+    "p5": 0.437,
+    "p50": 0.853
+   },
+   "missed_box_height_px": {
+    "min": 22.0,
+    "p5": 22.0,
+    "p50": 25.0
+   },
+   "per_class": {
+    "red_cylinder": {
+     "targets": 6,
+     "tp": 3,
+     "fp": 3
+    },
+    "green_cylinder": {
+     "targets": 2,
+     "tp": 1,
+     "fp": 1
+    },
+    "red_cuboid": {
+     "targets": 10,
+     "tp": 5,
+     "fp": 5
+    },
+    "green_cuboid": {
+     "targets": 6,
+     "tp": 3,
+     "fp": 1
+    }
+   }
+  }
+ }
+}

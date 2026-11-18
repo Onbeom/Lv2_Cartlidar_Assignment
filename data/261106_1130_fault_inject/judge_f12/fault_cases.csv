@@ -1,0 +1,2 @@
+fault,expected_diagnostic,expected_controller_action,measured_response_ms,result,evidence
+F12 엔진 파일 손상 기동,"WARN, 색 검출기 대체",해당 없음,,FAIL,result.json

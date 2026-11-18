@@ -1,0 +1,81 @@
+{
+ "t_kidnap": 80.13333333333333,
+ "kidnap": {
+  "t": 80.13333333333333,
+  "mode": "by",
+  "spec": [
+   45.0,
+   0.1875,
+   -0.0696,
+   0.1745
+  ],
+  "before_mission": [
+   2.219321790829301,
+   0.6801641784667969,
+   2.8478641510009766
+  ],
+  "after_mission": [
+   2.406821790829301,
+   0.610564178466797,
+   3.0223641510009767
+  ],
+  "still_s": 2.5
+ },
+ "t_suspect": 80.8,
+ "t_lost": 82.3,
+ "t_ok_again": 83.9,
+ "status_changes": [
+  [
+   80.183333333,
+   "OK"
+  ],
+  [
+   80.8,
+   "SUSPECT"
+  ],
+  [
+   82.3,
+   "LOST"
+  ],
+  [
+   82.3,
+   "RECOVERING"
+  ],
+  [
+   82.466666667,
+   "CONFIRM"
+  ],
+  [
+   83.9,
+   "OK"
+  ]
+ ],
+ "err_until_detect": {
+  "max_m": 0.2021,
+  "max_deg": 10.63
+ },
+ "R1": {
+  "pass": true,
+  "delay_s": 0.67,
+  "self_fixed": false
+ },
+ "R2": {
+  "pass": true,
+  "n": 56,
+  "n_nonzero": 0
+ },
+ "R3": {
+  "pass": true,
+  "err_m": 0.0083,
+  "err_deg": 0.32
+ },
+ "R4": {
+  "pass": true,
+  "max_err_m": 0.0229
+ },
+ "R5": {
+  "pass": true,
+  "detect_to_ok_s": 3.1
+ },
+ "pass": true
+}

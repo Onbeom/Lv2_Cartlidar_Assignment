@@ -1,0 +1,20 @@
+{
+  "pkg": "/home/pa4/git/lv2_next_module/261027_1530/urdf/waffle_4wd_description_261027_1530",
+  "usd": "/home/pa4/git/lv2_next_module/261027_1530/usd/waffle_4wd_261027_1530/waffle_4wd/waffle_4wd.usda",
+  "urdf_check": {
+    "mesh_refs": 504,
+    "missing": 0,
+    "missing_examples": []
+  },
+  "usd_check": {
+    "layers": 9,
+    "assets": 0,
+    "unresolved": [],
+    "layers_outside_usd_folder": [],
+    "composition_errors": 0,
+    "rigid_bodies": 14,
+    "joints": 13,
+    "colliders": 61
+  },
+  "ok": true
+}

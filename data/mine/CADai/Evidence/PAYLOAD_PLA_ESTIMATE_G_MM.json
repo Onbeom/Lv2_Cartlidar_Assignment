@@ -1,0 +1,45 @@
+{
+  "status": "PLA solid estimate requested by user; not weighed",
+  "units": {
+    "length": "mm",
+    "mass": "g",
+    "inertia": "g*mm^2"
+  },
+  "size_mm": [
+    30,
+    30,
+    60
+  ],
+  "height_axis": "Z",
+  "density_g_per_mm3": 0.00124,
+  "volume_mm3": 54000,
+  "mass_g": 66.96,
+  "com_centered_object_frame_mm": [
+    0,
+    0,
+    0
+  ],
+  "inertia_com_g_mm2": [
+    25110,
+    25110,
+    10044,
+    0,
+    0,
+    0
+  ],
+  "inertia_order": [
+    "Ixx",
+    "Iyy",
+    "Izz",
+    "Ixy",
+    "Ixz",
+    "Iyz"
+  ],
+  "infill": "100 percent homogeneous solid; actual infill and shell settings not provided",
+  "robot_without_payload_mass_g": 4891.194067702904,
+  "robot_plus_one_payload_mass_g": 4958.154067702904,
+  "note": "payload is separate from robot links; add it to a held object or storage load only in the corresponding simulation state",
+  "max_puck_count": 12,
+  "max_storage_payload_mass_g": 803.52,
+  "robot_fully_loaded_mass_g": 5694.714067702904
+}

@@ -1,0 +1,109 @@
+{
+ "nvpmodel": "NV Power Mode: 25W\n1",
+ "engines": {
+  "480_32": {
+   "path": "/home/cart11/d480_check/results/yolo11n_task4_D_480_fp32_notf32.engine",
+   "sha256": "48dbcba0227537f4f5d9f84656104130f70756852a98605275c95ff5eaad7b28",
+   "bytes": 14450316,
+   "trtexec_gpu_ms": {
+    "min": 8.03613,
+    "max": 8.10107,
+    "mean": 8.05979,
+    "median": 8.06006
+   },
+   "python_ms": {
+    "letterbox": {
+     "median": 2.405,
+     "p95": 2.443
+    },
+    "infer": {
+     "median": 10.303,
+     "p95": 10.544
+    },
+    "decode": {
+     "median": 0.896,
+     "p95": 1.273
+    },
+    "n": 1283
+   }
+  },
+  "480_16": {
+   "path": "/home/cart11/d480_check/results/yolo11n_task4_D_480_fp16.engine",
+   "sha256": "58df0823c38c36afdbcd8348393b1f314f2a311e83f8d97486289ad95ebe0901",
+   "bytes": 7549780,
+   "trtexec_gpu_ms": {
+    "min": 3.80664,
+    "max": 3.91016,
+    "mean": 3.88183,
+    "median": 3.88599
+   },
+   "python_ms": {
+    "letterbox": {
+     "median": 2.401,
+     "p95": 2.443
+    },
+    "infer": {
+     "median": 5.406,
+     "p95": 5.51
+    },
+    "decode": {
+     "median": 0.832,
+     "p95": 1.218
+    },
+    "n": 1283
+   }
+  },
+  "384_32": {
+   "path": "/home/cart11/d480_check/results/yolo11n_task4_D_384_fp32_notf32.engine",
+   "sha256": "e006d551a944165bffb80495ae455ec90aea7e53602f02f91eb0fdafae7a2d9e",
+   "bytes": 14507116,
+   "trtexec_gpu_ms": {
+    "min": 7.37305,
+    "max": 7.46484,
+    "mean": 7.42989,
+    "median": 7.43555
+   },
+   "python_ms": {
+    "letterbox": {
+     "median": 2.81,
+     "p95": 2.865
+    },
+    "infer": {
+     "median": 8.811,
+     "p95": 9.049
+    },
+    "decode": {
+     "median": 0.899,
+     "p95": 1.082
+    },
+    "n": 195
+   }
+  },
+  "384_16": {
+   "path": "/home/cart11/d480_check/results/yolo11n_task4_D_384_fp16.engine",
+   "sha256": "e22717e897fc60e438ee5dfac566628326f650914deabcf1f3c64145ceb1f623",
+   "bytes": 8037692,
+   "trtexec_gpu_ms": {
+    "min": 3.19336,
+    "max": 3.26855,
+    "mean": 3.24744,
+    "median": 3.24805
+   },
+   "python_ms": {
+    "letterbox": {
+     "median": 2.807,
+     "p95": 2.885
+    },
+    "infer": {
+     "median": 4.705,
+     "p95": 4.756
+    },
+    "decode": {
+     "median": 0.846,
+     "p95": 1.045
+    },
+    "n": 195
+   }
+  }
+ }
+}

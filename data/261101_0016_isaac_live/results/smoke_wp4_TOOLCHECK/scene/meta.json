@@ -1,0 +1,77 @@
+{
+  "model": "261029_1030/urdf_261028 (Isaac light, pose drive)",
+  "maze": "/home/pa4/git/lv2_next_module/261030_1943/maze_src/maze/maze.usda",
+  "route": "/home/pa4/git/lv2_next_module/261030_1943/route_maze.json",
+  "n_waypoints": 4,
+  "route_length_m": 52.11665791520285,
+  "start": [
+    -1.5,
+    -2.26
+  ],
+  "start_yaw": 3.141592653589793,
+  "light_level": 1.0,
+  "dome": 600.0,
+  "rect": 20000.0,
+  "n_rect": 6,
+  "phys_dt": 0.008333333333333333,
+  "ir_K_model": [
+    386.57766664078594,
+    386.57766664078594,
+    320.0,
+    240.0
+  ],
+  "ir_K_isaaclab": {
+    "infra1": [
+      386.5777,
+      0.0,
+      320.0,
+      0.0,
+      386.5777,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    "infra2": [
+      386.5777,
+      0.0,
+      320.0,
+      0.0,
+      386.5777,
+      240.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  },
+  "ir_baseline_m": 0.050041,
+  "wheel_separation_m": 0.317,
+  "wheel_radius_m": 0.033,
+  "odom_multiplier": 1.0,
+  "lidar_bins": 400,
+  "lidar_occluders": 12,
+  "joint_names": [
+    "wheel_left_front_joint",
+    "wheel_right_front_joint",
+    "wheel_left_rear_joint",
+    "wheel_right_rear_joint",
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "gripper_left_joint",
+    "gripper_right_joint",
+    "gripper_roll"
+  ],
+  "truth_body": "base_link (root)",
+  "truth_in_ros": false,
+  "live": {
+    "mode": "route",
+    "odom_hz": 50.0,
+    "odom_rot_scale": 1.15,
+    "odom_tf": false,
+    "cmd_topic": "/cmd_vel_nav",
+    "cmd_timeout": 0.5
+  }
+}

@@ -1,0 +1,62 @@
+rosbag2_bagfile_information:
+  version: 9
+  storage_identifier: mcap
+  duration:
+    nanoseconds: 289300000000
+  starting_time:
+    nanoseconds_since_epoch: 83333333
+  message_count: 27969
+  topics_with_message_count:
+    - topic_metadata:
+        name: /scan_rear
+        type: sensor_msgs/msg/LaserScan
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 2894
+    - topic_metadata:
+        name: /scan_front
+        type: sensor_msgs/msg/LaserScan
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 2894
+    - topic_metadata:
+        name: /tf
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 4822
+    - topic_metadata:
+        name: /clock
+        type: rosgraph_msgs/msg/Clock
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 17358
+    - topic_metadata:
+        name: /tf_static
+        type: tf2_msgs/msg/TFMessage
+        serialization_format: cdr
+        offered_qos_profiles:
+          []
+        type_description_hash: ""
+      message_count: 1
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - 0_bag_lidar_only_dark_2026_10_30-18_23_01.mcap
+  files:
+    - path: 0_bag_lidar_only_dark_2026_10_30-18_23_01.mcap
+      starting_time:
+        nanoseconds_since_epoch: 83333333
+      duration:
+        nanoseconds: 289300000000
+      message_count: 27969
+  custom_data: ~
+  ros_distro: lyrical

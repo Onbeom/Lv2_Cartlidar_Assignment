@@ -1,0 +1,6 @@
+/scan_front_filtered: {reliability: best_effort, history: keep_last, depth: 50}
+/cpp/scan_front_filtered: {reliability: best_effort, history: keep_last, depth: 50}
+/scan_rear_filtered: {reliability: best_effort, history: keep_last, depth: 50}
+/cpp/scan_rear_filtered: {reliability: best_effort, history: keep_last, depth: 50}
+/scan_merged: {reliability: best_effort, history: keep_last, depth: 50}
+/cpp/scan_merged: {reliability: best_effort, history: keep_last, depth: 50}

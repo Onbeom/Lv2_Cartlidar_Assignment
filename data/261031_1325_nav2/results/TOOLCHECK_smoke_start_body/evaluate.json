@@ -1,0 +1,35 @@
+{
+ "n_goals": 1,
+ "G1_succeeded": false,
+ "G2_end_error": false,
+ "G3_min_clearance_m": 0.1001,
+ "G3_n_overlap_samples": 0,
+ "G4_loc_rmse_m": 0.0264,
+ "G4_loc_max_m": 0.0437,
+ "G4_yaw_rmse_rad": 0.026,
+ "G4_n_samples": 174,
+ "G5_cmd": {
+  "n": 154,
+  "frames": [
+   "base_link"
+  ],
+  "vx_max": 0.0,
+  "vx_min": -0.1,
+  "wz_abs_max": 0.8
+ },
+ "goals": [
+  {
+   "name": "start_box_1",
+   "status": "ABORTED",
+   "duration_s": 15.05,
+   "pos_err": 1.6971,
+   "yaw_err": 2.1956,
+   "error_code": 208,
+   "error_msg": "GridBasedplugin failed to plan from (0.71, 0.94) [q: 0.00, 0.00, -0.59, 0.80] (yaw: -1.27) to (2.23, 0.67) [q: 0.00, 0.00, 0.98, 0.18] (yaw: 2.79): \"Failed to create plan with tolerance of: 0.100000\""
+  }
+ ],
+ "G3_pass": true,
+ "G4_pass": true,
+ "G5_pass": true,
+ "pass": false
+}

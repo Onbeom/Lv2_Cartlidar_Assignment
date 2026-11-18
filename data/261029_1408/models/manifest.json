@@ -1,0 +1,50 @@
+{
+  "architecture": "YOLO11n",
+  "task": "detect",
+  "legacy_classes": {
+    "0": "red_cylinder",
+    "1": "green_cylinder",
+    "2": "blue_cylinder",
+    "3": "red_cuboid",
+    "4": "green_cuboid",
+    "5": "blue_cuboid"
+  },
+  "pytorch": "2.11.0+cu128",
+  "ultralytics": "8.4.189",
+  "onnx": "1.23.2",
+  "onnxruntime": "1.31.1",
+  "source_sha256": "14c6bada9aad8428fcc3edfbfc04c0fef5fcdbe4cecda8d84f771f5458d46a22",
+  "onnx_sha256": "c38320c5a7392ac27125bfc6dac1f8aa25d04825aadd7e9d15d7d6f0d9d7967d",
+  "input": [
+    [
+      "images",
+      [
+        1,
+        3,
+        640,
+        640
+      ],
+      "tensor(float)"
+    ]
+  ],
+  "output": [
+    [
+      "output0",
+      [
+        1,
+        10,
+        8400
+      ],
+      "tensor(float)"
+    ]
+  ],
+  "export": {
+    "opset": 17,
+    "dynamic": false,
+    "nms": false,
+    "batch": 1,
+    "imgsz": 640
+  },
+  "conversion_equivalence": "PASS on 2 fixed real images; not recognition accuracy",
+  "jetson_tensorrt_validation": "NOT_RUN"
+}

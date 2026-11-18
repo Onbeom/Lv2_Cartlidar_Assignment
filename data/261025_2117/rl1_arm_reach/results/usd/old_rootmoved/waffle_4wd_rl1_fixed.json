@@ -1,0 +1,36 @@
+{
+ "source": "/home/pa4/git/lv2_next_module/261022_2119/usd/waffle_4wd_261022_2119/waffle_4wd/waffle_4wd.usda",
+ "variant": "physx",
+ "moved_from_base_link": [
+  "newton:selfCollisionEnabled"
+ ],
+ "before": {
+  "bodies": 14,
+  "joints": 13,
+  "mass_kg": 4.891194,
+  "articulation_roots": [
+   "/waffle_4wd/Geometry/base_footprint/base_link"
+  ]
+ },
+ "after": {
+  "bodies": 14,
+  "joints": 14,
+  "mass_kg": 4.891194,
+  "articulation_roots": [
+   "/waffle_4wd/Geometry/base_footprint"
+  ]
+ },
+ "parent_schemas": "SdfTokenListOp(Explicit Items: [PhysicsArticulationRootAPI, NewtonArticulationRootAPI])",
+ "link_schemas": "SdfTokenListOp(Explicit Items: [PhysicsRigidBodyAPI, PhysicsMassAPI, NewtonMassAPI, IsaacLinkAPI])",
+ "link_props": [
+  "newton:inertia",
+  "physics:centerOfMass",
+  "physics:diagonalInertia",
+  "physics:mass",
+  "physics:principalAxes",
+  "xformOp:orient",
+  "xformOp:scale",
+  "xformOp:translate",
+  "xformOpOrder"
+ ]
+}

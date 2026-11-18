@@ -1,0 +1,37 @@
+{
+  "simulation_only": true,
+  "old_model": "261027_1711",
+  "diagnostic_only": true,
+  "rows": [
+    {
+      "ok": true,
+      "n": 2893,
+      "A1_rmse_m": 0.0013849993428778156,
+      "A1_max_m": 0.0033367172717105997,
+      "A1_fit_rmse_m": 0.0013827474492281028,
+      "A2_final_m": 0.0,
+      "A3_yaw_rmse_deg": 0.16046955156755444,
+      "jumps": 0,
+      "C2_latency_ms_median": 0.0,
+      "C2_latency_ms_p95": 0.0,
+      "light": "bright",
+      "kind": "T0_scorer_self_check",
+      "pass_expectation": true
+    },
+    {
+      "ok": true,
+      "n": 2893,
+      "A1_rmse_m": 0.0013849993428778156,
+      "A1_max_m": 0.0033367172717105997,
+      "A1_fit_rmse_m": 0.0013827474492281028,
+      "A2_final_m": 0.0,
+      "A3_yaw_rmse_deg": 0.16046955156755444,
+      "jumps": 0,
+      "C2_latency_ms_median": 0.0,
+      "C2_latency_ms_p95": 0.0,
+      "light": "dark",
+      "kind": "T0_scorer_self_check",
+      "pass_expectation": true
+    }
+  ]
+}

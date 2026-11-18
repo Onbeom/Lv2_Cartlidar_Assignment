@@ -1,0 +1,25 @@
+{
+ "mode": "r1",
+ "frames": 8,
+ "by_dist": {
+  "0.654": {
+   "frames": 8,
+   "correct": 3,
+   "accuracy": 0.375,
+   "puck_as_light_off_frames": 0,
+   "position_far_frames": 0,
+   "max_pos_err_m": 0.018389369760265423,
+   "confusion": {
+    "yellow->None": 2,
+    "green->green": 2,
+    "off->off": 1,
+    "red->off": 1,
+    "off->None": 1,
+    "red->None": 1
+   }
+  }
+ },
+ "render": "/home/pa4/git/lv2_next_module/261031_0005/judge/signal/render_T3000_awb",
+ "seed": 20261024,
+ "emissive": 1.0
+}

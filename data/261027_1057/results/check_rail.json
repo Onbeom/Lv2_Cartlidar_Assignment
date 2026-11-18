@@ -1,0 +1,54 @@
+{
+ "rail_hi/차체(옛 rail 뺀 나머지)": {
+  "near_tris": 44447,
+  "inside_0.2mm": 14,
+  "max_depth_mm": 2.476283235802057,
+  "min_gap_mm": 3.6954879760742188e-06,
+  "inside_bounds_mm": [
+   [
+    -100.9,
+    -87.3,
+    291.5
+   ],
+   [
+    -86.1,
+    87.3,
+    301.4
+   ]
+  ]
+ },
+ "rail_hi/팔 0 자세": {
+  "near_tris": 0
+ },
+ "rail_hi/팔 S0": {
+  "near_tris": 0
+ },
+ "rail_lo/차체(옛 rail 뺀 나머지)": {
+  "near_tris": 3404,
+  "inside_0.2mm": 2,
+  "max_depth_mm": 1.2949968179066929,
+  "min_gap_mm": 3.6954879760742188e-06,
+  "inside_bounds_mm": [
+   [
+    -125.8,
+    54.7,
+    180.0
+   ],
+   [
+    -97.7,
+    71.0,
+    190.4
+   ]
+  ]
+ },
+ "rail_lo/팔 0 자세": {
+  "near_tris": 0
+ },
+ "rail_lo/팔 S0": {
+  "near_tris": 4991,
+  "inside_0.2mm": 0,
+  "max_depth_mm": -48.05274758061661,
+  "min_gap_mm": 48.05274758061661,
+  "inside_bounds_mm": null
+ }
+}

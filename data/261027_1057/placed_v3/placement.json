@@ -1,0 +1,126 @@
+{
+  "Floor_Bracket_Left_Main": {
+    "source_print": "Floor_Bracket_Right_Main",
+    "rot": "rx180",
+    "max_dist_mm": 7.609245214873301e-05,
+    "T_print_to_base_link_mm": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -122.3999261856079
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        91.00000512599945
+      ],
+      [
+        0.0,
+        -1.0,
+        0.0,
+        102.00000082701445
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "Floor_Bracket_Left_Profile_Carrier": {
+    "source_print": "Floor_Bracket_Left_Profile_Carrier",
+    "rot": "none",
+    "max_dist_mm": 8.106231689453125e-05,
+    "T_print_to_base_link_mm": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        -154.6999216079712
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        90.99999070167543
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        12.000000104308128
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "Floor_Bracket_Right_Main": {
+    "source_print": "Floor_Bracket_Left_Main",
+    "rot": "rx180",
+    "max_dist_mm": 7.575200975939607e-05,
+    "T_print_to_base_link_mm": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -122.3999261856079
+      ],
+      [
+        0.0,
+        0.0,
+        -1.0,
+        -90.99999070167542
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        12.000000827014446
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "Floor_Bracket_Right_Profile_Carrier": {
+    "source_print": "Floor_Bracket_Right_Profile_Carrier",
+    "rot": "none",
+    "max_dist_mm": 8.40822996338859e-05,
+    "T_print_to_base_link_mm": [
+      [
+        0.0,
+        0.0,
+        1.0,
+        -154.6999216079712
+      ],
+      [
+        1.0,
+        0.0,
+        0.0,
+        -143.7000334262848
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        12.000000104308128
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  }
+}

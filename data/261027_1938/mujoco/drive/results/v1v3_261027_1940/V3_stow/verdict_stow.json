@@ -1,0 +1,23 @@
+{
+  "measured": {
+    "arm_speed_max_rad_s": {
+      "RMX52_Base_Yaw": 0.00011157244029023028,
+      "RMX52_Shoulder": 4.451826157430239,
+      "RMX52_Elbow": 4.27660050282369,
+      "RMX52_Wrist_Pitch": 4.430645126374023,
+      "RMX52_Wrist_Roll_Reversed": 1.489079044980782e-05
+    },
+    "reach_err_stow_rad": 0.0018141130377906656,
+    "reach_err_zero_rad": 0.0024621838600142752,
+    "arm_real_contact_steps": 0,
+    "arm_contact_min_dist_mm": null
+  },
+  "checks": {
+    "팔–다른 형상 실제 접촉 없음": true,
+    "팔 실제 속도 ≤ 4.9532 rad/s": true,
+    "도달 오차 ≤ 0.05 rad (4 s 접힘, 7 s 0 자세)": true
+  },
+  "verdict": "성공",
+  "engine": "MuJoCo",
+  "test": "V3"
+}

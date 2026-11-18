@@ -1,0 +1,63 @@
+{
+  "P1": {
+    "ok": 12,
+    "n": 12,
+    "rate": 1.0
+  },
+  "P2": {
+    "ok": 209,
+    "n": 212,
+    "rate": 0.9858490566037735
+  },
+  "P3_other_frames": 0,
+  "P3_hidden": {
+    "ok": 52,
+    "n": 52,
+    "rate": 1.0
+  },
+  "P4": {
+    "ok": 12,
+    "n": 12,
+    "rate": 1.0
+  },
+  "planned_selected_mismatch": [
+    {
+      "scene": "w5_out00_L0",
+      "planned": "puck_01",
+      "selected": "puck_00"
+    },
+    {
+      "scene": "w5_out00_L1",
+      "planned": "puck_01",
+      "selected": "puck_00"
+    }
+  ],
+  "missing_initial_target": [],
+  "unassessed_frames": 0,
+  "failures": [
+    {
+      "scene": "w3_out00_L0",
+      "k": 16,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w3_out00_L1",
+      "k": 16,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    },
+    {
+      "scene": "w6_out00_L0",
+      "k": 15,
+      "check": "P2",
+      "offset_valid": false,
+      "error": null
+    }
+  ],
+  "pass_observed_checks": true,
+  "P4_exercised": true,
+  "note": "인지범위 보조 판정. 초기 목표 없으면 P1 실패로 포함하고 P2~P4는 평가 불가 행 수를 명시. 기존 J 및 계획/선택 불일치 보존. P4없음은 미시험."
+}

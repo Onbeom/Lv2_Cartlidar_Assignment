@@ -1,0 +1,203 @@
+{
+ "kind": "light",
+ "params": "바퀴: 한계 1.8 N·m · 11.00 rad/s, 감쇠 0.2133, armature 0.00222 | 팔: 강성 18.88 · 감쇠 0.851 · 4.1 N·m | 손가락: 13.0 N · 강성 6500 | 마찰 1.0/1.0 · 자기 충돌 True | 시작 자세 drive",
+ "usd_values": {
+  "ok": true,
+  "mismatches": [],
+  "self_collision": true,
+  "filtered_pairs": 28,
+  "friction": [
+   1.0,
+   1.0
+  ]
+ },
+ "mass": 4.040910720825195,
+ "rest": {
+  "base_z": 0.006751060485839844,
+  "base_z_expected": 0.00675,
+  "tilt_deg": 0.0,
+  "joint_err": {
+   "joint1": 0.0,
+   "joint2": 0.007,
+   "joint3": 0.047,
+   "joint4": 0.015,
+   "joint5": 0.0,
+   "gripper_roll": 0.0,
+   "gripper_left_joint": -0.0,
+   "gripper_right_joint": 0.0
+  },
+  "rtf": 1.6792870313706436
+ },
+ "lidar": {
+  "lds03_front": {
+   "sensor_height": 0.0823,
+   "blocked_by_robot_deg": 139.5,
+   "obstacles": {
+    "front": {
+     "rays": 71,
+     "min_dist": 0.7913,
+     "expected_perpendicular": 0.7913
+    },
+    "rear": {
+     "rays": 32,
+     "min_dist": 0.9127,
+     "expected_perpendicular": 0.9087
+    },
+    "left": {
+     "rays": 39,
+     "min_dist": 0.7001,
+     "expected_perpendicular": 0.7001
+    },
+    "right": {
+     "rays": 33,
+     "min_dist": 0.8999,
+     "expected_perpendicular": 0.8999
+    }
+   },
+   "floor_hits": 0
+  },
+  "lds03_rear": {
+   "sensor_height": 0.0823,
+   "blocked_by_robot_deg": 195.3,
+   "obstacles": {
+    "front": {
+     "rays": 42,
+     "min_dist": 1.0136,
+     "expected_perpendicular": 1.0091
+    },
+    "rear": {
+     "rays": 79,
+     "min_dist": 0.6909,
+     "expected_perpendicular": 0.6909
+    },
+    "left": {
+     "rays": 3,
+     "min_dist": 0.7856,
+     "expected_perpendicular": 0.7001
+    },
+    "right": {
+     "rays": 0,
+     "min_dist": null,
+     "expected_perpendicular": 0.8999
+    }
+   },
+   "floor_hits": 0
+  }
+ },
+ "tfmini": {
+  "dist": 0.7599145770072937,
+  "expected": 0.7599
+ },
+ "imu": {
+  "lin_acc_b": [
+   -0.0005032325861975551,
+   -0.0001828516396926716,
+   9.80855941772461
+  ],
+  "ang_vel_b": [
+   0.0010751353111118078,
+   -0.00331133627332747,
+   0.0009554869029670954
+  ]
+ },
+ "cameras": {
+  "d435_front": {
+   "rgb_mean": 180.98192708333335,
+   "depth_valid": 1.0,
+   "depth_center": 0.8421265482902527
+  },
+  "d435_rear": {
+   "rgb_mean": 187.21887478298612,
+   "depth_valid": 1.0,
+   "depth_center": 0.7129339575767517
+  },
+  "arm_camera": {
+   "rgb_mean": 190.83105649594907
+  }
+ },
+ "poses": {
+  "1_zero": {
+   "joint_err": {
+    "joint1": -0.0,
+    "joint2": 0.059,
+    "joint3": 0.049,
+    "joint4": 0.018,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.059,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    -0.0002570338547229767,
+    -7.208797615021467e-05
+   ]
+  },
+  "2_stow": {
+   "joint_err": {
+    "joint1": -0.022,
+    "joint2": 0.0,
+    "joint3": 0.012,
+    "joint4": -0.015,
+    "joint5": -0.0,
+    "gripper_roll": -0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": -0.022,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    -0.00029832497239112854,
+    -7.202476263046265e-05
+   ]
+  },
+  "3_zero": {
+   "joint_err": {
+    "joint1": -0.0,
+    "joint2": 0.059,
+    "joint3": 0.049,
+    "joint4": 0.018,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.059,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    -0.000348459929227829,
+    -7.205270230770111e-05
+   ]
+  },
+  "4_drive": {
+   "joint_err": {
+    "joint1": 0.0,
+    "joint2": 0.007,
+    "joint3": 0.047,
+    "joint4": 0.015,
+    "joint5": 0.0,
+    "gripper_roll": 0.0,
+    "gripper_left_joint": -0.0,
+    "gripper_right_joint": 0.0
+   },
+   "worst_arm_err": 0.047,
+   "tilt_deg": 0.0,
+   "base_xy": [
+    -0.00039456039667129517,
+    -7.196201477199793e-05
+   ]
+  }
+ },
+ "forward": {
+  "dist": 0.2981828392892033,
+  "expected": 0.3,
+  "yaw_drift_deg": -0.00796250813588058,
+  "rtf": 1.6834714405896192
+ },
+ "spin": {
+  "yaw_deg": 75.89512468803083,
+  "ideal_no_slip_deg": 108.44627037176465
+ },
+ "finite": true
+}

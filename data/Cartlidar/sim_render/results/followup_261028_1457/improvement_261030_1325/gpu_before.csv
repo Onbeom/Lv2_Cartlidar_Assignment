@@ -1,0 +1,2 @@
+pid, process_name, used_gpu_memory [MiB]
+94556, /usr/share/rustdesk/rustdesk, 140 MiB

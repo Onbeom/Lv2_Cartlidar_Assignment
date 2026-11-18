@@ -1,0 +1,39 @@
+{
+ "design": "v8",
+ "checkpoint": "/home/pa4/git/lv2_next_module/261025_2117/rl1_arm_reach/logs/rsl_rl/rl1_arm_reach/2026-10-26_23-18-48_v8_seed1/model_999.pt",
+ "n_targets": 1000,
+ "note": "같은 쌍이 두 센서에서 함께 잡히면 두 번 셈(스텝 수). 구간 수는 쌍별 합",
+ "pair_segments": {
+  "arm_link_5-base_link": 17,
+  "base_link-gripper_left_link": 12,
+  "base_link-gripper_right_link": 7,
+  "arm_link_4-base_link": 3,
+  "gripper_left_link-lidar_front": 2,
+  "gripper_left_link-gripper_right_link": 1,
+  "arm_link_5-lidar_front": 1,
+  "arm_link_3-base_link": 1,
+  "gripper_right_link-lidar_front": 1
+ },
+ "pair_env_steps": {
+  "base_link-gripper_left_link": 183,
+  "arm_link_5-base_link": 131,
+  "base_link-gripper_right_link": 47,
+  "gripper_left_link-gripper_right_link": 46,
+  "arm_link_5-lidar_front": 3,
+  "arm_link_4-base_link": 19,
+  "arm_link_3-base_link": 3,
+  "gripper_left_link-lidar_front": 5,
+  "gripper_right_link-lidar_front": 2
+ },
+ "pair_max_N": {
+  "base_link-gripper_left_link": 73.97,
+  "arm_link_5-base_link": 105.54,
+  "base_link-gripper_right_link": 125.09,
+  "gripper_left_link-gripper_right_link": 25.71,
+  "arm_link_5-lidar_front": 23.97,
+  "arm_link_4-base_link": 84.38,
+  "arm_link_3-base_link": 75.28,
+  "gripper_left_link-lidar_front": 112.32,
+  "gripper_right_link-lidar_front": 29.32
+ }
+}

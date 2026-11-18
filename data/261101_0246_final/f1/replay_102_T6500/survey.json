@@ -1,0 +1,363 @@
+{
+  "survey_id": "29ceb1eb51fc487d9293f6fef76a7b0e",
+  "stamp": "1005.800000000",
+  "frame": "map(mm, 발제 원점)",
+  "boxes": [
+    {
+      "box": 1,
+      "center_mm": [
+        1468.0,
+        950.0
+      ],
+      "yaw_deg": -23.086689211330008,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 2,
+      "center_mm": [
+        3670.0,
+        3152.0
+      ],
+      "yaw_deg": 28.51006023217392,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 3,
+      "center_mm": [
+        2936.0,
+        5354.0
+      ],
+      "yaw_deg": -11.122181254167332,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 4,
+      "center_mm": [
+        734.0,
+        5354.0
+      ],
+      "yaw_deg": -21.135765456581847,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 5,
+      "center_mm": [
+        2202.0,
+        5354.0
+      ],
+      "yaw_deg": -9.408327487931487,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    },
+    {
+      "box": 6,
+      "center_mm": [
+        3670.0,
+        3886.0
+      ],
+      "yaw_deg": 28.00095015912231,
+      "yaw_measured": true,
+      "yaw_source": "puck_pair"
+    }
+  ],
+  "slots": [
+    {
+      "box": 1,
+      "side": -1,
+      "x_mm": 1430.682482467352,
+      "y_mm": 965.9006415998772,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "lying",
+      "yaw_deg": -171.31974609723815,
+      "id": 4,
+      "conf": {
+        "color": 1.0,
+        "shape": 1.0,
+        "id": 1.0
+      },
+      "seen_by": [
+        "arm"
+      ],
+      "n_obs": 4,
+      "last_seen_stamp": "1003.800000000"
+    },
+    {
+      "box": 1,
+      "side": 1,
+      "x_mm": 1505.0760002544068,
+      "y_mm": 934.1895424157452,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 13.67590259401635,
+      "id": 5,
+      "conf": {
+        "color": 0.8088889122009277,
+        "shape": 0.8088889122009277,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 4,
+      "last_seen_stamp": "1003.800000000"
+    },
+    {
+      "box": 2,
+      "side": -1,
+      "x_mm": 3634.284450951055,
+      "y_mm": 3131.9607747972273,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": -73.68850160811785,
+      "id": 3,
+      "conf": {
+        "color": 0.5928030014038086,
+        "shape": 0.8188889026641846,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1004.200000000"
+    },
+    {
+      "box": 2,
+      "side": 1,
+      "x_mm": 3705.3361396933547,
+      "y_mm": 3170.5548490651236,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": -75.00797134283766,
+      "id": 2,
+      "conf": {
+        "color": 0.8100000023841858,
+        "shape": 0.8100000023841858,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1004.200000000"
+    },
+    {
+      "box": 3,
+      "side": -1,
+      "x_mm": 2896.0776816744233,
+      "y_mm": 5364.784445579346,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "standing",
+      "yaw_deg": -102.10951769466926,
+      "id": 0,
+      "conf": {
+        "color": 0.9818181991577148,
+        "shape": 0.9818181991577148,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1004.600000000"
+    },
+    {
+      "box": 3,
+      "side": 1,
+      "x_mm": 2977.5969067273923,
+      "y_mm": 5348.758233218157,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cuboid",
+      "pose": "lying",
+      "yaw_deg": 152.62374193131018,
+      "id": 7,
+      "conf": {
+        "color": 1.0,
+        "shape": 1.0,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1004.600000000"
+    },
+    {
+      "box": 4,
+      "side": -1,
+      "x_mm": 696.3442960641456,
+      "y_mm": 5368.889976326249,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "lying",
+      "yaw_deg": 85.0836527108703,
+      "id": 10,
+      "conf": {
+        "color": 1.0,
+        "shape": 1.0,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1005.000000000"
+    },
+    {
+      "box": 4,
+      "side": 1,
+      "x_mm": 772.483572506124,
+      "y_mm": 5339.4556568504195,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 22.605376972326553,
+      "id": 6,
+      "conf": {
+        "color": 0.851111114025116,
+        "shape": 0.851111114025116,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 3,
+      "last_seen_stamp": "1005.000000000"
+    },
+    {
+      "box": 5,
+      "side": -1,
+      "x_mm": 2161.8798405530156,
+      "y_mm": 5360.883432612429,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 48.29639567262097,
+      "id": 9,
+      "conf": {
+        "color": 0.8422222137451172,
+        "shape": 0.8422222137451172,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1005.400000000"
+    },
+    {
+      "box": 5,
+      "side": 1,
+      "x_mm": 2241.4261352202684,
+      "y_mm": 5347.702750357802,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": -78.1065522722954,
+      "id": 8,
+      "conf": {
+        "color": 0.8166666626930237,
+        "shape": 0.8166666626930237,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 5,
+      "last_seen_stamp": "1005.400000000"
+    },
+    {
+      "box": 6,
+      "side": -1,
+      "x_mm": 3634.9544373658237,
+      "y_mm": 3867.8378351819674,
+      "measured": true,
+      "present": true,
+      "color": "red",
+      "shape": "cuboid",
+      "pose": "lying",
+      "yaw_deg": 89.07791474768842,
+      "id": 1,
+      "conf": {
+        "color": 1.0,
+        "shape": 1.0,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 6,
+      "last_seen_stamp": "1005.800000000"
+    },
+    {
+      "box": 6,
+      "side": 1,
+      "x_mm": 3705.344993130383,
+      "y_mm": 3905.266654927577,
+      "measured": true,
+      "present": true,
+      "color": "green",
+      "shape": "cylinder",
+      "pose": "standing",
+      "yaw_deg": 116.70851168140678,
+      "id": 11,
+      "conf": {
+        "color": 0.8033333420753479,
+        "shape": 0.8033333420753479,
+        "id": 1.0
+      },
+      "seen_by": [
+        "front_d435",
+        "arm"
+      ],
+      "n_obs": 4,
+      "last_seen_stamp": "1005.800000000"
+    }
+  ],
+  "complete": true,
+  "errors": [],
+  "rejected": {
+    "duplicate_frame": 2,
+    "outside_slot": 4
+  },
+  "frozen": true
+}
